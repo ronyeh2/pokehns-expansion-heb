@@ -1087,6 +1087,12 @@ u8 ChangeMenuGridCursorPosition(s8 deltaX, s8 deltaY)
 {
     u8 oldPos = sMenu.cursorPos;
 
+#if TEXT_RTL
+    // Columns run right to left in a mirrored window, so LEFT moves to the next column.
+    if (GetWindowRtlMode(sMenu.windowId) == WINDOW_RTL_MIRROR)
+        deltaX = -deltaX;
+#endif
+
     if (deltaX != 0)
     {
         if ((sMenu.cursorPos % sMenu.columns) + deltaX < 0)

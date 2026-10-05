@@ -1497,6 +1497,24 @@ static const struct WindowTemplate sNewEntryInfoScreen_WindowTemplates[] =
 };
 
 // First character in range followed by number of characters in range for upper and lowercase
+#if TEXT_RTL
+// Hebrew names: three letters per group in alphabetical order (no name starts with a final form),
+// and the last group catches any name still in Latin. The labels are gText_DexSearchAlpha* in
+// strings.c and must name the same letters.
+static const u8 sLetterSearchRanges[][4] =
+{
+    {}, // Name not specified, shouldn't be reached
+    [NAME_ABC] = {CHAR_HEB_ALEF,  3, 0, 0},
+    [NAME_DEF] = {CHAR_HEB_DALET, 3, 0, 0},
+    [NAME_GHI] = {CHAR_HEB_ZAYIN, 3, 0, 0},
+    [NAME_JKL] = {CHAR_HEB_YOD,   3, 0, 0},
+    [NAME_MNO] = {CHAR_HEB_MEM,   3, 0, 0},
+    [NAME_PQR] = {CHAR_HEB_AYIN,  3, 0, 0},
+    [NAME_STU] = {CHAR_HEB_QOF,   3, 0, 0},
+    [NAME_VWX] = {CHAR_HEB_TAV,   1, 0, 0},
+    [NAME_YZ]  = {CHAR_A, 26, CHAR_a, 26},
+};
+#else
 static const u8 sLetterSearchRanges[][4] =
 {
     {}, // Name not specified, shouldn't be reached
@@ -1510,6 +1528,7 @@ static const u8 sLetterSearchRanges[][4] =
     [NAME_VWX] = {CHAR_V, 3, CHAR_v, 3},
     [NAME_YZ]  = {CHAR_Y, 2, CHAR_y, 2},
 };
+#endif
 
 #define LETTER_IN_RANGE_UPPER(letter, range) \
     ((letter) >= sLetterSearchRanges[range][0]                                  \
