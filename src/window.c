@@ -1,5 +1,6 @@
 #include "global.h"
 #include "window.h"
+#include "text.h"
 #include "malloc.h"
 #include "bg.h"
 #include "blit.h"
@@ -215,6 +216,10 @@ void RemoveWindow(u32 windowId)
 {
     u32 bgLayer = gWindows[windowId].window.bg;
 
+#if TEXT_RTL
+    RtlSetWindowInPlace(windowId, FALSE);
+#endif
+
     if (gWindowTileAutoAllocEnabled == TRUE)
         BgTileAllocOp(bgLayer, gWindows[windowId].window.baseBlock, gWindows[windowId].window.width * gWindows[windowId].window.height, 2);
 
@@ -253,6 +258,10 @@ void RemoveAllWindowsOnBg(u32 bgId)
 void FreeAllWindowBuffers(void)
 {
     int i;
+
+#if TEXT_RTL
+    RtlResetWindowModes();
+#endif
 
     for (i = 0; i < NUM_BACKGROUNDS; ++i)
     {

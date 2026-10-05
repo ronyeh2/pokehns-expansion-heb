@@ -55,6 +55,11 @@ static struct TextPrinter *AllocateTextPrinter(void);
 static u32 GetNumTextPrinters(void);
 static void FreeFinishedTextPrinters(void);
 static void SpriteCB_TextCursor(struct Sprite *sprite);
+#if TEXT_RTL
+static EWRAM_DATA u32 sRtlInPlaceWindows = 0;
+static EWRAM_DATA u8 sRtlVisualBuffer[160] = {0};
+static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize);
+#endif
 
 static EWRAM_DATA struct TextPrinter *sFirstTextPrinter = NULL;
 
@@ -478,6 +483,20 @@ bool32 AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, voi
     sTempTextPrinter.printerTemplate = *printerTemplate;
     sTempTextPrinter.callback = callback;
     sTempTextPrinter.textSpeed = speed;
+
+#if TEXT_RTL
+    // Sprite text (the healthbox) and in-place windows keep their English position: reorder the
+    // string into visual order and print it left to right. Only immediate printers can do this,
+    // since the reordered copy lives in one shared buffer.
+    if ((speed == 0 || speed == TEXT_SKIP_DRAW)
+     && (printerTemplate->type == SPRITE_TEXT_PRINTER
+      || (printerTemplate->windowId < 32 && (sRtlInPlaceWindows & (1u << printerTemplate->windowId))))
+     && RtlReorderToVisual(printerTemplate->currentChar, sRtlVisualBuffer, sizeof(sRtlVisualBuffer)))
+    {
+        sTempTextPrinter.printerTemplate.currentChar = sRtlVisualBuffer;
+        sTempTextPrinter.rtlVisualOrder = TRUE;
+    }
+#endif
 
     if (printerTemplate->type == SPRITE_TEXT_PRINTER)
     {
@@ -965,6 +984,483 @@ u32 CopyGlyphToVRAM(struct TextPrinter *textPrinter)
     return 0;
 }
 
+#if TEXT_RTL
+// Right-to-left rendering.
+//
+// A window printer keeps upstream's logical pen: x, currentX, {CLEAR_TO}, {SKIP} and every layout
+// computed from GetStringWidth mean exactly what they mean in English. Only the blit is mirrored:
+// a glyph at logical x with width w in a window W pixels wide is drawn at W - x - w. So every
+// window comes out as the mirror image of its English layout, and a string that fits in English
+// fits in Hebrew.
+//
+// A run of Latin letters or digits (plus the punctuation between them) is measured when it starts
+// and drawn left to right as one block at the run's mirrored position, so "32", "10:30" and "PP"
+// are stored and read in their normal order.
+//
+// Sprite printers and windows set to in-place mode keep their English position instead: the line
+// is reordered into visual order and printed left to right.
+
+enum
+{
+    RTL_CLASS_NEUTRAL,    // Spaces and punctuation take the direction of their surroundings
+    RTL_CLASS_RTL,        // Hebrew letters
+    RTL_CLASS_LTR,        // Latin letters and Latin-only symbols
+    RTL_CLASS_DIGIT,
+    RTL_CLASS_NUM_PREFIX, // Starts a run when a digit follows: currency, plus, minus
+    RTL_CLASS_NUM_SUFFIX, // Stays in a run when a digit precedes it: percent
+    RTL_CLASS_CONTROL,    // Control bytes always end a run
+};
+
+static const u8 sRtlCharClass[0x100] =
+{
+    [CHAR_A_GRAVE ... CHAR_SUPER_ER]                = RTL_CLASS_LTR,
+    [CHAR_PLUS]                                     = RTL_CLASS_NUM_PREFIX,
+    [CHAR_LV]                                       = RTL_CLASS_LTR,
+    [CHAR_HEB_ALEF ... CHAR_HEB_FINAL_KAF]          = RTL_CLASS_RTL,
+    [CHAR_PK ... CHAR_I_ACUTE]                      = RTL_CLASS_LTR,
+    [CHAR_PERCENT]                                  = RTL_CLASS_NUM_SUFFIX,
+    [CHAR_HEB_FINAL_MEM ... CHAR_HEB_FINAL_TSADI]   = RTL_CLASS_RTL,
+    [CHAR_a_CIRCUMFLEX]                             = RTL_CLASS_LTR,
+    [CHAR_i_ACUTE]                                  = RTL_CLASS_LTR,
+    [CHAR_SUPER_E]                                  = RTL_CLASS_LTR,
+    [CHAR_SUPER_RE]                                 = RTL_CLASS_LTR,
+    [CHAR_0 ... CHAR_9]                             = RTL_CLASS_DIGIT,
+    [CHAR_HYPHEN]                                   = RTL_CLASS_NUM_PREFIX,
+    [CHAR_CURRENCY]                                 = RTL_CLASS_NUM_PREFIX,
+    [CHAR_A ... CHAR_z]                             = RTL_CLASS_LTR,
+    [CHAR_A_DIAERESIS ... CHAR_u_DIAERESIS]         = RTL_CLASS_LTR,
+    [CHAR_DYNAMIC ... EOS]                          = RTL_CLASS_CONTROL,
+};
+
+#define RTL_MAX_RUN_GLYPHS 127
+
+#if RTL_CLIP_REPORT
+// Read back by the harness between screens: every glyph that was drawn, or partly drawn, outside
+// its window, with enough context to find the string and the printer that placed it.
+struct RtlClipRecord
+{
+    const u8 *str;
+    u8 windowId;
+    u8 fontId;
+    u8 x;
+    u8 currentX;
+    u8 windowWidth;
+    u8 glyphWidth;
+    s16 physX;
+};
+EWRAM_DATA struct RtlClipRecord gRtlClipLog[16] = {0};
+EWRAM_DATA u32 gRtlClipCount = 0;
+
+static void RtlReportClip(struct TextPrinter *textPrinter, s32 physX, u32 windowWidth)
+{
+    struct RtlClipRecord *record = &gRtlClipLog[gRtlClipCount % ARRAY_COUNT(gRtlClipLog)];
+    gRtlClipCount++;
+    record->str = textPrinter->printerTemplate.currentChar;
+    record->windowId = textPrinter->printerTemplate.windowId;
+    record->fontId = textPrinter->printerTemplate.fontId;
+    record->x = textPrinter->printerTemplate.x;
+    record->currentX = textPrinter->printerTemplate.currentX;
+    record->windowWidth = windowWidth;
+    record->glyphWidth = gCurGlyph.width;
+    record->physX = physX;
+}
+#else
+#define RtlReportClip(textPrinter, physX, windowWidth)
+#endif
+
+void RtlSetWindowInPlace(u32 windowId, bool32 inPlace)
+{
+    if (windowId >= 32)
+        return;
+    if (inPlace)
+        sRtlInPlaceWindows |= 1u << windowId;
+    else
+        sRtlInPlaceWindows &= ~(1u << windowId);
+}
+
+void RtlResetWindowModes(void)
+{
+    sRtlInPlaceWindows = 0;
+}
+
+// Whether this printer's glyphs are mirrored inside its window.
+static bool32 RtlIsMirrored(const struct TextPrinter *textPrinter)
+{
+    return textPrinter->printerTemplate.type == WINDOW_TEXT_PRINTER
+        && !textPrinter->japanese
+        && !textPrinter->rtlVisualOrder;
+}
+
+static u32 RtlWindowWidth(const struct TextPrinter *textPrinter)
+{
+    return gWindows[textPrinter->printerTemplate.windowId].window.width * 8;
+}
+
+static u32 RtlClassAt(const u8 *str, u32 *length)
+{
+    if (str[0] == CHAR_EXTRA_SYMBOL)
+    {
+        *length = 2;
+        switch (str[1])
+        {
+        case CHAR_LV_2:
+        case CHAR_PP:
+        case CHAR_ID:
+        case CHAR_NO:
+            return RTL_CLASS_LTR;
+        default:
+            return RTL_CLASS_NEUTRAL;
+        }
+    }
+    *length = 1;
+    return sRtlCharClass[str[0]];
+}
+
+// Whether a run of left-to-right text starts at str.
+static bool32 RtlStartsRun(const u8 *str)
+{
+    u32 length, nextLength;
+    u32 class = RtlClassAt(str, &length);
+
+    if (class == RTL_CLASS_LTR || class == RTL_CLASS_DIGIT)
+        return TRUE;
+    return class == RTL_CLASS_NUM_PREFIX && RtlClassAt(str + length, &nextLength) == RTL_CLASS_DIGIT;
+}
+
+// Length of a colour code at str (which is EXT_CTRL_CODE_BEGIN), or 0 for any other control code.
+// Colour codes may sit inside a run; everything else ends it.
+static u32 RtlColorCodeLength(const u8 *str)
+{
+    switch (str[1])
+    {
+    case EXT_CTRL_CODE_COLOR:
+    case EXT_CTRL_CODE_HIGHLIGHT:
+    case EXT_CTRL_CODE_SHADOW:
+    case EXT_CTRL_CODE_PALETTE:
+    case EXT_CTRL_CODE_ACCENT:
+    case EXT_CTRL_CODE_BACKGROUND:
+        return 3;
+    case EXT_CTRL_CODE_COLOR_HIGHLIGHT_SHADOW:
+    case EXT_CTRL_CODE_TEXT_COLORS:
+        return 5;
+    default:
+        return 0;
+    }
+}
+
+static u32 (*GetFontWidthFunc(u8 fontId))(u16, bool32);
+
+// The pen advance PrintGlyph will make for this glyph.
+static u32 RtlGlyphAdvance(const struct TextPrinter *textPrinter, u16 glyphId)
+{
+    u32 (*widthFunc)(u16, bool32);
+
+    if (textPrinter->minLetterSpacing)
+        return textPrinter->minLetterSpacing;
+    widthFunc = GetFontWidthFunc(textPrinter->fontId);
+    if (widthFunc == NULL)
+        return 0;
+    return widthFunc(glyphId, FALSE);
+}
+
+// Measures the run that starts at str: everything up to the last Latin letter or digit before the
+// next Hebrew letter or control code. Neutrals after that stay right-to-left.
+static void RtlBeginRun(struct TextPrinter *textPrinter, const u8 *str)
+{
+    u32 width = 0, glyphs = 0, runWidth = 0, runGlyphs = 0;
+    u32 prevClass = RTL_CLASS_NEUTRAL;
+
+    while (glyphs < RTL_MAX_RUN_GLYPHS)
+    {
+        u32 length, class, nextLength;
+        bool32 strong;
+
+        if (*str == EXT_CTRL_CODE_BEGIN)
+        {
+            u32 codeLength = RtlColorCodeLength(str);
+            if (codeLength == 0)
+                break;
+            str += codeLength;
+            continue;
+        }
+
+        class = RtlClassAt(str, &length);
+        if (class == RTL_CLASS_RTL || (class == RTL_CLASS_CONTROL && *str != CHAR_EXTRA_SYMBOL))
+            break;
+
+        width += RtlGlyphAdvance(textPrinter, length == 2 ? (str[1] | 0x100) : str[0]);
+        glyphs++;
+
+        strong = class == RTL_CLASS_LTR
+              || class == RTL_CLASS_DIGIT
+              || (class == RTL_CLASS_NUM_PREFIX && RtlClassAt(str + length, &nextLength) == RTL_CLASS_DIGIT)
+              || (class == RTL_CLASS_NUM_SUFFIX && prevClass == RTL_CLASS_DIGIT);
+        if (strong)
+        {
+            runWidth = width;
+            runGlyphs = glyphs;
+        }
+        prevClass = class;
+        str += length;
+    }
+
+    textPrinter->rtlRunStart = textPrinter->printerTemplate.currentX;
+    textPrinter->rtlRunWidth = min(runWidth, 255);
+    textPrinter->rtlRunGlyphs = runGlyphs;
+}
+
+// Called for every printable glyph before it is decompressed. Starts a run when one begins here,
+// and gives a neutral in right-to-left context its mirrored shape. Returns TRUE when the glyph has
+// no mirrored partner and must be flipped after decompression.
+static bool32 RtlPrepareGlyph(struct TextPrinter *textPrinter, const u8 *glyphStart, u16 *currChar)
+{
+    if (!RtlIsMirrored(textPrinter) || textPrinter->rtlRunGlyphs != 0)
+        return FALSE;
+
+    if (RtlStartsRun(glyphStart))
+    {
+        RtlBeginRun(textPrinter, glyphStart);
+        if (textPrinter->rtlRunGlyphs != 0)
+            return FALSE;
+    }
+
+    switch (*currChar)
+    {
+    case CHAR_LEFT_PAREN:         *currChar = CHAR_RIGHT_PAREN;           break;
+    case CHAR_RIGHT_PAREN:        *currChar = CHAR_LEFT_PAREN;            break;
+    case CHAR_LESS_THAN:          *currChar = CHAR_GREATER_THAN;          break;
+    case CHAR_GREATER_THAN:       *currChar = CHAR_LESS_THAN;             break;
+    case CHAR_LEFT_ARROW:         *currChar = CHAR_RIGHT_ARROW;           break;
+    case CHAR_RIGHT_ARROW:        *currChar = CHAR_LEFT_ARROW;            break;
+    case 0x100 | CHAR_LEFT_ARROW_2:  *currChar = 0x100 | CHAR_RIGHT_ARROW_2; break;
+    case 0x100 | CHAR_RIGHT_ARROW_2: *currChar = 0x100 | CHAR_LEFT_ARROW_2;  break;
+    case CHAR_BLACK_TRIANGLE:
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static u32 RtlReverseNibbles(u32 row, u32 count)
+{
+    u32 out = 0;
+    for (u32 i = 0; i < count; i++)
+        out |= ((row >> (4 * i)) & 0xF) << (4 * (count - 1 - i));
+    return out;
+}
+
+// Mirrors gCurGlyph horizontally within its width.
+static void RtlFlipCurGlyph(void)
+{
+    u32 width = gCurGlyph.width;
+
+    if (width == 0)
+        return;
+    for (u32 i = 0; i < 8; i++)
+    {
+        if (width <= 8)
+        {
+            gCurGlyph.gfxBufferTop[i] = RtlReverseNibbles(gCurGlyph.gfxBufferTop[i], width);
+            gCurGlyph.gfxBufferBottom[i] = RtlReverseNibbles(gCurGlyph.gfxBufferBottom[i], width);
+        }
+        else
+        {
+            u32 *halves[2] = {gCurGlyph.gfxBufferTop, gCurGlyph.gfxBufferBottom};
+            for (u32 h = 0; h < 2; h++)
+            {
+                u64 row = ((u64)halves[h][8 + i] << 32) | halves[h][i];
+                u64 out = 0;
+                for (u32 j = 0; j < width; j++)
+                    out |= ((row >> (4 * j)) & 0xF) << (4 * (width - 1 - j));
+                halves[h][i] = out & 0xFFFFFFFF;
+                halves[h][8 + i] = out >> 32;
+            }
+        }
+    }
+}
+
+// Physical x of a glyph (or of a cleared span) that starts at logical x and is width wide.
+static s32 RtlPhysicalX(const struct TextPrinter *textPrinter, u32 x, u32 width, bool32 inRun)
+{
+    s32 windowWidth = RtlWindowWidth(textPrinter);
+
+    if (inRun)
+        return windowWidth - textPrinter->rtlRunStart - textPrinter->rtlRunWidth + ((s32)x - textPrinter->rtlRunStart);
+    return windowWidth - (s32)x - (s32)width;
+}
+
+static void RtlFillSpan(struct TextPrinter *textPrinter, s32 physX, s32 width)
+{
+    struct Window *window = &gWindows[textPrinter->printerTemplate.windowId];
+    struct Bitmap pixels;
+
+    if (physX < 0)
+    {
+        width += physX;
+        physX = 0;
+    }
+    if (width <= 0 || sLastTextColor.background == TEXT_COLOR_TRANSPARENT)
+        return;
+    pixels.pixels = window->tileData;
+    pixels.width = window->window.width << 3;
+    pixels.height = window->window.height << 3;
+    FillBitmapRect4Bit(&pixels, physX, textPrinter->printerTemplate.currentY, width, gCurGlyph.height, sLastTextColor.background);
+}
+
+// Blits gCurGlyph at a physical x, clipping it at the window's left edge.
+static void RtlBlitGlyph(struct TextPrinter *textPrinter, s32 physX)
+{
+    u32 windowWidth = RtlWindowWidth(textPrinter);
+    u32 logicalX = textPrinter->printerTemplate.currentX;
+
+    if (physX < 0)
+    {
+        RtlReportClip(textPrinter, physX, windowWidth);
+        if (-physX >= gCurGlyph.width)
+            return;
+        OffsetCurrGlyph(-physX);
+        physX = 0;
+    }
+    else if (physX + gCurGlyph.width > windowWidth)
+    {
+        RtlReportClip(textPrinter, physX, windowWidth);
+    }
+    textPrinter->printerTemplate.currentX = physX;
+    CopyGlyphToVRAM(textPrinter);
+    textPrinter->printerTemplate.currentX = logicalX;
+}
+
+// PrintGlyph for a mirrored window printer. The logical pen advances exactly as upstream's does.
+static void PrintGlyphMirrored(struct TextPrinter *textPrinter, bool32 flip)
+{
+    u32 logicalX = textPrinter->printerTemplate.currentX;
+    u32 glyphWidth = gCurGlyph.width;
+    bool32 inRun = textPrinter->rtlRunGlyphs != 0;
+    s32 physX = RtlPhysicalX(textPrinter, logicalX, glyphWidth, inRun);
+
+    if (flip && !inRun)
+        RtlFlipCurGlyph();
+    RtlBlitGlyph(textPrinter, physX);
+
+    if (textPrinter->minLetterSpacing)
+    {
+        s32 pad = (s32)textPrinter->minLetterSpacing - (s32)glyphWidth;
+        if (pad > 0)
+            RtlFillSpan(textPrinter, inRun ? physX + (s32)glyphWidth : physX - pad, pad);
+        textPrinter->printerTemplate.currentX = logicalX + textPrinter->minLetterSpacing;
+    }
+    else
+    {
+        textPrinter->printerTemplate.currentX = logicalX + glyphWidth;
+    }
+
+    if (inRun)
+        textPrinter->rtlRunGlyphs--;
+}
+
+// Physical x for something drawn at the pen that is width wide (the down arrow, a keypad icon).
+static u32 RtlPenObjectX(const struct TextPrinter *textPrinter, u32 width)
+{
+    s32 x;
+
+    if (!RtlIsMirrored(textPrinter))
+        return textPrinter->printerTemplate.currentX;
+    x = RtlPhysicalX(textPrinter, textPrinter->printerTemplate.currentX, width, FALSE);
+    return x < 0 ? 0 : x;
+}
+
+// In-place mode: reorders str into visual order in dest, so that printing it left to right reads
+// right to left while the line keeps its English position. Returns FALSE (and leaves dest unused)
+// when str holds control codes other than line breaks, which reordering cannot carry.
+static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize)
+{
+    const u8 *units[64];
+    u8 unitLengths[64];
+    bool32 hasRtl = FALSE;
+    u32 out = 0;
+
+    for (const u8 *s = str; *s != EOS; s++)
+    {
+        if (*s == EXT_CTRL_CODE_BEGIN || *s == PLACEHOLDER_BEGIN || *s == CHAR_KEYPAD_ICON
+         || *s == CHAR_PROMPT_SCROLL || *s == CHAR_PROMPT_CLEAR || *s == CHAR_DYNAMIC)
+            return FALSE;
+        if (*s == CHAR_EXTRA_SYMBOL)
+            s++;
+        else if (sRtlCharClass[*s] == RTL_CLASS_RTL)
+            hasRtl = TRUE;
+    }
+    if (!hasRtl)
+        return FALSE;
+
+    while (TRUE)
+    {
+        u32 numUnits = 0;
+
+        while (*str != EOS && *str != CHAR_NEWLINE && numUnits < ARRAY_COUNT(units))
+        {
+            u32 length;
+            units[numUnits] = str;
+            if (RtlStartsRun(str))
+            {
+                // The run ends at its last strong character, as in RtlBeginRun.
+                const u8 *s = str, *end = str;
+                u32 prevClass = RTL_CLASS_NEUTRAL;
+                while (*s != EOS && *s != CHAR_NEWLINE)
+                {
+                    u32 nextLength, class = RtlClassAt(s, &length);
+                    if (class == RTL_CLASS_RTL)
+                        break;
+                    if (class == RTL_CLASS_LTR || class == RTL_CLASS_DIGIT
+                     || (class == RTL_CLASS_NUM_PREFIX && RtlClassAt(s + length, &nextLength) == RTL_CLASS_DIGIT)
+                     || (class == RTL_CLASS_NUM_SUFFIX && prevClass == RTL_CLASS_DIGIT))
+                        end = s + length;
+                    prevClass = class;
+                    s += length;
+                }
+                length = end - str;
+            }
+            else
+            {
+                RtlClassAt(str, &length);
+            }
+            unitLengths[numUnits++] = length;
+            str += length;
+        }
+
+        while (numUnits > 0)
+        {
+            u32 i;
+            numUnits--;
+            if (out + unitLengths[numUnits] + 2 > destSize)
+                return FALSE;
+            for (i = 0; i < unitLengths[numUnits]; i++)
+            {
+                u8 c = units[numUnits][i];
+                if (unitLengths[numUnits] == 1)
+                {
+                    if (c == CHAR_LEFT_PAREN)          c = CHAR_RIGHT_PAREN;
+                    else if (c == CHAR_RIGHT_PAREN)    c = CHAR_LEFT_PAREN;
+                    else if (c == CHAR_LESS_THAN)      c = CHAR_GREATER_THAN;
+                    else if (c == CHAR_GREATER_THAN)   c = CHAR_LESS_THAN;
+                }
+                dest[out++] = c;
+            }
+        }
+
+        if (*str == CHAR_NEWLINE)
+        {
+            dest[out++] = CHAR_NEWLINE;
+            str++;
+            continue;
+        }
+        if (*str != EOS)
+            return FALSE; // More units on one line than this can hold
+        dest[out] = EOS;
+        return TRUE;
+    }
+}
+
+#endif // TEXT_RTL
+
 #define nextX data[1]
 #define nextY data[2]
 
@@ -1019,6 +1515,13 @@ void ClearTextSpan(struct TextPrinter *textPrinter, u32 width)
     struct TextGlyph *glyph;
     u8 *glyphHeight;
 
+#if TEXT_RTL
+    if (RtlIsMirrored(textPrinter))
+    {
+        RtlFillSpan(textPrinter, RtlPhysicalX(textPrinter, textPrinter->printerTemplate.currentX, width, FALSE), width);
+        return;
+    }
+#endif
     if (sLastTextColor.background != TEXT_COLOR_TRANSPARENT)
     {
         window = &gWindows[textPrinter->printerTemplate.windowId];
@@ -1172,6 +1675,12 @@ void TextPrinterInitDownArrowCounters(struct TextPrinter *textPrinter)
     }
 }
 
+#if TEXT_RTL
+#define DOWN_ARROW_X(textPrinter) RtlPenObjectX(textPrinter, 8)
+#else
+#define DOWN_ARROW_X(textPrinter) ((textPrinter)->printerTemplate.currentX)
+#endif
+
 void TextPrinterDrawDownArrow(struct TextPrinter *textPrinter)
 {
     const u8 *arrowTiles;
@@ -1187,7 +1696,7 @@ void TextPrinterDrawDownArrow(struct TextPrinter *textPrinter)
             FillWindowPixelRect(
                 textPrinter->printerTemplate.windowId,
                 textPrinter->printerTemplate.color.background << 4 | textPrinter->printerTemplate.color.background,
-                textPrinter->printerTemplate.currentX,
+                DOWN_ARROW_X(textPrinter),
                 textPrinter->printerTemplate.currentY,
                 8,
                 16);
@@ -1210,7 +1719,7 @@ void TextPrinterDrawDownArrow(struct TextPrinter *textPrinter)
                 sDownArrowYCoords[textPrinter->downArrowYPosIdx],
                 8,
                 16,
-                textPrinter->printerTemplate.currentX,
+                DOWN_ARROW_X(textPrinter),
                 textPrinter->printerTemplate.currentY,
                 8,
                 16);
@@ -1227,7 +1736,7 @@ void TextPrinterClearDownArrow(struct TextPrinter *textPrinter)
     FillWindowPixelRect(
         textPrinter->printerTemplate.windowId,
         textPrinter->printerTemplate.color.background << 4 | textPrinter->printerTemplate.color.background,
-        textPrinter->printerTemplate.currentX,
+        DOWN_ARROW_X(textPrinter),
         textPrinter->printerTemplate.currentY,
         8,
         16);
@@ -1329,6 +1838,10 @@ static u16 RenderText(struct TextPrinter *textPrinter)
     u16 currChar;
     s32 width;
     s32 widthHelper;
+#if TEXT_RTL
+    const u8 *glyphStart = NULL;
+    bool32 flipGlyph = FALSE;
+#endif
 
     switch (textPrinter->state)
     {
@@ -1352,6 +1865,9 @@ static u16 RenderText(struct TextPrinter *textPrinter)
         else
             textPrinter->delayCounter = textPrinter->textSpeed;
 
+#if TEXT_RTL
+        glyphStart = textPrinter->printerTemplate.currentChar;
+#endif
         currChar = *textPrinter->printerTemplate.currentChar;
         textPrinter->printerTemplate.currentChar++;
 
@@ -1550,7 +2066,11 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             if (textPrinter->printerTemplate.type == WINDOW_TEXT_PRINTER)
             {
                 currChar = *textPrinter->printerTemplate.currentChar++;
+#if TEXT_RTL
+                gCurGlyph.width = DrawKeypadIcon(textPrinter->printerTemplate.windowId, currChar, RtlPenObjectX(textPrinter, GetKeypadIconWidth(currChar)), textPrinter->printerTemplate.currentY);
+#else
                 gCurGlyph.width = DrawKeypadIcon(textPrinter->printerTemplate.windowId, currChar, textPrinter->printerTemplate.currentX, textPrinter->printerTemplate.currentY);
+#endif
                 textPrinter->printerTemplate.currentX += gCurGlyph.width + textPrinter->printerTemplate.letterSpacing;
                 return RENDER_PRINT;
             }
@@ -1577,6 +2097,9 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             return RENDER_FINISH;
         }
 
+#if TEXT_RTL
+        flipGlyph = RtlPrepareGlyph(textPrinter, glyphStart, &currChar);
+#endif
         switch (textPrinter->fontId)
         {
         case FONT_SMALL:
@@ -1613,6 +2136,13 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             break;
         }
 
+#if TEXT_RTL
+        if (RtlIsMirrored(textPrinter))
+        {
+            PrintGlyphMirrored(textPrinter, flipGlyph);
+            return RENDER_PRINT;
+        }
+#endif
         PrintGlyph(textPrinter);
 
         return RENDER_PRINT;

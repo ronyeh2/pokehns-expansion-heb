@@ -33,6 +33,13 @@ MAKER_CODE  := 01
 REVISION    := 0
 KEEP_TEMPS  ?= 0
 
+# Diagnostic build that records glyphs drawn outside their window: make hns RTL_CLIP_REPORT=1
+# It is a different ROM (pokehns-clip.gba, built in build/hns-clip), never the release.
+RTL_CLIP_REPORT ?= 0
+ifeq ($(RTL_CLIP_REPORT),1)
+	BUILD_NAME := $(BUILD_NAME)-clip
+endif
+
 # `File name`.gba
 FILE_NAME := poke$(BUILD_NAME)
 BUILD_DIR := build
@@ -166,6 +173,9 @@ else
 O_LEVEL ?= 2
 endif
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=$(TEST) -D$(GAME_VERSION) -std=gnu17
+ifeq ($(RTL_CLIP_REPORT),1)
+	override CPPFLAGS += -DRTL_CLIP_REPORT=TRUE
+endif
 ifeq ($(RELEASE),1)
 	override CPPFLAGS += -DRELEASE
 	ifeq ($(USE_LTO_ON_RELEASE),1)
