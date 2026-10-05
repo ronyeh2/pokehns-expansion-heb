@@ -2325,6 +2325,16 @@ static void InitPartyMenuWindows(u8 layout)
         InitWindows(sShowcaseMultiPartyMenuWindowTemplate);
         break;
     }
+#if TEXT_RTL
+    {
+        // Each slot's background art is blitted into its window in slices, and the nickname,
+        // level and HP sit in fixed boxes on that art, so the slots keep the English layout and
+        // only the reading order flips.
+        u32 i;
+        for (i = 0; i < PARTY_SIZE; i++)
+            SetWindowRtlMode(i, WINDOW_RTL_IN_PLACE);
+    }
+#endif
     LoadPartyMenuWindows();
 }
 

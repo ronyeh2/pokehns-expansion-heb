@@ -1358,6 +1358,10 @@ void DrawTextWindowAndBufferTiles(const u8 *string, void *dst, u8 zero1, u8 zero
     winTemplate.width = 24;
     winTemplate.height = 2;
     windowId = AddWindow(&winTemplate);
+#if TEXT_RTL
+    // Scratch window: only the first chunks of tiles are copied out, so keep the English position.
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(zero2));
     tileData1 = (u8 *) GetWindowAttribute(windowId, WINDOW_TILE_DATA);
     tileData2 = (winTemplate.width * TILE_SIZE_4BPP) + tileData1;

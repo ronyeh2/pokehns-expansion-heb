@@ -62,7 +62,12 @@ void TrySpawnNamebox(u32 tileNum)
     struct WindowTemplate template =
     {
         .bg = 0,
+#if TEXT_RTL
+        // Flush with the right end of the dialogue box (columns 2-28), where a Hebrew reader starts.
+        .tilemapLeft = 29 - winWidth,
+#else
         .tilemapLeft = 2,
+#endif
         .tilemapTop = 13,
         .width = winWidth,
         .height = OW_NAME_BOX_DEFAULT_HEIGHT,

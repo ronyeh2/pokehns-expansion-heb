@@ -2659,6 +2659,10 @@ static void PrintPocketNames(const u8 *pocketName1, const u8 *pocketName2)
     window.width = 16;
     window.height = 2;
     windowId = AddWindow(&window);
+#if TEXT_RTL
+    // Scratch window whose halves are copied out separately; keep the English position.
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
     offset = GetStringCenterAlignXOffset(FONT_NORMAL, pocketName1, 0x40);
     BagMenu_Print(windowId, FONT_NORMAL, pocketName1, offset, 1, 0, 0, TEXT_SKIP_DRAW, COLORID_POCKET_NAME);

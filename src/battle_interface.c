@@ -2529,6 +2529,11 @@ static u8 *AddTextPrinterAndCreateWindowOnHealthboxWithFont(const u8 *str, u32 x
     struct WindowTemplate winTemplate = sHealthboxWindowTemplate;
 
     winId = AddWindow(&winTemplate);
+#if TEXT_RTL
+    // A scratch window: only part of its tiles is copied into the healthbox sprite, so the text
+    // must stay where the English puts it.
+    SetWindowRtlMode(winId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(winId, PIXEL_FILL(bgColor));
 
     color[0] = bgColor;
@@ -2700,6 +2705,11 @@ static u8 *AddTextPrinterAndCreateWindowOnAbilityPopUp(const u8 *str, u32 x, u32
     winTemplate.height = 2;
 
     *windowId = AddWindow(&winTemplate);
+#if TEXT_RTL
+    // Scratch window for the ability pop-up: only part of it is copied out, so keep the English
+    // position.
+    SetWindowRtlMode(*windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(*windowId, PIXEL_FILL(bgColor));
 
     fontId = GetFontIdToFit(str, FONT_SMALL, 0, ABILITY_POP_UP_STR_WIDTH);

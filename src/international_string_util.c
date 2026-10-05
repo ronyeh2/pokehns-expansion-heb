@@ -218,6 +218,16 @@ void FillWindowTilesByRow(int windowId, int columnStart, int rowStart, int numFi
     int fillSize, windowRowSize, i;
     struct Window *window = &gWindows[windowId];
 
+#if TEXT_RTL
+    columnStart = WindowRtlX(windowId, columnStart * 8, numFillTiles * 8) / 8;
+    if (columnStart < 0)
+    {
+        numFillTiles += columnStart;
+        columnStart = 0;
+    }
+    if (numFillTiles <= 0)
+        return;
+#endif
     fillSize = numFillTiles * TILE_SIZE_4BPP;
     windowRowSize = window->window.width * TILE_SIZE_4BPP;
     windowTileData = (u8 *)window->tileData + (rowStart * windowRowSize) + (columnStart * TILE_SIZE_4BPP);

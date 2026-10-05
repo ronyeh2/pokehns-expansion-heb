@@ -132,10 +132,13 @@ struct TextPrinter
     u8 minLetterSpacing;
 
     u8 textSpeed;
-    u8 rtlRunStart;  // Logical x where the current left-to-right run (Latin, digits) starts
-    u8 rtlRunWidth;  // Width of that run in pixels
+    u8 rtlRunStart;      // Logical x where the current left-to-right run (Latin, digits) starts
+    u8 rtlRunWidth;      // Width of that run in pixels
     u8 rtlRunGlyphs:7;   // Glyphs of that run still to be printed
-    u8 rtlVisualOrder:1; // The string was reordered for left-to-right printing (in-place mode)
+    u8 rtlVisualOrder:1; // The string was reordered for left-to-right printing (sprite printers)
+    u16 rtlAxis;         // Mirror axis: physical x = rtlAxis - logical x - width
+    u8 rtlMode:2;        // The window's WINDOW_RTL_* mode when the printer started
+    u8 rtlNeedAxis:1;    // A new segment starts; in-place mode measures it at its first glyph
 
     struct TextPrinter *nextPrinter;
 
@@ -195,8 +198,6 @@ void AddSpriteTextPrinterParameterized4(u8 spriteId, u8 fontId, u8 left, u8 top,
 void AddSpriteTextPrinterParameterized6(u8 spriteId, u8 fontId, u8 left, u8 top, u8 letterSpacing, u8 lineSpacing, const union TextColor color, s8 speed, const u8 *str);
 bool32 AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
 void RunTextPrinters(void);
-void RtlSetWindowInPlace(u32 windowId, bool32 inPlace);
-void RtlResetWindowModes(void);
 bool32 IsTextPrinterActiveOnWindow(u32 windowId);
 bool32 IsTextPrinterActiveOnSprite(u32 spriteId);
 void GenerateFontHalfRowLookupTable(union TextColor color);

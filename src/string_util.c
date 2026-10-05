@@ -682,7 +682,8 @@ bool32 IsStringJapanese(u8 *str)
 {
     while (*str != EOS)
     {
-        if (*str <= JAPANESE_CHAR_END)
+        // Hebrew letters sit below JAPANESE_CHAR_END too, but they are not kana.
+        if (*str <= JAPANESE_CHAR_END && !IS_HEBREW_CHAR(*str))
             if (*str != CHAR_SPACE)
                 return TRUE;
         str++;
@@ -697,7 +698,7 @@ bool32 IsStringNJapanese(u8 *str, s32 n)
 
     for (i = 0; *str != EOS && i < n; i++)
     {
-        if (*str <= JAPANESE_CHAR_END)
+        if (*str <= JAPANESE_CHAR_END && !IS_HEBREW_CHAR(*str))
             if (*str != CHAR_SPACE)
                 return TRUE;
         str++;

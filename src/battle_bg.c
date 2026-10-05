@@ -1021,6 +1021,20 @@ void BattleInitBgsAndWindows(void)
     }
 
     InitWindows(gBattleWindowTemplates[gBattleScripting.windowsType]);
+#if TEXT_RTL
+    if (gBattleScripting.windowsType != B_WIN_TYPE_ARENA)
+    {
+        // The action and move cursors are tilemap tiles at the English columns, and move name 1's
+        // window is wider than its slot and overlaps move 2's, so these keep the English layout.
+        // The level-up banner is drawn over its own art.
+        SetWindowRtlMode(B_WIN_ACTION_MENU, WINDOW_RTL_IN_PLACE);
+        SetWindowRtlMode(B_WIN_MOVE_NAME_1, WINDOW_RTL_IN_PLACE);
+        SetWindowRtlMode(B_WIN_MOVE_NAME_2, WINDOW_RTL_IN_PLACE);
+        SetWindowRtlMode(B_WIN_MOVE_NAME_3, WINDOW_RTL_IN_PLACE);
+        SetWindowRtlMode(B_WIN_MOVE_NAME_4, WINDOW_RTL_IN_PLACE);
+        SetWindowRtlMode(B_WIN_LEVEL_UP_BANNER, WINDOW_RTL_IN_PLACE);
+    }
+#endif
     DeactivateAllTextPrinters();
 }
 

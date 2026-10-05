@@ -451,6 +451,20 @@ struct PokedexView
 };
 
 static void ResetPokedexView(struct PokedexView *pokedexView);
+
+#if TEXT_RTL
+// The Pokédex windows are 32 tiles wide but the screen shows 30, so mirror them around the visible
+// width rather than the window's.
+static void MirrorDexWindowsAtScreenWidth(void)
+{
+    u32 i;
+    for (i = 0; i < WINDOWS_MAX; i++)
+    {
+        if (GetWindowAttribute(i, WINDOW_BG) != 0xFF && GetWindowAttribute(i, WINDOW_WIDTH) > DISPLAY_TILE_WIDTH)
+            SetWindowRtlMirrorWidth(i, DISPLAY_WIDTH - GetWindowAttribute(i, WINDOW_TILEMAP_LEFT) * 8);
+    }
+}
+#endif
 static void VBlankCB_Pokedex(void);
 static void CB2_Pokedex(void);
 static void Task_OpenPokedexMainPage(u8);
@@ -2401,6 +2415,9 @@ static bool8 LoadPokedexListPage(u8 page)
             sPokedexView->isSearchResults = TRUE;
         LoadPokedexBgPalette(sPokedexView->isSearchResults);
         InitWindows(sPokemonList_WindowTemplate);
+#if TEXT_RTL
+        MirrorDexWindowsAtScreenWidth();
+#endif
         DeactivateAllTextPrinters();
         PutWindowTilemap(0);
         CopyWindowToVram(0, COPYWIN_FULL);
@@ -3834,6 +3851,9 @@ static u8 LoadInfoScreen(struct PokedexListItem *item, u8 monSpriteId, bool8 mon
     SetBgTilemapBuffer(1, AllocZeroed(BG_SCREEN_SIZE));
     SetBgTilemapBuffer(0, AllocZeroed(BG_SCREEN_SIZE));
     InitWindows(sInfoScreen_WindowTemplates);
+#if TEXT_RTL
+    MirrorDexWindowsAtScreenWidth();
+#endif
     DeactivateAllTextPrinters();
 
     return taskId;
@@ -4281,6 +4301,9 @@ void Task_DisplayCaughtMonDexPageHGSS(u8 taskId)
             SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
             SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
             InitWindows(sNewEntryInfoScreen_WindowTemplates);
+#if TEXT_RTL
+            MirrorDexWindowsAtScreenWidth();
+#endif
             DeactivateAllTextPrinters();
             gTasks[taskId].tState = 1;
         }
@@ -4930,6 +4953,9 @@ static void ResetStatsWindows(void)
 
     FreeAllWindowBuffers();
     InitWindows(sStatsScreen_WindowTemplates);
+#if TEXT_RTL
+    MirrorDexWindowsAtScreenWidth();
+#endif
 
     for (i = 0; i < WIN_STATS_END + 1; i++)
     {
@@ -6032,6 +6058,9 @@ static void Task_SwitchScreensFromStatsScreen(u8 taskId)
         case 1:
             FreeAllWindowBuffers();
             InitWindows(sInfoScreen_WindowTemplates);
+#if TEXT_RTL
+            MirrorDexWindowsAtScreenWidth();
+#endif
             gTasks[taskId].func = Task_LoadAreaScreen;
             break;
         case 2:
@@ -6040,6 +6069,9 @@ static void Task_SwitchScreensFromStatsScreen(u8 taskId)
         case 3:
             FreeAllWindowBuffers();
             InitWindows(sInfoScreen_WindowTemplates);
+#if TEXT_RTL
+            MirrorDexWindowsAtScreenWidth();
+#endif
             gTasks[taskId].func = Task_LoadEvolutionScreen;
             break;
         default:
@@ -8182,6 +8214,9 @@ static void Task_LoadSearchMenu(u8 taskId)
             SetBgTilemapBuffer(1, AllocZeroed(BG_SCREEN_SIZE));
             SetBgTilemapBuffer(0, AllocZeroed(BG_SCREEN_SIZE));
             InitWindows(sSearchMenu_WindowTemplate);
+#if TEXT_RTL
+            MirrorDexWindowsAtScreenWidth();
+#endif
             DeactivateAllTextPrinters();
             PutWindowTilemap(0);
             if (!HGSS_DECAPPED)
