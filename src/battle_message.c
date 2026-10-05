@@ -2921,6 +2921,32 @@ static void GetBattlerNick(enum BattlerId battler, u8 *dst)
     StringGet_Nickname(dst);
 }
 
+#if TEXT_NAME_SUFFIX_IN_BATTLE
+// Hebrew puts "wild" and "opposing" after the name (פידג'י פראי), so the nickname is copied first
+// and the word in the prefix string follows it.
+#define HANDLE_NICKNAME_WITH_SUFFIX(battler, wildText, foeText)          \
+    GetBattlerNick(battler, text);                                      \
+    toCpy = text;                                                       \
+    if (!IsOnPlayerSide(battler))                                       \
+    {                                                                   \
+        while (*toCpy != EOS)                                           \
+        {                                                               \
+            dst[dstID] = *toCpy;                                        \
+            dstID++;                                                    \
+            toCpy++;                                                    \
+        }                                                               \
+        if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)                     \
+            toCpy = foeText;                                            \
+        else                                                            \
+            toCpy = wildText;                                           \
+    }
+
+#define HANDLE_NICKNAME_STRING_CASE(battler)                            \
+    HANDLE_NICKNAME_WITH_SUFFIX(battler, sText_WildPkmnPrefix, sText_FoePkmnPrefix)
+
+#define HANDLE_NICKNAME_STRING_LOWERCASE(battler)                       \
+    HANDLE_NICKNAME_WITH_SUFFIX(battler, sText_WildPkmnPrefixLower, sText_FoePkmnPrefixLower)
+#else
 #define HANDLE_NICKNAME_STRING_CASE(battler)                            \
     if (!IsOnPlayerSide(battler))                                       \
     {                                                                   \
@@ -2954,6 +2980,7 @@ static void GetBattlerNick(enum BattlerId battler, u8 *dst)
     }                                                                   \
     GetBattlerNick(battler, text);                                      \
     toCpy = text;
+#endif
 
 static const u8 *BattleStringGetOpponentNameByTrainerId(u16 trainerId, u8 *text, u8 multiplayerId, enum BattlerId battler)
 {
@@ -3426,6 +3453,24 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                 }
                 break;
             case B_TXT_26: // ?
+#if TEXT_NAME_SUFFIX_IN_BATTLE
+                GetMonData(&GetBattlerParty(gBattleScripting.battler)[gBattleStruct->scriptPartyIdx], MON_DATA_NICKNAME, text);
+                StringGet_Nickname(text);
+                toCpy = text;
+                if (!IsOnPlayerSide(gBattleScripting.battler))
+                {
+                    while (*toCpy != EOS)
+                    {
+                        dst[dstID] = *toCpy;
+                        dstID++;
+                        toCpy++;
+                    }
+                    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+                        toCpy = sText_FoePkmnPrefix;
+                    else
+                        toCpy = sText_WildPkmnPrefix;
+                }
+#else
                 if (!IsOnPlayerSide(gBattleScripting.battler))
                 {
                     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
@@ -3442,6 +3487,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                 GetMonData(&GetBattlerParty(gBattleScripting.battler)[gBattleStruct->scriptPartyIdx], MON_DATA_NICKNAME, text);
                 StringGet_Nickname(text);
                 toCpy = text;
+#endif
                 break;
             case B_TXT_PC_CREATOR_NAME: // lanette pc
                 if (FlagGet(FLAG_SYS_PC_LANETTE))
@@ -3804,6 +3850,18 @@ void ExpandBattleTextBuffPlaceholders(const u8 *src, u8 *dst)
             break;
         case B_BUFF_MON_NICK_WITH_PREFIX: // poke nick with prefix
         case B_BUFF_MON_NICK_WITH_PREFIX_LOWER: // poke nick with lowercase prefix
+#if TEXT_NAME_SUFFIX_IN_BATTLE
+            GetMonData(&GetBattlerParty(src[srcID + 1])[src[srcID + 2]], MON_DATA_NICKNAME, nickname);
+            StringGet_Nickname(nickname);
+            StringAppend(dst, nickname);
+            if (!IsOnPlayerSide(src[srcID + 1]))
+            {
+                if (src[srcID] == B_BUFF_MON_NICK_WITH_PREFIX_LOWER)
+                    StringAppend(dst, (gBattleTypeFlags & BATTLE_TYPE_TRAINER) ? sText_FoePkmnPrefixLower : sText_WildPkmnPrefixLower);
+                else
+                    StringAppend(dst, (gBattleTypeFlags & BATTLE_TYPE_TRAINER) ? sText_FoePkmnPrefix : sText_WildPkmnPrefix);
+            }
+#else
             if (!IsOnPlayerSide(src[srcID + 1]))
             {
                 if (src[srcID] == B_BUFF_MON_NICK_WITH_PREFIX_LOWER)
@@ -3824,6 +3882,7 @@ void ExpandBattleTextBuffPlaceholders(const u8 *src, u8 *dst)
             GetMonData(&GetBattlerParty(src[srcID + 1])[src[srcID + 2]], MON_DATA_NICKNAME, nickname);
             StringGet_Nickname(nickname);
             StringAppend(dst, nickname);
+#endif
             srcID += 3;
             break;
         case B_BUFF_STAT: // stats

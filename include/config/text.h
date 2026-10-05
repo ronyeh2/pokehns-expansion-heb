@@ -23,6 +23,10 @@
 #define RTL_CLIP_REPORT              FALSE
 #endif
 
+// Battle text names a foe's Pokémon as nickname + suffix ("{nickname} פראי") instead of
+// prefix + nickname ("The wild {nickname}"), as Hebrew word order needs.
+#define TEXT_NAME_SUFFIX_IN_BATTLE   TRUE
+
 // Text speed flag:
 #define FLAG_TEXT_SPEED_INSTANT      0       // Use this if you want to toggle instant text speed
 

@@ -2779,6 +2779,11 @@ static void PrintBattlerOnAbilityPopUp(enum BattlerId battler, u8 spriteId1, u8 
     else
         GetMonData(GetBattlerMon(battler), MON_DATA_NICKNAME, gStringVar1);
 
+#if TEXT_NAME_SUFFIX_IN_BATTLE
+    // Hebrew has no possessive suffix to add; the nickname above the ability name reads as one.
+    (void)totalChar;
+    (void)lastChar;
+#else
     while (gStringVar1[totalChar] != EOS)
         totalChar++;
 
@@ -2786,6 +2791,7 @@ static void PrintBattlerOnAbilityPopUp(enum BattlerId battler, u8 spriteId1, u8 
     StringAppend(gStringVar1, COMPOUND_STRING("'"));
     if (lastChar != CHAR_S && lastChar != CHAR_s)
         StringAppend(gStringVar1, COMPOUND_STRING("s"));
+#endif
 
     PrintOnAbilityPopUp(gStringVar1,
                         (void *)(OBJ_VRAM0) + TILE_OFFSET_4BPP(gSprites[spriteId1].oam.tileNum),
