@@ -139,6 +139,7 @@ struct TextPrinter
     u16 rtlAxis;         // Mirror axis: physical x = rtlAxis - logical x - width
     u8 rtlMode:2;        // The window's WINDOW_RTL_* mode when the printer started
     u8 rtlNeedAxis:1;    // A new segment starts; in-place mode measures it at its first glyph
+    u8 rtlSegmentLtr:1;  // In-place mode: this segment has no Hebrew, so it keeps its English layout
 
     struct TextPrinter *nextPrinter;
 

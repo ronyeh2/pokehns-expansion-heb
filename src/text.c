@@ -1084,7 +1084,8 @@ static bool32 RtlIsActive(const struct TextPrinter *textPrinter)
     return textPrinter->printerTemplate.type == WINDOW_TEXT_PRINTER
         && !textPrinter->japanese
         && !textPrinter->rtlVisualOrder
-        && textPrinter->rtlMode != WINDOW_RTL_LTR;
+        && textPrinter->rtlMode != WINDOW_RTL_LTR
+        && !textPrinter->rtlSegmentLtr;
 }
 
 static u32 RtlWindowWidth(const struct TextPrinter *textPrinter)
@@ -1207,11 +1208,15 @@ static void RtlBeginRun(struct TextPrinter *textPrinter, const u8 *str)
 }
 
 // In-place mode: the width of the segment that starts at str, up to a newline, the end, or a code
-// that moves the pen. Codes that only change colour, font, pace or sound do not end it.
-static u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *str)
+// that moves the pen, and whether it holds any Hebrew. Codes that only change colour, font, pace or
+// sound do not end it.
+static u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *str, bool32 *hasRtl)
 {
     u32 width = 0;
     u32 fontId = textPrinter->fontId;
+    u32 length;
+
+    *hasRtl = FALSE;
 
     while (TRUE)
     {
@@ -1229,6 +1234,8 @@ static u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *st
             str += 2;
             continue;
         case CHAR_EXTRA_SYMBOL:
+            if (RtlClassAt(str, &length) == RTL_CLASS_RTL)
+                *hasRtl = TRUE;
             width += RtlGlyphAdvance(textPrinter, fontId, str[1] | 0x100);
             str += 2;
             continue;
@@ -1257,6 +1264,8 @@ static u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *st
             str += 1 + GetExtCtrlCodeLength(str[1]);
             continue;
         default:
+            if (sRtlCharClass[*str] == RTL_CLASS_RTL)
+                *hasRtl = TRUE;
             width += RtlGlyphAdvance(textPrinter, fontId, *str);
             str++;
             continue;
@@ -1269,15 +1278,23 @@ static u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *st
 // its mirrored partner.
 static void RtlPrepareGlyph(struct TextPrinter *textPrinter, const u8 *glyphStart, u16 *currChar)
 {
-    if (!RtlIsActive(textPrinter))
-        return;
-
     if (textPrinter->rtlNeedAxis)
     {
         textPrinter->rtlNeedAxis = FALSE;
+        textPrinter->rtlSegmentLtr = FALSE;
         if (textPrinter->rtlMode == WINDOW_RTL_IN_PLACE)
-            textPrinter->rtlAxis = 2 * textPrinter->printerTemplate.currentX + RtlMeasureSegment(textPrinter, glyphStart);
+        {
+            // A segment with no Hebrew (a number, an untranslated name) keeps the English layout:
+            // screens such as the party menu overlap separate prints that only line up in it.
+            bool32 hasRtl;
+            u32 width = RtlMeasureSegment(textPrinter, glyphStart, &hasRtl);
+            textPrinter->rtlAxis = 2 * textPrinter->printerTemplate.currentX + width;
+            textPrinter->rtlSegmentLtr = !hasRtl;
+        }
     }
+
+    if (!RtlIsActive(textPrinter))
+        return;
 
     if (textPrinter->rtlRunGlyphs != 0)
         return;
