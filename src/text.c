@@ -1125,10 +1125,15 @@ static bool32 RtlStartsRun(const u8 *str)
     return class == RTL_CLASS_NUM_PREFIX && RtlClassAt(str + length, &nextLength) == RTL_CLASS_DIGIT;
 }
 
-// Length of a colour code at str (which is EXT_CTRL_CODE_BEGIN), or 0 for any other control code.
-// Colour codes may sit inside a run; everything else ends it.
-static u32 RtlColorCodeLength(const u8 *str)
+// Length of a control code at str that can sit inside a run because it draws nothing and does not
+// move the pen (colours, pauses, sounds, and placeholder bytes a window printer skips), or 0 for
+// any code that ends a run.
+static u32 RtlRunTransparentCodeLength(const u8 *str)
 {
+    if (str[0] == PLACEHOLDER_BEGIN)
+        return 2;
+    if (str[0] != EXT_CTRL_CODE_BEGIN)
+        return 0;
     switch (str[1])
     {
     case EXT_CTRL_CODE_COLOR:
@@ -1137,10 +1142,16 @@ static u32 RtlColorCodeLength(const u8 *str)
     case EXT_CTRL_CODE_PALETTE:
     case EXT_CTRL_CODE_ACCENT:
     case EXT_CTRL_CODE_BACKGROUND:
-        return 3;
     case EXT_CTRL_CODE_COLOR_HIGHLIGHT_SHADOW:
     case EXT_CTRL_CODE_TEXT_COLORS:
-        return 5;
+    case EXT_CTRL_CODE_PAUSE:
+    case EXT_CTRL_CODE_PAUSE_UNTIL_PRESS:
+    case EXT_CTRL_CODE_WAIT_SE:
+    case EXT_CTRL_CODE_PLAY_BGM:
+    case EXT_CTRL_CODE_PLAY_SE:
+    case EXT_CTRL_CODE_PAUSE_MUSIC:
+    case EXT_CTRL_CODE_RESUME_MUSIC:
+        return 1 + GetExtCtrlCodeLength(str[1]);
     default:
         return 0;
     }
@@ -1173,9 +1184,9 @@ static void RtlBeginRun(struct TextPrinter *textPrinter, const u8 *str)
         u32 length, class, nextLength;
         bool32 strong;
 
-        if (*str == EXT_CTRL_CODE_BEGIN)
+        if (*str == EXT_CTRL_CODE_BEGIN || *str == PLACEHOLDER_BEGIN)
         {
-            u32 codeLength = RtlColorCodeLength(str);
+            u32 codeLength = RtlRunTransparentCodeLength(str);
             if (codeLength == 0)
                 break;
             str += codeLength;

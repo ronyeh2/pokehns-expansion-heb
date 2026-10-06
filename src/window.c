@@ -18,15 +18,16 @@ static const struct WindowTemplate sDummyWindowTemplate = DUMMY_WIN_TEMPLATE;
 
 #if TEXT_RTL
 // Per-window right-to-left layout (see the TEXT_RTL notes in src/text.c). The mirror width is in
-// tiles; 0 means the window's own width. A window wider than the screen (the HGSS Pokédex uses
-// 32-tile windows) mirrors around the visible width instead.
+// pixels; 0 means the window's own width. A window wider than the box drawn behind it (a text box
+// whose art ends before the window does, or the HGSS Pokédex's 32-tile windows on a 30-tile
+// screen) mirrors around the visible width instead.
 static EWRAM_DATA u8 sWindowRtlMode[WINDOWS_MAX] = {0};
-static EWRAM_DATA u8 sWindowRtlMirrorTiles[WINDOWS_MAX] = {0};
+static EWRAM_DATA u8 sWindowRtlMirrorPx[WINDOWS_MAX] = {0};
 
 static void ResetWindowRtl(u32 windowId)
 {
     sWindowRtlMode[windowId] = WINDOW_RTL_MIRROR;
-    sWindowRtlMirrorTiles[windowId] = 0;
+    sWindowRtlMirrorPx[windowId] = 0;
 }
 
 void SetWindowRtlMode(u32 windowId, u32 mode)
@@ -45,15 +46,14 @@ u32 GetWindowRtlMode(u32 windowId)
 void SetWindowRtlMirrorWidth(u32 windowId, u32 widthPx)
 {
     if (windowId < WINDOWS_MAX)
-        sWindowRtlMirrorTiles[windowId] = widthPx / 8;
+        sWindowRtlMirrorPx[windowId] = min(widthPx, 255);
 }
 
 u32 GetWindowRtlMirrorWidth(u32 windowId)
 {
-    u32 tiles = sWindowRtlMirrorTiles[windowId];
-    if (tiles == 0)
-        tiles = gWindows[windowId].window.width;
-    return tiles * 8;
+    if (sWindowRtlMirrorPx[windowId] != 0)
+        return sWindowRtlMirrorPx[windowId];
+    return gWindows[windowId].window.width * 8;
 }
 
 // Where a rect that the English code puts at x lands in this window.

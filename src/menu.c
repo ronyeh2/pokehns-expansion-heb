@@ -142,6 +142,12 @@ void InitStandardTextBoxWindows(void)
 {
     ResetNameboxData();
     InitWindows(sStandardTextBox_WindowTemplates);
+#if TEXT_RTL
+    // The dialogue frame pads its left side with a blank tile and has none on the right, so the
+    // English text starts 8 px inside the frame. Mirror around 26 tiles to keep that gap on the
+    // right, where Hebrew lines start.
+    SetWindowRtlMirrorWidth(0, 26 * 8);
+#endif
     sStartMenuWindowId = WINDOW_NONE;
     sMapNamePopupWindowId = WINDOW_NONE;
     if (OW_POPUP_GENERATION == GEN_5)

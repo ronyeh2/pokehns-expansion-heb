@@ -2801,7 +2801,12 @@ static u8 CreateMonName(u16 num, u8 left, u8 top)
         str = GetSpeciesName(num);
     else
         str = sText_TenDashes;
+#if TEXT_RTL
+    // Hebrew names can run a few pixels past the 50 px column; fall back to the narrower font.
+    PrintMonDexNumAndName_2(0, GetFontIdToFit(str, FONT_NARROW, 0, 50), str, left, top);
+#else
     PrintMonDexNumAndName_2(0, FONT_NARROW, str, left, top);
+#endif
     return StringLength(str);
 }
 
