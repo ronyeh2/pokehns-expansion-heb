@@ -114,6 +114,7 @@
 #define CHAR_SUPER_E           0x84
 #define CHAR_LESS_THAN         0x85
 #define CHAR_GREATER_THAN      0x86
+#define CHAR_BLACK_TRIANGLE_LEFT 0x87
 //
 #define CHAR_SUPER_RE          0xA0
 #define CHAR_0                 0xA1
