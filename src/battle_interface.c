@@ -908,15 +908,29 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
         UpdateIndicatorVisibilityAndType(healthboxSpriteId, TRUE);
     }
 
+#if TEXT_RTL
+    // The Hebrew level glyph (רמה) is wider than Lv. The level has a 24 px slot in both layouts:
+    // drop the glyph when glyph and digits do not fit (level 100), as the gimmick indicator does.
+    if (GetIndicatorPalTag(battler) == TAG_NONE && GetStringWidth(FONT_SMALL, text, 0) > 24)
+        StringCopy(text, text + 2);
+#endif
+
     if (UseGen4BattleUI())
     {
         u32 windowId, spriteTileNum;
         u8 *windowTileData;
         u8 *objVram;
+#if TEXT_RTL
+        // Right-align in the 24 px the healthbox copies, instead of upstream's fixed digit cells.
+        s32 xPos = 24 - GetStringWidth(FONT_SMALL, text, 0);
+        if (xPos < 0)
+            xPos = 0;
+#else
         u8 *endPtr = ConvertIntToDecimalStringN(text + 2, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
         u32 xPos = 5 * (3 - (endPtr - (text + 2)));
         if (GetIndicatorPalTag(battler) != TAG_NONE)
             xPos -= 5;
+#endif
 
         windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, xPos, 3, 2, &windowId, FALSE);
         spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;

@@ -196,7 +196,6 @@
 #define CHAR_y                 0xED
 #define CHAR_z                 0xEE
 #define CHAR_BLACK_TRIANGLE    0xEF
-#define CHAR_BLACK_TRIANGLE_LEFT 0x87 // ◀, the right-to-left menu cursor
 #define CHAR_COLON             0xF0
 #define CHAR_A_DIAERESIS       0xF1
 #define CHAR_O_DIAERESIS       0xF2
