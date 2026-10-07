@@ -57,7 +57,7 @@ static void FreeFinishedTextPrinters(void);
 static void SpriteCB_TextCursor(struct Sprite *sprite);
 #if TEXT_RTL
 static EWRAM_DATA u8 sRtlVisualBuffer[160] = {0};
-static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize);
+static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize, union TextColor color);
 #endif
 
 static EWRAM_DATA struct TextPrinter *sFirstTextPrinter = NULL;
@@ -494,7 +494,7 @@ bool32 AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, voi
     // and print it left to right. Only immediate printers can do this, since the reordered copy
     // lives in one shared buffer.
     else if ((speed == 0 || speed == TEXT_SKIP_DRAW)
-     && RtlReorderToVisual(printerTemplate->currentChar, sRtlVisualBuffer, sizeof(sRtlVisualBuffer)))
+     && RtlReorderToVisual(printerTemplate->currentChar, sRtlVisualBuffer, sizeof(sRtlVisualBuffer), printerTemplate->color))
     {
         sTempTextPrinter.printerTemplate.currentChar = sRtlVisualBuffer;
         sTempTextPrinter.rtlVisualOrder = TRUE;
@@ -1469,19 +1469,64 @@ static u32 RtlKeypadIconX(struct TextPrinter *textPrinter, const u8 *glyphStart,
     return x < 0 ? 0 : x;
 }
 
-// Sprite printers: reorders str into visual order in dest, so that printing it left to right
-// reads right to left while the line keeps its English position. Returns FALSE (and leaves dest
-// unused) when str holds no Hebrew, or control codes other than line breaks.
-static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize)
+// Applies a colour code at str (EXT_CTRL_CODE_BEGIN) to color and returns its length, or returns 0
+// for any other code.
+static u32 RtlApplyColorCode(const u8 *str, union TextColor *color)
 {
-    const u8 *units[64];
-    u8 unitLengths[64];
+    switch (str[1])
+    {
+    case EXT_CTRL_CODE_COLOR:
+        color->foreground = str[2];
+        return 3;
+    case EXT_CTRL_CODE_HIGHLIGHT:
+        color->background = color->accent = str[2];
+        return 3;
+    case EXT_CTRL_CODE_SHADOW:
+        color->shadow = str[2];
+        return 3;
+    case EXT_CTRL_CODE_ACCENT:
+        color->accent = str[2];
+        return 3;
+    case EXT_CTRL_CODE_BACKGROUND:
+        color->background = str[2];
+        return 3;
+    case EXT_CTRL_CODE_COLOR_HIGHLIGHT_SHADOW:
+        color->foreground = str[2];
+        color->background = color->accent = str[3];
+        color->shadow = str[4];
+        return 5;
+    case EXT_CTRL_CODE_TEXT_COLORS:
+        color->foreground = str[2];
+        color->shadow = str[3];
+        color->accent = str[4];
+        return 5;
+    default:
+        return 0;
+    }
+}
+
+// Sprite printers: reorders str into visual order in dest, so that printing it left to right
+// reads right to left while the line keeps its English position. Colour codes travel with the
+// glyphs they colour (the healthbox's gender symbol). Returns FALSE (and leaves dest unused) when
+// str holds no Hebrew, or control codes other than colours and line breaks.
+static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize, union TextColor color)
+{
+    struct { const u8 *start; u8 length; union TextColor color; } units[64];
+    union TextColor emitted = color, scan = color;
     bool32 hasRtl = FALSE;
     u32 out = 0;
 
     for (const u8 *s = str; *s != EOS; s++)
     {
-        if (*s == EXT_CTRL_CODE_BEGIN || *s == PLACEHOLDER_BEGIN || *s == CHAR_KEYPAD_ICON
+        if (*s == EXT_CTRL_CODE_BEGIN)
+        {
+            u32 length = RtlApplyColorCode(s, &scan);
+            if (length == 0)
+                return FALSE;
+            s += length - 1;
+            continue;
+        }
+        if (*s == PLACEHOLDER_BEGIN || *s == CHAR_KEYPAD_ICON
          || *s == CHAR_PROMPT_SCROLL || *s == CHAR_PROMPT_CLEAR || *s == CHAR_DYNAMIC)
             return FALSE;
         if (*s == CHAR_EXTRA_SYMBOL)
@@ -1505,13 +1550,20 @@ static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize)
         while (*str != EOS && *str != CHAR_NEWLINE && numUnits < ARRAY_COUNT(units))
         {
             u32 length;
-            units[numUnits] = str;
+            if (*str == EXT_CTRL_CODE_BEGIN)
+            {
+                str += RtlApplyColorCode(str, &color);
+                continue;
+            }
+            units[numUnits].start = str;
+            units[numUnits].color = color;
             if (RtlStartsRun(str))
             {
-                // The run ends at its last strong character, as in RtlBeginRun.
+                // The run ends at its last strong character, as in RtlBeginRun. Colour codes end
+                // a unit here, so each unit has one colour.
                 const u8 *s = str, *end = str;
                 u32 prevClass = RTL_CLASS_NEUTRAL;
-                while (*s != EOS && *s != CHAR_NEWLINE)
+                while (*s != EOS && *s != CHAR_NEWLINE && *s != EXT_CTRL_CODE_BEGIN)
                 {
                     u32 nextLength, class = RtlClassAt(s, &length);
                     if (class == RTL_CLASS_RTL)
@@ -1529,7 +1581,7 @@ static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize)
             {
                 RtlClassAt(str, &length);
             }
-            unitLengths[numUnits++] = length;
+            units[numUnits++].length = length;
             str += length;
         }
 
@@ -1537,12 +1589,24 @@ static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize)
         {
             u32 i;
             numUnits--;
-            if (out + unitLengths[numUnits] + 2 > destSize)
+            if (out + units[numUnits].length + 10 > destSize)
                 return FALSE;
-            for (i = 0; i < unitLengths[numUnits]; i++)
+            if (units[numUnits].color.asU32 != emitted.asU32)
             {
-                u8 c = units[numUnits][i];
-                if (unitLengths[numUnits] == 1)
+                emitted = units[numUnits].color;
+                dest[out++] = EXT_CTRL_CODE_BEGIN;
+                dest[out++] = EXT_CTRL_CODE_TEXT_COLORS;
+                dest[out++] = emitted.foreground;
+                dest[out++] = emitted.shadow;
+                dest[out++] = emitted.accent;
+                dest[out++] = EXT_CTRL_CODE_BEGIN;
+                dest[out++] = EXT_CTRL_CODE_BACKGROUND;
+                dest[out++] = emitted.background;
+            }
+            for (i = 0; i < units[numUnits].length; i++)
+            {
+                u8 c = units[numUnits].start[i];
+                if (units[numUnits].length == 1)
                 {
                     if (c == CHAR_LEFT_PAREN)          c = CHAR_RIGHT_PAREN;
                     else if (c == CHAR_RIGHT_PAREN)    c = CHAR_LEFT_PAREN;
