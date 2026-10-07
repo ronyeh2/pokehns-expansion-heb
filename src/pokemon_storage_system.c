@@ -3959,6 +3959,11 @@ static bool8 InitPokeStorageWindows(void)
     }
     else
     {
+#if TEXT_RTL
+        // The PKMN DATA panel art is 78 px wide, 6 px more than the window; mirror around the panel
+        // so the lines keep the English 6 px margin, now on the right.
+        SetWindowRtlMirrorWidth(WIN_DISPLAY_INFO, 78);
+#endif
         DeactivateAllTextPrinters();
         return TRUE;
     }
