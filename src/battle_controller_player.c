@@ -1794,7 +1794,15 @@ static void MoveSelectionDisplayMoveDescription(enum BattlerId battler)
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_DESCRIPTION);
 
     if (gCategoryIconSpriteId == 0xFF)
+    {
+#if TEXT_RTL
+        // The icon follows "CAT:", which the mirrored window puts at its right end.
+        s32 windowX = GetWindowAttribute(B_WIN_MOVE_DESCRIPTION, WINDOW_TILEMAP_LEFT) * 8;
+        gCategoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, windowX + WindowRtlX(B_WIN_MOVE_DESCRIPTION, 38 - windowX, 0), 64, 1);
+#else
         gCategoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 38, 64, 1);
+#endif
+    }
 
     StartSpriteAnim(&gSprites[gCategoryIconSpriteId], cat);
 

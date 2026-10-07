@@ -1034,6 +1034,20 @@ void BattleInitBgsAndWindows(void)
         SetWindowRtlMode(B_WIN_MOVE_NAME_4, WINDOW_RTL_IN_PLACE);
         SetWindowRtlMode(B_WIN_LEVEL_UP_BANNER, WINDOW_RTL_IN_PLACE);
     }
+
+    // The PP label and the PP numbers are two windows side by side, each mirrored inside itself;
+    // swap them so the pair reads as the mirror of "PP △   35/35".
+    SetWindowAttribute(B_WIN_PP, WINDOW_TILEMAP_LEFT, GetWindowAttribute(B_WIN_PP_REMAINING, WINDOW_TILEMAP_LEFT));
+    SetWindowAttribute(B_WIN_PP_REMAINING, WINDOW_TILEMAP_LEFT, gBattleWindowTemplates[gBattleScripting.windowsType][B_WIN_PP].tilemapLeft);
+
+    // The Yes/No cursor is drawn on the right of the box, pointing left (BattleCreateYesNoCursorAt),
+    // so the text moves one tile left to sit beside it.
+    SetWindowAttribute(B_WIN_YESNO, WINDOW_TILEMAP_LEFT, GetWindowAttribute(B_WIN_YESNO, WINDOW_TILEMAP_LEFT) - 1);
+
+    // The level-up stat box goes to the left half of the screen (LEVEL_UP_BOX_FRAME), so it covers
+    // the end of the right-aligned message line instead of its start.
+    SetWindowAttribute(B_WIN_LEVEL_UP_BOX, WINDOW_TILEMAP_LEFT,
+                       DISPLAY_WIDTH / 8 - GetWindowAttribute(B_WIN_LEVEL_UP_BOX, WINDOW_TILEMAP_LEFT) - GetWindowAttribute(B_WIN_LEVEL_UP_BOX, WINDOW_WIDTH));
 #endif
     DeactivateAllTextPrinters();
 }
