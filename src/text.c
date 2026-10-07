@@ -1118,8 +1118,11 @@ static u32 RtlClassAt(const u8 *str, u32 *length)
 static bool32 RtlStartsRun(const u8 *str)
 {
     u32 length, nextLength;
-    u32 class = RtlClassAt(str, &length);
+    u32 class;
 
+    if (str[0] == CHAR_KEYPAD_ICON)
+        return TRUE;
+    class = RtlClassAt(str, &length);
     if (class == RTL_CLASS_LTR || class == RTL_CLASS_DIGIT)
         return TRUE;
     return class == RTL_CLASS_NUM_PREFIX && RtlClassAt(str + length, &nextLength) == RTL_CLASS_DIGIT;
@@ -1173,11 +1176,14 @@ static u32 RtlGlyphAdvance(const struct TextPrinter *textPrinter, u32 fontId, u1
 }
 
 // Measures the run that starts at str: everything up to the last Latin letter or digit before the
-// next Hebrew letter or control code. Neutrals after that stay right-to-left.
+// next Hebrew letter or control code. Neutrals after that stay right-to-left. A button icon counts
+// as a Latin letter, so "[L]/[R]" keeps its order, and a closing bracket whose opening bracket is
+// in the run stays in it, so "AUTORUN (SURF)" keeps its brackets.
 static void RtlBeginRun(struct TextPrinter *textPrinter, const u8 *str)
 {
     u32 width = 0, glyphs = 0, runWidth = 0, runGlyphs = 0;
     u32 prevClass = RTL_CLASS_NEUTRAL;
+    u32 openBrackets = 0;
 
     while (glyphs < RTL_MAX_RUN_GLYPHS)
     {
@@ -1193,6 +1199,17 @@ static void RtlBeginRun(struct TextPrinter *textPrinter, const u8 *str)
             continue;
         }
 
+        if (*str == CHAR_KEYPAD_ICON)
+        {
+            width += GetKeypadIconWidth(str[1]) + textPrinter->printerTemplate.letterSpacing;
+            glyphs++;
+            runWidth = width;
+            runGlyphs = glyphs;
+            prevClass = RTL_CLASS_LTR;
+            str += 2;
+            continue;
+        }
+
         class = RtlClassAt(str, &length);
         if (class == RTL_CLASS_RTL || (class == RTL_CLASS_CONTROL && *str != CHAR_EXTRA_SYMBOL))
             break;
@@ -1204,6 +1221,15 @@ static void RtlBeginRun(struct TextPrinter *textPrinter, const u8 *str)
               || class == RTL_CLASS_DIGIT
               || (class == RTL_CLASS_NUM_PREFIX && RtlClassAt(str + length, &nextLength) == RTL_CLASS_DIGIT)
               || (class == RTL_CLASS_NUM_SUFFIX && prevClass == RTL_CLASS_DIGIT);
+        if (length == 1 && *str == CHAR_LEFT_PAREN)
+        {
+            openBrackets++;
+        }
+        else if (length == 1 && *str == CHAR_RIGHT_PAREN && openBrackets != 0)
+        {
+            openBrackets--;
+            strong = TRUE;
+        }
         if (strong)
         {
             runWidth = width;
@@ -1421,6 +1447,25 @@ static u32 RtlPenObjectX(const struct TextPrinter *textPrinter, u32 width)
     if (!RtlIsActive(textPrinter) || textPrinter->rtlMode != WINDOW_RTL_IN_PLACE)
         return textPrinter->printerTemplate.currentX;
     x = RtlPhysicalX(textPrinter, textPrinter->printerTemplate.currentX, width, FALSE);
+    return x < 0 ? 0 : x;
+}
+
+// x to pass to DrawKeypadIcon for the button icon at glyphStart, which is width wide. The icon is
+// placed like a glyph: it sets the in-place axis when it starts a segment, it can start a run, and
+// inside a run it keeps its left-to-right place.
+static u32 RtlKeypadIconX(struct TextPrinter *textPrinter, const u8 *glyphStart, u32 width)
+{
+    u16 unusedChar = 0;
+    s32 x;
+
+    RtlPrepareGlyph(textPrinter, glyphStart, &unusedChar);
+    if (!RtlIsActive(textPrinter) || textPrinter->rtlRunGlyphs == 0)
+        return RtlPenObjectX(textPrinter, width);
+    x = RtlPhysicalX(textPrinter, textPrinter->printerTemplate.currentX, width, TRUE);
+    textPrinter->rtlRunGlyphs--;
+    // The window primitive mirrors a mirrored window's x again.
+    if (textPrinter->rtlMode == WINDOW_RTL_MIRROR)
+        return WindowRtlX(textPrinter->printerTemplate.windowId, x, width);
     return x < 0 ? 0 : x;
 }
 
@@ -2155,7 +2200,7 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             {
                 currChar = *textPrinter->printerTemplate.currentChar++;
 #if TEXT_RTL
-                gCurGlyph.width = DrawKeypadIcon(textPrinter->printerTemplate.windowId, currChar, RtlPenObjectX(textPrinter, GetKeypadIconWidth(currChar)), textPrinter->printerTemplate.currentY);
+                gCurGlyph.width = DrawKeypadIcon(textPrinter->printerTemplate.windowId, currChar, RtlKeypadIconX(textPrinter, glyphStart, GetKeypadIconWidth(currChar)), textPrinter->printerTemplate.currentY);
 #else
                 gCurGlyph.width = DrawKeypadIcon(textPrinter->printerTemplate.windowId, currChar, textPrinter->printerTemplate.currentX, textPrinter->printerTemplate.currentY);
 #endif
