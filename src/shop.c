@@ -351,6 +351,10 @@ static void PrintBPAmountInMoneyBox(u8 windowId, u32 bp, u8 speed)
     u8 x;
     StringCopy(ptr, gText_BP);
     x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar1, 80);
+#if TEXT_RTL
+    // Like the money box: the BP label is a sprite at the top left, so the amount stays right-aligned.
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar1, x, 1, speed, NULL);
     CopyWindowToVram(windowId, COPYWIN_FULL);
@@ -884,7 +888,11 @@ static const struct WindowTemplate sShopBuyMenuWindowTemplates[] =
     },
     [WIN_QUANTITY_PRICE] = {
         .bg = 0,
+#if TEXT_RTL
+        .tilemapLeft = 15, // Mirrored inside the item list, over the price column
+#else
         .tilemapLeft = 18,
+#endif
         .tilemapTop = 11,
         .width = 10,
         .height = 2,
@@ -915,7 +923,11 @@ static const struct WindowTemplate sShopBuyMenuWindowTemplates[] =
 static const struct WindowTemplate sShopBuyMenuYesNoWindowTemplates =
 {
     .bg = 0,
+#if TEXT_RTL
+    .tilemapLeft = 17, // Mirrored inside the item list
+#else
     .tilemapLeft = 21,
+#endif
     .tilemapTop = 9,
     .width = 5,
     .height = 4,
@@ -1428,6 +1440,11 @@ static void BuyMenuInitWindows(void)
     u8 moneyWindowId;
 
     InitWindows(sShopBuyMenuWindowTemplates);
+#if TEXT_RTL
+    // The description box's white area is x=1..107; the window runs on under the item list's
+    // frame. Mirror around the white area so the English 2 px left margin becomes a right one.
+    SetWindowRtlMirrorWidth(WIN_ITEM_DESCRIPTION, 109);
+#endif
     DeactivateAllTextPrinters();
 
     moneyWindowId = (sMartInfo.martType == MART_TYPE_KURT) ? WIN_BERRIES : WIN_MONEY;
