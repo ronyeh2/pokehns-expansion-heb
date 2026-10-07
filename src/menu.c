@@ -249,11 +249,28 @@ static inline void *GetWindowFunc_DialogueFrame(void)
     return (gMsgIsSignPost ? WindowFunc_DrawSignFrame : WindowFunc_DrawDialogueFrame);
 }
 
+#if TEXT_RTL
+// Both message frames are lopsided around their window: the dialogue frame pads the left side with
+// a blank tile and has none on the right, and the sign frame covers the window's last tile. Mirror
+// around one tile less than the window, so lines end as far inside the frame as English ones start.
+// A width already set for the window is kept.
+static void SetDialogueFrameRtlMirrorWidth(u8 windowId)
+{
+    u32 width = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8;
+
+    if (width > 8 && GetWindowRtlMirrorWidth(windowId) == width)
+        SetWindowRtlMirrorWidth(windowId, width - 8);
+}
+#endif
+
 void DrawDialogueFrame(u8 windowId, bool8 copyToVram)
 {
     sTileNum = DLG_WINDOW_BASE_TILE_NUM;
     sPaletteNum = DLG_WINDOW_PALETTE_NUM;
     CallWindowFunction(windowId, GetWindowFunc_DialogueFrame());
+#if TEXT_RTL
+    SetDialogueFrameRtlMirrorWidth(windowId);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);
     if (copyToVram == TRUE)
@@ -471,6 +488,9 @@ void DrawDialogFrameWithCustomTileAndPalette(u8 windowId, bool8 copyToVram, u16 
     sTileNum = tileNum;
     sPaletteNum = paletteNum;
     CallWindowFunction(windowId, WindowFunc_DrawDialogueFrame);
+#if TEXT_RTL
+    SetDialogueFrameRtlMirrorWidth(windowId);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);
     if (copyToVram == TRUE)
@@ -482,6 +502,9 @@ void DrawDialogFrameWithCustomTile(u8 windowId, bool8 copyToVram, u16 tileNum)
     sTileNum = tileNum;
     sPaletteNum = GetWindowAttribute(windowId, WINDOW_PALETTE_NUM);
     CallWindowFunction(windowId, WindowFunc_DrawDialogueFrame);
+#if TEXT_RTL
+    SetDialogueFrameRtlMirrorWidth(windowId);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
     PutWindowTilemap(windowId);
     if (copyToVram == TRUE)
