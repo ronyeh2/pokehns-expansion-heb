@@ -1093,7 +1093,13 @@ static void DrawMsgBoxForMatchCallMsg(struct Pokenav_MatchCallGfx *gfx)
     PutWindowTilemap(gfx->msgBoxWindowId);
     CopyWindowToVram(gfx->msgBoxWindowId, COPYWIN_FULL);
     sprite = GetSpinningPokenavSprite();
+#if TEXT_RTL
+    // The call text is mirrored inside the box (screen x 8..232), so its 32-px indent for the
+    // Pokegear icon is on the right; the icon goes there too.
+    sprite->x = 240 - 24;
+#else
     sprite->x = 24;
+#endif
     sprite->y = 112;
     sprite->y2 = 0;
 }
@@ -1207,7 +1213,23 @@ static void CreateOptionsCursorSprite(struct Pokenav_MatchCallGfx *gfx, int top)
 {
     if (!gfx->optionsCursorSprite)
     {
+#if TEXT_RTL
+        // The options are mirrored inside the info box (88 px), so the cursor moves to its right
+        // edge and points left.
+        u8 spriteId;
+        if (GetWindowRtlMode(gfx->infoBoxWindowId) == WINDOW_RTL_MIRROR)
+        {
+            spriteId = CreateSprite(&sOptionsCursorSpriteTemplate, 88 - 4, 80, 5);
+            gSprites[spriteId].hFlip = TRUE;
+            gSprites[spriteId].oam.matrixNum |= ST_OAM_HFLIP;
+        }
+        else
+        {
+            spriteId = CreateSprite(&sOptionsCursorSpriteTemplate, 4, 80, 5);
+        }
+#else
         u8 spriteId = CreateSprite(&sOptionsCursorSpriteTemplate, 4, 80, 5);
+#endif
         gfx->optionsCursorSprite = &gSprites[spriteId];
         UpdateCursorGfxPos(gfx, top);
     }
@@ -1229,7 +1251,15 @@ static void SpriteCB_OptionsCursor(struct Sprite *sprite)
     if (++sprite->data[0] > 3)
     {
         sprite->data[0] = 0;
+#if TEXT_RTL
+        // A flipped cursor bobs to the left, toward the options.
+        if (sprite->hFlip)
+            sprite->x2 = -((-sprite->x2 + 1) & 7);
+        else
+            sprite->x2 = (sprite->x2 + 1) & 7;
+#else
         sprite->x2 = (sprite->x2 + 1) & 7;
+#endif
     }
 }
 
