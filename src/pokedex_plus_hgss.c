@@ -464,6 +464,18 @@ static void MirrorDexWindowsAtScreenWidth(void)
             SetWindowRtlMirrorWidth(i, DISPLAY_WIDTH - GetWindowAttribute(i, WINDOW_TILEMAP_LEFT) * 8);
     }
 }
+
+// Those screen-wide windows hold several art boxes. Mirroring a print or fill around the whole
+// screen throws it into another box, so give it the logical x that mirrors it inside its own box
+// [boxLeft, boxRight) (screen pixels, right edge exclusive) instead.
+#define DEX_RTL_BOX_X(x, boxLeft, boxRight) ((x) + DISPLAY_WIDTH - ((boxLeft) + (boxRight)))
+
+// The screen x of a sprite that sits next to text in a mirrored window: its English x mirrored
+// around the window's mirror axis.
+static s16 DexRtlSpriteX(u32 windowId, s16 x)
+{
+    return 2 * GetWindowAttribute(windowId, WINDOW_TILEMAP_LEFT) * 8 + GetWindowRtlMirrorWidth(windowId) - x;
+}
 #endif
 static void VBlankCB_Pokedex(void);
 static void CB2_Pokedex(void);
@@ -2435,7 +2447,9 @@ static bool8 LoadPokedexListPage(u8 page)
         LoadPokedexBgPalette(sPokedexView->isSearchResults);
         InitWindows(sPokemonList_WindowTemplate);
 #if TEXT_RTL
-        MirrorDexWindowsAtScreenWidth();
+        // Window 0 holds only the list entries, and the list box is at the left of the screen:
+        // mirror them inside its highlight bar (x 11-103), not around the screen width.
+        SetWindowRtlMirrorWidth(0, 11 + 104);
 #endif
         DeactivateAllTextPrinters();
         PutWindowTilemap(0);
@@ -4636,13 +4650,23 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     else
         value = NationalToObtainableOrder(num);
     ConvertIntToDecimalStringN(StringCopy(str, gText_NumberClear01), value, STR_CONV_MODE_LEADING_ZEROS, digitCount);
+#if TEXT_RTL
+    // The number, name and category mirror inside the red name banner and the category box
+    // below it (x 119-236), not across the screen.
+    PrintInfoScreenTextWhite(str, DEX_RTL_BOX_X(123, 119, 237), 17);
+#else
     PrintInfoScreenTextWhite(str, 123, 17);
+#endif
     species = NationalPokedexNumToSpeciesHGSS(num);
     if (species)
         name = GetSpeciesName(species);
     else
         name = sText_TenDashes;
+#if TEXT_RTL
+    PrintInfoScreenTextWhite(name, DEX_RTL_BOX_X(139 + (6 * digitCount), 119, 237), 17);
+#else
     PrintInfoScreenTextWhite(name, 139 + (6 * digitCount), 17);
+#endif
     if (owned)
     {
         CopyMonCategoryText(species, str2);
@@ -4652,7 +4676,11 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     {
         category = gText_5MarksPokemon;
     }
+#if TEXT_RTL
+    PrintInfoScreenText(category, DEX_RTL_BOX_X(123, 119, 237), 31);
+#else
     PrintInfoScreenText(category, 123, 31);
+#endif
     PrintMonMeasurements(species,owned);
     if (owned)
         description = GetSpeciesPokedexDescription(species);
@@ -4937,7 +4965,12 @@ static void LoadTilesetTilemapHGSS(u8 page)
 static u8 ShowCategoryIcon(enum DamageCategory category)
 {
     if (sPokedexView->categoryIconSpriteId == 0xFF)
+#if TEXT_RTL
+        // WIN_STATS_MOVES_BOTTOM is mirrored: keep the icon beside POWER on the mirrored side.
+        sPokedexView->categoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, DexRtlSpriteX(WIN_STATS_MOVES_BOTTOM, 139), 90, 0);
+#else
         sPokedexView->categoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 139, 90, 0);
+#endif
 
     gSprites[sPokedexView->categoryIconSpriteId].invisible = FALSE;
     StartSpriteAnim(&gSprites[sPokedexView->categoryIconSpriteId], category);
@@ -4979,6 +5012,13 @@ static void ResetStatsWindows(void)
     InitWindows(sStatsScreen_WindowTemplates);
 #if TEXT_RTL
     MirrorDexWindowsAtScreenWidth();
+    // The name, number and gender sit beside a fixed icon and divider, and the move box shares its
+    // window with the item box, the type icon and the item icon: keep their English places.
+    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_STATS_MOVES_TOP, WINDOW_RTL_IN_PLACE);
+    // The stats box has a red bar on its left, so its text area is x 8-92, not the window's 0-95:
+    // mirror inside that area.
+    SetWindowRtlMirrorWidth(WIN_STATS_LEFT, 8 + 93);
 #endif
 
     for (i = 0; i < WIN_STATS_END + 1; i++)
@@ -5408,7 +5448,12 @@ static void PrintStatsScreen_Moves_Top(u8 taskId)
 
     //Move name
     StringCopy(gStringVar3, GetMoveName(move));
+#if TEXT_RTL
+    // No padding: in place, trailing spaces would widen the extent a Hebrew name is laid out in
+    // and push it right, under the item box. The spaces draw nothing on the transparent fill.
+#else
     StringCopyPadded(gStringVar3, gStringVar3, CHAR_SPACE, 20);
+#endif
     PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar3, moves_x, moves_y + 17);
 
     //Draw move type icon
@@ -6135,6 +6180,11 @@ static void EvoFormsPage_PrintNavigationButtons(void)
     u8 x = 6;
     u8 y = 0;
 
+#if TEXT_RTL
+    // The red footer bar (x 3-142) is narrower than the 160 px window: mirror inside the bar so the
+    // hints do not run off its right end.
+    SetWindowRtlMirrorWidth(WIN_NAVIGATION_BUTTONS, 3 + 143);
+#endif
     FillWindowPixelBuffer(WIN_NAVIGATION_BUTTONS, PIXEL_FILL(0));
 
         if (sPokedexView->selectedScreen == EVO_SCREEN)
@@ -6272,7 +6322,13 @@ static void Task_LoadEvolutionScreen(u8 taskId)
             for (pos = 0; !sPokedexView->sEvoScreenData.seen[pos]; pos++)
                 ;
             sPokedexView->sEvoScreenData.menuPos = pos;
+#if TEXT_RTL
+            // The entries are mirrored to the right edge; point at them from there.
+            sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, DexRtlSpriteX(WIN_INFO, 7), 58 + 9 * pos, 0);
+            gSprites[sPokedexView->sEvoScreenData.arrowSpriteId].hFlip = TRUE;
+#else
             sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, 7, 58 + 9 * pos, 0);
+#endif
             gSprites[sPokedexView->sEvoScreenData.arrowSpriteId].animNum = 2;
         }
         gMain.state++;
@@ -7258,6 +7314,12 @@ static void Task_LoadFormsScreen(u8 taskId)
     }
 }
 
+#if TEXT_RTL
+// The arrow sits 13 px left of a form icon's centre (icons at 18 + 34 * column); in RTL it points
+// at the icon from the same distance on its right, flipped.
+#define FORMS_RTL_ARROW_SHIFT 26
+#endif
+
 static void Task_HandleFormsScreenInput(u8 taskId)
 {
     u8 base_x = 5;
@@ -7269,7 +7331,12 @@ static void Task_HandleFormsScreenInput(u8 taskId)
         if (JOY_NEW(A_BUTTON) && sPokedexView->sFormScreenData.numForms != 0)
         {
             sPokedexView->sFormScreenData.inSubmenu = TRUE;
+#if TEXT_RTL
+            sPokedexView->sFormScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, base_x + offset_x + FORMS_RTL_ARROW_SHIFT, base_y, 0);
+            gSprites[sPokedexView->sFormScreenData.arrowSpriteId].hFlip = TRUE;
+#else
             sPokedexView->sFormScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, base_x + offset_x, base_y, 0);
+#endif
             gSprites[sPokedexView->sFormScreenData.arrowSpriteId].animNum = 2;
             EvoFormsPage_PrintNavigationButtons();
         }
@@ -7319,7 +7386,11 @@ static void Task_HandleFormsScreenInput(u8 taskId)
 
         row = menuPos / 7;
         column = menuPos % 7;
+#if TEXT_RTL
+        gSprites[sPokedexView->sFormScreenData.arrowSpriteId].x = base_x + offset_x * column + FORMS_RTL_ARROW_SHIFT;
+#else
         gSprites[sPokedexView->sFormScreenData.arrowSpriteId].x = base_x + offset_x * column;
+#endif
         gSprites[sPokedexView->sFormScreenData.arrowSpriteId].y = base_y + offset_y * row;
 
         sPokedexView->sFormScreenData.menuPos = menuPos;
@@ -7499,8 +7570,14 @@ static void Task_LoadCryScreen(u8 taskId)
         gMain.state++;
         break;
     case 4:
+#if TEXT_RTL
+        // Mirror inside the gap between the mon box and the VU meter (x 81-142).
+        PrintInfoScreenText(gText_CryOf, DEX_RTL_BOX_X(82, 81, 143), 33);
+        PrintCryScreenSpeciesName(0, sPokedexListItem->dexNum, DEX_RTL_BOX_X(82, 81, 143), 49);
+#else
         PrintInfoScreenText(gText_CryOf, 82, 33);
         PrintCryScreenSpeciesName(0, sPokedexListItem->dexNum, 82, 49);
+#endif
         gMain.state++;
         break;
     case 5:
@@ -8811,31 +8888,39 @@ static void HighlightSelectedSearchMenuItem(u8 topBarItem, u8 menuItem)
 }
 
 // Prints the currently selected search parameters in the search menu selection boxes
+#if TEXT_RTL
+// Each selected value mirrors inside its own field box: the wide fields are x 44-131, the two TYPE
+// fields x 44-83 and 92-131.
+#define SEARCH_FIELD_X(x, boxLeft, boxRight) DEX_RTL_BOX_X(x, boxLeft, boxRight)
+#else
+#define SEARCH_FIELD_X(x, boxLeft, boxRight) (x)
+#endif
+
 static void PrintSelectedSearchParameters(u8 taskId)
 {
     u16 searchParamId;
 
-    ClearSearchMenuRect(40, 16, 96, 80);
+    ClearSearchMenuRect(SEARCH_FIELD_X(40, 40, 136), 16, 96, 80);
 
     searchParamId = gTasks[taskId].tCursorPos_Name + gTasks[taskId].tScrollOffset_Name;
-    PrintSearchText(sDexSearchNameOptions[searchParamId].title, 0x2D, 0x11);
+    PrintSearchText(sDexSearchNameOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 132), 0x11);
 
     searchParamId = gTasks[taskId].tCursorPos_Color + gTasks[taskId].tScrollOffset_Color;
-    PrintSearchText(sDexSearchColorOptions[searchParamId].title, 0x2D, 0x21);
+    PrintSearchText(sDexSearchColorOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 132), 0x21);
 
     searchParamId = gTasks[taskId].tCursorPos_TypeLeft + gTasks[taskId].tScrollOffset_TypeLeft;
-    PrintSearchTextToFit(sDexSearchTypeOptions[searchParamId].title, 0x2D, 0x31, 38);
+    PrintSearchTextToFit(sDexSearchTypeOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 84), 0x31, 38);
 
     searchParamId = gTasks[taskId].tCursorPos_TypeRight + gTasks[taskId].tScrollOffset_TypeRight;
-    PrintSearchTextToFit(sDexSearchTypeOptions[searchParamId].title, 0x5D, 0x31, 38);
+    PrintSearchTextToFit(sDexSearchTypeOptions[searchParamId].title, SEARCH_FIELD_X(0x5D, 92, 132), 0x31, 38);
 
     searchParamId = gTasks[taskId].tCursorPos_Order + gTasks[taskId].tScrollOffset_Order;
-    PrintSearchText(sDexOrderOptions[searchParamId].title, 0x2D, 0x41);
+    PrintSearchText(sDexOrderOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 132), 0x41);
 
     if (IsNationalPokedexEnabled())
     {
         searchParamId = gTasks[taskId].tCursorPos_Mode + gTasks[taskId].tScrollOffset_Mode;
-        PrintSearchText(sDexModeOptions[searchParamId].title, 0x2D, 0x51);
+        PrintSearchText(sDexModeOptions[searchParamId].title, SEARCH_FIELD_X(0x2D, 44, 132), 0x51);
     }
 }
 
@@ -9042,24 +9127,32 @@ static void EraseAndPrintSearchTextBox(const u8 *str)
     PrintSearchText(str, 8, 121);
 }
 
+#if TEXT_RTL
+// The option list and its cursor mirror inside the dropdown box, which starts at x 140 and runs off
+// the right edge of the screen.
+#define SEARCH_PARAM_BOX_X(x) DEX_RTL_BOX_X(x, 140, DISPLAY_WIDTH)
+#else
+#define SEARCH_PARAM_BOX_X(x) (x)
+#endif
+
 static void EraseSelectorArrow(u32 y)
 {
-    ClearSearchMenuRect(144, y * 16 + 8, 8, 16);
+    ClearSearchMenuRect(SEARCH_PARAM_BOX_X(144), y * 16 + 8, 8, 16);
 }
 
 static void PrintSelectorArrow(u32 y)
 {
-    PrintSearchText(gText_SelectorArrow, 144, y * 16 + 9);
+    PrintSearchText(gText_SelectorArrow, SEARCH_PARAM_BOX_X(144), y * 16 + 9);
 }
 
 static void PrintSearchParameterTitle(u32 y, const u8 *str)
 {
-    PrintSearchText(str, 152, y * 16 + 9);
+    PrintSearchText(str, SEARCH_PARAM_BOX_X(152), y * 16 + 9);
 }
 
 static void ClearSearchParameterBoxText(void)
 {
-    ClearSearchMenuRect(144, 8, 96, 96);
+    ClearSearchMenuRect(SEARCH_PARAM_BOX_X(144), 8, 96, 96);
 }
 
 static void TryLoadDarkModeArrowPalette(void)

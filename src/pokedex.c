@@ -4240,6 +4240,12 @@ void PrintMonMeasurements(u16 species, u32 owned)
         PrintUnknownMonMeasurements();
 }
 
+#if TEXT_RTL
+// The HGSS info window spans the screen and is mirrored around the screen width. Shift the HT/WT
+// columns so they mirror inside the white interior of their own box (x 152-236) instead.
+#define DEX_HGSS_RTL_MEASUREMENT_SHIFT (152 + 237 - DISPLAY_WIDTH)
+#endif
+
 static u32 GetMeasurementTextPositions(u32 textElement)
 {
     if (!POKEDEX_PLUS_HGSS)
@@ -4248,14 +4254,22 @@ static u32 GetMeasurementTextPositions(u32 textElement)
     switch (textElement)
     {
     case DEX_HEADER_X:
+#if TEXT_RTL
+        return (DEX_HEADER_X + DEX_HGSS_HEADER_X_PADDING - DEX_HGSS_RTL_MEASUREMENT_SHIFT);
+#else
         return (DEX_HEADER_X + DEX_HGSS_HEADER_X_PADDING);
+#endif
     case DEX_Y_TOP:
         return (DEX_Y_TOP + DEX_HGSS_Y_TOP_PADDING);
     case DEX_Y_BOTTOM:
         return (DEX_Y_BOTTOM + DEX_HGSS_Y_BOTTOM_PADDING);
     default:
     case DEX_MEASUREMENT_X:
+#if TEXT_RTL
+        return (DEX_MEASUREMENT_X + DEX_HGSS_MEASUREMENT_X_PADDING - DEX_HGSS_RTL_MEASUREMENT_SHIFT);
+#else
         return (DEX_MEASUREMENT_X + DEX_HGSS_MEASUREMENT_X_PADDING);
+#endif
     }
 }
 
