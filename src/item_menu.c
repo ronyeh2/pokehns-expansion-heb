@@ -561,7 +561,13 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_YESNO_LOW] = { // Yes/No tucked in corner, for toss confirm
         .bg = 1,
+#if TEXT_RTL
+        // Mirrored inside the item list, over the quantity column. The exact mirror (14) would put
+        // the frame on the description box's edge, so it stays one tile in.
+        .tilemapLeft = 15,
+#else
         .tilemapLeft = 24,
+#endif
         .tilemapTop = 15,
         .width = 5,
         .height = 4,
@@ -570,7 +576,11 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_YESNO_HIGH] = { // Yes/No higher up, positioned above a lower message box
         .bg = 1,
+#if TEXT_RTL
+        .tilemapLeft = 17, // Mirrored inside the item list
+#else
         .tilemapLeft = 21,
+#endif
         .tilemapTop = 9,
         .width = 5,
         .height = 4,
@@ -579,7 +589,13 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_QUANTITY] = { // Used for quantity of items to Toss/Deposit
         .bg = 1,
+#if TEXT_RTL
+        // Mirrored inside the item list, over the quantity column. The exact mirror (14) would put
+        // the frame on the description box's edge, so it stays one tile in.
+        .tilemapLeft = 15,
+#else
         .tilemapLeft = 24,
+#endif
         .tilemapTop = 17,
         .width = 5,
         .height = 2,
@@ -588,7 +604,11 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_QUANTITY_WIDE] = { // Used for quantity and price of items to Sell
         .bg = 1,
+#if TEXT_RTL
+        .tilemapLeft = 15, // Mirrored inside the item list
+#else
         .tilemapLeft = 18,
+#endif
         .tilemapTop = 11,
         .width = 10,
         .height = 2,
@@ -2695,6 +2715,13 @@ static void LoadBagMenuTextWindows(void)
     u8 i;
 
     InitWindows(sDefaultBagWindows);
+#if TEXT_RTL
+    // The description box's white area is x=1..105; the window runs on under the item list's
+    // frame. Mirror around the white area so the English 2 px left margin becomes a right one.
+    SetWindowRtlMirrorWidth(WIN_DESCRIPTION, 107);
+    // Right-aligned numbers beside the fixed TYPE/POWER/ACCURACY/PP label art.
+    SetWindowRtlMode(WIN_TMHM_INFO, WINDOW_RTL_LTR);
+#endif
     DeactivateAllTextPrinters();
     LoadUserWindowBorderGfx(0, 1, BG_PLTT_ID(14));
     LoadMessageBoxGfx(0, 10, BG_PLTT_ID(13));
