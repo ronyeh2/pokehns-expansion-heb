@@ -624,7 +624,13 @@ static const struct WindowTemplate sPageInfoTemplate[] =
 {
     [PSS_DATA_WINDOW_INFO_ORIGINAL_TRAINER] = {
         .bg = 0,
+#if TEXT_RTL
+        // The OT and ID windows are each mirrored inside themselves, so right to left they trade
+        // places: the OT reads from the right end of the row and the ID sits at its left end.
+        .tilemapLeft = 18,
+#else
         .tilemapLeft = 11,
+#endif
         .tilemapTop = 4,
         .width = 11,
         .height = 2,
@@ -633,7 +639,11 @@ static const struct WindowTemplate sPageInfoTemplate[] =
     },
     [PSS_DATA_WINDOW_INFO_ID] = {
         .bg = 0,
+#if TEXT_RTL
+        .tilemapLeft = 11,
+#else
         .tilemapLeft = 22,
+#endif
         .tilemapTop = 4,
         .width = 7,
         .height = 2,
@@ -3371,11 +3381,57 @@ static void LimitEggSummaryPageDisplay(void) // If the Pokémon is an egg, limit
         ChangeBgX(3, 0, BG_COORD_SET);
 }
 
+#if TEXT_RTL
+// The portrait panel's art is symmetric about x = 40 (frame columns 0-2 and 78-79), but its text
+// windows start at x = 8 and run on to the right frame. Mirroring them about the panel's axis puts
+// the right edge of a line at x = 72, as far from the frame as the English left edge is.
+#define PORTRAIT_RTL_MIRROR_PX 64
+
+// The dex number ("No." {CLEAR} digits) is mirrored inside its own English extent: mirrored across
+// the whole 40-px window it would end under the markings (x 45-76), and a fixed narrower axis
+// would cut off the left end of a Hebrew label wider than the No. glyph. In-place mode cannot be
+// used, because the {CLEAR} would split the label and the digits into two segments.
+static void SetDexNumberRtlAxis(const u8 *str)
+{
+    u32 width = GetStringWidth(FONT_NORMAL, str, 0);
+
+    if (width > WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER))
+        width = WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER);
+    SetWindowRtlMirrorWidth(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, width);
+}
+
+static void SetSummaryLabelWindowsRtl(void)
+{
+    SetWindowRtlMirrorWidth(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, PORTRAIT_RTL_MIRROR_PX);
+    SetWindowRtlMirrorWidth(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, PORTRAIT_RTL_MIRROR_PX);
+    // Labels and values printed into two-tone art (label column, value column) beside the move
+    // category icon and the heart grid, and stat labels centred over their own cells: each keeps
+    // its English slot and only reads right to left.
+    SetWindowRtlMode(PSS_LABEL_WINDOW_MOVES_POWER_ACC, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(PSS_LABEL_WINDOW_MOVES_APPEAL_JAM, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, WINDOW_RTL_IN_PLACE);
+}
+
+// Data windows are added and removed as the pages change, which resets their mode.
+static void SetSummaryDataWindowRtl(const struct WindowTemplate *template, u8 templateId, u32 windowId)
+{
+    // Columns of numbers right-aligned with leading spaces: mirroring would move the spaces to
+    // the right and leave the numbers ragged against the labels.
+    if (template == sPageSkillsTemplate
+     && (templateId == PSS_DATA_WINDOW_SKILLS_STATS_LEFT || templateId == PSS_DATA_WINDOW_SKILLS_STATS_RIGHT))
+        SetWindowRtlMode(windowId, WINDOW_RTL_LTR);
+}
+#endif
+
 static void ResetWindows(void)
 {
     u8 i;
 
     InitWindows(sSummaryTemplate);
+#if TEXT_RTL
+    SetSummaryLabelWindowsRtl();
+#endif
     DeactivateAllTextPrinters();
     for (i = 0; i < PSS_LABEL_WINDOW_END; i++)
         FillWindowPixelBuffer(i, PIXEL_FILL(0));
@@ -3428,6 +3484,9 @@ static void PrintNotEggInfo(void)
         StringCopy(gStringVar1, &gText_NumberClear01[0]);
         ConvertIntToDecimalStringN(gStringVar2, dexNum, STR_CONV_MODE_LEADING_ZEROS, digitCount);
         StringAppend(gStringVar1, gStringVar2);
+#if TEXT_RTL
+        SetDexNumberRtlAxis(gStringVar1);
+#endif
         if (!IsMonShiny(mon))
         {
             PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, gStringVar1, 0, 1, 0, 1);
@@ -3448,6 +3507,9 @@ static void PrintNotEggInfo(void)
         else
             StringCopy(gStringVar2, &gText_ThreeQuestionMarks[0]);
         StringAppend(gStringVar1, gStringVar2);
+#if TEXT_RTL
+        SetDexNumberRtlAxis(gStringVar1);
+#endif
         if (!IsMonShiny(mon))
         {
             PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, gStringVar1, 0, 1, 0, 1);
@@ -3467,7 +3529,12 @@ static void PrintNotEggInfo(void)
     GetMonNickname(mon, gStringVar1);
     PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, 1, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME) - 9);
     PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, gText_Slash, 0, 1, 0, 1);
+#if TEXT_RTL
+    // Mirrored about the narrower axis, the name after the slash must end before the window's left edge.
+    PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, GetSpeciesName(summary->species2), 6, 1, 0, 1, PORTRAIT_RTL_MIRROR_PX - 6);
+#else
     PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, GetSpeciesName(summary->species2), 6, 1, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_SPECIES) - 9);
+#endif
     PrintGenderSymbol(mon, summary->species2);
     PutWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME);
     PutWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_SPECIES);
@@ -3660,6 +3727,9 @@ static u8 AddWindowFromTemplateList(const struct WindowTemplate *template, u8 te
     if (*windowIdPtr == WINDOW_NONE)
     {
         *windowIdPtr = AddWindow(&template[templateId]);
+#if TEXT_RTL
+        SetSummaryDataWindowRtl(template, templateId, *windowIdPtr);
+#endif
         FillWindowPixelBuffer(*windowIdPtr, PIXEL_FILL(0));
     }
     return *windowIdPtr;
@@ -4584,20 +4654,40 @@ void SetTypeSpritePosAndPal(enum Type typeId, u8 x, u8 y, u8 spriteArrayId)
     SetSpriteInvisibility(spriteArrayId, FALSE);
 }
 
+#if TEXT_RTL
+// The "TYPE/" label is mirrored to the right end of its window (x 88-232), so the 32-px type icons
+// that follow it go to their mirrored places in the same row. The English puts the first icon at
+// x 120 whatever the label's width; here it follows the label's own width (with the English 2-px
+// gap), so a label shorter than "TYPE/" does not leave a hole before its value.
+static u32 InfoTypeIconX(u32 x)
+{
+    u32 labelEnd = GetStringWidth(FONT_NORMAL, gText_TypeSlash, 0) + 2;
+
+    if (labelEnd > 32)
+        labelEnd = 32;
+    // An icon at English x (x - 32 + labelEnd once moved up to the label) spans 32 px; mirror it
+    // inside x 88-232.
+    return (88 + 232) - (x - 32 + labelEnd) - 32;
+}
+#define INFO_TYPE_ICON_X(x) InfoTypeIconX(x)
+#else
+#define INFO_TYPE_ICON_X(x) (x)
+#endif
+
 static void SetMonTypeIcons(void)
 {
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     if (summary->isEgg)
     {
-        SetTypeSpritePosAndPal(TYPE_MYSTERY, 120, 48, SPRITE_ARR_ID_TYPE);
+        SetTypeSpritePosAndPal(TYPE_MYSTERY, INFO_TYPE_ICON_X(120), 48, SPRITE_ARR_ID_TYPE);
         SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, TRUE);
     }
     else
     {
-        SetTypeSpritePosAndPal(GetSpeciesType(summary->species, 0), 120, 48, SPRITE_ARR_ID_TYPE);
+        SetTypeSpritePosAndPal(GetSpeciesType(summary->species, 0), INFO_TYPE_ICON_X(120), 48, SPRITE_ARR_ID_TYPE);
         if (GetSpeciesType(summary->species, 0) != GetSpeciesType(summary->species, 1))
         {
-            SetTypeSpritePosAndPal(GetSpeciesType(summary->species, 1), 160, 48, SPRITE_ARR_ID_TYPE + 1);
+            SetTypeSpritePosAndPal(GetSpeciesType(summary->species, 1), INFO_TYPE_ICON_X(160), 48, SPRITE_ARR_ID_TYPE + 1);
             SetSpriteInvisibility(SPRITE_ARR_ID_TYPE + 1, FALSE);
         }
         else
@@ -4606,7 +4696,7 @@ static void SetMonTypeIcons(void)
         }
         if (P_SHOW_TERA_TYPE >= GEN_9)
         {
-            SetTypeSpritePosAndPal(summary->teraType, 200, 48, SPRITE_ARR_ID_TYPE + 2);
+            SetTypeSpritePosAndPal(summary->teraType, INFO_TYPE_ICON_X(200), 48, SPRITE_ARR_ID_TYPE + 2);
         }
     }
 }
@@ -4855,7 +4945,13 @@ static void CreateCaughtBallSprite(struct Pokemon *mon)
     enum PokeBall ball = GetMonData(mon, MON_DATA_POKEBALL);
 
     LoadBallGfx(ball);
+#if TEXT_RTL
+    // The level line beside it is mirrored about the portrait panel's axis (x = 40), so the ball
+    // goes to the mirrored place at the panel's right end.
+    sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL] = CreateSprite(&gPokeBalls[ball].spriteTemplate, 80 - 16, 136, 0);
+#else
     sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL] = CreateSprite(&gPokeBalls[ball].spriteTemplate, 16, 136, 0);
+#endif
     gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL]].callback = SpriteCallbackDummy;
     gSprites[sMonSummaryScreen->spriteIds[SPRITE_ARR_ID_BALL]].oam.priority = 3;
 }
@@ -5006,10 +5102,17 @@ static inline void ShowUtilityPrompt(s16 mode)
     FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_UTILITY, PIXEL_FILL(0));
     PutWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
 
+#if TEXT_RTL
+    // The window is mirrored: the icon placed first lands flush right (x 46-62), as the English
+    // text does, and the text reads on to its left.
+    int iconXPos = 2;
+    int stringXPos = iconXPos + 16;
+#else
     int stringXPos = GetStringRightAlignXOffset(FONT_NORMAL, promptText, 62);
     int iconXPos = stringXPos - 16;
     if (iconXPos < 0)
         iconXPos = 0;
+#endif
 
     PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_UTILITY, FALSE, iconXPos);
     PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_UTILITY, promptText, stringXPos, 1, 0, 0);
