@@ -842,10 +842,19 @@ static void DrawTopBar(void)
 
     AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 120 - width, 1, color, 0, tabName);
 
+#if TEXT_RTL
+    // The hints stand for the physical shoulder buttons, so they keep their sides: their x is
+    // pre-mirrored, and the mirrored bar puts them back where the English has them.
+    if (sMenu->currentTab > 0)
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 2, GetStringWidth(FONT_SMALL, sText_TopBar_Left, 0)), 1, color, 0, sText_TopBar_Left);
+    if (sMenu->currentTab < TAB_COUNT - 1)
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 222, GetStringWidth(FONT_SMALL, sText_TopBar_Right, 0)), 1, color, 0, sText_TopBar_Right);
+#else
     if (sMenu->currentTab > 0)
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 2, 1, color, 0, sText_TopBar_Left);
     if (sMenu->currentTab < TAB_COUNT - 1)
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 222, 1, color, 0, sText_TopBar_Right);
+#endif
 
     PutWindowTilemap(WIN_TOPBAR);
     CopyWindowToVram(WIN_TOPBAR, COPYWIN_FULL);
@@ -938,6 +947,15 @@ static void ProcessLeftRight(void)
     u16 scrollOffset, selectedRow;
     ListMenuGetScrollAndRow(sMenu->listTaskId, &scrollOffset, &selectedRow);
     u8 itemIndex = scrollOffset + selectedRow;
+#if TEXT_RTL
+    // A mirrored row lists its choices right to left, so LEFT moves to the next one (as in
+    // multi-column menus, src/menu.c).
+    u16 nextKey = GetWindowRtlMode(WIN_OPTIONS) == WINDOW_RTL_MIRROR ? DPAD_LEFT : DPAD_RIGHT;
+    u16 prevKey = nextKey == DPAD_LEFT ? DPAD_RIGHT : DPAD_LEFT;
+#else
+    u16 nextKey = DPAD_RIGHT;
+    u16 prevKey = DPAD_LEFT;
+#endif
 
     const struct OptionMenuItem *items = GetCurrentTabItems();
     if (itemIndex >= GetCurrentTabItemCount())
@@ -951,14 +969,14 @@ static void ProcessLeftRight(void)
         u8 *sel = GetSelectionPtr(sMenu->currentTab, itemIndex);
         u8 prev = *sel;
 
-        if (JOY_NEW(DPAD_RIGHT))
+        if (JOY_NEW(nextKey))
         {
             if (*sel < WINDOW_FRAMES_COUNT - 1)
                 (*sel)++;
             else
                 *sel = 0;
         }
-        else if (JOY_NEW(DPAD_LEFT))
+        else if (JOY_NEW(prevKey))
         {
             if (*sel > 0)
                 (*sel)--;
@@ -985,14 +1003,14 @@ static void ProcessLeftRight(void)
     u8 *sel = GetSelectionPtr(sMenu->currentTab, itemIndex);
     u8 prev = *sel;
 
-    if (JOY_NEW(DPAD_RIGHT))
+    if (JOY_NEW(nextKey))
     {
         if (*sel < items[itemIndex].numChoices - 1)
             (*sel)++;
         else
             *sel = 0;
     }
-    else if (JOY_NEW(DPAD_LEFT))
+    else if (JOY_NEW(prevKey))
     {
         if (*sel > 0)
             (*sel)--;
