@@ -84,9 +84,16 @@ int Intl_GetListMenuWidth(const struct ListMenuTemplate *listMenu)
 
 void CopyMonCategoryText(u16 species, u8 *dest)
 {
+#if TEXT_NAME_SUFFIX_IN_BATTLE
+    // Hebrew puts the noun first: פוקימון זרע ("Seed Pokémon").
+    u8 *str = StringCopy(dest, gText_Pokemon);
+    *str = CHAR_SPACE;
+    StringCopy(str + 1, GetSpeciesCategory(species));
+#else
     u8 *str = StringCopy(dest, GetSpeciesCategory(species));
     *str = CHAR_SPACE;
     StringCopy(str + 1, gText_Pokemon);
+#endif
 }
 
 u8 *GetStringClearToWidth(u8 *dest, int fontId, const u8 *str, int totalStringWidth)
