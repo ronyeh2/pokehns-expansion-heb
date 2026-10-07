@@ -1975,9 +1975,36 @@ static void DrawMonTextEntryBox(void)
 {
     u8 buffer[64];
 
+#if TEXT_RTL
+    // The species name goes where the title's {STR_VAR_1} is, so a translation can put it
+    // anywhere in the sentence. (English prints the name and then the title, whose placeholder
+    // bytes the printer skips.) gStringVar1 is left alone: the caller's script may still use it.
+    u8 name[POKEMON_NAME_BUFFER_SIZE + 6];
+    const u8 *title = sNamingScreen->template->title;
+    u8 *dest = buffer;
+    u8 *end = StringCopy(name, GetSpeciesName(sNamingScreen->monSpecies));
+
+    WrapFontIdToFit(name, end, FONT_NORMAL, 128 - 64);
+    while (*title != EOS && dest < buffer + sizeof(buffer) - 1)
+    {
+        if (title[0] == PLACEHOLDER_BEGIN && title[1] == PLACEHOLDER_ID_STRING_VAR_1)
+        {
+            const u8 *src = name;
+            while (*src != EOS && dest < buffer + sizeof(buffer) - 1)
+                *dest++ = *src++;
+            title += 2;
+        }
+        else
+        {
+            *dest++ = *title++;
+        }
+    }
+    *dest = EOS;
+#else
     u8 *end = StringCopy(buffer, GetSpeciesName(sNamingScreen->monSpecies));
     WrapFontIdToFit(buffer, end, FONT_NORMAL, 128 - 64);
     StringAppendN(end, sNamingScreen->template->title, 15);
+#endif
     FillWindowPixelBuffer(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX], PIXEL_FILL(1));
     AddTextPrinterParameterized(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX], FONT_NORMAL, buffer, 8, 1, 0, 0);
     PutWindowTilemap(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX]);
