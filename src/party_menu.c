@@ -2361,6 +2361,9 @@ static void CreateCancelConfirmWindows(bool8 chooseHalf)
         if (chooseHalf == TRUE)
         {
             confirmWindowId = AddWindow(&sConfirmButtonWindowTemplate);
+#if TEXT_RTL
+            SetWindowRtlMode(confirmWindowId, WINDOW_RTL_IN_PLACE); // Label on fixed button art
+#endif
             FillWindowPixelBuffer(confirmWindowId, PIXEL_FILL(0));
             mainOffset = GetStringCenterAlignXOffset(FONT_SMALL, gMenuText_Confirm, 48);
             AddTextPrinterParameterized4(confirmWindowId, FONT_SMALL, mainOffset, 1, 0, 0, sFontColorTable[0], TEXT_SKIP_DRAW, gMenuText_Confirm);
@@ -2374,6 +2377,11 @@ static void CreateCancelConfirmWindows(bool8 chooseHalf)
             cancelWindowId = AddWindow(&sCancelButtonWindowTemplate);
             offset = 3;
         }
+#if TEXT_RTL
+        // The label is placed on fixed button art, clear of the Poké Ball on its left (offset), so
+        // it keeps its English extent and only the reading order flips.
+        SetWindowRtlMode(cancelWindowId, WINDOW_RTL_IN_PLACE);
+#endif
         FillWindowPixelBuffer(cancelWindowId, PIXEL_FILL(0));
 
         // Branches are functionally identical. Second branch is never reached, Spin Trade wasnt fully implemented
