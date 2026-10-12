@@ -8147,7 +8147,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_ULTRANECROZIUM_Z] =
     {
-        .name = ITEM_NAME("אולטרה-נקרוזיום Z"),
+        .name = ITEM_NAME("אולטרנקרוזיום Z"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_Z_CRYSTAL,
         .description = COMPOUND_STRING(
@@ -15822,8 +15822,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TWICE_SPICED_RADISH] =
     {
-        .name = ITEM_NAME("צנון בתיבול כפול"),
-        .pluralName = ITEM_PLURAL_NAME("צנונים בתיבול כפול"),
+        .name = ITEM_NAME("צנון דו-תיבולי"),
+        .pluralName = ITEM_PLURAL_NAME("צנונים דו-תיבוליים"),
         .price = 1600,
         .description = sQuestionMarksDesc,
         .pocket = POCKET_ITEMS,
