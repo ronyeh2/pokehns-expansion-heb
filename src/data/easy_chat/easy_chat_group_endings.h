@@ -7,7 +7,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_WILL_BE_HERE)] =
     {
-        .text = COMPOUND_STRING("WILL BE HERE"),
+        .text = COMPOUND_STRING("יהיה כאן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ABOUT),
         .enabled = TRUE,
     },
@@ -25,13 +25,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_WONDER)] =
     {
-        .text = COMPOUND_STRING("WONDER"),
+        .text = COMPOUND_STRING("תוהה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_AN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_IS_IT_QUES)] =
     {
-        .text = COMPOUND_STRING("IS IT?"),
+        .text = COMPOUND_STRING("באמת?"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ANYWHERE),
         .enabled = TRUE,
     },
@@ -55,7 +55,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_LIKELY_TO)] =
     {
-        .text = COMPOUND_STRING("LIKELY TO"),
+        .text = COMPOUND_STRING("צפוי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BE),
         .enabled = TRUE,
     },
@@ -73,7 +73,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_ISN_T_IT_QUES)] =
     {
-        .text = COMPOUND_STRING("ISN'T IT?"),
+        .text = COMPOUND_STRING("נכון?"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BETTER),
         .enabled = TRUE,
     },
@@ -169,13 +169,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_WASN_T)] =
     {
-        .text = COMPOUND_STRING("WASN'T"),
+        .text = COMPOUND_STRING("לא היה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WEREN_T)] =
     {
-        .text = COMPOUND_STRING("WEREN'T"),
+        .text = COMPOUND_STRING("לא היו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_IS_IT_QUES),
         .enabled = TRUE,
     },
@@ -187,7 +187,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_HAVEN_T)] =
     {
-        .text = COMPOUND_STRING("HAVEN'T"),
+        .text = COMPOUND_STRING("אין"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ISN_T_IT_QUES),
         .enabled = TRUE,
     },
@@ -295,7 +295,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_BETTER)] =
     {
-        .text = COMPOUND_STRING("BETTER"),
+        .text = COMPOUND_STRING("יותר טוב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THAN),
         .enabled = TRUE,
     },
@@ -319,7 +319,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_BELONGS_TO)] =
     {
-        .text = COMPOUND_STRING("BELONGS TO"),
+        .text = COMPOUND_STRING("שייך ל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TO),
         .enabled = TRUE,
     },
@@ -361,19 +361,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_DIDN_T)] =
     {
-        .text = COMPOUND_STRING("DIDN'T"),
+        .text = COMPOUND_STRING("לא עשה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHILE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_DOESN_T)] =
     {
-        .text = COMPOUND_STRING("DOESN'T"),
+        .text = COMPOUND_STRING("לא עושה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHOM),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_WITHOUT)] =
     {
-        .text = COMPOUND_STRING("WITHOUT"),
+        .text = COMPOUND_STRING("בלי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WILL),
         .enabled = TRUE,
     },
@@ -385,7 +385,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_BEFORE)] =
     {
-        .text = COMPOUND_STRING("BEFORE"),
+        .text = COMPOUND_STRING("לפני"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WITH),
         .enabled = TRUE,
     },
@@ -409,7 +409,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Endings[] = {
     },
     [EC_INDEX(EC_WORD_ANYWHERE)] =
     {
-        .text = COMPOUND_STRING("ANYWHERE"),
+        .text = COMPOUND_STRING("בכל מקום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WOULD),
         .enabled = TRUE,
     },
