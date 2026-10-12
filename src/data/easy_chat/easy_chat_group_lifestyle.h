@@ -1,7 +1,7 @@
 const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     [EC_INDEX(EC_WORD_CHORES)] =
     {
-        .text = COMPOUND_STRING("CHORES"),
+        .text = COMPOUND_STRING("מטלות בית"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ALLOWANCE),
         .enabled = TRUE,
     },
@@ -19,7 +19,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_ALLOWANCE)] =
     {
-        .text = COMPOUND_STRING("ALLOWANCE"),
+        .text = COMPOUND_STRING("דמי כיס"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CLASS),
         .enabled = TRUE,
     },
@@ -31,19 +31,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_CONVERSATION)] =
     {
-        .text = COMPOUND_STRING("CONVERSATION"),
+        .text = COMPOUND_STRING("שיחה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CONVERSATION),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SCHOOL)] =
     {
-        .text = COMPOUND_STRING("SCHOOL"),
+        .text = COMPOUND_STRING("בית ספר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DEPT_STORE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_COMMEMORATE)] =
     {
-        .text = COMPOUND_STRING("COMMEMORATE"),
+        .text = COMPOUND_STRING("להנציח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_DIGITAL),
         .enabled = TRUE,
     },
@@ -73,7 +73,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_SERVICE)] =
     {
-        .text = COMPOUND_STRING("SERVICE"),
+        .text = COMPOUND_STRING("שירות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HOME),
         .enabled = TRUE,
     },
@@ -85,7 +85,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_SYSTEM)] =
     {
-        .text = COMPOUND_STRING("SYSTEM"),
+        .text = COMPOUND_STRING("מערכת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ITEM),
         .enabled = TRUE,
     },
@@ -103,37 +103,37 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_LESSONS)] =
     {
-        .text = COMPOUND_STRING("LESSONS"),
+        .text = COMPOUND_STRING("שיעורים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LETTER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_INFORMATION)] =
     {
-        .text = COMPOUND_STRING("INFORMATION"),
+        .text = COMPOUND_STRING("מידע"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIFE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LIVING)] =
     {
-        .text = COMPOUND_STRING("LIVING"),
+        .text = COMPOUND_STRING("אורח חיים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIVING),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TEACHER)] =
     {
-        .text = COMPOUND_STRING("TEACHER"),
+        .text = COMPOUND_STRING("מורה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MACHINE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TOURNAMENT)] =
     {
-        .text = COMPOUND_STRING("TOURNAMENT"),
+        .text = COMPOUND_STRING("טורניר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MAIL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LETTER)] =
     {
-        .text = COMPOUND_STRING("LETTER"),
+        .text = COMPOUND_STRING("מכתב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MESSAGE),
         .enabled = TRUE,
     },
@@ -145,7 +145,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_DIGITAL)] =
     {
-        .text = COMPOUND_STRING("DIGITAL"),
+        .text = COMPOUND_STRING("דיגיטלי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_NAME),
         .enabled = TRUE,
     },
@@ -157,13 +157,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_DEPT_STORE)] =
     {
-        .text = COMPOUND_STRING("DEPT. STORE"),
+        .text = COMPOUND_STRING("כלבו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PARTY),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TELEVISION)] =
     {
-        .text = COMPOUND_STRING("TELEVISION"),
+        .text = COMPOUND_STRING("טלוויזיה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_PHONE),
         .enabled = TRUE,
     },
@@ -193,7 +193,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_POPULAR)] =
     {
-        .text = COMPOUND_STRING("POPULAR"),
+        .text = COMPOUND_STRING("פופולרי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SCHOOL),
         .enabled = TRUE,
     },
@@ -211,7 +211,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_MACHINE)] =
     {
-        .text = COMPOUND_STRING("MACHINE"),
+        .text = COMPOUND_STRING("מכונה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STUDY),
         .enabled = TRUE,
     },
@@ -223,13 +223,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_MESSAGE)] =
     {
-        .text = COMPOUND_STRING("MESSAGE"),
+        .text = COMPOUND_STRING("הודעה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TEACHER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_PROMISE)] =
     {
-        .text = COMPOUND_STRING("PROMISE"),
+        .text = COMPOUND_STRING("הבטחה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TELEVISION),
         .enabled = TRUE,
     },
@@ -241,7 +241,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_KINDERGARTEN)] =
     {
-        .text = COMPOUND_STRING("KINDERGARTEN"),
+        .text = COMPOUND_STRING("גן ילדים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TOURNAMENT),
         .enabled = TRUE,
     },
@@ -259,7 +259,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Lifestyle[] = {
     },
     [EC_INDEX(EC_WORD_RENTAL)] =
     {
-        .text = COMPOUND_STRING("RENTAL"),
+        .text = COMPOUND_STRING("השכרה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WORK),
         .enabled = TRUE,
     },
