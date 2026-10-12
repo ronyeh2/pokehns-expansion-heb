@@ -3105,7 +3105,7 @@ static s32 CompareItemsAlphabetically(enum Pocket pocketId, struct ItemSlot item
         name2 = GetItemName(item2.itemId);
     }
 
-    return StringCompare(name1, name2);
+    return StringCompareAlphabetical(name1, name2);
 }
 
 static s32 CompareItemsByMost(enum Pocket pocketId, struct ItemSlot item1, struct ItemSlot item2)
