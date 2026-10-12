@@ -103,7 +103,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_WROOOAAR_EXCL)] =
     {
-        .text = COMPOUND_STRING("WROOOAAR!"),
+        .text = COMPOUND_STRING("גרררר!"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EH_QUES),
         .enabled = TRUE,
     },
@@ -115,7 +115,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_GIGGLE)] =
     {
-        .text = COMPOUND_STRING("GIGGLE"),
+        .text = COMPOUND_STRING("צחקוק"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FUFUFU),
         .enabled = TRUE,
     },
@@ -127,7 +127,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_UNBELIEVABLE)] =
     {
-        .text = COMPOUND_STRING("UNBELIEVABLE"),
+        .text = COMPOUND_STRING("לא להאמין"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GRAAAH),
         .enabled = TRUE,
     },
@@ -163,13 +163,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_OI_OI_OI)] =
     {
-        .text = COMPOUND_STRING("OI, OI, OI"),
+        .text = COMPOUND_STRING("הי, הי, הי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HEHE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OH_YEAH)] =
     {
-        .text = COMPOUND_STRING("OH, YEAH"),
+        .text = COMPOUND_STRING("או, כן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HEHEHE),
         .enabled = TRUE,
     },
@@ -187,7 +187,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_SHOCKED)] =
     {
-        .text = COMPOUND_STRING("SHOCKED"),
+        .text = COMPOUND_STRING("המום"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HOHOHO),
         .enabled = TRUE,
     },
@@ -199,13 +199,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_GRAAAH)] =
     {
-        .text = COMPOUND_STRING("GRAAAH"),
+        .text = COMPOUND_STRING("גראאאה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LALALA),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GWAHAHAHA)] =
     {
-        .text = COMPOUND_STRING("GWAHAHAHA"),
+        .text = COMPOUND_STRING("גוואהאהאהא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LOL),
         .enabled = TRUE,
     },
@@ -241,13 +241,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_HAHAHA)] =
     {
-        .text = COMPOUND_STRING("HAHAHA"),
+        .text = COMPOUND_STRING("הא הא הא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OH_YEAH),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_AIYEEH)] =
     {
-        .text = COMPOUND_STRING("AIYEEH"),
+        .text = COMPOUND_STRING("אייייה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OH_KAY),
         .enabled = TRUE,
     },
@@ -259,7 +259,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_FUFUFU)] =
     {
-        .text = COMPOUND_STRING("FUFUFU"),
+        .text = COMPOUND_STRING("פופופו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OI_OI_OI),
         .enabled = TRUE,
     },
@@ -283,7 +283,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_HEHEHE)] =
     {
-        .text = COMPOUND_STRING("HEHEHE"),
+        .text = COMPOUND_STRING("חי חי חי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_SIGH),
         .enabled = TRUE,
     },
@@ -295,19 +295,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_HOHOHO)] =
     {
-        .text = COMPOUND_STRING("HOHOHO"),
+        .text = COMPOUND_STRING("הו הו הו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TCH),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_UH_HUH)] =
     {
-        .text = COMPOUND_STRING("UH-HUH"),
+        .text = COMPOUND_STRING("אה-הא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_UH_HUH),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OH_DEAR)] =
     {
-        .text = COMPOUND_STRING("OH, DEAR"),
+        .text = COMPOUND_STRING("אוי ואבוי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_UH_OH),
         .enabled = TRUE,
     },
@@ -319,7 +319,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_MUFUFU)] =
     {
-        .text = COMPOUND_STRING("MUFUFU"),
+        .text = COMPOUND_STRING("מופופו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_URGH),
         .enabled = TRUE,
     },
@@ -331,7 +331,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_OH_KAY)] =
     {
-        .text = COMPOUND_STRING("OH-KAY"),
+        .text = COMPOUND_STRING("או-קיי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WAHAHAHA),
         .enabled = TRUE,
     },
@@ -343,7 +343,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_LALALA)] =
     {
-        .text = COMPOUND_STRING("LALALA"),
+        .text = COMPOUND_STRING("לה-לה-לה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHOAH),
         .enabled = TRUE,
     },
@@ -373,7 +373,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Voices[] = {
     },
     [EC_INDEX(EC_WORD_WAHAHAHA)] =
     {
-        .text = COMPOUND_STRING("WAHAHAHA"),
+        .text = COMPOUND_STRING("וואהאהאהא"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_YUP),
         .enabled = TRUE,
     },
