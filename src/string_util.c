@@ -158,6 +158,46 @@ s32 StringCompare(const u8 *str1, const u8 *str2)
     return *str1 - *str2;
 }
 
+#if TEXT_RTL
+static u8 HebrewBaseLetter(u8 c)
+{
+    switch (c)
+    {
+    case CHAR_HEB_FINAL_KAF:   return CHAR_HEB_KAF;
+    case CHAR_HEB_FINAL_MEM:   return CHAR_HEB_MEM;
+    case CHAR_HEB_FINAL_NUN:   return CHAR_HEB_NUN;
+    case CHAR_HEB_FINAL_PE:    return CHAR_HEB_PE;
+    case CHAR_HEB_FINAL_TSADI: return CHAR_HEB_TSADI;
+    default:                   return c;
+    }
+}
+#endif
+
+// Order for lists sorted by name. Hebrew final letters sort with their ordinary forms, and a
+// name sorts before the longer names that start with it.
+s32 StringCompareAlphabetical(const u8 *str1, const u8 *str2)
+{
+#if TEXT_RTL
+    const u8 *a = str1, *b = str2;
+
+    while (HebrewBaseLetter(*a) == HebrewBaseLetter(*b))
+    {
+        if (*a == EOS)
+            return StringCompare(str1, str2);
+        a++;
+        b++;
+    }
+
+    if (*a == EOS)
+        return -1;
+    if (*b == EOS)
+        return 1;
+    return HebrewBaseLetter(*a) - HebrewBaseLetter(*b);
+#else
+    return StringCompare(str1, str2);
+#endif
+}
+
 s32 StringCompareN(const u8 *str1, const u8 *str2, u32 n)
 {
     while (*str1 == *str2)

@@ -1142,9 +1142,9 @@ static void QuickSortMoves(u16 *moves, s32 left, s32 right)
 
     while (i <= j)
     {
-        while (moves[i] != MOVE_NONE && StringCompare(GetMoveName(moves[i]), GetMoveName(pivot)) < 0)
+        while (moves[i] != MOVE_NONE && StringCompareAlphabetical(GetMoveName(moves[i]), GetMoveName(pivot)) < 0)
             i++;
-        while (moves[j] != MOVE_NONE && StringCompare(GetMoveName(moves[j]), GetMoveName(pivot)) > 0)
+        while (moves[j] != MOVE_NONE && StringCompareAlphabetical(GetMoveName(moves[j]), GetMoveName(pivot)) > 0)
             j--;
 
         if (i <= j)
