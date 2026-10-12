@@ -1,13 +1,13 @@
 const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     [EC_INDEX(EC_WORD_I_CHOOSE_YOU)] =
     {
-        .text = COMPOUND_STRING("I CHOOSE YOU"),
+        .text = COMPOUND_STRING("אני בוחר בך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BAG),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_GOTCHA)] =
     {
-        .text = COMPOUND_STRING("GOTCHA"),
+        .text = COMPOUND_STRING("תפסתי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CENTER),
         .enabled = TRUE,
     },
@@ -19,31 +19,31 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_SAPPHIRE)] =
     {
-        .text = COMPOUND_STRING("SAPPHIRE"),
+        .text = COMPOUND_STRING("ספיר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EMERALD),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_EVOLVE)] =
     {
-        .text = COMPOUND_STRING("EVOLVE"),
+        .text = COMPOUND_STRING("להתפתח"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ENCYCLOPEDIA),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_ENCYCLOPEDIA)] =
     {
-        .text = COMPOUND_STRING("ENCYCLOPEDIA"),
+        .text = COMPOUND_STRING("אנציקלופדיה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EVOLVE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_NATURE)] =
     {
-        .text = COMPOUND_STRING("NATURE"),
+        .text = COMPOUND_STRING("אופי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FLAME),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_CENTER)] =
     {
-        .text = COMPOUND_STRING("CENTER"),
+        .text = COMPOUND_STRING("מרכז"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GET),
         .enabled = TRUE,
     },
@@ -61,19 +61,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_SP_ABILITY)] =
     {
-        .text = COMPOUND_STRING("SP. ABILITY"),
+        .text = COMPOUND_STRING("יכולת מיוחדת"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_GREEN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_TRAINER)] =
     {
-        .text = COMPOUND_STRING("TRAINER"),
+        .text = COMPOUND_STRING("מאמן"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_I_CHOOSE_YOU),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_VERSION)] =
     {
-        .text = COMPOUND_STRING("VERSION"),
+        .text = COMPOUND_STRING("גרסה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LEAF),
         .enabled = TRUE,
     },
@@ -85,7 +85,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_POKEMON)] =
     {
-        .text = COMPOUND_STRING("POKéMON"),
+        .text = COMPOUND_STRING("פוקימון"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LINK),
         .enabled = TRUE,
     },
@@ -97,7 +97,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_POKEDEX)] =
     {
-        .text = COMPOUND_STRING("POKéDEX"),
+        .text = COMPOUND_STRING("פוקדקס"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_POKEDEX),
         .enabled = TRUE,
     },
@@ -151,7 +151,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Trainer[] = {
     },
     [EC_INDEX(EC_WORD_SILVER)] =
     {
-        .text = COMPOUND_STRING("SILVER"),
+        .text = COMPOUND_STRING("כסף"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_TRAINER),
         .enabled = FALSE,
     },
