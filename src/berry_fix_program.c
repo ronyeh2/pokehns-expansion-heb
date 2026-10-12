@@ -35,27 +35,28 @@ static int BerryFix_TrySetScene(int);
 static void BerryFix_SetScene(int);
 static void BerryFix_HideScene(void);
 
-static const u8 sText_BerryProgramUpdate[] = _("Berry Program Update");
+static const u8 sText_BerryProgramUpdate[] = _("עדכון תוכנת הפירות");
 static const u8 sText_RubySapphire[] = _("Ruby/Sapphire");
 static const u8 sText_Emerald[] = _("Emerald");
-static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("The Berry Program on your POKéMON\n"
-                                                            "Ruby/Sapphire Game Pak will be updated.\n"
-                                                            "{COLOR RED}{SHADOW LIGHT_RED}Press the A Button.");
-static const u8 sText_EnsureGBAConnectionMatches[] = _("Please ensure the connection of your\n"
-                                                       "Game Boy Advance system matches this.\n"
-                                                       "{COLOR RED}{SHADOW LIGHT_RED}YES: Press the A Button.\n"
-                                                       "NO: Turn off the power and try again.");
-static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("Please turn on the power of POKéMON\n"
-                                                           "Ruby/Sapphire while holding START and\n"
-                                                           "SELECT simultaneously. Then, ensure\n"
-                                                           "the picture above appears.");
-static const u8 sText_TransmittingPleaseWait[] = _("Transmitting. Please wait.\n"
-                                                   "{COLOR RED}{SHADOW LIGHT_RED}Please do not turn off the power or\n"
-                                                   "unplug the Game Boy Advance Game\nLink Cable.");
-static const u8 sText_PleaseFollowInstructionsOnScreen[] = _("Please follow the instructions on your\n"
-                                                             "POKéMON Ruby/Sapphire screen.");
-static const u8 sText_TransmissionFailureTryAgain[] = _("Transmission failure.\n"
-                                                        "{COLOR RED}{SHADOW LIGHT_RED}Please try again.");
+static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("תוכנת הפירות במחסנית פוקימון\n"
+                                                            "Ruby/Sapphire שלך תעודכן.\n"
+                                                            "{COLOR RED}{SHADOW LIGHT_RED}יש ללחוץ על כפתור A.");
+static const u8 sText_EnsureGBAConnectionMatches[] = _("נא לוודא שהחיבור של מכשיר\n"
+                                                       "ה-Game Boy Advance שלך תואם לתמונה.\n"
+                                                       "{COLOR RED}{SHADOW LIGHT_RED}כן: יש ללחוץ על כפתור A.\n"
+                                                       "לא: יש לכבות את המכשיר ולנסות שוב.");
+static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("יש להדליק את פוקימון Ruby/Sapphire\n"
+                                                           "תוך לחיצה בו-זמנית על START\n"
+                                                           "ועל SELECT. לאחר מכן, יש לוודא\n"
+                                                           "שהתמונה שלמעלה מופיעה.");
+static const u8 sText_TransmittingPleaseWait[] = _("מתבצע שידור. נא להמתין.\n"
+                                                   "{COLOR RED}{SHADOW LIGHT_RED}אין לכבות את המכשיר ואין לנתק\n"
+                                                   "את כבל הקישור של\n"
+                                                   "ה-Game Boy Advance.");
+static const u8 sText_PleaseFollowInstructionsOnScreen[] = _("יש לפעול לפי ההוראות שעל המסך\n"
+                                                             "של פוקימון Ruby/Sapphire.");
+static const u8 sText_TransmissionFailureTryAgain[] = _("השידור נכשל.\n"
+                                                        "{COLOR RED}{SHADOW LIGHT_RED}נא לנסות שוב.");
 
 static const struct BgTemplate sBerryFixBgTemplates[] = {
     {
