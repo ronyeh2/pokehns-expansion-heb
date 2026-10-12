@@ -321,7 +321,7 @@ const struct ApprenticeTrainer gApprentices[NUM_APPRENTICES] =
         .speechLost = {EC_WORD_I, EC_WORD_WENT, EC_WORD_AND, EC_WORD_LOST, EC_WORD_AWW, EC_WORD_ELLIPSIS},
     },
     {
-        .name = {_("ユラ"), _("LAYLA"), _("LAYLA"), _("ASTRID"), _("SONJA"), _("LOLA")},
+        .name = {_("ユラ"), _("LAYLA"), _("LAYLA"), _("ASTRID"), _("SONJA"), _("לולה")},
         .otId = 34031,
         .facilityClass = FACILITY_CLASS_LASS,
         .species = {SPECIES_SWALOT, SPECIES_XATU, SPECIES_ALTARIA, SPECIES_GOLDUCK, SPECIES_FLYGON, SPECIES_ALAKAZAM, SPECIES_GARDEVOIR, SPECIES_WAILORD, SPECIES_GRUMPIG, SPECIES_MIGHTYENA},
@@ -377,7 +377,7 @@ const struct ApprenticeTrainer gApprentices[NUM_APPRENTICES] =
         .speechLost = {EC_WORD_WE, EC_WORD_WERE, EC_WORD_JUST, EC_WORD_SHREDDED, EC_WORD_ELLIPSIS, EC_EMPTY_WORD},
     },
     {
-        .name = {_("トウゾウ"), _("DALLAS"), _("BRUNO"), _("LEARCO"), _("ANSGAR"), _("MANOLO")},
+        .name = {_("トウゾウ"), _("DALLAS"), _("ברונו"), _("LEARCO"), _("ANSGAR"), _("MANOLO")},
         .otId = 29180,
         .facilityClass = FACILITY_CLASS_FISHERMAN,
         .species = {SPECIES_SEAKING, SPECIES_STARMIE, SPECIES_GOLDUCK, SPECIES_TENTACRUEL, SPECIES_OCTILLERY, SPECIES_GOREBYSS, SPECIES_GLALIE, SPECIES_WAILORD, SPECIES_SHARPEDO, SPECIES_KINGDRA},
@@ -385,7 +385,7 @@ const struct ApprenticeTrainer gApprentices[NUM_APPRENTICES] =
         .speechLost = {EC_WORD_YOUR, EC_WORD_WIN, EC_WORD_ANGERS, EC_WORD_ME, EC_WORD_EXCL, EC_EMPTY_WORD},
     },
     {
-        .name = {_("セイヤ"), _("FRANK"), _("FRANK"), _("OLINDO"), _("FRANK"), _("MAURO")},
+        .name = {_("セイヤ"), _("פרנק"), _("פרנק"), _("OLINDO"), _("פרנק"), _("MAURO")},
         .otId = 41886,
         .facilityClass = FACILITY_CLASS_SAILOR,
         .species = {SPECIES_QUAGSIRE, SPECIES_STARMIE, SPECIES_PELIPPER, SPECIES_CRAWDAUNT, SPECIES_WAILORD, SPECIES_GYARADOS, SPECIES_SWAMPERT, SPECIES_LANTURN, SPECIES_WHISCASH, SPECIES_SHUCKLE},
@@ -401,7 +401,7 @@ const struct ApprenticeTrainer gApprentices[NUM_APPRENTICES] =
         .speechLost = {EC_WORD_A, EC_WORD_LOSS, EC_WORD_IS, EC_WORD_WHAT, EC_WORD_THIS, EC_WORD_IS},
     },
     {
-        .name = {_("カツアキ"), _("TYRESE"), _("ANDY"), _("PARIDE"), _("DAVID"), _("CHICHO")},
+        .name = {_("カツアキ"), _("TYRESE"), _("אנדי"), _("PARIDE"), _("דוד"), _("CHICHO")},
         .otId = 53272,
         .facilityClass = FACILITY_CLASS_BLACK_BELT,
         .species = {SPECIES_BLAZIKEN, SPECIES_GOLEM, SPECIES_MACHAMP, SPECIES_RHYDON, SPECIES_HARIYAMA, SPECIES_AGGRON, SPECIES_MEDICHAM, SPECIES_ZANGOOSE, SPECIES_VIGOROTH, SPECIES_SLAKING},
@@ -417,7 +417,7 @@ const struct ApprenticeTrainer gApprentices[NUM_APPRENTICES] =
         .speechLost = {EC_WORD_I, EC_WORD_DON_T, EC_WORD_UNDERSTAND, EC_WORD_WHAT, EC_WORD_IS, EC_WORD_HAPPENING},
     },
     {
-        .name = {_("ローウェン"), _("ARTURO"), _("ARTURO"), _("ROMOLO"), _("BRIAN"), _("ARTURO")},
+        .name = {_("ローウェン"), _("ARTURO"), _("ARTURO"), _("ROMOLO"), _("בריאן"), _("ARTURO")},
         .otId = 64002,
         .facilityClass = FACILITY_CLASS_GENTLEMAN,
         .species = {SPECIES_ABSOL, SPECIES_MIGHTYENA, SPECIES_ALAKAZAM, SPECIES_BANETTE, SPECIES_NINETALES, SPECIES_CLAYDOL, SPECIES_MUK, SPECIES_SALAMENCE, SPECIES_WALREIN, SPECIES_DUSCLOPS},
