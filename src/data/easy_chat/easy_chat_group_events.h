@@ -1,49 +1,49 @@
-const u8 gEasyChatWord_Appeal[] = _("APPEAL");
-const u8 gEasyChatWord_Events[] = _("EVENTS");
-const u8 gEasyChatWord_StayAtHome[] = _("STAY-AT-HOME");
+const u8 gEasyChatWord_Appeal[] = _("הופעה");
+const u8 gEasyChatWord_Events[] = _("אירועים");
+const u8 gEasyChatWord_StayAtHome[] = _("להישאר בבית");
 const u8 gEasyChatWord_Berry[] = _("BERRY");
-const u8 gEasyChatWord_Contest[] = _("CONTEST");
+const u8 gEasyChatWord_Contest[] = _("תחרות");
 const u8 gEasyChatWord_Mc[] = _("MC");
 const u8 gEasyChatWord_Judge[] = _("JUDGE");
 const u8 gEasyChatWord_Super[] = _("SUPER");
 const u8 gEasyChatWord_Stage[] = _("STAGE");
-const u8 gEasyChatWord_HallOfFame[] = _("HALL OF FAME");
-const u8 gEasyChatWord_Evolution[] = _("EVOLUTION");
+const u8 gEasyChatWord_HallOfFame[] = _("היכל התהילה");
+const u8 gEasyChatWord_Evolution[] = _("התפתחות");
 const u8 gEasyChatWord_Hyper[] = _("HYPER");
-const u8 gEasyChatWord_BattleTower[] = _("BATTLE TOWER");
-const u8 gEasyChatWord_Leaders[] = _("LEADERS");
-const u8 gEasyChatWord_BattleRoom[] = _("BATTLE ROOM");
-const u8 gEasyChatWord_Hidden[] = _("HIDDEN");
-const u8 gEasyChatWord_SecretBase[] = _("SECRET BASE");
+const u8 gEasyChatWord_BattleTower[] = _("מגדל הקרב");
+const u8 gEasyChatWord_Leaders[] = _("מנהיגים");
+const u8 gEasyChatWord_BattleRoom[] = _("חדר קרב");
+const u8 gEasyChatWord_Hidden[] = _("נסתר");
+const u8 gEasyChatWord_SecretBase[] = _("בסיס סודי");
 const u8 gEasyChatWord_Blend[] = _("BLEND");
 const u8 gEasyChatWord_POKEBLOCK[] = _("{POKEBLOCK}");
-const u8 gEasyChatWord_Master[] = _("MASTER");
+const u8 gEasyChatWord_Master[] = _("מאסטר");
 const u8 gEasyChatWord_Rank[] = _("RANK");
-const u8 gEasyChatWord_Ribbon[] = _("RIBBON");
+const u8 gEasyChatWord_Ribbon[] = _("סרט");
 const u8 gEasyChatWord_Crush[] = _("CRUSH");
-const u8 gEasyChatWord_Direct[] = _("DIRECT");
+const u8 gEasyChatWord_Direct[] = _("ישיר");
 const u8 gEasyChatWord_Tower[] = _("TOWER");
 const u8 gEasyChatWord_Union[] = _("UNION");
 const u8 gEasyChatWord_Room[] = _("ROOM");
-const u8 gEasyChatWord_Wireless[] = _("WIRELESS");
-const u8 gEasyChatWord_Frontier[] = _("FRONTIER");
+const u8 gEasyChatWord_Wireless[] = _("אלחוטי");
+const u8 gEasyChatWord_Frontier[] = _("חזית");
 
 const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     [EC_INDEX(EC_WORD_APPEAL)] =
     {
-        .text = COMPOUND_STRING("APPEAL"),
+        .text = COMPOUND_STRING("הופעה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_APPEAL),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_EVENTS)] =
     {
-        .text = COMPOUND_STRING("EVENTS"),
+        .text = COMPOUND_STRING("אירועים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BATTLE_ROOM),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_STAY_AT_HOME)] =
     {
-        .text = COMPOUND_STRING("STAY-AT-HOME"),
+        .text = COMPOUND_STRING("להישאר בבית"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BATTLE_TOWER),
         .enabled = TRUE,
     },
@@ -55,7 +55,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_CONTEST)] =
     {
-        .text = COMPOUND_STRING("CONTEST"),
+        .text = COMPOUND_STRING("תחרות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BLEND),
         .enabled = TRUE,
     },
@@ -85,13 +85,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_HALL_OF_FAME)] =
     {
-        .text = COMPOUND_STRING("HALL OF FAME"),
+        .text = COMPOUND_STRING("היכל התהילה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_EVOLUTION),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_EVOLUTION)] =
     {
-        .text = COMPOUND_STRING("EVOLUTION"),
+        .text = COMPOUND_STRING("התפתחות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FRONTIER),
         .enabled = TRUE,
     },
@@ -103,31 +103,31 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_BATTLE_TOWER)] =
     {
-        .text = COMPOUND_STRING("BATTLE TOWER"),
+        .text = COMPOUND_STRING("מגדל הקרב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HIDDEN),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_LEADERS)] =
     {
-        .text = COMPOUND_STRING("LEADERS"),
+        .text = COMPOUND_STRING("מנהיגים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HYPER),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BATTLE_ROOM)] =
     {
-        .text = COMPOUND_STRING("BATTLE ROOM"),
+        .text = COMPOUND_STRING("חדר קרב"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_JUDGE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_HIDDEN)] =
     {
-        .text = COMPOUND_STRING("HIDDEN"),
+        .text = COMPOUND_STRING("נסתר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LEADERS),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_SECRET_BASE)] =
     {
-        .text = COMPOUND_STRING("SECRET BASE"),
+        .text = COMPOUND_STRING("בסיס סודי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_MASTER),
         .enabled = TRUE,
     },
@@ -145,7 +145,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_MASTER)] =
     {
-        .text = COMPOUND_STRING("MASTER"),
+        .text = COMPOUND_STRING("מאסטר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RANK),
         .enabled = TRUE,
     },
@@ -157,7 +157,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_RIBBON)] =
     {
-        .text = COMPOUND_STRING("RIBBON"),
+        .text = COMPOUND_STRING("סרט"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ROOM),
         .enabled = TRUE,
     },
@@ -169,7 +169,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_DIRECT)] =
     {
-        .text = COMPOUND_STRING("DIRECT"),
+        .text = COMPOUND_STRING("ישיר"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STAGE),
         .enabled = TRUE,
     },
@@ -193,13 +193,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Events[] = {
     },
     [EC_INDEX(EC_WORD_WIRELESS)] =
     {
-        .text = COMPOUND_STRING("WIRELESS"),
+        .text = COMPOUND_STRING("אלחוטי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_UNION),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_FRONTIER)] =
     {
-        .text = COMPOUND_STRING("FRONTIER"),
+        .text = COMPOUND_STRING("חזית"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WIRELESS),
         .enabled = TRUE,
     },
