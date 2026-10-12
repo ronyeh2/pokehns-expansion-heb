@@ -25,7 +25,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_THINGS)] =
     {
-        .text = COMPOUND_STRING("THINGS"),
+        .text = COMPOUND_STRING("דברים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_BELOW),
         .enabled = TRUE,
     },
@@ -67,25 +67,25 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_INSIDE)] =
     {
-        .text = COMPOUND_STRING("INSIDE"),
+        .text = COMPOUND_STRING("בפנים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FAR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OUTSIDE)] =
     {
-        .text = COMPOUND_STRING("OUTSIDE"),
+        .text = COMPOUND_STRING("בחוץ"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_FRONT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_BESIDE)] =
     {
-        .text = COMPOUND_STRING("BESIDE"),
+        .text = COMPOUND_STRING("ליד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HERE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THIS_IS_IT_EXCL)] =
     {
-        .text = COMPOUND_STRING("THIS IS IT!"),
+        .text = COMPOUND_STRING("זהו זה!"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HIGH),
         .enabled = TRUE,
     },
@@ -109,7 +109,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_THESE_WERE)] =
     {
-        .text = COMPOUND_STRING("THESE WERE"),
+        .text = COMPOUND_STRING("אלה היו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LOWS),
         .enabled = TRUE,
     },
@@ -127,19 +127,19 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_THOSE_ARE)] =
     {
-        .text = COMPOUND_STRING("THOSE ARE"),
+        .text = COMPOUND_STRING("אלו הם"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_OUTSIDE),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THOSE_WERE)] =
     {
-        .text = COMPOUND_STRING("THOSE WERE"),
+        .text = COMPOUND_STRING("אלו היו"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_REAR),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_THAT_S_IT_EXCL)] =
     {
-        .text = COMPOUND_STRING("THAT'S IT!"),
+        .text = COMPOUND_STRING("זהו!"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_RIGHT),
         .enabled = TRUE,
     },
@@ -151,7 +151,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_THAT_WAS)] =
     {
-        .text = COMPOUND_STRING("THAT WAS"),
+        .text = COMPOUND_STRING("זה היה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THAT),
         .enabled = TRUE,
     },
@@ -169,7 +169,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_CHOICE)] =
     {
-        .text = COMPOUND_STRING("CHOICE"),
+        .text = COMPOUND_STRING("בחירה"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_THESE),
         .enabled = TRUE,
     },
@@ -217,7 +217,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_SHALLOW)] =
     {
-        .text = COMPOUND_STRING("SHALLOW"),
+        .text = COMPOUND_STRING("רדוד"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_UM),
         .enabled = TRUE,
     },
@@ -229,13 +229,13 @@ const struct EasyChatWordInfo gEasyChatGroup_Misc[] = {
     },
     [EC_INDEX(EC_WORD_CONFUSED)] =
     {
-        .text = COMPOUND_STRING("CONFUSED"),
+        .text = COMPOUND_STRING("מבולבל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHAT),
         .enabled = TRUE,
     },
     [EC_INDEX(EC_WORD_OPPOSITE)] =
     {
-        .text = COMPOUND_STRING("OPPOSITE"),
+        .text = COMPOUND_STRING("ההפך"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_WHEN),
         .enabled = TRUE,
     },
