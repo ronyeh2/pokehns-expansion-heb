@@ -2873,7 +2873,7 @@ static void PrintTMHMMoveData(enum Item itemId)
     }
 }
 
-static const u8 sText_SortItemsHow[] = _("איך למיין את הפריטים?");
+static const u8 sText_SortItemsHow[] = _("איך למיין פריטים?");
 static const u8 sText_ItemsSorted[] = _("הפריטים מוינו לפי {STR_VAR_1}!");
 static const u8 *const sSortTypeStrings[] =
 {

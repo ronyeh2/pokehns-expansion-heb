@@ -355,7 +355,7 @@ static const u8 *const sChoices_OriginalModern[] = {
 
 static const u8 sText_TopBar_Left[]   = _("{L_BUTTON}הקודם");
 static const u8 sText_TopBar_Right[]  = _("{R_BUTTON}הבא");
-static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}שמירה");
+static const u8 sText_TopBar_Save[]   = _("{R_BUTTON}שמור");
 static const u8 sText_TopBar_Cancel[] = _("{B_BUTTON}ביטול");
 
 // =============================================================================
