@@ -222,11 +222,11 @@ static void ConfirmSell(u8);
 static void CancelSell(u8);
 static void Task_FadeAndCloseBagMenuIfMulch(u8 taskId);
 
-static const u8 sText_Var1CantBeHeldHere[] = _("The {STR_VAR_1} can't be held\nhere.");
-static const u8 sText_DepositHowManyVar1[] = _("Deposit how many\n{STR_VAR_1}?");
-static const u8 sText_DepositedVar2Var1s[] = _("Deposited {STR_VAR_2}\n{STR_VAR_1}.");
-static const u8 sText_NoRoomForItems[] = _("There's no room to\nstore items.");
-static const u8 sText_CantStoreImportantItems[] = _("Important items\ncan't be stored in\nthe PC!");
+static const u8 sText_Var1CantBeHeldHere[] = _("לא ניתן להחזיק את\n{STR_VAR_1} כאן.");
+static const u8 sText_DepositHowManyVar1[] = _("להפקיד כמה\n{STR_VAR_1}?");
+static const u8 sText_DepositedVar2Var1s[] = _("הפקדת {STR_VAR_2}\n{STR_VAR_1}.");
+static const u8 sText_NoRoomForItems[] = _("אין מקום לאחסן\nעוד פריטים.");
+static const u8 sText_CantStoreImportantItems[] = _("אי אפשר לאחסן\nפריטים חשובים\nבמחשב!");
 
 static void Task_LoadBagSortOptions(u8 taskId);
 static void ItemMenu_SortByName(u8 taskId);
@@ -294,7 +294,7 @@ static const struct ListMenuTemplate sItemListMenu =
     .cursorKind = CURSOR_BLACK_ARROW
 };
 
-static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
+static const u8 sText_NothingToSort[] = _("אין מה למיין!");
 static const struct MenuAction sItemMenuActions[] = {
     [ACTION_USE]               = {gMenuText_Use,                {ItemMenu_UseOutOfBattle}},
     [ACTION_TOSS]              = {gMenuText_Toss,               {ItemMenu_Toss}},
@@ -302,20 +302,20 @@ static const struct MenuAction sItemMenuActions[] = {
     [ACTION_GIVE]              = {gMenuText_Give,               {ItemMenu_Give}},
     [ACTION_CANCEL]            = {gText_Cancel2,                {ItemMenu_Cancel}},
     [ACTION_BATTLE_USE]        = {gMenuText_Use,                {ItemMenu_UseInBattle}},
-    [ACTION_CHECK]             = {COMPOUND_STRING("CHECK"),     {ItemMenu_UseOutOfBattle}},
-    [ACTION_WALK]              = {COMPOUND_STRING("WALK"),      {ItemMenu_UseOutOfBattle}},
-    [ACTION_DESELECT]          = {COMPOUND_STRING("DESELECT"),  {ItemMenu_CheckWhichRegister}},
-    [ACTION_CHECK_TAG]         = {COMPOUND_STRING("CHECK TAG"), {ItemMenu_CheckTag}},
+    [ACTION_CHECK]             = {COMPOUND_STRING("בדיקה"),     {ItemMenu_UseOutOfBattle}},
+    [ACTION_WALK]              = {COMPOUND_STRING("הליכה"),      {ItemMenu_UseOutOfBattle}},
+    [ACTION_DESELECT]          = {COMPOUND_STRING("בטל רישום"),  {ItemMenu_CheckWhichRegister}},
+    [ACTION_CHECK_TAG]         = {COMPOUND_STRING("תווית פרי"), {ItemMenu_CheckTag}},
     [ACTION_CONFIRM]           = {gMenuText_Confirm,            {Task_FadeAndCloseBagMenu}},
-    [ACTION_SHOW]              = {COMPOUND_STRING("SHOW"),      {ItemMenu_Show}},
+    [ACTION_SHOW]              = {COMPOUND_STRING("הצגה"),      {ItemMenu_Show}},
     [ACTION_GIVE_FAVOR_LADY]   = {gMenuText_Give2,              {ItemMenu_GiveFavorLady}},
     [ACTION_CONFIRM_QUIZ_LADY] = {gMenuText_Confirm,            {ItemMenu_ConfirmQuizLady}},
-    [ACTION_BY_NAME]           = {COMPOUND_STRING("NAME"),      {ItemMenu_SortByName}},
-    [ACTION_BY_TYPE]           = {COMPOUND_STRING("TYPE"),      {ItemMenu_SortByType}},
-    [ACTION_BY_AMOUNT]         = {COMPOUND_STRING("AMOUNT"),    {ItemMenu_SortByAmount}},
-    [ACTION_BY_INDEX]          = {COMPOUND_STRING("INDEX"),     {ItemMenu_SortByIndex}},
-    [ACTION_REGISTER_TAP]      = {COMPOUND_STRING("TAP"),      {ItemMenu_Register}},
-    [ACTION_REGISTER_HOLD]     = {COMPOUND_STRING("HOLD"),     {ItemMenu_RegisterHold}},
+    [ACTION_BY_NAME]           = {COMPOUND_STRING("שם"),      {ItemMenu_SortByName}},
+    [ACTION_BY_TYPE]           = {COMPOUND_STRING("סוג"),      {ItemMenu_SortByType}},
+    [ACTION_BY_AMOUNT]         = {COMPOUND_STRING("כמות"),    {ItemMenu_SortByAmount}},
+    [ACTION_BY_INDEX]          = {COMPOUND_STRING("מספר"),     {ItemMenu_SortByIndex}},
+    [ACTION_REGISTER_TAP]      = {COMPOUND_STRING("לחיצה"),      {ItemMenu_Register}},
+    [ACTION_REGISTER_HOLD]     = {COMPOUND_STRING("החזקה"),     {ItemMenu_RegisterHold}},
     [ACTION_DUMMY]             = {gText_EmptyString2, {NULL}}
 };
 
@@ -335,7 +335,7 @@ static const u8 sRegisterOptions[] = {
     ACTION_REGISTER_TAP, ACTION_REGISTER_HOLD,
 };
 
-static const u8 sText_RegisterHow[] = _("Register this\nitem by tapping or\nholding SELECT?");
+static const u8 sText_RegisterHow[] = _("לרשום את הפריט\nללחיצה על SELECT\nאו להחזקת SELECT?");
 
 static const u8 sContextMenuItems_BallsPocket[] = {
     ACTION_USE,         ACTION_GIVE,
@@ -1344,7 +1344,7 @@ static void Task_BagMenu_HandleInput(u8 taskId)
             {
                 if ((gBagMenu->numItemStacks[gBagPosition.pocket] - 1) <= 1) //can't sort with 0 or 1 item in bag
                 {
-                    static const u8 sText_NothingToSort[] = _("There's nothing to sort!");
+                    static const u8 sText_NothingToSort[] = _("אין מה למיין!");
                     PlaySE(SE_FAILURE);
                     DisplayItemMessage(taskId, 1, sText_NothingToSort, HandleErrorMessage);
                     break;
@@ -2208,7 +2208,7 @@ static void ItemMenu_Cancel(u8 taskId)
     ReturnToItemList(taskId);
 }
 
-static const u8 sText_NoItemsInBattle[] = _("Battle items are not allowed\nunder current rules!");
+static const u8 sText_NoItemsInBattle[] = _("פריטי קרב אסורים לפי\nהחוקים הנוכחיים!");
 
 static void ItemMenu_UseInBattle(u8 taskId)
 {
@@ -2873,14 +2873,14 @@ static void PrintTMHMMoveData(enum Item itemId)
     }
 }
 
-static const u8 sText_SortItemsHow[] = _("Sort items how?");
-static const u8 sText_ItemsSorted[] = _("Items sorted by {STR_VAR_1}!");
+static const u8 sText_SortItemsHow[] = _("איך למיין את הפריטים?");
+static const u8 sText_ItemsSorted[] = _("הפריטים מוינו לפי {STR_VAR_1}!");
 static const u8 *const sSortTypeStrings[] =
 {
-    [SORT_ALPHABETICALLY] = COMPOUND_STRING("NAME"),
-    [SORT_BY_TYPE] = COMPOUND_STRING("TYPE"),
-    [SORT_BY_AMOUNT] = COMPOUND_STRING("AMOUNT"),
-    [SORT_BY_INDEX] = COMPOUND_STRING("INDEX")
+    [SORT_ALPHABETICALLY] = COMPOUND_STRING("שם"),
+    [SORT_BY_TYPE] = COMPOUND_STRING("סוג"),
+    [SORT_BY_AMOUNT] = COMPOUND_STRING("כמות"),
+    [SORT_BY_INDEX] = COMPOUND_STRING("מספר")
 };
 
 static const u8 sBagMenuSortItems[] =
