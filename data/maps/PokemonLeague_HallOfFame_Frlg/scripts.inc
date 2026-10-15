@@ -65,6 +65,6 @@ PokemonLeague_HallOfFame_Text_OakCongratulations::
 	.string "{PLAYER}!\p"
 	.string "עבדת קשה כדי להפוך\n"
 	.string "לאלוף הליגה החדש.\p"
-	.string "ברכותיי, {PLAYER}! לך ולפוקימונים\n"
-	.string "שלך יש מקום בהיכל התהילה!$"
+	.string "ברכותיי, {PLAYER}! אתה והפוקימונים שלך\n"
+	.string "נכנסתם להיכל התהילה!$"
 
