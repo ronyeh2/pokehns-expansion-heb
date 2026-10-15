@@ -143,13 +143,13 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
                 "מה לעז…"),        //Silver
             COMPOUND_STRING(
                 "אהאהאהא!\n"
-                "איזו השראה!") //Gold
+                "אתה מעורר השראה!") //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
                 "אהאהאהא! לא נעים לך?\n"
                 "כולם מסתכלים!"),                              //Silver
-            COMPOUND_STRING("התואר ”אס הכיפה” שלי אינו רק לראווה!") //Gold
+            COMPOUND_STRING("התואר ”אס הכיפה” שלי לא סתם קישוט!") //Gold
         },
         .battledBit = {1 << 2, 1 << 3},
         .streakAppearances = {4, 9, 5, 0},
@@ -276,12 +276,12 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
                 "עבדת קשה בשביל זה!"), //Silver
             COMPOUND_STRING(
                 "זהו זה! הצלחת!\n"
-                "המשכת להתאמץ בשביל זה!")    //Gold
+                "לא הפסקת להתאמץ בשביל זה!")    //Gold
         },
         .wonTexts = {
             COMPOUND_STRING(
                 "היי! מה קרה לך!\n"
-                "בוא נראה קצת מאמץ! קום!"),       //Silver
+                "תראה לי קצת מאמץ! קום!"),       //Silver
             COMPOUND_STRING(
                 "היי! אל תוותר עכשיו!\n"
                 "קום! אל תפסיק להאמין בעצמך!") //Gold
