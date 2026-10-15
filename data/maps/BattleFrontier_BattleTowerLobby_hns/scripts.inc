@@ -1171,8 +1171,8 @@ BattleFrontier_BattleTowerLobby_Text_TakeSinglesChallenge_hns:
 BattleFrontier_BattleTowerLobby_Text_ExplainSinglesChallenge_hns:
 	.string "חדרי קרב יחיד במגדל הקרב מיועדים\n"
 	.string "לקרבות יחיד עם שלושה פוקימונים.\p"
-	.string "במגדל הקרב יש חדרי קרב יחיד\n"
-	.string "רבים לקרבות בין צוותים.\p"
+	.string "במגדל הקרב יש חדרי קרב יחיד רבים\n"
+	.string "לקרבות בין צוותים.\p"
 	.string "בכל אחד מחדרי קרב יחיד\n"
 	.string "מחכים לאתגר שלך שבעה מאמנים.\p"
 	.string "אם תצליח לנצח את כל השבעה,\n"
@@ -1200,8 +1200,8 @@ BattleFrontier_BattleTowerLobby_Text_TakeDoublesChallenge_hns:
 BattleFrontier_BattleTowerLobby_Text_ExplainDoublesChallenge_hns:
 	.string "חדרי קרב כפול במגדל הקרב מיועדים\n"
 	.string "לקרבות כפולים עם ארבעה פוקימונים.\p"
-	.string "במגדל הקרב יש חדרי קרב כפול\n"
-	.string "רבים לקרבות בין צוותים.\p"
+	.string "במגדל הקרב יש חדרי קרב כפול רבים\n"
+	.string "לקרבות בין צוותים.\p"
 	.string "בכל אחד מחדרי קרב כפול\n"
 	.string "מחכים לאתגר שלך שבעה מאמנים.\p"
 	.string "אם תצליח לנצח את כל השבעה,\n"
