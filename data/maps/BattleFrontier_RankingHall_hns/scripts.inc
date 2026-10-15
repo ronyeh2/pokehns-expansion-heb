@@ -103,7 +103,7 @@ BattleFrontier_RankingHall_EventScript_Boy_hns::
 BattleFrontier_RankingHall_Text_ExplainRankingHall_hns:
 	.string "זהו היכל הדירוג.\p"
 	.string "כאן אנחנו מנציחים את המאמנים האגדיים\n"
-	.string "שקבעו שיאים גדולים באירועי חזית הקרב.$"
+	.string "שקבעו שיאים מרשימים באירועי חזית הקרב.$"
 
 BattleFrontier_RankingHall_Text_DomePikeFactoryRecords_hns:
 	.string "שיאי כיפת הקרב, שביל הקרב\n"
