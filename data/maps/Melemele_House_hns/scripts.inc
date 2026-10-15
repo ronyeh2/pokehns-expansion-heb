@@ -166,7 +166,7 @@ Alola_Melemele_Pokecenter_Jessica_Text_DeclineTrade:
 	.string "לא רוצה להחליף? אוי, חבל…$"
 
 Alola_Melemele_Pokecenter_Jessica_Text_TradeCompleted:
-	.string "היי, מה שלום TORY, שהיה פעם שלי?$"
+	.string "היי, מה שלום TORY שלי לשעבר?$"
 
 Alola_Melemele_Pokecenter_Map_Text_0:
 	.string "{PLAYER} התבונן מקרוב\n"
