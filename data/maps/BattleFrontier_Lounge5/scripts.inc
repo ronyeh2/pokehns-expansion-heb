@@ -77,8 +77,8 @@ BattleFrontier_Lounge5_Text_NatureGirlDefenseHighAttackLow::
 BattleFrontier_Lounge5_Text_NatureGirlDefenseHighDefenseLow::
 	.string "הממ…\p"
 	.string "הוא אומר שהוא שומר על עצמו!\p"
-	.string "הוא אומר שהוא דואג לעצמו, בין\n"
-	.string "אם כואב לו הרבה ובין אם לא!$"
+	.string "הוא אומר שהוא דואג לעצמו\n"
+	.string "בין אם כואב לו הרבה ובין אם לא!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlDefenseHighSupportLow::
 	.string "הממ…\p"
@@ -101,8 +101,8 @@ BattleFrontier_Lounge5_Text_NatureGirlSupportHighDefenseLow::
 BattleFrontier_Lounge5_Text_NatureGirlSupportHighSupportLow::
 	.string "הממ…\p"
 	.string "הוא אומר שהוא אוהב להיות ערמומי!\p"
-	.string "הוא אומר שהוא ערמומי גם\n"
-	.string "כשממש כואב לו!$"
+	.string "הוא אומר שהוא אוהב להיות ערמומי\n"
+	.string "גם כשממש כואב לו!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlEgg::
 	.string "That's silly! An EGG is asleep!\n"
