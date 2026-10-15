@@ -297,14 +297,14 @@ TrainerHill_Entrance_hns_Text_Money:
 
 TrainerHill_Entrance_hns_Text_StillGettingReady:
 	.string "זוהי גבעת המאמנים, שבה אפשר ליהנות\n"
-	.string "מקרבות זוגיים מול מאמנים רבים.\p"
+	.string "מקרבות צוות מול מאמנים רבים.\p"
 	.string "לצערנו, אנחנו עדיין בהכנות.\n"
 	.string "בבקשה לחזור מאוחר יותר!$"
 
 TrainerHill_Entrance_hns_Text_WelcomeToTrainerHill:
 	.string "ברוכים הבאים!\p"
 	.string "זוהי גבעת המאמנים, שבה אפשר ליהנות\n"
-	.string "מקרבות זוגיים מול מאמנים רבים!$"
+	.string "מקרבות צוות מול מאמנים רבים!$"
 
 TrainerHill_Entrance_hns_Text_SaveGameBeforeEnter:
 	.string "זה הביקור הראשון שלך כאן?\p"
@@ -314,7 +314,7 @@ TrainerHill_Entrance_hns_Text_SaveGameBeforeEnter:
 TrainerHill_Entrance_hns_Text_TrainersUpToFloorX:
 	.string "בואו נראה…\n"
 	.string "המאמנים שנמצאים כאן כרגע…\p"
-	.string "מגיעים עד קומה מספר {STR_VAR_1}.$"
+	.string "פרוסים עד קומה מספר {STR_VAR_1}.$"
 
 TrainerHill_Entrance_hns_Text_TrainersInEveryRoom:
 	.string "בואו נראה…\n"
@@ -323,7 +323,7 @@ TrainerHill_Entrance_hns_Text_TrainersInEveryRoom:
 	.string "בכל החדרים.$"
 
 TrainerHill_Entrance_hns_Text_LikeToChallengeTrainers:
-	.string "רוצה להתמודד מול\n"
+	.string "תרצה להתמודד מול\n"
 	.string "המאמנים שמחכים?$"
 
 TrainerHill_Entrance_hns_Text_TimeProgessGetSetGo:
@@ -346,9 +346,9 @@ TrainerHill_Entrance_hns_Text_HopeYouGiveItYourBest:
 	.string "אני מקווה שתיתן את המיטב.$"
 
 TrainerHill_Entrance_hns_Text_MovedReceptionHereForSwitch:
-	.string "כשהמאמנים מתחלפים במקומות,\n"
-	.string "התנועה יכולה להיות סוערת.\p"
-	.string "כדי להימנע מהדוחק, העברנו\n"
+	.string "כשהמאמנים מחליפים מקומות,\n"
+	.string "עלולה להיווצר המולה גדולה.\p"
+	.string "כדי למנוע דוחק, העברנו\n"
 	.string "לכאן את דלפק הקבלה.\p"
 	.string "אני מתנצלת על אי הנוחות.$"
 
@@ -360,10 +360,10 @@ TrainerHill_Entrance_hns_Text_ExplainTrainerHill:
 	.string "אירוע שנקרא ”מרוץ נגד הזמן”.\p"
 	.string "זה מרוץ שמודד כמה זמן לוקח להגיע\n"
 	.string "מהדלפק הזה אל הבעלים שלנו על הגג.\p"
-	.string "הזמנים המהירים ביותר מוצגים בלוח\n"
-	.string "הזמנים. כדאי להתחרות מול החברים!\p"
-	.string "בקרבות מול מאמנים בדרך לא מוענקות\n"
-	.string "נקודות נסיון וגם לא כסף.$"
+	.string "הזמנים המהירים ביותר מוצגים\n"
+	.string "בלוח השיאים. כדאי להתחרות בחברים!\p"
+	.string "בקרבות מול מאמנים לאורך הדרך\n"
+	.string "לא מוענקות נקודות נסיון וגם לא כסף.$"
 
 TrainerHill_Entrance_hns_Text_WhatSortOfTrainersAreAhead:
 	.string "מי יודע אילו שילובים של מאמנים\n"
@@ -373,14 +373,13 @@ TrainerHill_Entrance_hns_Text_WhatSortOfTrainersAreAhead:
 
 TrainerHill_Entrance_hns_Text_CantWaitToTestTheWaters:
 	.string "שמעתי שמאמנים קשוחים מגיעים\n"
-	.string "לגבעת המאמנים מכל מקום.\p"
+	.string "לגבעת המאמנים מכל עבר.\p"
 	.string "אני כבר מת לנסות את כוחי!\p"
-	.string "אסלק כל מי שיעמוד\n"
-	.string "בדרכי!$"
+	.string "אסלק כל מי שיעמוד בדרכי!$"
 
 TrainerHill_Entrance_hns_Text_FriendsTryingToReachTimeBoardTop:
-	.string "רואה את לוח הזמנים שם?\p"
-	.string "אני והחברים שלי מנסים לראות מי\n"
+	.string "רואה את לוח השיאים שם?\p"
+	.string "אני והחברים שלי מתחרים מי\n"
 	.string "יגיע לפסגה בזמן הקצר ביותר.$"
 
 TrainerHill_Entrance_hns_Text_DoYouKnowWhenTheyOpen:
