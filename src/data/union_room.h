@@ -240,8 +240,8 @@ static const u8 *const sInvitationTexts[] = {
 
 ALIGNED(4) static const u8 sText_JoinChatMale[] = _("היי! אנחנו באמצע צ'אט עכשיו.\nרוצה להצטרף אלינו?");
 ALIGNED(4) static const u8 sText_PlayerJoinChatMale[] = _("{STR_VAR_1}: היי, {PLAYER}!\nאנחנו באמצע צ'אט עכשיו.\lרוצה להצטרף אלינו?");
-ALIGNED(4) static const u8 sText_JoinChatFemale[] = _("אה, שלום! אנחנו בצ'אט עכשיו.\nבא לך להצטרף אלינו?");
-ALIGNED(4) static const u8 sText_PlayerJoinChatFemale[] = _("{STR_VAR_1}: אה, שלום, {PLAYER}!\nאנחנו בצ'אט עכשיו.\lבא לך להצטרף אלינו?");
+ALIGNED(4) static const u8 sText_JoinChatFemale[] = _("אה, שלום! אנחנו בצ'אט עכשיו.\nתרצה להצטרף אלינו?");
+ALIGNED(4) static const u8 sText_PlayerJoinChatFemale[] = _("{STR_VAR_1}: אה, שלום, {PLAYER}!\nאנחנו בצ'אט עכשיו.\lתרצה להצטרף אלינו?");
 
 static const u8 *const sJoinChatTexts[][GENDER_COUNT] = {
     {
@@ -257,8 +257,8 @@ ALIGNED(4) static const u8 sText_TrainerAppearsBusy[] = _("……\nנראה שה
 ALIGNED(4) static const u8 sText_WaitForBattleMale[] = _("קרב, אה?\nבסדר, אני רק צריך קצת זמן.");
 ALIGNED(4) static const u8 sText_WaitForChatMale[] = _("רוצה לפטפט, אה?\nבטח, רק רגע.");
 ALIGNED(4) static const u8 sText_ShowTrainerCardMale[] = _("בטח! בתור ”ברכות”,\nהנה כרטיס המאמן שלי.");
-ALIGNED(4) static const u8 sText_WaitForBattleFemale[] = _("קרב? בטח, אבל אני צריכה\nזמן להתכונן.");
-ALIGNED(4) static const u8 sText_WaitForChatFemale[] = _("רצית לפטפט?\nבסדר, אבל רק רגע, בבקשה.");
+ALIGNED(4) static const u8 sText_WaitForBattleFemale[] = _("קרב? כמובן, אבל אני צריכה\nזמן להתכונן.");
+ALIGNED(4) static const u8 sText_WaitForChatFemale[] = _("רצית לפטפט?\nבסדר, אבל חכה רגע, בבקשה.");
 ALIGNED(4) static const u8 sText_ShowTrainerCardFemale[] = _("כדי להציג את עצמי, אראה לך\nאת כרטיס המאמן שלי.");
 
 static const u8 *const sText_WaitOrShowCardTexts[GENDER_COUNT][4] = {
@@ -309,7 +309,7 @@ static const u8 *const sStartActivityTexts[][GENDER_COUNT][3] = {
 };
 
 ALIGNED(4) static const u8 sText_BattleDeclinedMale[] = _("סליחה! נראה שהפוקימונים שלי\nלא מרגישים טוב כרגע.\lנילחם בפעם אחרת.\p");
-ALIGNED(4) static const u8 sText_BattleDeclinedFemale[] = _("אני ממש מצטערת, אבל הפוקימונים\nשלי לא מרגישים טוב…\pנילחם בפעם אחרת.\p");
+ALIGNED(4) static const u8 sText_BattleDeclinedFemale[] = _("אני ממש מצטערת, אבל\nהפוקימונים שלי לא מרגישים טוב…\pנילחם בפעם אחרת.\p");
 
 static const u8 *const sBattleDeclinedTexts[GENDER_COUNT] = {
     sText_BattleDeclinedMale,
@@ -324,8 +324,8 @@ static const u8 *const sShowTrainerCardDeclinedTexts[GENDER_COUNT] = {
     sText_ShowTrainerCardDeclinedFemale
 };
 
-ALIGNED(4) static const u8 sText_IfYouWantToDoSomethingMale[] = _("אם בא לך לעשות משהו\nאיתי, רק תקרא לי!\p");
-ALIGNED(4) static const u8 sText_IfYouWantToDoSomethingFemale[] = _("אם בא לך לעשות משהו\nאיתי, אל תתבייש.\p");
+ALIGNED(4) static const u8 sText_IfYouWantToDoSomethingMale[] = _("אם בא לך לעשות איתי משהו,\nרק תקרא לי!\p");
+ALIGNED(4) static const u8 sText_IfYouWantToDoSomethingFemale[] = _("אם תרצה לעשות איתי משהו,\nאל תתבייש.\p");
 
 static const u8 *const sIfYouWantToDoSomethingTexts[GENDER_COUNT] = {
     sText_IfYouWantToDoSomethingMale,
@@ -336,8 +336,8 @@ ALIGNED(4) static const u8 sText_TrainerBattleBusy[] = _("אופס! סליחה, 
 ALIGNED(4) static const u8 sText_NeedTwoMonsOfLevel30OrLower1[] = _("כדי להילחם, צריך שני פוקימונים\nברמה 30 ומטה.\p");
 ALIGNED(4) static const u8 sText_NeedTwoMonsOfLevel30OrLower2[] = _("לקרב צריך שני פוקימונים\nברמה 30 ומטה.\p");
 
-ALIGNED(4) static const u8 sText_DeclineChatMale[] = _("אה, טוב.\nתקפוץ אליי מתי שבא לך, טוב?\p");
-ALIGNED(4) static const u8 stext_DeclineChatFemale[] = _("אה…\nתבוא מתי שתרצה.\p");
+ALIGNED(4) static const u8 sText_DeclineChatMale[] = _("אה, בסדר.\nתקפוץ אליי מתי שבא לך, טוב?\p");
+ALIGNED(4) static const u8 stext_DeclineChatFemale[] = _("אה…\nאתה מוזמן לבוא מתי שתרצה.\p");
 
 // Response from partner when player declines chat
 static const u8 *const sDeclineChatTexts[GENDER_COUNT] = {
@@ -346,7 +346,7 @@ static const u8 *const sDeclineChatTexts[GENDER_COUNT] = {
 };
 
 ALIGNED(4) static const u8 sText_ChatDeclinedMale[] = _("אוי, סליחה!\nאני פשוט לא יכול ממש עכשיו.\lנפטפט בפעם אחרת.\p");
-ALIGNED(4) static const u8 sText_ChatDeclinedFemale[] = _("אוי, אני מצטערת.\nיש לי יותר מדי מה לעשות עכשיו.\lנפטפט בהזדמנות אחרת.\p");
+ALIGNED(4) static const u8 sText_ChatDeclinedFemale[] = _("אוי, אני מצטערת.\nיש לי יותר מדי דברים לעשות עכשיו.\lנפטפט בהזדמנות אחרת.\p");
 
 // Response from partner when they decline chat
 static const u8 *const sChatDeclinedTexts[GENDER_COUNT] = {
@@ -402,9 +402,9 @@ static const u8 *const sChatReactionTexts[GENDER_COUNT][4] = {
     }
 };
 
-ALIGNED(4) static const u8 sText_ShowedTrainerCardMale1[] = _("אני רק מראה את כרטיס המאמן\nשלי כדרך להגיד שלום.\p");
+ALIGNED(4) static const u8 sText_ShowedTrainerCardMale1[] = _("אני רק מראה את כרטיס המאמן שלי\nכדרך להגיד שלום.\p");
 ALIGNED(4) static const u8 sText_ShowedTrainerCardMale2[] = _("מקווה שנכיר טוב יותר!\p");
-ALIGNED(4) static const u8 sText_ShowedTrainerCardFemale1[] = _("אנחנו מראים זה לזה את כרטיסי\nהמאמן שלנו כדי להכיר.\p");
+ALIGNED(4) static const u8 sText_ShowedTrainerCardFemale1[] = _("אנחנו מראים זה לזה את\nכרטיסי המאמן שלנו כדי להכיר.\p");
 ALIGNED(4) static const u8 sText_ShowedTrainerCardFemale2[] = _("נעים להכיר.\nתשמור על קשר!\p");
 
 static const u8 *const sTrainerCardReactionTexts[GENDER_COUNT][2] = {
