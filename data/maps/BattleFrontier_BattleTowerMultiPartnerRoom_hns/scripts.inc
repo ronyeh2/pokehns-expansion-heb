@@ -277,8 +277,8 @@ BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner8_hns::
 	end
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner_hns:
-	.string "יש למצוא שותף מבין\n"
-	.string "המאמנים שנאספו כאן.$"
+	.string "נא למצוא שותף מבין\n"
+	.string "המאמנים שהתאספו כאן.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_QuitLookingForPartner_hns:
 	.string "{PLAYER}, עדיין לא מצאת שותף\n"
@@ -287,12 +287,12 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_QuitLookingForPartner_hns:
 	.string "ולחזור לדלפק הקבלה?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner_hns2_hns:
-	.string "אם כך, יש למצוא שותף מבין\n"
-	.string "המאמנים שנאספו כאן.$"
+	.string "אם כך, נא למצוא שותף מבין\n"
+	.string "המאמנים שהתאספו כאן.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ThankYouForChoosingPartner_hns::
 	.string "תודה שבחרת שותף.\p"
-	.string "עכשיו אוביל אותך\n"
+	.string "כעת אוביל אותך\n"
 	.string "לחדר קרב מרובה.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Intro_hns::
