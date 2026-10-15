@@ -144,7 +144,7 @@ BattleFrontier_Lounge2_Text_BattleTowerIsHottest::
 
 BattleFrontier_Lounge2_Text_SalonMaidenIsThere::
 	.string "בטוח שלא ידעת את זה!\p"
-	.string "אחת המאמנים המובילים שסקוט\n"
+	.string "אחת מהמאמנים המובילים שסקוט\n"
 	.string "מכנה ”מוחות החזית” נמצאת שם.\p"
 	.string "מאמנת מסתורית שנקראת עלמת הסלון\n"
 	.string "היא זו שמנהלת את המקום.$"
@@ -199,7 +199,7 @@ BattleFrontier_Lounge2_Text_FactoryHeadIsThere::
 
 BattleFrontier_Lounge2_Text_FactoryHeadSilverMons::
 	.string "כבר התמודדת מול ראש המפעל?\p"
-	.string "רגע, אני חושב… כשהוא יוצא לקרב,\n"
+	.string "רגע, תן לי לחשוב… כשהוא יוצא לקרב,\n"
 	.string "הוא פשוט מקבל שלושה פוקימונים שכורים.\p"
 	.string "הוא נלחם בערך באותם תנאים\n"
 	.string "כמוך.$"
@@ -209,12 +209,12 @@ BattleFrontier_Lounge2_Text_FactoryHeadGoldMons::
 	.string "כשהוא רציני?\p"
 	.string "גם כשהוא יוצא לקרב ברצינות,\n"
 	.string "הוא מקבל שלושה פוקימונים שכורים.\p"
-	.string "הוא נלחם כמעט באותם תנאים\n"
-	.string "בדיוק כמוך.$"
+	.string "הוא נלחם כמעט בדיוק\n"
+	.string "באותם תנאים כמוך.$"
 
 BattleFrontier_Lounge2_Text_PikeQueenIsThere::
 	.string "בטוח שלא ידעת את זה!\p"
-	.string "אחת המאמנים המובילים שסקוט\n"
+	.string "אחת מהמאמנים המובילים שסקוט\n"
 	.string "מכנה ”מוחות החזית” נמצאת שם.\p"
 	.string "מאמנת מפחידה שנקראת מלכת הרומח\n"
 	.string "היא זו שמנהלת את המקום.$"
@@ -238,15 +238,15 @@ BattleFrontier_Lounge2_Text_PikeQueenGoldMons::
 
 BattleFrontier_Lounge2_Text_ArenaTycoonIsThere::
 	.string "בטוח שלא ידעת את זה!\p"
-	.string "אחת המאמנים המובילים שסקוט\n"
+	.string "אחת מהמאמנים המובילים שסקוט\n"
 	.string "מכנה ”מוחות החזית” נמצאת שם.\p"
 	.string "מאמנת חמודה שנקראת גבירת הזירה\n"
 	.string "היא זו שמנהלת את המקום.$"
 
 BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons::
 	.string "כבר התמודדת מול גבירת הזירה?\p"
-	.string "כשהיא מעריכה את היכולת של היריב,\n"
-	.string "היא משתמשת כביכול בפוקימונים האלה:\p"
+	.string "כשהיא בודקת מה היריב שווה,\n"
+	.string "שמעתי שהיא משתמשת בפוקימונים האלה:\p"
 	.string "פוקימון קרן יחידה מסוג חרק וקרב,\n"
 	.string "פוקימון אור ירח מסוג אפל,\p"
 	.string "ופוקימון שלכת מסוג חרק ורוח.$"
@@ -255,7 +255,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
 	.string "כבר התמודדת מול גבירת הזירה\n"
 	.string "כשהיא רצינית?\p"
 	.string "כשהיא נלחמת ברצינות גמורה,\n"
-	.string "היא משתמשת כביכול בפוקימונים האלה:\p"
+	.string "שמעתי שהיא משתמשת בפוקימונים האלה:\p"
 	.string "פוקימון אור ירח מסוג אפל,\n"
 	.string "פוקימון צל מסוג רוח ורעל,\p"
 	.string "ופוקימון פטריה מסוג עשב וקרב.$"
@@ -264,7 +264,7 @@ BattleFrontier_Lounge2_Text_PalaceMavenIsThere::
 	.string "בטוח שלא ידעת את זה!\p"
 	.string "אחד המאמנים המובילים שסקוט\n"
 	.string "מכנה ”מוחות החזית” נמצא שם.\p"
-	.string "מאמן מרושע שנקרא אשף הארמון\n"
+	.string "מאמן מאיים שנקרא אשף הארמון\n"
 	.string "הוא זה שמנהל את המקום.$"
 
 BattleFrontier_Lounge2_Text_PalaceMavenSilverMons::
@@ -302,7 +302,7 @@ BattleFrontier_Lounge2_Text_PyramidKingSilverMons::
 BattleFrontier_Lounge2_Text_PyramidKingGoldMons::
 	.string "כבר התמודדת מול מלך הפירמידה\n"
 	.string "כשהוא רציני?\p"
-	.string "כשהוא מלא בכוח לוהט, כנראה\n"
+	.string "כשהוא בוער מרוב כוח, כנראה\n"
 	.string "שהוא משתמש בפוקימונים האלה:\p"
 	.string "פוקימון קפוא מסוג קרח ותעופה,\n"
 	.string "פוקימון חשמלי מסוג חשמל ותעופה,\p"
@@ -313,7 +313,7 @@ BattleFrontier_Lounge2_Text_DoubleBattleAdvice1::
 	.string "אפשר להשתתף בקרבות כפולים.\p"
 	.string "אבל חדרי קרב כפול במגדל הקרב\n"
 	.string "הם, כאילו, הבסיס!\p"
-	.string "שם כדאי ללמוד איך משחקים קרבות\n"
+	.string "שם כדאי ללמוד איך מתנהלים קרבות\n"
 	.string "כפולים כאן בחזית הקרב.$"
 
 BattleFrontier_Lounge2_Text_DoubleBattleAdvice2::
@@ -322,9 +322,9 @@ BattleFrontier_Lounge2_Text_DoubleBattleAdvice2::
 	.string "במיוחד לקרבות כפולים.$"
 
 BattleFrontier_Lounge2_Text_DoubleBattleAdvice3::
-	.string "ברגע שתרגיש בטוח ונוח בקרבות כפולים\n"
-	.string "כאן, כדאי לחשוב על אתגר במקומות\p"
-	.string "אחרים שמציעים קרבות כפולים.$"
+	.string "ברגע שתרגיש בטוח ובנוח בקרבות\n"
+	.string "הכפולים כאן, כדאי לחשוב על אתגר\p"
+	.string "במקומות אחרים שמציעים קרבות כפולים.$"
 
 BattleFrontier_Lounge2_Text_MultiBattleAdvice::
 	.string "כל מיני מאמנים מתאספים\n"
