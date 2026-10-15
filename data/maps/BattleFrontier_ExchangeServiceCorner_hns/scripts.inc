@@ -87,7 +87,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_Girl_hns::
 	end
 
 BattleFrontier_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize_hns:
-	.string "שלום, כאן עמדת שירות\n"
+	.string "שלום, כאן פינת שירות\n"
 	.string "ההמרה.\p"
 	.string "אנחנו ממירים את נקודות הקרב\n"
 	.string "שצברת בפרסים נהדרים.\p"
@@ -114,7 +114,7 @@ BattleFrontier_ExchangeServiceCorner_Text_ItemsWillGetMonTougher_hns:
 
 BattleFrontier_ExchangeServiceCorner_Text_GoGetYourOwnDoll_hns:
 	.string "האא?\n"
-	.string "על מה אתה בוהה?\p"
+	.string "מה אתה בוהה?\p"
 	.string "אני לא אוהב שאתה נועץ ככה עיניים\n"
 	.string "בבובת הפרווה שלי.\p"
 	.string "אם אתה רוצה כזאת, לך תשיג לעצמך!\n"
