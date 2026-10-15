@@ -546,7 +546,7 @@ Alola_Melemele_SamsonOakVillaIntro_Trigger_Text_0:
 Alola_Melemele_SamsonOakVillaIntro_Trigger_Text_1:
 	.string "אני שמח שהגעת!\n"
 	.string "ברוכים הבאים לווילה שלי!\p"
-	.string "אני גר כאן בזמן שאני חוקר את הדמיון\n"
+	.string "אני שוהה כאן בזמן שאני חוקר את הדמיון\n"
 	.string "בין איי אלולה לאזור אלולה.\p"
 	.string "אני מתעניין במיוחד\n"
 	.string "בתופעה של ”זנים אזוריים”.$"
@@ -577,8 +577,8 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_1:
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_2:
 	.string "תודה על העזרה במחקר שלי,\n"
 	.string "{PLAYER}!\p"
-	.string "בזכותך, ההבנה שלנו לגבי איי\n"
-	.string "אלולה השתפרה מאוד!\p"
+	.string "בזכותך אנחנו מבינים את איי אלולה\n"
+	.string "הרבה יותר טוב!\p"
 	.string "אני מקווה שתמשיך לחקור את האיים\n"
 	.string "ולגלות את כל הסודות שהם מסתירים!$"
 
@@ -601,8 +601,8 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_5:
 Alola_Melemele_SamsonOakVilla_Dialogue_Text_6:
 	.string "וואו, {PLAYER}!\n"
 	.string "אתה באמת מאמן חזק!\p"
-	.string "הוכחת שאתה ראוי לסוד\n"
-	.string "ששמרתי לגבי האיים האלה…\p"
+	.string "הוכחת שאתה ראוי לשמוע סוד\n"
+	.string "ששמרתי לעצמי על האיים האלה…\p"
 	.string "אני לא היחיד ששם לב לדמיון המדהים\n"
 	.string "בין איי אלולה לאזור אלולה…\p"
 	.string "נראה שהטאפו, האלים השומרים,\n"
@@ -673,7 +673,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_20:
 	.string "תוכל לחקור בשבילי את פוקימוני הטוטם,\n"
 	.string "שלפי השמועה שומרים על טוטם בכל אי?\p"
 	.string "אבל זהירות! אומרים שפוקימוני הטוטם\n"
-	.string "חזקים בהרבה מעמיתיהם הרגילים…\p"
+	.string "חזקים בהרבה מבני מינם הרגילים…\p"
 	.string "אי אפשר לדעת מי עשוי לצפות בך\n"
 	.string "כדי לבדוק אם אתה יריב ראוי!$"
 
@@ -711,7 +711,7 @@ Alola_Melemele_SamsonOakVilla_Dialogue_Text_25:
 	.string "תוכל לחקור בשבילי את פוקימוני הטוטם,\n"
 	.string "שלפי השמועה שומרים על טוטם בכל אי?\p"
 	.string "אבל זהירות! אומרים שפוקימוני הטוטם\n"
-	.string "חזקים בהרבה מעמיתיהם הרגילים…\p"
+	.string "חזקים בהרבה מבני מינם הרגילים…\p"
 	.string "אי אפשר לדעת מי עשוי לצפות בך\n"
 	.string "כדי לבדוק אם אתה יריב ראוי!$"
 
