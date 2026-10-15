@@ -543,8 +543,8 @@ Alola_Akala_Totem_sign_Text_4:
 	.string "ביטול$"
 
 Alola_Akala_Totem_sign_Text_5:
-	.string "כאן ניצב טוטם מוזר,\n"
-	.string "כוח נובע ממנו…$"
+	.string "כאן עומד טוטם מוזר,\n"
+	.string "ועוצמה נובעת ממנו…$"
 
 Alola_Akala_BattleVsTapuLele_Text_0:
 	.string "לה-ללה!$"
@@ -580,7 +580,7 @@ Alola_Akala_TrainerBattleCamper_Text_1:
 	.string "זה לא יעזור לי להוכיח את עצמי.$"
 
 Alola_Akala_TrainerBattleCamper_Text_2:
-	.string "יש טוטם מוזר קצת יותר קדימה, אבל\n"
+	.string "יש טוטם מוזר בהמשך הדרך, אבל\n"
 	.string "לא ראיתי שום פוקימון טוטם.$"
 
 Alola_Akala_TrainerBattleSwimmerLand_Text_0:
@@ -603,7 +603,7 @@ Alola_Akala_TrainerBattleSwimmerWater_Text_1:
 
 Alola_Akala_TrainerBattleSwimmerWater_Text_2:
 	.string "באי אולאולה החופים הכי טובים!\n"
-	.string "ומי שאומר אחרת, טועה!$"
+	.string "אל תקשיב למי שאומר אחרת!$"
 
 Alola_Akala_TrainerBattleSwimmerWaterM_Text_0:
 	.string "הא!\n"
@@ -614,9 +614,8 @@ Alola_Akala_TrainerBattleSwimmerWaterM_Text_1:
 	.string "אולי היה לי כוח לנצח…$"
 
 Alola_Akala_TrainerBattleSwimmerWaterM_Text_2:
-	.string "הזרם כאן חזק! פוקימון צריך להיות\n"
-	.string "ממש עוצמתי כדי לנדוד כל הדרך לאיים!$"
+	.string "הזרם כאן חזק! רק פוקימון ממש עוצמתי\n"
+	.string "יכול לנדוד כל הדרך עד לאיים!$"
 
 Alola_Akala_Bench_Heal_Text_0:
-	.string "רוצה לנוח קצת\n"
-	.string "על הספסל הזה?$"
+	.string "לנוח קצת על הספסל הזה?$"
