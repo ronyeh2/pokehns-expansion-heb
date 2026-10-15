@@ -252,7 +252,7 @@ BattleFrontier_BattlePyramidTop_Text_ExplorationsAreGrandestAdventure_hns:
 
 BattleFrontier_BattlePyramidTop_Text_ImPyramidKingBrandon_hns:
 	.string "אה, כן, החיים האלה באמת נהדרים!\n"
-	.string "נהדרים, בהחלט! אה?\p"
+	.string "נהדרים, בהחלט! הא?\p"
 	.string "אני ברנדון!\p"
 	.string "אני מלך הפירמידה, כלומר\n"
 	.string "אני האחראי כאן.\p"
@@ -292,7 +292,7 @@ BattleFrontier_BattlePyramidTop_Text_BrandonYouveReturned_hns:
 	.string "הסכנה!\p"
 	.string "הייאוש!\p"
 	.string "חוזרים אותם ימים של הרפתקאות\n"
-	.string "שמתריסות במוות ומלאות חיים…$"
+	.string "שמתריסות מול המוות ומלאות חיים…$"
 
 BattleFrontier_BattlePyramidTop_Text_MyCourageIsOffMeter_hns:
 	.string "ובכן!\p"
