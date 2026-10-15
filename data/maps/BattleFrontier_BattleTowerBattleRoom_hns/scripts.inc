@@ -492,7 +492,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved_hns::
 BattleFrontier_BattleTowerBattleRoom_Text_SalonMaidenOnHerWay_hns:
 	.string "סליחה, אבל…\p"
 	.string "המנהיגה שלנו, עלמת הסלון,\n"
-	.string "בדרך לכאן כי היא מקווה להילחם בך.\p"
+	.string "בדרך לכאן בתקווה להילחם בך.\p"
 	.string "היא אמורה להגיע ממש בקרוב.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReadyForSalonMaiden_hns:
