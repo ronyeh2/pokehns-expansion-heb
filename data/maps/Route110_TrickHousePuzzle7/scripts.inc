@@ -317,7 +317,7 @@ Route110_TrickHousePuzzle7_EventScript_Everett::
 Route110_TrickHousePuzzle7_Text_WroteSecretCodeLockOpened::
 	.string "{PLAYER} כתב את הקוד הסודי\n"
 	.string "על הדלת.\p"
-	.string "”אמן התעלולים חמוד כמו דובון.”\n"
+	.string "”בא לחבק את אמן התעלולים.”\n"
 	.string "… … … … … … … …\p"
 	.string "המנעול נפתח בנקישה!$"
 
