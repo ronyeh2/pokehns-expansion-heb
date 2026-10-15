@@ -119,7 +119,7 @@ BattleFrontier_Lounge2_Text_FrontierManiacIntro_hns::
 	.string "מטורף החזית.\p"
 	.string "רק מוודא, אבל אתה מאמן,\n"
 	.string "נכון?\p"
-	.string "אשמח לשתף את החדשות הכי לוהטות\n"
+	.string "אשמח לספר לך את החדשות הכי לוהטות\n"
 	.string "שאספתי על חזית הקרב.$"
 
 BattleFrontier_Lounge2_Text_SwingByForTheLatestWord_hns::
@@ -353,15 +353,15 @@ BattleFrontier_Lounge2_Text_LinkMultiBattleAdvice_hns::
 
 BattleFrontier_Lounge2_Text_NewsGatheringPower_hns::
 	.string "איזו יכולת מדהימה לאסוף חדשות!\n"
-	.string "אין כמו המורה שלי!$"
+	.string "אין כמו המנטור שלי!$"
 
 BattleFrontier_Lounge2_Text_AmazingPowersOfObservation_hns::
-	.string "איזה כוח הבחנה מדהים!\n"
-	.string "אין כמו המורה שלי!$"
+	.string "איזה כושר הבחנה מדהים!\n"
+	.string "אין כמו המנטור שלי!$"
 
 BattleFrontier_Lounge2_Text_AmazingPowerOfPersuasion_hns::
 	.string "איזה כוח שכנוע מדהים!\n"
-	.string "אין כמו המורה שלי!$"
+	.string "אין כמו המנטור שלי!$"
 
 BattleFrontier_Lounge2_Text_ThisPlaceIsScaringMe_hns::
 	.string "…מה המקום הזה?\n"
