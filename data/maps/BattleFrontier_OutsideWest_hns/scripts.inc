@@ -258,7 +258,7 @@ BattleFrontier_OutsideWest_EventScript_PokefanF_hns::
 
 BattleFrontier_OutsideWest_Text_BattleDomeSign_hns:
 	.string "זוהי כיפת הקרב!\n"
-	.string "הדרך לתהילה של כוכב-על בלתי מנוצח!$"
+	.string "הדרך שלכם להפוך לכוכב-על בלתי מנוצח!$"
 
 BattleFrontier_OutsideWest_Text_BattleFactorySign_hns:
 	.string "זהו מפעל הקרב!\n"
@@ -350,7 +350,7 @@ BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper_hns:
 	.string "אני מפחדת להיכנס לשביל הקרב\n"
 	.string "בגלל סוויפר…\p"
 	.string "א-אבל באתי עד לכאן, אז אנסה\n"
-	.string "לכבוש הכול! …ברררר…$"
+	.string "לכבוש הכול! …צמרמורת…$"
 
 BattleFrontier_OutsideWest_Text_LetsPlayRockPaperScissors_hns:
 	.string "קדימה, נשחק אבן, נייר ומספריים!\n"
@@ -380,8 +380,8 @@ BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol_hns:
 BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome_hns:
 	.string "הו? אתה בדרך לאתגר את\n"
 	.string "כיפת הקרב?\p"
-	.string "אאחל לך בהצלחה רבה.\p"
-	.string "הבה ננצח שנינו בדרך למעלה\n"
+	.string "אני מאחל לך הרבה מזל.\p"
+	.string "הבה נתקדם שנינו מניצחון לניצחון\n"
 	.string "וניפגש באתגרים.$"
 
 BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa_hns:
@@ -402,8 +402,8 @@ BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo_hns:
 
 BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier_hns:
 	.string "סוף סוף הגעתי לחזית הקרב!\p"
-	.string "בטוח שאמשוך תשומת לב עם\n"
-	.string "המראה והיכולת שלי!$"
+	.string "אני בטוחה שאמשוך תשומת לב\n"
+	.string "בזכות המראה והכישורים שלי!$"
 
 BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople_hns:
 	.string "נשנוש, נשנוש…\p"
@@ -413,7 +413,7 @@ BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople_hns:
 
 BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike_hns:
 	.string "קראנץ', נשנוש…\p"
-	.string "לפני זמן מה, פגשתי בחורה מבוגרת\n"
+	.string "לפני זמן מה, פגשתי בחורה מבוגרת ממני\n"
 	.string "בשביל הקרב.\p"
 	.string "היו לה עיניים מפחידות,\n"
 	.string "ממש רעות ועצבניות.\p"
@@ -450,7 +450,7 @@ BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers_hns:
 	.string "האנשים שמתקוטטים שם…\p"
 	.string "קשה להאמין, אבל פעם הם היו\n"
 	.string "מאמנים, ומאמנים טובים.\p"
-	.string "הם היו קשוחים בטירוף,\n"
+	.string "הם היו קשוחים להפליא,\n"
 	.string "וגם מפורסמים.\p"
 	.string "אבל מאמן מסוים מחץ אותם\n"
 	.string "בטורניר אחד.\p"
