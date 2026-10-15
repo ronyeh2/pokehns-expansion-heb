@@ -78,27 +78,27 @@ BattleTowerOutsideBeautyText:
 	.string "שלושה ייצאו לקרב…$"
 
 BattleTowerOutsideSailorText:
-	.string "היהיהי, התגנבתי מהעבודה.\p"
+	.string "הי-הי-הי, הברזתי מהעבודה.\p"
 	.string "אני לא יכול לפרוש לפני שאנצח!\p"
 	.string "אני חייב לנצח בהכול. פשוט חייב!$"
 
 BattleTowerOutsideSignText:
 	.string "{UP_ARROW} הכניסה לגבעת המאמנים\p"
-	.string "”טפסו אל הפסגות, מאמנים\n"
-	.string "לוהטים!”\p"
+	.string "”טפסו אל הפסגה, מאמנים\n"
+	.string "נלהבים!”\p"
 	.string "{RIGHT_ARROW} אוהלי הקרב.$"
 
 BattleTower_Battle_Tent_Text_Factory:
-	.string "אוהל הקרב: מפעל\n"
+	.string "אוהל הקרב: המפעל\n"
 	.string "”מצאו אותו! את הפוקימון האולטימטיבי!”$"
 
 BattleTower_Battle_Tent_Text_Palace:
-	.string "אוהל הקרב: ארמון\n"
+	.string "אוהל הקרב: הארמון\n"
 	.string "”קרבות שהם חגיגה לעיניים!”$"
 
 BattleTower_Battle_Tent_Text_Arena:
-	.string "אוהל הקרב: זירה\n"
-	.string "”שהקבוצות הגדולות ביותר יתכנסו!”$"
+	.string "אוהל הקרב: הזירה\n"
+	.string "”שיתכנסו כאן הקבוצות הטובות ביותר!”$"
 
 BattleTowerOutsideText_Closed:
 	.string "The TRAINER HILL is currently\n"
@@ -203,7 +203,7 @@ TrainerHill_Courtyard_ExchangeServiceCorner_EventScript_OldWTMan_Text:
 	.string "every POKéMON CENTER. Have fun!$"
 
 TrainerHill_Courtyard_ExchangeServiceCorner_Text_WelcomePleaseChoosePrize:
-	.string "שלום, כאן עמדת שירות\n"
+	.string "שלום, כאן פינת שירות\n"
 	.string "ההמרה.\p"
 	.string "אנחנו ממירים את נקודות הקרב\n"
 	.string "שצברת בפרסים נהדרים.\p"
