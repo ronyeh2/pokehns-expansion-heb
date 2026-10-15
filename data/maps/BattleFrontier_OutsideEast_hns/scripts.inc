@@ -233,7 +233,7 @@ BattleFrontier_OutsideEast_EventScript_Camper_hns::
 
 BattleFrontier_OutsideEast_Text_BattleTowerSign_hns:
 	.string "זהו מגדל הקרב!\n"
-	.string "רצף ניצחונות למאמן הקשוח ביותר!$"
+	.string "המשיכו ברצף הניצחונות כמאמן הקשוח ביותר!$"
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign_hns:
 	.string "זהו ארמון הקרב!\n"
@@ -252,13 +252,13 @@ BattleFrontier_OutsideEast_Text_RankingHallSign_hns:
 	.string "כוונו לשיאים חדשים!$"
 
 BattleFrontier_OutsideEast_Text_ExchangeCornerSign_hns:
-	.string "פינת שירות ההמרה לנקודות קרב\n"
+	.string "פינת שירות ההמרה של נקודות קרב\n"
 	.string "המירו את נקודות הקרב שלכם!$"
 
 BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial_hns:
 	.string "וואו!\n"
 	.string "הוא ענק!\p"
-	.string "מגדל הקרב מרגיש מיוחד.\n"
+	.string "יש משהו מיוחד במגדל הקרב.\n"
 	.string "הוא שונה מכל השאר.$"
 
 BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier_hns:
@@ -307,7 +307,7 @@ BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody_hns:
 	.string "אומרים שאני דוחף את האף לכל דבר,\n"
 	.string "אבל אני לא יכול להתאפק.\p"
 	.string "הכובע שלך עקום!\n"
-	.string "אוי לא, זבל על הרצפה!\p"
+	.string "אוי לא, זבל על הארץ!\p"
 	.string "אופס, כמעט שעת ארוחת ערב!\p"
 	.string "אני לא יודע אם אוכל להסתפק\n"
 	.string "בצפייה בארמון הקרב…$"
@@ -332,7 +332,7 @@ BattleFrontier_OutsideEast_Text_GoRackUpSomeWinsForDaddy_hns:
 	.string "קדימה, מתוקה שלי!\n"
 	.string "לכי תאספי כמה ניצחונות בשביל אבא!\p"
 	.string "את בדיוק כמו אמא שלך,\n"
-	.string "אז את תשלטי בכולם!$"
+	.string "אז את תנצחי את כולם בגדול!$"
 
 BattleFrontier_OutsideEast_Text_HeardPrettyGirlAtBattleArena_hns:
 	.string "לא היה קל להגיע לכאן, אבל שמעתי\n"
@@ -355,7 +355,7 @@ BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid_hns:
 	.string "יופיע גבר שבגברים.\p"
 	.string "לא שמעת על האגדה הזאת?\n"
 	.string "טוב, ברור שלא! הרגע המצאתי אותה!\p"
-	.string "מה היא אמורה להביע?\n"
+	.string "מה זה אמור להגיד?\n"
 	.string "את זה, ידידי, אני לא יכולה לומר!$"
 
 BattleFrontier_OutsideEast_Text_GotWipedOut_hns:
@@ -376,14 +376,13 @@ BattleFrontier_OutsideEast_Text_ToughTrainerInBattleTower_hns:
 BattleFrontier_OutsideEast_Text_EnoughBattlePointsForDoll_hns:
 	.string "יש!\n"
 	.string "סוף סוף יש לי מספיק נקודות קרב!\p"
-	.string "נראה לי שאמיר אותן בעוד בובת\n"
-	.string "פרווה ענקית!$"
+	.string "נראה לי שאמיר אותן\n"
+	.string "בעוד בובת פרווה ענקית!$"
 
 BattleFrontier_OutsideEast_Text_LikeToHaveNameRecordedHere_hns:
 	.string "אה, כן, אוקיי!\n"
 	.string "אז זה היכל הדירוג!\p"
-	.string "הייתי רוצה להיכנס להיסטוריה\n"
-	.string "בתור אלוף-על,\p"
+	.string "הייתי רוצה להיכנס להיסטוריה כאלוף-על\n"
 	.string "ושהשם שלי יירשם כאן לדורות.$"
 
 BattleFrontier_OutsideEast_Text_CanDoAnythingWithYou_hns:
