@@ -78,5 +78,5 @@ TrainerHill_Elevator_hns_Movement_AttendantFaceDown:
 	step_end
 
 TrainerHill_Elevator_hns_Text_ReturnToReception:
-	.string "רוצה לחזור\n"
+	.string "תרצה לחזור\n"
 	.string "לדלפק הקבלה?$"
