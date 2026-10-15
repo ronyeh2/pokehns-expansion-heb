@@ -24,10 +24,8 @@ BattleFrontier_Lounge8_Text_WhatATrainerNeeds_hns:
 
 BattleFrontier_Lounge8_Text_KnowAboutFrontierBrains_hns:
 	.string "שמעת על מוחות החזית?\p"
-	.string "כך סקוט קורא לשבעת המאמנים\n"
-	.string "המיוחדים שבחזית הקרב.\p"
-	.string "כל אחד מהם מנהל את אחד\n"
-	.string "משבעת המתקנים שלה.$"
+	.string "כך סקוט קורא לשבעת המאמנים המיוחדים\n"
+	.string "שמנהלים את שבעת המתקנים בחזית הקרב.$"
 
 BattleFrontier_Lounge8_Text_ToldMeIHaveTalentForBattling_hns:
 	.string "במגדל הקרב, בחורה מבוגרת ממני\n"
