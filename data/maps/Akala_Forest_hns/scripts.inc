@@ -79,8 +79,8 @@ Alola_AkalaForest_TrainerBattleBugCatcher2_Text_1:
 Alola_AkalaForest_TrainerBattleBugCatcher2_Text_2:
 	.string "האקלים באיי אלולה\n"
 	.string "קצת שונה…\p"
-	.string "בטח בגלל זה יש כאן כמה\n"
-	.string "פוקימונים ייחודיים מסוג חרק.$"
+	.string "אני בטוח שבגלל זה יש כאן כמה\n"
+	.string "פוקימוני חרק ייחודיים.$"
 
 
 Alola_Akala_BattleRaichu_Text_0:
