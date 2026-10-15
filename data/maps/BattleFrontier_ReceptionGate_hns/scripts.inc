@@ -328,18 +328,18 @@ BattleFrontier_ReceptionGate_Text_IfItIsntPlayerYouCame_hns:
 	.string "הגעת עד לכאן!$"
 
 BattleFrontier_ReceptionGate_Text_OhMrScottGoodDay_hns:
-	.string "מדריכה: אה! מר סקוט, אדוני!\n"
+	.string "מדריכה: אה! מר סקוט!\n"
 	.string "יום טוב לך, אדוני!$"
 
 BattleFrontier_ReceptionGate_Text_ScottGreatToSeeYouHere_hns:
 	.string "סקוט: כל כך טוב לראות אותך כאן,\n"
 	.string "באמת!\p"
-	.string "אני מקווה שתקדיש זמן\n"
-	.string "לסייר בכל מקום.\p"
+	.string "אני מקווה שתסייר בכל מקום\n"
+	.string "בלי למהר.\p"
 	.string "וכמובן, אני מקווה שתחווה גם\n"
 	.string "את המהות הטהורה של הקרב.\p"
-	.string "יש לי גם מגורים כאן, אז אפשר\n"
-	.string "לקפוץ לבקר אם יהיה לך זמן.$"
+	.string "גם המגורים שלי נמצאים כאן, אז\n"
+	.string "תקפוץ לבקר אם יהיה לך זמן.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToFacilities_hns:
 	.string "אני המדריכה שלך למתקנים השונים\n"
@@ -352,11 +352,11 @@ BattleFrontier_ReceptionGate_Text_BattleTowerInfo_hns:
 	.string "זהו המגדל הענק שנחשב\n"
 	.string "לסמל של חזית הקרב.\p"
 	.string "במגדל יש ארבעה סוגי חדרי קרב:\n"
-	.string "קרב יחיד, כפול, מרובה ומרובה מקושר.$"
+	.string "יחיד, כפול, מרובה ומרובה בקישור.$"
 
 BattleFrontier_ReceptionGate_Text_BattleDomeInfo_hns:
 	.string "כיפת הקרב היא הבניין הגדול\n"
-	.string "שצורתו כמו ביצה ענקית.\p"
+	.string "בצורת ביצה ענקית.\p"
 	.string "במתקן הזה נערכים אירועים\n"
 	.string "שנקראים טורנירי קרב.\p"
 	.string "טורנירי הקרב מוצעים בשני מסלולים:\n"
@@ -376,7 +376,7 @@ BattleFrontier_ReceptionGate_Text_BattleArenaInfo_hns:
 
 BattleFrontier_ReceptionGate_Text_BattleFactoryInfo_hns:
 	.string "מפעל הקרב הוא הבניין הגדול\n"
-	.string "שהכי קרוב אלינו.\p"
+	.string "הקרוב ביותר אלינו.\p"
 	.string "שם נערך אירוע שנקרא\n"
 	.string "החלפת הקרב.\p"
 	.string "אירוע החלפת הקרב מוצע בשני מסלולים:\n"
@@ -422,10 +422,10 @@ BattleFrontier_ReceptionGate_Text_Level50Info_hns:
 	.string "עד רמה 50, כולל.\p"
 	.string "אבל חשוב לזכור: לאף מאמן יריב\n"
 	.string "לא יהיו פוקימונים מתחת לרמה 50.\p"
-	.string "זהו מסלול הכניסה לקרבות\n"
+	.string "זהו מסלול המתחילים לקרבות\n"
 	.string "בחזית הקרב.\p"
-	.string "כהתחלה, אנחנו ממליצים\n"
-	.string "להתמודד במסלול הזה.$"
+	.string "בתור התחלה, אנחנו מקווים\n"
+	.string "שתתמודד במסלול הזה.$"
 
 BattleFrontier_ReceptionGate_Text_OpenLevelInfo_hns:
 	.string "מסלול הרמה הפתוחה לא מגביל את רמות\n"
@@ -461,17 +461,18 @@ BattleFrontier_ReceptionGate_Text_SymbolsInfo_hns:
 	.string "בחזית הקרב יש שבעה מתקנים.\p"
 	.string "מאמנים שכישוריהם זוכים להכרה עשויים\n"
 	.string "לקבל סמלים מכל אחד מהמתקנים.\p"
-	.string "כדי לזכות בסמל, ייתכן שמאמנים\n"
-	.string "יצטרכו לנצח מאמנים אחרים ברצף\p"
-	.string "ולנצח באירועים שוב ושוב.\p"
+	.string "כדי לזכות בסמל, ייתכן שיהיה צריך\n"
+	.string "לנצח מאמנים אחרים ברצף.\p"
+	.string "ייתכן גם שיהיה צריך לנצח\n"
+	.string "באירועים שוב ושוב.\p"
 	.string "זה בהחלט לא קל לזכות בסמלים.\n"
 	.string "אני מאחלת לך המון הצלחה!$"
 
 BattleFrontier_ReceptionGate_Text_RecordedBattleInfo_hns:
 	.string "אפשר להקליט קרב אחד\n"
 	.string "בכרטיס חזית הקרב שלך.\p"
-	.string "אפשר להקליט קרב נגד\n"
-	.string "חבר או חברים.\p"
+	.string "אפשר להקליט קרב שניהלת\n"
+	.string "עם חבר או עם חברים.\p"
 	.string "או קרב בחזית הקרב, חוץ מקרבות\n"
 	.string "בשביל הקרב או בפירמידת הקרב.\p"
 	.string "בסוף כל קרב אפשר לבחור\n"
