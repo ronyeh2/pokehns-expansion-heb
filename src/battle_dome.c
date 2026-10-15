@@ -857,7 +857,7 @@ static const u8 sTournamentIdToPairedTrainerIds[DOME_TOURNAMENT_TRAINERS_COUNT] 
 // Dome Ace Tucker has their own separate potential text.
 static const u8 *const sBattleDomePotentialTexts[DOME_TOURNAMENT_TRAINERS_COUNT + 1] =
 {
-    COMPOUND_STRING("המועמד הטוב ביותר לאליפות!"), // Highest potential
+    COMPOUND_STRING("הקבוצה עם הסיכוי הטוב ביותר לאליפות!"), // Highest potential
     COMPOUND_STRING("קבוצה שבטוח תגיע לגמר."),
     COMPOUND_STRING("קבוצה שצפויה לסיים בין שלוש הראשונות."),
     COMPOUND_STRING("קבוצה שמועמדת למקום הראשון."),
@@ -882,11 +882,11 @@ static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
     [DOME_BATTLE_STYLE_RISKY]           = COMPOUND_STRING("נכונות להסתכן מדי פעם באסון מוחלט."),
     [DOME_BATTLE_STYLE_STALL]           = COMPOUND_STRING("מיומנות בעמידה בקרבות ארוכים."),
     [DOME_BATTLE_STYLE_VARIED]          = COMPOUND_STRING("התאמת הטקטיקה לכל יריב."),
-    [DOME_BATTLE_STYLE_COMBO_HIGH]      = COMPOUND_STRING("שיטת ניצחון קשוחה."),
+    [DOME_BATTLE_STYLE_COMBO_HIGH]      = COMPOUND_STRING("דפוס ניצחון שקשה להתמודד מולו."),
     [DOME_BATTLE_STYLE_RARE_MOVES]      = COMPOUND_STRING("שימוש מדי פעם במהלך נדיר מאוד."),  // Seems like the text for these two was swapped
     [DOME_BATTLE_STYLE_RARE_MOVE]       = COMPOUND_STRING("שימוש במהלכים מפתיעים ומשבשים."), //
     [DOME_BATTLE_STYLE_HP]              = COMPOUND_STRING("מעקב צמוד אחר הנ”ח בקרב."),
-    [DOME_BATTLE_STYLE_STORE_POWER]     = COMPOUND_STRING("צבירת כוח ושחרורו ברגע הנכון."),
+    [DOME_BATTLE_STYLE_STORE_POWER]     = COMPOUND_STRING("כישרון לצבור כוח ואז לשחרר אותו."),
     [DOME_BATTLE_STYLE_ENFEEBLE_LOW]    = COMPOUND_STRING("מיומנות בהחלשת יריבים."),
     [DOME_BATTLE_STYLE_LUCK]            = COMPOUND_STRING("העדפה לטקטיקות שתלויות במזל."),
     [DOME_BATTLE_STYLE_REGAL]           = COMPOUND_STRING("התקפות באווירה מלכותית."),
@@ -907,10 +907,10 @@ static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
     [DOME_BATTLE_STYLE_POPULAR_STRONG]  = COMPOUND_STRING("התקפות מהירות במהלכים חזקים."),
     [DOME_BATTLE_STYLE_EFFECTS]         = COMPOUND_STRING("שימוש תכוף במהלכים עם השפעות נוספות."),
     [DOME_BATTLE_STYLE_BALANCED]        = COMPOUND_STRING("שילוב מאוזן היטב של מהלכים."),
-    [DOME_BATTLE_STYLE_UNUSED1]         = COMPOUND_STRING("This is sample message 1."),
-    [DOME_BATTLE_STYLE_UNUSED2]         = COMPOUND_STRING("This is sample message 2."),
-    [DOME_BATTLE_STYLE_UNUSED3]         = COMPOUND_STRING("This is sample message 3."),
-    [DOME_BATTLE_STYLE_UNUSED4]         = COMPOUND_STRING("This is sample message 4."),
+    [DOME_BATTLE_STYLE_UNUSED1]         = COMPOUND_STRING("זו הודעה לדוגמה 1."),
+    [DOME_BATTLE_STYLE_UNUSED2]         = COMPOUND_STRING("זו הודעה לדוגמה 2."),
+    [DOME_BATTLE_STYLE_UNUSED3]         = COMPOUND_STRING("זו הודעה לדוגמה 3."),
+    [DOME_BATTLE_STYLE_UNUSED4]         = COMPOUND_STRING("זו הודעה לדוגמה 4."),
 };
 
 // The third line of text on a trainers info card. It that gives information about their party's stat spread (based on their Pokémon's effort values and Nature).
@@ -990,8 +990,8 @@ static const u8 *const sBattleDomeMatchNumberTexts[DOME_TOURNAMENT_MATCHES_COUNT
     COMPOUND_STRING("סיבוב 2, קרב 2"),
     COMPOUND_STRING("סיבוב 2, קרב 3"),
     COMPOUND_STRING("סיבוב 2, קרב 4"),
-    COMPOUND_STRING("חצי גמר, קרב 1"),
-    COMPOUND_STRING("חצי גמר, קרב 2"),
+    COMPOUND_STRING("חצי הגמר, קרב 1"),
+    COMPOUND_STRING("חצי הגמר, קרב 2"),
     COMPOUND_STRING("קרב הגמר"),
 };
 
