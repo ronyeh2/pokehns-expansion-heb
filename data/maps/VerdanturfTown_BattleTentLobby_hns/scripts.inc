@@ -336,7 +336,7 @@ VerdanturfTown_BattleTentLobby_hns_Text_MonsReluctantToUseDislikedMoves:
 	.string "למשל, פוקימון עם אופי נעים כנראה\n"
 	.string "לא ייהנה לפגוע ביריבים שלו.\p"
 	.string "אם הוא לא ממצה את עצמו, כנראה שהוא\n"
-	.string "נאלץ להשתמש במהלך שהוא לא אוהב.$"
+	.string "נכשל במהלך שהוא לא אוהב, שנכפה עליו.$"
 
 VerdanturfTown_BattleTentLobby_hns_Text_GentleMonsScaryIfAngry:
 	.string "אחותי הגדולה בדרך כלל נעימה. אבל\n"
