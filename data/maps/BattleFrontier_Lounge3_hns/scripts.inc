@@ -199,8 +199,8 @@ BattleFrontier_Lounge3_EventScript_FaceOriginalDirection_hns::
 
 BattleFrontier_Lounge3_Text_CantYouSeeWereBusyHere_hns::
 	.string "…מה רצית?\p"
-	.string "לא רואים שאנחנו די עסוקים פה?\n"
-	.string "זה לא יכול לחכות לאחר כך?$"
+	.string "אתה לא רואה שאנחנו די עסוקים פה?\n"
+	.string "אי אפשר לדחות את העניין שלך?$"
 
 BattleFrontier_Lounge3_Text_YouLookToughExplainGambling_hns::
 	.string "…מה?\n"
@@ -215,8 +215,8 @@ BattleFrontier_Lounge3_Text_YouLookToughExplainGambling_hns::
 	.string "אז כל אחד מאיתנו בוחר מאמן אחר\n"
 	.string "שמתמודד באתגר של אותו מתקן,\p"
 	.string "ומהמר עליו בנקודות קרב.\p"
-	.string "מי שהימר על המאמן עם השיא הטוב\n"
-	.string "ביותר לוקח את כל הנקודות בקופה.\p"
+	.string "מי שהימר על המאמן עם המאזן הכי טוב\n"
+	.string "לוקח את כל נקודות הקרב שבקופה.\p"
 	.string "נשמע פשוט, נכון?\n"
 	.string "בקיצור…$"
 
@@ -321,8 +321,8 @@ BattleFrontier_Lounge3_Text_HowMuchCanYouSpot_hns::
 BattleFrontier_Lounge3_Text_YouDontHaveEnoughPoints_hns::
 	.string "אוי, לא, לא, לא!\n"
 	.string "אין לך מספיק נקודות קרב!\p"
-	.string "הלוואי שלא היית משתטה\n"
-	.string "ומבזבז את הזמן של כולם!$"
+	.string "די לעשות שטויות ולבזבז\n"
+	.string "לכולם את הזמן!$"
 
 BattleFrontier_Lounge3_Text_ThanksOffYouGo_hns::
 	.string "הה-הה! תודה רבה!\n"
@@ -437,8 +437,8 @@ BattleFrontier_Lounge3_Text_ThinkOfMeForAnotherChallenge_hns::
 	.string "אל תשכח אותי!$"
 
 BattleFrontier_Lounge3_Text_NotInterested_hns::
-	.string "לא מעוניין?! לא כדאי לפחד\n"
-	.string "כל כך לקחת סיכון!$"
+	.string "לא מעוניין?! אל תפחד כל כך\n"
+	.string "לקחת סיכון!$"
 
 BattleFrontier_Lounge3_Text_Oh_hns::
 	.string "אה…$"
@@ -455,7 +455,7 @@ BattleFrontier_Lounge3_Text_TrainerGoodButRattled_hns::
 
 BattleFrontier_Lounge3_Text_KnowWinnerWhenISeeOne_hns::
 	.string "חי-חי!\n"
-	.string "אני מזהה מנצח כשאני רואה אחד!$"
+	.string "אני מזהה מנצח ממבט ראשון!$"
 
 BattleFrontier_Lounge3_Text_ShouldBeTakingChallenges_hns::
 	.string "המאמנים האלה… מה הם עושים?\n"
