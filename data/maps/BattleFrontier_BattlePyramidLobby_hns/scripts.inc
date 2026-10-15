@@ -541,14 +541,13 @@ BattleFrontier_BattlePyramidLobby_Text_EmbarkOnChallenge_hns:
 	.string "לאתגר מסע הקרב?$"
 
 BattleFrontier_BattlePyramidLobby_Text_AwaitFutureChallenge_hns:
-	.string "נמתין לאתגר שלך בעתיד!$"
+	.string "נחכה לאתגר שלך בעתיד!$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainBattlePyramid_hns:
 	.string "מסע הקרב הוא אירוע קרבות שבו חוקרים\n"
 	.string "את הפירמידה ומנסים להגיע לפסגה.\p"
-	.string "בפירמידה שבע קומות של מבוכים,\n"
-	.string "וכולן מלאות במאמנים מיומנים\l"
-	.string "וגם בפוקימונים פראיים.\p"
+	.string "בפירמידה שבע קומות של מבוכים, ובכולן\n"
+	.string "גם מאמנים מיומנים וגם פוקימונים פראיים.\p"
 	.string "יש להיכנס עם שלושה פוקימונים,\n"
 	.string "שאף אחד מהם לא מחזיק פריט.\p"
 	.string "במהלך העלייה יינתן לך\n"
@@ -561,9 +560,8 @@ BattleFrontier_BattlePyramidLobby_Text_ExplainBattlePyramid_hns:
 	.string "נפסלים מהאתגר.$"
 
 BattleFrontier_BattlePyramidLobby_Text_WhichLevelMode_hns:
-	.string "בפירמידה יש שני מסלולים:\n"
-	.string "רמה 50 ורמה פתוחה.\l"
-	.string "לאיזה מהם תרצה להיכנס?$"
+	.string "בפירמידה יש שני מסלולים: רמה 50\n"
+	.string "ורמה פתוחה. לאיזה מהם תרצה להיכנס?$"
 
 BattleFrontier_BattlePyramidLobby_Text_SelectThreeMons_hns:
 	.string "טוב מאוד. עכשיו יש לבחור\n"
@@ -617,8 +615,7 @@ BattleFrontier_BattlePyramidLobby_Text_ExchangedBagForBattleBag_hns:
 
 BattleFrontier_BattlePyramidLobby_Text_StepOnFloorPanel_hns:
 	.string "כשדורכים על משטח הרצפה הזה,\n"
-	.string "מועברים לקומה גבוהה יותר\l"
-	.string "בפירמידה.\p"
+	.string "מועברים לקומה גבוהה יותר בפירמידה.\p"
 	.string "אני מקווה למענך\n"
 	.string "שהמסע שלך יעבור בשלום!$"
 
@@ -637,8 +634,7 @@ BattleFrontier_BattlePyramidLobby_Text_YouveConqueredPyramid_hns:
 
 BattleFrontier_BattlePyramidLobby_Text_MonHoldingItemCannotTake_hns:
 	.string "אה, בעיה קטנה.\p"
-	.string "לפחות פוקימון אחד מחזיק\n"
-	.string "פריט.\p"
+	.string "לפחות פוקימון אחד מחזיק פריט.\p"
 	.string "לצערי, אי אפשר להוציא מכאן\n"
 	.string "פריטים שהושגו בפירמידה.$"
 
@@ -653,8 +649,7 @@ BattleFrontier_BattlePyramidLobby_Text_BagCannotHoldPickItemsToKeep_hns:
 	.string "בתיק הקרב ואצל הפוקימונים.$"
 
 BattleFrontier_BattlePyramidLobby_Text_LeastOneMonHoldingItem_hns:
-	.string "לפחות פוקימון אחד עדיין\n"
-	.string "מחזיק פריט.$"
+	.string "לפחות פוקימון אחד עדיין מחזיק פריט.$"
 
 BattleFrontier_BattlePyramidLobby_Text_PickItemsToKeep_hns:
 	.string "יש לבחור אילו פריטים יישארו\n"
@@ -736,16 +731,15 @@ BattleFrontier_BattlePyramidLobby_Text_HintBurn_hns:
 
 BattleFrontier_BattlePyramidLobby_Text_HintPPWaste_hns:
 	.string "אני חשה לחץ עצום של\n"
-	.string "זעם שלא נענה…\p"
+	.string "זעם שלא בא על סיפוקו…\p"
 	.string "זוהי קללה…\p"
-	.string "…ואני רואה את הפוקימונים שלך\n"
-	.string "מרוקנים מנקודות כוח, ואין להם\l"
-	.string "ברירה אלא להשתמש במהלך מאבק…$"
+	.string "…ואני רואה את הפוקימונים שלך מרוקנים\n"
+	.string "מנקודות כוח, ונאלצים להשתמש במאבק…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintLevitate_hns:
-	.string "אני רואה פוקימונים מרחפים ברום…\p"
+	.string "אני רואה פוקימונים מרחפים גבוה באוויר…\p"
 	.string "…ואני רואה את הפוקימונים שלך\n"
-	.string "מתוסכלים ממהלכי אדמה חסרי תועלת…$"
+	.string "מתוסכלים ממהלכי אדמה חסרי השפעה…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintTrapAbility_hns:
 	.string "אני חשה אנרגיה אדירה שעולה\n"
@@ -841,8 +835,9 @@ BattleFrontier_BattlePyramidLobby_Text_TrainersNoticeRunning_hns:
 	.string "אם רצים מהר, מאמנים עלולים לשים לב\n"
 	.string "ולבוא אחריך לקרב.\p"
 	.string "אז אם רוצים להימנע ממאמנים,\n"
-	.string "לא כדאי למשוך את תשומת ליבם.\l"
-	.string "עדיף לחמוק על פניהם בזהירות ובשקט.$"
+	.string "לא כדאי למשוך את תשומת ליבם.\p"
+	.string "עדיף לחמוק על פניהם\n"
+	.string "בזהירות ובשקט.$"
 
 BattleFrontier_BattlePyramidLobby_Text_LostLotOfItems_hns:
 	.string "אוווווווייייייי!\p"
@@ -852,7 +847,7 @@ BattleFrontier_BattlePyramidLobby_Text_LostLotOfItems_hns:
 
 BattleFrontier_BattlePyramidLobby_Text_YouveDefeatedPyramidKing_hns:
 	.string "ברוכים השבים!\n"
-	.string "עשית את הבלתי יאומן!\p"
+	.string "עשית את הבלתי ייאמן!\p"
 	.string "ניצחת את מלך הפירמידה\n"
 	.string "וכבשת את פירמידת הקרב!$"
 
