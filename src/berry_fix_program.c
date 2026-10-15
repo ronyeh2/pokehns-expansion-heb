@@ -46,8 +46,8 @@ static const u8 sText_EnsureGBAConnectionMatches[] = _("נא לוודא שהחי
                                                        "{COLOR RED}{SHADOW LIGHT_RED}כן: יש ללחוץ על כפתור A.\n"
                                                        "לא: יש לכבות את המכשיר ולנסות שוב.");
 static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("יש להדליק את פוקימון Ruby/Sapphire\n"
-                                                           "תוך לחיצה בו-זמנית על START\n"
-                                                           "ועל SELECT. לאחר מכן, יש לוודא\n"
+                                                           "תוך החזקה בו-זמנית של START\n"
+                                                           "ושל SELECT. לאחר מכן, יש לוודא\n"
                                                            "שהתמונה שלמעלה מופיעה.");
 static const u8 sText_TransmittingPleaseWait[] = _("מתבצע שידור. נא להמתין.\n"
                                                    "{COLOR RED}{SHADOW LIGHT_RED}אין לכבות את המכשיר ואין לנתק\n"
