@@ -183,7 +183,7 @@ Alola_Ulaula_House_Phant_Text_6:
 	.string "Come back when you're ready…$"
 
 Alola_Ulaula_House_Phant_Text_7:
-	.string "מקווה שנהנית מהטעימה הזו של אלולה.\p"
+	.string "מקווה שנהנית מהטעימה הזו מאלולה.\p"
 	.string "אני עובד על גרסת רטרו מלאה של\n"
 	.string "האזור, שנקראת ULTRA ECLIPSE.$"
 
