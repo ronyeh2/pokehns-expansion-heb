@@ -29,8 +29,8 @@ BattleFrontier_Lounge6_EventScript_TradeCompleted_hns::
 BattleFrontier_Lounge6_Text_WouldYouLikeToTrade_hns:
 	.string "הפוקימון שלי הוא {STR_VAR_2}.\n"
 	.string "מכיר אותו?\p"
-	.string "הוא די חמוד ונחמד למדי.\n"
-	.string "את הקטן הזה הייתי מחליפה בגאווה!\p"
+	.string "הוא ממש חמוד, וגם די נחמד.\n"
+	.string "את הקטן הזה אני מציעה להחלפה בגאווה!\p"
 	.string "תרצה לתת לי {STR_VAR_1}\n"
 	.string "תמורת ה{STR_VAR_2} שלי?$"
 
