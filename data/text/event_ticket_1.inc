@@ -22,12 +22,12 @@ EventTicket_Text_ShowEonTicket:
 
 #if IS_HNS
 EventTicket_Text_SouthernIslandSailBack:
-	.string "כן, חבר, אין פה שום דבר לראות\n"
+	.string "שמע, חבר, אין פה שום דבר לראות\n"
 	.string "או לעשות באי חסר הייחוד הזה.\p"
 	.string "מה דעתך שנפליג חזרה לאוליבין?$"
 #else
 EventTicket_Text_SouthernIslandSailBack:
-	.string "כן, חבר, אין פה שום דבר לראות\n"
+	.string "שמע, חבר, אין פה שום דבר לראות\n"
 	.string "או לעשות באי חסר הייחוד הזה.\p"
 	.string "מה דעתך שנפליג חזרה לליליקוב?$"
 #endif 
@@ -38,7 +38,7 @@ EventTicket_Text_SailHome:
 	.string "מפליגים הביתה!$"
 
 EventTicket_Text_AsYouLike:
-	.string "טוב, בסדר, כרצונך.$"
+	.string "טוב, בסדר, איך שתרצה.$"
 
 SouthernIsland_Interior_Text_Sign:
 	.string "“All dreams are but another reality.\n"
