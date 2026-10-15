@@ -106,7 +106,7 @@ BattleFrontier_Lounge5_Text_NatureGirlSupportHighSupportLow_hns::
 	.string "if it has a lot of ouchies!$"
 
 BattleFrontier_Lounge5_Text_NatureGirlEgg_hns::
-	.string "זה טיפשי! ביצה ישנה!\n"
+	.string "זה טיפשי! הביצה עוד ישנה!\n"
 	.string "אני לא יכולה לדבר איתה!$"
 
 BattleFrontier_Lounge5_Text_LadyClaimsSheUnderstandsPokemon_hns::
