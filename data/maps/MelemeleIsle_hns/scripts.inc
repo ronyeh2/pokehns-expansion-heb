@@ -668,8 +668,8 @@ Alola_MeleMele_TapuKoko_Flyover_Movement_0:
 
 Alola_Melemele_GetOffBoat_Text_0:
 	.string "ברוכים השבים לאיים!\p"
-	.string "אפשר לחזור בכל פעם שבא לך\n"
-	.string "לטייל ליבשת קאנטו!$"
+	.string "בוא שוב אם תרצה לצאת\n"
+	.string "לטיול ליבשת קאנטו!$"
 
 Alola_Melemele_TravelToKanto_Text_0:
 	.string "אהוי!\p"
@@ -736,8 +736,8 @@ Alola_Melemele_SamsonOak_Trigger_Beginning_Text_5:
 	.string "אז קראתי למקום הזה… {PAUSE 30}איי אלולה!$"
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_6:
-	.string "עוד לא סיימתי לחקור את\n"
-	.string "האיים… {PAUSE 30}גם אני רק נחתתי כאן.\p"
+	.string "עוד לא חקרתי את האיים עד הסוף…\n"
+	.string "{PAUSE 30}גם אני רק עכשיו נחתתי כאן.\p"
 	.string "הייתי רוצה לדעת אם כל הזנים\n"
 	.string "שמקורם באלולה נמצאים כאן.\p"
 	.string "אם במקרה תיתקל בכמה מהם, בוא בבקשה\n"
@@ -755,14 +755,14 @@ Alola_Melemele_TotemBattle_Text_0:
 
 Alola_Melemele_TotemBattle_Text_1:
 	.string "ליפיאון הטוטם הובס!\n"
-	.string "הוא נמלט למקום כלשהו…$"
+	.string "הוא נמלט לאנשהו…$"
 
 Alola_Melemele_TotemBattle_Text_2:
 	.string "סססס!$"
 
 Alola_Melemele_TotemBattle_Text_3:
 	.string "רטיקייט הטוטם הובס!\n"
-	.string "הוא נמלט למקום כלשהו…$"
+	.string "הוא נמלט לאנשהו…$"
 
 MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 	face_up
@@ -770,7 +770,7 @@ MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 
 
 Alola_Melemele_Totem_sign_Text_0:
-	.string "מהטוטם קורנת אנרגיה\n"
+	.string "מהטוטם נובעת אנרגיה\n"
 	.string "חזקה…\p"
 	.string "לגעת בטוטם כדי להשתגר\n"
 	.string "לאי אחר?$"
@@ -792,7 +792,7 @@ Alola_Melemele_Totem_sign_Text_5:
 
 Alola_Melemele_Totem_sign_Text_6:
 	.string "כאן עומד טוטם מוזר,\n"
-	.string "ועוצמה קורנת ממנו…$"
+	.string "ועוצמה נובעת ממנו…$"
 
 Alola_Melemele_BattleVsTapuKoko_Text_0:
 	.string "קו-קו-קווו!$"
