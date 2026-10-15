@@ -214,13 +214,14 @@ BattleFrontier_ScottsHouse_Text_WelcomeToBattleFrontier_hns:
 	.string "הה-הה… סליחה על הצפיפות.\p"
 	.string "בכל אופן, {PLAYER}{KUN}, הרשה לי לברך\n"
 	.string "אותך רשמית: ברוך הבא לחזית הקרב.\p"
-	.string "זה החלום שלי שהתגשם.\n"
-	.string "לקח שנים רבות, אבל סוף סוף נתתי לו צורה.$"
+	.string "זה החלום שלי שהתגשם.\p"
+	.string "לקח לי שנים על גבי שנים, אבל סוף סוף\n"
+	.string "החלום שלי קרם עור וגידים.$"
 
 BattleFrontier_ScottsHouse_Text_HowMuchEffortItTookToMakeReal_hns:
 	.string "כשאני חושב על זה,\n"
 	.string "זה היה מסע ארוך להחריד…\p"
-	.string "עזבתי את הבית לבד,\n"
+	.string "יצאתי מהבית לבד,\n"
 	.string "למסע בחיפוש אחר מאמנים חזקים.\p"
 	.string "אף אחד לא יכול לדמיין כמה מאמץ\n"
 	.string "וזמן נדרשו כדי להפוך את זה למציאות.$"
@@ -255,14 +256,14 @@ BattleFrontier_ScottsHouse_Text_WhyIGoSeekingTrainers_hns:
 	.string "כולם אותו דבר!\p"
 	.string "אני אוהב את הטוהר של הקרב,\n"
 	.string "שבו כולם שווים.\p"
-	.string "לכן אני מחפש בכל מקום מאמנים\n"
-	.string "שרציניים בקרבות, ומזמין אותם לכאן.$"
+	.string "לכן אני הולך לכל מקום ומחפש מאמנים\n"
+	.string "שלוקחים קרבות ברצינות, ומזמין אותם לכאן.$"
 
 BattleFrontier_ScottsHouse_Text_HaveYouMetFrontierBrain_hns:
 	.string "סקוט: פגשת כבר מישהו\n"
-	.string "מראשי חזית הקרב?\p"
-	.string "או יותר טוב, השגת מהם סמלים?\p"
-	.string "בחרתי את ראשי חזית הקרב בקפידה,\n"
+	.string "ממוחות החזית?\p"
+	.string "או אפילו טוב יותר, השגת מהם סמלים?\p"
+	.string "בחרתי את מוחות החזית בקפידה,\n"
 	.string "בתור המאמנים הקשוחים ביותר שיש.\p"
 	.string "אבל אני בטוח שכשיראו כמה\n"
 	.string "אתה קשוח, אפילו הם יופתעו!$"
@@ -270,7 +271,7 @@ BattleFrontier_ScottsHouse_Text_HaveYouMetFrontierBrain_hns:
 BattleFrontier_ScottsHouse_Text_MayFindWildMonsInFrontier_hns:
 	.string "סקוט: אתה לא מתאמן רק לקרבות, נכון?\p"
 	.string "נדמה לי שאני זוכר שאתה\n"
-	.string "עובד גם על פוקדקס.\p"
+	.string "ממלא גם את הפוקדקס.\p"
 	.string "אז נחש מה?\p"
 	.string "אולי תיתקל בפוקימונים פראיים\n"
 	.string "איפשהו בחזית הקרב… פופופו!$"
@@ -280,7 +281,7 @@ BattleFrontier_ScottsHouse_Text_YouveCollectedAllSilverSymbols_hns:
 	.string "…רגע אחד…\n"
 	.string "אה!\p"
 	.string "כרטיס חזית הקרב שלך!\n"
-	.string "אספת את כל סדרת הסמלים הכסופים!\p"
+	.string "אספת את כל סדרת סמלי הכסף!\p"
 	.string "זה יותר ממרשים!\n"
 	.string "אתה קשוח, בדיוק כמו שחשדתי!\p"
 	.string "בדרך כלל לא הייתי עושה דבר כזה,\n"
@@ -294,19 +295,19 @@ BattleFrontier_ScottsHouse_Text_YouveCollectedAllGoldSymbols_hns:
 	.string "…רגע אחד…\n"
 	.string "אני לא מאמין למראה עיניי!\p"
 	.string "כרטיס חזית הקרב שלך!\n"
-	.string "אספת את כל סדרת הסמלים הזהובים!\p"
+	.string "אספת את כל סדרת סמלי הזהב!\p"
 	.string "זה יותר מפנומנלי!\n"
 	.string "אתה מדהים, בדיוק כמו שחשדתי!\p"
 	.string "… … … … … …\p"
 	.string "{PLAYER}, אתה חייב לקבל את זה!\p"
 	.string "אני חושב שתדע להעריך\n"
-	.string "את הערך של המתנה שלי!$"
+	.string "כמה המתנה שלי שווה!$"
 
 BattleFrontier_ScottsHouse_Text_SoGladIBroughtYouHere_hns:
 	.string "אני חייב לומר שיש לי כישרון\n"
-	.string "לזהות מאמן טוב כשאני רואה אחד.\p"
-	.string "אני כל כך שמח שראיתי את\n"
-	.string "הנולד והבאתי אותך לכאן!$"
+	.string "לזהות מאמן טוב ממבט ראשון.\p"
+	.string "אני כל כך שמח שראיתי את הנולד\n"
+	.string "והבאתי אותך לכאן!$"
 
 BattleFrontier_ScottsHouse_Text_BerryPocketStuffed_hns:
 	.string "נראה שכיס הפירות שלך\n"
@@ -314,14 +315,14 @@ BattleFrontier_ScottsHouse_Text_BerryPocketStuffed_hns:
 
 BattleFrontier_ScottsHouse_Text_Beat50TrainersInARow_hns:
 	.string "סקוט: הו, שמעתי עליך!\n"
-	.string "איך ששלטת במגדל הקרב!\p"
+	.string "על איך ששלטת במגדל הקרב!\p"
 	.string "ניצחת מעל 50 מאמנים ברצף?\p"
 	.string "זה פנטסטי!\n"
 	.string "אני רוצה לתת לך את זה!$"
 
 BattleFrontier_ScottsHouse_Text_Beat100TrainersInARow_hns:
 	.string "סקוט: וואו! שמעתי עליך!\n"
-	.string "איך שהכנעת את מגדל הקרב!\p"
+	.string "על איך שהכנעת את מגדל הקרב!\p"
 	.string "ניצחת מעל 100 מאמנים ברצף?\p"
 	.string "זה מרהיב בטירוף!\n"
 	.string "אתה חייב לקבל את זה!$"
