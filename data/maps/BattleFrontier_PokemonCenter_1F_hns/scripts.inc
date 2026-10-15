@@ -39,9 +39,9 @@ BattleFrontier_PokemonCenter_1F_EventScript_Skitty_hns::
 
 BattleFrontier_PokemonCenter_1F_Text_NeverSeenPokemon_hns:
 	.string "היה פה מישהו עם פוקימון\n"
-	.string "שמעולם לא ראיתי.\p"
+	.string "שאף פעם לא ראיתי.\p"
 	.string "לפחות בבית הספר למאמנים\n"
-	.string "לא למדתי עליו.\p"
+	.string "לא למדנו עליו.\p"
 	.string "מעניין איפה אפשר לתפוס\n"
 	.string "פוקימונים כאלה.$"
 
