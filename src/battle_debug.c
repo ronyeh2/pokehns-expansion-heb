@@ -432,7 +432,7 @@ static const struct ListMenuItem sAIListItems[] =
     {COMPOUND_STRING("קרב כפול"),              LIST_AI_DOUBLE_BATTLE},
     {COMPOUND_STRING("מודעות לנ”ח"),                   LIST_AI_HP_AWARE},
     {COMPOUND_STRING("מהלכי סטטוס חזקים"),            LIST_AI_POWERFUL_STATUS},
-    {COMPOUND_STRING("עקיפת ”לא מודע”"),             LIST_AI_NEGATE_UNAWARE},
+    {COMPOUND_STRING("לא מודע לנטרולים"),             LIST_AI_NEGATE_UNAWARE},
     {COMPOUND_STRING("הקרבה עצמית"),               LIST_AI_WILL_SUICIDE},
     {COMPOUND_STRING("העדפת מהלכי סטטוס"),        LIST_AI_PREFER_STATUS_MOVES},
     {COMPOUND_STRING("Stall"),                      LIST_AI_STALL},
@@ -456,7 +456,7 @@ static const struct ListMenuItem sAIListItems[] =
 static const struct ListMenuItem sVariousListItems[] =
 {
     {COMPOUND_STRING("הצגת נ”ח"),       VARIOUS_SHOW_HP},
-    {COMPOUND_STRING("נ”ח ממלא מקום"), VARIOUS_SUBSTITUTE_HP},
+    {COMPOUND_STRING("נ”ח של ממלא מקום"), VARIOUS_SUBSTITUTE_HP},
     {COMPOUND_STRING("מאוהב"),       VARIOUS_IN_LOVE},
 };
 
@@ -2168,7 +2168,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_CURE_PSN]         = COMPOUND_STRING("ריפוי הרעלה"),
     [HOLD_EFFECT_CURE_BRN]         = COMPOUND_STRING("ריפוי כוויה"),
     [HOLD_EFFECT_CURE_FRZ]         = COMPOUND_STRING("ריפוי קיפאון"),
-    [HOLD_EFFECT_RESTORE_PP]       = COMPOUND_STRING("שחזור נ”כ"),
+    [HOLD_EFFECT_RESTORE_PP]       = COMPOUND_STRING("שיקום נ”כ"),
     [HOLD_EFFECT_CURE_CONFUSION]   = COMPOUND_STRING("ריפוי בלבול"),
     [HOLD_EFFECT_CURE_STATUS]      = COMPOUND_STRING("ריפוי בעיות מצב"),
     [HOLD_EFFECT_CONFUSE_SPICY]    = COMPOUND_STRING("בלבול חריף"),
@@ -2184,7 +2184,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_CRITICAL_UP]      = COMPOUND_STRING("העלאת קריטיות"),
     [HOLD_EFFECT_RANDOM_STAT_UP]   = COMPOUND_STRING("העלאת נתון מקרי"),
     [HOLD_EFFECT_EVASION_UP]       = COMPOUND_STRING("העלאת התחמקות"),
-    [HOLD_EFFECT_WHITE_HERB]       = COMPOUND_STRING("שחזור נתונים"),
+    [HOLD_EFFECT_WHITE_HERB]       = COMPOUND_STRING("שיקום נתונים"),
     [HOLD_EFFECT_MACHO_BRACE]      = COMPOUND_STRING("רצועת מאצ'ו"),
     [HOLD_EFFECT_EXP_SHARE]        = COMPOUND_STRING("חולק נסיון"),
     [HOLD_EFFECT_QUICK_CLAW]       = COMPOUND_STRING("טופר מהיר"),
@@ -2243,7 +2243,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_ENIGMA_BERRY]     = COMPOUND_STRING("פרי אניגמה"),
     [HOLD_EFFECT_RESIST_BERRY]     = COMPOUND_STRING("פרי עמידות"),
     [HOLD_EFFECT_POWER_ITEM]       = COMPOUND_STRING("פריט כוח"),
-    [HOLD_EFFECT_RESTORE_PCT_HP]   = COMPOUND_STRING("ריפוי אחוזי נ”ח"),
+    [HOLD_EFFECT_RESTORE_PCT_HP]   = COMPOUND_STRING("ריפוי נ”ח באחוזים"),
     [HOLD_EFFECT_MICLE_BERRY]      = COMPOUND_STRING("פרי מייקל"),
     [HOLD_EFFECT_CUSTAP_BERRY]     = COMPOUND_STRING("פרי קאסטפ"),
     [HOLD_EFFECT_JABOCA_BERRY]     = COMPOUND_STRING("פרי ג'בוקה"),
