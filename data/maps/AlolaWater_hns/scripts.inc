@@ -14,7 +14,7 @@ Alola_MelemeleSea_TrainerBattleSwimmer_Text_0:
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_1:
 	.string "איי,\n"
-	.string "נתפס לי שריר בירך…$"
+	.string "מתחתי שריר בירך…$"
 
 Alola_MelemeleSea_TrainerBattleSwimmer_Text_2:
 	.string "יש כאן זרמים חזקים.\n"
