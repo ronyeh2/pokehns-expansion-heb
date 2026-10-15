@@ -512,12 +512,12 @@ BattleFrontier_ExchangeServiceCorner_Text_MentalHerbDesc::
 	.string "מהתאהבות.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc::
-	.string "פריט להחזקה שמטיל בוהק\n"
-	.string "ומוריד את הדיוק.$"
+	.string "פריט להחזקה שמסנוור את\n"
+	.string "היריב ומוריד את דיוקו.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc::
-	.string "מגביר את עוצמת המהלך, אבל\n"
-	.string "מאפשר רק את המהלך הזה.$"
+	.string "מגביר את עוצמתו של מהלך, אבל\n"
+	.string "מאפשר להשתמש רק בו.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc::
 	.string "פריט להחזקה שעלול לגרום ליריב\n"
@@ -529,4 +529,4 @@ BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc::
 
 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc::
 	.string "פריט להחזקה שמעלה את\n"
-	.string "סיכוי המכה הקריטית.$"
+	.string "הסיכוי למכה קריטית.$"
