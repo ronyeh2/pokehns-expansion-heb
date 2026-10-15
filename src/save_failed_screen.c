@@ -451,11 +451,11 @@ void CB2_FlashNotDetectedScreen(void)
     static const u8 saveFailedMessage[] =_(
         "{COLOR RED}שגיאה! {COLOR DARK_GRAY}לא זוהה זיכרון Flash!\n"
         "\n"
-        "במשחק באמולטור, יש להגדיר את\n"
+        "אם משחקים באמולטור, יש להגדיר את\n"
         "סוג השמירה ל-Flash 1Mb/128K\n"
         "ולטעון מחדש את ה-ROM.\n"
         "\n"
-        "במשחק על חומרה, במחסנית שלך\n"
+        "אם משחקים על חומרה, במחסנית שלך\n"
         "אין שבב Flash תקין.");
     SaveFailedScreenTextPrint(saveFailedMessage, 1, 0);
     TransferPlttBuffer();
