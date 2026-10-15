@@ -317,9 +317,9 @@ Alola_Ulaula_UlaulaSign_Text_0:
 
 Alola_Ulaula_Phant_outside_Text_0:
 	.string "שלום לך, {PLAYER}!\p"
-	.string "אני המתכנת שבנה את החלק\n"
-	.string "הזה של המשחק!\p"
-	.string "מקווה שנהנית מהטעימה הזו של אלולה.\p"
+	.string "אני המפתח שבנה\n"
+	.string "את החלק הזה של המשחק!\p"
+	.string "מקווה שנהנית מהטעימה הזו מאלולה.\p"
 	.string "אני עובד על גרסת רטרו מלאה של\n"
 	.string "האזור, שנקראת ULTRA ECLIPSE.$"
 
@@ -347,8 +347,8 @@ Alola_Ulaula_TrainerBattleYoungster_Text_1:
 	.string "זה אפילו לא הר לניקאלה האמיתי…$"
 
 Alola_Ulaula_TrainerBattleYoungster_Text_2:
-	.string "אבא שלי אף פעם לא אמר לי מה\n"
-	.string "השם האמיתי של ההר הזה.\p"
+	.string "אבא שלי אף פעם לא אמר לי\n"
+	.string "מה השם האמיתי של ההר הזה.\p"
 	.string "תמיד פשוט קראנו לו הר לניקאלה.$"
 
 Alola_Ulaula_TrainerBattleHiker_Text_0:
@@ -357,17 +357,17 @@ Alola_Ulaula_TrainerBattleHiker_Text_0:
 
 Alola_Ulaula_TrainerBattleHiker_Text_1:
 	.string "אוף,\n"
-	.string "הייתי צריך להתאמן יותר קשה…$"
+	.string "הייתי צריך להתאמן קשה יותר…$"
 
 Alola_Ulaula_TrainerBattleHiker_Text_2:
-	.string "באי אולאולה יש את מסלולי ההליכה\n"
+	.string "באי אולאולה יש את מסלולי הטיול\n"
 	.string "הכי טובים!\p"
 	.string "המקומיים קוראים להר הזה הר לניקאלה,\n"
 	.string "כי הוא הגבוה ביותר באיי אלולה!$"
 
 Alola_Ulaula_TrainerBattleCooltrainer_Text_0:
 	.string "המערה הזאת מסריחה נורא!\n"
-	.string "קרב יסיח לי את הדעת ממנה!$"
+	.string "בוא נילחם, שאשכח קצת מהריח!$"
 
 Alola_Ulaula_TrainerBattleCooltrainer_Text_1:
 	.string "הייתי צריכה להביא מטהר אוויר…$"
@@ -380,7 +380,7 @@ Alola_Ulaula_LassNPC_Text_0:
 	.string "הים ליד האיים באמת\n"
 	.string "עוצר נשימה.\p"
 	.string "הייתי יכולה לשבת כאן כל היום\n"
-	.string "ולהסתכל על הגלים.$"
+	.string "ופשוט להסתכל על הגלים.$"
 
 Alola_Ulaula_Bench_Heal_Text_0:
 	.string "לנוח קצת על הספסל הזה?$"
@@ -594,11 +594,11 @@ Alola_Ulaula_Text_MoveTutorIntro:
 	.string "אררג!\n"
 	.string "אאח!\p"
 	.string "אתה!\p"
-	.string "האחרים שלחו אותך לכאן? הם סיפרו\n"
-	.string "לך שאני אמן מהלכי הפוקימונים?\p"
+	.string "האחרים שלחו אותך לכאן?\n"
+	.string "הם סיפרו לך שאני אמן מהלכי הפוקימונים?\p"
 	.string "........................\p"
 	.string "אני יכול לאמן את הפוקימונים שלך\n"
-	.string "בדרכי האיים, אבל קודם, תשלום קטן.\p"
+	.string "בדרכי האיים, אבל קודם כול, תשלום קטן.\p"
 	.string "המחיר הוא 5 קשקשי לב.\p"
 	.string "יש לך אותם?$"
 
@@ -624,12 +624,12 @@ Alola_Ulaula_Text_MoveTutorWhichMon:
 
 Alola_Ulaula_Text_MoveTutorDone:
 	.string "מצוין!\p"
-	.string "הפוקימון שלך מחזיק\n"
-	.string "בידע של האיים.$"
+	.string "הפוקימון שלך נושא עכשיו\n"
+	.string "את הידע של האיים.$"
 
 Alola_Ulaula_Text_MoveTutorComeBack:
 	.string "האיים לא הולכים לשום מקום.\n"
-	.string "אפשר לחזור בכל זמן.$"
+	.string "אפשר לחזור מתי שרוצים.$"
 
 Alola_Ulaula_Text_TutorMove_Acrobatics:
 	.string "אקרובטיקה$"
