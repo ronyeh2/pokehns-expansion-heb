@@ -307,7 +307,7 @@ FallarborTown_BattleTentLobby_hns_EventScript_ExitRules::
 FallarborTown_BattleTentLobby_hns_Text_MakeThinkImJustKid:
 	.string "פופופופופו.\p"
 	.string "אני אגרום לכולם לחשוב שאני סתם ילד,\n"
-	.string "כדי שיורידו את המשמר.\p"
+	.string "כדי שיזלזלו בי.\p"
 	.string "ואז אפתיע אותם ואחטוף את התואר!$"
 
 FallarborTown_BattleTentLobby_hns_Text_FallarborTentMyFavorite:
@@ -320,7 +320,7 @@ FallarborTown_BattleTentLobby_hns_Text_FallarborTentMyFavorite:
 FallarborTown_BattleTentLobby_hns_Text_CameToCampOut:
 	.string "שמעתי משהו על איזה אוהל,\n"
 	.string "אז באתי לעשות קמפינג.\p"
-	.string "לא ידעתי שאוהלים היום כל כך מפוארים!\p"
+	.string "לא ידעתי שאוהלים בימינו כל כך מפוארים!\p"
 	.string "אם אני כבר כאן,\n"
 	.string "למה לא לנסות את כוחי בקרבות!$"
 
