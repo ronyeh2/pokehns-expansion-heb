@@ -96,7 +96,7 @@ FallarborTown_BattleTentLobby_Text_BeatThreeTrainers:
 	.string "שלושה מאמנים ברצף!$"
 
 FallarborTown_BattleTentLobby_Text_WaitWhileSaveGame:
-	.string "נא להמתין בזמן שאשמור את המשחק.$"
+	.string "נא להמתין בזמן שאני שומר את המשחק.$"
 
 FallarborTown_BattleTentLobby_Text_PresentYouWithPrize:
 	.string "לכבוד רצף 3 הניצחונות שלך,\n"
@@ -114,7 +114,7 @@ FallarborTown_BattleTentLobby_Text_BagFullReturnForPrize:
 
 FallarborTown_BattleTentLobby_Text_ThankYouWaitWhileSaving:
 	.string "תודה רבה על ההשתתפות!\p"
-	.string "נא להמתין בזמן שאשמור את המשחק.$"
+	.string "נא להמתין בזמן שאני שומר את המשחק.$"
 
 FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge2:
 	.string "נחכה לאתגר שלך\n"
@@ -216,7 +216,7 @@ VerdanturfTown_BattleTentLobby_Text_NowFollowMe:
 
 VerdanturfTown_BattleTentLobby_Text_ResultsWillBeRecorded:
 	.string "זכות היא לי שראיתי את\n"
-	.string "מעללי הפוקימונים שלך.\p"
+	.string "הישגי הפוקימונים שלך.\p"
 	.string "התוצאות יירשמו.\n"
 	.string "עליי לבקש ממך להמתין רגע.$"
 
@@ -260,7 +260,7 @@ SlateportCity_BattleTentLobby_Text_ExplainSlateportTent:
 #endif
 	.string "אנחנו עורכים אירועי החלפת קרב\l"
 	.string "עם פוקימונים שכורים.\p"
-	.string "קודם כול, מושאלים לך שלושה\n"
+	.string "קודם כול, תקבל בהשאלה שלושה\n"
 	.string "פוקימונים במיוחד לאירוע הזה.\p"
 	.string "עם הפוקימונים השכורים האלה\n"
 	.string "יש להילחם בקרב יחיד.\p"
@@ -364,8 +364,8 @@ SlateportCity_BattleTentLobby_Text_ExplainSwapPartnerRules:
 	.string "שהמאמן המובס השתמש בהם.$"
 
 SlateportCity_BattleTentLobby_Text_ExplainSwapNumberRules:
-	.string "אחרי כל ניצחון בקרב, אפשר להחליף\n"
-	.string "לאחד הפוקימונים של היריב המובס.\p"
+	.string "אחרי כל ניצחון בקרב, אפשר לקבל בהחלפה\n"
+	.string "אחד מהפוקימונים של היריב המובס.\p"
 	.string "אי אפשר להחליף פוקימונים\n"
 	.string "עם המאמן השלישי באירוע.$"
 
