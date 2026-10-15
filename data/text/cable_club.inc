@@ -9,7 +9,7 @@ CableClub_Text_WhichService:
 	.string "to use?$"
 
 CableClub_Text_TradeUsingLinkCable::
-	.string "החלפת פוקימונים עם שחקן אחר\n"
+	.string "אפשר להחליף פוקימונים עם שחקן אחר\n"
 	.string "בכבל קישור של GBA.$"
 
 CableClub_Text_BattleUsingLinkCable::
@@ -45,7 +45,7 @@ gText_ConfirmLinkWhenPlayersReady::
 	.string "כפתור A: אישור, כפתור B: ביטול$"
 
 gText_ConfirmStartLinkWithXPlayers::
-	.string "התחלת קישור ל-{STR_VAR_1} שחקנים.\n"
+	.string "להתחיל קישור ל-{STR_VAR_1} שחקנים?\n"
 	.string "כפתור A: אישור, כפתור B: ביטול$"
 
 gText_AwaitingLinkup::
@@ -161,10 +161,8 @@ CableClub_Text_CantMixWithJapaneseGame:
 	.string "סליחה, אירעה שגיאת שידור.\p"
 	.string "אי אפשר לערבב רשומות עם\n"
 	.string "משחקי Ruby או Sapphire יפניים.\p"
-	.string "בנוסף, אי אפשר לערבב רשומות\n"
-	.string "בו-זמנית עם Emerald יפני\p"
-	.string "ועם משחקי Ruby או Sapphire\n"
-	.string "מחוץ ליפן.$"
+	.string "גם אי אפשר לערבב בו-זמנית עם Emerald\n"
+	.string "יפני ועם Ruby או Sapphire לא יפניים.$"
 
 CableClub_Text_AdapterNotConnected:
 	.string "מתאם האלחוט אינו\n"
@@ -387,7 +385,7 @@ CableClub_Text_WelcomeUnionRoomEnter:
 	.string "ברוכים הבאים לחדר האיחוד של\n"
 	.string "מועדון הפוקימון האלחוטי.\p"
 	.string "כאן אפשר לתקשר ישירות עם מאמנים\n"
-	.string "אחרים, שאת חלקם אולי אפילו לא תכיר.\p"
+	.string "אחרים, שחלקם אולי אפילו לא מוכרים לך.\p"
 	.string "תרצה להיכנס לחדר?$"
 
 CableClub_Text_UnionRoomInfo:
@@ -415,7 +413,7 @@ CableClub_Text_FirstTimeRightThisWay:
 	.string "אראה לך איך עובדת\n"
 	.string "מערכת התקשורת האלחוטית.\p"
 	.string "קודם כל, אני צריכה להראות לך\n"
-	.string "את הקומה הזו במרכז הפוקימון.\p"
+	.string "את הקומה הזו במרכז הפוקימון שלנו.\p"
 	.string "מכאן, בבקשה.$"
 
 CableClub_Text_ExplainWirelessClubFirstTime:
