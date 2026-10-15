@@ -1613,7 +1613,7 @@ CableClub_Text_WelcomeUnionRoomEnter_Frlg::
 	.string "ברוכים הבאים לחדר האיחוד של\n"
 	.string "מועדון הפוקימון האלחוטי.\p"
 	.string "כאן אפשר לתקשר ישירות עם מאמנים\n"
-	.string "אחרים, שאת חלקם אולי אפילו לא תכיר.\p"
+	.string "אחרים, שחלקם אולי אפילו לא מוכרים לך.\p"
 	.string "תרצה להיכנס לחדר?$"
 
 CableClub_Text_UnionRoomInfo_Frlg::
@@ -1704,8 +1704,8 @@ CableClub_Text_HopeYouEnjoyWirelessSystem_Frlg::
 	.string "התקשורת האלחוטית.$"
 
 Text_WirelessClubUndergoingAdjustments::
-	.string "אני מצטערת מאוד. כרגע מתבצעים\n"
-	.string "כיוונונים במועדון הפוקימון האלחוטי.$"
+	.string "אני מצטערת מאוד. כרגע מתבצעות\n"
+	.string "התאמות במועדון הפוקימון האלחוטי.$"
 
 Text_AppearsToBeUndergoingAdjustments::
 	.string "It appears to be undergoing\n"
