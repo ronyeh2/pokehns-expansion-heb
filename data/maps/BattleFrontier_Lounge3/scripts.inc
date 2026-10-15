@@ -284,7 +284,7 @@ BattleFrontier_Lounge3_Text_ChallengeBattleArena::
 
 BattleFrontier_Lounge3_Text_ChallengeBattlePike::
 	.string "אני מחפש מאמן שעומד להשתתף\n"
-	.string "בבחירת הקרב בשביל הקרב.\p"
+	.string "באתגר בחירת הקרב של שביל הקרב.\p"
 	.string "אבל עד עכשיו לא ראיתי מאמן\n"
 	.string "שיש לו את מה שצריך כדי לנצח.$"
 
@@ -323,74 +323,74 @@ BattleFrontier_Lounge3_Text_ThanksOffYouGo::
 BattleFrontier_Lounge3_Text_GetToBattleTowerSingle::
 	.string "קדימה, מיד לחדרי קרב יחיד\n"
 	.string "במגדל הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerDouble::
 	.string "קדימה, מיד לחדרי קרב כפול\n"
 	.string "במגדל הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleTowerMulti::
 	.string "קדימה, מיד לחדרי קרב מרובה\n"
 	.string "במגדל הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleDomeSingle::
 	.string "קדימה, מיד לטורניר הקרב היחיד\n"
 	.string "בכיפת הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleDomeDouble::
 	.string "קדימה, מיד לטורניר הקרב הכפול\n"
 	.string "בכיפת הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleFactorySingle::
 	.string "קדימה, מיד לטורניר החלפת קרב יחיד\n"
 	.string "במפעל הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleFactoryDouble::
 	.string "קדימה, מיד לטורניר החלפת קרב כפול\n"
 	.string "במפעל הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePalaceSingle::
 	.string "קדימה, מיד לאולמות הקרב היחיד\n"
 	.string "בארמון הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePalaceDouble::
 	.string "קדימה, מיד לאולמות הקרב הכפול\n"
 	.string "בארמון הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattleArena::
 	.string "קדימה, מיד לטורניר הנוקאאוט\n"
 	.string "בזירת הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePike::
-	.string "קדימה, מיד לבחירת הקרב\n"
-	.string "בשביל הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "קדימה, מיד לאתגר בחירת הקרב\n"
+	.string "של שביל הקרב!\p"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_GetToBattlePyramid::
 	.string "קדימה, מיד למסע הקרב\n"
 	.string "בפירמידת הקרב!\p"
-	.string "זה מצב שחייבים לנצח בו! אסור לפספס\n"
-	.string "את ההזדמנות! העתיד של שנינו תלוי בך!$"
+	.string "זה ניצחון חובה! אסור לפספס את ההזדמנות!\n"
+	.string "העתיד של שנינו תלוי בך!$"
 
 BattleFrontier_Lounge3_Text_NiceTryCantReturnPoints::
 	.string "Oh, it's you…\n"
