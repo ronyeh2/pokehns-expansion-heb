@@ -106,8 +106,8 @@ Alola_Melemele_BattleDugtrio_Text_0:
 	.string "צ'ה-צ'ה!$"
 
 Alola_AkalaCave_TrainerBattleHiker_Text_0:
-	.string "אתה בטח קשוח אם הגעת\n"
-	.string "עד לכאן למעלה!$"
+	.string "אתה בטח קשוח אם הצלחת לטפס\n"
+	.string "עד לכאן!$"
 
 Alola_AkalaCave_TrainerBattleHiker_Text_1:
 	.string "קשוח יותר ממני!$"
@@ -120,7 +120,7 @@ Alola_AkalaCave_TrainerBattleHiker_Text_2:
 
 Alola_AkalaCave_TrainerBattlePicnicker_Text_0:
 	.string "אני עייפה מכל ההליכה הזאת,\n"
-	.string "בוא נערוך קרב!$"
+	.string "בוא נילחם!$"
 
 Alola_AkalaCave_TrainerBattlePicnicker_Text_1:
 	.string "טוב, זה היה מרענן!$"
