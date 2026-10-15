@@ -432,8 +432,8 @@ BattleFrontier_Lounge7_Text_IllTakeBattlePoints_hns:
 BattleFrontier_Lounge7_Text_YouDontWantTo_hns:
 	.string "מה?\n"
 	.string "אתה לא רוצה…\p"
-	.string "אם תרצה לראות כמה אני מוכשרת,\n"
-	.string "בוא אליי מתי שבא לך!$"
+	.string "אם אתה רוצה לראות כמה אני מוכשרת,\n"
+	.string "בוא אליי מתי שתרצה!$"
 
 BattleFrontier_Lounge7_Text_RightTutorIntro_hns:
 	.string "אי-הי-הי-הי!\p"
@@ -448,13 +448,13 @@ BattleFrontier_Lounge7_Text_RightTutorIntro_hns:
 	.string "לי באמת יש ניסיון!\p"
 	.string "אני יכולה להוכיח לך.\p"
 	.string "אני יכולה ללמד את הפוקימונים שלך\n"
-	.string "מהלכים קשוחים, ובכל זאת יפים.\p"
+	.string "מהלכים חזקים, ובכל זאת יפים.\p"
 	.string "אבל השיעורים שלי לא בחינם. מה דעתך\n"
 	.string "לשלם על המהלכים בקצת נקודות קרב?$"
 
 BattleFrontier_Lounge7_Text_RightTutorWelcomeBack_hns:
 	.string "אי-הי-הי-הי!\p"
-	.string "באת ללמוד מהלכי פוקימון קשוחים,\n"
+	.string "באת ללמוד מהלכי פוקימון חזקים,\n"
 	.string "ובכל זאת יפים?$"
 
 BattleFrontier_Lounge7_Text_ThinkLadiesDontGetAlong_hns:
@@ -466,7 +466,7 @@ BattleFrontier_Lounge7_Text_ThinkLadiesDontGetAlong_hns:
 BattleFrontier_Lounge7_Text_LadiesWereStrongAndBeautiful_hns:
 	.string "כשהייתי רק צעיר קטנטן,\n"
 	.string "הגברות האלה היו חזקות ויפות.\p"
-	.string "כולנו, המאמנים, העריצו אותן.\p"
+	.string "כולנו, המאמנים, הערצנו אותן.\p"
 	.string "גם היום, הגיל לא הקהה את\n"
 	.string "היכולות שלהן.\p"
 	.string "למעשה, מהלכי הפוקימונים שלהן\n"
@@ -597,5 +597,5 @@ BattleFrontier_Lounge7_Text_TeachWhichMoveElemental::
 
 BattleFrontier_Lounge7_Text_StrongElementalMoveDesc::
 	.string "חזק, אך המשתמש\n"
-	.string "לא זז תור אחד.$"
+	.string "מושבת לתור אחד.$"
 
