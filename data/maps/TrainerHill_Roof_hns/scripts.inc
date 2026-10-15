@@ -69,14 +69,14 @@ TrainerHill_Roof_hns_Text_YouFinallyCameBravo:
 	.string "הממ! הממ!\p"
 	.string "סוף סוף באת!\n"
 	.string "כן, הגעת!\p"
-	.string "רגע! בלי לומר מילה! אני יודע למה\n"
+	.string "רגע! אל תגיד כלום! אני יודע למה\n"
 	.string "טרחת להגיע עד לכאן לבד!\p"
 	.string "רצית לפגוש אותי, הבעלים\n"
 	.string "של גבעת המאמנים, כי…\p"
-	.string "בא לך להקים איתי צוות זוגי!\n"
+	.string "אתה רוצה להקים איתי צוות זוגי!\n"
 	.string "יו-הו!\p"
 	.string "…אה?\n"
-	.string "זה לא העניין?\p"
+	.string "לא בגלל זה?\p"
 	.string "בכל אופן, צפיתי בך בדרך למעלה.\n"
 	.string "קרבות נפלאים! בראבו, באמת!$"
 
@@ -93,7 +93,7 @@ TrainerHill_Roof_hns_Text_GotHereMarvelouslyQuickly:
 	.string "לכאן במהירות נפלאה?\p"
 	.string "כמה נהדר! לא היה צורך למהר\n"
 	.string "כל כך כדי לראות אותי!\p"
-	.string "זה כל כך משמח. אדאג שלוח הזמנים\n"
+	.string "זה כל כך משמח. אדאג שלוח השיאים\n"
 	.string "בדלפק הקבלה יעודכן!$"
 
 TrainerHill_Roof_hns_Text_YouWerentVeryQuick:
