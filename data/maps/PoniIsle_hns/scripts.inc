@@ -434,7 +434,7 @@ Alola_Poni_TrainerBattleSwimmer1_Text_1:
 	.string "אוף, שכחתי את קרם ההגנה…$"
 
 Alola_Poni_TrainerBattleSwimmer1_Text_2:
-	.string "פגשתי בשחייה המון פוקימונים מגניבים!\n"
+	.string "שחיתי ונתקלתי בהמון פוקימונים מגניבים!\n"
 	.string "בטח יש משהו במים.$"
 
 Alola_Poni_TrainerBattleSwimmer2_Text_0:
