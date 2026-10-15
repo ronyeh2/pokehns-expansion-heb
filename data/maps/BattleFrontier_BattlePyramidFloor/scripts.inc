@@ -683,7 +683,7 @@ BattlePyramid_Text_OneTrainersRemaining5::
 	.string "את המאמן המומחה האחרון שנותר.$"
 
 BattlePyramid_Text_ZeroTrainersRemaining5::
-	.string "הכישורים שלך ללא רבב.\p"
+	.string "הכישורים שלך מעל לכל ביקורת.\p"
 	.string "לא נשארו כאן עוד מאמנים\n"
 	.string "שיש להם סיכוי כלשהו לנצח אותך.$"
 
