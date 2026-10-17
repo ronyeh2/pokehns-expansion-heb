@@ -1,0 +1,79 @@
+name: Hebrew
+
+# Checks for the Hebrew translation branches. No ROM is uploaded anywhere: a built ROM is never
+# published from this repository.
+
+on:
+  push:
+    branches:
+      - 'he/**'
+  pull_request:
+    branches:
+      - 'he/main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install the toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+
+      - name: ROM (make hns)
+        run: make hns -j$(nproc) -O
+
+      - name: Clip-report ROM (glyphs drawn outside their window are logged)
+        run: make hns RTL_CLIP_REPORT=1 -j$(nproc) -O
+
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check out the baselines
+        # pokehns-heb-engine: the engine with the English strings (he/renderer), for the drift
+        # check; pokehns-en: upstream, for the layout audit's English baseline.
+        run: |
+          git worktree add ../pokehns-heb-engine origin/he/renderer
+          git worktree add ../pokehns-en origin/master
+
+      - name: Only strings differ from the English baseline
+        run: |
+          git diff --name-only origin/master...HEAD -- data src \
+            | grep -E '\.(inc|s|c|h)$' \
+            | xargs python3 tools/hebrew/drift.py --quiet
+
+      - name: Layout audit (widths, lines, buffers, byte limits)
+        run: python3 tools/hebrew/audit.py --baseline ../pokehns-en --report audit.txt; status=$?; head -40 audit.txt; exit $status
+
+      - name: Glossary (byte limits, final letters, duplicates)
+        run: python3 tools/hebrew/namecheck.py --all
+
+      - name: Tool tests
+        run: python3 -m unittest discover -s tools/hebrew/tests
+
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install the toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+
+      - name: make check
+        # Upstream 2.0.6 does not pass its own suite; check_tests.py fails only on a test that is
+        # not in tools/hebrew/data/known_test_failures.txt (the tests upstream fails).
+        run: |
+          set +e
+          make check BUILD=hns -j$(nproc) > check.log 2>&1
+          python3 tools/hebrew/check_tests.py check.log
