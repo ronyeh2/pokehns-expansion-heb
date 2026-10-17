@@ -1018,7 +1018,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_MEOWTH] =
     {
-        .nickname = _("MEOWOW"),
+        .nickname = _("מיאואו"),
         .species = SPECIES_MEOWTH,
         .ivs = {4, 5, 4, 5, 4, 4},
         .abilityNum = 0,
@@ -1027,7 +1027,7 @@ static const struct InGameTrade sIngameTrades[] =
         .personality = 0x8B,
         .heldItem = ITEM_RETRO_MAIL,
         .mailNum = 2,
-        .otName = _("ISIS"),
+        .otName = _("איסיס"),
         .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_SKITTY
@@ -1035,7 +1035,7 @@ static const struct InGameTrade sIngameTrades[] =
     // HnS
     [INGAME_TRADE_ONIX] =
     {
-        .nickname = _("ROCKY"),
+        .nickname = _("רוקי"),
         .species = SPECIES_ONIX,
         .ivs = {4, 4, 4, 5, 5, 4},
         .abilityNum = 1,
@@ -1044,14 +1044,14 @@ static const struct InGameTrade sIngameTrades[] =
         .personality = 0x96,
         .heldItem = ITEM_PERSIM_BERRY,
         .mailNum = 0,
-        .otName = _("RUDY"),
+        .otName = _("רודי"),
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_BELLSPROUT
     },
     [INGAME_TRADE_MACHOP] =
     {
-        .nickname = _("MUSCLE"),
+        .nickname = _("שרירים"),
         .species = SPECIES_MACHOP,
         .ivs = {4, 4, 4, 5, 5, 4},
         .abilityNum = 0,
@@ -1083,7 +1083,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_MAGNETON] =
     {
-        .nickname = _("MAGGIE"),
+        .nickname = _("מגי"),
         .species = SPECIES_MAGNETON,
         .ivs = {4, 4, 4, 5, 5, 4},
         .abilityNum = 0,
@@ -1092,7 +1092,7 @@ static const struct InGameTrade sIngameTrades[] =
         .personality = 0x00000008,
         .heldItem = ITEM_METAL_COAT,
         .mailNum = 0,
-        .otName = _("LORENZO"),
+        .otName = _("לורנצו"),
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_DUGTRIO
@@ -1111,7 +1111,7 @@ static const struct InGameTrade sIngameTrades[] =
         // makes it into the PC, so he is kept from evolving on the trade at all.
         .heldItem = ITEM_EVERSTONE,
         .mailNum = 0,
-        .otName = _("MONDO"),
+        .otName = _("מונדו"),
         .otGender = MALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_XATU
@@ -1150,7 +1150,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_BONSLY] =
     {
-        .nickname = _("WOODY"),
+        .nickname = _("וודי"),
         .species = SPECIES_BONSLY,
         .ivs = {4, 4, 4, 5, 5, 4},
         .abilityNum = 0,
@@ -1166,7 +1166,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_STEELIX] =
     {
-        .nickname = _("RUSTY"),
+        .nickname = _("ראסטי"),
         .species = SPECIES_STEELIX,
         .ivs = {4, 4, 4, 5, 5, 4},
         .abilityNum = 0,
@@ -1214,7 +1214,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_TAUROS_WATER] =
     {
-        .nickname = _("TORY"),
+        .nickname = _("טורי"),
         .species = SPECIES_TAUROS_PALDEA_AQUA,
         .ivs = {31, 31, 31, 31, 31, 31},
         .abilityNum = 0,
@@ -1230,7 +1230,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_TAUROS_FIGHT] =
     {
-        .nickname = _("TORY"),
+        .nickname = _("טורי"),
         .species = SPECIES_TAUROS_PALDEA_COMBAT,
         .ivs = {31, 31, 31, 31, 31, 31},
         .abilityNum = 0,
@@ -1246,7 +1246,7 @@ static const struct InGameTrade sIngameTrades[] =
     },
     [INGAME_TRADE_TAUROS_FIRE] =
     {
-        .nickname = _("TORY"),
+        .nickname = _("טורי"),
         .species = SPECIES_TAUROS_PALDEA_BLAZE,
         .ivs = {31, 31, 31, 31, 31, 31},
         .abilityNum = 0,
@@ -1263,7 +1263,7 @@ static const struct InGameTrade sIngameTrades[] =
         [INGAME_TRADE_NIDORAN] = 
     {
 #if defined(FIRERED)
-        .nickname = _("MS. NIDO"),
+        .nickname = _("גברת נידו"),
         .species = SPECIES_NIDORAN_F,
         .ivs = {22, 18, 25, 19, 15, 22},
         .abilityNum = 0,
