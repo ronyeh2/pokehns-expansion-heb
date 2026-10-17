@@ -1,0 +1,365 @@
+#!/usr/bin/env python3
+"""Translation units: extract player-visible strings into JSON, and write translations back.
+
+Translators never edit source files. They get a JSON chunk of units, fill in "he", and this tool
+writes the Hebrew back into the tree, refusing anything that would change more than the string.
+
+  units.py extract FILE... [--all-labels] > units.json      one unit per string
+  units.py apply UNITS.json [UNITS.json ...] [--dry-run]     write "he" back into the tree
+  units.py status FILE...                                     how many units are translated
+
+A unit:
+  {"id": "data/maps/X/scripts.inc::Label",  or  "src/foo.c@123#0"
+   "file": ..., "kind": "script" | "c",
+   "key":  "Label" or "ITEM_POTION.description" or the C variable name,
+   "field": "description" | "speciesName" | ... (C only, the struct field it fills),
+   "live": true/false, "en": "...", "he": "", "context": {...}}
+
+Script text: the label's joined .string text, with \\n \\l \\p and the trailing $ kept exactly as in
+the source. Writing back splits it into one .string line per \\n, \\l or \\p, like the English.
+C text: the literal content (adjacent literals joined). Writing back keeps the macro and splits
+after each \\n onto its own line when the English did.
+
+The tree is HNS_TREE (this repository) unless --tree is given.
+"""
+import argparse, csv, json, os, re, sys
+
+import paths
+
+TREE = paths.TREE
+LIVE_LABELS = paths.LIVE_LABELS
+C_STRINGS = paths.C_STRINGS
+GLOSSARY = paths.GLOSSARY
+
+TOKEN_RE = re.compile(r'\{[^}]*\}')
+DROPPABLE_TOKENS = {'{POKE}', '{PKMN}', '{POKEBLOCK}'}
+
+# ---------------------------------------------------------------------------------------------
+# Script files
+
+
+LABEL_RE = re.compile(r'^([A-Za-z0-9_]+)::?\s*(@.*)?$')
+STRING_RE = re.compile(r'^(\s*)\.string\s+"((?:[^"\\]|\\.)*)"\s*(@.*)?$')
+
+
+def parse_script(text):
+    """Yields text blocks: (label, first_line_index, last_line_index, indent, joined_text)."""
+    lines = text.split('\n')
+    label = None
+    blocks = []
+    i = 0
+    seen = {}
+    while i < len(lines):
+        m = LABEL_RE.match(lines[i].strip())
+        if m:
+            label = m.group(1)
+            i += 1
+            continue
+        m = STRING_RE.match(lines[i])
+        if m:
+            start = i
+            indent = m.group(1)
+            parts = []
+            while i < len(lines):
+                m2 = STRING_RE.match(lines[i])
+                if not m2:
+                    break
+                parts.append(m2.group(2))
+                i += 1
+            key = label or '<nolabel>'
+            n = seen.get(key, 0)
+            seen[key] = n + 1
+            if n:
+                key = '%s#%d' % (key, n + 1)
+            blocks.append((key, start, i - 1, indent, ''.join(parts)))
+            continue
+        i += 1
+    return lines, blocks
+
+
+def split_script_text(text):
+    """Splits joined text after each \\n, \\l, \\p into .string payloads."""
+    out, cur, i = [], '', 0
+    while i < len(text):
+        if text[i] == '\\' and i + 1 < len(text):
+            cur += text[i:i + 2]
+            if text[i + 1] in 'nlp':
+                out.append(cur)
+                cur = ''
+            i += 2
+            continue
+        cur += text[i]
+        i += 1
+    if cur:
+        out.append(cur)
+    return out
+
+
+def script_speakers(path):
+    """label -> sorted graphics ids of the objects whose script shows it (best effort)."""
+    mapdir = os.path.dirname(path)
+    mj = os.path.join(mapdir, 'map.json')
+    if not os.path.exists(mj):
+        return {}
+    try:
+        data = json.load(open(mj, encoding='utf-8'))
+    except Exception:
+        return {}
+    script_gfx = {}
+    for ev in data.get('object_events', []) or []:
+        s = ev.get('script')
+        if s and s != '0x0':
+            script_gfx.setdefault(s, set()).add(ev.get('graphics_id', '?'))
+    if not script_gfx:
+        return {}
+    text = open(path, encoding='utf-8').read()
+    lines = text.split('\n')
+    cur = None
+    refs = {}
+    for line in lines:
+        m = LABEL_RE.match(line.strip())
+        if m:
+            cur = m.group(1)
+            continue
+        if cur in script_gfx:
+            for tok in re.findall(r'[A-Za-z0-9_]+_Text_[A-Za-z0-9_]+', line):
+                refs.setdefault(tok, set()).update(script_gfx[cur])
+    return {k: sorted(v) for k, v in refs.items()}
+
+
+def load_live_labels():
+    p = LIVE_LABELS
+    return json.load(open(p)) if os.path.exists(p) else {}
+
+
+def extract_script(path, rel, all_labels):
+    text = open(path, encoding='utf-8').read()
+    lines, blocks = parse_script(text)
+    live = load_live_labels().get(rel)
+    live_set = set(live['live']) | set(live.get('debug_only', [])) if live else None
+    speakers = script_speakers(path)
+    units = []
+    for key, start, end, indent, joined in blocks:
+        base = key.split('#')[0]
+        if not re.search(r'[A-Za-z]', TOKEN_RE.sub('', joined)):
+            continue
+        is_live = live_set is None or base in live_set
+        if not is_live and not all_labels:
+            continue
+        ctx = {'line': start + 1, 'map': os.path.basename(os.path.dirname(rel))}
+        if base in speakers:
+            ctx['speaker_gfx'] = speakers[base]
+        units.append({'id': '%s::%s' % (rel, key), 'file': rel, 'kind': 'script', 'key': key,
+                      'live': is_live, 'en': joined, 'he': '', 'context': ctx})
+    return units
+
+
+def apply_script(path, rel, units, dry):
+    text = open(path, encoding='utf-8').read()
+    lines, blocks = parse_script(text)
+    by_key = {u['key']: u for u in units}
+    # Replace from the bottom so line numbers stay valid.
+    changed = 0
+    for key, start, end, indent, joined in reversed(blocks):
+        u = by_key.get(key)
+        if not u or not u.get('he'):
+            continue
+        if u['en'] != joined and not re.search(r'[\u0590-\u05FF]', joined):
+            raise SystemExit('%s: %s changed in the tree since extraction' % (rel, key))
+        check_unit(u)
+        payloads = split_script_text(u['he'])
+        new = ['%s.string "%s"' % (indent, p) for p in payloads]
+        lines[start:end + 1] = new
+        changed += 1
+    if not dry:
+        open(path, 'w', encoding='utf-8').write('\n'.join(lines))
+    return changed
+
+
+# ---------------------------------------------------------------------------------------------
+# C files
+
+C_MACROS = r'(?:_|__|COMPOUND_STRING|COMPOUND_STRING_SIZE_LIMIT|ITEM_NAME|ITEM_PLURAL_NAME)'
+C_LIT_RE = re.compile(r'"((?:[^"\\]|\\.)*)"')
+C_CALL_RE = re.compile(r'\b(' + C_MACROS + r')\((\s*)((?:"(?:[^"\\]|\\.)*"\s*)+)(,[^)]*)?\)', re.S)
+DESIGNATOR_RE = re.compile(r'\[\s*([A-Z][A-Z0-9_]+)\s*\]\s*=')
+FIELD_RE = re.compile(r'\.([A-Za-z0-9_]+)\s*=\s*$')
+VAR_RE = re.compile(r'(?:const\s+)?u8\s+([A-Za-z0-9_]+)\s*\[[^\]]*\]\s*=\s*$')
+
+
+def c_live_index():
+    try:
+        data = json.load(open(C_STRINGS))
+    except Exception:
+        return {}
+    idx = {}
+    for f, lits in data.items():
+        for l in lits:
+            # None means the inventory could not search for it (too short to be unique): live.
+            r, st = l.get('rom_release'), l.get('rom_std')
+            idx[(f, l['line'])] = not (r is False and st is False)
+    return idx
+
+
+def c_literals(text):
+    """Yields (match, line_no, joined_text, designator, field, var)."""
+    for m in C_CALL_RE.finditer(text):
+        joined = ''.join(C_LIT_RE.findall(m.group(3)))
+        line_no = text.count('\n', 0, m.start()) + 1
+        before = text[max(0, m.start() - 4000):m.start()]
+        desig = None
+        for d in DESIGNATOR_RE.finditer(before):
+            desig = d.group(1)
+        last_line = before.split('\n')[-1]
+        fm = FIELD_RE.search(last_line)
+        vm = VAR_RE.search(last_line)
+        yield m, line_no, joined, desig, fm.group(1) if fm else None, vm.group(1) if vm else None
+
+
+def extract_c(path, rel, all_labels):
+    text = open(path, encoding='utf-8').read()
+    live_idx = c_live_index()
+    units = []
+    n = 0
+    for m, line_no, joined, desig, field, var in c_literals(text):
+        idx = n
+        n += 1
+        if not re.search(r'[A-Za-z]', TOKEN_RE.sub('', joined)):
+            continue
+        is_live = live_idx.get((rel, line_no), True)
+        if not is_live and not all_labels:
+            continue
+        key = var or ('%s.%s' % (desig, field) if desig and field else (desig or field or '?'))
+        units.append({'id': '%s@%d#%d' % (rel, line_no, idx), 'file': rel, 'kind': 'c', 'key': key,
+                      'field': field, 'macro': m.group(1), 'live': is_live, 'en': joined, 'he': '',
+                      'context': {'line': line_no}})
+    return units
+
+
+def c_escape_ok(s):
+    # A translation must not contain a bare double quote; backslashes only as \n \l \p \\ \".
+    i = 0
+    while i < len(s):
+        if s[i] == '"':
+            return False
+        if s[i] == '\\':
+            if i + 1 >= len(s) or s[i + 1] not in 'nlp"\\':
+                return False
+            i += 2
+            continue
+        i += 1
+    return True
+
+
+def apply_c(path, rel, units, dry):
+    text = open(path, encoding='utf-8').read()
+    by_idx = {}
+    for u in units:
+        if u.get('he'):
+            by_idx[int(u['id'].rsplit('#', 1)[1])] = u
+    if not by_idx:
+        return 0
+    out, pos, n, changed = [], 0, 0, 0
+    for m, line_no, joined, desig, field, var in c_literals(text):
+        idx = n
+        n += 1
+        u = by_idx.get(idx)
+        if not u:
+            continue
+        if u['en'] != joined and not re.search(r'[\u0590-\u05FF]', joined):
+            raise SystemExit('%s: literal #%d (line %d) changed since extraction' % (rel, idx, line_no))
+        check_unit(u)
+        if not c_escape_ok(u['he']):
+            raise SystemExit('%s: unit %s has a bare quote or bad escape' % (rel, u['id']))
+        seg = m.group(3)
+        lits = C_LIT_RE.findall(seg)
+        trailing = seg[len(seg.rstrip()):]
+        if len(lits) > 1:
+            # Keep the English layout: one literal per line, split after each \n.
+            nl_indent = re.search(r'\n([ \t]*)"', m.group(2) + seg)
+            indent = nl_indent.group(1) if nl_indent else ''
+            parts = split_script_text(u['he']) or ['']
+            body = ('\n' + indent).join('"%s"' % p for p in parts)
+        else:
+            body = '"%s"' % u['he']
+        new_call = '%s(%s%s%s%s)' % (m.group(1), m.group(2), body, trailing, m.group(4) or '')
+        out.append(text[pos:m.start()])
+        out.append(new_call)
+        pos = m.end()
+        changed += 1
+    out.append(text[pos:])
+    if not dry:
+        open(path, 'w', encoding='utf-8').write(''.join(out))
+    return changed
+
+
+# ---------------------------------------------------------------------------------------------
+# Checks shared by every unit
+
+
+def check_unit(u):
+    t_en = [t for t in TOKEN_RE.findall(u['en']) if t not in DROPPABLE_TOKENS]
+    t_he = [t for t in TOKEN_RE.findall(u['he']) if t not in DROPPABLE_TOKENS]
+    if t_en != t_he:
+        raise SystemExit('TOKENS %s: %s -> %s' % (u['id'], t_en, t_he))
+    if u['kind'] == 'script' and u['en'].endswith('$') != u['he'].endswith('$'):
+        raise SystemExit('TERMINATOR %s' % u['id'])
+    if '\n' in u['he'] or '\r' in u['he']:
+        raise SystemExit('RAW NEWLINE %s (use \\n)' % u['id'])
+
+
+# ---------------------------------------------------------------------------------------------
+
+
+def extract(files, tree, all_labels):
+    units = []
+    for f in files:
+        rel = os.path.relpath(os.path.abspath(f), tree) if os.path.isabs(f) else f
+        path = os.path.join(tree, rel)
+        if rel.endswith('.inc') or rel.endswith('.s'):
+            units += extract_script(path, rel, all_labels)
+        elif rel.endswith('.c') or rel.endswith('.h'):
+            units += extract_c(path, rel, all_labels)
+        else:
+            print('skip (unsupported): %s' % rel, file=sys.stderr)
+    return units
+
+
+def apply(unit_files, tree, dry):
+    by_file = {}
+    for uf in unit_files:
+        doc = json.load(open(uf, encoding='utf-8'))
+        for u in (doc['units'] if isinstance(doc, dict) else doc):
+            by_file.setdefault(u['file'], []).append(u)
+    total = 0
+    for rel, us in sorted(by_file.items()):
+        path = os.path.join(tree, rel)
+        if us[0]['kind'] == 'script':
+            n = apply_script(path, rel, us, dry)
+        else:
+            n = apply_c(path, rel, us, dry)
+        total += n
+        print('%s %d unit(s) %s' % ('would write' if dry else 'wrote', n, rel))
+    return total
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('cmd', choices=['extract', 'apply', 'status'])
+    ap.add_argument('paths', nargs='+')
+    ap.add_argument('--tree', default=TREE)
+    ap.add_argument('--all-labels', action='store_true', help='include dead labels/literals too')
+    ap.add_argument('--dry-run', action='store_true')
+    a = ap.parse_args()
+    if a.cmd == 'extract':
+        json.dump(extract(a.paths, a.tree, a.all_labels), sys.stdout, ensure_ascii=False, indent=1)
+    elif a.cmd == 'apply':
+        apply(a.paths, a.tree, a.dry_run)
+    else:
+        us = extract(a.paths, a.tree, False)
+        heb = sum(1 for u in us if re.search(r'[֐-׿]', u['en']))
+        print('%d units, %d already Hebrew' % (len(us), heb))
+
+
+if __name__ == '__main__':
+    main()
