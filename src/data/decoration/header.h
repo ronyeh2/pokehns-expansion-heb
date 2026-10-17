@@ -603,7 +603,7 @@ const struct Decoration gDecorations[] =
     [DECOR_SPIN_MAT] =
     {
         .id = DECOR_SPIN_MAT,
-        .name = _("שטיח סיבוב"),
+        .name = _("שטיח סחרור"),
         .permission = DECORPERM_PASS_FLOOR,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_MAT,
@@ -891,7 +891,7 @@ const struct Decoration gDecorations[] =
     [DECOR_SKY_POSTER] =
     {
         .id = DECOR_SKY_POSTER,
-        .name = _("פוסטר שמיים"),
+        .name = _("פוסטר שמים"),
         .permission = DECORPERM_NA_WALL,
         .shape = DECORSHAPE_2x1,
         .category = DECORCAT_POSTER,
