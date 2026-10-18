@@ -7,7 +7,7 @@ SaffronCity_EventScript_CityEnter::
 	end
 
 SaffronCity_Text_BaobaName:
-	.string "BAOBA$"
+	.string "באובה$"
 
 SaffronCity_Text_Baoba:
 	.string "WARDEN BAOBA: {PLAYER}!\p"
