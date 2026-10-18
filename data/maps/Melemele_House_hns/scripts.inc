@@ -160,13 +160,13 @@ Alola_Melemele_Pokecenter_Jessica_Text_WantToTrade:
 
 Alola_Melemele_Pokecenter_Jessica_Text_TakeCare:
 	.string "תודה!\n"
-	.string "TORY, שמור על עצמך!$"
+	.string "טורי, שמור על עצמך!$"
 
 Alola_Melemele_Pokecenter_Jessica_Text_DeclineTrade:
 	.string "לא רוצה להחליף? אוי, חבל…$"
 
 Alola_Melemele_Pokecenter_Jessica_Text_TradeCompleted:
-	.string "היי, מה שלום TORY שלי לשעבר?$"
+	.string "היי, מה שלום טורי שלי לשעבר?$"
 
 Alola_Melemele_Pokecenter_Map_Text_0:
 	.string "{PLAYER} התבונן מקרוב\n"
