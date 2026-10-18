@@ -374,7 +374,7 @@ Route32_Text_CooltrainerM_SproutTower:
 	.string "קדימה, למגדל הנבט!$"
 
 Route32_Text_CooltrainerM_VioletGym:
-	.string "כבר היית במכון הפוקימונים?\p"
+	.string "כבר היית במכון הפוקימון?\p"
 	.string "שם אפשר לבחון את הפוקימונים שלך\n"
 	.string "ואת עצמך.\p"
 	.string "זה טקס חניכה שכל המאמנים עוברים!$"
