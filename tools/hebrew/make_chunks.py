@@ -64,7 +64,12 @@ def names_in(text, rows):
         while i >= 0:
             before = plain[i - 1] if i > 0 else ' '
             after = plain[i + len(en)] if i + len(en) < len(plain) else ' '
-            if not before.isalnum() and not after.isalnum():
+            # A hit inside a longer capitalised name (PASS in FRONTIER PASS) is not this name.
+            prev_word = re.findall(r'[A-Za-z\xe9]+', plain[:i])[-1:] if i else []
+            next_word = re.findall(r'[A-Za-z\xe9]+', plain[i + len(en):])[:1]
+            in_longer = (before == ' ' and prev_word and prev_word[0].isupper() and len(prev_word[0]) > 1) or \
+                        (after == ' ' and next_word and next_word[0].isupper() and len(next_word[0]) > 1)
+            if not before.isalnum() and not after.isalnum() and not (en.isupper() and in_longer):
                 found[en] = hebrew_of(r)
                 break
             i = plain.find(en, i + 1)

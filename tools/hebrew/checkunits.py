@@ -148,9 +148,11 @@ def check(u):
                 limit = px - 8 if (prompt and u['kind'] == 'script') else px
                 if width > limit:
                     errs.append('WIDTH page %d line %d: %d px > %d' % (page, row, width, limit))
+            # \l scrolls the box one line and keeps the row (src/text.c RENDER_STATE_SCROLL), so a
+            # page shows as many lines as it has distinct rows.
             for page, rows in pages.items():
-                if len(rows) > max_lines and u['kind'] == 'script':
-                    errs.append('LINES page %d has %d lines (max %d)' % (page, len(rows), max_lines))
+                if len(set(rows)) > max_lines and u['kind'] == 'script':
+                    errs.append('LINES page %d has %d lines (max %d)' % (page, len(set(rows)), max_lines))
     return errs, warns
 
 
