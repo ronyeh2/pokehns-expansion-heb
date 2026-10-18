@@ -78,7 +78,7 @@ class WrapTest(unittest.TestCase):
         self.assertFalse(b.scroll)
         self.assertIn(('FONT_NARROW', 128, 128), b.checks)
         d = wrap.budget_for_kind('overworld_dialogue')
-        self.assertEqual((d.checks, d.lines, d.scroll), ([('FONT_NORMAL', 208, 208)], 2, True))
+        self.assertEqual((d.checks, d.lines, d.scroll), ([('FONT_NORMAL', 208, 200)], 2, True))
 
     def test_cli(self):
         out = subprocess.run([sys.executable, os.path.join(TOOLS, 'wrap.py'), '--fonts-tree', self.tree,

@@ -501,6 +501,27 @@ def _rows_overflow(lines, max_lines):
     return [(p, r) for p, r in sorted(rows.items()) if r > max_lines]
 
 
+# Z-moves and Max/G-Max moves replace a move only while it is used in battle: they are never in a
+# move set, so only the battle move-select box and battle messages can show their names.
+BATTLE_ONLY_WHERE = ('battle move select', 'battle messages')
+BATTLE_ONLY = set()
+
+
+def _move_const(key):
+    m = re.search(r'\bMOVE_[A-Z0-9_]+', key or '')
+    return m.group(0) if m else None
+
+
+def battle_only_moves(tree):
+    path = os.path.join(tree, 'include', 'constants', 'moves.h')
+    try:
+        text = open(path, encoding='utf-8').read()
+    except OSError:
+        return set()
+    m = re.search(r'FIRST_Z_MOVE\s*=\s*MOVES_COUNT,(.*?)MOVES_COUNT_DYNAMAX', text, re.S)
+    return set(re.findall(r'\b(MOVE_[A-Z0-9_]+)\s*(?:=|,)', m.group(1))) if m else set()
+
+
 def check_entry(model, kinds, e):
     out = []
     if e.note:
@@ -533,6 +554,8 @@ def check_entry(model, kinds, e):
     if k.get('all_nbsp'):
         units = [tw.NBSP if u == tw.SPACE else u for u in units]
     for where, fonts, px_warn, px_err, prompt_px, max_lines in k['checks']:
+        if e.kind == 'move_name' and not where.startswith(BATTLE_ONLY_WHERE) and _move_const(e.key) in BATTLE_ONLY:
+            continue
         try:
             first = fonts[0]
             u = tw.battle_auto_wrap(model, units, first) if battle else units
@@ -661,6 +684,7 @@ def main(argv=None):
     model = tw.TextModel(a.fonts_tree, a.charmap, symtree=a.tree, fill=a.fill, subst=subst,
                          hebrew_widths=a.hebrew_widths)
     kinds = build_kinds(a.budgets)
+    BATTLE_ONLY.update(battle_only_moves(a.tree))
     entries, findings = audit(a.tree, model, kinds, a.paths or None)
     suppressed = []
     if a.baseline:
