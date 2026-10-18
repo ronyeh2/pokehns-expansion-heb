@@ -541,10 +541,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 18,
         .weight = 1803,
         .description = COMPOUND_STRING(
-            "Brandishing a blazing flame\n"
-            "shaped like a serpentine spear,\n"
-            "it rushes in to save its\n"
-            "imperiled allies."),
+            "הוא מניף להבה בוערת בצורת חנית\n"
+            "מתפתלת, וממהר להציל את בני בריתו\n"
+            "שנקלעו לסכנה."),
         .frontPic = gMonFrontPic_EmboarMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2843,10 +2842,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 9,
         .weight = 600,
         .description = COMPOUND_STRING(
-            "If this Pokémon brings its arms and\n"
-            "head together to form a streamlined\n"
-            "shape and spins at high speeds,\n"
-            "it can destroy anything."),
+            "אם הפוקימון הזה מצמיד את זרועותיו\n"
+            "ואת ראשו לצורה אווירודינמית ומסתובב\n"
+            "במהירות רבה, הוא יכול להרוס כל דבר."),
         .frontPic = gMonFrontPic_ExcadrillMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2978,10 +2976,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 320,
         .description = COMPOUND_STRING(
-            "Mega Audino emits a soothing pulse from\n"
-            "its body that reduces hostility in others.\n"
-            "Anything that comes into contact with its\n"
-            "second feelers will fall into a deep sleep."),
+            "מגה אודינו פולט מגופו פעימה מרגיעה\n"
+            "שמפחיתה את העוינות של אחרים. כל מי שנוגע\n"
+            "בזוג המחושים השני שלו שוקע בשינה עמוקה."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -4063,9 +4060,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 32,
         .weight = 2305,
         .description = COMPOUND_STRING(
-            "Its deadly venom gives off a faint\n"
-            "glow. The venom affects Scolipede's\n"
-            "mind, honing its viciousness."),
+            "הארס הקטלני שלו פולט זוהר חלש. הארס\n"
+            "משפיע על מוחו של סקוליפיד ומחדד\n"
+            "את אכזריותו."),
         .frontPic = gMonFrontPic_ScolipedeMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -5836,10 +5833,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 11,
         .weight = 310,
         .description = COMPOUND_STRING(
-            "Mega Evolution has caused Scrafty's\n"
-            "shed skin to turn white, growing\n"
-            "tough and supple. Of course, this\n"
-            "Pokémon is still as feisty as ever."),
+            "התפתחות המגה גרמה לעור המושל של סקראפטי\n"
+            "להלבין ולהיעשות קשוח וגמיש. כמובן,\n"
+            "הפוקימון הזה עדיין לוחמני כתמיד."),
         .frontPic = gMonFrontPic_ScraftyMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
@@ -6688,10 +6684,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 210,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "It sprays toxic gas from its mouth\n"
-            "and fingers. If the gas engulfs you,\n"
-            "the toxins will seep in all the way\n"
-            "down to your bones."),
+            "הוא מרסס גז רעיל מפיו ומאצבעותיו.\n"
+            "אם הגז יעטוף אותך, הרעלים יחלחלו\n"
+            "פנימה עד לעצמות שלך."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -9827,10 +9822,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 30,
         .weight = 1800,
         .description = COMPOUND_STRING(
-            "It now generates 10 times the\n"
-            "electricity it did before Mega\n"
-            "Evolving. It discharges this energy\n"
-            "from its false Eelektrik made of mucus."),
+            "עכשיו הוא מפיק פי 10 יותר חשמל מאשר\n"
+            "לפני שהתפתח למגה. הוא פורק את\n"
+            "האנרגיה הזאת מאילקטריק מזויף עשוי ריר."),
         .frontPic = gMonFrontPic_EelektrossMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
@@ -10251,10 +10245,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 25,
         .weight = 696,
         .description = COMPOUND_STRING(
-            "One of its eyes is a window linking\n"
-            "our world with the afterlife.\n"
-            "This Pokémon draws in hatred and\n"
-            "converts it into power."),
+            "אחת מעיניו היא חלון שמחבר בין העולם\n"
+            "שלנו לעולם הבא. הפוקימון הזה שואב\n"
+            "שנאה והופך אותה לכוח."),
         .frontPic = gMonFrontPic_ChandelureMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -11376,9 +11369,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 40,
         .weight = 3300,
         .description = COMPOUND_STRING(
-            "The energy within Golurk has been\n"
-            "stimulated by Mega Evolution.\n"
-            "The Pokémon could explode at any moment."),
+            "התפתחות המגה עוררה את האנרגיה שבתוך\n"
+            "גולרק. הפוקימון עלול להתפוצץ בכל רגע."),
         .frontPic = gMonFrontPic_GolurkMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -13514,10 +13506,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 36,
         .weight = 3250,
         .description = COMPOUND_STRING(
-            "The sameness of Reshiram's and\n"
-            "Kyurem's genes allowed Kyurem to\n"
-            "absorb Reshiram. Kyurem can now use the\n"
-            "power of both fire and ice."),
+            "הדמיון בין הגנים של רשירם וקיורם אפשר\n"
+            "לקיורם לספוג את רשירם. עכשיו קיורם\n"
+            "יכול להשתמש בכוח של אש ושל קרח גם יחד."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 356,
@@ -13587,10 +13578,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 33,
         .weight = 3250,
         .description = COMPOUND_STRING(
-            "The sameness of Zekrom's and\n"
-            "Kyurem's genes allowed Kyurem to absorb\n"
-            "Zekrom. Kyurem can now use the\n"
-            "power of both electricity and ice."),
+            "הדמיון בין הגנים של זקרום וקיורם אפשר\n"
+            "לקיורם לספוג את זקרום. עכשיו קיורם יכול\n"
+            "להשתמש בכוח של חשמל ושל קרח גם יחד."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 356,
