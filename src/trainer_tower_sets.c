@@ -1767,7 +1767,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_1 = {
             }
         },
         {
-            .name = _("GABRIEL"),
+            .name = _("גבריאל"),
             .facilityClass = FACILITY_CLASS_CUE_BALL_FRLG,
             .textColor = 1,
             .speechBefore = {EC_WORD_YAHOO, EC_WORD_EXCL, EC_WORD_HERE_I_COME, EC_WORD_TO, EC_WORD_SWARM, EC_WORD_YOU},
@@ -3736,7 +3736,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_8 = {
     .trainers =
     {
         {
-            .name = _("CHELSEA"),
+            .name = _("צ'לסי"),
             .facilityClass = FACILITY_CLASS_PKMN_RANGER_F_FRLG,
             .textColor = 7,
             .speechBefore = {EC_WORD_THE, EC_WORD_GREEN, EC_WORD_WORLD, EC_WORD_IS, EC_WORD_IMPORTANT, EC_WORD_ISN_T_IT_QUES},
@@ -3880,7 +3880,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_8 = {
             }
         },
         {
-            .name = _("TRENTON"),
+            .name = _("טרנטון"),
             .facilityClass = FACILITY_CLASS_PKMN_RANGER_M_FRLG,
             .textColor = 7,
             .speechBefore = {EC_WORD_I, EC_MOVE2(PROTECT), EC_WORD_THE, EC_WORD_GREAT, EC_WORD_GREEN, EC_WORD_WORLD},
@@ -4622,7 +4622,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_6 = {
     .trainers =
     {
         {
-            .name = _("BRADEN"),
+            .name = _("בריידן"),
             .facilityClass = FACILITY_CLASS_SWIMMER_M_FRLG,
             .textColor = 1,
             .speechBefore = {EC_WORD_I_AM, EC_WORD_PRETTY, EC_WORD_HAPPY, EC_WORD_WITH, EC_WORD_MY, EC_WORD_TOUGHNESS},
@@ -6281,7 +6281,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_7 = {
             }
         },
         {
-            .name = _("SHANIA"),
+            .name = _("שאנייה"),
             .facilityClass = FACILITY_CLASS_SWIMMER_F_FRLG,
             .textColor = 1,
             .speechBefore = {EC_WORD_A, EC_WORD_POKEMON, EC_WORD_HEROINE, EC_WORD_THAT_S, EC_WORD_WHAT, EC_WORD_I_AM},
@@ -6436,7 +6436,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_4 = {
     .trainers =
     {
         {
-            .name = _("BRENNAN"),
+            .name = _("ברנן"),
             .facilityClass = FACILITY_CLASS_SAILOR_FRLG,
             .textColor = 1,
             .speechBefore = {EC_WORD_TAKE, EC_WORD_THINGS, EC_WORD_EASY, EC_WORD_ELLIPSIS, EC_WORD_THAT_S, EC_WORD_IMPORTANT},
@@ -6580,7 +6580,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_4 = {
             }
         },
         {
-            .name = _("KADEN"),
+            .name = _("קיידן"),
             .facilityClass = FACILITY_CLASS_FISHERMAN_FRLG,
             .textColor = 1,
             .speechBefore = {EC_WORD_MY, EC_WORD_FISHING, EC_WORD_FASHION, EC_WORD_APPEAL, EC_WORD_IS, EC_WORD_FANTASTIC},
@@ -6724,7 +6724,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_4 = {
             }
         },
         {
-            .name = _("EMANUEL"),
+            .name = _("עמנואל"),
             .facilityClass = FACILITY_CLASS_GENTLEMAN_FRLG,
             .textColor = 1,
             .speechBefore = {EC_WORD_HMM, EC_WORD_QUES, EC_WORD_ARE, EC_WORD_YOU, EC_WORD_SKILLED, EC_WORD_QUES},
@@ -6879,7 +6879,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_3 = {
     .trainers =
     {
         {
-            .name = _("JARRETT"),
+            .name = _("ג'ארט"),
             .facilityClass = FACILITY_CLASS_JUGGLER_FRLG,
             .textColor = 2,
             .speechBefore = {EC_WORD_LET_S, EC_WORD_HAVE, EC_WORD_AN, EC_MOVE2(EXPLOSION), EC_WORD_PARTY, EC_WORD_EXCL},
@@ -7193,7 +7193,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Mixed_2 = {
     .trainers =
     {
         {
-            .name = _("LORENZO"),
+            .name = _("לורנצו"),
             .facilityClass = FACILITY_CLASS_PSYCHIC_M_FRLG,
             .textColor = 1,
             .speechBefore = {EC_WORD_THIS, EC_WORD_POWER, EC_WORD_IS, EC_WORD_NOW, EC_WORD_COMPLETE, EC_WORD_EXCL},
