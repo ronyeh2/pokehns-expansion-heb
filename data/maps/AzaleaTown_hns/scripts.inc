@@ -423,7 +423,7 @@ AzaleaTown_Text_KurtsHouseSign:
 
 AzaleaTown_Text_GymSign:
 	.string "העיירה אזייליה\n"
-	.string "מכון הפוקימונים\p"
+	.string "מכון הפוקימון\p"
 	.string "מנהיג: באגסי\p"
 	.string "האנציקלופדיה המהלכת\n"
 	.string "של פוקימוני חרק$"
