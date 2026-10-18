@@ -769,7 +769,7 @@ static const u8 *const sDesc_RandomChaos[] = {
     COMPOUND_STRING("כל האפשרויות שנבחרו למעלה יהיו\nכאוטיות מאוד. לא מומלץ!"),
 };
 static const u8 *const sDesc_RandomNext[] = {
-    COMPOUND_STRING("המשך לאפשרויות Nuzlocke."),
+    COMPOUND_STRING("המשך לאפשרויות נאזלוק."),
 };
 
 static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
@@ -888,7 +888,7 @@ static const struct ChallengeMenuItem sTabItems_Randomizer[] = {
 // =============================================================================
 
 static const u8 *const sDesc_Nuzlocke[] = {
-    COMPOUND_STRING("מצב Nuzlocke כבוי."),
+    COMPOUND_STRING("מצב נאזלוק כבוי."),
     COMPOUND_STRING("אי אפשר להשתמש יותר בפוקימונים\nשהתעלפו! אין חוקים נוספים."),
     COMPOUND_STRING("לכידה אחת בכל דרך! אי אפשר להשתמש\nיותר בפוקימונים שהתעלפו."),
     COMPOUND_STRING("אותם חוקים כמו ב”רגיל”, וגם השמירה\nנמחקת כשמפסידים בקרב!"),
@@ -919,7 +919,7 @@ static const u8 *const sDesc_NuzlockeNext[] = {
 
 static const struct ChallengeMenuItem sTabItems_Nuzlocke[] = {
     [ITEM_NUZLOCKE_NUZLOCKE] = {
-        .name         = COMPOUND_STRING("NUZLOCKE"),
+        .name         = COMPOUND_STRING("נאזלוק"),
         .descriptions = sDesc_Nuzlocke,
         .numChoices   = 4,
         .choiceNames  = sChoices_Nuzlocke,
@@ -1209,7 +1209,7 @@ static const struct TabDef sTabs[TAB_COUNT] = {
     [TAB_MODE]       = { COMPOUND_STRING("מצב"),       sTabItems_Mode,       ITEM_MODE_COUNT },
     [TAB_FEATURES]   = { COMPOUND_STRING("תכונות"),   sTabItems_Features,   ITEM_FEATURES_COUNT },
     [TAB_RANDOMIZER] = { COMPOUND_STRING("מצב אקראי"), sTabItems_Randomizer, ITEM_RANDOM_COUNT },
-    [TAB_NUZLOCKE]   = { COMPOUND_STRING("NUZLOCKE"),   sTabItems_Nuzlocke,   ITEM_NUZLOCKE_COUNT },
+    [TAB_NUZLOCKE]   = { COMPOUND_STRING("נאזלוק"),   sTabItems_Nuzlocke,   ITEM_NUZLOCKE_COUNT },
     [TAB_DIFFICULTY] = { COMPOUND_STRING("רמת קושי"),  sTabItems_Difficulty, ITEM_DIFFICULTY_COUNT },
     [TAB_CHALLENGES] = { COMPOUND_STRING("אתגרים"), sTabItems_Challenges, ITEM_CHALLENGES_COUNT },
 };
