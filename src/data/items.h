@@ -563,7 +563,7 @@ const struct ItemInfo gItemsInfo[] =
             "ישנים."),
         #else
             "פוקיבול שמשמש\n"
-            "ב-Entree Forest."),
+            "ביער אנטרה."),
         #endif
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_PARTY_MENU,
@@ -614,7 +614,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 0,
         .description = COMPOUND_STRING(
             "כדור מיוחד\n"
-            "עבור Pal Park."),
+            "עבור פארק פאל."),
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
@@ -631,7 +631,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "כדור שתוכנן\n"
             "לתפיסת\n"
-            "Ultra Beasts."),
+            "חיות אולטרה."),
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
@@ -2950,7 +2950,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 20,
         .description = COMPOUND_STRING(
             "מלח שנאסף עמוק\n"
-            "בתוך Shoal Cave."),
+            "בתוך מערת השרטון."),
         .pocket = POCKET_TREASURES,
         .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,
@@ -2966,7 +2966,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 20,
         .description = COMPOUND_STRING(
             "צדף שנמצא עמוק\n"
-            "בתוך Shoal Cave."),
+            "בתוך מערת השרטון."),
         .pocket = POCKET_TREASURES,
         .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,
@@ -3862,7 +3862,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 20,
         .description = COMPOUND_STRING(
             "עפרה נדירה. נמצאת\n"
-            "ב-Isle of Armor\n"
+            "באי השריון\n"
             "שבגלאר."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
@@ -3880,7 +3880,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 20,
         .description = COMPOUND_STRING(
             "עפרה מסתורית.\n"
-            "נמצאת ב-Max Lair\n"
+            "נמצאת במאורת מקס\n"
             "שבגלאר."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
@@ -14336,7 +14336,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "כרטיס הנדרש\n"
             "לעלייה לספינה אל\n"
-            "Navel Rock."),
+            "סלע הטבור."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
