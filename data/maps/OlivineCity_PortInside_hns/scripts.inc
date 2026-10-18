@@ -85,7 +85,7 @@ OlivineCity_PortInside_Text_Nationaldex4:
 	.string "במגדל הרדיו של גולדנרוד.\p"
 	.string "אתה בטח בדרך לקאנטו.\p"
 	.string "אם תעבור ליד העיירה פאלט,\n"
-	.string "קפוץ למעבדת הפוקימון שלי!$"
+	.string "קפוץ למעבדת מחקר הפוקימונים שלי!$"
 
 OlivinePort_EventScript_CooltrainerF::
 	msgbox OlivinePort_Text_CooltrainerF, MSGBOX_NPC
