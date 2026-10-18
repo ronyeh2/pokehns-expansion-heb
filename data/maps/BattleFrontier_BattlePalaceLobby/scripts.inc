@@ -624,7 +624,7 @@ BattleFrontier_BattlePalaceLobby_Text_ExplainRulesMoves:
 	.string "יש מהלכי התקפה שגורמים\n"
 	.string "נזק ישיר ליריב.\p"
 	.string "יש מהלכי הגנה שמשמשים להתכונן להתקפות\n"
-	.string "האויב, לרפא נ”ח וכדומה.\p"
+	.string "היריב, לרפא נ”ח וכדומה.\p"
 	.string "יש גם מהלכים מוזרים משהו שמחלישים\n"
 	.string "יריבים בבעיות מצב כמו הרעלה ושיתוק.\p"
 	.string "הפוקימונים ישקלו להשתמש\n"
