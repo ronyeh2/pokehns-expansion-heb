@@ -18,11 +18,11 @@ FuchsiaCity_EventScript_BaobaCall::
 	end
 
 FuchsiaCity_Text_BaobaName:
-	.string "BAOBA$"
+	.string "באובה$"
 
 FuchsiaCity_Text_Baoba:
-	.string "הפקח BAOBA: {PLAYER}!\p"
-	.string "כאן הפקח BAOBA.\p"
+	.string "הפקח באובה: {PLAYER}!\p"
+	.string "כאן הפקח באובה.\p"
 	.string "קרה משהו נורא!\p"
 	.string "אזור הספארי הישן שלי בעיר פושיה\n"
 	.string "נקנה ונפתח מחדש!\p"
