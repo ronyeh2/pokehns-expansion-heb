@@ -1703,7 +1703,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFIntro::
 	.string "היי! קוראים לי {STR_VAR_1}!\n"
-	.string "אני מגדלת פוקימונים!$"
+	.string "אני מגדלת פוקימון!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFMon1::
 	.string "הפוקימונים שגידלתי הם: אחד שמשתמש\n"
