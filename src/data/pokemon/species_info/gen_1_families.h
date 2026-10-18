@@ -265,9 +265,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 24,
         .weight = 1555,
         .description = COMPOUND_STRING(
-            "In order to support its flower, which\n"
-            "has grown larger due to Mega Evolution,\n"
-            "its back and legs have become stronger."),
+            "כדי לשאת את הפרח שלו, שגדל בעקבות\n"
+            "התפתחות המגה, גבו ורגליו התחזקו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
@@ -336,10 +335,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 240,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Spits big amounts of pollen like a volcano.\n"
-            "Breathing too much of it causes fainting.\n"
-            "In battle, it swings around two thick vines\n"
-            "that can easily topple 10-story buildings."),
+            "הוא פולט אבקה רבה כמו הר געש, ומי שנושם\n"
+            "ממנה יותר מדי מתעלף. בקרב הוא מניף שתי\n"
+            "קנוקנות עבות שמפילות בקלות בנייני 10 קומות."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
@@ -616,9 +614,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 17,
         .weight = 1105,
         .description = COMPOUND_STRING(
-            "The overwhelming power that fills its\n"
-            "entire body causes it to turn black\n"
-            "and creates intense blue flames."),
+            "הכוח העצום שממלא את כל גופו גורם לו\n"
+            "להשחיר ויוצר להבות כחולות עזות."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
@@ -688,10 +685,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 17,
         .weight = 1005,
         .description = COMPOUND_STRING(
-            "Its bond with its Trainer is the source\n"
-            "of its power. It boasts speed and\n"
-            "maneuverability greater than that of a\n"
-            "jet fighter."),
+            "הקשר שלו עם המאמן הוא מקור כוחו.\n"
+            "הוא מתהדר במהירות ובכושר תמרון\n"
+            "שעולים על אלה של מטוס קרב."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
@@ -759,10 +755,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 280,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "The flame inside its body burns\n"
-            "hotter than 3,600 degrees Fahrenheit.\n"
-            "When Charizard roars, that\n"
-            "temperature climbs even higher."),
+            "הלהבה שבתוך גופו בוערת בחום של\n"
+            "יותר מ-3,600 מעלות פרנהייט. כשצ'ריזארד\n"
+            "שואג, הטמפרטורה הזאת עולה עוד יותר."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
@@ -1043,10 +1038,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 16,
         .weight = 1011,
         .description = COMPOUND_STRING(
-            "The cannon on its back is as powerful\n"
-            "as a tank gun. Its tough legs and back\n"
-            "enable it to withstand the recoil from\n"
-            "firing the cannon."),
+            "התותח שעל גבו חזק כמו תותח של טנק.\n"
+            "רגליו וגבו החסונים מאפשרים לו לעמוד\n"
+            "ברתע של ירי התותח."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 293,
@@ -1114,10 +1108,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 250,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "It's not very good at precision\n"
-            "shooting. When attacking, it just fires\n"
-            "its 31 cannons over and over and\n"
-            "over."),
+            "הוא לא מצטיין בירי מדויק. כשהוא תוקף,\n"
+            "הוא פשוט יורה מ-31 התותחים שלו\n"
+            "שוב ושוב ושוב."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 293,
@@ -1422,10 +1415,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 170,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Once it has opponents trapped in a\n"
-            "tornado that could blow away a 10-\n"
-            "ton truck, it finishes them off with\n"
-            "its poisonous scales."),
+            "אחרי שהוא לוכד את יריביו בטורנדו\n"
+            "שמסוגל להעיף משאית של 10 טון, הוא\n"
+            "מחסל אותם בקשקשיו הרעילים."),
         .pokemonScale = 312,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -1724,10 +1716,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 14,
         .weight = 405,
         .description = COMPOUND_STRING(
-            "Its legs have become poison stingers.\n"
-            "It stabs its prey repeatedly with the\n"
-            "stingers on its limbs, dealing the final\n"
-            "blow with the stinger on its rear."),
+            "רגליו הפכו לעוקצים רעילים. הוא דוקר\n"
+            "את טרפו שוב ושוב בעוקצים שבגפיו, ומנחית\n"
+            "את המכה האחרונה בעוקץ שבאחוריו."),
         .pokemonScale = 366,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -2030,9 +2021,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 22,
         .weight = 505,
         .description = COMPOUND_STRING(
-            "With its muscular strength now greatly\n"
-            "increased, it can fly continuously\n"
-            "for two weeks without resting."),
+            "כוח השרירים שלו גדל מאוד, וכעת הוא\n"
+            "מסוגל לעוף שבועיים ברציפות בלי לנוח."),
         .pokemonScale = 269,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -4065,10 +4055,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 210,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "When it smashes its opponents with\n"
-            "its bolt-shaped tail, it delivers a\n"
-            "surge of electricity equivalent to a\n"
-            "lightning strike."),
+            "כשהוא חובט ביריביו בזנבו שבצורת ברק,\n"
+            "הוא מעביר בהם פרץ חשמל\n"
+            "בעוצמה של פגיעת ברק."),
         .pokemonScale = 479,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -4384,10 +4373,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 12,
         .weight = 380,
         .description = COMPOUND_STRING(
-            "It resembles an X as it flies through\n"
-            "the air with 50 million volts of\n"
-            "electricity sparking from its ears and\n"
-            "forked tail."),
+            "הוא דומה לאות X כשהוא עף באוויר,\n"
+            "וחשמל של 50 מיליון וולט מבזיק\n"
+            "מאוזניו ומזנבו המפוצל."),
         .frontPic = gMonFrontPic_RaichuMegaX,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 3,
@@ -4445,10 +4433,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 10,
         .weight = 260,
         .description = COMPOUND_STRING(
-            "It fires bolts of electricity from the\n"
-            "tip of its tail and from the spiky tufts\n"
-            "of fur growing out of its temples. This\n"
-            "electricity forms the letter Y."),
+            "הוא יורה ברקים מקצה זנבו ומציציות הפרווה\n"
+            "הדוקרניות שצומחות מרקותיו.\n"
+            "החשמל הזה יוצר את האות Y."),
         .frontPic = gMonFrontPic_RaichuMegaY,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
@@ -5507,9 +5494,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 17,
         .weight = 423,
         .description = COMPOUND_STRING(
-            "It flies by using the power of\n"
-            "moonlight to control gravity within\n"
-            "a radius of over 32 feet around it."),
+            "הוא עף בעזרת כוח אור הירח, שמאפשר לו\n"
+            "לשלוט בכוח המשיכה ברדיוס של\n"
+            "יותר מ-32 רגל סביבו."),
         .frontPic = gMonFrontPic_ClefableMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -7865,10 +7852,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 330,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "The pattern that has appeared on\n"
-            "its giant coin is thought to be the\n"
-            "key to unlocking the secrets of the\n"
-            "Dynamax phenomenon."),
+            "הדוגמה שהופיעה על המטבע הענק שלו\n"
+            "נחשבת למפתח לפענוח\n"
+            "סודות תופעת הדיינמקס."),
         .pokemonScale = 480,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -9174,9 +9160,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 12,
         .weight = 480,
         .description = COMPOUND_STRING(
-            "Having traded away its muscles, Alakazam's\n"
-            "true power has been unleashed. With its\n"
-            "psychic powers, it can foresee all things."),
+            "אלקזם ויתר על שריריו, ובתמורה השתחרר\n"
+            "כוחו האמיתי. בעזרת כוחותיו הפסיכיים\n"
+            "הוא יכול לחזות הכול מראש."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -9492,10 +9478,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 250,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "One of these Pokémon once used\n"
-            "its immeasurable strength to lift a\n"
-            "large ship that was in trouble. It\n"
-            "then carried the ship to port."),
+            "פעם השתמש אחד מהפוקימונים האלה בכוחו\n"
+            "העצום לאין שיעור כדי להרים ספינה גדולה\n"
+            "שנקלעה לצרה, ואחר כך נשא אותה אל הנמל."),
         .pokemonScale = 280,
         .pokemonOffset = 1,
         .trainerScale = 269,
@@ -9790,10 +9775,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 45,
         .weight = 1255,
         .description = COMPOUND_STRING(
-            "The volume of this Pokémon's acid\n"
-            "has increased due to Mega Evolution,\n"
-            "filling its mouth. If not careful,\n"
-            "the acid will overflow and spill out."),
+            "בעקבות התפתחות המגה, כמות החומצה\n"
+            "של הפוקימון הזה גדלה עד שמילאה את פיו.\n"
+            "אם הוא לא נזהר, החומצה גולשת ונשפכת החוצה."),
         .frontPic = gMonFrontPic_VictreebelMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -10980,10 +10964,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 20,
         .weight = 1200,
         .description = COMPOUND_STRING(
-            "When bathed in the energy of Mega\n"
-            "Evolution, Shellder converts into\n"
-            "impregnable armor. There is virtually no\n"
-            "change in Slowpoke."),
+            "כשאנרגיית התפתחות המגה שוטפת את שלדר,\n"
+            "הוא הופך לשריון בלתי חדיר, ואילו\n"
+            "סלופוק כמעט לא משתנה."),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 296,
@@ -12789,10 +12772,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 14,
         .weight = 405,
         .description = COMPOUND_STRING(
-            "Gengar's relationships are warped. It\n"
-            "tries to take the lives of anyone and\n"
-            "everyone. It will even try to curse the\n"
-            "Trainer who is its master!"),
+            "מערכות היחסים של גנגר מעוותות. הוא\n"
+            "מנסה ליטול את חייו של כל אחד ואחד,\n"
+            "ואפילו את המאמן שלו הוא ינסה לקלל!"),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 302,
@@ -12860,10 +12842,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 200,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Rumor has it that its gigantic\n"
-            "mouth leads not into its body, filled\n"
-            "with cursed energy, but instead\n"
-            "directly to the afterlife."),
+            "לפי השמועה, פיו הענקי לא מוביל אל גופו\n"
+            "המלא באנרגיה מקוללת, אלא היישר\n"
+            "אל העולם הבא."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 302,
@@ -13085,10 +13066,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 105,
         .weight = 7400,
         .description = COMPOUND_STRING(
-            "The cells within its body, crystallized by\n"
-            "the energy produced from Mega Evolution,\n"
-            "are stronger than any mineral and able\n"
-            "to withstand any temperature."),
+            "התאים שבגופו התגבשו בהשפעת האנרגיה\n"
+            "של התפתחות המגה. הם חזקים מכל מינרל\n"
+            "ומסוגלים לעמוד בכל טמפרטורה."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 516,
@@ -13466,10 +13446,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 190,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "The flow of Gigantamax energy has\n"
-            "spurred this Pokémon's left pincer\n"
-            "to grow to an enormous size. That\n"
-            "claw can pulverize anything."),
+            "זרם אנרגיית הג'ימקס גרם לצבת השמאלית\n"
+            "של הפוקימון הזה לגדול לממדי ענק.\n"
+            "הצבת הזאת יכולה לרסק כל דבר לאבק."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -15789,10 +15768,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 22,
         .weight = 1000,
         .description = COMPOUND_STRING(
-            "When the mother sees the back of her\n"
-            "Mega-Evolved child, it makes her think\n"
-            "of the day when her child will inevitably\n"
-            "leave her."),
+            "כשהאם רואה את גבו של התינוק שלה\n"
+            "שהתפתח למגה, היא חושבת על היום\n"
+            "שבו הוא יעזוב אותה, יום שבוא יבוא."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 387,
@@ -16423,10 +16401,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 23,
         .weight = 800,
         .description = COMPOUND_STRING(
-            "Its movements have become more\n"
-            "humanlike. Whether it's simply\n"
-            "trying to communicate or wants to\n"
-            "supplant humanity is unclear."),
+            "תנועותיו נעשו דומות יותר לתנועות אדם.\n"
+            "לא ברור אם הוא רק מנסה לתקשר,\n"
+            "או שהוא רוצה לתפוס את מקומה של האנושות."),
         .frontPic = gMonFrontPic_StarmieMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -16980,10 +16957,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 20,
         .weight = 1250,
         .description = COMPOUND_STRING(
-            "The excess energy that bathes this\n"
-            "Pokémon keeps it in constant danger of\n"
-            "overflow. It can't sustain a battle over\n"
-            "long periods of time."),
+            "עודף האנרגיה שמציף את הפוקימון הזה\n"
+            "מאיים כל הזמן לעלות על גדותיו.\n"
+            "הוא לא מסוגל להחזיק מעמד בקרב ארוך."),
         .pokemonScale = 278,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -17792,10 +17768,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 17,
         .weight = 590,
         .description = COMPOUND_STRING(
-            "The influence of Mega Evolution leaves it\n"
-            "in a state of constant excitement.\n"
-            "It pierces enemies with its two large\n"
-            "horns before shredding them."),
+            "השפעת התפתחות המגה משאירה אותו נסער\n"
+            "כל הזמן. הוא משפד אויבים בשתי קרניו\n"
+            "הגדולות, ואז קורע אותם לגזרים."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 257,
@@ -18355,10 +18330,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 65,
         .weight = 3050,
         .description = COMPOUND_STRING(
-            "Although it obeys its instinctive drive to\n"
-            "destroy everything within its reach, it\n"
-            "will respond to orders from a Trainer it\n"
-            "truly trusts."),
+            "אף שהוא נשמע לדחף האינסטינקטיבי שלו\n"
+            "להרוס כל מה שבהישג ידו, הוא ייענה\n"
+            "לפקודות של מאמן שהוא באמת סומך עליו."),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 481,
@@ -18504,10 +18478,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 240,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Over 5,000 people can ride on its\n"
-            "shell at once. And it's a very\n"
-            "comfortable ride, without the slightest\n"
-            "shaking or swaying."),
+            "יותר מ-5,000 אנשים יכולים לרכוב על\n"
+            "שריונו בבת אחת. והנסיעה נוחה מאוד,\n"
+            "בלי שום טלטלה או נדנוד."),
         .pokemonScale = 257,
         .pokemonOffset = 10,
         .trainerScale = 423,
@@ -18754,10 +18727,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 180,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Having gotten even friendlier and\n"
-            "more innocent, Eevee tries to play\n"
-            "with anyone around, only to end up\n"
-            "crushing them with its immense body."),
+            "איווי נעשה ידידותי ותמים עוד יותר.\n"
+            "הוא מנסה לשחק עם כל מי שבסביבה, אבל\n"
+            "בסוף מועך את כולם בגופו העצום."),
         .pokemonScale = 476,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -20044,9 +20016,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 21,
         .weight = 790,
         .description = COMPOUND_STRING(
-            "The power of Mega Evolution has\n"
-            "completely restored its genes. The rocks\n"
-            "on its body are harder than diamond."),
+            "כוחה של התפתחות המגה שיקם לגמרי\n"
+            "את הגנים שלו. הסלעים שעל גופו\n"
+            "קשים יותר מיהלום."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 302,
@@ -20263,10 +20235,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 350,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Gigantamax energy has affected\n"
-            "stray seeds and even pebbles that\n"
-            "got stuck to Snorlax, making them grow\n"
-            "to a huge size."),
+            "אנרגיית הג'ימקס השפיעה על זרעים\n"
+            "תועים ואפילו על חלוקי אבן שנדבקו\n"
+            "לסנורלקס, וגרמה להם לגדול לממדי ענק."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 423,
@@ -21065,10 +21036,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 22,
         .weight = 2900,
         .description = COMPOUND_STRING(
-            "Mega Evolution has excessively\n"
-            "powered up this Pokémon's feelings\n"
-            "of kindness. It finishes off its\n"
-            "opponents with mercy in its heart."),
+            "התפתחות המגה הגבירה יתר על המידה\n"
+            "את רגשות החסד של הפוקימון הזה.\n"
+            "הוא מחסל את יריביו כשבליבו רחמים."),
         .frontPic = gMonFrontPic_DragoniteMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
@@ -21204,10 +21174,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 23,
         .weight = 1270,
         .description = COMPOUND_STRING(
-            "Psychic power has augmented its muscles.\n"
-            "It has a grip strength of one ton and can\n"
-            "sprint a hundred meters in two seconds\n"
-            "flat!"),
+            "כוח פסיכי חיזק את שריריו. כוח האחיזה\n"
+            "שלו הוא טון אחד, והוא יכול לרוץ\n"
+            "מאה מטרים בשתי שניות בדיוק!"),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,
@@ -21280,10 +21249,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 15,
         .weight = 330,
         .description = COMPOUND_STRING(
-            "Despite its diminished size, its mental\n"
-            "power has grown phenomenally. With a mere\n"
-            "thought, it can smash a skyscraper to\n"
-            "smithereens."),
+            "אף שגופו קטן יותר, כוחו המנטלי גדל\n"
+            "באופן פנומנלי. במחשבה בלבד הוא יכול\n"
+            "לרסק גורד שחקים לרסיסים."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,
