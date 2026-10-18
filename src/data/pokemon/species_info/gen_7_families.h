@@ -1504,9 +1504,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 26,
         .weight = 2528,
         .description = COMPOUND_STRING(
-            "It can pulverize reinforced concrete with\n"
-            "a light swing of one of its fists, each of\n"
-            "which is covered in a thick layer of ice."),
+            "הוא יכול לרסק בטון מזוין בהנפה קלה\n"
+            "של אחד מאגרופיו, שכל אחד מהם מכוסה\n"
+            "בשכבה עבה של קרח."),
         .frontPic = gMonFrontPic_CrabominableMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -4172,10 +4172,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 23,
         .weight = 1480,
         .description = COMPOUND_STRING(
-            "It uses four of its arms to fiercely\n"
-            "assail its foes. Once they've been pushed\n"
-            "to the brink of defeat, it finishes them\n"
-            "off with the arms it kept hidden."),
+            "הוא משתמש בארבע מזרועותיו כדי לתקוף את\n"
+            "אויביו בפראות. כשהם נדחקים אל סף התבוסה,\n"
+            "הוא מחסל אותם בזרועות שהסתיר."),
         .frontPic = gMonFrontPic_GolisopodMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -5343,14 +5342,13 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .cryId = CRY_DRAMPA,
     #endif // P_MODIFIED_MEGA_CRIES
         .natDexNum = NATIONAL_DEX_DRAMPA,
-        .categoryName = _("Imposing"),
+        .categoryName = _("מרשים"),
         .height = 3,
         .weight = 2405,
         .description = COMPOUND_STRING(
-            "Drampa's cells have been\n"
-            "invigorated, allowing it to regain\n"
-            "its youth. It manipulates the\n"
-            "atmosphere to summon storms."),
+            "התאים של דרמפה קיבלו מרץ חדש, וכך\n"
+            "הוא חזר לימי נעוריו. הוא מתמרן את\n"
+            "האטמוספירה כדי לזמן סערות."),
         .frontPic = gMonFrontPic_DrampaMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -6843,10 +6841,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 38,
         .weight = 4600,
         .description = COMPOUND_STRING(
-            "This is its form while it is devouring\n"
-            "the light of Solgaleo. It pounces on\n"
-            "foes and then slashes them with the\n"
-            "claws on its four limbs and back."),
+            "זו צורתו בזמן שהוא טורף את האור של\n"
+            "סולגליאו. הוא מזנק על אויביו ואז חותך\n"
+            "אותם בטפרים שעל ארבע גפיו ועל גבו."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 369,
@@ -6914,10 +6911,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 42,
         .weight = 3500,
         .description = COMPOUND_STRING(
-            "This is its form while it's\n"
-            "devouring the light of Lunala. It grasps\n"
-            "foes in its giant claws and rips them\n"
-            "apart with brute force."),
+            "זו צורתו בזמן שהוא טורף את האור של\n"
+            "לונאלה. הוא לופת אויבים בטפריו הענקיים\n"
+            "וקורע אותם לגזרים בכוח הזרוע."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 369,
@@ -7267,10 +7263,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 13,
         .weight = 2481,
         .description = COMPOUND_STRING(
-            "A mechanism to remove Magearna's\n"
-            "limitations has lain secretly within\n"
-            "Magearna for 500 years. This mechanism\n"
-            "is triggered by a Mega Stone."),
+            "מנגנון שמסיר את המגבלות של מגירנה\n"
+            "היה חבוי בתוך מגירנה במשך 500 שנה.\n"
+            "המנגנון הזה מופעל בעזרת אבן מגה."),
         .frontPic = gMonFrontPic_MagearnaOriginalMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -7735,10 +7730,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 15,
         .weight = 445,
         .description = COMPOUND_STRING(
-            "It stores up 10 lightning strikes' worth\n"
-            "of electricity. When it stops limiting\n"
-            "itself, it's in the strongest class of\n"
-            "electric Pokémon."),
+            "הוא אוגר חשמל בכמות של 10 פגיעות ברק.\n"
+            "כשהוא מפסיק להגביל את עצמו, הוא נמנה\n"
+            "עם החזקים ביותר מבין פוקימוני החשמל."),
         .frontPic = gMonFrontPic_ZeraoraMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -7927,10 +7921,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 250,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "In a distant land, there are\n"
-            "legends about a cyclopean giant. In fact,\n"
-            "the giant was a Melmetal that was\n"
-            "flooded with Gigantamax energy."),
+            "בארץ רחוקה מסופרות אגדות על ענק\n"
+            "קיקלופי. למעשה, הענק היה מלמטל\n"
+            "שהוצף באנרגיית ג'ימקס."),
         .pokemonScale = 257,
         .pokemonOffset = 10,
         .trainerScale = 423,
