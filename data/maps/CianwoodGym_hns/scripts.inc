@@ -17,10 +17,10 @@ CianwoodGym_EventScript_Statue2::
 	end
 
 CianwoodGym_Text_GymStatue:
-	.string "מכון הפוקימונים של העיר סיאנווד$"
+	.string "מכון הפוקימון של העיר סיאנווד$"
 
 CianwoodGym_Text_GymStatueCertified:
-	.string "מכון הפוקימונים של העיר סיאנווד\p"
+	.string "מכון הפוקימון של העיר סיאנווד\p"
 	.string "המאמנים המוסמכים של צ'אק:\n"
 	.string "{PLAYER}$"
 
