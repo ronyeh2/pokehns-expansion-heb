@@ -529,4 +529,4 @@ BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc::
 
 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc::
 	.string "פריט להחזקה שמעלה את\n"
-	.string "הסיכוי למכה קריטית.$"
+	.string "הסיכוי לפגיעה קריטית.$"
