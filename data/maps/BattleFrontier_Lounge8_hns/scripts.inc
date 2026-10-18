@@ -30,7 +30,7 @@ BattleFrontier_Lounge8_Text_KnowAboutFrontierBrains_hns:
 BattleFrontier_Lounge8_Text_ToldMeIHaveTalentForBattling_hns:
 	.string "במגדל הקרב, בחורה מבוגרת ממני\n"
 	.string "אמרה לי שיש לי המון כישרון לקרבות!\p"
-	.string "אבל אני יותר אוהב תחרויות פוקימונים!\p"
+	.string "אבל אני יותר אוהב תחרויות פוקימון!\p"
 	.string "רק שאני לא טוב בתחרויות!\p"
 	.string "כנראה שכישרון לדבר ואהבה אליו\n"
 	.string "זה לא אותו הדבר.$"
