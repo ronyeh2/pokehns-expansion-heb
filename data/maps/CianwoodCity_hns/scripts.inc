@@ -315,7 +315,7 @@ CianwoodCity_EventScript_GymSign::
 	end
 
 CianwoodCity_Text_GymSign:
-	.string "מכון הפוקימונים של העיר סיאנווד\p"
+	.string "מכון הפוקימון של העיר סיאנווד\p"
 	.string "מנהיג: צ'אק\p"
 	.string "האגרופים השואגים שלו\n"
 	.string "מדברים בשבילו$"
