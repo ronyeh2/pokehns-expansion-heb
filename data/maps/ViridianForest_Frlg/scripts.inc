@@ -83,7 +83,7 @@ ViridianForest_Text_RickPostBattle::
 
 ViridianForest_Text_DougIntro::
 	.string "יו!\n"
-	.string "מאמן פוקימון לא בורח מקרבות!$"
+	.string "מאמן פוקימונים לא בורח מקרבות!$"
 
 ViridianForest_Text_DougDefeat::
 	.string "מה?\n"
