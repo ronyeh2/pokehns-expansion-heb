@@ -153,7 +153,7 @@ MahoganyTown_Gym_Text_GlacierBadgeSpeech:
 MahoganyTown_Gym_Text_HailSpeech:
     .string "המ”מ הזה מכיל את ברד.\p"
     .string "הוא גורם נזק בכל תור\n"
-    .string "במשך 5 תורות.\p"
+    .string "במשך 5 תורים.\p"
     .string "הוא ממחיש את חומרת\n"
     .string "החורף.$"
 
