@@ -6030,3 +6030,4 @@ place,PLACE_MAX_LAIR,MAX LAIR,,מאורת מקס,proposed,DYNITE ORE description
 place,PLACE_NAVEL_ROCK,NAVEL ROCK,,סלע הטבור,proposed,MYSTIC TICKET description; meaning
 place,PLACE_ENTREE_FOREST,ENTREE FOREST,,יער אנטרה,proposed,"DREAM BALL description, branch not compiled in this build; Entree transliterated"
 place,TERM_ULTRA_BEASTS,Ultra Beasts,,חיות אולטרה,proposed,"BEAST BALL description; beast = חיה as in כדור חיה, Ultra as in אולטרה בול"
+term,TERM_FRONTIER_PASS,FRONTIER PASS,,כרטיס חזית הקרב,proposed,the form used in src/strings.c gText_PutAwayFrontierPass and every Frontier dialogue line; not the Magnet Train ITEM_PASS
