@@ -7031,13 +7031,13 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
                     case REGION_KANTO: StringAppend(gStringVar4, COMPOUND_STRING("קאנטו")); break;
                     case REGION_JOHTO: StringAppend(gStringVar4, COMPOUND_STRING("ג'וטו")); break;
                     case REGION_HOENN: StringAppend(gStringVar4, COMPOUND_STRING("הואן")); break;
-                    case REGION_SINNOH: StringAppend(gStringVar4, COMPOUND_STRING("Sinnoh")); break;
-                    case REGION_UNOVA: StringAppend(gStringVar4, COMPOUND_STRING("Unova")); break;
-                    case REGION_KALOS: StringAppend(gStringVar4, COMPOUND_STRING("Kalos")); break;
+                    case REGION_SINNOH: StringAppend(gStringVar4, COMPOUND_STRING("סינו")); break;
+                    case REGION_UNOVA: StringAppend(gStringVar4, COMPOUND_STRING("יונובה")); break;
+                    case REGION_KALOS: StringAppend(gStringVar4, COMPOUND_STRING("קאלוס")); break;
                     case REGION_ALOLA: StringAppend(gStringVar4, COMPOUND_STRING("איי אלולה")); break;
                     case REGION_GALAR: StringAppend(gStringVar4, COMPOUND_STRING("גלאר")); break;
                     case REGION_HISUI: StringAppend(gStringVar4, COMPOUND_STRING("סינג'ו")); break;
-                    case REGION_PALDEA: StringAppend(gStringVar4, COMPOUND_STRING("Paldea")); break;
+                    case REGION_PALDEA: StringAppend(gStringVar4, COMPOUND_STRING("פלדייה")); break;
                     }
                     break;
                 }
