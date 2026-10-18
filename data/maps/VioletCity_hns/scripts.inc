@@ -425,7 +425,7 @@ VioletCity_Text_Boy:
 	.string "אם תקפוץ לאקדמיה, אולי תלמד משהו חדש!$"
 
 VioletCity_Text_Gramps:
-	.string "פלקנר, ממכון הפוקימונים\n"
+	.string "פלקנר, ממכון הפוקימון\n"
 	.string "של ויולט, הוא מאמן מצוין!\p"
 	.string "הוא ירש את המכון מאביו\n"
 	.string "ועושה בו עבודה נהדרת.$"
@@ -439,7 +439,7 @@ VioletCity_Text_Sign:
 	.string "The City of Nostalgic Scents$"
 
 VioletCity_Text_GymSign:
-	.string "מכון הפוקימונים של העיר ויולט\p"
+	.string "מכון הפוקימון של העיר ויולט\p"
 	.string "מנהיג: פלקנר, המאסטר האלגנטי\n"
 	.string "של פוקימוני תעופה$"
 
