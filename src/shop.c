@@ -203,6 +203,26 @@ static u16 GetBerryFromBall(u16 ballItem)
     return ITEM_NONE;
 }
 
+// The berry's name without the word "berry", as Kurt's price column and confirmation use it
+// (English drops " BERRY" from "CHERI BERRY"). Hebrew names put that word first, so cutting
+// bytes off the end would cut the berry's own name instead; drop the first word there.
+static void CopyKurtBerryName(u16 berryId, u8 *dest)
+{
+    CopyItemName(berryId, dest);
+#if TEXT_RTL
+    for (u8 *space = dest; *space != EOS; space++)
+    {
+        if (*space == CHAR_SPACE)
+        {
+            StringCopy(dest, space + 1);
+            break;
+        }
+    }
+#else
+    dest[StringLength(dest) - 6] = EOS;
+#endif
+}
+
 static const struct OamData sOamData_QuantityBerryIcon =
 {
     .y = 0,
@@ -1297,8 +1317,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
             u16 berryId = GetBerryFromBall(itemId);
             if (berryId != ITEM_NONE)
             {
-                CopyItemName(berryId, gStringVar4);
-                gStringVar4[StringLength(gStringVar4) - 6] = EOS;
+                CopyKurtBerryName(berryId, gStringVar4);
                 StringAppend(gStringVar4, gText_Space);
                 StringAppend(gStringVar4, gText_xOne);
                 x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
@@ -1905,8 +1924,7 @@ static void Task_BuyHowManyDialogueHandleInput(u8 taskId)
             if (sMartInfo.martType == MART_TYPE_KURT)
             {
                 u16 berryId = GetBerryFromBall(tItemId);
-                CopyItemName(berryId, gStringVar4);
-                gStringVar4[StringLength(gStringVar4) - 6] = EOS;
+                CopyKurtBerryName(berryId, gStringVar4);
                 StringAppend(gStringVar3, gText_Space);
                 StringAppend(gStringVar3, gStringVar4);
 
