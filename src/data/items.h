@@ -127,7 +127,7 @@ static const u8 sRoseIncenseDesc[]    = _("פריט להחזקה\n"
 
 static const u8 sLuckIncenseDesc[]    = _("מכפיל את הכסף\n"
                                           "בקרב אם המחזיק\n"
-                                          "משתתף בו.");
+                                          "נמצא בקבוצה.");
 
 static const u8 sPureIncenseDesc[]    = _("פריט להחזקה\n"
                                           "שעוזר להרחיק\n"
