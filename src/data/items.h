@@ -557,9 +557,14 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("כדור חלום"),
         .price = 0,
         .description = COMPOUND_STRING(
+        #if B_DREAM_BALL_MODIFIER >= GEN_8
             "כדור שיעיל על\n"
             "פוקימונים\n"
             "ישנים."),
+        #else
+            "פוקיבול שמשמש\n"
+            "ב-Entree Forest."),
+        #endif
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
@@ -683,7 +688,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "משקם את הנ”ח\n"
             "של פוקימון\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-60 נקודות."),
+        #else
+            "ב-50 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -703,7 +712,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "משקם את הנ”ח\n"
             "של פוקימון\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-120 נקודות."),
+        #else
+            "ב-200 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -797,7 +810,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מים מינרליים\n"
             "שמשקמים נ”ח\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-30 נקודות."),
+        #else
+            "ב-50 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -817,7 +834,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "משקה מוגז\n"
             "שמשקם נ”ח\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-50 נקודות."),
+        #else
+            "ב-60 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -837,7 +858,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "משקה מתוק מאוד\n"
             "שמשקם נ”ח\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-70 נקודות."),
+        #else
+            "ב-80 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -876,7 +901,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "אבקה מרה\n"
             "שמשקמת נ”ח\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-60 נקודות."),
+        #else
+            "ב-50 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -895,7 +924,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "שורש מר\n"
             "שמשקם נ”ח\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-120 נקודות."),
+        #else
+            "ב-200 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -2408,9 +2441,15 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 1000 : 500,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "ההתקפה למשך\n"
             "קרב אחד."),
+        #else
+            "מעלה את\n"
+            "ההתקפה למשך\n"
+            "קרב אחד."),
+        #endif
         .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2428,9 +2467,15 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 2000 : 550,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "ההגנה למשך\n"
             "קרב אחד."),
+        #else
+            "מעלה את\n"
+            "ההגנה למשך\n"
+            "קרב אחד."),
+        #endif
         .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2448,9 +2493,15 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 1000 : 350,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "ההתקפה המיוחדת\n"
             "למשך קרב אחד."),
+        #else
+            "מעלה את\n"
+            "ההתקפה המיוחדת\n"
+            "למשך קרב אחד."),
+        #endif
         .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2468,9 +2519,15 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 2000 : 350,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "ההגנה המיוחדת\n"
             "למשך קרב אחד."),
+        #else
+            "מעלה את\n"
+            "ההגנה המיוחדת\n"
+            "למשך קרב אחד."),
+        #endif
         .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2488,9 +2545,15 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 1000 : 350,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "המהירות למשך\n"
             "קרב אחד."),
+        #else
+            "מעלה את\n"
+            "המהירות למשך\n"
+            "קרב אחד."),
+        #endif
         .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2509,9 +2572,15 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 1000 : 950,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "דיוק המהלכים\n"
             "למשך קרב אחד."),
+        #else
+            "מעלה את דיוק\n"
+            "מהלכי ההתקפה\n"
+            "למשך קרב אחד."),
+        #endif
         .pocket = POCKET_BATTLE_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -8319,9 +8388,15 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_SOUL_DEW,
         .holdEffectParam = B_SOUL_DEW_BOOST >= GEN_7 ? 20 : 50,
         .description = COMPOUND_STRING(
-            "מחזק את מהלכי\n"
-            "הפסיכי והדרקון\n"
+        #if B_SOUL_DEW_BOOST >= GEN_7
+            "מחזק את המהלכים\n"
+            "מסוג פסיכי ודרקון\n"
             "של לטיוס ולטיאס."),
+        #else
+            "מעלה התקפה והגנה\n"
+            "מיוחדות ללטיוס\n"
+            "וללטיאס כשמוחזק."),
+        #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -9695,9 +9770,15 @@ const struct ItemInfo gItemsInfo[] =
     #endif
         .holdEffect = HOLD_EFFECT_MENTAL_HERB,
         .description = COMPOUND_STRING(
+        #if B_MENTAL_HERB >= GEN_5
             "משחרר פוקימון\n"
             "מהשפעות שכובלות\n"
             "את מהלכיו."),
+        #else
+            "פריט להחזקה\n"
+            "שמשחרר פוקימון\n"
+            "מהתאהבות."),
+        #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -12270,8 +12351,12 @@ const struct ItemInfo gItemsInfo[] =
         .price = 3000,
         .description = COMPOUND_STRING(
             "יורה קרן קרח\n"
-            "שעלולה להקפיא\n"
-            "את היריב."),
+            "שעלולה\n"
+        #if B_USE_FROSTBITE == TRUE
+            "לגרום לכוויית קור."),
+        #else
+            "להקפיא את היריב."),
+        #endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12283,9 +12368,15 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("מ”מ 14"),
         .price = 10000,
         .description = COMPOUND_STRING(
+        #if B_USE_FROSTBITE == TRUE
+            "התקפת שלג ורוח\n"
+            "שעלולה לגרום\n"
+            "לכוויית קור."),
+        #else
             "התקפת שלג ורוח\n"
             "אכזרית שעלולה\n"
             "להקפיא את היריב."),
+        #endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15690,7 +15781,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "אבקה מרה\n"
             "שמשקמת נ”ח\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-60 נקודות."),
+        #else
+            "ב-50 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -15710,7 +15805,11 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "אבקה מרה\n"
             "שמשקמת נ”ח\n"
+        #if I_HEALTH_RECOVERY >= GEN_7
             "ב-120 נקודות."),
+        #else
+            "ב-200 נקודות."),
+        #endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -15728,9 +15827,14 @@ const struct ItemInfo gItemsInfo[] =
         .price = 800,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "ההתחמקות למשך\n"
             "קרב אחד."),
+        #else
+            "מעלה את ההתחמקות\n"
+            "למשך קרב אחד."),
+        #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_AUX_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -15746,9 +15850,14 @@ const struct ItemInfo gItemsInfo[] =
         .price = 400,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "ההגנות למשך\n"
             "קרב אחד."),
+        #else
+            "מעלה את ההגנות\n"
+            "למשך קרב אחד."),
+        #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_AUX_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -15764,9 +15873,14 @@ const struct ItemInfo gItemsInfo[] =
         .price = 400,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות את\n"
             "ההתקפות למשך\n"
             "קרב אחד."),
+        #else
+            "מעלה את ההתקפות\n"
+            "למשך קרב אחד."),
+        #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_AUX_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -15782,9 +15896,15 @@ const struct ItemInfo gItemsInfo[] =
         .price = 1200,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "מעלה בחדות התקפה\n"
             "והגנה למשך\n"
             "קרב אחד."),
+        #else
+            "מעלה התקפה\n"
+            "והגנה למשך\n"
+            "קרב אחד."),
+        #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_AUX_ITEM,
         .type = ITEM_USE_BAG_MENU,
