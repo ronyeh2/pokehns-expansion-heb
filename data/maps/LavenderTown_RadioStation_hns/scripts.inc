@@ -85,7 +85,7 @@ LavenderTown_RadioStation_Text_Gentleman_ReturnedMachinePart:
 
 LavendertownRadioStation_Text_Upgraded_Radio:
 	.string "{PLAYER} קיבל את\n"
-	.string "שדרוג הרדיו!$"
+	.string "כרטיס ההרחבה!$"
 
 LavenderTown_RadioStation_Text_Gentleman_GotExpnCard:
 	.string "עם הדבר הזה אפשר לקלוט את\n"
