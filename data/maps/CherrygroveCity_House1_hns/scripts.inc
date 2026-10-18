@@ -20,7 +20,7 @@ CherrygroveCity_House1_EventScript_Kid::
 CherrygroveCity_GymSpeechHouse_Text_PokefanM:
 	.string "אתה רוצה לבדוק כמה אתה טוב\n"
 	.string "בתור מאמן פוקימונים?\p"
-	.string "כדאי לך לבקר במכוני הפוקימונים\n"
+	.string "כדאי לך לבקר במכוני הפוקימון\n"
 	.string "בכל רחבי ג'וטו ולאסוף תגים.$"
 
 CherrygroveCity_GymSpeechHouse_Text_BugCatcher:
