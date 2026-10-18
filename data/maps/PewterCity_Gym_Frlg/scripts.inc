@@ -190,14 +190,14 @@ PewterCity_Gym_Text_YoureChampMaterial::
 	.string "יש בך חומר של אלוף פוקימונים!$"
 
 PewterCity_Gym_Text_GymStatue::
-	.string "מכון הפוקימונים של פיוטר\n"
+	.string "מכון הפוקימון של פיוטר\n"
 	.string "מנהיג: ברוק\p"
-	.string "מאמנים שניצחו:\n"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}$"
 
 PewterCity_Gym_Text_GymStatuePlayerWon::
-	.string "מכון הפוקימונים של פיוטר\n"
+	.string "מכון הפוקימון של פיוטר\n"
 	.string "מנהיג: ברוק\p"
-	.string "מאמנים שניצחו:\n"
+	.string "מאמנים מנצחים:\n"
 	.string "{RIVAL}, {PLAYER}$"
 
