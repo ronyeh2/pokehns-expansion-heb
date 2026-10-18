@@ -1931,9 +1931,26 @@ bool32 TextPrinterWaitAutoMode(struct TextPrinter *textPrinter)
     }
 }
 
-void SetResultWithButtonPress(bool32 *result)
+// At instant speed RenderFont runs up to TEXT_SPEED_INSTANT_MODIFIER times a frame, so a prompt
+// reached right after the press that ended the one before it would take that same press. A prompt
+// ignores A/B for the calls that can still follow in that frame: all but the call that took the
+// press and the call that reached the prompt.
+#define INSTANT_TEXT_PROMPT_DELAY (TEXT_SPEED_INSTANT_MODIFIER - 2)
+STATIC_ASSERT(INSTANT_TEXT_PROMPT_DELAY >= 0, InstantTextPromptDelayIsNotNegative);
+
+static void DelayPromptPressAtInstantSpeed(struct TextPrinter *textPrinter)
 {
-    if (JOY_NEW(A_BUTTON | B_BUTTON))
+    if (IsPlayerTextSpeedInstant())
+        textPrinter->delayCounter = INSTANT_TEXT_PROMPT_DELAY;
+}
+
+void SetResultWithButtonPress(struct TextPrinter *textPrinter, bool32 *result)
+{
+    if (textPrinter->delayCounter != 0 && IsPlayerTextSpeedInstant())
+    {
+        textPrinter->delayCounter--;
+    }
+    else if (JOY_NEW(A_BUTTON | B_BUTTON))
     {
         *result = TRUE;
         PlaySE(SE_SELECT);
@@ -1948,12 +1965,12 @@ bool32 TextPrinterWaitWithDownArrow(struct TextPrinter *textPrinter)
         result = TextPrinterWaitAutoMode(textPrinter);
 
         if (AUTO_SCROLL_TEXT)
-            SetResultWithButtonPress(&result);
+            SetResultWithButtonPress(textPrinter, &result);
     }
     else
     {
         TextPrinterDrawDownArrow(textPrinter);
-        SetResultWithButtonPress(&result);
+        SetResultWithButtonPress(textPrinter, &result);
     }
     return result;
 }
@@ -1966,11 +1983,11 @@ bool32 TextPrinterWait(struct TextPrinter *textPrinter)
         result = TextPrinterWaitAutoMode(textPrinter);
 
         if (AUTO_SCROLL_TEXT)
-            SetResultWithButtonPress(&result);
+            SetResultWithButtonPress(textPrinter, &result);
     }
     else
     {
-        SetResultWithButtonPress(&result);
+        SetResultWithButtonPress(textPrinter, &result);
     }
     return result;
 }
@@ -2134,6 +2151,7 @@ static u16 RenderText(struct TextPrinter *textPrinter)
                 return RENDER_REPEAT;
             case EXT_CTRL_CODE_PAUSE_UNTIL_PRESS:
                 textPrinter->state = RENDER_STATE_WAIT;
+                DelayPromptPressAtInstantSpeed(textPrinter);
                 if (gTextFlags.autoScroll)
                     textPrinter->autoScrollDelay = 0;
                 return RENDER_UPDATE;
@@ -2249,10 +2267,12 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             break;
         case CHAR_PROMPT_CLEAR:
             textPrinter->state = RENDER_STATE_CLEAR;
+            DelayPromptPressAtInstantSpeed(textPrinter);
             TextPrinterInitDownArrowCounters(textPrinter);
             return RENDER_UPDATE;
         case CHAR_PROMPT_SCROLL:
             textPrinter->state = RENDER_STATE_SCROLL_START;
+            DelayPromptPressAtInstantSpeed(textPrinter);
             TextPrinterInitDownArrowCounters(textPrinter);
             return RENDER_UPDATE;
         case CHAR_EXTRA_SYMBOL:

@@ -4255,6 +4255,23 @@ static void Cmd_getexp(void)
     case 2: // set exp value to the poke in expgetter_id and print message
         if (gBattleControllerExecFlags == 0)
         {
+            // Music change in a wild battle after fainting opposing pokemon. Checked before
+            // the per-mon branches so it also plays when no mon can take EXP (all Lv100).
+            if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+                && (gBattleMons[0].hp || (IsDoubleBattle() && gBattleMons[2].hp))
+                && !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
+                && (!IsDoubleBattle() || !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)))
+                && !gBattleStruct->wildVictorySong)
+            {
+                BattleStopLowHpSound();
+            #if IS_HNS
+                PlayBGM(MUS_HG_VICTORY_WILD);
+            #else
+                PlayBGM(MUS_VICTORY_WILD);
+            #endif
+                gBattleStruct->wildVictorySong++;
+            }
+
             bool32 wasSentOut = (gBattleStruct->expSentInMons & (1u << *expMonId)) != 0;
             holdEffect = GetMonHoldEffect(&gPlayerParty[*expMonId]);
 
@@ -4274,22 +4291,6 @@ static void Cmd_getexp(void)
             }
             else
             {
-                // Music change in a wild battle after fainting opposing pokemon.
-                if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)
-                    && (gBattleMons[0].hp || (IsDoubleBattle() && gBattleMons[2].hp))
-                    && !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT))
-                    && (!IsDoubleBattle() || !IsBattlerAlive(GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)))
-                    && !gBattleStruct->wildVictorySong)
-                {
-                    BattleStopLowHpSound();
-                #if IS_HNS
-                    PlayBGM(MUS_HG_VICTORY_WILD);
-                #else
-                    PlayBGM(MUS_VICTORY_WILD);
-                #endif
-                    gBattleStruct->wildVictorySong++;
-                }
-
                 if (IsValidForBattle(&gPlayerParty[*expMonId]))
                 {
                     if (wasSentOut)
