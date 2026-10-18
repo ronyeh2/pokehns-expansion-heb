@@ -133,7 +133,7 @@ Route39_EventScript_BaobaIntro::
 	end
 
 Route39_Text_ChooseLegend::
-	.string "BAOBA: אלוהים אדירים! הצל הזה\n"
+	.string "באובה: אלוהים אדירים! הצל הזה\n"
 	.string "היה של פוקימון?\p"
 	.string "הספקת לראות אותו טוב?\n"
 	.string "לא הבחנתי באיזה צבע הוא היה…$"
@@ -143,7 +143,7 @@ Route39_Text_BaobaIntro::
 	.string "…אוהו! מה שאתה מחזיק זה…\n"
 	.string "מה שקוראים לו… פוקדקס!\p"
 	.string "לא ראיתי כזה כבר שנים.\p"
-	.string "קוראים לי BAOBA! פעם ניהלתי\n"
+	.string "קוראים לי באובה! פעם ניהלתי\n"
 	.string "אזור ספארי בעיר פושיה.\p"
 	.string "אבל הוא התיישן מול כל\n"
 	.string "אפשרויות הבידור החדשות.\p"
@@ -159,12 +159,12 @@ Route39_Text_BaobaIntro::
 	.string "אליך לפני כל אחד אחר!$"
 
 Route39_Text_Registered:
-	.string "{PLAYER} רשם את BAOBA\n"
+	.string "{PLAYER} רשם את באובה\n"
 	.string "ב-POKéGEAR!$"
 
 
 Route39_Text_WillCall:
-	.string "BAOBA: אודיע לך\n"
+	.string "באובה: אודיע לך\n"
 	.string "ב-POKéGEAR בקרוב!$"
 
 Route39_Movement_BaobaLeave:
