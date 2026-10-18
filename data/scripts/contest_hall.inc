@@ -1381,7 +1381,7 @@ LilycoveCity_ContestLobby_EventScript_DelayForRSPlayer::
 LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase:
 	.string "שלום!\p"
 	.string "זה דלפק הקבלה של\n"
-	.string "תחרויות הפוקימונים.\p"
+	.string "תחרויות הפוקימון.\p"
 	.string "אה? נראה שעדיין אין לך\n"
 	.string "קופסת פוקיבלוקים.\p"
 	.string "במקרה כזה, אנחנו צריכים לתת לך\n"
@@ -1392,12 +1392,12 @@ LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp:
 	.string "מסודר…\p"
 	.string "שלום!\p"
 	.string "זה דלפק הקבלה של\n"
-	.string "תחרויות הפוקימונים.$"
+	.string "תחרויות הפוקימון.$"
 
 LilycoveCity_ContestLobby_Text_ContestReception:
 	.string "שלום!\p"
 	.string "זה דלפק הקבלה של\n"
-	.string "תחרויות הפוקימונים.$"
+	.string "תחרויות הפוקימון.$"
 
 @ Unused
 LilycoveCity_ContestLobby_Text_CounterOnlyFor4PlayerContests:
