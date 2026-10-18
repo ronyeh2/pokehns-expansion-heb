@@ -130,15 +130,15 @@ PewterCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 PewterCity_Gym_Text_GymStatue::
-    .string "מכון הפוקימונים של פיוטר\n"
+    .string "מכון הפוקימון של פיוטר\n"
     .string "מנהיג: ברוק\p"
-    .string "מאמנים שניצחו:\n"
+    .string "מאמנים מנצחים:\n"
     .string "בלו, רד$"
 
 PewterCity_Gym_Text_GymStatuePlayerWon::
-    .string "מכון הפוקימונים של פיוטר\n"
+    .string "מכון הפוקימון של פיוטר\n"
     .string "מנהיג: ברוק\p"
-    .string "מאמנים שניצחו:\n"
+    .string "מאמנים מנצחים:\n"
     .string "בלו, רד, {PLAYER}$"
 
 PewterCity_Gym_EventScript_Brock_Trade::
