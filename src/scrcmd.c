@@ -1371,9 +1371,9 @@ bool8 ScrCmd_givenamedmon(struct ScriptContext *ctx)
     u8 heldItem[2];
     u8 mailIndex = 0;
 
-    static const u8 sKenyaNickname[] = _("KENYA");
-    static const u8 sKenyaOtName[]   = _("RUDY");
-    static const u8 sShuckieNickname[] = _("SHUCKIE");
+    static const u8 sKenyaNickname[] = _("קניה");
+    static const u8 sKenyaOtName[]   = _("רודי");
+    static const u8 sShuckieNickname[] = _("שאקי");
     static const u8 sShuckieOtName[]   = _("קירק");
     static const u8 sEeveeOtName[]     = _("ביל");
 
@@ -1501,8 +1501,8 @@ bool8 ScrCmd_removenamedmon(struct ScriptContext *ctx)
     u16 giftId = ScriptReadHalfword(ctx);
     const u8 *targetNickname;
 
-    static const u8 sKenyaNickname[]   = _("KENYA");
-    static const u8 sShuckieNickname[] = _("SHUCKIE");
+    static const u8 sKenyaNickname[]   = _("קניה");
+    static const u8 sShuckieNickname[] = _("שאקי");
 
     switch (giftId)
     {
