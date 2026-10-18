@@ -29,11 +29,11 @@ OlivineCity_EventScript_BaobaCall::
 	end
 
 OlivineCity_Text_BaobaName:
-	.string "BAOBA$"
+	.string "באובה$"
 
 OlivineCity_Text_Baoba:
 	.string "{PLAYER}!\p"
-	.string "כאן הפקח BAOBA.\p"
+	.string "כאן הפקח באובה.\p"
 	.string "סליחה שגרמתי לך לחכות.\n"
 	.string "סוף סוף פתחנו את אזור הספארי!\p"
 	.string "אתה יודע איפה הוא נמצא?\p"
