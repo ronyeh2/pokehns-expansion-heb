@@ -674,7 +674,7 @@ static const struct MenuAction MultichoiceList_BattleTowerRules[] =
     {COMPOUND_STRING("מידע על המגדל")},
     {COMPOUND_STRING("פוקימוני הקרב")},
     {COMPOUND_STRING("סלון הקרב")},
-    {COMPOUND_STRING("מרובה מקושר")},
+    {COMPOUND_STRING("מרובה בקישור")},
     {gText_Exit},
 };
 
