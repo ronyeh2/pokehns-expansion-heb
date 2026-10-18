@@ -275,21 +275,21 @@ static const struct MenuAction MultichoiceList_GameCornerDolls2[] =
 
 static const struct MenuAction MultichoiceList_PrizeMons[] = 
 {
-    {COMPOUND_STRING("אברה{CLEAR_TO 0x61}120 מטבעות")},
-    {COMPOUND_STRING("קלפרי{CLEAR_TO 0x61}500 מטבעות")},
-    {COMPOUND_STRING("מאנצ'לקס{CLEAR_TO 0x58}2,800 מטבעות")},
-    {COMPOUND_STRING("דרטיני{CLEAR_TO 0x58}5,500 מטבעות")},
-    {COMPOUND_STRING("פוריגון{CLEAR_TO 0x58}6,500 מטבעות")},
+    {COMPOUND_STRING("אברה{CLEAR_TO 0x61}120")},
+    {COMPOUND_STRING("קלפרי{CLEAR_TO 0x61}500")},
+    {COMPOUND_STRING("מאנצ'לקס{CLEAR_TO 0x58}2,800")},
+    {COMPOUND_STRING("דרטיני{CLEAR_TO 0x58}5,500")},
+    {COMPOUND_STRING("פוריגון{CLEAR_TO 0x58}6,500")},
     {gText_Exit},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerTMs[] =
 {
-    {COMPOUND_STRING("רואה כפול{CLEAR_TO 0x58}1,500 מטבעות")},
-    {COMPOUND_STRING("אשליה{CLEAR_TO 0x58}3,500 מטבעות")},
-    {COMPOUND_STRING("קרן קרח{CLEAR_TO 0x58}4,000 מטבעות")},
-    {COMPOUND_STRING("מכת ברק{CLEAR_TO 0x58}4,000 מטבעות")},
-    {COMPOUND_STRING("להביור{CLEAR_TO 0x58}4,000 מטבעות")},
+    {COMPOUND_STRING("רואה כפול{CLEAR_TO 0x58}1,500")},
+    {COMPOUND_STRING("אשליה{CLEAR_TO 0x58}3,500")},
+    {COMPOUND_STRING("קרן קרח{CLEAR_TO 0x58}4,000")},
+    {COMPOUND_STRING("מכת ברק{CLEAR_TO 0x58}4,000")},
+    {COMPOUND_STRING("להביור{CLEAR_TO 0x58}4,000")},
     {gText_Exit},
 };
 
