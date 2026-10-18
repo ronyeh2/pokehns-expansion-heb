@@ -3370,9 +3370,9 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .height = 12,
         .weight = 220,
         .description = COMPOUND_STRING(
-            "Mega Evolution has dialed up this\n"
-            "Pokémon's spiciness. It swings its\n"
-            "“necktie” around to wallop its foes."),
+            "התפתחות המגה הגבירה את החריפות של\n"
+            "הפוקימון הזה. הוא מסובב את ה”עניבה”\n"
+            "שלו כדי להלום ביריביו."),
         .frontPic = gMonFrontPic_ScovillainMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -4652,10 +4652,9 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .height = 15,
         .weight = 450,
         .description = COMPOUND_STRING(
-            "Glimmora's petals-now larger and\n"
-            "separated from its main body-rotate\n"
-            "around it to provide defense while\n"
-            "cattering poisonous fragments."),
+            "עלי הכותרת של גלימורה, שגדלו ונפרדו\n"
+            "מגופו, מסתובבים סביבו כדי להגן עליו\n"
+            "ובו בזמן מפזרים רסיסים רעילים."),
         .frontPic = gMonFrontPic_GlimmoraMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -5364,10 +5363,9 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .height = 6,
         .weight = 240,
         .description = COMPOUND_STRING(
-            "Tatsugiri's brain has been invigorated\n"
-            "by Mega Evolution, making it even\n"
-            "wilier. It can create and command\n"
-            "copies of itself."),
+            "התפתחות המגה חידדה את המוח של טאצוגירי\n"
+            "והפכה אותו לערמומי עוד יותר. הוא מסוגל\n"
+            "ליצור עותקים של עצמו ולפקד עליהם."),
         .frontPic = gMonFrontPic_TatsugiriCurlyMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 11,
@@ -5422,10 +5420,9 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .height = 6,
         .weight = 240,
         .description = COMPOUND_STRING(
-            "It solidifies the energy of Mega Evolution,\n"
-            "building up an overflowing pile to launch\n"
-            "as projectiles. These projectiles explode\n"
-            "on contact."),
+            "הוא מגבש את אנרגיית התפתחות המגה וצובר\n"
+            "ממנה ערימה גדושה כדי לשגר אותה כקליעים.\n"
+            "הקליעים האלה מתפוצצים במגע."),
         .frontPic = gMonFrontPic_TatsugiriDroopyMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 11,
@@ -5480,10 +5477,9 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .height = 6,
         .weight = 240,
         .description = COMPOUND_STRING(
-            "Using the energy of Mega Evolution, it\n"
-            "creates a dish to ride upon, allowing it\n"
-            "to move with total freedom-even through\n"
-            "the air."),
+            "בעזרת אנרגיית התפתחות המגה הוא יוצר\n"
+            "צלחת שהוא רוכב עליה, וכך הוא נע בחופש\n"
+            "מוחלט, אפילו באוויר."),
         .frontPic = gMonFrontPic_TatsugiriStretchyMega,
         .frontPicSize = MON_COORDS_SIZE(40, 40),
         .frontPicYOffset = 11,
@@ -6525,10 +6521,9 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .height = 21,
         .weight = 3150,
         .description = COMPOUND_STRING(
-            "Baxcalibur's dorsal blade has grown even\n"
-            "more massive thanks to Mega Evolution.\n"
-            "This Pokémon fires beams from the hilt\n"
-            "at its solar plexus."),
+            "בזכות התפתחות המגה, להב הגב של בקסקליבר\n"
+            "נעשה עצום עוד יותר. הפוקימון הזה יורה\n"
+            "קרניים מהניצב שבמקלעת השמש שלו."),
         .frontPic = gMonFrontPic_BaxcaliburMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
