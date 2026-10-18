@@ -42,6 +42,6 @@ CliffEdgeGate_EventScript_CaveSign::
 CliffEdgeGate_Text_SignOpen:
 	.string "הכול מרגש!\n"
 	.string "חקרו ומצאו פוקימונים פראיים!\p"
-	.string "אזור הספארי של הפקח BAOBA\n"
+	.string "אזור הספארי של הפקח באובה\n"
 	.string "פתוח ופועל!$"
 
