@@ -39,8 +39,8 @@ BlackthornCity_Text_ElmName:
 	.string "פרופ' אלם$"
 
 BlackthornCity_Text_BaobaCall:
-	.string "הפקח BAOBA: {PLAYER}!\p"
-	.string "מדבר הפקח BAOBA.\p"
+	.string "הפקח באובה: {PLAYER}!\p"
+	.string "מדבר הפקח באובה.\p"
 	.string "אני מתקשר לספר לך\n"
 	.string "שאזור הספארי התרחב!\p"
 	.string "נשמח לביקור שלך!$"
