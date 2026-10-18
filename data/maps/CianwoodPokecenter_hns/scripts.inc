@@ -71,7 +71,7 @@ CianwoodGym_EventScript_GymGuideAfter::
 	end
 
 CianwoodCity_Text_GymGuide:
-	.string "מאמני מכון הפוקימונים כאן\n"
+	.string "מאמני מכון הפוקימון כאן\n"
 	.string "הם בריונים מאצ'ואים.\p"
 	.string "אם אשאר כאן, הם עלולים\n"
 	.string "לבוא אחריי.\p"
