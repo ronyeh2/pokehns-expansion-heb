@@ -82,28 +82,28 @@ static const u8 sNectarDesc[]         = _("צוף פרחים שמשנה\n"
                                           "פוקימונים מסוימים.");
 
 static const u8 sCharizarditeDesc[]   = _("אבן שמאפשרת\n"
-                                          "לצ'ריזארד לעבור\n"
-                                          "התפתחות מגה בקרב.");
+                                          "לצ'ריזארד להתפתח\n"
+                                          "למגה בקרב.");
 
 static const u8 sMewtwoniteDesc[]     = _("אבן שמאפשרת\n"
-                                          "למיוטו לעבור\n"
-                                          "התפתחות מגה בקרב.");
+                                          "למיוטו להתפתח\n"
+                                          "למגה בקרב.");
 
 static const u8 sRaichuniteDesc[]     = _("אבן שמאפשרת\n"
-                                          "לראיצ'ו לעבור\n"
-                                          "התפתחות מגה בקרב.");
+                                          "לראיצ'ו להתפתח\n"
+                                          "למגה בקרב.");
 
 static const u8 sAbsoliteDesc[]       = _("אבן שמאפשרת\n"
-                                          "לאבסול לעבור\n"
-                                          "התפתחות מגה בקרב.");
+                                          "לאבסול להתפתח\n"
+                                          "למגה בקרב.");
 
 static const u8 sGarchompiteDesc[]    = _("אבן שמאפשרת\n"
-                                          "לגארצ'ומפ לעבור\n"
-                                          "התפתחות מגה בקרב.");
+                                          "לגארצ'ומפ להתפתח\n"
+                                          "למגה בקרב.");
 
 static const u8 sLucarioniteDesc[]    = _("אבן שמאפשרת\n"
-                                          "ללוקאריו לעבור\n"
-                                          "התפתחות מגה בקרב.");
+                                          "ללוקאריו להתפתח\n"
+                                          "למגה בקרב.");
 
 static const u8 sSeaIncenseDesc[]     = _("פריט להחזקה\n"
                                           "שמחזק מעט מהלכים\n"
@@ -366,7 +366,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "כדור שמתחזק\n"
             "בקרבות שנמשכים\n"
-            "תורות רבים."),
+            "תורים רבים."),
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PokeBall,
@@ -5620,8 +5620,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לוינאזור לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לוינאזור להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5668,8 +5668,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לבלסטויז לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לבלסטויז להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5686,8 +5686,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לבידריל לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לבידריל להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5704,8 +5704,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לפידג'יוט לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לפידג'יוט להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5722,8 +5722,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לאלקזם לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לאלקזם להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5740,8 +5740,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לסלוברו לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לסלוברו להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5758,8 +5758,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לגנגר לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לגנגר להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5776,8 +5776,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לקנגסקאן לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לקנגסקאן להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5794,8 +5794,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לפינסיר לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לפינסיר להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5812,8 +5812,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לגרידוס לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לגרידוס להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5830,8 +5830,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לאירודקטיל לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לאירודקטיל להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5878,8 +5878,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לאמפרוס לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לאמפרוס להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5896,8 +5896,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לסטיליקס לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לסטיליקס להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5914,8 +5914,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לסייזור לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לסייזור להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5932,8 +5932,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "להרקרוס לעבור\n"
-            "התפתחות מגה בקרב."),
+            "להרקרוס להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5950,8 +5950,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "להאונדום לעבור\n"
-            "התפתחות מגה בקרב."),
+            "להאונדום להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5968,8 +5968,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לטירניטר לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לטירניטר להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -5986,8 +5986,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לספטייל לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לספטייל להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6004,8 +6004,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לבלייזיקן לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לבלייזיקן להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6022,8 +6022,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לסוומפרט לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לסוומפרט להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6040,8 +6040,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לגרדוואר לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לגרדוואר להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6058,8 +6058,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לסייבלאיי לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לסייבלאיי להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6076,8 +6076,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "למאוויל לעבור\n"
-            "התפתחות מגה בקרב."),
+            "למאוויל להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6094,8 +6094,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לאגרון לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לאגרון להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6112,8 +6112,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "למדיצ'ם לעבור\n"
-            "התפתחות מגה בקרב."),
+            "למדיצ'ם להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6130,8 +6130,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "למנקטריק לעבור\n"
-            "התפתחות מגה בקרב."),
+            "למנקטריק להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6148,8 +6148,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לשרפידו לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לשרפידו להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6166,8 +6166,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לקמרפט לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לקמרפט להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6184,8 +6184,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לאלטריה לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לאלטריה להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6202,8 +6202,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לבאנט לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לבאנט להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6235,8 +6235,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לגלאלי לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לגלאלי להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6253,8 +6253,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "לסלמנס לעבור\n"
-            "התפתחות מגה בקרב."),
+            "לסלמנס להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6271,8 +6271,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "למטגרוס לעבור\n"
-            "התפתחות מגה בקרב."),
+            "למטגרוס להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6289,8 +6289,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "ללטיאס לעבור\n"
-            "התפתחות מגה בקרב."),
+            "ללטיאס להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6307,8 +6307,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "ללטיוס לעבור\n"
-            "התפתחות מגה בקרב."),
+            "ללטיוס להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -6325,8 +6325,8 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = COMPOUND_STRING(
             "אבן זו מאפשרת\n"
-            "ללופאני לעבור\n"
-            "התפתחות מגה בקרב."),
+            "ללופאני להתפתח\n"
+            "למגה בקרב."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
@@ -8260,7 +8260,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פריט להחזקה שמעלה\n"
             "לפארפג'ד את הסיכוי\n"
-            "למכה קריטית."),
+            "לפגיעה קריטית."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8297,7 +8297,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פריט להחזקה שמעלה\n"
             "לצ'נסי את הסיכוי\n"
-            "למכה קריטית."),
+            "לפגיעה קריטית."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -9929,7 +9929,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פריט להחזקה\n"
             "שמגדיל את הסיכוי\n"
-            "למכה קריטית."),
+            "לפגיעה קריטית."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -10179,7 +10179,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "אם נ”ח המחזיק\n"
             "מלא, הוא שורד מכה\n"
-            "מעלפת עם 1 נ”ח."),
+            "מחסלת עם 1 נ”ח."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -10442,7 +10442,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "טופר מעוקל שמגדיל\n"
             "למחזיק את הסיכוי\n"
-            "למכה קריטית."),
+            "לפגיעה קריטית."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = EVO_HELD_ITEM_TYPE,
@@ -11994,7 +11994,7 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 4,
         .description = COMPOUND_STRING(
             "פריט להחזקה\n"
-            "שמגדיל סיכוי למכה\n"
+            "שמגדיל סיכוי לפגיעה\n"
             "קריטית במצוקה."),
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -12262,7 +12262,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מעלה את ההגנה\n"
             "של פוקימוני קרח\n"
-            "למשך 5 תורות."),
+            "למשך 5 תורים."),
     #else
         .description = COMPOUND_STRING(
             "יוצר סופת ברד\n"
@@ -12324,7 +12324,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מגביר את עוצמת\n"
             "מהלכי האש\n"
-            "למשך 5 תורות."),
+            "למשך 5 תורים."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12432,7 +12432,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מגביר את עוצמת\n"
             "מהלכי המים\n"
-            "למשך 5 תורות."),
+            "למשך 5 תורים."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12667,7 +12667,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 3000,
         .description = COMPOUND_STRING(
             "משחרר סילון אש\n"
-            "שעלול לשרוף את\n"
+            "שעלול לכוות את\n"
             "היריב."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
@@ -12696,7 +12696,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מחולל סופת חול\n"
             "שפוגעת ביריב במשך\n"
-            "כמה תורות."),
+            "כמה תורים."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12709,7 +12709,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 10000,
         .description = COMPOUND_STRING(
             "התקפת אש עוצמתית\n"
-            "שעלולה לשרוף את\n"
+            "שעלולה לכוות את\n"
             "היריב."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
@@ -12766,7 +12766,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מעלה את ההתקפה\n"
             "כשהמשתמש מורעל,\n"
-            "שרוף או משותק."),
+            "נכווה או משותק."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12792,9 +12792,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("מ”מ 44"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "המשתמש ישן 2 תורות\n"
+            "המשתמש ישן 2 תורים\n"
             "כדי לשקם נ”ח ולרפא\n"
-            "את מצבו."),
+            "בעיות מצב."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13082,7 +13082,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "מכה בטופר צל.\n"
             "סיכוי גבוה\n"
-            "למכה קריטית."),
+            "לפגיעה קריטית."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13180,7 +13180,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "דוקר את היריב\n"
             "באבנים. סיכוי גבוה\n"
-            "למכה קריטית."),
+            "לפגיעה קריטית."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13290,7 +13290,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "תוקף בהילה איומה.\n"
             "עלול לגרום\n"
-            "להירתעות."),
+            "לרתיעה."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13304,7 +13304,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "סלעים גדולים\n"
             "מוטלים. עלול לגרום\n"
-            "להירתעות."),
+            "לרתיעה."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13440,9 +13440,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("מ”מ 90"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "יוצר פיתיון בעזרת\n"
-            "1/4 מהנ”ח המרבי של\n"
-            "המשתמש."),
+            "יוצר ממלא מקום\n"
+            "בעזרת 1/4 מהנ”ח\n"
+            "המרבי של המשתמש."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13470,7 +13470,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פוקימונים איטיים\n"
             "יותר פועלים ראשונים\n"
-            "במשך 5 תורות."),
+            "במשך 5 תורים."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
