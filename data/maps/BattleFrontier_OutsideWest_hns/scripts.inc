@@ -344,7 +344,7 @@ BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons_hns:
 	.string "זה מפעל הקרב.\n"
 	.string "אפשר לשכור שם פוקימונים חזקים.\p"
 	.string "אבל זה גורם לי לתהות.\n"
-	.string "מי מגדל את הפוקימונים המושכרים?$"
+	.string "מי מגדל את הפוקימונים השכורים?$"
 
 BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper_hns:
 	.string "אני מפחדת להיכנס לשביל הקרב\n"
