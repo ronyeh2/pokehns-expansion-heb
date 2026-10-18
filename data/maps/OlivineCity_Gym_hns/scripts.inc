@@ -330,10 +330,10 @@ OlivineCity_Gym_EventScript_Statue2::
 	end
 
 OlivineCity_Gym_Text_GymStatue:
-	.string "מכון הפוקימונים של העיר אוליבין$"
+	.string "מכון הפוקימון של העיר אוליבין$"
 
 OlivineCity_Gym_Text_GymStatueCertified:
-	.string "מכון הפוקימונים של העיר אוליבין\p"
+	.string "מכון הפוקימון של העיר אוליבין\p"
 	.string "המאמנים המוסמכים של ג'סמין:\n"
 	.string "{PLAYER}$"
 
