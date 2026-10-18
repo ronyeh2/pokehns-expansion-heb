@@ -659,10 +659,10 @@ AzaleaTown_Gym_EventScript_Statue2::
 	end
 
 AzaleaTown_Gym_Text_GymStatue:
-	.string "מכון הפוקימונים של אזייליה$"
+	.string "מכון הפוקימון של אזייליה$"
 
 AzaleaTown_Gym_Text_GymStatueCertified:
-	.string "מכון הפוקימונים של העיירה אזייליה\p"
+	.string "מכון הפוקימון של העיירה אזייליה\p"
 	.string "המאמנים המוסמכים של באגסי:\n"
 	.string "{PLAYER}$"
 
