@@ -931,7 +931,7 @@ PewterCity_Text_MuseumOfScience::
 	.string "מוזיאון המדע של פיוטר$"
 
 PewterCity_Text_GymSign::
-	.string "מכון הפוקימונים של העיר פיוטר\p"
+	.string "מכון הפוקימון של העיר פיוטר\p"
 	.string "מנהיג: ברוק\n"
 	.string "מאמן הפוקימונים האיתן כסלע!$"
 
