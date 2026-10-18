@@ -204,7 +204,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_LEVITATE] =
     {
         .name = _("ריחוף"),
-        .description = COMPOUND_STRING("לא נפגע ממתקפות אדמה."),
+        .description = COMPOUND_STRING("לא נפגע מהתקפות אדמה."),
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -309,7 +309,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_MAGMA_ARMOR] =
     {
         .name = _("שריון מגמה"),
-        .description = COMPOUND_STRING("מונע קפיאה."),
+        .description = COMPOUND_STRING("מונע קיפאון."),
         .aiRating = 1,
         .breakable = TRUE,
     },
@@ -376,7 +376,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FLAME_BODY] =
     {
         .name = _("גוף להבה"),
-        .description = COMPOUND_STRING("שורף את היריב במגע."),
+        .description = COMPOUND_STRING("מכווה את היריב במגע."),
         .aiRating = 4,
     },
 
@@ -687,7 +687,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ADAPTABILITY] =
     {
         .name = _("הסתגלות"),
-        .description = COMPOUND_STRING("מגביר מתקפות מסוגו."),
+        .description = COMPOUND_STRING("מגביר התקפות מסוגו."),
         .aiRating = 8,
     },
 
@@ -736,7 +736,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_MAGIC_GUARD] =
     {
         .name = _("משמר קסם"),
-        .description = COMPOUND_STRING("נפגע רק ממתקפות."),
+        .description = COMPOUND_STRING("נפגע רק מהתקפות."),
         .aiRating = 9,
     },
 
@@ -1039,7 +1039,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_FLARE_BOOST] =
     {
         .name = _("דחף להבה"),
-        .description = COMPOUND_STRING("מעלה התק' מיוחדת כשנכווה."),
+        .description = COMPOUND_STRING("מעלה התקפה מיוחדת כשנכווה."),
         .aiRating = 5,
     },
 
@@ -1662,7 +1662,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_BATTERY] =
     {
         .name = _("סוללה"),
-        .description = COMPOUND_STRING("מעלה התק' מיוחדת לידיד."),
+        .description = COMPOUND_STRING("מעלה התקפה מיוחדת לידיד."),
         .aiRating = 0,
     },
 
@@ -1685,7 +1685,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SOUL_HEART] =
     {
         .name = _("לב-נשמה"),
-        .description = COMPOUND_STRING("חיסול מעלה התק' מיוחדת."),
+        .description = COMPOUND_STRING("חיסול מעלה התקפה מיוחדת."),
         .aiRating = 7,
     },
 
@@ -1779,14 +1779,14 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_PRISM_ARMOR] =
     {
         .name = _("שריון מנסרה"),
-        .description = COMPOUND_STRING("מחליש מכות ”יעילות מאוד”."),
+        .description = COMPOUND_STRING("מחליש מכות יעילות במיוחד."),
         .aiRating = 6,
     },
 
     [ABILITY_NEUROFORCE] =
     {
         .name = _("כוח עצבי"),
-        .description = COMPOUND_STRING("מגביר מכות ”יעילות מאוד”."),
+        .description = COMPOUND_STRING("מגביר מכות יעילות במיוחד."),
         .aiRating = 6,
     },
 
@@ -2034,7 +2034,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_GRIM_NEIGH] =
     {
         .name = _("צהלה קודרת"),
-        .description = COMPOUND_STRING("חיסול מעלה התק' מיוחדת."),
+        .description = COMPOUND_STRING("חיסול מעלה התקפה מיוחדת."),
         .aiRating = 7,
     },
 
