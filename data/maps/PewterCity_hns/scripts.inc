@@ -108,7 +108,7 @@ PewterCity_Text_Sign:
 PewterCity_Text_GymSign:
 	.string "מכון הפוקימון של העיר פיוטר\n"
 	.string "מנהיג: ברוק\p"
-	.string "מאמן הפוקימון הקשוח כסלע$"
+	.string "מאמן הפוקימונים הקשוח כסלע$"
 
 PewterCity_Text_MuseumSign:
 	.string "יש כאן הודעה…\p"
