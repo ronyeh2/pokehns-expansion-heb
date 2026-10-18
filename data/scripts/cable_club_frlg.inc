@@ -1668,7 +1668,7 @@ CableClub_Text_ExplainWirelessClubFirstTime_Frlg::
 
 CableClub_Text_AskAboutLinking_Frlg::
 	.string "שלום, {PLAYER}!\p"
-	.string "זו אני, TEALA, הפקידה בקומה 2\n"
+	.string "זו אני, טיאלה, הפקידה בקומה 2\n"
 	.string "של מרכז הפוקימון.\p"
 	.string "רצית לשאול אותי משהו\n"
 	.string "על קישור?$"
