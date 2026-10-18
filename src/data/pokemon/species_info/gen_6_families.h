@@ -242,9 +242,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 16,
         .weight = 900,
         .description = COMPOUND_STRING(
-            "It has fortified armor and a\n"
-            "will to defend at all costs.\n"
-            "Both are absurdly strong."),
+            "יש לו שריון מבוצר ורצון להגן בכל מחיר.\n"
+            "שניהם חזקים עד כדי אבסורד."),
         .frontPic = gMonFrontPic_ChesnaughtMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -514,10 +513,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 15,
         .weight = 390,
         .description = COMPOUND_STRING(
-            "It wields flaming branches to\n"
-            "dazzle its opponents before\n"
-            "incinerating them with a\n"
-            "huge fireball."),
+            "הוא מניף ענפים בוערים כדי לסנוור את\n"
+            "יריביו, ואז מכלה אותם בכדור אש ענקי."),
         .frontPic = gMonFrontPic_DelphoxMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -912,10 +909,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 15,
         .weight = 400,
         .description = COMPOUND_STRING(
-            "This Pokémon spins a giant\n"
-            "shuriken at high speed to make it\n"
-            "float, then clings to it upside\n"
-            "down to catch opponents unawares."),
+            "הפוקימון הזה מסובב שוריקן ענק במהירות\n"
+            "רבה כדי שירחף, ואז נאחז בו הפוך כדי\n"
+            "להפתיע את יריביו."),
         .frontPic = gMonFrontPic_GreninjaMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -1903,10 +1899,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 15,
         .weight = 933,
         .description = COMPOUND_STRING(
-            "This Pokémon spews flames hotter\n"
-            "than 18,000 degrees Fahrenheit.\n"
-            "It swings around its grand, blazing\n"
-            "mane as it protects its allies."),
+            "הפוקימון הזה פולט להבות חמות יותר\n"
+            "מ-18,000 מעלות פרנהייט. הוא מניף את רעמתו\n"
+            "המפוארת והבוערת כשהוא מגן על בני בריתו."),
         .frontPic = gMonFrontPic_PyroarMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2321,10 +2316,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         // height
         // weight
         .description = COMPOUND_STRING(
-            "The Eternal Flower has absorbed\n"
-            "all the energy from Mega\n"
-            "Evolution. The flower now attacks\n"
-            "enemies on its own."),
+            "הפרח הנצחי ספג את כל האנרגיה של\n"
+            "התפתחות המגה. עכשיו הפרח תוקף\n"
+            "אויבים בעצמו."),
         .frontPic = gMonFrontPic_FloetteMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2939,10 +2933,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 8,
         .weight = 101,
         .description = COMPOUND_STRING(
-            "Mega Meowstic can use its psychic power\n"
-            "to compress or expand anything. It\n"
-            "overwhelms foes by contorting space\n"
-            "itself."),
+            "מגה מיאוסטיק יכול להשתמש בכוחו הפסיכי\n"
+            "כדי לדחוס או להרחיב כל דבר. הוא מכריע\n"
+            "אויבים בכך שהוא מעוות את החלל עצמו."),
         .frontPic = gMonFrontPic_MeowsticMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2997,10 +2990,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 8,
         .weight = 101,
         .description = COMPOUND_STRING(
-            "Mega Meowstic can use its psychic power\n"
-            "to compress or expand anything. It\n"
-            "overwhelms foes by contorting space\n"
-            "itself."),
+            "מגה מיאוסטיק יכול להשתמש בכוחו הפסיכי\n"
+            "כדי לדחוס או להרחיב כל דבר. הוא מכריע\n"
+            "אויבים בכך שהוא מעוות את החלל עצמו."),
         .frontPic = gMonFrontPic_MeowsticMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -3766,10 +3758,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 29,
         .weight = 698,
         .description = COMPOUND_STRING(
-            "It uses its colorful lights to\n"
-            "overwrite the personality and\n"
-            "memories of others-and to\n"
-            "control them."),
+            "הוא משתמש באורות הצבעוניים שלו כדי\n"
+            "לשכתב את האישיות והזיכרונות של\n"
+            "אחרים - וכדי לשלוט בהם."),
         .frontPic = gMonFrontPic_MalamarMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -3967,9 +3958,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 22,
         .weight = 1000,
         .description = COMPOUND_STRING(
-            "It uses its many arms to toy\n"
-            "with its opponents. This\n"
-            "keeps the head extremely busy."),
+            "הוא משתמש בזרועותיו הרבות כדי לשחק\n"
+            "ביריביו. זה מעסיק מאוד את הראש."),
         .frontPic = gMonFrontPic_BarbaracleMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -4169,10 +4159,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 21,
         .weight = 1003,
         .description = COMPOUND_STRING(
-            "It spits a liquid that causes the\n"
-            "regenerative power of cells to run\n"
-            "wild. The liquid is deadly poison\n"
-            "to everything other than itself."),
+            "הוא יורק נוזל שגורם לכוח ההתחדשות של\n"
+            "תאים להשתולל. הנוזל הוא רעל קטלני לכל\n"
+            "יצור מלבד דרגאלג' עצמו."),
         .frontPic = gMonFrontPic_DragalgeMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -4866,9 +4855,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 10,
         .weight = 250,
         .description = COMPOUND_STRING(
-            "Mega Evolution has pumped up all\n"
-            "its muscles. Hawlucha flexes to\n"
-            "show off its strength."),
+            "התפתחות המגה ניפחה את כל שריריו.\n"
+            "הולוצ'ה מכווץ את שריריו כדי להפגין\n"
+            "את כוחו."),
         .frontPic = gMonFrontPic_HawluchaMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 2,
@@ -7103,10 +7092,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 77,
         .weight = 6100,
         .description = COMPOUND_STRING(
-            "In response to people's emotions\n"
-            "during an unprecedented crisis,\n"
-            "Zygarde Mega Evolves and calms the\n"
-            "situation with its unmatched power."),
+            "בתגובה לרגשות של אנשים בזמן משבר חסר\n"
+            "תקדים, זייגארד מתפתח למגה ומרגיע את\n"
+            "המצב בכוחו שאין לו אח ורע."),
         .frontPic = gMonFrontPic_ZygardeMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -7240,10 +7228,9 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .height = 11,
         .weight = 278,
         .description = COMPOUND_STRING(
-            "The impurities upon its body's surface\n"
-            "have fallen away, sparkling so brilliantly\n"
-            "that cannot be observed directly.\n"
-            "It is known as “the Royal Pink Princess”."),
+            "הזיהומים שעל פני גופו נשרו, והוא נוצץ\n"
+            "בזוהר עז כל כך שאי אפשר להביט בו ישירות.\n"
+            "הוא ידוע בכינוי ”הנסיכה הוורודה המלכותית”."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,
