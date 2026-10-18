@@ -2162,7 +2162,7 @@ static void UpdateMonData(struct BattleDebugMenu *data)
 static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
 {
     [HOLD_EFFECT_NONE]             = COMPOUND_STRING("????????"),
-    [HOLD_EFFECT_RESTORE_HP]       = COMPOUND_STRING("ריפוי נ”ח"),
+    [HOLD_EFFECT_RESTORE_HP]       = COMPOUND_STRING("שיקום נ”ח"),
     [HOLD_EFFECT_CURE_PAR]         = COMPOUND_STRING("ריפוי שיתוק"),
     [HOLD_EFFECT_CURE_SLP]         = COMPOUND_STRING("ריפוי שינה"),
     [HOLD_EFFECT_CURE_PSN]         = COMPOUND_STRING("ריפוי הרעלה"),
@@ -2243,7 +2243,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_ENIGMA_BERRY]     = COMPOUND_STRING("פרי אניגמה"),
     [HOLD_EFFECT_RESIST_BERRY]     = COMPOUND_STRING("פרי עמידות"),
     [HOLD_EFFECT_POWER_ITEM]       = COMPOUND_STRING("פריט כוח"),
-    [HOLD_EFFECT_RESTORE_PCT_HP]   = COMPOUND_STRING("ריפוי נ”ח באחוזים"),
+    [HOLD_EFFECT_RESTORE_PCT_HP]   = COMPOUND_STRING("שיקום נ”ח באחוז"),
     [HOLD_EFFECT_MICLE_BERRY]      = COMPOUND_STRING("פרי מייקל"),
     [HOLD_EFFECT_CUSTAP_BERRY]     = COMPOUND_STRING("פרי קאסטפ"),
     [HOLD_EFFECT_JABOCA_BERRY]     = COMPOUND_STRING("פרי ג'בוקה"),
