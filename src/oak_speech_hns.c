@@ -206,11 +206,11 @@ static const struct MenuAction sMenuActions_Gender[] = {
 };
 
 static const u8 *const sMalePresetNames[] = {
-    COMPOUND_STRING("GOLD"),
+    COMPOUND_STRING("גולד"),
 };
 
 static const u8 *const sFemalePresetNames[] = {
-    COMPOUND_STRING("KRIS"),
+    COMPOUND_STRING("קריס"),
 };
 
 #define NUM_PRESET_NAMES min(ARRAY_COUNT(sMalePresetNames), ARRAY_COUNT(sFemalePresetNames))
