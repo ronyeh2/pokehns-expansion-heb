@@ -448,7 +448,7 @@ ALIGNED(4) static const u8 sText_TradingBoardInfo[] = _("לוח ההחלפות �
                                                         "לרשום אחד מהפוקימונים\n"
                                                         "שלך?");
 ALIGNED(4) static const u8 sText_ThankYouForRegistering[] = _("We have registered your POKéMON for\ntrade on the TRADING BOARD.\pThank you for using this service!\p"); // unused
-ALIGNED(4) static const u8 sText_NobodyHasRegistered[] = _("Nobody has registered any POKéMON\nfor trade on the TRADING BOARD.\p\n"); // unused
+ALIGNED(4) static const u8 sText_NobodyHasRegistered[] = _("אף אחד לא רשם פוקימונים\nלהחלפה בלוח ההחלפות.\p\n"); // unused
 ALIGNED(4) static const u8 sText_ChooseRequestedMonType[] = _("נא לבחור את סוג הפוקימון\nשברצונך לקבל בהחלפה.\n");
 ALIGNED(4) static const u8 sText_WhichMonWillYouOffer[] = _("איזה פוקימון מהקבוצה שלך\nלהציע להחלפה?\p");
 ALIGNED(4) static const u8 sText_RegistrationCanceled[] = _("הרישום בוטל.\p");
@@ -458,14 +458,14 @@ ALIGNED(4) static const u8 sText_CancelRegistrationOfMon[] = _("לבטל את ר
 ALIGNED(4) static const u8 sText_CancelRegistrationOfEgg[] = _("לבטל את רישום\nהביצה שלך?");
 ALIGNED(4) static const u8 sText_RegistrationCanceled2[] = _("הרישום בוטל.\p");
 ALIGNED(4) static const u8 sText_TradeTrainersWillBeListed[] = _("TRAINERS wishing to make a trade\nwill be listed."); // unused
-ALIGNED(4) static const u8 sText_ChooseTrainerToTradeWith2[] = _("Please choose the TRAINER with whom\nyou would like to trade POKéMON."); // unused
+ALIGNED(4) static const u8 sText_ChooseTrainerToTradeWith2[] = _("נא לבחור את המאמן\nשאיתו ברצונך להחליף פוקימונים."); // unused
 ALIGNED(4) static const u8 sText_AskTrainerToMakeTrade[] = _("לבקש מ{STR_VAR_1}\nלבצע החלפה?");
 ALIGNED(4) static const u8 sText_AwaitingResponseFromTrainer2[] = _("בהמתנה לתשובה\nמהמאמן האחר…"); // unused
-ALIGNED(4) static const u8 sText_NotRegisteredAMonForTrade[] = _("You have not registered a POKéMON\nfor trading.\p"); // unused
+ALIGNED(4) static const u8 sText_NotRegisteredAMonForTrade[] = _("לא רשמת פוקימון\nלהחלפה.\p"); // unused
 ALIGNED(4) static const u8 sText_DontHaveTypeTrainerWants[] = _("אין לך פוקימון מסוג {STR_VAR_2}\nש{STR_VAR_1} רוצה.\p");
 ALIGNED(4) static const u8 sText_DontHaveEggTrainerWants[] = _("אין לך ביצה\nש{STR_VAR_1} רוצה.\p");
 ALIGNED(4) static const u8 sText_PlayerCantTradeForYourMon[] = _("{STR_VAR_1} can't make a trade for\nyour POKéMON right now.\p");
-ALIGNED(4) static const u8 sText_CantTradeForPartnersMon[] = _("You can't make a trade for\n{STR_VAR_1}'s POKéMON right now.\p");
+ALIGNED(4) static const u8 sText_CantTradeForPartnersMon[] = _("אי אפשר להחליף כרגע\nאת הפוקימון של {STR_VAR_1}.\p");
 
 // Unused
 static const u8 *const sCantTradeMonTexts[] = {
@@ -523,11 +523,11 @@ static const u8 *const sChooseTrainerTexts[NUM_LINK_GROUP_TYPES] =
 };
 
 ALIGNED(4) static const u8 sText_SearchingForWirelessSystemWait[] = _("חיפוש מערכת תקשורת\nאלחוטית. נא להמתין…");
-ALIGNED(4) static const u8 sText_MustHaveTwoMonsForDoubleBattle[] = _("For a DOUBLE BATTLE, you must have\nat least two POKéMON.\p"); // Unused
+ALIGNED(4) static const u8 sText_MustHaveTwoMonsForDoubleBattle[] = _("לקרב כפול צריך\nלפחות שני פוקימונים.\p"); // Unused
 ALIGNED(4) static const u8 sText_AwaitingPlayersResponse[] = _("בהמתנה לתשובה של {STR_VAR_1}…");
 ALIGNED(4) static const u8 sText_PlayerHasBeenAskedToRegisterYouPleaseWait[] = _("נשלחה ל{STR_VAR_1} בקשה לרשום\nאותך כחבר. נא להמתין.");
 ALIGNED(4) static const u8 sText_AwaitingResponseFromWirelessSystem[] = _("בהמתנה לתשובה ממערכת\nהתקשורת האלחוטית.");
-ALIGNED(4) static const u8 sText_PleaseWaitForOtherTrainersToGather[] = _("Please wait for other TRAINERS to\ngather and get ready."); // Unused
+ALIGNED(4) static const u8 sText_PleaseWaitForOtherTrainersToGather[] = _("נא להמתין עד שמאמנים אחרים\nיתאספו ויתכוננו."); // Unused
 ALIGNED(4) static const u8 sText_NoCardsSharedRightNow[] = _("נראה שאף אחד לא משתף\nכרטיסים כרגע.");
 ALIGNED(4) static const u8 sText_NoNewsSharedRightNow[] = _("נראה שאף אחד לא משתף\nחדשות כרגע.");
 
