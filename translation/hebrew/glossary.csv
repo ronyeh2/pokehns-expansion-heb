@@ -6023,3 +6023,10 @@ decoration,DECOR_WAILMER_DOLL,WAILMER DOLL,,בובת ויילמר,proposed,"src/
 decoration,DECOR_REGIROCK_DOLL,REGIROCK DOLL,,בובת רג'ירוק,proposed,src/data/decoration/header.h; Glossary SPECIES_REGIROCK רג'ירוק (inherited; REGI- = רג'י). Matches MultichoiceList_GameCornerDolls2 (script_menu.h:270). 12 bytes.
 decoration,DECOR_REGICE_DOLL,REGICE DOLL,,בובת רג'יס,proposed,src/data/decoration/header.h; Glossary SPECIES_REGICE רג'יס (inherited). Matches script_menu.h:271. 10 bytes.
 decoration,DECOR_REGISTEEL_DOLL,REGISTEEL DOLL,,בובת רג'יסטיל,proposed,src/data/decoration/header.h; Glossary SPECIES_REGISTEEL רג'יסטיל (inherited). Matches script_menu.h:272. 13 bytes.
+place,PLACE_PAL_PARK,PAL PARK,,פארק פאל,proposed,"PARK BALL description; Park translated, Pal transliterated"
+place,PLACE_SHOAL_CAVE,SHOAL CAVE,,מערת השרטון,proposed,SHOAL SALT/SHELL descriptions; shoal = שרטון (meaning); the items are מלח מערות / קליפת מערות
+place,PLACE_ISLE_OF_ARMOR,ISLE OF ARMOR,,אי השריון,proposed,ARMORITE ORE description; armor = שריון as in עפרת שריוניט
+place,PLACE_MAX_LAIR,MAX LAIR,,מאורת מקס,proposed,DYNITE ORE description; Max as in the Max moves (מקס)
+place,PLACE_NAVEL_ROCK,NAVEL ROCK,,סלע הטבור,proposed,MYSTIC TICKET description; meaning
+place,PLACE_ENTREE_FOREST,ENTREE FOREST,,יער אנטרה,proposed,"DREAM BALL description, branch not compiled in this build; Entree transliterated"
+place,TERM_ULTRA_BEASTS,Ultra Beasts,,חיות אולטרה,proposed,"BEAST BALL description; beast = חיה as in כדור חיה, Ultra as in אולטרה בול"
