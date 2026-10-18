@@ -222,9 +222,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 280,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Rillaboom has become one with its\n"
-            "forest of drums and continues to lay\n"
-            "down beats that shake all of Galar."),
+            "רילבום התאחד עם יער התופים שלו, והוא\n"
+            "ממשיך לתופף מקצבים שמרעידים את\n"
+            "כל גלאר."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -473,10 +473,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 270,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Infused with Cinderace's fighting\n"
-            "spirit, the gigantic Pyro Ball never\n"
-            "misses its targets and completely\n"
-            "roasts opponents."),
+            "כדור התבערה הענק, הספוג ברוח הלחימה\n"
+            "של סינדרייס, לעולם לא מחטיא את מטרותיו\n"
+            "וצולה את היריבים כליל."),
         .pokemonScale = 265,
         .pokemonOffset = 2,
         .trainerScale = 262,
@@ -727,10 +726,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 400,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Gigantamax Inteleon's Water Gun\n"
-            "move fires at Mach 7. As the Pokémon\n"
-            "takes aim, it uses the crest on its\n"
-            "head to gauge wind and temperature."),
+            "המהלך רובה מים של אינטליאון בצורת ג'ימקס\n"
+            "נורה במהירות מאך 7. כשהוא מכוון, הוא מודד\n"
+            "בעזרת הציצה שעל ראשו את הרוח והטמפרטורה."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -1131,10 +1129,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 140,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Imbued with Gigantamax energy, its\n"
-            "wings can whip up winds more\n"
-            "forceful than any a hurricane could\n"
-            "muster. The gusts blow everything away."),
+            "כנפיו, הספוגות באנרגיית ג'ימקס,\n"
+            "יכולות לחולל רוחות עזות יותר מכל\n"
+            "הוריקן. משבי הרוח מעיפים כל דבר."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,
@@ -1387,10 +1384,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 140,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Its brain has grown to a gargantuan\n"
-            "size, as has the rest of its body.\n"
-            "This Pokémon's intellect and\n"
-            "psychic abilities are overpowering."),
+            "המוח שלו גדל לממדים עצומים, וכך גם\n"
+            "שאר גופו. לתבונה ולכוחות הפסיכיים\n"
+            "של הפוקימון הזה יש עוצמה מכרעת."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1967,10 +1963,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 240,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "In the Galar region, there's a tale\n"
-            "about this Pokémon chewing up a\n"
-            "mountain and using the rubble to stop a\n"
-            "flood."),
+            "באזור גלאר מספרים על הפוקימון הזה\n"
+            "שלעס הר והשתמש בשברי הסלע\n"
+            "כדי לעצור שיטפון."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -2348,10 +2343,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 420,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Its body is a colossal stove. With\n"
-            "Gigantamax energy stoking the fire,\n"
-            "this Pokémon's flame burns hotter\n"
-            "than 3,600 degrees Fahrenheit."),
+            "גופו הוא תנור ענקי. כשאנרגיית הג'ימקס\n"
+            "מלבה את האש, הלהבה של הפוקימון הזה בוערת\n"
+            "בחום של יותר מ-3,600 מעלות פרנהייט."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -2548,10 +2542,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 240,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Under the influence of Gigantamax\n"
-            "energy, it produces much more sweet\n"
-            "nectar, and its shape has changed\n"
-            "to resemble a giant apple."),
+            "בהשפעת אנרגיית הג'ימקס הוא מייצר\n"
+            "הרבה יותר צוף מתוק, וצורתו השתנתה\n"
+            "כך שהוא דומה לתפוח ענק."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2673,10 +2666,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 240,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Due to Gigantamax energy, this\n"
-            "Pokémon's nectar has thickened. The\n"
-            "increased viscosity lets the nectar\n"
-            "absorb more damage than before."),
+            "בגלל אנרגיית הג'ימקס, הצוף של\n"
+            "הפוקימון הזה הסמיך. הצמיגות הגבוהה\n"
+            "מאפשרת לצוף לספוג יותר נזק מבעבר."),
         .pokemonScale = 491,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -2991,10 +2983,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 220,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Its sand pouch has grown to tremendous\n"
-            "proportions. More than 1,000,000 tons of\n"
-            "sand now swirl around its body with enough\n"
-            "speed and power to pulverize a skyscraper."),
+            "שק החול שלו גדל לממדים אדירים. יותר\n"
+            "מ-1,000,000 טונות חול מסתחררים סביב גופו\n"
+            "במהירות ובעוצמה שמספיקות לרסק גורד שחקים."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 610,
@@ -3806,10 +3797,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 750,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "The heat that comes off a\n"
-            "Gigantamax Centiskorch may\n"
-            "destabilize air currents. Sometimes\n"
-            "it can even cause storms."),
+            "החום שנפלט מסנטיסקורץ' בצורת ג'ימקס\n"
+            "עלול לערער את זרמי האוויר. לפעמים\n"
+            "הוא אפילו גורם לסערות."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -4450,10 +4440,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 260,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "This Pokémon can read the\n"
-            "emotions of creatures over 30 miles away.\n"
-            "The minute it senses hostility, it\n"
-            "goes on the attack."),
+            "הפוקימון הזה יכול לקרוא את הרגשות של\n"
+            "יצורים במרחק של יותר מ-30 מייל.\n"
+            "ברגע שהוא חש עוינות, הוא יוצא להתקפה."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 365,
@@ -4703,10 +4692,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 320,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "Gigantamax energy has caused more\n"
-            "hair to sprout all over its body.\n"
-            "With the added strength, it can jump\n"
-            "over the world's tallest building."),
+            "אנרגיית הג'ימקס גרמה לעוד שיער\n"
+            "לצמוח בכל גופו. בזכות הכוח הנוסף, הוא\n"
+            "יכול לקפוץ מעל הבניין הגבוה ביותר בעולם."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -5140,10 +5128,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 3,
         .weight = 5,
         .description = COMPOUND_STRING(
-            "It launches swarms of missiles,\n"
-            "each made of cream and loaded with\n"
-            "100,000 kilocalories. Get hit by one of\n"
-            "these, and your head will swim."),
+            "הוא משגר נחילי טילים, שכל אחד מהם\n"
+            "עשוי מקצפת וטעון ב-100,000 קילוקלוריות.\n"
+            "מי שנפגע מאחד מהם, ראשו מסתחרר."),
         .pokemonScale = 530,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -5271,10 +5258,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 16,
         .weight = 990,
         .description = COMPOUND_STRING(
-            "Mega Falinks has taken on the\n"
-            "ultimate battle formation, which\n"
-            "can be achieved only if the troopers\n"
-            "and brass have the strongest of bonds."),
+            "מגה פאלינקס נערך במערך הקרב המושלם,\n"
+            "שאפשר להשיג רק כשהקשר בין החיילים\n"
+            "למפקד הוא החזק ביותר."),
         .frontPic = gMonFrontPic_FalinksMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 1,
@@ -6097,10 +6083,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 230,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "After this Pokémon has Gigantamaxed,\n"
-            "its massive nose can utterly demolish\n"
-            "large structures with a single\n"
-            "smashing blow."),
+            "אחרי שהפוקימון הזה עובר גיגנטמקס,\n"
+            "האף העצום שלו מסוגל להרוס כליל\n"
+            "מבנים גדולים במכה מוחצת אחת."),
         .pokemonScale = 275,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -6487,10 +6472,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 430,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "The hardness of its cells is\n"
-            "exceptional, even among Steel types. It\n"
-            "also has a body structure that's\n"
-            "resistant to earthquakes."),
+            "התאים שלו קשים במיוחד, אפילו בהשוואה\n"
+            "לפוקימונים מסוג פלדה. גם מבנה הגוף\n"
+            "שלו עמיד בפני רעידות אדמה."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -7346,10 +7330,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 290,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "People call it the embodiment of\n"
-            "rage. It's said that this Pokémon's\n"
-            "terrifying expression and shout will\n"
-            "rid the world of malevolence."),
+            "מכנים אותו ”התגלמות הזעם”. אומרים\n"
+            "שהבעת הפנים המפחידה והצעקה של הפוקימון\n"
+            "הזה יסלקו את הרוע מהעולם."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -7475,10 +7458,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 260,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "As it waits for the right moment to\n"
-            "unleash its Gigantamax power, this\n"
-            "Pokémon maintains a perfect one-\n"
-            "legged stance. It won't even twitch."),
+            "בזמן שהוא מחכה לרגע הנכון לשחרר את כוח\n"
+            "הגיגנטמקס שלו, הפוקימון הזה עומד באיזון\n"
+            "מושלם על רגל אחת, בלי לזוע אפילו מעט."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -8005,14 +7987,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .speciesName = _("קאלירקס"),
         .cryId = CRY_CALYREX_ICE,
         .natDexNum = NATIONAL_DEX_CALYREX,
-        .categoryName = _("High King"),
+        .categoryName = _("מלך עליון"),
         .height = 24,
         .weight = 8091,
         .description = COMPOUND_STRING(
-            "According to lore, this Pokémon\n"
-            "showed no mercy to those who got in\n"
-            "its way, yet it would heal its\n"
-            "opponents' wounds after battle."),
+            "לפי האגדה, הפוקימון הזה לא ריחם על מי\n"
+            "שעמד בדרכו, אבל אחרי הקרב הוא נהג\n"
+            "לרפא את הפצעים של יריביו."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -8074,14 +8055,13 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .speciesName = _("קאלירקס"),
         .cryId = CRY_CALYREX_SHADOW,
         .natDexNum = NATIONAL_DEX_CALYREX,
-        .categoryName = _("High King"),
+        .categoryName = _("מלך עליון"),
         .height = 24,
         .weight = 536,
         .description = COMPOUND_STRING(
-            "It's said that Calyrex and a\n"
-            "Pokémon that had bonded with it ran all\n"
-            "across the Galar region to bring green\n"
-            "to the wastelands."),
+            "אומרים שקאלירקס ופוקימון שנקשר אליו\n"
+            "דהרו לאורכו ולרוחבו של אזור גלאר\n"
+            "כדי להביא ירק לאדמות השוממות."),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
