@@ -59,8 +59,8 @@ static const u8 sUTurnDescription[] = _(
     "מתחלף בפוקימון אחר.");
 
 static const u8 sStormThrowDescription[] = _(
-    "התקפה שתמיד מנחיתה\n"
-    "מכה קריטית.");
+    "התקפה שתמיד מסתיימת\n"
+    "בפגיעה קריטית.");
 
 static const u8 sCircleThrowDescription[] = _(
     "מעיף את היריב ומחליף אותו,\n"
@@ -167,7 +167,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("מכת קראטה"),
         .description = COMPOUND_STRING(
             "התקפת חיתוך עם סיכוי גבוה\n"
-            "למכה קריטית."),
+            "לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = 50,
         .type = B_UPDATED_MOVE_TYPES >= GEN_2 ? TYPE_FIGHTING : TYPE_NORMAL,
@@ -419,7 +419,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("גיליוטינה"),
         .description = COMPOUND_STRING(
             "התקפת צבתות עוצמתית\n"
-            "שמעלפת אם היא פוגעת."),
+            "שמחסלת אם היא פוגעת."),
         .effect = EFFECT_OHKO,
         .power = 1,
         .type = TYPE_NORMAL,
@@ -447,7 +447,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             .description = COMPOUND_STRING(
                 "מהלך של 2 תורים עם\n"
-                "סיכוי גבוה למכה קריטית."),
+                "סיכוי גבוה לפגיעה קריטית."),
         #endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = 80,
@@ -954,7 +954,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("מקדחת קרן"),
         .description = COMPOUND_STRING(
             "קרן שפועלת כמקדחה\n"
-            "ומעלפת במכה אחת."),
+            "ומחסלת במכה אחת."),
         .effect = EFFECT_OHKO,
         .power = 1,
         .type = TYPE_NORMAL,
@@ -2088,7 +2088,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("עלי להב"),
         .description = COMPOUND_STRING(
             "חותך יריבים בעלים חדים.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = 55,
         .type = TYPE_GRASS,
@@ -2474,7 +2474,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("בולען"),
         .description = COMPOUND_STRING(
-            "מהלך שמעלף במכה אחת\n"
+            "מהלך שמחסל במכה אחת\n"
             "ומפיל את היריב לסדק."),
         .effect = EFFECT_OHKO,
         .power = 1,
@@ -2870,7 +2870,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("החלמה"),
         .description = COMPOUND_STRING(
             "מרפא את המשתמש עד חצי\n"
-            "ממקסימום הנ”ח שלו."),
+            "מהנ”ח המרבי שלו."),
         #if B_UPDATED_MOVE_DATA >= GEN_9
             .pp = 5,
         #elif B_UPDATED_MOVE_DATA >= GEN_4
@@ -3163,7 +3163,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("רכז אנרגיה"),
         .description = COMPOUND_STRING(
             "מרכז כוח כדי להעלות\n"
-            "את הסיכוי למכה קריטית."),
+            "את הסיכוי לפגיעה קריטית."),
         .effect = EFFECT_FOCUS_ENERGY,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -3672,7 +3672,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("הטלת ביצה"),
         .description = COMPOUND_STRING(
             "מרפא את המשתמש עד חצי\n"
-            "ממקסימום הנ”ח שלו."),
+            "מהנ”ח המרבי שלו."),
         .effect = EFFECT_SOFTBOILED,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -3890,8 +3890,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("מתקפת שמים"),
         .description = COMPOUND_STRING(
-            "התקפת 2 תורים. סיכוי גבוה\n"
-            "למכה קריטית. עלול להרתיע."),
+            "התקפת 2 תורים. יחס פגיעה\n"
+            "קריטית גבוה. עלול להרתיע."),
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = 140,
         .type = TYPE_FLYING,
@@ -4139,7 +4139,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("צבתות"),
         .description = COMPOUND_STRING(
             "חובט בצבת.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 100 : 90,
         .type = TYPE_WATER,
@@ -4233,7 +4233,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("מנוחה"),
         .description = COMPOUND_STRING(
-            "המשתמש ישן 2 תורים, משחזר\n"
+            "המשתמש ישן 2 תורים, משקם\n"
             "נ”ח ומרפא בעיות מצב."),
         .effect = EFFECT_REST,
         .power = 0,
@@ -4262,7 +4262,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #if B_UPDATED_MOVE_DATA >= GEN_2
             .description = COMPOUND_STRING(
                 "סלעים גדולים מושלכים.\n"
-                "עלול לגרום להירתעות."),
+                "עלול לגרום לרתיעה."),
         #else
             .description = COMPOUND_STRING(
                 "פוגע ביריב\n"
@@ -4295,7 +4295,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ניבי על"),
         .description = COMPOUND_STRING(
             "תוקף בניבים חדים.\n"
-            "עלול לגרום להירתעות."),
+            "עלול לגרום לרתיעה."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_NORMAL,
@@ -4381,9 +4381,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .description = COMPOUND_STRING(
                 "יורה שלוש קרניים. עלול\n"
                 #if B_USE_FROSTBITE == TRUE
-                    "לשרוף, לשתק או לכוות בקור."),
+                    "לכוות, לשתק או לכוות בקור."),
                 #else
-                    "לשרוף, לשתק או להקפיא."),
+                    "לכוות, לשתק או להקפיא."),
                 #endif
         #else
             .description = COMPOUND_STRING(
@@ -4442,7 +4442,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("שיסוף"),
         .description = COMPOUND_STRING(
             "חותך בטפרים וכו'.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_NORMAL,
@@ -4466,7 +4466,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("ממלא מקום"),
         .description = COMPOUND_STRING(
-            "יוצר פיתיון בעזרת 1/4\n"
+            "יוצר ממלא מקום בעזרת 1/4\n"
             "מהנ”ח המרבי של המשתמש."),
         .effect = EFFECT_SUBSTITUTE,
         .power = 0,
@@ -4830,7 +4830,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("פרץ אוויר"),
         .description = COMPOUND_STRING(
             "משגר פרץ ואקום.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_FLYING,
@@ -4938,7 +4938,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #if B_USE_FROSTBITE == TRUE
             "עלול לגרום לכוויית קור."),
         #else
-            "עלול לגרום להקפאה."),
+            "עלול לגרום לקיפאון."),
         #endif
         .effect = EFFECT_HIT,
         .power = 40,
@@ -5648,7 +5648,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("שתיית חלב"),
         .description = COMPOUND_STRING(
-            "משחזר עד חצי\n"
+            "משקם עד חצי\n"
             "מהנ”ח המרבי של המשתמש."),
         .effect = EFFECT_SOFTBOILED,
         .power = 0,
@@ -5894,7 +5894,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("מתנה"),
         .description = COMPOUND_STRING(
             "מתנה בצורת פצצה.\n"
-            "עשויה לשחזר נ”ח."),
+            "עשויה לשקם נ”ח."),
         .effect = EFFECT_PRESENT,
         .power = 1,
         .type = TYPE_NORMAL,
@@ -6227,7 +6227,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_6
             "מפתה את היריבים ומוריד\n"
-            "מאוד את ההתחמקות שלהם."),
+            "בחדות את ההתחמקות שלהם."),
         #else
             "מפתה את היריבים ומוריד\n"
             "את ההתחמקות שלהם."),
@@ -6332,7 +6332,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("שמש בוקר"),
         .description = COMPOUND_STRING(
-            "משחזר נ”ח. הכמות\n"
+            "משקם נ”ח. הכמות\n"
             "משתנה לפי מזג האוויר."),
         .effect = EFFECT_MORNING_SUN,
         .power = 0,
@@ -6359,7 +6359,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("סינתזה"),
         .description = COMPOUND_STRING(
-            "משחזר נ”ח. הכמות\n"
+            "משקם נ”ח. הכמות\n"
             "משתנה לפי מזג האוויר."),
         .effect = EFFECT_SYNTHESIS,
         .power = 0,
@@ -6386,7 +6386,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("אור ירח"),
         .description = COMPOUND_STRING(
-            "משחזר נ”ח. הכמות\n"
+            "משקם נ”ח. הכמות\n"
             "משתנה לפי מזג האוויר."),
         .effect = EFFECT_MOONLIGHT,
         .power = 0,
@@ -6441,7 +6441,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("קיצוץ צולב"),
         .description = COMPOUND_STRING(
             "התקפת חיתוך כפולה.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_FIGHTING,
@@ -6802,7 +6802,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("מכות"),
         .description = COMPOUND_STRING(
-            "מזמן את פוקימוני הצוות\n"
+            "מזמן את פוקימוני הקבוצה\n"
             "להצטרף להתקפה."),
         .effect = EFFECT_BEAT_UP,
         .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 1 : 10,
@@ -6941,7 +6941,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("בליעה"),
         .description = COMPOUND_STRING(
             "בולע את הכוח שנצבר\n"
-            "ומשחזר נ”ח."),
+            "ומשקם נ”ח."),
         .effect = EFFECT_SWALLOW,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -7099,8 +7099,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("מזכרת"),
         .description = COMPOUND_STRING(
-            "המשתמש מתעלף ומוריד מאוד\n"
-            "התקפה והתק' מיוחדת ליריב."),
+            "המשתמש מתעלף ומוריד ליריב\n"
+            "בחדות התקפה והתק' מיוחדת."),
         .effect = EFFECT_MEMENTO,
         .power = 0,
         .type = TYPE_DARK,
@@ -7395,7 +7395,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("משאלה"),
         .description = COMPOUND_STRING(
-            "משאלה שמשחזרת נ”ח.\n"
+            "משאלה שמשקמת נ”ח.\n"
             "לוקח לה זמן לפעול."),
         .effect = EFFECT_WISH,
         .power = 0,
@@ -7453,7 +7453,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("השתרשות"),
         .description = COMPOUND_STRING(
-            "מכה שורשים שמשחזרים נ”ח.\n"
+            "מכה שורשים שמשקמים נ”ח.\n"
             "המשתמש לא יכול להתחלף."),
         .effect = EFFECT_INGRAIN,
         .power = 0,
@@ -7938,7 +7938,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("זוהר זנב"),
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_5
-            "הבזק אור שמעלה מאוד\n"
+            "הבזק אור שמעלה דרסטית\n"
         #else
             "הבזק אור שמעלה בחדות\n"
         #endif
@@ -8071,7 +8071,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("בעיטת להבה"),
         .description = COMPOUND_STRING(
             "בעיטה עם סיכוי גבוה\n"
-            "למכה קריטית. עלולה לכוות."),
+            "לפגיעה קריטית. עלולה לכוות."),
         .effect = EFFECT_HIT,
         .power = 85,
         .type = TYPE_FIRE,
@@ -8151,7 +8151,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("זרוע מחט"),
         .description = COMPOUND_STRING(
             "תוקף בזרועות קוצניות.\n"
-            "עלול לגרום להירתעות."),
+            "עלול לגרום לרתיעה."),
         .effect = EFFECT_HIT,
         .power = 60,
         .type = TYPE_GRASS,
@@ -8178,7 +8178,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("התרופפות"),
         .description = COMPOUND_STRING(
-            "מתבטל ומשחזר חצי\n"
+            "מתבטל ומשקם חצי\n"
             "מהנ”ח המרבי."),
         .effect = EFFECT_RESTORE_HP,
         .power = 0,
@@ -8775,7 +8775,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("חוש נוסף"),
         .description = COMPOUND_STRING(
             "תוקף בכוח משונה.\n"
-            "עלול לגרום להירתעות."),
+            "עלול לגרום לרתיעה."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_PSYCHIC,
@@ -9523,8 +9523,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("מנוחת כנף"),
         .description = COMPOUND_STRING(
-            "המשתמש מחזיר לעצמו חצי\n"
-            "מהנ”ח המרביות שלו."),
+            "המשתמש משקם לעצמו חצי\n"
+            "מהנ”ח המרבי שלו."),
         .effect = EFFECT_ROOST,
         .power = 0,
         .type = TYPE_FLYING,
@@ -9549,7 +9549,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("כבידה"),
         .description = COMPOUND_STRING(
-            "כוח המשיכה מתחזק\n"
+            "כוח הכבידה מתחזק\n"
             "ומבטל ריחוף."),
         .effect = EFFECT_GRAVITY,
         .power = 0,
@@ -10048,7 +10048,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("חסימת ריפוי"),
         .description = COMPOUND_STRING(
-            "מונע מהיריבים לשחזר\n"
+            "מונע מהיריבים לשקם\n"
             "נ”ח למשך 5 תורים."),
         .effect = EFFECT_HEAL_BLOCK,
         .power = 0,
@@ -10412,7 +10412,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("טבעת מים"),
         .description = COMPOUND_STRING(
             "יוצר מעטה מים\n"
-            "שמשחזר נ”ח."),
+            "שמשקם נ”ח."),
         .effect = EFFECT_AQUA_RING,
         .power = 0,
         .type = TYPE_WATER,
@@ -10591,7 +10591,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("דופק אפל"),
         .description = COMPOUND_STRING(
             "תוקף בהילה מחרידה.\n"
-            "עלול לגרום להירתעות."),
+            "עלול לגרום לרתיעה."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_DARK,
@@ -10685,7 +10685,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("שיסוף אוויר"),
         .description = COMPOUND_STRING(
             "תוקף בלהב של אוויר.\n"
-            "עלול לגרום להירתעות."),
+            "עלול לגרום לרתיעה."),
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_FLYING,
@@ -10783,7 +10783,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("דהירת דרקון"),
         .description = COMPOUND_STRING(
             "הסתערות מאיימת על היריב.\n"
-            "עלולה לגרום להירתעות."),
+            "עלולה לגרום לרתיעה."),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_DRAGON,
@@ -11136,7 +11136,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("ניב רעם"),
         .description = COMPOUND_STRING(
-            "עלול לגרום להירתעות\n"
+            "עלול לגרום לרתיעה\n"
             "או לשתק את היריב."),
         .effect = EFFECT_HIT,
         .power = 65,
@@ -11202,7 +11202,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("ניב אש"),
         .description = COMPOUND_STRING(
-            "עלול לגרום להירתעות\n"
+            "עלול לגרום לרתיעה\n"
             "או לכוות את היריב."),
         .effect = EFFECT_HIT,
         .power = 65,
@@ -11305,7 +11305,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("נגיחת זן"),
         .description = COMPOUND_STRING(
             "נגיחה חזקה.\n"
-            "עלולה לגרום להירתעות."),
+            "עלולה לגרום לרתיעה."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_PSYCHIC,
@@ -11651,7 +11651,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ראש ברזל"),
         .description = COMPOUND_STRING(
             "מטיח ביריב את ראשו הקשה.\n"
-            "עלול לגרום להירתעות."),
+            "עלול לגרום לרתיעה."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_STEEL,
@@ -11997,7 +11997,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("פקודת ריפוי"),
         .description = COMPOUND_STRING(
             "משרתי המשתמש מגיעים\n"
-            "לשחזר חצי מהנ”ח המרביות."),
+            "לשקם חצי מהנ”ח המרבי."),
         .effect = EFFECT_RESTORE_HP,
         .power = 0,
         .type = TYPE_BUG,
@@ -13742,7 +13742,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ריצת מקדחה"),
         .description = COMPOUND_STRING(
             "מסובב את גופו כמו מקדח.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_GROUND,
@@ -13958,7 +13958,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("הגנת כותנה"),
         .description = COMPOUND_STRING(
             "עוטף את גופו בכותנה.\n"
-            "מעלה הגנה באופן קיצוני."),
+            "מעלה הגנה בצורה דרסטית."),
         .effect = EFFECT_DEFENSE_UP_3,
         .power = 0,
         .type = TYPE_GRASS,
@@ -14595,7 +14595,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("חריש"),
         .description = COMPOUND_STRING(
-            "מעלה התקפה והתק' מיוחדת\n"
+            "מעלה התקפה והתקפה מיוחדת\n"
             "לפוקימונים מסוג עשב."),
         .effect = EFFECT_ROTOTILLER,
         .power = 0,
@@ -14646,7 +14646,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("עוקץ קטלני"),
         .description = COMPOUND_STRING(
-            "אם המהלך מעלף יריב,\n"
+            "אם המהלך מחסל יריב,\n"
             "התקפת המשתמש עולה."),
         .effect = EFFECT_FELL_STINGER,
         .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 50 : 30,
@@ -14843,7 +14843,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #if B_USE_FROSTBITE == TRUE
             "עלול לגרום לכוויית קור."),
         #else
-            "עלול לגרום להקפאה."),
+            "עלול לגרום לקיפאון."),
         #endif
         .effect = EFFECT_SUPER_EFFECTIVE_ON_ARG,
         .power = 70,
@@ -14962,7 +14962,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("מגן ערמומי"),
         .description = COMPOUND_STRING(
-            "מתחמק ממהלכי מצב\n"
+            "מתחמק ממהלכי סטטוס\n"
             "למשך תור אחד."),
         .effect = EFFECT_PROTECT,
         .power = 0,
@@ -15491,7 +15491,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("הצפת ארס"),
         .description = COMPOUND_STRING(
-            "מוריד התקפה, התק' מיוחדת\n"
+            "מוריד התקפה, התקפה מיוחדת\n"
             "ומהירות ליריבים מורעלים."),
         .effect = EFFECT_VENOM_DRENCH,
         .power = 0,
@@ -15538,7 +15538,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("גיאומנטיה"),
         .description = COMPOUND_STRING(
-            "התק' מיוחדת, הגנ' מיוחדת\n"
+            "התקפה מיוחדת, הגנה מיוחדת\n"
             "ומהירות עולות בתור השני."),
         .effect = EFFECT_GEOMANCY,
         .power = 0,
@@ -16411,7 +16411,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("מיקוד לייזר"),
         .description = COMPOUND_STRING(
             "מבטיח שהמהלך הבא\n"
-            "יהיה מכה קריטית."),
+            "יהיה פגיעה קריטית."),
         .effect = EFFECT_LASER_FOCUS,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -16831,7 +16831,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("פיצוץ מקור"),
         .description = COMPOUND_STRING(
             "מחמם את מקורו ותוקף אחרון.\n"
-            "שורף את מי שנוגע בו."),
+            "מכווה את מי שנוגע בו."),
         .effect = EFFECT_BEAK_BLAST,
         .power = 100,
         .type = TYPE_FLYING,
@@ -18462,7 +18462,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("טל חיים"),
         .description = COMPOUND_STRING(
             "מפזר מים ומשקם את\n"
-            "הנ”ח שלו ושל בני בריתו."),
+            "הנ”ח שלו ושל ידידיו."),
         .effect = EFFECT_LIFE_DEW,
         .power = 0,
         .type = TYPE_WATER,
@@ -18957,7 +18957,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("אימון"),
         .description = COMPOUND_STRING(
-            "מאמן היטב את בני הברית\n"
+            "מאמן היטב את הידידים\n"
             "ומעלה להם התקפה והגנה."),
         .effect = EFFECT_COACHING,
         .power = 0,
@@ -19076,7 +19076,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ריפוי ג'ונגל"),
         .description = COMPOUND_STRING(
             "מרפא נ”ח ובעיות מצב שלו\n"
-            "ושל בני בריתו בקרב."),
+            "ושל ידידיו בקרב."),
         .effect = EFFECT_JUNGLE_HEALING,
         .power = 0,
         .type = TYPE_GRASS,
@@ -19736,7 +19736,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("מצעד תופת"),
         .description = COMPOUND_STRING(
             "חזק יותר נגד יריב עם\n"
-            "בעיית מצב. עלול לשרוף."),
+            "בעיית מצב. עלול לכוות."),
         .effect = EFFECT_DOUBLE_POWER_ON_ARG_STATUS,
         .power = 60,
         .type = TYPE_GHOST,
@@ -19849,7 +19849,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("ברכת ירח"),
         .description = COMPOUND_STRING(
             "המשתמש מרפא ומבריא\n"
-            "את עצמו ואת בן בריתו."),
+            "את עצמו ואת ידידו."),
         .effect = EFFECT_JUNGLE_HEALING,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -19955,7 +19955,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("כבוד אחרון"),
         .description = COMPOUND_STRING(
             "המהלך גורם יותר נזק\n"
-            "על כל בן ברית שהובס."),
+            "על כל ידיד שהובס."),
         .effect = EFFECT_LAST_RESPECTS,
         .power = 50,
         .type = TYPE_GHOST,
@@ -20229,7 +20229,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("קשקוש"),
         .description = COMPOUND_STRING(
             "משנה את יכולת המשתמש\n"
-            "ובן בריתו לזו של המטרה."),
+            "וידידו לזו של המטרה."),
         .effect = EFFECT_DOODLE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -20814,7 +20814,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("חותך מים"),
         .description = COMPOUND_STRING(
             "חיתוך במים דחוסים.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = 70,
         .type = TYPE_WATER,
@@ -21089,7 +21089,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("מחבט קיסוס"),
         .description = COMPOUND_STRING(
             "הסוג משתנה לפי המסכה.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_IVY_CUDGEL,
         .power = 100,
         .type = TYPE_GRASS,
@@ -21170,7 +21170,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("חומה בוערת"),
         .description = COMPOUND_STRING(
-            "מתחמק מהתקפה ושורף\n"
+            "מתחמק מהתקפה ומכווה\n"
             "יריב שמכה בו."),
         .effect = EFFECT_PROTECT,
         .power = 0,
@@ -21264,8 +21264,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("עידוד דרקון"),
         .description = COMPOUND_STRING(
-            "מעלה לצוות את הסיכוי למכה\n"
-            "קריטית, במיוחד לדרקונים."),
+            "מעלה לצוות את סיכויי הפגיעה\n"
+            "הקריטית, במיוחד לדרקונים."),
         .effect = EFFECT_DRAGON_CHEER,
         .power = 0,
         .type = TYPE_DRAGON,
@@ -21719,7 +21719,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("10,000,000 וולט"),
         .description = COMPOUND_STRING(
             "פיקאצ'ו עם כובע משחרר זרם.\n"
-            "סיכוי גבוה למכה קריטית."),
+            "סיכוי גבוה לפגיעה קריטית."),
         .effect = EFFECT_HIT,
         .power = 195,
         .type = TYPE_ELECTRIC,
@@ -22494,7 +22494,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("מכת צ'י ג'ימקס"),
         .description = COMPOUND_STRING(
             "התקפת מאצ'אמפ ג'ימקס.\n"
-            "מעלה סיכוי למכה קריטית."),    //ANIM TODO
+            "מעלה סיכוי לפגיעה קריטית."),    //ANIM TODO
         .effect = EFFECT_MAX_MOVE,
         .power = 10,
         .type = TYPE_FIGHTING,
