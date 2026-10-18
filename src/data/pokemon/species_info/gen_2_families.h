@@ -258,10 +258,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 24,
         .weight = 2010,
         .description = COMPOUND_STRING(
-            "This Pokémon can fire a tremendously\n"
-            "powerful Solar Beam from its four\n"
-            "flowers. Another name for this is\n"
-            "Mega Sol Cannon."),
+            "הפוקימון הזה יכול לירות קרן שמש עוצמתית\n"
+            "במיוחד מארבעת הפרחים שלו. שם נוסף\n"
+            "לכך הוא ”תותח שמש מגה”."),
         .frontPic = gMonFrontPic_MeganiumMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -829,14 +828,13 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .cryId = CRY_FERALIGATR,
     #endif // P_MODIFIED_MEGA_CRIES
         .natDexNum = NATIONAL_DEX_FERALIGATR,
-        .categoryName = _("Double Jaw"),
+        .categoryName = _("לסת כפולה"),
         .height = 23,
         .weight = 1088,
         .description = COMPOUND_STRING(
-            "With its arms and hoodlike fin, this\n"
-            "Pokémon forms a gigantic set of jaws\n"
-            "with a bite 10 times as powerful\n"
-            "as Mega Feraligatr's actual jaws."),
+            "בזרועותיו ובסנפיר דמוי הברדס, הפוקימון\n"
+            "הזה יוצר לסתות ענק שנשיכתן חזקה פי 10\n"
+            "מזו של הלסתות האמיתיות של מגה פרליגייטר."),
         .frontPic = gMonFrontPic_FeraligatrMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -2245,10 +2243,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 14,
         .weight = 615,
         .description = COMPOUND_STRING(
-            "Massive amounts of energy intensely\n"
-            "stimulated Ampharos's cells, apparently\n"
-            "awakening its long-sleeping dragon's\n"
-            "blood."),
+            "כמויות אדירות של אנרגיה גירו בעוצמה\n"
+            "את התאים של אמפרוס, וככל הנראה\n"
+            "העירו את דם הדרקון שישן בו זמן רב."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -5524,10 +5521,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 17,
         .weight = 625,
         .description = COMPOUND_STRING(
-            "A tremendous influx of energy builds it up,\n"
-            "but when Mega Evolution ends, Heracross\n"
-            "is bothered by terrible soreness in its\n"
-            "muscles."),
+            "זרם אדיר של אנרגיה מחזק אותו, אבל\n"
+            "כשהתפתחות המגה מסתיימת, הרקרוס\n"
+            "סובל מכאבי שרירים נוראיים."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -7300,10 +7296,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 17,
         .weight = 404,
         .description = COMPOUND_STRING(
-            "Due to the effects of Mega Evolution,\n"
-            "its pincers have taken a more\n"
-            "diabolical form, ripping anything\n"
-            "they pierce to shreds."),
+            "בהשפעת התפתחות המגה, הצבתות שלו\n"
+            "קיבלו צורה שטנית יותר. הן קורעות\n"
+            "לגזרים כל דבר שהן ננעצות בו."),
         .frontPic = gMonFrontPic_SkarmoryMega,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 0,
@@ -7510,9 +7505,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 19,
         .weight = 495,
         .description = COMPOUND_STRING(
-            "Its red claws and the tips of its tail are\n"
-            "melting from high internal temperatures\n"
-            "that are painful to Houndoom itself.\n"),
+            "טפריו האדומים וקצות זנבו נמסים בגלל\n"
+            "טמפרטורות פנימיות גבוהות, שגורמות\n"
+            "כאב להאונדום עצמו.\n"),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -8483,10 +8478,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 25,
         .weight = 2550,
         .description = COMPOUND_STRING(
-            "Due to the colossal power poured into it,\n"
-            "this Pokémon's back split right open. Its\n"
-            "destructive instincts are the only thing\n"
-            "keeping it moving."),
+            "בגלל הכוח העצום שהוזרם לתוכו, גבו של\n"
+            "הפוקימון הזה נבקע ונפער. רק יצרי ההרס\n"
+            "שלו עוד מניעים אותו."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 345,
