@@ -407,7 +407,7 @@ CableClub_Text_EnjoyUnionRoom:
 
 CableClub_Text_FirstTimeRightThisWay:
 	.string "שלום!\n"
-	.string "קוראים לי TEALA.\p"
+	.string "קוראים לי טיאלה.\p"
 	.string "זו בטח הפעם הראשונה\n"
 	.string "שלך כאן למעלה.\p"
 	.string "אראה לך איך עובדת\n"
@@ -438,7 +438,7 @@ CableClub_Text_ExplainWirelessClubFirstTime:
 
 CableClub_Text_AskAboutLinking:
 	.string "שלום, {PLAYER}!\p"
-	.string "זו אני, TEALA, הפקידה בקומה 2\n"
+	.string "זו אני, טיאלה, הפקידה בקומה 2\n"
 	.string "של מרכז הפוקימון.\p"
 	.string "רצית לשאול אותי משהו\n"
 	.string "על קישור?$"
