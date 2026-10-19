@@ -5475,10 +5475,16 @@ static void PrintStatsScreen_Moves_Top(u8 taskId)
 #if TEXT_RTL
     // No padding: in place, trailing spaces would widen the extent a Hebrew name is laid out in
     // and push it right, under the item box. The spaces draw nothing on the transparent fill.
+    // Right-align the name in the move box (x 98-183) as the English is left-aligned in it, like
+    // the description and the ability below.
+    {
+        s32 nameX = 85 - (s32)GetStringWidth(FONT_SMALL, gStringVar3, 0);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar3, max(nameX, moves_x), moves_y + 17);
+    }
 #else
     StringCopyPadded(gStringVar3, gStringVar3, CHAR_SPACE, 20);
-#endif
     PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar3, moves_x, moves_y + 17);
+#endif
 
     //Draw move type icon
     if (gTasks[taskId].data[5] == 0)
