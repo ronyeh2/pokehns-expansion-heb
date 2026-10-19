@@ -5062,6 +5062,9 @@ mapsec,MAPSEC_TOHJO_FALLS,TOHJO FALLS,,מפלי טוג'ו,proposed,"FALLS = מפ
 mapsec,MAPSEC_UNION_CAVE,UNION CAVE,,מערת האיחוד,proposed,"meaning; UNION = איחוד as in FR UNION ROOM חדר האיחוד (pokefirered-heb src/strings.c:591, 1250); reviewed: kept; note fix: FR menu gText_UnionRoom is חדר איחוד (strings.c:591), dialogue בחדר האיחוד (:1250); construct+article as FR ROCK TUNNEL מערת האבן"
 mapsec,MAPSEC_WHIRL_ISLANDS,WHIRL ISLANDS,,איי המערבולת,proposed,meaning; ISLANDS = איי X (FR SEAFOAM ISLANDS איי הקצף); whirl = מערבולת; reviewed
 speaker,SP_NAME_MOM,MOM,אמא,אמא,inherited,FR match: dialogue speaker prefix; FR dialogue prefixes Mom's lines with אמא:
+speaker,RADIO_DJ_FERN,FERN,,פרן,proposed,radio DJ on Pokémon Music (src/data/text/radio_strings.h); speaker prefix and name in the intro; translit; not a source constant
+speaker,RADIO_DJ_LILY,LILY,,לילי,proposed,radio DJ of Places and People (src/data/text/radio_strings.h); name in the intro; translit; not a source constant
+speaker,RADIO_DJ_REED,REED,,ריד,proposed,radio host of the Lucky Channel (src/data/text/radio_strings.h); speaker prefix; translit (ee = י); not a source constant
 trainer_name,TRNAME_SAWYER,SAWYER,,סוייר,proposed,"1 trainer(s); translit; aw=ו, as in the Hebrew Tom Sawyer; reviewed; aw=ו as FR DAWSON = דוסון (FR trainers.h:1669)"
 trainer_name,TRNAME_ROSS,ROSS,,רוס,proposed,1 trainer(s); reviewed
 trainer_name,TRNAME_MITCH,MITCH,מיץ',מיץ',inherited,FR match: English; 1 trainer(s)
