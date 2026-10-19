@@ -5544,6 +5544,13 @@ static void PrintStatsScreen_Moves_BottomText(u8 taskId)
     }
 }
 
+#if TEXT_RTL
+// Mirrored, the accuracy and jam values land 1 px from the box's left frame and read as joined
+// to it: print them 3 px further in.
+#define MOVES_BOTTOM_VALUE_INSET 3
+#else
+#define MOVES_BOTTOM_VALUE_INSET 0
+#endif
 static void PrintStatsScreen_Moves_Bottom(u8 taskId)
 {
     u8 moves_x = 8;
@@ -5576,7 +5583,7 @@ static void PrintStatsScreen_Moves_Bottom(u8 taskId)
             StringCopy(gStringVar1, gText_ThreeDashes);
         else
             ConvertIntToDecimalStringN(gStringVar1, accuracy, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar1,  moves_x + 114, moves_y);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar1,  moves_x + 114 - MOVES_BOTTOM_VALUE_INSET, moves_y);
     }
     else //Appeal + Jam
     {
@@ -5597,7 +5604,7 @@ static void PrintStatsScreen_Moves_Bottom(u8 taskId)
         ConvertIntToDecimalStringN(gStringVar1, contest_jam, STR_CONV_MODE_RIGHT_ALIGN, 1);
         StringCopy(gStringVar2, sText_Stats_Minus);
         StringAppend(gStringVar2, gStringVar1);
-        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar2,  moves_x + 119, moves_y);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar2,  moves_x + 119 - MOVES_BOTTOM_VALUE_INSET, moves_y);
     }
 }
 
