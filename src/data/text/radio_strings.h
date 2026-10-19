@@ -12,7 +12,7 @@ static const u8 sRadioStationName_OaksPkmnTalk[]    = _("שיחות פוקימו
 static const u8 sRadioStationName_PokedexShow[]     = _("תוכנית הפוקדקס");
 static const u8 sRadioStationName_PokemonMusic[]    = _("מוזיקת פוקימון");
 static const u8 sRadioStationName_LuckyChannel[]    = _("ערוץ המזל");
-static const u8 sRadioStationName_BuenasPassword[]  = _("הסיסמה של BUENA");
+static const u8 sRadioStationName_BuenasPassword[]  = _("הסיסמה של בואנה");
 static const u8 sRadioStationName_Unown[]           = _("?????");
 static const u8 sRadioStationName_PlacesAndPeople[] = _("מקומות ואנשים");
 static const u8 sRadioStationName_LetsAllSing[]     = _("בואו נשיר ביחד!");
@@ -223,7 +223,7 @@ static const u8 sRadioText_Rocket10[] = _("");
 // Buena's Password
 // ==========================================================
 
-static const u8 sRadioText_Buena1[] = _("BUENA: כאן BUENA!");
+static const u8 sRadioText_Buena1[] = _("בואנה: כאן בואנה!");
 static const u8 sRadioText_Buena2[] = _("הסיסמה של היום!");
 static const u8 sRadioText_Buena3[] = _("רגע, תנו לי לחשוב… זה");
 // "{password}!" built dynamically with STR_VAR_1
