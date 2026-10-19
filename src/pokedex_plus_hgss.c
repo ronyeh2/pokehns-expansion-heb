@@ -286,7 +286,16 @@ static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("g
 #define POKEBALL_ROTATION_BOTTOM (POKEBALL_ROTATION_TOP - 16)
 
 // for evolution method listings
+#if TEXT_RTL
+// Hebrew in the small font reaches higher (geresh, lamed) and lower (final nun) than the Latin
+// capitals, so entries 9 px apart touch the line above or below. 11 px apart, close to the 12 px
+// of a wrapped line, a blank row separates them, and the box (y 51-145) holds 8 lines.
+#define EVO_METHOD_LINE_PITCH 11
+#define MAX_EVO_METHOD_LINES 8
+#else
+#define EVO_METHOD_LINE_PITCH 9
 #define MAX_EVO_METHOD_LINES 10
+#endif
 
 // The list's START menu frame spans x 132-235. The Hebrew items are right-aligned in it, so the
 // cursor is mirrored to the frame's right edge and points left at them.
@@ -6339,7 +6348,7 @@ static void Task_LoadEvolutionScreen(u8 taskId)
             sPokedexView->sEvoScreenData.menuPos = pos;
 #if TEXT_RTL
             // The entries are mirrored to the right edge; point at them from there.
-            sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, DexRtlSpriteX(WIN_INFO, 7), 58 + 9 * pos, 0);
+            sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, DexRtlSpriteX(WIN_INFO, 7), 58 + EVO_METHOD_LINE_PITCH * pos, 0);
             gSprites[sPokedexView->sEvoScreenData.arrowSpriteId].hFlip = TRUE;
 #else
             sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, 7, 58 + 9 * pos, 0);
@@ -6406,7 +6415,7 @@ static void Task_HandleEvolutionScreenInput(u8 taskId)
     if (sPokedexView->sEvoScreenData.numAllEvolutions > 0 && sPokedexView->sEvoScreenData.numSeen > 0)
     {
         u8 base_y = 58;
-        u8 base_y_offset = 9;
+        u8 base_y_offset = EVO_METHOD_LINE_PITCH;
         u8 pos = sPokedexView->sEvoScreenData.menuPos;
         u8 max = sPokedexView->sEvoScreenData.numAllEvolutions - 1;
         if (JOY_NEW(DPAD_DOWN))
@@ -6580,7 +6589,7 @@ static u8 PrintPreEvolutions(u8 taskId, u16 species)
 
     u8 base_x = 13+8;
     u8 base_y = 51;
-    u8 base_y_offset = 9;
+    u8 base_y_offset = EVO_METHOD_LINE_PITCH;
 
     u16 preEvolutionOne = 0;
     u16 preEvolutionTwo = 0;
@@ -6760,7 +6769,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
     bool8 left = TRUE;
     u32 base_x = 21;
     u32 base_y = 51;
-    u32 base_y_offset = 9;
+    u32 base_y_offset = EVO_METHOD_LINE_PITCH;
     u32 times = 0;
     u32 arg; // shorthand for some of the more mathy evolutions
     const struct Evolution *evolutions;
