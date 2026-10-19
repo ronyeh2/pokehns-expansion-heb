@@ -5049,9 +5049,11 @@ static void ResetStatsWindows(void)
     InitWindows(sStatsScreen_WindowTemplates);
 #if TEXT_RTL
     MirrorDexWindowsAtScreenWidth();
-    // The name, number and gender sit beside a fixed icon and divider, and the move box shares its
-    // window with the item box, the type icon and the item icon: keep their English places.
-    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_IN_PLACE);
+    // The name, number and gender sit right of a fixed icon and divider (x 36): mirror them inside
+    // the text area from there to the box's border (x 94).
+    SetWindowRtlMirrorWidth(WIN_STATS_NAME_GENDER, 37 + 94);
+    // The move box shares its window with the item box, the type icon and the item icon: keep
+    // their English places.
     SetWindowRtlMode(WIN_STATS_MOVES_TOP, WINDOW_RTL_IN_PLACE);
     // The stats box has a red bar on its left, so its text area is x 8-92, not the window's 0-95:
     // mirror inside that area.
@@ -5621,6 +5623,19 @@ static void PrintStatsScreen_Moves_Bottom(u8 taskId)
     }
 }
 
+static void PrintStatsScreen_GenderRatio(const u8 *str, u8 x, u8 y)
+{
+#if TEXT_RTL
+    // Mirrored, the gender symbols would swap sides around the ratio's numbers. Print the ratio in
+    // place, at the right edge where the mirrored name and number above it end.
+    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_IN_PLACE);
+    PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, str, GetWindowRtlMirrorWidth(WIN_STATS_NAME_GENDER) - x - GetStringWidth(FONT_SMALL, str, 0), y);
+    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_MIRROR);
+#else
+    PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, str, x, y);
+#endif
+}
+
 static void PrintStatsScreen_NameGender(u8 taskId, u32 num, u32 value)
 {
     u8 str[16];
@@ -5651,28 +5666,28 @@ static void PrintStatsScreen_NameGender(u8 taskId, u32 num, u32 value)
     switch (sPokedexView->sPokemonStats.genderRatio)
     {
     case 0:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_0, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_0, gender_x, gender_y);
         break;
     case 31:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_12_5, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_12_5, gender_x, gender_y);
         break;
     case 63:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_25, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_25, gender_x, gender_y);
         break;
     case 127:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_50, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_50, gender_x, gender_y);
         break;
     case 191:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_75, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_75, gender_x, gender_y);
         break;
     case 223:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_87_5, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_87_5, gender_x, gender_y);
         break;
     case 254:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_100, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_100, gender_x, gender_y);
         break;
     default:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, gText_ThreeDashes, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(gText_ThreeDashes, gender_x, gender_y);
         break;
     }
 }
