@@ -596,8 +596,6 @@ static void NamingScreen_InitBGs(void)
     SetWindowRtlMode(sNamingScreen->windows[WIN_KB_PAGE_1], WINDOW_RTL_LTR);
     SetWindowRtlMode(sNamingScreen->windows[WIN_KB_PAGE_2], WINDOW_RTL_LTR);
     SetWindowRtlMode(sNamingScreen->windows[WIN_TEXT_ENTRY], WINDOW_RTL_LTR);
-    // The button hints keep the D-pad hint on the left, the side the D-pad is on
-    SetWindowRtlMode(sNamingScreen->windows[WIN_BANNER], WINDOW_RTL_IN_PLACE);
 #endif
 
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
