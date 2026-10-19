@@ -4468,7 +4468,10 @@ static u8* ConvertMonWeightToImperialString(u32 weight)
     weightString[index++] = CHAR_l;
     weightString[index++] = CHAR_b;
     weightString[index++] = CHAR_s;
+    // Right-to-left text would draw a trailing period at the far end of the number.
+#if !TEXT_RTL
     weightString[index++] = CHAR_PERIOD;
+#endif
     weightString[index++] = EOS;
 
     return weightString;
@@ -4481,7 +4484,10 @@ static u8* ConvertMonWeightToMetricString(u32 weight)
 
     weightString[index++] = CHAR_k;
     weightString[index++] = CHAR_g;
+    // Right-to-left text would draw a trailing period at the far end of the number.
+#if !TEXT_RTL
     weightString[index++] = CHAR_PERIOD;
+#endif
     weightString[index++] = EOS;
     return weightString;
 }
