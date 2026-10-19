@@ -204,9 +204,10 @@ static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/rival.gbapal"
 #endif
 #if TEXT_RTL
 // Page tabs of the Hebrew build: "עברית" (blue) for the Hebrew page, "ABC" (orange) for the
-// Latin page. Drawn by hns-tools/fonts/make_naming_tabs.py.
+// Latin page, "סמלים" (green) for the symbols page. Drawn with hns-tools/fonts/make_naming_tabs.py.
 static const u32 sPageSwapHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_hebrew.4bpp");
 static const u32 sPageSwapLatin_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_latin.4bpp");
+static const u32 sPageSwapSymbols_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_symbols.4bpp");
 #endif
 
 static const u8 *const sTransferredToPCMessages[] =
@@ -3082,11 +3083,12 @@ static const struct SpriteSheet sSpriteSheets[] =
 #if TEXT_RTL
     {sPageSwapHebrew_Gfx,             0x060,  GFXTAG_PAGE_SWAP_UPPER},
     {sPageSwapLatin_Gfx,              0x060,  GFXTAG_PAGE_SWAP_LOWER},
+    {sPageSwapSymbols_Gfx,            0x060,  GFXTAG_PAGE_SWAP_OTHERS},
 #else
     {gNamingScreenPageSwapUpper_Gfx,  0x060,  GFXTAG_PAGE_SWAP_UPPER},
     {gNamingScreenPageSwapLower_Gfx,  0x060,  GFXTAG_PAGE_SWAP_LOWER},
-#endif
     {gNamingScreenPageSwapOthers_Gfx, 0x060,  GFXTAG_PAGE_SWAP_OTHERS},
+#endif
     {gNamingScreenCursor_Gfx,         0x080,  GFXTAG_CURSOR},
     {gNamingScreenCursorSquished_Gfx, 0x080,  GFXTAG_CURSOR_SQUISHED},
     {gNamingScreenCursorFilled_Gfx,   0x080,  GFXTAG_CURSOR_FILLED},
