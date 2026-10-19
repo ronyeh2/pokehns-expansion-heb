@@ -288,6 +288,14 @@ static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("g
 // for evolution method listings
 #define MAX_EVO_METHOD_LINES 10
 
+// The list's START menu frame spans x 132-235. The Hebrew items are right-aligned in it, so the
+// cursor is mirrored to the frame's right edge and points left at them.
+#if TEXT_RTL
+#define START_MENU_CURSOR_X (132 + 236 - 136)
+#else
+#define START_MENU_CURSOR_X 136
+#endif
+
 // Coordinates of the Pokémon sprite on its page (info/cry screens)
 #define MON_PAGE_X 48
 #define MON_PAGE_Y 56
@@ -3469,14 +3477,17 @@ static void CreateInterfaceSprites(u8 page)
 
     if (page == PAGE_MAIN)
     {
-        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, 136, 96, 1);
+        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, START_MENU_CURSOR_X, 96, 1);
         gSprites[spriteId].invisible = TRUE;
     }
     else // PAGE_SEARCH_RESULTS
     {
-        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, 136, 80, 1);
+        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, START_MENU_CURSOR_X, 80, 1);
         gSprites[spriteId].invisible = TRUE;
     }
+#if TEXT_RTL
+    gSprites[spriteId].hFlip = TRUE;
+#endif
 }
 
 static void SpriteCB_EndMoveMonForInfoScreen(struct Sprite *sprite)
@@ -3639,7 +3650,11 @@ static void SpriteCB_DexListStartMenuCursor(struct Sprite *sprite)
         {
             sprite->invisible = FALSE;
             sprite->y2 = sPokedexView->menuCursorPos * 16;
+#if TEXT_RTL
+            sprite->x2 = -gSineTable[(u8)sprite->data[2]] / 64;
+#else
             sprite->x2 = gSineTable[(u8)sprite->data[2]] / 64;
+#endif
             sprite->data[2] += 8;
         }
         else
