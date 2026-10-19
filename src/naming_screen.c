@@ -1167,6 +1167,12 @@ static void SpriteCB_Underscore(struct Sprite *sprite)
     u8 pos;
 
     pos = GetTextEntryPosition();
+#if TEXT_RTL
+    // A typed letter shows without its underscore: the bar covers the tails of ן ך ף ץ ק and
+    // under ר reads as the base of ב. The filled slots are the first ones from the right, and
+    // sId counts the slots from the right.
+    sprite->invisible = (sNamingScreen->textBuffer[(u8)sprite->sId] != EOS);
+#endif
     if (pos != (u8)sprite->sId)
     {
         sprite->y2 = 0;
