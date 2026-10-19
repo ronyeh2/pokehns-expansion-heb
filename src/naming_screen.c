@@ -208,6 +208,10 @@ static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/rival.gbapal"
 static const u32 sPageSwapHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_hebrew.4bpp");
 static const u32 sPageSwapLatin_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_latin.4bpp");
 static const u32 sPageSwapSymbols_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_symbols.4bpp");
+// The side buttons say "חזרה" and "אישור", the hint bar's words, in the English buttons' frames
+// and letter style. The B BUTTON and START captions name hardware buttons and stay Latin.
+static const u32 sBackButtonHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/back_button_hebrew.4bpp");
+static const u32 sOkButtonHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/ok_button_hebrew.4bpp");
 #endif
 
 static const u8 *const sTransferredToPCMessages[] =
@@ -3076,8 +3080,13 @@ static const u8 *const sNamingScreenKeyboardText[KBPAGE_COUNT][KBROW_COUNT] =
 
 static const struct SpriteSheet sSpriteSheets[] =
 {
+#if TEXT_RTL
+    {sBackButtonHebrew_Gfx,           0x1E0,  GFXTAG_BACK_BUTTON},
+    {sOkButtonHebrew_Gfx,             0x1E0,  GFXTAG_OK_BUTTON},
+#else
     {gNamingScreenBackButton_Gfx,     0x1E0,  GFXTAG_BACK_BUTTON},
     {gNamingScreenOKButton_Gfx,       0x1E0,  GFXTAG_OK_BUTTON},
+#endif
     {gNamingScreenPageSwapFrame_Gfx,  0x280,  GFXTAG_PAGE_SWAP_FRAME},
     {gNamingScreenPageSwapButton_Gfx, 0x100,  GFXTAG_PAGE_SWAP_BUTTON},
 #if TEXT_RTL
