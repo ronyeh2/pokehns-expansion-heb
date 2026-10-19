@@ -853,8 +853,12 @@ static void CreateListArrowSprites(struct PokenavListWindowState *windowState, s
     if (GetWindowRtlMode(list->listWindow.windowId) == WINDOW_RTL_MIRROR)
     {
         // The rows are mirrored, so their 8-px cursor margin is at the right edge of the list:
-        // the arrow goes there and points left.
-        spriteId = CreateSprite(&sSpriteTemplate_RightArrow, (list->listWindow.x + list->listWindow.width) * 8 - 3, (list->listWindow.y + 1) * 8, 7);
+        // the arrow goes there and points left. A list that ends at the screen edge would put
+        // the arrow's last column off-screen, so the 8-px sprite is kept inside the display.
+        x = (list->listWindow.x + list->listWindow.width) * 8 - 3;
+        if (x > DISPLAY_WIDTH - 4)
+            x = DISPLAY_WIDTH - 4;
+        spriteId = CreateSprite(&sSpriteTemplate_RightArrow, x, (list->listWindow.y + 1) * 8, 7);
         gSprites[spriteId].hFlip = TRUE;
         gSprites[spriteId].oam.matrixNum |= ST_OAM_HFLIP;
     }
