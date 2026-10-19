@@ -3705,7 +3705,15 @@ static inline void WritePixel(u8 *dst, u32 x, u32 y, u32 value)
         dst[PIXEL_COORDS_TO_OFFSET(x, y)] |= (value);
     }
 }
+#if TEXT_RTL
+// stat_bars.png holds the stats page's Hebrew abbreviations, up to 19 px wide, in x 0-18. The bars
+// start right of them and are scaled to end where the English ones do (x 48, the box's edge).
+#define STAT_BAR_X_OFFSET 19
+#define STAT_BAR_MAX_WIDTH 39
+#define STAT_BAR_DRAWN_WIDTH(width) max(3, ((width) * (48 - STAT_BAR_X_OFFSET + 1) + STAT_BAR_MAX_WIDTH / 2) / STAT_BAR_MAX_WIDTH)
+#else
 #define STAT_BAR_X_OFFSET 10
+#endif
 static void CreateStatBar(u8 *dst, u32 y, u32 width)
 {
     u32 i, color;
@@ -3731,6 +3739,11 @@ static void CreateStatBar(u8 *dst, u32 y, u32 width)
         color = COLOR_BEST;
         break;
     }
+
+#if TEXT_RTL
+    // The colour above still follows the unscaled width.
+    width = STAT_BAR_DRAWN_WIDTH(width);
+#endif
 
     // white pixes left side
     WritePixel(dst, STAT_BAR_X_OFFSET, y + 0, COLOR_ID_BAR_WHITE);
