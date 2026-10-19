@@ -304,8 +304,8 @@ static const u8 *const sDesc_Fishing[] = {
     COMPOUND_STRING("משיכה ידנית של החכה בזמן דיג.\nלדוג כמו שתמיד דגת!"),
 };
 static const u8 *const sDesc_FasterJoy[] = {
-    COMPOUND_STRING("האחות JOY מרפאת אותך מהר יותר."),
-    COMPOUND_STRING("האחות JOY מרפאת אותך\nבאנימציה הרגילה."),
+    COMPOUND_STRING("האחות ג'וי מרפאת אותך מהר יותר."),
+    COMPOUND_STRING("האחות ג'וי מרפאת אותך\nבאנימציה הרגילה."),
 };
 static const u8 *const sDesc_UnitType[] = {
     COMPOUND_STRING("הצגת המשקל והגודל של פירות\nופוקימונים בקילוגרמים ובמטרים."),

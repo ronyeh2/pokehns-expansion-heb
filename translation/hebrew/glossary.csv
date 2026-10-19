@@ -5514,6 +5514,7 @@ term,TERM_NATURE,NATURE,אופי,אופי,inherited,FR Help_Text_Nature = אופ
 term,TERM_TYPE,TYPE,סוג,סוג,inherited,FR Help_Text_Type = סוג$
 term,TERM_PC,PC,מחשב,מחשב,inherited,FR text uses מחשב in 69 strings
 term,TERM_POKEMON_CENTER,POKéMON CENTER,מרכז פוקימון,מרכז פוקימון,inherited,FR text uses מרכז פוקימון in 18 strings
+term,TERM_NURSE_JOY,NURSE JOY,,האחות ג'וי,proposed,"the POKéMON CENTER nurse (src/option_menu.c FASTER JOY description); NURSE = האחות; JOY = ג'וי as the FR spelling of the name (JOY & MEG = ג'וי ומג, FR trainers.h:5599)"
 term,TERM_POKE_MART,POKé MART,,חנות פוקימון,proposed,"FR names it חנות פוקימון (help_system.inc:161, :250; flavor_text.inc:35) and writes בחנות הפוקימונים in prose (white_out.inc:12); parallels מרכז פוקימון; reviewed: note corrected, the todo note said FR never names the POKé MART"
 term,TERM_GYM,GYM,מכון,מכון,inherited,FR text uses מכון in 120 strings
 term,TERM_GYM_LEADER,GYM LEADER,מנהיג,מנהיג,inherited,FR TRAINER_CLASS_LEADER = מנהיג; FireRed dialogue: מנהיג המכון / מנהיגת המכון
