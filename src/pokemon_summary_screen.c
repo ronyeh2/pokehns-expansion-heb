@@ -3995,8 +3995,15 @@ static void PrintEggOTName(void)
 static void PrintEggOTID(void)
 {
     int x;
+#if TEXT_RTL
+    // The marks are neutral, so after the Latin ID label they would be drawn on its far side;
+    // printed first they come out to its right, where a hatched Pokémon's digits are.
+    StringCopy(gStringVar1, gText_FiveMarks);
+    StringAppend(gStringVar1, gText_IDNumber2);
+#else
     StringCopy(gStringVar1, gText_IDNumber2);
     StringAppend(gStringVar1, gText_FiveMarks);
+#endif
     x = GetStringRightAlignXOffset(FONT_NORMAL, gStringVar1, 56);
     PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ID), gStringVar1, x, 1, 0, 1);
 }
