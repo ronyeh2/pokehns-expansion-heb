@@ -71,20 +71,32 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
 
+      - name: Build the test ROM
+        # A resource line every minute goes to the job log, so a runner that is shut down mid-step
+        # still shows how far it got and what it was short of.
+        timeout-minutes: 90
+        run: |
+          ( while sleep 60; do echo "[mon] $(date -u +%H:%M) $(free -m | awk '/Mem/{print "mem used " $3 "/" $2 " MB"}'), disk $(df -h . | awk 'NR==2{print $4}') free"; done ) &
+          make BUILD=hns -j2 pokehns-test.elf > build-test.log 2>&1; status=$?
+          tail -30 build-test.log
+          exit $status
+
       - name: make check
         # Upstream 2.0.6 does not pass its own suite; check_tests.py fails only on a test that is
         # not in tools/hebrew/data/known_test_failures.txt (the tests upstream fails).
-        # Two jobs: the full hns test build runs a hosted runner out of memory at -j4.
-        timeout-minutes: 150
+        timeout-minutes: 90
         run: |
+          ( while sleep 60; do echo "[mon] $(date -u +%H:%M) $(free -m | awk '/Mem/{print "mem used " $3 "/" $2 " MB"}'), disk $(df -h . | awk 'NR==2{print $4}') free, log $(du -h check.log | cut -f1), $(grep -c '' check.log) lines"; done ) &
           set +e
           make check BUILD=hns -j2 > check.log 2>&1
           python3 tools/hebrew/check_tests.py check.log
 
-      - name: Keep the test log
+      - name: Keep the logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: check-log
-          path: check.log
+          path: |
+            build-test.log
+            check.log
           retention-days: 14
