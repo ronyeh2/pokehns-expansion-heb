@@ -152,7 +152,7 @@ VerdanturfTown_BattleTentLobby_Text_ExplainVerdanturfTent:
 #else
 	.string "באוהל הקרב של VERDANTURF,\n"
 #endif
-	.string "יש כלל מכריע אחד שחובה לציית לו.\p"
+	.string "יש כלל חשוב אחד שחובה לציית לו.\p"
 	.string "למאמנים מותר רק להכניס\n"
 	.string "ולהוציא את הפוקימונים שלהם.\p"
 	.string "מלבד זאת, אסור למאמנים\n"
@@ -306,7 +306,7 @@ SlateportCity_BattleTentLobby_Text_ReturnMonsExchangeRentals:
 	.string "for our rental POKéMON.$"
 
 SlateportCity_BattleTentLobby_Text_WonThreeMatchesReturnMons:
-	.string "ברכות!\n"
+	.string "מזל טוב!\n"
 	.string "ניצחת בשלושה קרבות רצופים!\p"
 	.string "אחזיר לך את הפוקימונים שלך\n"
 	.string "תמורת הפוקימונים השכורים שלנו.\p"
@@ -380,8 +380,8 @@ SlateportCity_BattleTentLobby_Text_ExplainSwapNotes:
 	.string "גם כשמבצעים החלפות.$"
 
 SlateportCity_BattleTentLobby_Text_ExplainMonRules:
-	.string "כל הפוקימונים של אוהל הקרב\n"
-	.string "של SLATEPORT הם שכורים.\p"
+	.string "כל הפוקימונים באוהל הקרב\n"
+	.string "של המפעל הם שכורים.\p"
 	.string "כל הפוקימונים השכורים\n"
 	.string "נשמרים ברמה 30.$"
 
@@ -458,7 +458,7 @@ BattleTentLobby_Text_ExplainLevelRules:
 
 VerdanturfTown_BattleTentLobby_Text_RulesAreListed:
 	.string "כאן כתובים החוקים של\n"
-	.string "אוהל הקרב של VERDANTURF.$"
+	.string "אוהל הקרב של הארמון.$"
 
 BattleTentLobby_Text_EarnedBattlePoints:
 	.string "קיבלת {STR_VAR_1} נקודות קרב!$"
