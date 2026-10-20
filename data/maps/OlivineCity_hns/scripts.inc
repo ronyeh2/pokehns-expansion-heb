@@ -287,7 +287,7 @@ OlivineCity_Text_Sailor1:
 	.string "אף ספינה לא יכולה להפליג.$"
 
 OlivineCity_Text_YoungsterPokegear:
-	.string "הדבר הזה שיש לך… זה POKéGEAR, נכון?\n"
+	.string "הדבר הזה שיש לך… זה פוקיגיר, נכון?\n"
 	.string "וואו, זה מגניב.$"
 
 OlivineCity_Text_YoungsterPokedex:
