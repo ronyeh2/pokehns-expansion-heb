@@ -151,13 +151,13 @@ Route39_Text_MoomooWeakMoo:
 
 Route39_Text_BarnCryIsWeak:
 	.string "הקריאה שלו חלשה…\n"
-	.string "לתת פירות אורן למילטנק?$"
+	.string "לתת פרי אורן למילטנק?$"
 
 Route39_Text_MoomooHappyMoo:
 	.string "מילטנק: מווו!$"
 
 Route39_Text_BarnGaveBerry:
-	.string "{PLAYER} נתן פירות אורן למילטנק.$"
+	.string "{PLAYER} נתן פרי אורן למילטנק.$"
 
 Route39_Text_BarnLittleHealthier:
 	.string "מילטנק נעשה קצת יותר בריא!$"
@@ -172,5 +172,5 @@ Route39_Text_BarnNoBerries:
 	.string "ל{PLAYER} אין פירות אורן…$"
 
 Route39_Text_BarnRefusedBerry:
-	.string "{PLAYER} לא נתן פירות אורן.\p"
+	.string "{PLAYER} לא נתן פרי אורן.\p"
 	.string "מילטנק נראה עצוב.$"
