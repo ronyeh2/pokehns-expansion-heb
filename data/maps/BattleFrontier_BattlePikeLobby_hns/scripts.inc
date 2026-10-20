@@ -379,7 +379,7 @@ BattleFrontier_BattlePikeLobby_Text_FailedToSaveBeforeQuitting_hns:
 BattleFrontier_BattlePikeLobby_Text_SnatchedVictoryFromQueen_hns:
 	.string "ברכותיי…\p"
 	.string "חטפת את הניצחון מידי\n"
-	.string "מלכת הרומח והשלמת את האירוע…$"
+	.string "מלכת השביל והשלמת את האירוע…$"
 
 BattleFrontier_BattlePikeLobby_Text_AwardYouTheseBattlePoints_hns:
 	.string "כהוקרה על מזלך המדהים,\n"
