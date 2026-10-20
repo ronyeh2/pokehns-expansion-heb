@@ -3714,8 +3714,9 @@ static inline void WritePixel(u8 *dst, u32 x, u32 y, u32 value)
     }
 }
 #if TEXT_RTL
-// stat_bars.png holds the stats page's Hebrew abbreviations, up to 19 px wide, in x 0-18. The bars
-// start right of them and are scaled to end where the English ones do (x 48, the box's edge).
+// stat_bars.png holds the stats page's Hebrew abbreviations, up to 19 px wide, right-aligned at
+// x 30-48 (48 is the box's edge). The bars get the other 30 px: scaled by 30/39, they end at x 29
+// next to the labels and grow leftwards, the mirror of English's labels-then-bars about the box.
 #define STAT_BAR_X_OFFSET 19
 #define STAT_BAR_MAX_WIDTH 39
 #define STAT_BAR_DRAWN_WIDTH(width) max(3, ((width) * (48 - STAT_BAR_X_OFFSET + 1) + STAT_BAR_MAX_WIDTH / 2) / STAT_BAR_MAX_WIDTH)
@@ -3751,30 +3752,33 @@ static void CreateStatBar(u8 *dst, u32 y, u32 width)
 #if TEXT_RTL
     // The colour above still follows the unscaled width.
     width = STAT_BAR_DRAWN_WIDTH(width);
+    u32 x0 = 48 - STAT_BAR_X_OFFSET + 1 - width;
+#else
+    u32 x0 = STAT_BAR_X_OFFSET;
 #endif
 
     // white pixes left side
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 0, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 1, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 2, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 3, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET, y + 4, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 0, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 1, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 2, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 3, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0, y + 4, COLOR_ID_BAR_WHITE);
 
     // white pixels right side
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 0, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 1, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 2, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 3, COLOR_ID_BAR_WHITE);
-    WritePixel(dst, STAT_BAR_X_OFFSET + width - 1, y + 4, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 0, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 1, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 2, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 3, COLOR_ID_BAR_WHITE);
+    WritePixel(dst, x0 + width - 1, y + 4, COLOR_ID_BAR_WHITE);
 
     // Fill
     for (i = 1; i < width - 1; i++)
     {
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 0, COLOR_ID_BAR_WHITE);
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 1, COLOR_ID_FILL_SHADOW + color * 2);
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 2, COLOR_ID_FILL + color * 2);
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 3, COLOR_ID_FILL + color * 2);
-        WritePixel(dst, STAT_BAR_X_OFFSET + i, y + 4, COLOR_ID_BAR_WHITE);
+        WritePixel(dst, x0 + i, y + 0, COLOR_ID_BAR_WHITE);
+        WritePixel(dst, x0 + i, y + 1, COLOR_ID_FILL_SHADOW + color * 2);
+        WritePixel(dst, x0 + i, y + 2, COLOR_ID_FILL + color * 2);
+        WritePixel(dst, x0 + i, y + 3, COLOR_ID_FILL + color * 2);
+        WritePixel(dst, x0 + i, y + 4, COLOR_ID_BAR_WHITE);
     }
 }
 static const u8 sBaseStatOffsets[] =
