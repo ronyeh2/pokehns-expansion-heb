@@ -6828,8 +6828,19 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
 
     evolutions = GetSpeciesEvolutions(species);
 
+#if TEXT_RTL
+    // Hebrew evolution methods often wrap, and a wrapped entry pushes down every entry after it,
+    // not only the next one. arrowSpriteDist[i] (also read by the cursor) holds the running
+    // offset of entry i; numLines from the caller would hold only the previous entry's wrap.
+    if (depth == 0)
+    {
+        for (i = 0; i <= (int)*depth_i && i < 10; i++)
+            sPokedexView->sEvoScreenData.arrowSpriteDist[i] = 0;
+    }
+#else
     if (*depth_i < 10)
         sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i] = numLines;
+#endif
 
     //If there are no evolutions print text and return
     if (evolutions == NULL)
@@ -6894,6 +6905,9 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
 
         sPokedexView->sEvoScreenData.targetSpecies[*depth_i] = targetSpecies;
         sPokedexView->sEvoScreenData.numAllEvolutions += 1;
+#if TEXT_RTL
+        numLines = sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i];
+#endif
 
         CreateCaughtBallEvolutionScreen(targetSpecies, base_x + depth_x*depth-9, base_y + base_y_offset*(*depth_i) + numLines, 0);
         HandleTargetSpeciesPrintText(targetSpecies, base_x + depth_x*depth, base_y, base_y_offset, *depth_i, numLines); //evolution mon name
@@ -7206,10 +7220,17 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
         (*depth_i)++;
 
         lineBreaks = CountLineBreaks(gStringVar4);
+#if TEXT_RTL
+        numLines += lineBreaks * fontHeight;
+
+        if (*depth_i < 10)
+            sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i] = numLines;
+#else
         numLines = lineBreaks * fontHeight;
 
         if (*depth_i + 1 < 10)
             sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i + 1] = numLines;
+#endif
 
         *totalLines += lineBreaks + 1;
 
