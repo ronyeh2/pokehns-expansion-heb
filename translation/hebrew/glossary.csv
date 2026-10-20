@@ -4828,7 +4828,7 @@ trainer_class,TRAINER_CLASS_DOME_ACE,DOME ACE,,אס הכיפה,proposed,meaning;
 trainer_class,TRAINER_CLASS_PALACE_MAVEN,PALACE MAVEN,,אשף הארמון,proposed,"meaning (maven = whiz = אשף); male (Spenser); PALACE = ארמון; avoided מומחה, which is the EXPERT class; reviewed"
 trainer_class,TRAINER_CLASS_ARENA_TYCOON,ARENA TYCOON,,גבירת הזירה,proposed,"meaning; female (Greta); ARENA = זירה as ABILITY_ARENA_TRAP מלכודת זירה; טייקונית הזירה is 14 bytes > 12 and טייקון הזירה (12) is masculine, so גבירה (mistress, ruler) carries the title; reviewed"
 trainer_class,TRAINER_CLASS_FACTORY_HEAD,FACTORY HEAD,,ראש המפעל,proposed,"meaning; male (Noland); FACTORY = מפעל as MAPSEC_POWER_PLANT מפעל החשמל; ראש, not מנהל, because ADMIN = מנהל; reviewed"
-trainer_class,TRAINER_CLASS_PIKE_QUEEN,PIKE QUEEN,,מלכת השביל,proposed,"meaning; female (Lucy); PIKE = רומח as done MOVE_GLACIAL_LANCE רומח קרחוני; debatable: the facility is a Seviper-shaped tube (Japanese ""Tube""), a reviewer may prefer מלכת הצינור; reviewed"
+trainer_class,TRAINER_CLASS_PIKE_QUEEN,PIKE QUEEN,,מלכת השביל,proposed,"meaning; female (Lucy); PIKE = שביל as the facility BATTLE PIKE שביל הקרב (src/strings.c:786) and the Japanese Tube Queen; same pattern as the other Brains (אס הכיפה, ראש המפעל); reviewed"
 trainer_class,TRAINER_CLASS_PYRAMID_KING,PYRAMID KING,,מלך הפירמידה,proposed,"meaning; male (Brandon); 12 bytes, exactly the limit; 63 px narrow; reviewed"
 trainer_class,TRAINER_CLASS_RS_PROTAG,{PKMN} TRAINER,מאמן פוקימון,מאמן פוקימון,inherited,FR match: English via TRAINER_CLASS_NONE
 trainer_class,TRAINER_CLASS_YOUNGSTER_FRLG,YOUNGSTER,צעיר,צעיר,inherited,FR match: English via TRAINER_CLASS_RS_YOUNGSTER
@@ -4914,7 +4914,7 @@ trainer_class,TRAINER_CLASS_OFFICER_HNS,OFFICER,,שוטר,proposed,"meaning (pol
 trainer_class,TRAINER_CLASS_PALACE_MAVEN_HNS,PALACE MAVEN,,אשף הארמון,proposed,"same as TRAINER_CLASS_PALACE_MAVEN; meaning (maven = whiz = אשף); male (Spenser); PALACE = ארמון; avoided מומחה, which is the EXPERT class; reviewed"
 trainer_class,TRAINER_CLASS_PARASOL_LADY_HNS,PARASOL LADY,גברת שמשייה,גברת שמשייה,inherited,FR match: English via TRAINER_CLASS_PARASOL_LADY
 trainer_class,TRAINER_CLASS_PICNICKER_HNS,PICNICKER,מטיילת,מטיילת,inherited,FR match: English via TRAINER_CLASS_RS_PICNICKER
-trainer_class,TRAINER_CLASS_PIKE_QUEEN_HNS,PIKE QUEEN,,מלכת השביל,proposed,"same as TRAINER_CLASS_PIKE_QUEEN; meaning; female (Lucy); PIKE = רומח as done MOVE_GLACIAL_LANCE רומח קרחוני; debatable: the facility is a Seviper-shaped tube (Japanese ""Tube""), a reviewer may prefer מלכת הצינור; reviewed"
+trainer_class,TRAINER_CLASS_PIKE_QUEEN_HNS,PIKE QUEEN,,מלכת השביל,proposed,"same as TRAINER_CLASS_PIKE_QUEEN; meaning; female (Lucy); PIKE = שביל as the facility BATTLE PIKE שביל הקרב (src/strings.c:786) and the Japanese Tube Queen; same pattern as the other Brains (אס הכיפה, ראש המפעל); reviewed"
 trainer_class,TRAINER_CLASS_PKMN_TRAINER_1_HNS,{PKMN} TRAINER,מאמן פוקימון,מאמן פוקימון,inherited,FR match: English via TRAINER_CLASS_NONE
 trainer_class,TRAINER_CLASS_POKEFAN_HNS,POKéFAN,פוקיפאן,פוקיפאן,inherited,FR match: English via TRAINER_CLASS_POKEFAN
 trainer_class,TRAINER_CLASS_POKEMANIAC_HNS,POKéMANIAC,פוקימאניאק,פוקימאניאק,inherited,FR match: English via TRAINER_CLASS_RS_POKEMANIAC
