@@ -23,14 +23,14 @@ SSAqua_RoomNE_Text_HikerNolandAfterBattle:
     .string "הרים ששווה לטפס עליהם?$"
 
 SSAqua_RoomNE_Text_PokemaniacEthanSeen:
-    .string "אתה מכיר את LILY?\n"
+    .string "אתה מכיר את לילי?\n"
     .string "היא די-ג'יי לוהטת בקאנטו.$"
 
 SSAqua_RoomNE_Text_PokemaniacEthanBeaten:
     .string "גיאאאאה!$"
 
 SSAqua_RoomNE_Text_PokemaniacEthanAfterBattle:
-    .string "LILY נחמדה, אבל\n"
+    .string "לילי נחמדה, אבל\n"
     .string "מרי הכי טובה!\p"
     .string "אני רוצה לשמוע את\n"
     .string "תוכניות הרדיו של ג'וטו!$"

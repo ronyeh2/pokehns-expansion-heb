@@ -5064,7 +5064,7 @@ mapsec,MAPSEC_WHIRL_ISLANDS,WHIRL ISLANDS,,איי המערבולת,proposed,mean
 speaker,SP_NAME_MOM,MOM,אמא,אמא,inherited,FR match: dialogue speaker prefix; FR dialogue prefixes Mom's lines with אמא:
 speaker,RADIO_DJ_BUENA,BUENA,,בואנה,proposed,host of Buena's Password (src/data/text/radio_strings.h station name and speaker prefix; GoldenrodCity_RadioTower_2F_hns speaker prefix); translit of the HeartGold/SoulSilver name; ue = וא as bueno = בואנו (data/text/apprentice.inc:935); not a source constant
 speaker,RADIO_DJ_FERN,FERN,,פרן,proposed,radio DJ on Pokémon Music (src/data/text/radio_strings.h); speaker prefix and name in the intro; translit; not a source constant
-speaker,RADIO_DJ_LILY,LILY,,לילי,proposed,radio DJ of Places and People (src/data/text/radio_strings.h); name in the intro; translit; not a source constant
+speaker,RADIO_DJ_LILY,LILY,,לילי,proposed,radio DJ of Places and People (src/data/text/radio_strings.h name in the intro; SSAqua_RoomNE_hns Pokémaniac dialogue); translit; not a source constant
 speaker,RADIO_DJ_REED,REED,,ריד,proposed,radio host of the Lucky Channel (src/data/text/radio_strings.h); speaker prefix; translit (ee = י); not a source constant
 trainer_name,TRNAME_SAWYER,SAWYER,,סוייר,proposed,"1 trainer(s); translit; aw=ו, as in the Hebrew Tom Sawyer; reviewed; aw=ו as FR DAWSON = דוסון (FR trainers.h:1669)"
 trainer_name,TRNAME_ROSS,ROSS,,רוס,proposed,1 trainer(s); reviewed
