@@ -312,18 +312,18 @@ static const struct BitfieldInfo sAIBitfield[] =
 
 static const struct ListMenuItem sMainListItems[] =
 {
-    {COMPOUND_STRING("Moves"),        LIST_ITEM_MOVES},
+    {COMPOUND_STRING("מהלכים"),        LIST_ITEM_MOVES},
     {sText_Ability,                   LIST_ITEM_ABILITY},
     {sText_HeldItem,                  LIST_ITEM_HELD_ITEM},
-    {COMPOUND_STRING("PP"),           LIST_ITEM_PP},
-    {COMPOUND_STRING("Types"),        LIST_ITEM_TYPES},
-    {COMPOUND_STRING("Stats"),        LIST_ITEM_STATS},
+    {COMPOUND_STRING("נ”כ"),           LIST_ITEM_PP},
+    {COMPOUND_STRING("סוגים"),        LIST_ITEM_TYPES},
+    {COMPOUND_STRING("נתונים"),        LIST_ITEM_STATS},
     {COMPOUND_STRING("דרגות נתונים"),  LIST_ITEM_STAT_STAGES},
     {COMPOUND_STRING("מצב 1"),      LIST_ITEM_STATUS1},
     {COMPOUND_STRING("מצב זמני"),    LIST_ITEM_VOLATILE},
     {COMPOUND_STRING("מלכודות"),      LIST_ITEM_HAZARDS},
     {COMPOUND_STRING("מצב צד"),  LIST_ITEM_SIDE_STATUS},
-    {COMPOUND_STRING("AI"),           LIST_ITEM_AI},
+    {COMPOUND_STRING("ב”מ"),           LIST_ITEM_AI},
     {COMPOUND_STRING("ב”מ נק'/נזק"),   LIST_ITEM_AI_MOVES_PTS},
     {COMPOUND_STRING("מידע ב”מ"),      LIST_ITEM_AI_INFO},
     {COMPOUND_STRING("קבוצת ב”מ"),     LIST_ITEM_AI_PARTY},
@@ -337,16 +337,16 @@ static const struct ListMenuItem sStatsListItems[] =
     {COMPOUND_STRING("נ”ח מרבי"),     LIST_STAT_HP_MAX},
     {COMPOUND_STRING("התקפה"),     LIST_STAT_ATTACK},
     {COMPOUND_STRING("הגנה"),    LIST_STAT_DEFENSE},
-    {COMPOUND_STRING("Speed"),      LIST_STAT_SPEED},
+    {COMPOUND_STRING("מהירות"),      LIST_STAT_SPEED},
     {COMPOUND_STRING("התקפה מיוחדת"),    LIST_STAT_SP_ATK},
     {COMPOUND_STRING("הגנה מיוחדת"),    LIST_STAT_SP_DEF},
 };
 
 static const struct ListMenuItem sStatus1ListItems[] =
 {
-    {COMPOUND_STRING("Sleep"),         LIST_STATUS1_SLEEP},
+    {COMPOUND_STRING("שינה"),         LIST_STATUS1_SLEEP},
     {COMPOUND_STRING("הרעלה"),        LIST_STATUS1_POISON},
-    {COMPOUND_STRING("Burn"),          LIST_STATUS1_BURN},
+    {COMPOUND_STRING("כוויה"),          LIST_STATUS1_BURN},
     {COMPOUND_STRING("קיפאון"),        LIST_STATUS1_FREEZE},
     {COMPOUND_STRING("שיתוק"),     LIST_STATUS1_PARALYSIS},
     {COMPOUND_STRING("הרעלה קשה"),  LIST_STATUS1_TOXIC_POISON},
@@ -361,7 +361,7 @@ static const struct ListMenuItem sVolatileStatusListItems[] =
     {COMPOUND_STRING("עינוי"),            VOLATILE_TORMENT},
     {COMPOUND_STRING("אבקה"),             VOLATILE_POWDER},
     {COMPOUND_STRING("עמדת הגנה"),        VOLATILE_DEFENSE_CURL},
-    {COMPOUND_STRING("Rage"),               VOLATILE_RAGE},
+    {COMPOUND_STRING("זעם"),               VOLATILE_RAGE},
     {COMPOUND_STRING("ברית גורל"),        VOLATILE_DESTINY_BOND},
     {COMPOUND_STRING("מניעת בריחה"),   VOLATILE_ESCAPE_PREVENTION},
     {COMPOUND_STRING("מקולל"),             VOLATILE_CURSED},
@@ -380,8 +380,8 @@ static const struct ListMenuItem sVolatileStatusListItems[] =
     {COMPOUND_STRING("שיר מוות"),        VOLATILE_PERISH_SONG},
     {COMPOUND_STRING("צמצום"),           VOLATILE_MINIMIZE},
     {COMPOUND_STRING("טעינה"),             VOLATILE_CHARGE_TIMER},
-    {COMPOUND_STRING("Root"),               VOLATILE_ROOT},
-    {COMPOUND_STRING("Yawn"),               VOLATILE_YAWN},
+    {COMPOUND_STRING("השתרשות"),               VOLATILE_ROOT},
+    {COMPOUND_STRING("פיהוק"),               VOLATILE_YAWN},
     {COMPOUND_STRING("כליאה"),           VOLATILE_IMPRISON},
     {COMPOUND_STRING("טינה"),             VOLATILE_GRUDGE},
     {COMPOUND_STRING("חומצת קיבה"),        VOLATILE_GASTRO_ACID},
@@ -410,14 +410,14 @@ static const struct ListMenuItem sSideStatusListItems[] =
     {COMPOUND_STRING("שיקוף"),          LIST_SIDE_REFLECT},
     {COMPOUND_STRING("מסך אור"),     LIST_SIDE_LIGHTSCREEN},
     {COMPOUND_STRING("שמירה"),        LIST_SIDE_SAFEGUARD},
-    {COMPOUND_STRING("Mist"),             LIST_SIDE_MIST},
+    {COMPOUND_STRING("ערפל"),             LIST_SIDE_MIST},
     {COMPOUND_STRING("רוח גבית"),         LIST_SIDE_TAILWIND},
     {COMPOUND_STRING("צעיף זוהר"),      LIST_SIDE_AURORA_VEIL},
     {COMPOUND_STRING("לחש מזל"),      LIST_SIDE_LUCKY_CHANT},
     {COMPOUND_STRING("נזק לשאר הסוגים"), LIST_SIDE_DAMAGE_NON_TYPES},
     {COMPOUND_STRING("קשת בענן"),          LIST_SIDE_RAINBOW},
     {COMPOUND_STRING("ים של אש"),      LIST_SIDE_SEA_OF_FIRE},
-    {COMPOUND_STRING("Swamp"),            LIST_SIDE_SWAMP},
+    {COMPOUND_STRING("ביצה טובענית"),            LIST_SIDE_SWAMP},
 };
 
 static const struct ListMenuItem sAIListItems[] =
@@ -426,7 +426,7 @@ static const struct ListMenuItem sAIListItems[] =
     {COMPOUND_STRING("ניסיון לחסל"),               LIST_AI_TRY_TO_FAINT},
     {COMPOUND_STRING("בדיקת כדאיות"),            LIST_AI_CHECK_VIABILITY},
     {COMPOUND_STRING("הכנה כפויה בתור הראשון"),     LIST_AI_FORCE_SETUP_FIRST_TURN},
-    {COMPOUND_STRING("Risky"),                      LIST_AI_RISKY},
+    {COMPOUND_STRING("לקיחת סיכונים"),                      LIST_AI_RISKY},
     {COMPOUND_STRING("ניסיון לחסל ב-2 מכות"),                LIST_AI_TRY_TO_2HKO},
     {COMPOUND_STRING("העדפת העברת מקל"),          LIST_AI_PREFER_BATON_PASS},
     {COMPOUND_STRING("קרב כפול"),              LIST_AI_DOUBLE_BATTLE},
@@ -435,7 +435,7 @@ static const struct ListMenuItem sAIListItems[] =
     {COMPOUND_STRING("לא מודע לנטרולים"),             LIST_AI_NEGATE_UNAWARE},
     {COMPOUND_STRING("הקרבה עצמית"),               LIST_AI_WILL_SUICIDE},
     {COMPOUND_STRING("העדפת מהלכי סטטוס"),        LIST_AI_PREFER_STATUS_MOVES},
-    {COMPOUND_STRING("Stall"),                      LIST_AI_STALL},
+    {COMPOUND_STRING("משיכת זמן"),                      LIST_AI_STALL},
     {COMPOUND_STRING("החלפה חכמה"),            LIST_AI_SMART_SWITCHING},
     {COMPOUND_STRING("פוקימון הדגל"),                LIST_AI_ACE_POKEMON},
     {COMPOUND_STRING("יודע הכול"),                 LIST_AI_OMNISCIENT},
@@ -1437,7 +1437,7 @@ static void PadString(const u8 *src, u8 *dst)
     dst[i] = EOS;
 }
 
-static const u8 sTextAll[] = _("All");
+static const u8 sTextAll[] = _("הכול");
 
 static void PrintSecondaryEntries(struct BattleDebugMenu *data)
 {
@@ -2193,7 +2193,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_CHOICE_BAND]      = COMPOUND_STRING("סרט בחירה"),
     [HOLD_EFFECT_FLINCH]           = COMPOUND_STRING("רתיעה"),
     [HOLD_EFFECT_DOUBLE_PRIZE]     = COMPOUND_STRING("פרס כפול"),
-    [HOLD_EFFECT_REPEL]            = COMPOUND_STRING("Repel"),
+    [HOLD_EFFECT_REPEL]            = COMPOUND_STRING("דוחה"),
     [HOLD_EFFECT_SOUL_DEW]         = COMPOUND_STRING("טל נשמה"),
     [HOLD_EFFECT_DEEP_SEA_TOOTH]   = COMPOUND_STRING("שן מצולות"),
     [HOLD_EFFECT_DEEP_SEA_SCALE]   = COMPOUND_STRING("קשקש מצולות"),
@@ -2209,7 +2209,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_LUCKY_PUNCH]      = COMPOUND_STRING("כפפת מזל"),
     [HOLD_EFFECT_METAL_POWDER]     = COMPOUND_STRING("אבקת מתכת"),
     [HOLD_EFFECT_THICK_CLUB]       = COMPOUND_STRING("עצם עבה"),
-    [HOLD_EFFECT_LEEK]             = COMPOUND_STRING("Leek"),
+    [HOLD_EFFECT_LEEK]             = COMPOUND_STRING("מקל"),
     [HOLD_EFFECT_CHOICE_SCARF]     = COMPOUND_STRING("צעיף בחירה"),
     [HOLD_EFFECT_CHOICE_SPECS]     = COMPOUND_STRING("משקפי בחירה"),
     [HOLD_EFFECT_DAMP_ROCK]        = COMPOUND_STRING("סלע לח"),
@@ -2250,12 +2250,12 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_ROWAP_BERRY]      = COMPOUND_STRING("פרי רוואפ"),
     [HOLD_EFFECT_KEE_BERRY]        = COMPOUND_STRING("פרי קי"),
     [HOLD_EFFECT_MARANGA_BERRY]    = COMPOUND_STRING("פרי מרנגה"),
-    [HOLD_EFFECT_PLATE]            = COMPOUND_STRING("Plate"),
+    [HOLD_EFFECT_PLATE]            = COMPOUND_STRING("לוח"),
     [HOLD_EFFECT_FLOAT_STONE]      = COMPOUND_STRING("אבן ציפה"),
     [HOLD_EFFECT_EVIOLITE]         = COMPOUND_STRING("גביש התפת'"),
     [HOLD_EFFECT_ASSAULT_VEST]     = COMPOUND_STRING("אפוד תקיפה"),
-    [HOLD_EFFECT_DRIVE]            = COMPOUND_STRING("Drive"),
-    [HOLD_EFFECT_GEMS]             = COMPOUND_STRING("Gems"),
+    [HOLD_EFFECT_DRIVE]            = COMPOUND_STRING("כונן"),
+    [HOLD_EFFECT_GEMS]             = COMPOUND_STRING("אבני חן"),
     [HOLD_EFFECT_ROCKY_HELMET]     = COMPOUND_STRING("קסדה סלעית"),
     [HOLD_EFFECT_AIR_BALLOON]      = COMPOUND_STRING("בלון אוויר"),
     [HOLD_EFFECT_RED_CARD]         = COMPOUND_STRING("כרטיס אדום"),
@@ -2272,7 +2272,7 @@ static const u8 *const sHoldEffectNames[HOLD_EFFECT_COUNT] =
     [HOLD_EFFECT_PRIMAL_ORB]       = COMPOUND_STRING("גולה קדמונית"),
     [HOLD_EFFECT_PROTECTIVE_PADS]  = COMPOUND_STRING("רפידות מגן"),
     [HOLD_EFFECT_TERRAIN_EXTENDER] = COMPOUND_STRING("מאריך שטח"),
-    [HOLD_EFFECT_TERRAIN_SEED]     = COMPOUND_STRING("Seeds"),
+    [HOLD_EFFECT_TERRAIN_SEED]     = COMPOUND_STRING("זרעי שטח"),
     [HOLD_EFFECT_ADRENALINE_ORB]   = COMPOUND_STRING("גולת אדרנלין"),
     [HOLD_EFFECT_MEMORY]           = COMPOUND_STRING("זיכרון"),
     [HOLD_EFFECT_Z_CRYSTAL]        = COMPOUND_STRING("גביש Z"),
