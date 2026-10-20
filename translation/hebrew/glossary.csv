@@ -106,7 +106,7 @@ species,SPECIES_PSYDUCK,PSYDUCK,פסיידאק,פסיידאק,inherited,FR match
 species,SPECIES_GOLDUCK,GOLDUCK,גולדאק,גולדאק,inherited,FR match: constant
 species,SPECIES_MANKEY,MANKEY,מאנקי,מאנקי,inherited,FR match: constant
 species,SPECIES_PRIMEAPE,PRIMEAPE,פריימיפ,פריימיפ,inherited,FR match: constant
-species,SPECIES_ANNIHILAPE,ANNIHILAPE,,אנייהיליפ,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; -APE chunk shared with SPECIES_PRIMEAPE (פריימיפ); by §3 alone it would be אנייהילייפ; reviewed: kept; APE = יפ follows canon PRIMEAPE, reads /ip/; style call"
+species,SPECIES_ANNIHILAPE,ANNIHILAPE,,אנייאליפ,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; -APE chunk shared with SPECIES_PRIMEAPE (פריימיפ); by §3 alone it would be אנייהילייפ; reviewed: kept; APE = יפ follows canon PRIMEAPE, reads /ip/; style call"
 species,SPECIES_GROWLITHE,GROWLITHE,גראולית',גראולית',inherited,FR match: constant
 species,SPECIES_ARCANINE,ARCANINE,ארקניין,ארקניין,inherited,FR match: constant
 species,SPECIES_GROWLITHE_HISUI,GROWLITHE-H,,גראולית'-ה,proposed,"#if branches: GROWLITHE-H @8484 | GROWLITHE @8486 (built: this row); regional form: FR base גראולית' + ""-ה"" for -H (Hisui); suffix letter is a style call open for review; proposed: regional form checked: base matches the inherited row; reviewed"
@@ -181,7 +181,7 @@ species,SPECIES_VOLTORB_HISUI,VOLTORB-H,,וולטורב-ה,proposed,"#if branche
 species,SPECIES_ELECTRODE_HISUI,ELECTRODE-H,,אלקטרוד-ה,proposed,"#if branches: ELECTRODE-H @13852 | ELECTRODE @13854 (built: this row); regional form: FR base אלקטרוד + ""-ה"" for -H (Hisui); suffix letter is a style call open for review; proposed: regional form checked: base matches the inherited row; reviewed"
 species,SPECIES_EXEGGCUTE,EXEGGCUTE,אקזגקיוט,אקזגקיוט,inherited,FR match: constant
 species,SPECIES_EXEGGUTOR,EXEGGUTOR,אקזגקיוטור,אקזגקיוטר,inherited,"FR match: constant; width: shortened from אקזגקיוטור (unstressed -or written with the consonant only (rules §3); changes inherited FireRed canon, unavoidable at 51 px > 50 in the dex list)"
-species,SPECIES_EXEGGUTOR_ALOLA,EXEGGUTOR-A,,אקזגוטר-א,proposed,"#if branches: EXEGGUTOR-A @14096 | EXEGGUTOR @14098 (built: this row); regional form: FR base אקזגקיוטור + ""-א"" for -A (Alola); suffix letter is a style call open for review; proposed: regional form; 12 bytes = hard limit, over the 10 preferred (English EXEGGUTOR-A is 11); reviewed: kept; 12 bytes = the hard limit (English is 11), base is FR canon, a 10-byte record truncates to the base name; width: shortened from אקזגקיוטור-א (the suffix leaves 39 px for the base; drops the ק that FireRed carried over from EXEGGCUTE (EXEGGUTOR is said eg-ZEG-yu-ter) and the yod of /ju/; style call, the base row is אקזגקיוטר)"
+species,SPECIES_EXEGGUTOR_ALOLA,EXEGGUTOR-A,,אקזגקיוטר-א,proposed,"#if branches: EXEGGUTOR-A @14096 | EXEGGUTOR @14098 (built: this row); regional form: FR base אקזגקיוטור + ""-א"" for -A (Alola); suffix letter is a style call open for review; proposed: regional form; 12 bytes = hard limit, over the 10 preferred (English EXEGGUTOR-A is 11); reviewed: kept; 12 bytes = the hard limit (English is 11), base is FR canon, a 10-byte record truncates to the base name; width: shortened from אקזגקיוטור-א (the suffix leaves 39 px for the base; drops the ק that FireRed carried over from EXEGGCUTE (EXEGGUTOR is said eg-ZEG-yu-ter) and the yod of /ju/; style call, the base row is אקזגקיוטר); same as the base species with -א"
 species,SPECIES_CUBONE,CUBONE,קיובון,קיובון,inherited,FR match: constant
 species,SPECIES_MAROWAK,MAROWAK,מארוואק,מארוואק,inherited,FR match: constant
 species,SPECIES_MAROWAK_ALOLA,MAROWAK-A,,מארוואק-א,proposed,"#if branches: MAROWAK-A @14334 | MAROWAK @14336 (built: this row); regional form: FR base מארוואק + ""-א"" for -A (Alola); suffix letter is a style call open for review; proposed: regional form checked: base matches the inherited row; reviewed"
@@ -611,7 +611,7 @@ species,SPECIES_STARAPTOR_MEGA,STARAPTOR,,סטאראפטור,proposed,"NOT IN BU
 species,SPECIES_BIDOOF,BIDOOF,,בידוף,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; final f = ף; reviewed"
 species,SPECIES_BIBAREL,BIBAREL,,ביברל,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit /ˈbiːbɛrəl/; BI shared with BIDOOF; reviewed"
 species,SPECIES_KRICKETOT,KRICKETOT,,קריקטוט,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; reviewed"
-species,SPECIES_KRICKETUNE,KRICKETUNE,,קריקטיון,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: KRICKET chunk shared with KRICKETOT; tune /tjuːn/ = טיון; reviewed"
+species,SPECIES_KRICKETUNE,KRICKETUNE,,קריקטון,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: KRICKET chunk shared with KRICKETOT; tune /tjuːn/ = טיון; reviewed"
 species,SPECIES_SHINX,SHINX,,שינקס,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; x = קס; reviewed"
 species,SPECIES_LUXIO,LUXIO,,לאקסיו,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; stressed /ʌ/ = א (rules §3; the Hebrew loan spelling would be לוקס); reviewed"
 species,SPECIES_LUXRAY,LUXRAY,,לאקסריי,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: LUX chunk shared with LUXIO; ray = ריי as in RAYQUAZA; reviewed"
@@ -1410,8 +1410,8 @@ species,SPECIES_ARCHALUDON,ARCHALUDON,,ארצ'לודון,proposed,"Gen 4+ / form
 species,SPECIES_DREEPY,DREEPY,,דריפי,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_DRAKLOAK,DRAKLOAK,,דרקלוק,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; family דר with SPECIES_DREEPY/DRAGAPULT; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_DRAGAPULT,DRAGAPULT,,דרגפולט,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; DRAG = דרג as SPECIES_DRAGONITE; pult = פולט (cf. Hebrew קטפולטה); pokemon-il not fetched (robots.txt); reviewed"
-species,SPECIES_ZACIAN_HERO,ZACIAN,,זאסיאן,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; soft c = ס by spelling (English pronunciation UNVERIFIED, could be ZAH-shee-an = זאשיאן); stressed long ZA = זא, kept parallel with SPECIES_ZAMAZENTA; pokemon-il not fetched (robots.txt); reviewed"
-species,SPECIES_ZACIAN_CROWNED,ZACIAN,,זאסיאן,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: form, English equals base: same Hebrew as SPECIES_ZACIAN_HERO; pokemon-il not fetched (robots.txt); reviewed"
+species,SPECIES_ZACIAN_HERO,ZACIAN,,זאשיאן,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; soft c = ס by spelling (English pronunciation UNVERIFIED, could be ZAH-shee-an = זאשיאן); stressed long ZA = זא, kept parallel with SPECIES_ZAMAZENTA; pokemon-il not fetched (robots.txt); reviewed"
+species,SPECIES_ZACIAN_CROWNED,ZACIAN,,זאשיאן,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: form, English equals base: same Hebrew as SPECIES_ZACIAN_HERO; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_ZAMAZENTA_HERO,ZAMAZENTA,,זאמזנטה,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; זא opening kept parallel with SPECIES_ZACIAN; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_ZAMAZENTA_CROWNED,ZAMAZENTA,,זאמזנטה,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: form, English equals base: same Hebrew as SPECIES_ZAMAZENTA_HERO; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_ETERNATUS,ETERNATUS,,אטרנטוס,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; initial e = א; -us = וס (LANDORUS/TORNADUS); stress-neutral spelling; pokemon-il not fetched (robots.txt); reviewed"
@@ -1448,9 +1448,9 @@ species,SPECIES_TAROUNTULA,TAROUNTULA,,טראונטולה,proposed,"Gen 4+ / for
 species,SPECIES_SPIDOPS,SPIDOPS,,ספיידופס,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit SPY-dops; /aɪ/ = יי; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_NYMBLE,NYMBLE,,נימבל,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; -le = ל; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_LOKIX,LOKIX,,לוקיקס,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; x = קס; pokemon-il not fetched (robots.txt); reviewed"
-species,SPECIES_PAWMI,PAWMI,,פאומי,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; aw = או as MAWILE מאוויל (FR is split: CRAWDAUNT קרודונט); PAWM = פאומ shared with SPECIES_PAWMO/PAWMOT; pokemon-il not fetched (robots.txt); reviewed"
-species,SPECIES_PAWMO,PAWMO,,פאומו,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; PAWM = פאומ as SPECIES_PAWMI; pokemon-il not fetched (robots.txt); reviewed"
-species,SPECIES_PAWMOT,PAWMOT,,פאומוט,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; PAWM = פאומ as SPECIES_PAWMI; pokemon-il not fetched (robots.txt); reviewed"
+species,SPECIES_PAWMI,PAWMI,,פומי,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; aw = או as MAWILE מאוויל (FR is split: CRAWDAUNT קרודונט); PAWM = פאומ shared with SPECIES_PAWMO/PAWMOT; pokemon-il not fetched (robots.txt); reviewed"
+species,SPECIES_PAWMO,PAWMO,,פומו,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; PAWM = פאומ as SPECIES_PAWMI; pokemon-il not fetched (robots.txt); reviewed"
+species,SPECIES_PAWMOT,PAWMOT,,פומוט,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; PAWM = פאומ as SPECIES_PAWMI; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_TANDEMAUS,TANDEMAUS,,טנדמאוס,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; MAUS = מאוס shared with SPECIES_MAUSHOLD; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_MAUSHOLD_THREE,MAUSHOLD,,מאוסהולד,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: translit; MAUS = מאוס as SPECIES_TANDEMAUS; pokemon-il not fetched (robots.txt); reviewed"
 species,SPECIES_MAUSHOLD_FOUR,MAUSHOLD,,מאוסהולד,proposed,"Gen 4+ / form: take from pokemon-il.co.il Pokédex, else transliterate (naming rules); proposed: form, English equals base: same Hebrew as SPECIES_MAUSHOLD_THREE; pokemon-il not fetched (robots.txt); reviewed"
@@ -4828,7 +4828,7 @@ trainer_class,TRAINER_CLASS_DOME_ACE,DOME ACE,,אס הכיפה,proposed,meaning;
 trainer_class,TRAINER_CLASS_PALACE_MAVEN,PALACE MAVEN,,אשף הארמון,proposed,"meaning (maven = whiz = אשף); male (Spenser); PALACE = ארמון; avoided מומחה, which is the EXPERT class; reviewed"
 trainer_class,TRAINER_CLASS_ARENA_TYCOON,ARENA TYCOON,,גבירת הזירה,proposed,"meaning; female (Greta); ARENA = זירה as ABILITY_ARENA_TRAP מלכודת זירה; טייקונית הזירה is 14 bytes > 12 and טייקון הזירה (12) is masculine, so גבירה (mistress, ruler) carries the title; reviewed"
 trainer_class,TRAINER_CLASS_FACTORY_HEAD,FACTORY HEAD,,ראש המפעל,proposed,"meaning; male (Noland); FACTORY = מפעל as MAPSEC_POWER_PLANT מפעל החשמל; ראש, not מנהל, because ADMIN = מנהל; reviewed"
-trainer_class,TRAINER_CLASS_PIKE_QUEEN,PIKE QUEEN,,מלכת הרומח,proposed,"meaning; female (Lucy); PIKE = רומח as done MOVE_GLACIAL_LANCE רומח קרחוני; debatable: the facility is a Seviper-shaped tube (Japanese ""Tube""), a reviewer may prefer מלכת הצינור; reviewed"
+trainer_class,TRAINER_CLASS_PIKE_QUEEN,PIKE QUEEN,,מלכת השביל,proposed,"meaning; female (Lucy); PIKE = רומח as done MOVE_GLACIAL_LANCE רומח קרחוני; debatable: the facility is a Seviper-shaped tube (Japanese ""Tube""), a reviewer may prefer מלכת הצינור; reviewed"
 trainer_class,TRAINER_CLASS_PYRAMID_KING,PYRAMID KING,,מלך הפירמידה,proposed,"meaning; male (Brandon); 12 bytes, exactly the limit; 63 px narrow; reviewed"
 trainer_class,TRAINER_CLASS_RS_PROTAG,{PKMN} TRAINER,מאמן פוקימון,מאמן פוקימון,inherited,FR match: English via TRAINER_CLASS_NONE
 trainer_class,TRAINER_CLASS_YOUNGSTER_FRLG,YOUNGSTER,צעיר,צעיר,inherited,FR match: English via TRAINER_CLASS_RS_YOUNGSTER
@@ -4914,7 +4914,7 @@ trainer_class,TRAINER_CLASS_OFFICER_HNS,OFFICER,,שוטר,proposed,"meaning (pol
 trainer_class,TRAINER_CLASS_PALACE_MAVEN_HNS,PALACE MAVEN,,אשף הארמון,proposed,"same as TRAINER_CLASS_PALACE_MAVEN; meaning (maven = whiz = אשף); male (Spenser); PALACE = ארמון; avoided מומחה, which is the EXPERT class; reviewed"
 trainer_class,TRAINER_CLASS_PARASOL_LADY_HNS,PARASOL LADY,גברת שמשייה,גברת שמשייה,inherited,FR match: English via TRAINER_CLASS_PARASOL_LADY
 trainer_class,TRAINER_CLASS_PICNICKER_HNS,PICNICKER,מטיילת,מטיילת,inherited,FR match: English via TRAINER_CLASS_RS_PICNICKER
-trainer_class,TRAINER_CLASS_PIKE_QUEEN_HNS,PIKE QUEEN,,מלכת הרומח,proposed,"same as TRAINER_CLASS_PIKE_QUEEN; meaning; female (Lucy); PIKE = רומח as done MOVE_GLACIAL_LANCE רומח קרחוני; debatable: the facility is a Seviper-shaped tube (Japanese ""Tube""), a reviewer may prefer מלכת הצינור; reviewed"
+trainer_class,TRAINER_CLASS_PIKE_QUEEN_HNS,PIKE QUEEN,,מלכת השביל,proposed,"same as TRAINER_CLASS_PIKE_QUEEN; meaning; female (Lucy); PIKE = רומח as done MOVE_GLACIAL_LANCE רומח קרחוני; debatable: the facility is a Seviper-shaped tube (Japanese ""Tube""), a reviewer may prefer מלכת הצינור; reviewed"
 trainer_class,TRAINER_CLASS_PKMN_TRAINER_1_HNS,{PKMN} TRAINER,מאמן פוקימון,מאמן פוקימון,inherited,FR match: English via TRAINER_CLASS_NONE
 trainer_class,TRAINER_CLASS_POKEFAN_HNS,POKéFAN,פוקיפאן,פוקיפאן,inherited,FR match: English via TRAINER_CLASS_POKEFAN
 trainer_class,TRAINER_CLASS_POKEMANIAC_HNS,POKéMANIAC,פוקימאניאק,פוקימאניאק,inherited,FR match: English via TRAINER_CLASS_RS_POKEMANIAC
@@ -5062,10 +5062,6 @@ mapsec,MAPSEC_TOHJO_FALLS,TOHJO FALLS,,מפלי טוג'ו,proposed,"FALLS = מפ
 mapsec,MAPSEC_UNION_CAVE,UNION CAVE,,מערת האיחוד,proposed,"meaning; UNION = איחוד as in FR UNION ROOM חדר האיחוד (pokefirered-heb src/strings.c:591, 1250); reviewed: kept; note fix: FR menu gText_UnionRoom is חדר איחוד (strings.c:591), dialogue בחדר האיחוד (:1250); construct+article as FR ROCK TUNNEL מערת האבן"
 mapsec,MAPSEC_WHIRL_ISLANDS,WHIRL ISLANDS,,איי המערבולת,proposed,meaning; ISLANDS = איי X (FR SEAFOAM ISLANDS איי הקצף); whirl = מערבולת; reviewed
 speaker,SP_NAME_MOM,MOM,אמא,אמא,inherited,FR match: dialogue speaker prefix; FR dialogue prefixes Mom's lines with אמא:
-speaker,RADIO_DJ_BUENA,BUENA,,בואנה,proposed,host of Buena's Password (src/data/text/radio_strings.h station name and speaker prefix; GoldenrodCity_RadioTower_2F_hns speaker prefix); translit of the HeartGold/SoulSilver name; ue = וא as bueno = בואנו (data/text/apprentice.inc:935); not a source constant
-speaker,RADIO_DJ_FERN,FERN,,פרן,proposed,radio DJ on Pokémon Music (src/data/text/radio_strings.h); speaker prefix and name in the intro; translit; not a source constant
-speaker,RADIO_DJ_LILY,LILY,,לילי,proposed,radio DJ of Places and People (src/data/text/radio_strings.h name in the intro; SSAqua_RoomNE_hns Pokémaniac dialogue); translit; not a source constant
-speaker,RADIO_DJ_REED,REED,,ריד,proposed,radio host of the Lucky Channel (src/data/text/radio_strings.h); speaker prefix; translit (ee = י); not a source constant
 trainer_name,TRNAME_SAWYER,SAWYER,,סוייר,proposed,"1 trainer(s); translit; aw=ו, as in the Hebrew Tom Sawyer; reviewed; aw=ו as FR DAWSON = דוסון (FR trainers.h:1669)"
 trainer_name,TRNAME_ROSS,ROSS,,רוס,proposed,1 trainer(s); reviewed
 trainer_name,TRNAME_MITCH,MITCH,מיץ',מיץ',inherited,FR match: English; 1 trainer(s)
@@ -5514,7 +5510,6 @@ term,TERM_NATURE,NATURE,אופי,אופי,inherited,FR Help_Text_Nature = אופ
 term,TERM_TYPE,TYPE,סוג,סוג,inherited,FR Help_Text_Type = סוג$
 term,TERM_PC,PC,מחשב,מחשב,inherited,FR text uses מחשב in 69 strings
 term,TERM_POKEMON_CENTER,POKéMON CENTER,מרכז פוקימון,מרכז פוקימון,inherited,FR text uses מרכז פוקימון in 18 strings
-term,TERM_NURSE_JOY,NURSE JOY,,האחות ג'וי,proposed,"the POKéMON CENTER nurse (src/option_menu.c FASTER JOY description); NURSE = האחות; JOY = ג'וי as the FR spelling of the name (JOY & MEG = ג'וי ומג, FR trainers.h:5599)"
 term,TERM_POKE_MART,POKé MART,,חנות פוקימון,proposed,"FR names it חנות פוקימון (help_system.inc:161, :250; flavor_text.inc:35) and writes בחנות הפוקימונים in prose (white_out.inc:12); parallels מרכז פוקימון; reviewed: note corrected, the todo note said FR never names the POKé MART"
 term,TERM_GYM,GYM,מכון,מכון,inherited,FR text uses מכון in 120 strings
 term,TERM_GYM_LEADER,GYM LEADER,מנהיג,מנהיג,inherited,FR TRAINER_CLASS_LEADER = מנהיג; FireRed dialogue: מנהיג המכון / מנהיגת המכון
@@ -5565,7 +5560,7 @@ frontier_trainer,FRONTIER_TRAINER_28_EILEEN,EILEEN,,איילין,proposed,"src/d
 frontier_trainer,FRONTIER_TRAINER_29_CARLIE,CARLIE,,קרלי,proposed,src/data/battle_frontier/battle_frontier_trainers.h; fine: same sound as FR CARLY קרלי
 frontier_trainer,FRONTIER_TRAINER_30_GORDON,GORDON,,גורדון,proposed,src/data/battle_frontier/battle_frontier_trainers.h; matches glossary TRNAME_GORDON גורדון (proposed)
 frontier_trainer,FRONTIER_TRAINER_31_AYDEN,AYDEN,,איידן,proposed,"src/data/battle_frontier/battle_frontier_trainers.h; was English; not in glossary or FR; proposed: initial /eɪ/ = א+יי (EILEEN איילין), -den = דן as FR KAYDEN קיידן; same Hebrew as AIDEN"
-frontier_trainer,FRONTIER_TRAINER_32_MARCO,MARCO,,מארקו,proposed,"src/data/battle_frontier/battle_frontier_trainers.h; was English; not in glossary or FR; proposed: MARC = מארק (glossary MARC, inherited MARK) + final o = ו"
+frontier_trainer,FRONTIER_TRAINER_32_MARCO,MARCO,,מרקו,proposed,"src/data/battle_frontier/battle_frontier_trainers.h; was English; not in glossary or FR; proposed: MARC = מארק (glossary MARC, inherited MARK) + final o = ו"
 frontier_trainer,FRONTIER_TRAINER_33_CIERRA,CIERRA,,סיירה,proposed,"src/data/battle_frontier/battle_frontier_trainers.h; fine: soft c = ס, see-AIR-a; usual Hebrew spelling of Sierra"
 frontier_trainer,FRONTIER_TRAINER_34_MARCY,MARCY,,מרסי,proposed,src/data/battle_frontier/battle_frontier_trainers.h; was English; FR canon TRAINER_PICNICKER_MARCY = מרסי
 frontier_trainer,FRONTIER_TRAINER_35_KATHY,KATHY,,קתי,proposed,"src/data/battle_frontier/battle_frontier_trainers.h; was English; not in glossary or FR; proposed: th inside a word = ת, same chunk as KATHRYN קתרין in this file, final y = י"
@@ -5753,7 +5748,7 @@ frontier_trainer,FRONTIER_TRAINER_216_OSCAR,OSCAR,,אוסקר,proposed,"src/data
 frontier_trainer,FRONTIER_TRAINER_217_WILSON,WILSON,,וילסון,proposed,src/data/battle_frontier/battle_frontier_trainers.h; fine: initial W before an i sound = ו (rules §2)
 frontier_trainer,FRONTIER_TRAINER_218_CLARE,CLARE,,קלייר,proposed,src/data/battle_frontier/battle_frontier_trainers.h; was English; same sound as glossary CLAIR קלייר
 frontier_trainer,FRONTIER_TRAINER_219_TESS,TESS,,טס,proposed,"src/data/battle_frontier/battle_frontier_trainers.h; was English; not in glossary or FR; proposed: short e unwritten, doubled s = one ס"
-frontier_trainer,FRONTIER_TRAINER_220_LEON,LEON,,לאון,proposed,src/data/battle_frontier/battle_frontier_trainers.h; was English; not in glossary or FR; proposed: LEON = לאון as inherited LEONARD לאונרד
+frontier_trainer,FRONTIER_TRAINER_220_LEON,LEON,,ליאון,proposed,src/data/battle_frontier/battle_frontier_trainers.h; was English; not in glossary or FR; proposed: LEON = לאון as inherited LEONARD לאונרד
 frontier_trainer,FRONTIER_TRAINER_221_ALONZO,ALONZO,,אלונזו,proposed,"src/data/battle_frontier/battle_frontier_trainers.h; fine: z = ז, final o = ו"
 frontier_trainer,FRONTIER_TRAINER_222_VINCE,VINCE,,וינס,proposed,"src/data/battle_frontier/battle_frontier_trainers.h; was English; not in glossary or FR; proposed: VINC = וינס as inherited VINCENT וינסנט, soft c = ס"
 frontier_trainer,FRONTIER_TRAINER_223_BRYON,BRYON,,בריאן,proposed,src/data/battle_frontier/battle_frontier_trainers.h; was English; same sound as glossary BRYAN/BRIAN בריאן
@@ -6209,7 +6204,7 @@ contest_nickname,CONTEST_OPPONENT_DEON_NICKNAME,PEDOS,,פידוס,proposed,src/d
 contest_trainer,CONTEST_OPPONENT_DEON_TRAINERNAME,DEON,,דיאון,proposed,src/data/contest_opponents.h:2575; translit: -eon = יאון as VAPOREON ופוריאון (rules §3)
 contest_nickname,CONTEST_OPPONENT_JANELLE_NICKNAME,LUVIS,,לביס,proposed,src/data/contest_opponents.h:2603; coined (LUVDISC): LUV = לב as SPECIES_LUVDISC לבדיסק
 contest_trainer,CONTEST_OPPONENT_JANELLE_TRAINERNAME,JANELLE,,ג'נל,proposed,"src/data/contest_opponents.h:2604; CHANGED from ג'אנל: FR writes the JAN chunk ג'נ (TRAINER_LASS_JANICE ג'ניס trainers.h:1159, TRAINER_CHANNELER_JANAE ג'נאי :4499), and an unstressed first-syllable a is unwritten (rules §3); ll = ל. Glossary TRNAME_JANINE ג'אנין (proposed) is out of line with FR and"
-contest_nickname,CONTEST_OPPONENT_HEATH_NICKNAME,HEROSS,,הרוס,proposed,"src/data/contest_opponents.h:2632; coined (HERACROSS): HE = ה, ROSS = רוס (TRNAME_ROSS); flag: homograph of the word 'ruined'"
+contest_nickname,CONTEST_OPPONENT_HEATH_NICKNAME,HEROSS,,הירוס,proposed,"src/data/contest_opponents.h:2632; coined (HERACROSS): HE = ה, ROSS = רוס (TRNAME_ROSS); flag: homograph of the word 'ruined'"
 contest_trainer,CONTEST_OPPONENT_HEATH_TRAINERNAME,HEATH,,הית',proposed,"src/data/contest_opponents.h:2633; translit: ea = י, final th = ת' (as FR KEITH קית')"
 contest_nickname,CONTEST_OPPONENT_SASHA_NICKNAME,RODLECT,,רודלקט,proposed,"src/data/contest_opponents.h:2661; coined (ELECTRODE reversed): ROD = רוד, LECT = לקט as SPECIES_ELECTRODE אלקטרוד"
 contest_trainer,CONTEST_OPPONENT_SASHA_TRAINERNAME,SASHA,,סשה,proposed,"src/data/contest_opponents.h:2662; translit: -ASHA = שה as FR canon TRAINER_CHANNELER_TASHA טשה (trainers.h:4639), first a unwritten; usual Hebrew spelling"
@@ -6405,19 +6400,19 @@ name,NAME_VINNY,VINNY,,ויני,proposed,"transliterated for the last English st
 name,NAME_MOREME,MOREME,,מורמי,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_IRONHARD,IRONHARD,,ברזל קשה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_GIGANTAMAX,GIGANTAMAX,,ג'ימקס,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_MEGA_EVOLUTION,MEGA EVOLUTION,,התפתחות,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_MEGA_STONE,MEGA STONE,,אבן,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_MEGA_EVOLUTION,MEGA EVOLUTION,,התפתחות מגה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_MEGA_STONE,MEGA STONE,,אבן מגה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_GALAR,GALAR,,גלאר,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_ETERNAL_FLOWER,ETERNAL FLOWER,,הפרח,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_MEGA_SOL_CANNON,MEGA SOL CANNON,,תותח,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,"NAME_DOUBLE_JAW_(CATEGORY,_SPECIES_FERALIGATR_MEGA)","Double Jaw (category, SPECIES_FERALIGATR_MEGA)",,לסת,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_ETERNAL_FLOWER,ETERNAL FLOWER,,הפרח הנצחי,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_MEGA_SOL_CANNON,MEGA SOL CANNON,,תותח שמש מגה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,"NAME_DOUBLE_JAW_(CATEGORY,_SPECIES_FERALIGATR_MEGA)","Double Jaw (category, SPECIES_FERALIGATR_MEGA)",,לסת כפולה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,"NAME_IMPOSING_(CATEGORY,_SPECIES_DRAMPA_MEGA)","Imposing (category, SPECIES_DRAMPA_MEGA)",,מרשים,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_THE_ROYAL_PINK_PRINCESS_(DIANCIE_MEGA_EPITHET),the Royal Pink Princess (Diancie Mega epithet),,הנסיכה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_THE_BLOOD-SOAKED_CRESCENT_(SALAMENCE_MEGA_EPITHET),the blood-soaked crescent (Salamence Mega epithet),,הסהר,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_THE_ROYAL_PINK_PRINCESS_(DIANCIE_MEGA_EPITHET),the Royal Pink Princess (Diancie Mega epithet),,הנסיכה הוורודה המלכותית,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_THE_BLOOD-SOAKED_CRESCENT_(SALAMENCE_MEGA_EPITHET),the blood-soaked crescent (Salamence Mega epithet),,הסהר הספוג בדם,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_WALLACE,WALLACE,,וולאס,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_WINONA,WINONA,,וינונה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_PHOEBE,PHOEBE,,פיבי,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_GLACIA,GLACIA,,גלסיה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_GLACIA,GLACIA,,גלייסיה,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_STU,STU,,סטו,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_MILTON,MILTON,,מילטון,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_REID,REID,,ריד,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
@@ -6471,9 +6466,9 @@ name,NAME_GREEN,GREEN,,גרין,proposed,"transliterated for the last English st
 name,NAME_SILVER,SILVER,,סילבר,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_POKÉGEAR,POKéGEAR,,פוקיגיר,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_DEXNAV,DEXNAV,,דקסנאב,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_HIGH_KING_(CATEGORY),High King (category),,מלך,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_HIGH_KING_(CATEGORY),High King (category),,מלך עליון,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_PHILIP,PHILIP,,פיליפ,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_EMERALD_(VERSION_PLACEHOLDER),EMERALD (version placeholder),,ברקת,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_GREEN_(PLACEHOLDER),GREEN (placeholder),,גרין,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_SILVER_(RIVAL_DEFAULT_NAME),SILVER (rival default name),,סילבר,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_GIGANTAMAX_(TERM),Gigantamax (term),,גיגנטמקס,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_GIGANTAMAX_(TERM),Gigantamax (term),,ג'ימקס,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
