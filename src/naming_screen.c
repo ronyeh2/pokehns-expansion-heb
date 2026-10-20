@@ -204,9 +204,16 @@ static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/rival.gbapal"
 #endif
 #if TEXT_RTL
 // Page tabs of the Hebrew build: "עברית" (blue) for the Hebrew page, "ABC" (orange) for the
-// Latin page. Drawn by hns-tools/fonts/make_naming_tabs.py.
+// Latin page, "סמלים" (green) for the symbols page. Drawn with hns-tools/fonts/make_naming_tabs.py.
+// The tab has no row above its 7 letter rows, so the ל of "סמלים" is drawn 7 rows tall with its
+// ascender on the top row; without the ascender it does not read as ל.
 static const u32 sPageSwapHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_hebrew.4bpp");
 static const u32 sPageSwapLatin_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_latin.4bpp");
+static const u32 sPageSwapSymbols_Gfx[] = INCBIN_U32("graphics/naming_screen/page_swap_symbols.4bpp");
+// The side buttons say "חזרה" and "אישור", the hint bar's words, in the English buttons' frames
+// and letter style. The B BUTTON and START captions name hardware buttons and stay Latin.
+static const u32 sBackButtonHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/back_button_hebrew.4bpp");
+static const u32 sOkButtonHebrew_Gfx[] = INCBIN_U32("graphics/naming_screen/ok_button_hebrew.4bpp");
 #endif
 
 static const u8 *const sTransferredToPCMessages[] =
@@ -591,8 +598,6 @@ static void NamingScreen_InitBGs(void)
     SetWindowRtlMode(sNamingScreen->windows[WIN_KB_PAGE_1], WINDOW_RTL_LTR);
     SetWindowRtlMode(sNamingScreen->windows[WIN_KB_PAGE_2], WINDOW_RTL_LTR);
     SetWindowRtlMode(sNamingScreen->windows[WIN_TEXT_ENTRY], WINDOW_RTL_LTR);
-    // The button hints keep the D-pad hint on the left, the side the D-pad is on
-    SetWindowRtlMode(sNamingScreen->windows[WIN_BANNER], WINDOW_RTL_IN_PLACE);
 #endif
 
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
@@ -1162,6 +1167,12 @@ static void SpriteCB_Underscore(struct Sprite *sprite)
     u8 pos;
 
     pos = GetTextEntryPosition();
+#if TEXT_RTL
+    // A typed letter shows without its underscore: the bar covers the tails of ן ך ף ץ ק and
+    // under ר reads as the base of ב. The filled slots are the first ones from the right, and
+    // sId counts the slots from the right.
+    sprite->invisible = (sNamingScreen->textBuffer[(u8)sprite->sId] != EOS);
+#endif
     if (pos != (u8)sprite->sId)
     {
         sprite->y2 = 0;
@@ -3075,18 +3086,24 @@ static const u8 *const sNamingScreenKeyboardText[KBPAGE_COUNT][KBROW_COUNT] =
 
 static const struct SpriteSheet sSpriteSheets[] =
 {
+#if TEXT_RTL
+    {sBackButtonHebrew_Gfx,           0x1E0,  GFXTAG_BACK_BUTTON},
+    {sOkButtonHebrew_Gfx,             0x1E0,  GFXTAG_OK_BUTTON},
+#else
     {gNamingScreenBackButton_Gfx,     0x1E0,  GFXTAG_BACK_BUTTON},
     {gNamingScreenOKButton_Gfx,       0x1E0,  GFXTAG_OK_BUTTON},
+#endif
     {gNamingScreenPageSwapFrame_Gfx,  0x280,  GFXTAG_PAGE_SWAP_FRAME},
     {gNamingScreenPageSwapButton_Gfx, 0x100,  GFXTAG_PAGE_SWAP_BUTTON},
 #if TEXT_RTL
     {sPageSwapHebrew_Gfx,             0x060,  GFXTAG_PAGE_SWAP_UPPER},
     {sPageSwapLatin_Gfx,              0x060,  GFXTAG_PAGE_SWAP_LOWER},
+    {sPageSwapSymbols_Gfx,            0x060,  GFXTAG_PAGE_SWAP_OTHERS},
 #else
     {gNamingScreenPageSwapUpper_Gfx,  0x060,  GFXTAG_PAGE_SWAP_UPPER},
     {gNamingScreenPageSwapLower_Gfx,  0x060,  GFXTAG_PAGE_SWAP_LOWER},
-#endif
     {gNamingScreenPageSwapOthers_Gfx, 0x060,  GFXTAG_PAGE_SWAP_OTHERS},
+#endif
     {gNamingScreenCursor_Gfx,         0x080,  GFXTAG_CURSOR},
     {gNamingScreenCursorSquished_Gfx, 0x080,  GFXTAG_CURSOR_SQUISHED},
     {gNamingScreenCursorFilled_Gfx,   0x080,  GFXTAG_CURSOR_FILLED},
