@@ -144,7 +144,7 @@ GoldenrodCity_RadioTower_2F_EventScript_Jigglypuff::
 	end
 
 RadioTower2FBuenaPasswordIsHelpText:
-	.string "BUENA: מה? הסיסמה של היום?\n"
+	.string "בואנה: מה? הסיסמה של היום?\n"
 	.string "”הצילו”, כמובן!$"
 
 GoldenrodCity_RadioTower_2F_Text_SuperNerd:
@@ -228,36 +228,36 @@ GoldenrodCity_RadioTower_2F_Text_GruntF2After:
 	.string "את זה!$"
 
 GoldenrodCity_RadioTower_2F_Text_BuenaShowPromo:
-	.string "BUENA: תאזינו לתוכנית\n"
+	.string "בואנה: תאזינו לתוכנית\n"
 	.string "הסיסמה שלי!\p"
 	.string "הקשיבו כדי לגלות את\n"
 	.string "הסיסמה של היום!$"
 
 GoldenrodCity_RadioTower_2F_Text_BuenaAskPassword:
-	.string "BUENA: היי!\p"
+	.string "בואנה: היי!\p"
 	.string "נו, אתה יודע מה הסיסמה\n"
 	.string "של היום?\p"
 	.string "אוקיי! אז איזו מהן?$"
 
 GoldenrodCity_RadioTower_2F_Text_BuenaCorrect:
-	.string "BUENA: צדקת!\p"
+	.string "בואנה: צדקת!\p"
 	.string "הנה, {STR_VAR_1}\n"
 	.string "בתור הפרס שלך!$"
 
 GoldenrodCity_RadioTower_2F_Text_BuenaWrong:
-	.string "BUENA: בזזט! חבל!\p"
+	.string "בואנה: בזזט! חבל!\p"
 	.string "אפשר לנסות שוב מחר!$"
 
 GoldenrodCity_RadioTower_2F_Text_BuenaComeBack:
-	.string "BUENA: אין ניחוש?\n"
+	.string "בואנה: אין ניחוש?\n"
 	.string "תחזור כשתהיה מוכן!$"
 
 GoldenrodCity_RadioTower_2F_Text_BuenaAlreadyPlayed:
-	.string "BUENA: כבר ניחשת את הסיסמה של היום!\p"
+	.string "בואנה: כבר ניחשת את הסיסמה של היום!\p"
 	.string "תאזין שוב מחר!$"
 
 GoldenrodCity_RadioTower_2F_Text_BuenaBagFull:
-	.string "BUENA: צדקת, אבל\n"
+	.string "בואנה: צדקת, אבל\n"
 	.string "התיק שלך מלא!\p"
 	.string "תפנה קצת מקום ותבוא\n"
 	.string "לדבר איתי שוב!$"

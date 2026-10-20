@@ -12,7 +12,7 @@ static const u8 sRadioStationName_OaksPkmnTalk[]    = _("שיחות פוקימו
 static const u8 sRadioStationName_PokedexShow[]     = _("תוכנית הפוקדקס");
 static const u8 sRadioStationName_PokemonMusic[]    = _("מוזיקת פוקימון");
 static const u8 sRadioStationName_LuckyChannel[]    = _("ערוץ המזל");
-static const u8 sRadioStationName_BuenasPassword[]  = _("הסיסמה של BUENA");
+static const u8 sRadioStationName_BuenasPassword[]  = _("הסיסמה של בואנה");
 static const u8 sRadioStationName_Unown[]           = _("?????");
 static const u8 sRadioStationName_PlacesAndPeople[] = _("מקומות ואנשים");
 static const u8 sRadioStationName_LetsAllSing[]     = _("בואו נשיר ביחד!");
@@ -132,8 +132,8 @@ static const u8 *const sRadioText_OPT_Adjectives[] =
 
 static const u8 sRadioText_BenIntro[] = _("בן: ערוץ מוזיקת פוקימון!");
 static const u8 sRadioText_BenIntro2[] = _("זה אני, הדי-ג'יי בן!");
-static const u8 sRadioText_FernIntro[] = _("FERN: פוקימוזיקה!");
-static const u8 sRadioText_FernIntro2[] = _("עם הדי-ג'יי FERN!");
+static const u8 sRadioText_FernIntro[] = _("פרן: פוקימוזיקה!");
+static const u8 sRadioText_FernIntro2[] = _("עם הדי-ג'יי פרן!");
 // "Today's {DAY}," built dynamically
 static const u8 sRadioText_BenFern_TodayIs[] = _("היום ");
 static const u8 sRadioText_BenFern_JamTo[] = _("אז בואו נזוז לצלילי");
@@ -145,7 +145,7 @@ static const u8 sRadioText_BenFern_Lullaby[] = _("שיר הערש לפוקימו
 // Lucky Channel
 // ==========================================================
 
-static const u8 sRadioText_LC1[] = _("REED: יי-הא! מה העניינים");
+static const u8 sRadioText_LC1[] = _("ריד: יי-הא! מה העניינים");
 static const u8 sRadioText_LC2[] = _("אצלכם? בין אם אתם בעננים");
 static const u8 sRadioText_LC3[] = _("או ממש בקרשים, אל תפספסו את");
 static const u8 sRadioText_LC4[] = _("תוכנית מספר המזל!");
@@ -162,7 +162,7 @@ static const u8 sRadioText_LC_Drag2[] = _("זה די מייגע…");
 // ==========================================================
 
 static const u8 sRadioText_PnP_Intro[] = _("מקומות ואנשים! בהגשה");
-static const u8 sRadioText_PnP_Intro2[] = _("שלי, הדי-ג'יי LILY!");
+static const u8 sRadioText_PnP_Intro2[] = _("שלי, הדי-ג'יי לילי!");
 static const u8 sRadioText_PnP_Space[] = _(" ");
 
 // People adjectives
@@ -223,7 +223,7 @@ static const u8 sRadioText_Rocket10[] = _("");
 // Buena's Password
 // ==========================================================
 
-static const u8 sRadioText_Buena1[] = _("BUENA: כאן BUENA!");
+static const u8 sRadioText_Buena1[] = _("בואנה: כאן בואנה!");
 static const u8 sRadioText_Buena2[] = _("הסיסמה של היום!");
 static const u8 sRadioText_Buena3[] = _("רגע, תנו לי לחשוב… זה");
 // "{password}!" built dynamically with STR_VAR_1

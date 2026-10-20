@@ -5062,6 +5062,10 @@ mapsec,MAPSEC_TOHJO_FALLS,TOHJO FALLS,,מפלי טוג'ו,proposed,"FALLS = מפ
 mapsec,MAPSEC_UNION_CAVE,UNION CAVE,,מערת האיחוד,proposed,"meaning; UNION = איחוד as in FR UNION ROOM חדר האיחוד (pokefirered-heb src/strings.c:591, 1250); reviewed: kept; note fix: FR menu gText_UnionRoom is חדר איחוד (strings.c:591), dialogue בחדר האיחוד (:1250); construct+article as FR ROCK TUNNEL מערת האבן"
 mapsec,MAPSEC_WHIRL_ISLANDS,WHIRL ISLANDS,,איי המערבולת,proposed,meaning; ISLANDS = איי X (FR SEAFOAM ISLANDS איי הקצף); whirl = מערבולת; reviewed
 speaker,SP_NAME_MOM,MOM,אמא,אמא,inherited,FR match: dialogue speaker prefix; FR dialogue prefixes Mom's lines with אמא:
+speaker,RADIO_DJ_BUENA,BUENA,,בואנה,proposed,host of Buena's Password (src/data/text/radio_strings.h station name and speaker prefix; GoldenrodCity_RadioTower_2F_hns speaker prefix); translit of the HeartGold/SoulSilver name; ue = וא as bueno = בואנו (data/text/apprentice.inc:935); not a source constant
+speaker,RADIO_DJ_FERN,FERN,,פרן,proposed,radio DJ on Pokémon Music (src/data/text/radio_strings.h); speaker prefix and name in the intro; translit; not a source constant
+speaker,RADIO_DJ_LILY,LILY,,לילי,proposed,radio DJ of Places and People (src/data/text/radio_strings.h name in the intro; SSAqua_RoomNE_hns Pokémaniac dialogue); translit; not a source constant
+speaker,RADIO_DJ_REED,REED,,ריד,proposed,radio host of the Lucky Channel (src/data/text/radio_strings.h); speaker prefix; translit (ee = י); not a source constant
 trainer_name,TRNAME_SAWYER,SAWYER,,סוייר,proposed,"1 trainer(s); translit; aw=ו, as in the Hebrew Tom Sawyer; reviewed; aw=ו as FR DAWSON = דוסון (FR trainers.h:1669)"
 trainer_name,TRNAME_ROSS,ROSS,,רוס,proposed,1 trainer(s); reviewed
 trainer_name,TRNAME_MITCH,MITCH,מיץ',מיץ',inherited,FR match: English; 1 trainer(s)
@@ -5510,6 +5514,7 @@ term,TERM_NATURE,NATURE,אופי,אופי,inherited,FR Help_Text_Nature = אופ
 term,TERM_TYPE,TYPE,סוג,סוג,inherited,FR Help_Text_Type = סוג$
 term,TERM_PC,PC,מחשב,מחשב,inherited,FR text uses מחשב in 69 strings
 term,TERM_POKEMON_CENTER,POKéMON CENTER,מרכז פוקימון,מרכז פוקימון,inherited,FR text uses מרכז פוקימון in 18 strings
+term,TERM_NURSE_JOY,NURSE JOY,,האחות ג'וי,proposed,"the POKéMON CENTER nurse (src/option_menu.c FASTER JOY description); NURSE = האחות; JOY = ג'וי as the FR spelling of the name (JOY & MEG = ג'וי ומג, FR trainers.h:5599)"
 term,TERM_POKE_MART,POKé MART,,חנות פוקימון,proposed,"FR names it חנות פוקימון (help_system.inc:161, :250; flavor_text.inc:35) and writes בחנות הפוקימונים in prose (white_out.inc:12); parallels מרכז פוקימון; reviewed: note corrected, the todo note said FR never names the POKé MART"
 term,TERM_GYM,GYM,מכון,מכון,inherited,FR text uses מכון in 120 strings
 term,TERM_GYM_LEADER,GYM LEADER,מנהיג,מנהיג,inherited,FR TRAINER_CLASS_LEADER = מנהיג; FireRed dialogue: מנהיג המכון / מנהיגת המכון
