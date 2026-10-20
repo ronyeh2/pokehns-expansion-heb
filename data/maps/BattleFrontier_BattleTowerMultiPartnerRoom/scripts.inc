@@ -376,7 +376,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Mon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1},\n"
 	.string "זה מה שיש לי! מגניב, נכון?\p"
 	.string "אז קדימה!\n"
-	.string "בוא נקים צוות!$"
+	.string "בוא נקים צוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice2Accept::
 	.string "יש! מעולה!\n"
@@ -400,7 +400,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Mon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1},\n"
 	.string "זה הזוג שלי.\p"
 	.string "בבקשה, תצטרף אליי\n"
-	.string "לצוות?$"
+	.string "לצוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Accept::
 	.string "תודה!\n"
@@ -408,7 +408,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Accept::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice3Reject::
 	.string "{PLAYER}, קיוויתי שנהיה\n"
-	.string "ביחד בצוות…$"
+	.string "ביחד בצוות זוגי…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice4Intro::
 	.string "אממ… אני באמת שמחה שמצאת\n"
@@ -481,7 +481,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Mon2Ask::
 	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
 	.string "השקעתי הרבה בגידול שלהם,\n"
 	.string "למרות שאני עסוק.\p"
-	.string "בוא נקים צוות\n"
+	.string "בוא נקים צוות זוגי\n"
 	.string "וננסה את כוחנו!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice6Accept::
@@ -531,7 +531,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Mon1::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Mon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1}.\p"
-	.string "אנא, תסכים להקים איתי צוות!$"
+	.string "אנא, תסכים להקים איתי צוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice8Accept::
 	.string "הו… אני מאושרת!\n"
@@ -804,7 +804,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterAccept::
 	.string "אני הולך להירשם, טוב?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_YoungsterReject::
-	.string "אוף! אם היית מקים צוות עם\n"
+	.string "אוף! אם היית מקים צוות זוגי עם\n"
 	.string "הפוקימונים שלי, לא היו עוצרים אותנו!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerIntro::
@@ -819,7 +819,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerMon2Ask::
 	.string "ועוד אחד שמשתמש\n"
 	.string "ב{STR_VAR_1} - {STR_VAR_2}!\p"
 	.string "נשמע טוב, הא?\n"
-	.string "רוצה להקים צוות?$"
+	.string "רוצה להקים צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerAccept::
 	.string "יאהו!\n"
@@ -840,7 +840,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon1::
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
 	.string "מה דעתך?\n"
-	.string "רוצה שנקים צוות ביחד?$"
+	.string "רוצה שנקים צוות זוגי ביחד?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyAccept::
 	.string "נפלא!\n"
@@ -906,7 +906,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFMon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\n"
 	.string "זה הזוג שלי!\p"
 	.string "נו, בבקשה?\n"
-	.string "תקים איתי צוות?$"
+	.string "תקים איתי צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFAccept::
 	.string "וואו, תודה!\n"
@@ -927,7 +927,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon1::
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
 	.string "אז תקשיב!\n"
-	.string "רוצה להקים צוות?$"
+	.string "רוצה להקים צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherAccept::
 	.string "סגור!\p"
@@ -950,7 +950,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMMon2Ask::
 	.string "ו{STR_VAR_2} שמשתמש\n"
 	.string "ב{STR_VAR_1}.\p"
 	.string "לא רע בכלל, נכון?\n"
-	.string "תרצה להקים איתי צוות?$"
+	.string "תרצה להקים איתי צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMAccept::
 	.string "תודה רבה!\n"
@@ -972,7 +972,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon1::
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
 	.string "אני מוכן להציע לך את ההזדמנות\n"
-	.string "להיות איתי בצוות.$"
+	.string "להיות איתי בצוות זוגי.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyAccept::
 	.string "צעד חכם!\p"
@@ -1015,7 +1015,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon1::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFMon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\n"
-	.string "אפשר בבקשה להיות בצוות שלך?$"
+	.string "אפשר בבקשה להיות בצוות הזוגי שלך?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFAccept::
 	.string "תודה!\n"
@@ -1037,7 +1037,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacMon2Ask::
 	.string "יחד עם אחד שמשתמש\n"
 	.string "ב{STR_VAR_1} - {STR_VAR_2}…\p"
 	.string "אני מתחננת…\n"
-	.string "הצטרף אליי לצוות…$"
+	.string "הצטרף אליי לצוות זוגי…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacAccept::
 	.string "אני מודה לך…\n"
@@ -1057,7 +1057,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMMon1::
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMMon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
 	.string "מה אתה אומר?\n"
-	.string "בא לך להקים איתי צוות?$"
+	.string "בא לך להקים איתי צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederMAccept::
 	.string "תודה רבה לך!\p"
@@ -1713,7 +1713,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFMon2Ask::
 	.string "ואחד שמשתמש\n"
 	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
 	.string "נשמע מעניין?\n"
-	.string "אז מה דעתך שנקים צמד?$"
+	.string "אז מה דעתך שנקים צוות זוגי?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnBreederFAccept::
 	.string "יופי!\n"
@@ -1755,7 +1755,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFMon2Ask::
 	.string "ואחד שמשתמש\n"
 	.string "ב{STR_VAR_1} - {STR_VAR_2}.\p"
 	.string "אלה הפוקימונים שאימנתי.\n"
-	.string "אתה ואני, בוא נקים צמד.$"
+	.string "אתה ואני, בוא נקים צוות זוגי.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFAccept::
 	.string "מגניב!\n"
@@ -1763,7 +1763,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFAccept::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmerFReject::
 	.string "אם ניפגש שוב, אתה חייב לי\n"
-	.string "צמד!$"
+	.string "צוות זוגי!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMIntro::
 	.string "מה קורה?\n"
@@ -1775,7 +1775,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMMon1::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMMon2Ask::
 	.string "ו{STR_VAR_2} עם {STR_VAR_1}!\p"
-	.string "יהיה מגניב אם נקים צמד\n"
+	.string "יהיה מגניב אם נקים צוות זוגי\n"
 	.string "ביחד, אז מה אתה אומר?$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SwimmingTriathleteMAccept::
