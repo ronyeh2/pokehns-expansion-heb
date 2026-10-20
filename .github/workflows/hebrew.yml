@@ -10,6 +10,7 @@ on:
   pull_request:
     branches:
       - 'he/main'
+  workflow_dispatch:
 
 jobs:
   build:
