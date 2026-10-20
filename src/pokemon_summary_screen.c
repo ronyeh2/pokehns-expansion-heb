@@ -806,8 +806,9 @@ static const u8 sStatsRightColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMI
 static const u8 sMovesPPLayout[] = _("{FONT_NARROW}נ”כ {DYNAMIC 0}/{DYNAMIC 1}");
 // From a fixed x, with the current PP left-aligned, the label and the slash keep their columns on
 // every row: a padding spacer in front of a one-digit current PP would not stay with the digits but
-// sit between them and the label.
-#define MOVES_PP_X 2
+// sit between them and the label. At x 3 the 43-px text fills the 44-px white column except its
+// rightmost pixel, which the move selector's right edge covers.
+#define MOVES_PP_X 3
 #else
 static const u8 sMovesPPLayout[] = _("{PP}{DYNAMIC 0}/{DYNAMIC 1}");
 #endif
