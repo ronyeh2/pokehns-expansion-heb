@@ -35,7 +35,7 @@ GoldenrodDeptStore2_EventScript_Sign::
 	end
 
 GoldenrodDeptStore_Text_2FYoungster:
-    .string "ה-POKéGEAR יכול לשמור עד 100\n"
+    .string "הפוקיגיר יכול לשמור עד 100\n"
     .string "מספרי טלפון.\p"
     .string "קשה להחליט אילו מספרים\n"
     .string "לשמור.$"
