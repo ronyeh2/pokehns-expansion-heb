@@ -461,7 +461,7 @@ MossdeepCity_SpaceCenter_Text_TabithaDefeat:
 	.string "אני לצד המנהיג שלנו…$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
-	.string "MAXIE: לא הצלחנו לגרום להר הגעש\n"
+	.string "מקסי: לא הצלחנו לגרום להר הגעש\n"
 	.string "להתפרץ…\p"
 	.string "לא הצלחנו לשלוט בגראודון\n"
 	.string "אחרי שהערנו אותו…\p"
@@ -475,7 +475,7 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
 	.string "להרחיב את הים, מוטעית באותה מידה?$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp:
-	.string "MAXIE: בסדר…\n"
+	.string "מקסי: בסדר…\n"
 	.string "נוותר על הדלק…\p"
 	.string "נראה שיש עניינים חשובים יותר\n"
 	.string "שעליי לבחון…$"
