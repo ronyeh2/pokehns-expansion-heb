@@ -1381,3 +1381,18 @@ The 1,851 glossary names with status "proposed" (Gen 4+ Pokémon, NPCs, places, 
 
 Eight more rows had kept only the first word of a multi-word Hebrew name (for example הסהר for הסהר הספוג בדם); they were completed from the text that uses them.
 
+## Review of the changed screens
+
+Every screen these decisions changed was reviewed on the release candidate (60 tour frames, 119 dialogue labels on 336 pages), and each finding was then checked by a second reviewer who tried to refute it. 8 findings were confirmed and 8 refuted.
+
+| Finding | Handling |
+|---|---|
+| The narrowed mem of the fainted tag had no base and read as ח | Redrawn with the base open at the bottom left, as the game's small-font mem; the ayin got a tail |
+| Stat changes read "התקפה בחדות ירד!", with the adverb in the English slot | The intensity words follow the verb in all eleven stat change strings: "התקפה ירד בחדות!" |
+| The Pike Queen glossary notes still argued for רומח | Rewritten for מלכת השביל |
+| A blank line was left inside a Hiker text (Q84) | Removed |
+| MIMI: "להיות חברה שלי" reads first as "my girlfriend" | "להיות ידידה שלי" |
+| The nickname tour still typed with the old cursor rule (K4) | The tour was updated; the ROM was right |
+| A geresh in a summary nickname touches the portrait box (a side effect of K5) | Listed as a known issue |
+| A page ending in a colon draws it against the continue arrow | Listed as a known issue |
+
