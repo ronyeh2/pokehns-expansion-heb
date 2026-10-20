@@ -192,7 +192,7 @@ SinjohRuins_Lab_Text_StevenIntroCutscene6:
 	.string "מצוין.\p"
 	.string "לפי הכתובות, הלוחות בידי פוקימונים\n"
 	.string "אציליים ומאמנים חזקים ברחבי סינג'ו.\p"
-	.string "אתקשר ל-POKéGEAR שלך\n"
+	.string "אתקשר לפוקיגיר שלך\n"
 	.string "אם נגלה משהו חדש.\p"
 	.string "תודה, {PLAYER}.$"
 
