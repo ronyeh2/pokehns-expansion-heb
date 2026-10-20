@@ -265,7 +265,7 @@ BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier_hns:
 	.string "השאיפה הגדולה שלי: לכבוש גם את\n"
 	.string "חזית הקרב וגם את ליגת הפוקימון.\p"
 	.string "ואם החלום שלי יתגשם…\p"
-	.string "אני… אני אשאל את MIMI מהבית ליד\n"
+	.string "אני… אני אשאל את מימי מהבית ליד\n"
 	.string "אם היא תסכים להיות חברה שלי!$"
 
 BattleFrontier_OutsideEast_Text_PyramidTooHarsh_hns:
@@ -295,9 +295,9 @@ BattleFrontier_OutsideEast_Text_DidScottBringYouHere_hns:
 	.string "בעצמו.$"
 
 BattleFrontier_OutsideEast_Text_BelieveInYouBuddy_hns:
-	.string "ZIGG!\n"
+	.string "זיג!\n"
 	.string "אני מאמין בך, חבר קטן!\p"
-	.string "אם תנצח, ZIGG הקטן שלי, אכין לך\n"
+	.string "אם תנצח, זיג הקטן שלי, אכין לך\n"
 	.string "את כל הפינוקים הטעימים שתרצה!$"
 
 BattleFrontier_OutsideEast_Text_ZigzagoonLooksVacant_hns:
