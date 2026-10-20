@@ -234,7 +234,7 @@ NewBarkTown_Text_Wooper:
 	.string "וופר: ווווווופ.$"
 
 NewBarkTown_Text_FatManState2:
-	.string "וואו, ה-POKéGEAR שלך מרשים!\n"
+	.string "וואו, הפוקיגיר שלך מרשים!\n"
 	.string "אמא שלך קנתה לך אותו?$"
 
 NewBarkTown_Text_FatManState3:
@@ -259,7 +259,7 @@ NewBarkTown_Text_LassState4:
 	.string "שאתה יוצא.$"
 
 NewBarkTown_Text_LassState5:
-	.string "תתקשר לאמא שלך ב-POKéGEAR\n"
+	.string "תתקשר לאמא שלך בפוקיגיר\n"
 	.string "כדי לספר לה מה שלומך.$\p"
 
 NewBarkTown_Text_Silver1:
