@@ -1046,7 +1046,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_STATIC, ABILITY_NATURAL_CURE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("פאומי"),
+        .speciesName = _("פומי"),
         .cryId = CRY_PAWMI,
         .natDexNum = NATIONAL_DEX_PAWMI,
         .categoryName = _("עכבר"),
@@ -1054,7 +1054,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .weight = 25,
         .description = COMPOUND_STRING(
             "הכריות שבכפותיו הן איברים שפורקים חשמל.\n"
-            "פאומי יורה חשמל מכפותיו הקדמיות כשהוא\n"
+            "פומי יורה חשמל מכפותיו הקדמיות כשהוא\n"
             "עומד בחוסר יציבות על רגליו האחוריות."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -1110,14 +1110,14 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_NATURAL_CURE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("פאומו"),
+        .speciesName = _("פומו"),
         .cryId = CRY_PAWMO,
         .natDexNum = NATIONAL_DEX_PAWMO,
         .categoryName = _("עכבר"),
         .height = 4,
         .weight = 65,
         .description = COMPOUND_STRING(
-            "כשתוקפים את הקבוצה שלו, פאומו הוא הראשון\n"
+            "כשתוקפים את הקבוצה שלו, פומו הוא הראשון\n"
             "לזנק לקרב, והוא מביס אויבים בטכניקת לחימה\n"
             "שמשלבת מכות חשמל."),
         .pokemonScale = 356,
@@ -1173,7 +1173,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_NATURAL_CURE, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_YELLOW,
-        .speciesName = _("פאומוט"),
+        .speciesName = _("פומוט"),
         .cryId = CRY_PAWMOT,
         .natDexNum = NATIONAL_DEX_PAWMOT,
         .categoryName = _("מעשי"),
