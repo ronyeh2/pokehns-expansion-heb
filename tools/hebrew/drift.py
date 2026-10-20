@@ -5,7 +5,8 @@ For each file (path relative to the repo root) it compares the translation tree 
 reference tree and reports:
   STRUCTURE  anything outside string contents changed (script commands, labels, C code, JSON keys,
              non-text literals such as INCBIN paths)
-  TOKENS     a string's {PLACEHOLDER}/{CONTROL} sequence differs from English (order matters)
+  TOKENS     a string's {PLACEHOLDER}/{CONTROL} sequence differs from English (order matters, except
+             among the battle buffers {B_BUFF1}..{B_BUFF3})
   TERMINATOR a text block gained or lost its '$'
   PAGES      the number of \\p page breaks changed (warning only)
   CHARSET    a character that the charmap cannot encode
@@ -27,6 +28,21 @@ TREE_ROOT = paths.TREE
 TOKEN_RE = re.compile(r'\{[^}]*\}')
 # Latin glyph-pair tokens that Hebrew text may replace with the Hebrew word (POKé, PKMN, the IDNo pair).
 DROPPABLE_TOKENS = {'{POKE}', '{PKMN}', '{POKEBLOCK}', '{ID}', '{NO}'}
+# Battle text buffers, each expanded from its own buffer, so Hebrew word order may move them
+# relative to each other; every other token keeps the English order.
+REORDERABLE_TOKENS = {'{B_BUFF1}', '{B_BUFF2}', '{B_BUFF3}'}
+
+
+def same_tokens(t_en, t_tr):
+    def fixed(ts):
+        return [t for t in ts if t not in REORDERABLE_TOKENS]
+
+    def free(ts):
+        return sorted(t for t in ts if t in REORDERABLE_TOKENS)
+
+    return fixed(t_en) == fixed(t_tr) and free(t_en) == free(t_tr)
+
+
 LATIN_WORD_RE = re.compile(r'[A-Za-z][A-Za-z]+')
 # Latin that may legitimately stay in Hebrew text.
 LATIN_OK = {
@@ -228,7 +244,7 @@ def check(path, en_root, tree_root, charmap, strict):
             continue
         t_en = [t for t in TOKEN_RE.findall(s_en) if t not in DROPPABLE_TOKENS]
         t_tr = [t for t in TOKEN_RE.findall(s_tr) if t not in DROPPABLE_TOKENS]
-        if t_en != t_tr:
+        if not same_tokens(t_en, t_tr):
             errors.append('TOKENS %s: %s -> %s' % (where, t_en, t_tr))
         if path.endswith('.inc') and s_en.endswith('$') != s_tr.endswith('$'):
             errors.append('TERMINATOR %s' % where)
