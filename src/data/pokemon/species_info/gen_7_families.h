@@ -6985,10 +6985,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .height = 75,
         .weight = 2300,
         .description = COMPOUND_STRING(
-            "The light pouring out from all over\n"
-            "its body affects living things and\n"
-            "nature, impacting them in various\n"
-            "ways."),
+            "האור שנשפך מכל גופו משפיע\n"
+            "על יצורים חיים ועל הטבע,\n"
+            "ופועל עליהם בדרכים שונות."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 369,
