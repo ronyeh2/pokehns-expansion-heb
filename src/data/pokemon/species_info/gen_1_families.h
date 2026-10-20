@@ -8202,7 +8202,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_VITAL_SPIRIT, ABILITY_INNER_FOCUS, ABILITY_DEFIANT },
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = TRUE,
-        .speciesName = _("אנייהיליפ"),
+        .speciesName = _("אנייאליפ"),
         .cryId = CRY_ANNIHILAPE,
         .natDexNum = NATIONAL_DEX_ANNIHILAPE,
         .categoryName = _("קוף זעם"),
@@ -13968,7 +13968,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = TRUE,
 #if P_SEPARATE_REGIONAL_FORMS
-        .speciesName = _("אקזגוטר-א"),
+        .speciesName = _("אקזגקיוטר-א"),
 #else
         .speciesName = _("אקזגקיוטר"),
 #endif
