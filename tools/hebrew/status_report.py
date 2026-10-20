@@ -21,6 +21,31 @@ BLOCKED = {
     'src/battle_debug.c': 'debug menu',
     'data/scripts/debug.inc': 'debug menu, English by design',
 }
+# Files whose remaining Latin is deliberate, and why.
+KEPT_LATIN = {
+    'src/data/credits_hns.h': "people's names in the credits",
+    'src/data/battle_frontier/apprentice.h': "the other languages' name columns; the English column is Hebrew",
+    'src/scrcmd.c': "the Odd Egg name list, which the game compares with the player's typed name",
+    'src/text_input_strings.c': 'the Latin keyboard layouts',
+    'src/naming_screen.c': 'the Latin keyboard layouts',
+    'src/option_menu.c': 'button names (L, R, A, B)',
+    'src/start_menu.c': 'the debug entry and AM/PM (the clock is 24-hour)',
+    'src/rtc.c': 'AM/PM (the clock is 24-hour)',
+    'src/strings.c': 'button names, abbreviations (BP), POKéGEAR, unit placeholders and Emerald-only names',
+    'src/challenge_menu.c': 'multipliers (x1.5) and numbers',
+    'src/trainer_tower_sets.c': 'Trainer Tower data, which Heart & Soul cannot reach',
+    'src/pokenav_match_call_data.c': 'Emerald PokéNav contacts, replaced by the PokéGear in Heart & Soul',
+    'src/pokenav_menu_handler_gfx.c': 'Emerald PokéNav strings, replaced by the PokéGear in Heart & Soul',
+    'src/data/script_menu.h': 'Emerald ferry destinations and BP amounts',
+    'src/berry_fix_program.c': 'the Ruby/Sapphire berry-fix program',
+    'src/data/items.h': 'description branches this build does not compile',
+    'data/scripts/config.inc': 'a developer configuration message',
+    'src/field_weather.c': 'a debug message',
+    'src/item.c': 'the English plural suffix, unused in the Hebrew build',
+    'src/contest.c': 'contest debug labels',
+    'src/field_specials.c': 'a mystery-gift sample code the game compares',
+    'src/battle_main.c': 'a code comment',
+}
 HEB = re.compile(r'[֐-׿]')
 
 
@@ -49,10 +74,17 @@ def main():
             rows.append((f, '?', '?', 'error: %s' % e)); continue
         if not us:
             continue
+        # A unit needs Hebrew only if it holds a Latin word (not punctuation, a single letter or a
+        # control code such as \\p).
+        us = [u for u in us if HEB.search(u['en']) or re.search(r'[A-Za-z]{2,}', U.TOKEN_RE.sub('', u['en']).replace('\\n', ' ').replace('\\l', ' ').replace('\\p', ' '))]
+        if not us:
+            continue
         heb = sum(1 for u in us if HEB.search(u['en']))
         total = len(us)
         if reason:
             state = 'blocked (%s)' % reason
+        elif heb < total and f in KEPT_LATIN:
+            state = 'translated (%d kept in Latin: %s)' % (total - heb, KEPT_LATIN[f])
         elif heb < total:
             state = 'to do (%d still English)' % (total - heb)
         elif f.endswith(('.inc', '.s')) and f in swept:
