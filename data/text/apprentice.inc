@@ -55,8 +55,8 @@ gText_ApprenticeChallenge12::
 	.string "{STR_VAR_1}, מספר {STR_VAR_2}!$"
 
 gText_ApprenticeChallenge13::
-	.string "כח! אני חניך של {STR_VAR_1},\n"
-	.string "מספר {STR_VAR_2}. נעים להכיר! כח!$"
+	.string "כחח! אני חניך של {STR_VAR_1},\n"
+	.string "מספר {STR_VAR_2}. נעים להכיר! כחח!$"
 
 gText_ApprenticeChallenge14::
 	.string "זה מורט עצבים… אני חניך מספר\n"
@@ -541,7 +541,7 @@ gText_ApprenticeRejectTeaching13::
 
 gText_ApprenticeWhichLevelMode13::
 	.string "תודה. זה ממש יפה מצדך!\n"
-	.string "…כח! כח!\p"
+	.string "…כחח! כחח!\p"
 	.string "אוף, אני חייב להתחשל מהר…\p"
 	.string "אני יוצא מיד למגדל הקרב, אבל מה יהיה\n"
 	.string "טוב יותר בשבילי? רמה 50 או רמה פתוחה?$"
@@ -918,7 +918,7 @@ gText_ApprenticeItemAlreadyRecommended8::
 	.string "לא צריך להחזיק כלום?$"
 
 gText_ApprenticeWhatHeldItem9::
-	.string "הולה!\n"
+	.string "אולה!\n"
 	.string "המאסטרו שלי, {PLAYER}{KUN}!\p"
 	.string "אני רוצה לבקש ממך עצה\n"
 	.string "בעניין ציוד לפוקימונים.\p"
@@ -1117,7 +1117,7 @@ gText_ApprenticeThanksNoHeldItem14::
 	.string "אה… אוקיי!\n"
 	.string "אלך בלי פריט.\p"
 	.string "זה קצת מלחיץ, בכל זאת.\n"
-	.string "זה לא יהיה מגניב מדי?\p"
+	.string "זה לא ייראה מגניב מדי?\p"
 	.string "תודה, {PLAYER}{KUN}. אם ניפגש שוב,\n"
 	.string "אני מקווה שתעזור לי באותה מידה.$"
 
@@ -1125,7 +1125,7 @@ gText_ApprenticeThanksHeldItem14::
 	.string "אה… אוקיי!\n"
 	.string "אלך על {STR_VAR_1}.\p"
 	.string "זה קצת מלחיץ, בכל זאת.\n"
-	.string "זה לא יהיה מגניב מדי?\p"
+	.string "זה לא ייראה מגניב מדי?\p"
 	.string "תודה, {PLAYER}{KUN}. אם ניפגש שוב,\n"
 	.string "אני מקווה שתעזור לי באותה מידה.$"
 
@@ -1558,7 +1558,7 @@ gText_ApprenticeWhichMon6::
 	.string "יש, זה {PLAYER}!\p"
 	.string "מיד התרברבתי בפני החברים שלי\n"
 	.string "שפגשתי אותך!\p"
-	.string "אני שוב צריכה את המוח שלך היום.\n"
+	.string "היום שוב אני צריכה להיעזר בראש שלך.\n"
 	.string "זאת שאלה קלה בשבילך!\p"
 	.string "תופים, בבקשה!\n"
 	.string "השאלה שלי היא…\p"
@@ -1845,7 +1845,7 @@ gText_ApprenticeMoveThanks5::
 gText_ApprenticeWhichMove6::
 	.string "אה! איזה מזל!\n"
 	.string "פגשתי אותך שוב, {PLAYER}!\p"
-	.string "אני שוב צריכה את המוח שלך היום.\p"
+	.string "היום שוב אני צריכה להיעזר בראש שלך.\p"
 	.string "תופים, בבקשה!\n"
 	.string "השאלה שלי היא…\p"
 	.string "בשביל {STR_VAR_1} שלי, איזה מהלך\n"
@@ -1894,7 +1894,7 @@ gText_ApprenticeMoveThanks8::
 	.string "עוד קצת בפעם אחרת.$"
 
 gText_ApprenticeWhichMove9::
-	.string "הולה, {PLAYER}{KUN}, בואנו! אני מקווה\n"
+	.string "אולה, {PLAYER}{KUN}, בואנו! אני מקווה\n"
 	.string "לעוד קצת מהעצות החכמות שלך היום!\p"
 	.string "מה יהיה המהלך הכי טוב\n"
 	.string "בשביל {STR_VAR_1} שלי?\p"
@@ -1980,7 +1980,7 @@ gText_ApprenticeWhichMove13::
 	.string "במה היית בוחר?$"
 
 gText_ApprenticeMoveThanks13::
-	.string "הממ, {STR_VAR_1}, בסדר. אחח!\n"
+	.string "הממ, {STR_VAR_1}, בסדר. כחח!\n"
 	.string "אלמד אותו כשארגיש טוב יותר.\p"
 	.string "אני מקווה שאוכל להמשיך לפנות אליך\n"
 	.string "לעזרה ככה.$"
