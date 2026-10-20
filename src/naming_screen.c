@@ -837,12 +837,18 @@ static bool8 MainState_WaitPageSwap(void)
     s16 cursorX;
     s16 cursorY;
     bool32 onLastColumn;
+#if TEXT_RTL
+    bool32 wasHebrew;
+#endif
 
     if (IsPageSwapAnimNotInProgress())
     {
 
         GetCursorPos(&cursorX, &cursorY);
         onLastColumn = (cursorX == GetCurrentPageColumnCount());
+#if TEXT_RTL
+        wasHebrew = (CurrentPageToKeyboardId() == KEYBOARD_HEBREW);
+#endif
 
         sNamingScreen->state = STATE_HANDLE_INPUT;
         sNamingScreen->currentPage++;
@@ -854,6 +860,12 @@ static bool8 MainState_WaitPageSwap(void)
         }
         else
         {
+#if TEXT_RTL
+            // The Hebrew page is laid out right to left: keep the cursor on the same side of the
+            // keyboard, so it lands on א when coming from the first column of a Latin page.
+            if (wasHebrew != (CurrentPageToKeyboardId() == KEYBOARD_HEBREW))
+                cursorX = KBCOL_COUNT - 1 - cursorX;
+#endif
             if (cursorX >= GetCurrentPageColumnCount())
                 cursorX = GetCurrentPageColumnCount() - 1;
         }
