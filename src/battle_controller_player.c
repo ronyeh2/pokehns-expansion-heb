@@ -1766,9 +1766,9 @@ static void MoveSelectionDisplayMoveDescription(enum BattlerId battler)
 
     u8 pwr_num[3], acc_num[3];
     // Sized by their initializers: the translated labels are longer than the English ones.
-    u8 cat_desc[] = _("CAT: ");
-    u8 pwr_desc[] = _("PWR: ");
-    u8 acc_desc[] = _("ACC: ");
+    u8 cat_desc[] = _("סיווג: ");
+    u8 pwr_desc[] = _("עוצמה: ");
+    u8 acc_desc[] = _("דיוק: ");
     u8 cat_start[] = _("{CLEAR_TO 0x03}");
 #if TEXT_RTL
     // The Hebrew labels are wider than the English ones: PWR and ACC start further along the
