@@ -798,7 +798,19 @@ static const u8 sMemoMiscTextColor[] = _("{COLOR WHITE}{SHADOW DARK_GRAY}"); // 
 static const u8 sStatsLeftColumnLayout[] = _("{DYNAMIC 0}/{DYNAMIC 1}\n{DYNAMIC 2}\n{DYNAMIC 3}");
 static const u8 sStatsLeftIVEVColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
 static const u8 sStatsRightColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
+#if TEXT_RTL
+// The PP label is the Hebrew abbreviation. The label, a space and the numbers are all in the narrow
+// font: with the numbers in the normal font, "35/35" leaves no room in the 44-px PP column for a
+// gap after the label. The label reads first, so it sits at the column's right end and the numbers
+// follow it to the left.
+static const u8 sMovesPPLayout[] = _("{FONT_NARROW}נ”כ {DYNAMIC 0}/{DYNAMIC 1}");
+// From a fixed x, with the current PP left-aligned, the label and the slash keep their columns on
+// every row: a padding spacer in front of a one-digit current PP would not stay with the digits but
+// sit between them and the label.
+#define MOVES_PP_X 2
+#else
 static const u8 sMovesPPLayout[] = _("{PP}{DYNAMIC 0}/{DYNAMIC 1}");
+#endif
 
 #define TAG_MOVE_SELECTOR 30000
 #define TAG_MON_STATUS 30001
@@ -4378,7 +4390,11 @@ static void PrintMoveNameAndPP(u8 moveIndex)
     {
         pp = CalculatePPWithBonus(move, summary->ppBonuses, moveIndex);
         PrintTextOnWindowToFit(moveNameWindowId, GetMoveName(move), 0, moveIndex * 16 + 1, 0, 1);
+#if TEXT_RTL
+        ConvertIntToDecimalStringN(gStringVar1, summary->pp[moveIndex], STR_CONV_MODE_LEFT_ALIGN, 2);
+#else
         ConvertIntToDecimalStringN(gStringVar1, summary->pp[moveIndex], STR_CONV_MODE_RIGHT_ALIGN, 2);
+#endif
         ConvertIntToDecimalStringN(gStringVar2, pp, STR_CONV_MODE_RIGHT_ALIGN, 2);
         DynamicPlaceholderTextUtil_Reset();
         DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
@@ -4386,7 +4402,11 @@ static void PrintMoveNameAndPP(u8 moveIndex)
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sMovesPPLayout);
         text = gStringVar4;
         ppState = GetCurrentPpToMaxPpState(summary->pp[moveIndex], pp) + 9;
+#if TEXT_RTL
+        x = MOVES_PP_X;
+#else
         x = GetStringRightAlignXOffset(FONT_NORMAL, text, 44);
+#endif
     }
     else
     {
@@ -4545,12 +4565,22 @@ static void PrintNewMoveDetailsOrCancelText(void)
         else
             PrintTextOnWindowToFit(windowId1, GetMoveName(move), 0, 65, 0, 5);
 
+#if TEXT_RTL
+        ConvertIntToDecimalStringN(gStringVar1, GetMovePP(move), STR_CONV_MODE_LEFT_ALIGN, 2);
+        ConvertIntToDecimalStringN(gStringVar2, GetMovePP(move), STR_CONV_MODE_RIGHT_ALIGN, 2);
+        DynamicPlaceholderTextUtil_Reset();
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
+        DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sMovesPPLayout);
+        PrintTextOnWindow(windowId2, gStringVar4, MOVES_PP_X, 65, 0, 12);
+#else
         ConvertIntToDecimalStringN(gStringVar1, GetMovePP(move), STR_CONV_MODE_RIGHT_ALIGN, 2);
         DynamicPlaceholderTextUtil_Reset();
         DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
         DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar1);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sMovesPPLayout);
         PrintTextOnWindow(windowId2, gStringVar4, GetStringRightAlignXOffset(FONT_NORMAL, gStringVar4, 44), 65, 0, 12);
+#endif
     }
 }
 
