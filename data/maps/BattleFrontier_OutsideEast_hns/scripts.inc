@@ -266,7 +266,7 @@ BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier_hns:
 	.string "חזית הקרב וגם את ליגת הפוקימון.\p"
 	.string "ואם החלום שלי יתגשם…\p"
 	.string "אני… אני אשאל את מימי מהבית ליד\n"
-	.string "אם היא תסכים להיות חברה שלי!$"
+	.string "אם היא תסכים להיות ידידה שלי!$"
 
 BattleFrontier_OutsideEast_Text_PyramidTooHarsh_hns:
 	.string "פירמידת הקרב קשוחה מדי!\n"
