@@ -46,6 +46,7 @@ const u8 gText_Boy[] = _("בן");
 const u8 gText_Girl[] = _("בת");
 const u8 gText_ThisIsAPokemon[] = _("לזה אנחנו קוראים ”פוקימון”.{PAUSE 96}\p");
 const u8 gText_5MarksPokemon[] = _("פוקימון ?????");
+// The unit comes first so that the mirrored renderer draws it at the right end, as it does for a measured value.
 const u8 gText_UnkHeight[] = _("{CLEAR_TO 0x0C}”??'??");
 const u8 gText_UnkHeightMetric[] = _("m ?.???");
 const u8 gText_UnkWeight[] = _("lbs ?.????");
