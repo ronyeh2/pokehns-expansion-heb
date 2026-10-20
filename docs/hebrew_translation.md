@@ -1,8 +1,8 @@
 # Hebrew translation guide (Heart & Soul)
 
 Everything here is about the Hebrew branches of this fork (`he/*`). None of it applies to upstream
-Heart & Soul. The tools named here live in `tools/hebrew/` (copied from the working directory
-`hns-tools/` the translation was built with).
+Heart & Soul. The tools named here live in `tools/hebrew/` (see its `README.md`); the glossary,
+the style guide and the transliteration rules live in `translation/hebrew/`.
 
 ## How Hebrew is stored
 
@@ -71,6 +71,9 @@ order and printed left to right in its English position.
   back to the narrower font when a name is wider than its column; the A–Z order is generated from
   the Hebrew names (`gen_dex_alpha.py`).
 - The healthbox drops the level glyph when glyph and digits do not fit (level 100).
+- Lists sorted by name (the bag's A–Z sort, the move relearner) use `StringCompareAlphabetical`:
+  final letters sort with their ordinary forms, and a name sorts before the longer names that
+  start with it.
 
 ## Fonts
 
@@ -108,8 +111,42 @@ message under 424.
 | `textwidth.py`, `audit.py`, `wrap.py` | The width model, a whole-tree budget audit, a re-wrapper |
 | `rom_sweep.py` | Finds English left in a built ROM |
 | `gen_dex_alpha.py` | Regenerates the Pokédex A–Z order |
-| `emu/` | Headless mGBA harness, the save ladder and the screen tours (`hns.py tour`) |
+| `emu/` | Headless mGBA harness, the save ladder, the screen tours (`hns.py tour`), the dialogue sweep (`sweep.py`), the map walk (`mapwalk.py`) and the libretro frontend for other cores (`crosscore.c`) |
+| `check_tests.py` | Compares a `make check` log with the tests upstream already fails (`data/known_test_failures.txt`) |
+| `testmsgs/` | Rebuilds the battle tests' Hebrew message table (below) |
+
+## Tests
+
+Upstream 2.0.6 does not pass its own suite (about 1,900 tests fail on the English build), so the
+Hebrew build is held to "no test fails that passes upstream". The battle tests expect English
+messages; `test/test_runner_battle.c` swaps each expected message for the Hebrew the game prints,
+from `test/hebrew_battle_messages.h` (see `tools/hebrew/testmsgs/README.md`). The text-width tests
+in `test/text.c` run on the Hebrew names; their English-only lists of names known to overflow do
+not apply.
+
+CI (`.github/workflows/hebrew.yml`) builds the ROM and the clip-report ROM on every push to `he/*`,
+runs the drift check against `he/renderer`, the layout audit, the glossary checks, the tool tests
+and `make check`. It never uploads a ROM.
 
 ## What is left / what this cannot see
 
-Kept up to date in `TESTING.md` of each build and in the release notes.
+Each build's `TESTING.md` lists what was tested on that exact ROM and what was not. In short:
+
+- **Not seen by a person.** Every check is automated: screen tours, the clip report, the dialogue
+  sweep, the map walk, the save ladder, cross-core frames, `make check`, and a review of the tour
+  screenshots against English. Nobody has played from a new game to the first badge, and nothing
+  ran on real hardware.
+- **Screens no tour reaches** (the Battle Frontier facilities, contests from start to finish,
+  mail, the credits, link features) passed the width audit and the code-level budget review but
+  were not seen.
+- **Proposed names.** Pokémon from Gen 4 on and many NPCs are transliterations with status
+  `proposed` in the glossary; they have not been checked against an official Hebrew source.
+- **Open style calls** (see the glossary notes and the release notes): the definite suffix after
+  `את` in battle text (`פראי` / `הפראי`), the `{ID}{NO}` and `{PP}` glyph labels, `POKéGEAR` in
+  Latin letters, the word for "Congratulations", quotation marks around move names, the
+  English column of the default names.
+- **Kept in English on purpose:** Easy Chat words (the chat keyboard indexes them by letter), the
+  debug menus, the credits, the Odd Egg name list (the game compares it with the player's name).
+- **Graphics.** The PNGs in `graphics/` are the source of truth; the scripts that drew the Hebrew
+  labels were working tools and are not in this repository.
+- **Female address.** The player is addressed in the masculine.
