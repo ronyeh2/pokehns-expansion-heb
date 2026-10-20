@@ -282,7 +282,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner_hns:
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_QuitLookingForPartner_hns:
 	.string "{PLAYER}, עדיין לא מצאת שותף\n"
-	.string "לצמד שלך.\p"
+	.string "לצוות הזוגי שלך.\p"
 	.string "האם ברצונך להפסיק לחפש\n"
 	.string "ולחזור לדלפק הקבלה?$"
 
