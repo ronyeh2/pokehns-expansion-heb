@@ -514,7 +514,7 @@ BattleFrontier_BattleDomeLobby_Text_DidntSaveBeforeQuitting_hns:
 	.string "נפסל. מצטער!$"
 
 BattleFrontier_BattleDomeLobby_Text_CongratsForWinningTourney_hns:
-	.string "ברכות על הזכייה\n"
+	.string "מזל טוב על הזכייה\n"
 	.string "בטורניר הקרב!$"
 
 @ Unused
@@ -636,7 +636,7 @@ BattleFrontier_BattleDomeLobby_Text_NeedToCheckOpponentCarefully_hns:
 	.string "לפני שבוחרים את הפוקימונים שיילחמו.$"
 
 BattleFrontier_BattleDomeLobby_Text_CongratsDefeatedTucker_hns:
-	.string "ברכות!\p"
+	.string "מזל טוב!\p"
 	.string "ניצחת את אס הכיפה וזכית\n"
 	.string "בטורניר הקרב!$"
 
