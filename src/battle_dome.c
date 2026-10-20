@@ -1002,7 +1002,7 @@ static const u8 *const sBattleDomeWinTexts[] =
     [DOME_TEXT_CHAMP_USING_MOVE] = COMPOUND_STRING("{STR_VAR_1} זוכה באליפות!"),
     [DOME_TEXT_WON_ON_FORFEIT]   = COMPOUND_STRING("ניצחון טכני ל{STR_VAR_1}!"),
     [DOME_TEXT_CHAMP_ON_FORFEIT] = COMPOUND_STRING("{STR_VAR_1} זוכה באליפות בניצחון טכני!"),
-    [DOME_TEXT_WON_NO_MOVES]     = COMPOUND_STRING("ניצחון ל{STR_VAR_1} בלי להשתמש במהלך!"),
+    [DOME_TEXT_WON_NO_MOVES]     = COMPOUND_STRING("ניצחון ל{STR_VAR_1} בלי אף מהלך!"),
     [DOME_TEXT_CHAMP_NO_MOVES]   = COMPOUND_STRING("{STR_VAR_1} זוכה באליפות בלי אף מהלך!"),
 };
 
