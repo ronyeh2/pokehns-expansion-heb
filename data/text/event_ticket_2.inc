@@ -32,7 +32,7 @@ EventTicket_Text_OddTicketGetOnBoard:
 	.string "Get on board, youngster!$"
 
 FarawayIsland_Entrance_Text_SailorReturn:
-	.string "קפטן BRINEY יכול להיות\n"
+	.string "קפטן ברייני יכול להיות\n"
 	.string "הפכפך עד שיגעון…\p"
 #if IS_HNS
 	.string "רוצה לחזור לאוליבין?$"
