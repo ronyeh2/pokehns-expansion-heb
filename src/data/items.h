@@ -10912,8 +10912,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_CHERI_BERRY] =
     {
-        .name = ITEM_NAME("גרגר צ'רי"),
-        .pluralName = ITEM_PLURAL_NAME("גרגרי צ'רי"),
+        .name = ITEM_NAME("פרי צ'רי"),
+        .pluralName = ITEM_PLURAL_NAME("פירות צ'רי"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CURE_PAR,
         .description = COMPOUND_STRING(
@@ -10932,8 +10932,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_CHESTO_BERRY] =
     {
-        .name = ITEM_NAME("גרגר צ'סטרו"),
-        .pluralName = ITEM_PLURAL_NAME("גרגרי צ'סטרו"),
+        .name = ITEM_NAME("פרי צ'סטו"),
+        .pluralName = ITEM_PLURAL_NAME("פירות צ'סטו"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CURE_SLP,
         .description = COMPOUND_STRING(
@@ -10952,8 +10952,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PECHA_BERRY] =
     {
-        .name = ITEM_NAME("גרגר פצ'ה"),
-        .pluralName = ITEM_PLURAL_NAME("גרגרי פצ'ה"),
+        .name = ITEM_NAME("פרי פצ'ה"),
+        .pluralName = ITEM_PLURAL_NAME("פירות פצ'ה"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CURE_PSN,
         .description = COMPOUND_STRING(
@@ -10972,8 +10972,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_RAWST_BERRY] =
     {
-        .name = ITEM_NAME("גרגר ראוסט"),
-        .pluralName = ITEM_PLURAL_NAME("גרגרי ראוסט"),
+        .name = ITEM_NAME("פרי ראוסט"),
+        .pluralName = ITEM_PLURAL_NAME("פירות ראוסט"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CURE_BRN,
         .description = COMPOUND_STRING(
@@ -10992,7 +10992,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_ASPEAR_BERRY] =
     {
-        .name = ITEM_NAME("פירות אספר"),
+        .name = ITEM_NAME("פרי אספר"),
         .pluralName = ITEM_PLURAL_NAME("פירות אספר"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CURE_FRZ,
@@ -11012,7 +11012,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_LEPPA_BERRY] =
     {
-        .name = ITEM_NAME("פירות לפה"),
+        .name = ITEM_NAME("פרי לפה"),
         .pluralName = ITEM_PLURAL_NAME("פירות לפה"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_RESTORE_PP,
@@ -11033,7 +11033,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_ORAN_BERRY] =
     {
-        .name = ITEM_NAME("פירות אורן"),
+        .name = ITEM_NAME("פרי אורן"),
         .pluralName = ITEM_PLURAL_NAME("פירות אורן"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
@@ -11054,7 +11054,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PERSIM_BERRY] =
     {
-        .name = ITEM_NAME("פירות פרסים"),
+        .name = ITEM_NAME("פרי פרסים"),
         .pluralName = ITEM_PLURAL_NAME("פירות פרסים"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CURE_CONFUSION,
@@ -11074,7 +11074,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_LUM_BERRY] =
     {
-        .name = ITEM_NAME("פירות לום"),
+        .name = ITEM_NAME("פרי לום"),
         .pluralName = ITEM_PLURAL_NAME("פירות לום"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CURE_STATUS,
@@ -11094,7 +11094,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_SITRUS_BERRY] =
     {
-        .name = ITEM_NAME("פירות סיטרוס"),
+        .name = ITEM_NAME("פרי סיטרוס"),
         .pluralName = ITEM_PLURAL_NAME("פירות סיטרוס"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
     #if I_SITRUS_BERRY_HEAL >= GEN_4
@@ -11124,8 +11124,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_FIGY_BERRY] =
     {
-        .name = ITEM_NAME("תות פיגי"),
-        .pluralName = ITEM_PLURAL_NAME("תותי פיגי"),
+        .name = ITEM_NAME("פרי פיגי"),
+        .pluralName = ITEM_PLURAL_NAME("פירות פיגי"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CONFUSE_SPICY,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
@@ -11140,8 +11140,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_WIKI_BERRY] =
     {
-        .name = ITEM_NAME("תות וויקי"),
-        .pluralName = ITEM_PLURAL_NAME("תותי וויקי"),
+        .name = ITEM_NAME("פרי וויקי"),
+        .pluralName = ITEM_PLURAL_NAME("פירות וויקי"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CONFUSE_DRY,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
@@ -11156,8 +11156,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_MAGO_BERRY] =
     {
-        .name = ITEM_NAME("תות מאגו"),
-        .pluralName = ITEM_PLURAL_NAME("תותי מאגו"),
+        .name = ITEM_NAME("פרי מאגו"),
+        .pluralName = ITEM_PLURAL_NAME("פירות מאגו"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CONFUSE_SWEET,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
@@ -11172,8 +11172,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_AGUAV_BERRY] =
     {
-        .name = ITEM_NAME("תות אגאו"),
-        .pluralName = ITEM_PLURAL_NAME("תותי אגאו"),
+        .name = ITEM_NAME("פרי אגאו"),
+        .pluralName = ITEM_PLURAL_NAME("פירות אגאו"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CONFUSE_BITTER,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
@@ -11188,8 +11188,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_IAPAPA_BERRY] =
     {
-        .name = ITEM_NAME("תות יאיפאפה"),
-        .pluralName = ITEM_PLURAL_NAME("תותי יאיפאפה"),
+        .name = ITEM_NAME("פרי יאפאפה"),
+        .pluralName = ITEM_PLURAL_NAME("פירות יאפאפה"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CONFUSE_SOUR,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
@@ -11204,8 +11204,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_RAZZ_BERRY] =
     {
-        .name = ITEM_NAME("תות ראז"),
-        .pluralName = ITEM_PLURAL_NAME("תותי ראז"),
+        .name = ITEM_NAME("פרי ראז"),
+        .pluralName = ITEM_PLURAL_NAME("פירות ראז"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11221,8 +11221,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BLUK_BERRY] =
     {
-        .name = ITEM_NAME("תות בלוק"),
-        .pluralName = ITEM_PLURAL_NAME("תותי בלוק"),
+        .name = ITEM_NAME("פרי בלוק"),
+        .pluralName = ITEM_PLURAL_NAME("פירות בלוק"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11238,8 +11238,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_NANAB_BERRY] =
     {
-        .name = ITEM_NAME("תות נאנאב"),
-        .pluralName = ITEM_PLURAL_NAME("תותי נאנאב"),
+        .name = ITEM_NAME("פרי נאנאב"),
+        .pluralName = ITEM_PLURAL_NAME("פירות נאנאב"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11255,8 +11255,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_WEPEAR_BERRY] =
     {
-        .name = ITEM_NAME("תות ופיר"),
-        .pluralName = ITEM_PLURAL_NAME("תותי ופיר"),
+        .name = ITEM_NAME("פרי ופיר"),
+        .pluralName = ITEM_PLURAL_NAME("פירות ופיר"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11272,8 +11272,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PINAP_BERRY] =
     {
-        .name = ITEM_NAME("תות פינאפ"),
-        .pluralName = ITEM_PLURAL_NAME("תותי פינאפ"),
+        .name = ITEM_NAME("פרי פינאפ"),
+        .pluralName = ITEM_PLURAL_NAME("פירות פינאפ"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11289,8 +11289,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_POMEG_BERRY] =
     {
-        .name = ITEM_NAME("תות פומג"),
-        .pluralName = ITEM_PLURAL_NAME("תותי פומג"),
+        .name = ITEM_NAME("פרי פומג"),
+        .pluralName = ITEM_PLURAL_NAME("פירות פומג"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מגביר חברות, אך\n"
@@ -11307,8 +11307,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_KELPSY_BERRY] =
     {
-        .name = ITEM_NAME("תות קלפסי"),
-        .pluralName = ITEM_PLURAL_NAME("תותי קלפסי"),
+        .name = ITEM_NAME("פרי קלפסי"),
+        .pluralName = ITEM_PLURAL_NAME("פירות קלפסי"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מגביר חברות, אך\n"
@@ -11325,8 +11325,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_QUALOT_BERRY] =
     {
-        .name = ITEM_NAME("תות קואלות"),
-        .pluralName = ITEM_PLURAL_NAME("תותי קואלות"),
+        .name = ITEM_NAME("פרי קואלות"),
+        .pluralName = ITEM_PLURAL_NAME("פירות קואלות"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מגביר חברות, אך\n"
@@ -11343,8 +11343,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_HONDEW_BERRY] =
     {
-        .name = ITEM_NAME("תות הונדיו"),
-        .pluralName = ITEM_PLURAL_NAME("תותי הונדיו"),
+        .name = ITEM_NAME("פרי הונדיו"),
+        .pluralName = ITEM_PLURAL_NAME("פירות הונדיו"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מגביר חברות, אך\n"
@@ -11361,8 +11361,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_GREPA_BERRY] =
     {
-        .name = ITEM_NAME("תות גרפה"),
-        .pluralName = ITEM_PLURAL_NAME("תותי גרפה"),
+        .name = ITEM_NAME("פרי גרפה"),
+        .pluralName = ITEM_PLURAL_NAME("פירות גרפה"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מגביר חברות, אך\n"
@@ -11379,8 +11379,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TAMATO_BERRY] =
     {
-        .name = ITEM_NAME("תות טמטו"),
-        .pluralName = ITEM_PLURAL_NAME("תותי טמטו"),
+        .name = ITEM_NAME("פרי טמטו"),
+        .pluralName = ITEM_PLURAL_NAME("פירות טמטו"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מגביר חברות, אך\n"
@@ -11397,8 +11397,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_CORNN_BERRY] =
     {
-        .name = ITEM_NAME("תות קורן"),
-        .pluralName = ITEM_PLURAL_NAME("תותי קורן"),
+        .name = ITEM_NAME("פרי קורן"),
+        .pluralName = ITEM_PLURAL_NAME("פירות קורן"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11414,8 +11414,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_MAGOST_BERRY] =
     {
-        .name = ITEM_NAME("תות מגוסט"),
-        .pluralName = ITEM_PLURAL_NAME("תותי מגוסט"),
+        .name = ITEM_NAME("פרי מגוסט"),
+        .pluralName = ITEM_PLURAL_NAME("פירות מגוסט"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11431,8 +11431,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_RABUTA_BERRY] =
     {
-        .name = ITEM_NAME("תות רבוטה"),
-        .pluralName = ITEM_PLURAL_NAME("תותי רבוטה"),
+        .name = ITEM_NAME("פרי רבוטה"),
+        .pluralName = ITEM_PLURAL_NAME("פירות רבוטה"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11448,8 +11448,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_NOMEL_BERRY] =
     {
-        .name = ITEM_NAME("תות נומל"),
-        .pluralName = ITEM_PLURAL_NAME("תותי נומל"),
+        .name = ITEM_NAME("פרי נומל"),
+        .pluralName = ITEM_PLURAL_NAME("פירות נומל"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11465,8 +11465,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_SPELON_BERRY] =
     {
-        .name = ITEM_NAME("תות ספלאון"),
-        .pluralName = ITEM_PLURAL_NAME("תותי ספלאון"),
+        .name = ITEM_NAME("פרי ספלאון"),
+        .pluralName = ITEM_PLURAL_NAME("פירות ספלאון"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -11482,8 +11482,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_PAMTRE_BERRY] =
     {
-        .name = ITEM_NAME("תות פאמטרי"),
-        .pluralName = ITEM_PLURAL_NAME("תותי פאמטרי"),
+        .name = ITEM_NAME("פרי פאמטרי"),
+        .pluralName = ITEM_PLURAL_NAME("פירות פאמטרי"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .description = COMPOUND_STRING(
             "מרכיב לפוקיבלוק.\n"
@@ -16315,7 +16315,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_UNUSED_BERRY_1] =
     {
-        .name = ITEM_NAME("פירות סיטרוס"),
+        .name = ITEM_NAME("פרי סיטרוס"),
         .price = 20,
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
         .holdEffectParam = 30,
