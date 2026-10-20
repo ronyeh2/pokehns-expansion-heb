@@ -364,7 +364,7 @@ BattleFrontier_BattleDomePreBattleRoom_Text_RecordLastMatch_hns:
 	.string "בכרטיס חזית הקרב?$"
 
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerSilver_hns:
-	.string "ברכות על העלייה\n"
+	.string "מזל טוב על העלייה\n"
 	.string "לגמר.\p"
 	.string "בגמר, היריב שלך יהיה\n"
 	.string "אס הכיפה טאקר.\p"
@@ -372,7 +372,7 @@ BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerSilver_hns:
 
 @ Identical to ReadyForTuckerSilver
 BattleFrontier_BattleDomePreBattleRoom_Text_ReadyForTuckerGold_hns:
-	.string "ברכות על העלייה\n"
+	.string "מזל טוב על העלייה\n"
 	.string "לגמר.\p"
 	.string "בגמר, היריב שלך יהיה\n"
 	.string "אס הכיפה טאקר.\p"
