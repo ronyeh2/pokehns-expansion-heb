@@ -130,10 +130,10 @@ static const u8 sText_Trainer1WithdrewPkmn[] = _("{B_TRAINER1_NAME_WITH_CLASS} �
 static const u8 sText_Trainer2WithdrewPkmn[] = _("{B_TRAINER2_NAME_WITH_CLASS} החזיר\nאת {B_BUFF1}!");
 static const u8 sText_LinkTrainer1WithdrewPkmn[] = _("{B_LINK_OPPONENT1_NAME} החזיר את {B_BUFF1}!");
 static const u8 sText_LinkTrainer2WithdrewPkmn[] = _("{B_LINK_OPPONENT2_NAME} החזיר את {B_BUFF1}!");
-static const u8 sText_WildPkmnPrefix[] = _(" פראי");
-static const u8 sText_FoePkmnPrefix[] = _(" יריב");
-static const u8 sText_WildPkmnPrefixLower[] = _(" פראי");
-static const u8 sText_FoePkmnPrefixLower[] = _(" יריב");
+static const u8 sText_WildPkmnPrefix[] = _(" הפראי");
+static const u8 sText_FoePkmnPrefix[] = _(" היריב");
+static const u8 sText_WildPkmnPrefixLower[] = _(" הפראי");
+static const u8 sText_FoePkmnPrefixLower[] = _(" היריב");
 static const u8 sText_EmptyString8[] = _("");
 static const u8 sText_FoePkmnPrefix2[] = _("יריב");
 static const u8 sText_AllyPkmnPrefix[] = _("ידיד");
@@ -392,7 +392,7 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_NOTVERYEFFECTIVE]                     = COMPOUND_STRING("זה לא כל כך יעיל…"),
     [STRINGID_SUPEREFFECTIVE]                       = COMPOUND_STRING("זה יעיל במיוחד!"),
     [STRINGID_GOTAWAYSAFELY]                        = sText_GotAwaySafely,
-    [STRINGID_WILDPKMNFLED]                         = COMPOUND_STRING("{PLAY_SE SE_FLEE}{B_BUFF1} פראי ברח!"),
+    [STRINGID_WILDPKMNFLED]                         = COMPOUND_STRING("{PLAY_SE SE_FLEE}{B_BUFF1} הפראי ברח!"),
     [STRINGID_NORUNNINGFROMTRAINERS]                = COMPOUND_STRING("לא! אי אפשר לברוח מקרב נגד מאמן!\p"),
     [STRINGID_CANTESCAPE]                           = COMPOUND_STRING("אי אפשר לברוח!\p"),
     [STRINGID_DONTLEAVEBIRCH]                       = COMPOUND_STRING("פרופ' BIRCH: אל תשאיר אותי ככה!\p"), //no decapitalize until it is everywhere
@@ -2922,7 +2922,7 @@ static void GetBattlerNick(enum BattlerId battler, u8 *dst)
 }
 
 #if TEXT_NAME_SUFFIX_IN_BATTLE
-// Hebrew puts "wild" and "opposing" after the name (פידג'י פראי), so the nickname is copied first
+// Hebrew puts "wild" and "opposing" after the name (פידג'י הפראי), so the nickname is copied first
 // and the word in the prefix string follows it.
 #define HANDLE_NICKNAME_WITH_SUFFIX(battler, wildText, foeText)          \
     GetBattlerNick(battler, text);                                      \
