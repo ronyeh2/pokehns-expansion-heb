@@ -533,7 +533,7 @@ blocked: 20 | seen on screen: 491 | translated: 89
 | `src/contest.c` | 27 | 27 | translated |
 | `src/contest_painting.c` | 15 | 15 | translated |
 | `src/data/abilities.h` | 1 | 1 | translated |
-| `src/data/battle_frontier/apprentice.h` | 57 | 0 | translated (57 kept in Latin: the other languages' name columns; the English column is Hebrew) |
+| `src/data/battle_frontier/apprentice.h` | 64 | 0 | translated (64 kept in Latin: the other languages' name columns; the English column is Hebrew) |
 | `src/data/contest_moves.h` | 50 | 50 | translated |
 | `src/data/contest_text_tables.h` | 56 | 56 | translated |
 | `src/data/credits_hns.h` | 169 | 4 | translated (165 kept in Latin: people's names in the credits) |

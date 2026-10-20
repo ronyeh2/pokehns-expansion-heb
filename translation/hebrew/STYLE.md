@@ -40,6 +40,11 @@ Where they disagree, the glossary wins for names and this file wins for everythi
   `PROF. ELM` = `פרופ' אלם` (abbreviation with a geresh), unless the glossary says otherwise.
 - Generic place words are translated, proper parts transliterated: `העיירה ניו בארק`,
   `העיר ויולט`, `דרך 29` (glossary `mapsec` rows are authoritative).
+- Move names in running dialogue are bare, as in FireRed: `להשתמש בגלישה`, `להשתמש במאבק`.
+  In dialogue, quote with `”…”` only where the English quotes the word: a menu option to pick
+  (`לבחור ב”מנוחה”`) or a name being explained (`התקצר ל”מנוחה”`). Descriptions and menus
+  (move, item and Pokédex descriptions, the challenge menu) quote a move cited inside a
+  sentence: `מהלכי טעינה כמו ”קרן על”`.
 
 ## 4. Characters you may use
 
@@ -74,9 +79,9 @@ Only characters in `charmap.txt`. In particular:
 - `{POKE}` / `{PKMN}` render the Latin "POKé"/"PKMN" glyph pairs. In Hebrew text replace them with the
   Hebrew word (`פוקי`, `פוקימון`). `drift.py` ignores these three tokens (`{POKE}`, `{PKMN}`,
   `{POKEBLOCK}`), so dropping them is the one allowed token change.
-- Do not translate: braille text (`.braille`), debug-menu strings (`src/debug.c`), easy-chat/mail
+- Do not translate: braille text (`.braille`), the R+START debug menu (`src/debug.c`, and `data/scripts/debug.inc` except `Debug_Text_ArianaDefeat` and `Debug_Text_Grunt23Defeat`, which the Rocket Hideout story battle uses), easy-chat/mail
   word lists unless your batch says so, Latin literals compared by code (the "SampleCode"
-  check, Walda's phrase, the Odd Egg name list), and anything in an `#if 0` / unused block.
+  check, Walda's phrase, the Odd Egg name list), and anything in an `#if 0` / unused block. The battle debug menu (`src/battle_debug.c`, opened with SELECT in any battle) is translated and uses the glossary's terms.
 
 ## 6. Length and width (checked by `tools/hebrew/audit.py`)
 
@@ -97,8 +102,8 @@ Only characters in `charmap.txt`. In particular:
 
 - Name prefixes: `{B_ATK_NAME_WITH_PREFIX}` expands to the Pokémon name with a prefix string
   (wild/foe). The prefixes are translated in `src/battle_message.c` (`sText_WildPkmnPrefix` and
-  friends). Hebrew puts the adjective after the noun, so they are suffix-like in meaning; follow
-  the decision recorded in that file's batch notes.
+  friends). Hebrew puts the adjective after the noun, so they are suffixes, and they are definite
+  (` הפראי`, ` היריב`, see §9): a name is definite, so its adjective takes ה in every position, after `את` too. A literal "wild" written in a string follows the English article: `{B_BUFF1} הפראי ברח!` for "The wild X fled!", but `פראי` in the encounter intros ("a wild X", "Wild X appeared!").
 - Verbs agree in the masculine: `{B_DEF_NAME_WITH_PREFIX} התעלף!`, `… נפגע!`.
 
 ## 8. Process for a batch
@@ -115,8 +120,8 @@ Only characters in `charmap.txt`. In particular:
 
 | String | Hebrew | Why |
 | --- | --- | --- |
-| `sText_WildPkmnPrefix`, `sText_WildPkmnPrefixLower` (`src/battle_message.c`) | `" פראי"` (leading space) | The engine now appends it after the nickname (`פידג'י פראי`), as FireRed does |
-| `sText_FoePkmnPrefix`, `sText_FoePkmnPrefixLower` | `" יריב"` (leading space) | Same, appended after the nickname |
+| `sText_WildPkmnPrefix`, `sText_WildPkmnPrefixLower` (`src/battle_message.c`) | `" הפראי"` (leading space) | The engine appends it after the nickname. Definite like the English "The wild" (`פידג'י הפראי`) in every position, as is the literal in `STRINGID_WILDPKMNFLED`; only the encounter intros, which print the bare name for "a wild X", say `פראי` (FireRed's ` פראי` followed its article-less "Wild ") |
+| `sText_FoePkmnPrefix`, `sText_FoePkmnPrefixLower` | `" היריב"` (leading space) | Same, definite like the English "The opposing" (`פידג'י היריב`) |
 | `sText_FoePkmnPrefix2/3/4`, `sText_AllyPkmnPrefix/2/3` | `יריב` / `ידיד` (no space) | Stand-alone words; check how each is used before translating |
 | `gText_DexSearchAlphaABC` … `gText_DexSearchAlphaYZ` (`src/strings.c`) | `אבג`, `דהו`, `זחט`, `יכל`, `מנס`, `עפצ`, `קרש`, `ת`, `A-Z` (in that order: ABC, DEF, GHI, JKL, MNO, PQR, STU, VWX, YZ) | The Pokédex name search now groups Hebrew letters that way |
 | `sText_AM`, `sText_PM` (`src/start_menu.c`) | leave as is | The start-menu clock is now 24-hour and no longer prints them |

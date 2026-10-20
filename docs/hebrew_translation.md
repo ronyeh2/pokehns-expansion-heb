@@ -63,7 +63,7 @@ order and printed left to right in its English position.
 
 - `IsStringJapanese` does not count Hebrew letters as kana.
 - Battle text puts "wild"/"opposing" after the name (`TEXT_NAME_SUFFIX_IN_BATTLE`), so the
-  prefix strings hold `" פראי"` and `" יריב"`. The ability pop-up drops the English possessive.
+  prefix strings hold the definite `" הפראי"` and `" היריב"`. The ability pop-up drops the English possessive.
 - The speaker name box sits at the right end of the dialogue box.
 - The start-menu clock is one 24-hour string.
 - Grid menus swap LEFT and RIGHT in mirrored windows.
@@ -141,8 +141,8 @@ Each build's `TESTING.md` lists what was tested on that exact ROM and what was n
   were not seen.
 - **Proposed names.** Pokémon from Gen 4 on and many NPCs are transliterations with status
   `proposed` in the glossary; they have not been checked against an official Hebrew source.
-- **Open style calls** (see the glossary notes and the release notes): the definite suffix after
-  `את` in battle text (`פראי` / `הפראי`), the `{ID}{NO}` and `{PP}` glyph labels, `POKéGEAR` in
+- **Open style calls** (see the glossary notes and the release notes):
+  the `{ID}{NO}` and `{PP}` glyph labels, `POKéGEAR` in
   Latin letters, the word for "Congratulations", quotation marks around move names, the
   English column of the default names.
 - **Kept in English on purpose:** Easy Chat words (the chat keyboard indexes them by letter), the
