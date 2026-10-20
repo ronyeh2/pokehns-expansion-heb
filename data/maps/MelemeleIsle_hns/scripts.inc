@@ -720,7 +720,7 @@ Alola_Melemele_SamsonOak_Trigger_Beginning_Text_3:
 
 Alola_Melemele_SamsonOak_Trigger_Beginning_Text_4:
 	.string "זו העיר הראשית באיים האלה.\p"
-	.string "היא דומה באופן מוזר לעיר HAU'OLI\n"
+	.string "היא דומה באופן מוזר לעיר האואולי\n"
 	.string "שבאלולה… {PAUSE 30}וכשאני חושב על זה…\p"
 	.string "כל האי הזה מזכיר לי את\n"
 	.string "האי מלמלה שבאלולה…$"
@@ -770,8 +770,8 @@ MelemeleIsle_hns_Movement_FacePlayerUpAfterTotemWarp:
 
 
 Alola_Melemele_Totem_sign_Text_0:
-	.string "מהטוטם נובעת אנרגיה\n"
-	.string "חזקה…\p"
+	.string "מהטוטם נובעת\n"
+	.string "אנרגיה חזקה…\p"
 	.string "לגעת בטוטם כדי להשתגר\n"
 	.string "לאי אחר?$"
 
