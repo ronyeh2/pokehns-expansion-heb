@@ -286,7 +286,29 @@ static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("g
 #define POKEBALL_ROTATION_BOTTOM (POKEBALL_ROTATION_TOP - 16)
 
 // for evolution method listings
+#if TEXT_RTL
+// Hebrew in the small font reaches higher (geresh, lamed) and lower (final nun) than the Latin
+// capitals, so entries 9 px apart touch the line above or below. 11 px apart, close to the 12 px
+// of a wrapped line, a blank row separates them. The box (y 51-145) has room for a first line and
+// 81 px below it, which is 8 lines at 11 px, so a page with more entries (Eevee's) gets a tighter
+// pitch, down to the English 9 px, instead of leaving some out (SetEvoMethodLinePitch).
+#define EVO_METHOD_LINE_PITCH_MAX 11
+#define EVO_METHOD_LINE_PITCH_MIN 9
+#define EVO_METHOD_LINES_SPAN 81
+#define EVO_METHOD_LINE_PITCH (sPokedexView->sEvoScreenData.linePitch)
+#define MAX_EVO_METHOD_LINES (1 + EVO_METHOD_LINES_SPAN / EVO_METHOD_LINE_PITCH)
+#else
+#define EVO_METHOD_LINE_PITCH 9
 #define MAX_EVO_METHOD_LINES 10
+#endif
+
+// The list's START menu frame spans x 132-235. The Hebrew items are right-aligned in it, so the
+// cursor is mirrored to the frame's right edge and points left at them.
+#if TEXT_RTL
+#define START_MENU_CURSOR_X (132 + 236 - 136)
+#else
+#define START_MENU_CURSOR_X 136
+#endif
 
 // Coordinates of the Pokémon sprite on its page (info/cry screens)
 #define MON_PAGE_X 48
@@ -384,6 +406,9 @@ struct EvoScreenData
     u8 arrowSpriteId;
     bool8 isMega;
     u32 arrowSpriteDist[10];
+#if TEXT_RTL
+    u8 linePitch;
+#endif
 };
 
 struct FromScreenData
@@ -3469,14 +3494,17 @@ static void CreateInterfaceSprites(u8 page)
 
     if (page == PAGE_MAIN)
     {
-        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, 136, 96, 1);
+        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, START_MENU_CURSOR_X, 96, 1);
         gSprites[spriteId].invisible = TRUE;
     }
     else // PAGE_SEARCH_RESULTS
     {
-        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, 136, 80, 1);
+        spriteId = CreateSprite(&sDexListStartMenuCursorSpriteTemplate, START_MENU_CURSOR_X, 80, 1);
         gSprites[spriteId].invisible = TRUE;
     }
+#if TEXT_RTL
+    gSprites[spriteId].hFlip = TRUE;
+#endif
 }
 
 static void SpriteCB_EndMoveMonForInfoScreen(struct Sprite *sprite)
@@ -3639,7 +3667,11 @@ static void SpriteCB_DexListStartMenuCursor(struct Sprite *sprite)
         {
             sprite->invisible = FALSE;
             sprite->y2 = sPokedexView->menuCursorPos * 16;
+#if TEXT_RTL
+            sprite->x2 = -gSineTable[(u8)sprite->data[2]] / 64;
+#else
             sprite->x2 = gSineTable[(u8)sprite->data[2]] / 64;
+#endif
             sprite->data[2] += 8;
         }
         else
@@ -3681,7 +3713,15 @@ static inline void WritePixel(u8 *dst, u32 x, u32 y, u32 value)
         dst[PIXEL_COORDS_TO_OFFSET(x, y)] |= (value);
     }
 }
+#if TEXT_RTL
+// stat_bars.png holds the stats page's Hebrew abbreviations, up to 19 px wide, in x 0-18. The bars
+// start right of them and are scaled to end where the English ones do (x 48, the box's edge).
+#define STAT_BAR_X_OFFSET 19
+#define STAT_BAR_MAX_WIDTH 39
+#define STAT_BAR_DRAWN_WIDTH(width) max(3, ((width) * (48 - STAT_BAR_X_OFFSET + 1) + STAT_BAR_MAX_WIDTH / 2) / STAT_BAR_MAX_WIDTH)
+#else
 #define STAT_BAR_X_OFFSET 10
+#endif
 static void CreateStatBar(u8 *dst, u32 y, u32 width)
 {
     u32 i, color;
@@ -3707,6 +3747,11 @@ static void CreateStatBar(u8 *dst, u32 y, u32 width)
         color = COLOR_BEST;
         break;
     }
+
+#if TEXT_RTL
+    // The colour above still follows the unscaled width.
+    width = STAT_BAR_DRAWN_WIDTH(width);
+#endif
 
     // white pixes left side
     WritePixel(dst, STAT_BAR_X_OFFSET, y + 0, COLOR_ID_BAR_WHITE);
@@ -5012,9 +5057,11 @@ static void ResetStatsWindows(void)
     InitWindows(sStatsScreen_WindowTemplates);
 #if TEXT_RTL
     MirrorDexWindowsAtScreenWidth();
-    // The name, number and gender sit beside a fixed icon and divider, and the move box shares its
-    // window with the item box, the type icon and the item icon: keep their English places.
-    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_IN_PLACE);
+    // The name, number and gender sit right of a fixed icon and divider (x 36): mirror them inside
+    // the text area from there to the box's border (x 94).
+    SetWindowRtlMirrorWidth(WIN_STATS_NAME_GENDER, 37 + 94);
+    // The move box shares its window with the item box, the type icon and the item icon: keep
+    // their English places.
     SetWindowRtlMode(WIN_STATS_MOVES_TOP, WINDOW_RTL_IN_PLACE);
     // The stats box has a red bar on its left, so its text area is x 8-92, not the window's 0-95:
     // mirror inside that area.
@@ -5451,10 +5498,16 @@ static void PrintStatsScreen_Moves_Top(u8 taskId)
 #if TEXT_RTL
     // No padding: in place, trailing spaces would widen the extent a Hebrew name is laid out in
     // and push it right, under the item box. The spaces draw nothing on the transparent fill.
+    // Right-align the name in the move box (x 98-183) as the English is left-aligned in it, like
+    // the description and the ability below.
+    {
+        s32 nameX = 85 - (s32)GetStringWidth(FONT_SMALL, gStringVar3, 0);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar3, max(nameX, moves_x), moves_y + 17);
+    }
 #else
     StringCopyPadded(gStringVar3, gStringVar3, CHAR_SPACE, 20);
-#endif
     PrintStatsScreenTextSmall(WIN_STATS_MOVES_TOP, gStringVar3, moves_x, moves_y + 17);
+#endif
 
     //Draw move type icon
     if (gTasks[taskId].data[5] == 0)
@@ -5514,6 +5567,13 @@ static void PrintStatsScreen_Moves_BottomText(u8 taskId)
     }
 }
 
+#if TEXT_RTL
+// Mirrored, the accuracy and jam values land 1 px from the box's left frame and read as joined
+// to it: print them 3 px further in.
+#define MOVES_BOTTOM_VALUE_INSET 3
+#else
+#define MOVES_BOTTOM_VALUE_INSET 0
+#endif
 static void PrintStatsScreen_Moves_Bottom(u8 taskId)
 {
     u8 moves_x = 8;
@@ -5546,7 +5606,7 @@ static void PrintStatsScreen_Moves_Bottom(u8 taskId)
             StringCopy(gStringVar1, gText_ThreeDashes);
         else
             ConvertIntToDecimalStringN(gStringVar1, accuracy, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar1,  moves_x + 114, moves_y);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar1,  moves_x + 114 - MOVES_BOTTOM_VALUE_INSET, moves_y);
     }
     else //Appeal + Jam
     {
@@ -5567,8 +5627,21 @@ static void PrintStatsScreen_Moves_Bottom(u8 taskId)
         ConvertIntToDecimalStringN(gStringVar1, contest_jam, STR_CONV_MODE_RIGHT_ALIGN, 1);
         StringCopy(gStringVar2, sText_Stats_Minus);
         StringAppend(gStringVar2, gStringVar1);
-        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar2,  moves_x + 119, moves_y);
+        PrintStatsScreenTextSmall(WIN_STATS_MOVES_BOTTOM, gStringVar2,  moves_x + 119 - MOVES_BOTTOM_VALUE_INSET, moves_y);
     }
+}
+
+static void PrintStatsScreen_GenderRatio(const u8 *str, u8 x, u8 y)
+{
+#if TEXT_RTL
+    // Mirrored, the gender symbols would swap sides around the ratio's numbers. Print the ratio in
+    // place, at the right edge where the mirrored name and number above it end.
+    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_IN_PLACE);
+    PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, str, GetWindowRtlMirrorWidth(WIN_STATS_NAME_GENDER) - x - GetStringWidth(FONT_SMALL, str, 0), y);
+    SetWindowRtlMode(WIN_STATS_NAME_GENDER, WINDOW_RTL_MIRROR);
+#else
+    PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, str, x, y);
+#endif
 }
 
 static void PrintStatsScreen_NameGender(u8 taskId, u32 num, u32 value)
@@ -5601,28 +5674,28 @@ static void PrintStatsScreen_NameGender(u8 taskId, u32 num, u32 value)
     switch (sPokedexView->sPokemonStats.genderRatio)
     {
     case 0:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_0, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_0, gender_x, gender_y);
         break;
     case 31:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_12_5, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_12_5, gender_x, gender_y);
         break;
     case 63:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_25, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_25, gender_x, gender_y);
         break;
     case 127:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_50, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_50, gender_x, gender_y);
         break;
     case 191:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_75, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_75, gender_x, gender_y);
         break;
     case 223:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_87_5, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_87_5, gender_x, gender_y);
         break;
     case 254:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, sText_Stats_Gender_100, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(sText_Stats_Gender_100, gender_x, gender_y);
         break;
     default:
-        PrintStatsScreenTextSmall(WIN_STATS_NAME_GENDER, gText_ThreeDashes, gender_x, gender_y);
+        PrintStatsScreen_GenderRatio(gText_ThreeDashes, gender_x, gender_y);
         break;
     }
 }
@@ -6246,6 +6319,72 @@ static void GetSeenFlagTargetSpecies(void)
     }
 }
 
+#if TEXT_RTL
+// How many entries PrintEvolutionTargetSpeciesAndMethod lists below species: it walks the same
+// evolutions and skips the same ones.
+static u32 CountEvolutionEntries(u16 species, u16 baseSpecies, u32 depth)
+{
+    const struct Evolution *evolutions;
+    u32 i, times = 0, count = 0;
+
+#if RANDOMIZER_AVAILABLE
+    if (RandomizerFeatureEnabled(RANDOMIZE_EVO_METHODS))
+        species = RandomizeEvoMethod(species);
+#endif
+
+    evolutions = GetSpeciesEvolutions(species);
+    if (evolutions == NULL)
+        return 0;
+
+    for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
+        times += 1;
+
+    if (times > 9 && species == SPECIES_MILCERY)
+        times = 9;
+
+    for (i = 0; i < times; i++)
+    {
+        u16 targetSpecies = evolutions[i].targetSpecies;
+        if (!IsSpeciesEnabled(targetSpecies))
+            continue;
+
+#if RANDOMIZER_AVAILABLE
+        if (RandomizerFeatureEnabled(RANDOMIZE_EVOLUTIONS) && targetSpecies != SPECIES_NONE)
+            targetSpecies = RandomizeEvolution(targetSpecies, species);
+#endif
+
+        if (targetSpecies == baseSpecies)
+            continue;
+
+        count++;
+        if (depth < 3)
+            count += CountEvolutionEntries(targetSpecies, baseSpecies, depth + 1);
+    }
+    return count;
+}
+
+// The widest pitch at which every entry of the page fits in the box.
+static void SetEvoMethodLinePitch(u16 species)
+{
+    u32 lines = CountEvolutionEntries(species, species, 0);
+    u32 pitch = EVO_METHOD_LINE_PITCH_MAX;
+
+    // Up to two pre-evolutions are listed above them. Look them up only when they could matter.
+    if (lines + 2 > 1 + EVO_METHOD_LINES_SPAN / EVO_METHOD_LINE_PITCH_MAX)
+    {
+        u16 preSpecies = species;
+        u32 i;
+
+        for (i = 0; i < 2 && (preSpecies = GetSpeciesPreEvolution(preSpecies)) != SPECIES_NONE; i++)
+            lines++;
+    }
+
+    if (lines > 1)
+        pitch = min(pitch, EVO_METHOD_LINES_SPAN / (lines - 1));
+    sPokedexView->sEvoScreenData.linePitch = max(pitch, EVO_METHOD_LINE_PITCH_MIN);
+}
+#endif
+
 static void Task_LoadEvolutionScreen(u8 taskId)
 {
     switch (gMain.state)
@@ -6287,6 +6426,9 @@ static void Task_LoadEvolutionScreen(u8 taskId)
         gMain.state++;
         break;
     case 3:
+#if TEXT_RTL
+        SetEvoMethodLinePitch(NationalPokedexNumToSpeciesHGSS(sPokedexListItem->dexNum));
+#endif
         if (gTasks[taskId].data[1] == 0)
         {
             u32 species = NationalPokedexNumToSpeciesHGSS(sPokedexListItem->dexNum);
@@ -6324,7 +6466,7 @@ static void Task_LoadEvolutionScreen(u8 taskId)
             sPokedexView->sEvoScreenData.menuPos = pos;
 #if TEXT_RTL
             // The entries are mirrored to the right edge; point at them from there.
-            sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, DexRtlSpriteX(WIN_INFO, 7), 58 + 9 * pos, 0);
+            sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, DexRtlSpriteX(WIN_INFO, 7), 58 + EVO_METHOD_LINE_PITCH * pos, 0);
             gSprites[sPokedexView->sEvoScreenData.arrowSpriteId].hFlip = TRUE;
 #else
             sPokedexView->sEvoScreenData.arrowSpriteId = CreateSprite(&gSpriteTemplate_Arrow, 7, 58 + 9 * pos, 0);
@@ -6391,7 +6533,7 @@ static void Task_HandleEvolutionScreenInput(u8 taskId)
     if (sPokedexView->sEvoScreenData.numAllEvolutions > 0 && sPokedexView->sEvoScreenData.numSeen > 0)
     {
         u8 base_y = 58;
-        u8 base_y_offset = 9;
+        u8 base_y_offset = EVO_METHOD_LINE_PITCH;
         u8 pos = sPokedexView->sEvoScreenData.menuPos;
         u8 max = sPokedexView->sEvoScreenData.numAllEvolutions - 1;
         if (JOY_NEW(DPAD_DOWN))
@@ -6565,7 +6707,7 @@ static u8 PrintPreEvolutions(u8 taskId, u16 species)
 
     u8 base_x = 13+8;
     u8 base_y = 51;
-    u8 base_y_offset = 9;
+    u8 base_y_offset = EVO_METHOD_LINE_PITCH;
 
     u16 preEvolutionOne = 0;
     u16 preEvolutionTwo = 0;
@@ -6745,7 +6887,7 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
     bool8 left = TRUE;
     u32 base_x = 21;
     u32 base_y = 51;
-    u32 base_y_offset = 9;
+    u32 base_y_offset = EVO_METHOD_LINE_PITCH;
     u32 times = 0;
     u32 arg; // shorthand for some of the more mathy evolutions
     const struct Evolution *evolutions;
@@ -6763,8 +6905,19 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
 
     evolutions = GetSpeciesEvolutions(species);
 
+#if TEXT_RTL
+    // Hebrew evolution methods often wrap, and a wrapped entry pushes down every entry after it,
+    // not only the next one. arrowSpriteDist[i] (also read by the cursor) holds the running
+    // offset of entry i; numLines from the caller would hold only the previous entry's wrap.
+    if (depth == 0)
+    {
+        for (i = 0; i <= (int)*depth_i && i < 10; i++)
+            sPokedexView->sEvoScreenData.arrowSpriteDist[i] = 0;
+    }
+#else
     if (*depth_i < 10)
         sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i] = numLines;
+#endif
 
     //If there are no evolutions print text and return
     if (evolutions == NULL)
@@ -6829,6 +6982,9 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
 
         sPokedexView->sEvoScreenData.targetSpecies[*depth_i] = targetSpecies;
         sPokedexView->sEvoScreenData.numAllEvolutions += 1;
+#if TEXT_RTL
+        numLines = sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i];
+#endif
 
         CreateCaughtBallEvolutionScreen(targetSpecies, base_x + depth_x*depth-9, base_y + base_y_offset*(*depth_i) + numLines, 0);
         HandleTargetSpeciesPrintText(targetSpecies, base_x + depth_x*depth, base_y, base_y_offset, *depth_i, numLines); //evolution mon name
@@ -7141,10 +7297,17 @@ static void PrintEvolutionTargetSpeciesAndMethod(u8 taskId, u16 species, u8 dept
         (*depth_i)++;
 
         lineBreaks = CountLineBreaks(gStringVar4);
+#if TEXT_RTL
+        numLines += lineBreaks * fontHeight;
+
+        if (*depth_i < 10)
+            sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i] = numLines;
+#else
         numLines = lineBreaks * fontHeight;
 
         if (*depth_i + 1 < 10)
             sPokedexView->sEvoScreenData.arrowSpriteDist[*depth_i + 1] = numLines;
+#endif
 
         *totalLines += lineBreaks + 1;
 
