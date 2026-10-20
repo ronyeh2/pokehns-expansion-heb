@@ -415,7 +415,7 @@ BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading_hns:
 	.string "איזו כותרת לקרוא?$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules_hns:
-	.string "אסור להשתמש בתיק וב-POKéNAV\n"
+	.string "אסור להשתמש בתיק ובפוקיגיר\n"
 	.string "במהלך אתגר בחירת הקרב.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules_hns:
