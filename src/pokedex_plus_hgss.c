@@ -289,9 +289,14 @@ static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("g
 #if TEXT_RTL
 // Hebrew in the small font reaches higher (geresh, lamed) and lower (final nun) than the Latin
 // capitals, so entries 9 px apart touch the line above or below. 11 px apart, close to the 12 px
-// of a wrapped line, a blank row separates them, and the box (y 51-145) holds 8 lines.
-#define EVO_METHOD_LINE_PITCH 11
-#define MAX_EVO_METHOD_LINES 8
+// of a wrapped line, a blank row separates them. The box (y 51-145) has room for a first line and
+// 81 px below it, which is 8 lines at 11 px, so a page with more entries (Eevee's) gets a tighter
+// pitch, down to the English 9 px, instead of leaving some out (SetEvoMethodLinePitch).
+#define EVO_METHOD_LINE_PITCH_MAX 11
+#define EVO_METHOD_LINE_PITCH_MIN 9
+#define EVO_METHOD_LINES_SPAN 81
+#define EVO_METHOD_LINE_PITCH (sPokedexView->sEvoScreenData.linePitch)
+#define MAX_EVO_METHOD_LINES (1 + EVO_METHOD_LINES_SPAN / EVO_METHOD_LINE_PITCH)
 #else
 #define EVO_METHOD_LINE_PITCH 9
 #define MAX_EVO_METHOD_LINES 10
@@ -401,6 +406,9 @@ struct EvoScreenData
     u8 arrowSpriteId;
     bool8 isMega;
     u32 arrowSpriteDist[10];
+#if TEXT_RTL
+    u8 linePitch;
+#endif
 };
 
 struct FromScreenData
@@ -6311,6 +6319,72 @@ static void GetSeenFlagTargetSpecies(void)
     }
 }
 
+#if TEXT_RTL
+// How many entries PrintEvolutionTargetSpeciesAndMethod lists below species: it walks the same
+// evolutions and skips the same ones.
+static u32 CountEvolutionEntries(u16 species, u16 baseSpecies, u32 depth)
+{
+    const struct Evolution *evolutions;
+    u32 i, times = 0, count = 0;
+
+#if RANDOMIZER_AVAILABLE
+    if (RandomizerFeatureEnabled(RANDOMIZE_EVO_METHODS))
+        species = RandomizeEvoMethod(species);
+#endif
+
+    evolutions = GetSpeciesEvolutions(species);
+    if (evolutions == NULL)
+        return 0;
+
+    for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
+        times += 1;
+
+    if (times > 9 && species == SPECIES_MILCERY)
+        times = 9;
+
+    for (i = 0; i < times; i++)
+    {
+        u16 targetSpecies = evolutions[i].targetSpecies;
+        if (!IsSpeciesEnabled(targetSpecies))
+            continue;
+
+#if RANDOMIZER_AVAILABLE
+        if (RandomizerFeatureEnabled(RANDOMIZE_EVOLUTIONS) && targetSpecies != SPECIES_NONE)
+            targetSpecies = RandomizeEvolution(targetSpecies, species);
+#endif
+
+        if (targetSpecies == baseSpecies)
+            continue;
+
+        count++;
+        if (depth < 3)
+            count += CountEvolutionEntries(targetSpecies, baseSpecies, depth + 1);
+    }
+    return count;
+}
+
+// The widest pitch at which every entry of the page fits in the box.
+static void SetEvoMethodLinePitch(u16 species)
+{
+    u32 lines = CountEvolutionEntries(species, species, 0);
+    u32 pitch = EVO_METHOD_LINE_PITCH_MAX;
+
+    // Up to two pre-evolutions are listed above them. Look them up only when they could matter.
+    if (lines + 2 > 1 + EVO_METHOD_LINES_SPAN / EVO_METHOD_LINE_PITCH_MAX)
+    {
+        u16 preSpecies = species;
+        u32 i;
+
+        for (i = 0; i < 2 && (preSpecies = GetSpeciesPreEvolution(preSpecies)) != SPECIES_NONE; i++)
+            lines++;
+    }
+
+    if (lines > 1)
+        pitch = min(pitch, EVO_METHOD_LINES_SPAN / (lines - 1));
+    sPokedexView->sEvoScreenData.linePitch = max(pitch, EVO_METHOD_LINE_PITCH_MIN);
+}
+#endif
+
 static void Task_LoadEvolutionScreen(u8 taskId)
 {
     switch (gMain.state)
@@ -6352,6 +6426,9 @@ static void Task_LoadEvolutionScreen(u8 taskId)
         gMain.state++;
         break;
     case 3:
+#if TEXT_RTL
+        SetEvoMethodLinePitch(NationalPokedexNumToSpeciesHGSS(sPokedexListItem->dexNum));
+#endif
         if (gTasks[taskId].data[1] == 0)
         {
             u32 species = NationalPokedexNumToSpeciesHGSS(sPokedexListItem->dexNum);
