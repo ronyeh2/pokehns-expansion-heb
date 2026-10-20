@@ -945,7 +945,7 @@ BattleFrontier_BattleTowerLobby_Text_DidntSaveBeforeQuitting_hns:
 	.string "נפסל. מצטערים!$"
 
 BattleFrontier_BattleTowerLobby_Text_CongratsBeatenSeven_hns:
-	.string "ברכות!\n"
+	.string "מזל טוב!\n"
 	.string "ניצחת את כל שבעת המאמנים!\p"
 	.string "$"
 
@@ -1238,9 +1238,9 @@ BattleFrontier_BattleTowerLobby_Text_ExplainMultisChallenge_hns:
 	.string "אחרי שתמצא שותף, נוביל אותך\n"
 	.string "לחדר קרב מרובה.\p"
 	.string "בחדר קרב מרובה מחכים\n"
-	.string "לאתגר שלך שבעה צמדים.\p"
+	.string "לאתגר שלך שבעה צוותים זוגיים.\p"
 	.string "אם תצליח לנצח את כל שבעת\n"
-	.string "הצמדים, תרוויח נקודות קרב.\p"
+	.string "הצוותים, תרוויח נקודות קרב.\p"
 	.string "אם תרצה להפסיק את האתגר\n"
 	.string "באמצע, יש לשמור את המשחק.\p"
 	.string "אם לא תשמור לפני שתפסיק,\n"
@@ -1334,7 +1334,7 @@ BattleFrontier_BattleTowerLobby_Text_SaveGameBeforeShowingIn_hns:
 	.string "showing you in. Please wait.$"
 
 BattleFrontier_BattleTowerLobby_Text_CongratsDefeatedMaiden_hns:
-	.string "ברכות! ניצחת את עלמת הסלון\n"
+	.string "מזל טוב! ניצחת את עלמת הסלון\n"
 	.string "וגברת על כל שבעת המאמנים!$"
 
 BattleFrontier_BattleTowerLobby_Text_AwardYouTheseBattlePoints_hns:
@@ -1369,7 +1369,7 @@ BattleFrontier_BattleTowerLobby_Text_ExplainMonRules_hns:
 
 BattleFrontier_BattleTowerLobby_Text_ExplainSalonRules_hns:
 	.string "בסלון הקרב צריך למצוא שותף כדי\n"
-	.string "ליצור צמד לאתגר חדר קרב מרובה.\p"
+	.string "להקים צוות זוגי לאתגר חדר קרב מרובה.\p"
 	.string "כדאי לבחור את השותף המתאים לך לפי\n"
 	.string "הפוקימונים והמהלכים של מאמנים אחרים.\p"
 	.string "אחרי שבעה ניצחונות ברצף,\n"
