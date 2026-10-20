@@ -181,7 +181,7 @@ species,SPECIES_VOLTORB_HISUI,VOLTORB-H,,וולטורב-ה,proposed,"#if branche
 species,SPECIES_ELECTRODE_HISUI,ELECTRODE-H,,אלקטרוד-ה,proposed,"#if branches: ELECTRODE-H @13852 | ELECTRODE @13854 (built: this row); regional form: FR base אלקטרוד + ""-ה"" for -H (Hisui); suffix letter is a style call open for review; proposed: regional form checked: base matches the inherited row; reviewed"
 species,SPECIES_EXEGGCUTE,EXEGGCUTE,אקזגקיוט,אקזגקיוט,inherited,FR match: constant
 species,SPECIES_EXEGGUTOR,EXEGGUTOR,אקזגקיוטור,אקזגקיוטר,inherited,"FR match: constant; width: shortened from אקזגקיוטור (unstressed -or written with the consonant only (rules §3); changes inherited FireRed canon, unavoidable at 51 px > 50 in the dex list)"
-species,SPECIES_EXEGGUTOR_ALOLA,EXEGGUTOR-A,,אקזגקיוטר-א,proposed,"#if branches: EXEGGUTOR-A @14096 | EXEGGUTOR @14098 (built: this row); regional form: FR base אקזגקיוטור + ""-א"" for -A (Alola); suffix letter is a style call open for review; proposed: regional form; 12 bytes = hard limit, over the 10 preferred (English EXEGGUTOR-A is 11); reviewed: kept; 12 bytes = the hard limit (English is 11), base is FR canon, a 10-byte record truncates to the base name; width: shortened from אקזגקיוטור-א (the suffix leaves 39 px for the base; drops the ק that FireRed carried over from EXEGGCUTE (EXEGGUTOR is said eg-ZEG-yu-ter) and the yod of /ju/; style call, the base row is אקזגקיוטר); same as the base species with -א"
+species,SPECIES_EXEGGUTOR_ALOLA,EXEGGUTOR-A,,אקזגיוטר-א,proposed,"#if branches: EXEGGUTOR-A @14096 | EXEGGUTOR @14098 (built: this row); regional form: base + ""-א"" for -A (Alola); 10 letters; width: the base אקזגקיוטר + -א is 56 px > 50 in the dex list, so the ק that FireRed carried over from EXEGGCUTE is dropped (EXEGGUTOR is said eg-ZEG-yu-ter, /ju/ = יו), 50 px"
 species,SPECIES_CUBONE,CUBONE,קיובון,קיובון,inherited,FR match: constant
 species,SPECIES_MAROWAK,MAROWAK,מארוואק,מארוואק,inherited,FR match: constant
 species,SPECIES_MAROWAK_ALOLA,MAROWAK-A,,מארוואק-א,proposed,"#if branches: MAROWAK-A @14334 | MAROWAK @14336 (built: this row); regional form: FR base מארוואק + ""-א"" for -A (Alola); suffix letter is a style call open for review; proposed: regional form checked: base matches the inherited row; reviewed"
@@ -4106,38 +4106,38 @@ item,ITEM_HEAVY_DUTY_BOOTS,HEAVY-DUTY BOOTS,,מגפיים עמידים,proposed,
 item,ITEM_BLUNDER_POLICY,BLUNDER POLICY,,פוליסת פספוס,proposed,meaning: triggers when a move misses; POLICY פוליסה (ITEM_WEAKNESS_POLICY); reviewed
 item,ITEM_ROOM_SERVICE,ROOM SERVICE,,שירות חדרים,proposed,meaning (the idiom; pun on Trick Room survives); reviewed
 item,ITEM_UTILITY_UMBRELLA,UTILITY UMBRELLA,,מטרייה שימושית,proposed,meaning; מטרייה is the Academy spelling; reviewed
-item,ITEM_CHERI_BERRY,CHERI BERRY,גרגר צ'רי,גרגר צ'רי,inherited,FR match: constant
-item,ITEM_CHESTO_BERRY,CHESTO BERRY,גרגר צ'סטרו,גרגר צ'סטרו,inherited,FR match: constant
-item,ITEM_PECHA_BERRY,PECHA BERRY,גרגר פצ'ה,גרגר פצ'ה,inherited,FR match: constant
-item,ITEM_RAWST_BERRY,RAWST BERRY,גרגר ראוסט,גרגר ראוסט,inherited,FR match: constant
-item,ITEM_ASPEAR_BERRY,ASPEAR BERRY,פירות אספר,פירות אספר,inherited,FR match: constant
-item,ITEM_LEPPA_BERRY,LEPPA BERRY,פירות לפה,פירות לפה,inherited,FR match: constant
-item,ITEM_ORAN_BERRY,ORAN BERRY,פירות אורן,פירות אורן,inherited,FR match: constant
-item,ITEM_PERSIM_BERRY,PERSIM BERRY,פירות פרסים,פירות פרסים,inherited,FR match: constant
-item,ITEM_LUM_BERRY,LUM BERRY,פירות לום,פירות לום,inherited,FR match: constant
-item,ITEM_SITRUS_BERRY,SITRUS BERRY,פירות סיטרוס,פירות סיטרוס,inherited,FR match: constant
-item,ITEM_FIGY_BERRY,FIGY BERRY,תות פיגי,תות פיגי,inherited,FR match: constant
-item,ITEM_WIKI_BERRY,WIKI BERRY,תות וויקי,תות וויקי,inherited,FR match: constant
-item,ITEM_MAGO_BERRY,MAGO BERRY,תות מאגו,תות מאגו,inherited,FR match: constant
-item,ITEM_AGUAV_BERRY,AGUAV BERRY,תות אגאו,תות אגאו,inherited,FR match: constant
-item,ITEM_IAPAPA_BERRY,IAPAPA BERRY,תות יאיפאפה,תות יאיפאפה,inherited,FR match: constant
-item,ITEM_RAZZ_BERRY,RAZZ BERRY,תות ראז,תות ראז,inherited,FR match: constant
-item,ITEM_BLUK_BERRY,BLUK BERRY,תות בלוק,תות בלוק,inherited,FR match: constant
-item,ITEM_NANAB_BERRY,NANAB BERRY,תות נאנאב,תות נאנאב,inherited,FR match: constant
-item,ITEM_WEPEAR_BERRY,WEPEAR BERRY,תות ופיר,תות ופיר,inherited,FR match: constant
-item,ITEM_PINAP_BERRY,PINAP BERRY,תות פינאפ,תות פינאפ,inherited,FR match: constant
-item,ITEM_POMEG_BERRY,POMEG BERRY,תות פומג,תות פומג,inherited,FR match: constant
-item,ITEM_KELPSY_BERRY,KELPSY BERRY,תות קלפסי,תות קלפסי,inherited,FR match: constant
-item,ITEM_QUALOT_BERRY,QUALOT BERRY,תות קואלות,תות קואלות,inherited,FR match: constant
-item,ITEM_HONDEW_BERRY,HONDEW BERRY,תות הונדיו,תות הונדיו,inherited,FR match: constant
-item,ITEM_GREPA_BERRY,GREPA BERRY,תות גרפה,תות גרפה,inherited,FR match: constant
-item,ITEM_TAMATO_BERRY,TAMATO BERRY,תות טמטו,תות טמטו,inherited,FR match: constant
-item,ITEM_CORNN_BERRY,CORNN BERRY,תות קורן,תות קורן,inherited,FR match: constant
-item,ITEM_MAGOST_BERRY,MAGOST BERRY,תות מגוסט,תות מגוסט,inherited,FR match: constant
-item,ITEM_RABUTA_BERRY,RABUTA BERRY,תות רבוטה,תות רבוטה,inherited,FR match: constant
-item,ITEM_NOMEL_BERRY,NOMEL BERRY,תות נומל,תות נומל,inherited,FR match: constant
-item,ITEM_SPELON_BERRY,SPELON BERRY,תות ספלאון,תות ספלאון,inherited,FR match: constant
-item,ITEM_PAMTRE_BERRY,PAMTRE BERRY,תות פאמטרי,תות פאמטרי,inherited,FR match: constant
+item,ITEM_CHERI_BERRY,CHERI BERRY,גרגר צ'רי,פרי צ'רי,inherited,FR match: constant
+item,ITEM_CHESTO_BERRY,CHESTO BERRY,גרגר צ'סטרו,פרי צ'סטו,inherited,FR match: constant
+item,ITEM_PECHA_BERRY,PECHA BERRY,גרגר פצ'ה,פרי פצ'ה,inherited,FR match: constant
+item,ITEM_RAWST_BERRY,RAWST BERRY,גרגר ראוסט,פרי ראוסט,inherited,FR match: constant
+item,ITEM_ASPEAR_BERRY,ASPEAR BERRY,פירות אספר,פרי אספר,inherited,FR match: constant
+item,ITEM_LEPPA_BERRY,LEPPA BERRY,פירות לפה,פרי לפה,inherited,FR match: constant
+item,ITEM_ORAN_BERRY,ORAN BERRY,פירות אורן,פרי אורן,inherited,FR match: constant
+item,ITEM_PERSIM_BERRY,PERSIM BERRY,פירות פרסים,פרי פרסים,inherited,FR match: constant
+item,ITEM_LUM_BERRY,LUM BERRY,פירות לום,פרי לום,inherited,FR match: constant
+item,ITEM_SITRUS_BERRY,SITRUS BERRY,פירות סיטרוס,פרי סיטרוס,inherited,FR match: constant
+item,ITEM_FIGY_BERRY,FIGY BERRY,תות פיגי,פרי פיגי,inherited,FR match: constant
+item,ITEM_WIKI_BERRY,WIKI BERRY,תות וויקי,פרי וויקי,inherited,FR match: constant
+item,ITEM_MAGO_BERRY,MAGO BERRY,תות מאגו,פרי מאגו,inherited,FR match: constant
+item,ITEM_AGUAV_BERRY,AGUAV BERRY,תות אגאו,פרי אגאו,inherited,FR match: constant
+item,ITEM_IAPAPA_BERRY,IAPAPA BERRY,תות יאיפאפה,פרי יאפאפה,inherited,FR match: constant
+item,ITEM_RAZZ_BERRY,RAZZ BERRY,תות ראז,פרי ראז,inherited,FR match: constant
+item,ITEM_BLUK_BERRY,BLUK BERRY,תות בלוק,פרי בלוק,inherited,FR match: constant
+item,ITEM_NANAB_BERRY,NANAB BERRY,תות נאנאב,פרי נאנאב,inherited,FR match: constant
+item,ITEM_WEPEAR_BERRY,WEPEAR BERRY,תות ופיר,פרי ופיר,inherited,FR match: constant
+item,ITEM_PINAP_BERRY,PINAP BERRY,תות פינאפ,פרי פינאפ,inherited,FR match: constant
+item,ITEM_POMEG_BERRY,POMEG BERRY,תות פומג,פרי פומג,inherited,FR match: constant
+item,ITEM_KELPSY_BERRY,KELPSY BERRY,תות קלפסי,פרי קלפסי,inherited,FR match: constant
+item,ITEM_QUALOT_BERRY,QUALOT BERRY,תות קואלות,פרי קואלות,inherited,FR match: constant
+item,ITEM_HONDEW_BERRY,HONDEW BERRY,תות הונדיו,פרי הונדיו,inherited,FR match: constant
+item,ITEM_GREPA_BERRY,GREPA BERRY,תות גרפה,פרי גרפה,inherited,FR match: constant
+item,ITEM_TAMATO_BERRY,TAMATO BERRY,תות טמטו,פרי טמטו,inherited,FR match: constant
+item,ITEM_CORNN_BERRY,CORNN BERRY,תות קורן,פרי קורן,inherited,FR match: constant
+item,ITEM_MAGOST_BERRY,MAGOST BERRY,תות מגוסט,פרי מגוסט,inherited,FR match: constant
+item,ITEM_RABUTA_BERRY,RABUTA BERRY,תות רבוטה,פרי רבוטה,inherited,FR match: constant
+item,ITEM_NOMEL_BERRY,NOMEL BERRY,תות נומל,פרי נומל,inherited,FR match: constant
+item,ITEM_SPELON_BERRY,SPELON BERRY,תות ספלאון,פרי ספלאון,inherited,FR match: constant
+item,ITEM_PAMTRE_BERRY,PAMTRE BERRY,תות פאמטרי,פרי פאמטרי,inherited,FR match: constant
 item,ITEM_WATMEL_BERRY,WATMEL BERRY,פרי ואטמל,פרי ואטמל,inherited,FR match: constant
 item,ITEM_DURIN_BERRY,DURIN BERRY,פרי דורין,פרי דורין,inherited,FR match: constant
 item,ITEM_BELUE_BERRY,BELUE BERRY,פרי בלו,פרי בלו,inherited,FR match: constant
@@ -4531,38 +4531,38 @@ item_plural,ITEM_SAFETY_GOGGLES,Safety Goggles,,משקפי מגן,proposed,same 
 item_plural,ITEM_PROTECTIVE_PADS,Protective Pads,,רפידות מגן,proposed,same as singular; singular is already plural; singular: רפידות מגן (item_03); reviewed
 item_plural,ITEM_HEAVY_DUTY_BOOTS,Heavy-Duty Boots,,מגפיים עמידים,proposed,same as singular; singular is already plural; singular: מגפיים עמידים (item_03); reviewed
 item_plural,ITEM_BLUNDER_POLICY,Blunder Policies,,פוליסות פספוס,proposed,"construct plural, POLICY chunk as WEAKNESS POLICIES; singular: פוליסת פספוס (item_03); reviewed"
-item_plural,ITEM_CHERI_BERRY,Cheri Berries,,גרגרי צ'רי,proposed,construct plural of the FR head גרגר; singular: גרגר צ'רי (inherited); reviewed
-item_plural,ITEM_CHESTO_BERRY,Chesto Berries,,גרגרי צ'סטרו,proposed,construct plural of the FR head גרגר; singular: גרגר צ'סטרו (inherited); reviewed
-item_plural,ITEM_PECHA_BERRY,Pecha Berries,,גרגרי פצ'ה,proposed,construct plural of the FR head גרגר; singular: גרגר פצ'ה (inherited); reviewed
-item_plural,ITEM_RAWST_BERRY,Rawst Berries,,גרגרי ראוסט,proposed,construct plural of the FR head גרגר; singular: גרגר ראוסט (inherited); reviewed
+item_plural,ITEM_CHERI_BERRY,Cheri Berries,,פירות צ'רי,proposed,construct plural of the FR head גרגר; singular: גרגר צ'רי (inherited); reviewed
+item_plural,ITEM_CHESTO_BERRY,Chesto Berries,,פירות צ'סטו,proposed,construct plural of the FR head גרגר; singular: גרגר צ'סטרו (inherited); reviewed
+item_plural,ITEM_PECHA_BERRY,Pecha Berries,,פירות פצ'ה,proposed,construct plural of the FR head גרגר; singular: גרגר פצ'ה (inherited); reviewed
+item_plural,ITEM_RAWST_BERRY,Rawst Berries,,פירות ראוסט,proposed,construct plural of the FR head גרגר; singular: גרגר ראוסט (inherited); reviewed
 item_plural,ITEM_ASPEAR_BERRY,Aspear Berries,,פירות אספר,proposed,same as singular; FR singular head פירות is already plural; singular: פירות אספר (inherited); reviewed
 item_plural,ITEM_LEPPA_BERRY,Leppa Berries,,פירות לפה,proposed,same as singular; FR singular head פירות is already plural; singular: פירות לפה (inherited); reviewed
 item_plural,ITEM_ORAN_BERRY,Oran Berries,,פירות אורן,proposed,same as singular; FR singular head פירות is already plural; singular: פירות אורן (inherited); reviewed
 item_plural,ITEM_PERSIM_BERRY,Persim Berries,,פירות פרסים,proposed,same as singular; FR singular head פירות is already plural; singular: פירות פרסים (inherited); reviewed
 item_plural,ITEM_LUM_BERRY,Lum Berries,,פירות לום,proposed,same as singular; FR singular head פירות is already plural; singular: פירות לום (inherited); reviewed
 item_plural,ITEM_SITRUS_BERRY,Sitrus Berries,,פירות סיטרוס,proposed,same as singular; FR singular head פירות is already plural; singular: פירות סיטרוס (inherited); reviewed
-item_plural,ITEM_FIGY_BERRY,Figy Berries,,תותי פיגי,proposed,construct plural of the FR head תות; singular: תות פיגי (inherited); reviewed
-item_plural,ITEM_WIKI_BERRY,Wiki Berries,,תותי וויקי,proposed,construct plural of the FR head תות; singular: תות וויקי (inherited); reviewed
-item_plural,ITEM_MAGO_BERRY,Mago Berries,,תותי מאגו,proposed,construct plural of the FR head תות; singular: תות מאגו (inherited); reviewed
-item_plural,ITEM_AGUAV_BERRY,Aguav Berries,,תותי אגאו,proposed,construct plural of the FR head תות; singular: תות אגאו (inherited); reviewed
-item_plural,ITEM_IAPAPA_BERRY,Iapapa Berries,,תותי יאיפאפה,proposed,"construct plural of the FR head תות; singular: תות יאיפאפה (inherited); reviewed; reviewer: follows the inherited singular תות יאיפאפה; berry_01 shortened the stem to יאפאפה (6-byte berry limit); if the inherited item is aligned, change this to תותי יאפאפה too"
-item_plural,ITEM_RAZZ_BERRY,Razz Berries,,תותי ראז,proposed,construct plural of the FR head תות; singular: תות ראז (inherited); reviewed
-item_plural,ITEM_BLUK_BERRY,Bluk Berries,,תותי בלוק,proposed,construct plural of the FR head תות; singular: תות בלוק (inherited); reviewed
-item_plural,ITEM_NANAB_BERRY,Nanab Berries,,תותי נאנאב,proposed,construct plural of the FR head תות; singular: תות נאנאב (inherited); reviewed
-item_plural,ITEM_WEPEAR_BERRY,Wepear Berries,,תותי ופיר,proposed,construct plural of the FR head תות; singular: תות ופיר (inherited); reviewed
-item_plural,ITEM_PINAP_BERRY,Pinap Berries,,תותי פינאפ,proposed,construct plural of the FR head תות; singular: תות פינאפ (inherited); reviewed
-item_plural,ITEM_POMEG_BERRY,Pomeg Berries,,תותי פומג,proposed,construct plural of the FR head תות; singular: תות פומג (inherited); reviewed
-item_plural,ITEM_KELPSY_BERRY,Kelpsy Berries,,תותי קלפסי,proposed,construct plural of the FR head תות; singular: תות קלפסי (inherited); reviewed
-item_plural,ITEM_QUALOT_BERRY,Qualot Berries,,תותי קואלות,proposed,construct plural of the FR head תות; singular: תות קואלות (inherited); reviewed
-item_plural,ITEM_HONDEW_BERRY,Hondew Berries,,תותי הונדיו,proposed,construct plural of the FR head תות; singular: תות הונדיו (inherited); reviewed
-item_plural,ITEM_GREPA_BERRY,Grepa Berries,,תותי גרפה,proposed,construct plural of the FR head תות; singular: תות גרפה (inherited); reviewed
-item_plural,ITEM_TAMATO_BERRY,Tamato Berries,,תותי טמטו,proposed,construct plural of the FR head תות; singular: תות טמטו (inherited); reviewed
-item_plural,ITEM_CORNN_BERRY,Cornn Berries,,תותי קורן,proposed,construct plural of the FR head תות; singular: תות קורן (inherited); reviewed
-item_plural,ITEM_MAGOST_BERRY,Magost Berries,,תותי מגוסט,proposed,construct plural of the FR head תות; singular: תות מגוסט (inherited); reviewed
-item_plural,ITEM_RABUTA_BERRY,Rabuta Berries,,תותי רבוטה,proposed,construct plural of the FR head תות; singular: תות רבוטה (inherited); reviewed
-item_plural,ITEM_NOMEL_BERRY,Nomel Berries,,תותי נומל,proposed,construct plural of the FR head תות; singular: תות נומל (inherited); reviewed
-item_plural,ITEM_SPELON_BERRY,Spelon Berries,,תותי ספלאון,proposed,construct plural of the FR head תות; singular: תות ספלאון (inherited); reviewed
-item_plural,ITEM_PAMTRE_BERRY,Pamtre Berries,,תותי פאמטרי,proposed,construct plural of the FR head תות; singular: תות פאמטרי (inherited); reviewed
+item_plural,ITEM_FIGY_BERRY,Figy Berries,,פירות פיגי,proposed,construct plural of the FR head תות; singular: תות פיגי (inherited); reviewed
+item_plural,ITEM_WIKI_BERRY,Wiki Berries,,פירות וויקי,proposed,construct plural of the FR head תות; singular: תות וויקי (inherited); reviewed
+item_plural,ITEM_MAGO_BERRY,Mago Berries,,פירות מאגו,proposed,construct plural of the FR head תות; singular: תות מאגו (inherited); reviewed
+item_plural,ITEM_AGUAV_BERRY,Aguav Berries,,פירות אגאו,proposed,construct plural of the FR head תות; singular: תות אגאו (inherited); reviewed
+item_plural,ITEM_IAPAPA_BERRY,Iapapa Berries,,פירות יאפאפה,proposed,"construct plural of the FR head תות; singular: תות יאיפאפה (inherited); reviewed; reviewer: follows the inherited singular תות יאיפאפה; berry_01 shortened the stem to יאפאפה (6-byte berry limit); if the inherited item is aligned, change this to תותי יאפאפה too"
+item_plural,ITEM_RAZZ_BERRY,Razz Berries,,פירות ראז,proposed,construct plural of the FR head תות; singular: תות ראז (inherited); reviewed
+item_plural,ITEM_BLUK_BERRY,Bluk Berries,,פירות בלוק,proposed,construct plural of the FR head תות; singular: תות בלוק (inherited); reviewed
+item_plural,ITEM_NANAB_BERRY,Nanab Berries,,פירות נאנאב,proposed,construct plural of the FR head תות; singular: תות נאנאב (inherited); reviewed
+item_plural,ITEM_WEPEAR_BERRY,Wepear Berries,,פירות ופיר,proposed,construct plural of the FR head תות; singular: תות ופיר (inherited); reviewed
+item_plural,ITEM_PINAP_BERRY,Pinap Berries,,פירות פינאפ,proposed,construct plural of the FR head תות; singular: תות פינאפ (inherited); reviewed
+item_plural,ITEM_POMEG_BERRY,Pomeg Berries,,פירות פומג,proposed,construct plural of the FR head תות; singular: תות פומג (inherited); reviewed
+item_plural,ITEM_KELPSY_BERRY,Kelpsy Berries,,פירות קלפסי,proposed,construct plural of the FR head תות; singular: תות קלפסי (inherited); reviewed
+item_plural,ITEM_QUALOT_BERRY,Qualot Berries,,פירות קואלות,proposed,construct plural of the FR head תות; singular: תות קואלות (inherited); reviewed
+item_plural,ITEM_HONDEW_BERRY,Hondew Berries,,פירות הונדיו,proposed,construct plural of the FR head תות; singular: תות הונדיו (inherited); reviewed
+item_plural,ITEM_GREPA_BERRY,Grepa Berries,,פירות גרפה,proposed,construct plural of the FR head תות; singular: תות גרפה (inherited); reviewed
+item_plural,ITEM_TAMATO_BERRY,Tamato Berries,,פירות טמטו,proposed,construct plural of the FR head תות; singular: תות טמטו (inherited); reviewed
+item_plural,ITEM_CORNN_BERRY,Cornn Berries,,פירות קורן,proposed,construct plural of the FR head תות; singular: תות קורן (inherited); reviewed
+item_plural,ITEM_MAGOST_BERRY,Magost Berries,,פירות מגוסט,proposed,construct plural of the FR head תות; singular: תות מגוסט (inherited); reviewed
+item_plural,ITEM_RABUTA_BERRY,Rabuta Berries,,פירות רבוטה,proposed,construct plural of the FR head תות; singular: תות רבוטה (inherited); reviewed
+item_plural,ITEM_NOMEL_BERRY,Nomel Berries,,פירות נומל,proposed,construct plural of the FR head תות; singular: תות נומל (inherited); reviewed
+item_plural,ITEM_SPELON_BERRY,Spelon Berries,,פירות ספלאון,proposed,construct plural of the FR head תות; singular: תות ספלאון (inherited); reviewed
+item_plural,ITEM_PAMTRE_BERRY,Pamtre Berries,,פירות פאמטרי,proposed,construct plural of the FR head תות; singular: תות פאמטרי (inherited); reviewed
 item_plural,ITEM_WATMEL_BERRY,Watmel Berries,,פירות ואטמל,proposed,plural of the head פרי; singular: פרי ואטמל (inherited); reviewed
 item_plural,ITEM_DURIN_BERRY,Durin Berries,,פירות דורין,proposed,plural of the head פרי; singular: פרי דורין (inherited); reviewed
 item_plural,ITEM_BELUE_BERRY,Belue Berries,,פירות בלו,proposed,plural of the head פרי; singular: פרי בלו (inherited); reviewed
@@ -4698,7 +4698,7 @@ type_generic,TYPE_DARK,a DARK move,,מהלך מסוג אפל,proposed,type word 
 type_generic,TYPE_FAIRY,a FAIRY move,,מהלך מסוג פיה,proposed,type word = the TYPE_FAIRY row; pattern as TYPE_NORMAL; reviewed
 type_generic,TYPE_STELLAR,a STELLAR move,,מהלך מסוג כוכבי,proposed,type word = the TYPE_STELLAR row; pattern as TYPE_NORMAL; reviewed
 berry,ITEM_CHERI_BERRY,Cheri,,צ'רי,proposed,"stem only: the code adds the BERRY word after it (src/strings.c:855 gText_Var1Berry, used by src/berry_crush.c:897,1622; src/berry_blender.c:3498; src/battle_message.c:183,3292,3305,3875) or prints it bare (src/berry_tag_screen.c:181,419); stem of the FR item (canon); item: גרגר צ'רי (inherited); reviewed: note fixed, data/scripts/berry_tree.inc:350-380 sits in the #else of #if IS_HNS (:1,:79) and is not in the make hns ROM (IS_HNS=1, include/constants/global.h:73-76); the appending sites need a code change so Hebrew reads פרי + stem"
-berry,ITEM_CHESTO_BERRY,Chesto,,צ'סטרו,proposed,"stem of the FR item (canon); FR's item spells CHESTO with an extra ר (expected צ'סטו); kept so the stem matches the bag name; item: גרגר צ'סטרו (inherited); reviewed: note fixed, the FR slip was not logged anywhere (glossary row, rules §7); reviewer: fix item and stem together to צ'סטו, or keep both"
+berry,ITEM_CHESTO_BERRY,Chesto,,צ'סטו,proposed,"stem of the FR item (canon); FR's item spells CHESTO with an extra ר (expected צ'סטו); kept so the stem matches the bag name; item: גרגר צ'סטרו (inherited); reviewed: note fixed, the FR slip was not logged anywhere (glossary row, rules §7); reviewer: fix item and stem together to צ'סטו, or keep both"
 berry,ITEM_PECHA_BERRY,Pecha,,פצ'ה,proposed,stem of the FR item (canon); item: גרגר פצ'ה (inherited); reviewed
 berry,ITEM_RAWST_BERRY,Rawst,,ראוסט,proposed,stem of the FR item (canon); item: גרגר ראוסט (inherited); reviewed
 berry,ITEM_ASPEAR_BERRY,Aspear,,אספר,proposed,stem of the FR item (canon); item: פירות אספר (inherited); reviewed
@@ -5643,7 +5643,7 @@ frontier_trainer,FRONTIER_TRAINER_111_JOANA,JOANA,,ג'ואנה,proposed,src/data
 frontier_trainer,FRONTIER_TRAINER_112_KELLY,KELLY,,קלי,proposed,src/data/battle_frontier/battle_frontier_trainers.h; matches glossary TRNAME_KELLY קלי (proposed)
 frontier_trainer,FRONTIER_TRAINER_113_RAYNA,RAYNA,,ריינה,proposed,src/data/battle_frontier/battle_frontier_trainers.h; was English; FR canon TRAINER_PAINTER_RAYNA = ריינה
 frontier_trainer,FRONTIER_TRAINER_114_EVAN,EVAN,,אוון,proposed,src/data/battle_frontier/battle_frontier_trainers.h; was English; FR canon TRAINER_TAMER_EVAN = אוון (same Hebrew as inherited OWEN)
-frontier_trainer,FRONTIER_TRAINER_115_JORDAN,JORDAN,,ג'ורדן,proposed,src/data/battle_frontier/battle_frontier_trainers.h; fine: follows the transliteration rules
+frontier_trainer,FRONTIER_TRAINER_115_JORDAN,JORDAN,,ירדן,proposed,"src/data/battle_frontier/battle_frontier_trainers.h:928; familiar Hebrew form of the given name (transliteration_rules §5, as FR ISAAC יצחק and SAMUEL שמואל; glossary MICHAEL מיכאל, JOEL יואל, EMANUEL עמנואל); was ג'ורדן, which follows the surname (Michael Jordan)"
 frontier_trainer,FRONTIER_TRAINER_116_JOEL,JOEL,,יואל,proposed,src/data/battle_frontier/battle_frontier_trainers.h; matches glossary TRNAME_JOEL יואל (proposed)
 frontier_trainer,FRONTIER_TRAINER_117_KRISTEN,KRISTEN,,קריסטן,proposed,src/data/battle_frontier/battle_frontier_trainers.h; fine: follows the transliteration rules
 frontier_trainer,FRONTIER_TRAINER_118_SELPHY,SELPHY,,סלפי,proposed,src/data/battle_frontier/battle_frontier_trainers.h; matches FR TRAINER_LADY_SELPHY סלפי
@@ -6340,7 +6340,7 @@ hill_trainer,HILL_TRAINER_30_GUTS,GUTS,,גאטס,proposed,"src/data/battle_front
 hill_trainer,HILL_TRAINER_32_TERRY,TERRY,,טרי,proposed,"src/data/battle_frontier/trainer_hill.h:4320; FR match: rival trainerName TERRY טרי (pokefirered-heb src/data/trainers.h:3259); glossary TRNAME_TERRELL טרל cites it; not yet in glossary, add as inherited. 3 chars"
 hill_trainer,HILL_TRAINER_33_CARLA,CARLA,,קרלה,proposed,"src/data/battle_frontier/trainer_hill.h:4452; proposed translit: CARL = קרל as FR CARLY קרלי, glossary CARLO קרלו, CARLENE קרלין; final a = ה. 4 chars"
 hill_trainer,HILL_TRAINER_34_NORI,NORI,,נורי,proposed,"src/data/battle_frontier/trainer_hill.h:4599; proposed translit (Japanese NO-ri): NOR = נור as FR NORA נורה, final i = י as FR LORI לורי. 4 chars"
-hill_trainer,HILL_TRAINER_35_GAVITE,GAVITE,,גאבייט,proposed,"src/data/battle_frontier/trainer_hill.h:4732; proposed translit GAV-ite: GAVITE is the H&S rename of the vanilla GAV slot (same PKMN_RANGER_M class, same speech, Salamence/Gyarados/Gengar), so GAV = גאב as HILL_TRAINER_67_GAV; -ITE = ייט as FR DRAGONITE דרגונייט, MEDITITE מדיטייט. 6 chars. FLAG: sam"
+hill_trainer,HILL_TRAINER_35_GAVITE,GAVITE,,גאווייט,proposed,"src/data/battle_frontier/trainer_hill.h:4732; proposed translit GAV-ite: H&S rename of the vanilla GAV slot (same PKMN_RANGER_M class, same speech, Salamence/Gyarados/Gengar); medial v = וו as glossary GAVIN גאווין (rules §2), not ב, because גאבייט is letter for letter SPECIES_GABITE (gen_4_families.h:4338) and reads with /b/ as in גאבי; -ITE = ייט as FR DRAGONITE דרגונייט. 7 chars"
 hill_trainer,HILL_TRAINER_36_ALAINA,ALAINA,,אליינה,proposed,"src/data/battle_frontier/trainer_hill.h:4891; proposed translit a-LAY-na: initial a = א, ai /eɪ/ = יי as FR RAYNA ריינה, glossary ELAINE איליין; differs from glossary ALANA אלאנה by sound. 6 chars"
 hill_trainer,HILL_TRAINER_37_ALFONSO,ALFONSO,,אלפונסו,proposed,"src/data/battle_frontier/trainer_hill.h:5025; proposed translit: ALF = אלפ as glossary ALFRED אלפרד, ALFREDO אלפרדו; o = ו. 7 chars"
 hill_trainer,HILL_TRAINER_38_THEODORE,THEODORE,,תיאודור,proposed,"src/data/battle_frontier/trainer_hill.h:5167; proposed translit: THEO = תיאו as glossary TRNAME_THEO / FRONTIER THEO תיאו; -DORE = דור as glossary BOLDORE בולדור, silent e dropped. 7 chars. Reviewer note: the familiar Hebrew spelling (Herzl) is תאודור, but the glossary THEO chunk wins"
@@ -6464,7 +6464,7 @@ name,NAME_BRENDAN,BRENDAN,,ברנדן,proposed,"transliterated for the last Engl
 name,NAME_MAY,MAY,,מיי,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_GREEN,GREEN,,גרין,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_SILVER,SILVER,,סילבר,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
-name,NAME_POKÉGEAR,POKéGEAR,,פוקיגיר,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+name,NAME_POKÉGEAR,POKéGEAR,,פוקיגיר,proposed,"used in all dialogue and menus in place of the Latin POKéGEAR; see DECISIONS.md K3"
 name,NAME_DEXNAV,DEXNAV,,דקסנאב,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_HIGH_KING_(CATEGORY),High King (category),,מלך עליון,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_PHILIP,PHILIP,,פיליפ,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
@@ -6477,3 +6477,50 @@ speaker,RADIO_DJ_FERN,FERN,,פרן,proposed,radio DJ on Pokémon Music (src/data
 speaker,RADIO_DJ_LILY,LILY,,לילי,proposed,radio DJ of Places and People (src/data/text/radio_strings.h name in the intro; SSAqua_RoomNE_hns Pokémaniac dialogue); translit; not a source constant
 speaker,RADIO_DJ_REED,REED,,ריד,proposed,radio host of the Lucky Channel (src/data/text/radio_strings.h); speaker prefix; translit (ee = י); not a source constant
 term,TERM_NURSE_JOY,NURSE JOY,,האחות ג'וי,proposed,"the POKéMON CENTER nurse (src/option_menu.c FASTER JOY description); NURSE = האחות; JOY = ג'וי as the FR spelling of the name (JOY & MEG = ג'וי ומג, FR trainers.h:5599)"
+name,NAME_MIMI,MIMI,,מימי,proposed,"BattleFrontier_OutsideEast_hns/scripts.inc:268; transliterated, i = י"
+name,NAME_ZIGG,ZIGG,,זיג,proposed,"BattleFrontier_OutsideEast_hns/scripts.inc:298, :300, the owner's nickname for his Zigzagoon; ZIG as in זיגזגון, doubled g written once"
+place,PLACE_HAUOLI_CITY,HAU'OLI CITY,,העיר האואולי,proposed,"MelemeleIsle_hns/scripts.inc:723; CITY = העיר X; the glottal ' = א as in אולאולה; au = או"
+name,NAME_ELIO,ELIO,,אליו,proposed,"Melemele_House_5_hns/scripts.inc:46; transliterated, initial e = א, -io = יו"
+name,NAME_BRINEY,BRINEY,,ברייני,proposed,"CAPT./MR. BRINEY; event_ticket_2.inc, match_call.inc, landmark.c; i = יי, final y = י"
+term,TERM_CONGRATULATIONS,Congratulations,,מזל טוב,proposed,see DECISIONS.md Q6
+term,TERM_TAG_TEAM,tag team,,צוות זוגי,proposed,see DECISIONS.md Q12
+term,TERM_TAG_PARTNER,tag partner,,שותף לצוות,proposed,see DECISIONS.md Q12
+term,TERM_TAG_MATCH,TAG MATCH,,קרב צוות,proposed,see DECISIONS.md Q12
+term,TERM_BATTLE_TOWER,BATTLE TOWER,,מגדל הקרב,proposed,see DECISIONS.md Q24
+term,TERM_BATTLE_DOME,BATTLE DOME,,כיפת הקרב,proposed,see DECISIONS.md Q24
+term,TERM_BATTLE_PALACE,BATTLE PALACE,,ארמון הקרב,proposed,see DECISIONS.md Q24
+term,TERM_BATTLE_ARENA,BATTLE ARENA,,זירת הקרב,proposed,see DECISIONS.md Q24
+term,TERM_BATTLE_FACTORY,BATTLE FACTORY,,מפעל הקרב,proposed,see DECISIONS.md Q24
+term,TERM_BATTLE_PIKE,BATTLE PIKE,,שביל הקרב,proposed,see DECISIONS.md Q24
+term,TERM_BATTLE_PYRAMID,BATTLE PYRAMID,,פירמידת הקרב,proposed,see DECISIONS.md Q24
+term,TERM_RANKING_HALL,RANKING HALL,,היכל הדירוג,proposed,see DECISIONS.md Q24
+term,TERM_EXCHANGE_SERVICE_CORNER,EXCHANGE SERVICE CORNER,,פינת שירות ההמרה,proposed,see DECISIONS.md Q24
+term,TERM_EXCHANGE_SERVICE,EXCHANGE SERVICE,,שירות ההמרה,proposed,see DECISIONS.md Q24
+term,TERM_BATTLE_SALON,BATTLE SALON,,סלון הקרב,proposed,see DECISIONS.md Q24
+term,TERM_MULTI_BATTLE_ROOM,MULTI BATTLE ROOM,,חדר קרב מרובה,proposed,see DECISIONS.md Q24
+term,TERM_ELEMENTAL_TUTOR,ELEMENTAL TUTOR,,מורה היסודות,proposed,see DECISIONS.md Q24
+term,TERM_BATTLE_SWAP,Battle Swap,,החלפת הקרב,proposed,see DECISIONS.md Q29
+term,TERM_BATTLE_CHOICE,Battle Choice,,בחירת הקרב,proposed,see DECISIONS.md Q29
+term,TERM_BATTLE_QUEST,Battle Quest,,מסע הקרב,proposed,see DECISIONS.md Q29
+term,TERM_SET_KO_TOURNEY,Set KO Tourney,,טורניר הנוקאאוט,proposed,see DECISIONS.md Q29
+term,TERM_BATTLE_TOURNAMENT,Battle Tournament,,טורניר הקרב,proposed,see DECISIONS.md Q29
+term,TERM_BATTLE_HALL,BATTLE HALL,,אולם הקרב,proposed,see DECISIONS.md Q29
+term,TERM_FRONTIER_BRAINS,FRONTIER BRAINS,,מוחות החזית,proposed,see DECISIONS.md Q33
+term,TERM_BATTLE_TENT,BATTLE TENT,,אוהל הקרב,proposed,see DECISIONS.md Q33
+term,TERM_BATTLE_POINTS,Battle Points,,נקודות קרב,proposed,see DECISIONS.md Q33
+term,TERM_BERRY_POCKET,BERRY POCKET,,כיס הפירות,proposed,see DECISIONS.md Q33
+term,TERM_GOLD_SYMBOLS,Gold Symbols,,סמלי זהב,proposed,see DECISIONS.md Q33
+term,TERM_SILVER_SYMBOLS,Silver Symbols,,סמלי כסף,proposed,see DECISIONS.md Q33
+term,TERM_ARENA_BATTLE_TENT,ARENA BATTLE TENT,,אוהל הקרב של הזירה,proposed,see DECISIONS.md Q44
+term,TERM_PALACE_BATTLE_TENT,PALACE BATTLE TENT,,אוהל הקרב של הארמון,proposed,see DECISIONS.md Q44
+term,TERM_FACTORY_BATTLE_TENT,FACTORY BATTLE TENT,,אוהל הקרב של המפעל,proposed,see DECISIONS.md Q44
+term,TERM_TRICK_MASTER,TRICK MASTER,,אמן התעלולים,proposed,see DECISIONS.md Q122
+term,TERM_TRICK_HOUSE,TRICK HOUSE,,בית התעלולים,proposed,see DECISIONS.md Q122
+term,TERM_GAME_BOY_ADVANCE,GAME BOY ADVANCE,,גיים בוי אדוונס,proposed,see DECISIONS.md Q85
+term,TERM_STAT,STAT (a Pokémon's stat),,נתון,proposed,see DECISIONS.md Q111
+term,TERM_AI,AI (the battle AI; battle debug menu),,ב”מ,proposed,see DECISIONS.md Q112
+term,TERM_BATTLE_SUFFIX_WILD,the wild (battle name suffix sText_WildPkmnPrefix/Lower; also STRINGID_WILDPKMNFLED 'The wild X fled!'),,הפראי,proposed,definite in battle text (English 'the wild'); indefinite פראי only in the encounter intros
+term,TERM_BATTLE_SUFFIX_OPPOSING,the opposing (battle name suffix sText_FoePkmnPrefix/Lower),,היריב,proposed,definite in battle text (English 'the opposing')
+term,TERM_WILD_ENCOUNTER,wild (indefinite: encounter intros 'You encountered a wild X!' / 'Wild X appeared!'),,פראי,proposed,indefinite only in the encounter intros; battle lines use הפראי
+term,TERM_ID_NO_SHORT,IDNo.,,מס',proposed,see DECISIONS.md K2
+term,TERM_STATUS_FAINTED_TAG,FNT (status tag),,מעולף,proposed,see DECISIONS.md K5
