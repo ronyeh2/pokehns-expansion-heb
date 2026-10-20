@@ -175,7 +175,7 @@ Route27_Text_FisherHey:
 Route27_Text_FisherMessage:
     .string "אתה יודע מה עשית עכשיו?\p"
     .string "עשית את הצעד הראשון שלך בקאנטו.\p"
-    .string "תבדוק במפה של ה-POKéGEAR ותראה.$"
+    .string "תבדוק במפה של הפוקיגיר ותראה.$"
 
 Route27_Text_CooltrainermBlakeSeen:
     .string "אתה נראה די חזק.\n"
