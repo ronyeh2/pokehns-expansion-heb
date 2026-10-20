@@ -171,7 +171,7 @@ RadioTower1F_Text_ReceptionistNoTours:
 RadioTower1F_Text_RadioCardWomanOfferQuiz:
     .string "יש לנו עכשיו מבצע חידון מיוחד.\p"
     .string "מי שעונה נכון על חמש שאלות\n"
-    .string "זוכה בכרטיס רדיו ל-POKéGEAR.\p"
+    .string "זוכה בכרטיס רדיו לפוקיגיר.\p"
     .string "בעזרתו תוכלו, אתה והפוקימונים שלך,\n"
     .string "להשמיע מוזיקה בכל זמן ובכל מקום.\p"
     .string "תרצה להשתתף בחידון?$"
@@ -211,7 +211,7 @@ RadioTower1F_Text_QuizWin:
     .string "הנה הפרס שלך: כרטיס רדיו!$"
 
 RadioTower1F_Text_PokegearRadio:
-    .string "ה-POKéGEAR של {PLAYER} יכול\n"
+    .string "הפוקיגיר של {PLAYER} יכול\n"
     .string "עכשיו לשמש גם כרדיו!$"
 
 RadioTower1F_Text_TuneIn:
