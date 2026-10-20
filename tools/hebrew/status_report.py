@@ -18,8 +18,6 @@ import units as U  # noqa: E402
 BLOCKED = {
     'src/data/easy_chat/': 'Easy Chat word lists stay English: the chat keyboard indexes them by letter',
     'src/debug.c': 'debug menu, English by design',
-    'src/battle_debug.c': 'debug menu',
-    'data/scripts/debug.inc': 'debug menu, English by design',
 }
 # Files whose remaining Latin is deliberate, and why.
 KEPT_LATIN = {
@@ -31,7 +29,7 @@ KEPT_LATIN = {
     'src/option_menu.c': 'button names (L, R, A, B)',
     'src/start_menu.c': 'the debug entry and AM/PM (the clock is 24-hour)',
     'src/rtc.c': 'AM/PM (the clock is 24-hour)',
-    'src/strings.c': 'button names, abbreviations (BP), POKéGEAR, unit placeholders and Emerald-only names',
+    'src/strings.c': 'button names, abbreviations (BP), unit placeholders and Emerald-only names',
     'src/challenge_menu.c': 'multipliers (x1.5) and numbers',
     'src/trainer_tower_sets.c': 'Trainer Tower data, which Heart & Soul cannot reach',
     'src/pokenav_match_call_data.c': 'Emerald PokéNav contacts, replaced by the PokéGear in Heart & Soul',
@@ -40,6 +38,7 @@ KEPT_LATIN = {
     'src/berry_fix_program.c': 'the Ruby/Sapphire berry-fix program',
     'src/data/items.h': 'description branches this build does not compile',
     'data/scripts/config.inc': 'a developer configuration message',
+    'data/scripts/debug.inc': 'the R+START debug menu',
     'src/field_weather.c': 'a debug message',
     'src/item.c': 'the English plural suffix, unused in the Hebrew build',
     'src/contest.c': 'contest debug labels',

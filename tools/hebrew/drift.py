@@ -25,8 +25,8 @@ EN_ROOT = paths.BASELINE  # engine baseline: English strings, Hebrew engine
 TREE_ROOT = paths.TREE
 
 TOKEN_RE = re.compile(r'\{[^}]*\}')
-# Latin glyph-pair tokens that Hebrew text may replace with the Hebrew word.
-DROPPABLE_TOKENS = {'{POKE}', '{PKMN}', '{POKEBLOCK}'}
+# Latin glyph-pair tokens that Hebrew text may replace with the Hebrew word (POKé, PKMN, the IDNo pair).
+DROPPABLE_TOKENS = {'{POKE}', '{PKMN}', '{POKEBLOCK}', '{ID}', '{NO}'}
 LATIN_WORD_RE = re.compile(r'[A-Za-z][A-Za-z]+')
 # Latin that may legitimately stay in Hebrew text.
 LATIN_OK = {

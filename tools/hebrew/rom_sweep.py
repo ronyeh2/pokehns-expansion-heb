@@ -10,7 +10,7 @@ Usage:
   --charmap FILE    charmap used to decode (default <HE tree>/charmap.txt, else HNS_FONTS_TREE's)
   --src TREE        source tree searched for the decoded text (default: the tree of HE.gba)
   --min-words N     a run must hold at least N Latin words of 2+ letters (default 2)
-  --include-debug   also report strings of the debug menus (src/debug.o, src/battle_debug.o)
+  --include-debug   also report strings of the R+START debug menu (src/debug.o)
   --all             also list Latin strings that are not in the English ROM (new or changed text)
   --json OUT        machine-readable output ('-' = stdout)
   --limit N         readable report lists at most N strings (default 300; JSON always has all)
@@ -60,7 +60,7 @@ SKIP_OBJ = re.compile(r'(^|/)(sound/|data/sound_data\.o|src/graphics\.o|src/tile
                       r'|src/surfable\.o|src/fonts\.o|data/multiboot_|src/bard_music\.o|data/maps\.o'
                       r'|data/map_events\.o|data/battle_anim_scripts\.o|src/event_object_movement\.o'
                       r'|src/field_effect\.o|src/battle_transition\.o|src/field_weather\.o|src/m4a)')
-DEBUG_OBJ = re.compile(r'(^|/)src/(battle_)?debug\.o$')
+DEBUG_OBJ = re.compile(r'(^|/)src/debug\.o$')
 # OBJECT symbols that are graphics/sound blobs even inside objects that also hold text.
 SKIP_SYM = re.compile(r'Gfx|Tiles|Tilemap|Palette|Pal(s|_|\d|$)|Pic(s|_|\d|$)|Icon|Image|Sprite|Anim|Footprint'
                       r'|Font|Glyph|Song|Voice|Cry|Cries|Blockdata|Metatile|Border|Bitmap|Bg([A-Z_\d]|$)'
