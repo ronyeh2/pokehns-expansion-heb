@@ -43,7 +43,7 @@ Melemele_House5_Son_Movement:
 
 Melemele_House5_Mom_Text_0:
 	.string "אני שוקלת לעבור לאזור אלולה\n"
-	.string "עם הבן שלי, ELIO.\p"
+	.string "עם הבן שלי, אליו.\p"
 	.string "כאן באיים אנחנו רק מקבלים\n"
 	.string "טעימה קטנה!$"
 
