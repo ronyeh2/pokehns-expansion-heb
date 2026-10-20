@@ -154,18 +154,18 @@ Route39_Text_BaobaIntro::
 	.string "אולי זה לא סתם צירוף מקרים\n"
 	.string "שאנחנו משוחחים.\p"
 	.string "מה דעתך שנחליף מספרים\n"
-	.string "ב-POKéGEAR?\p"
+	.string "בפוקיגיר?\p"
 	.string "כשאזור הספארי ייפתח, אתקשר\n"
 	.string "אליך לפני כל אחד אחר!$"
 
 Route39_Text_Registered:
 	.string "{PLAYER} רשם את באובה\n"
-	.string "ב-POKéGEAR!$"
+	.string "בפוקיגיר!$"
 
 
 Route39_Text_WillCall:
 	.string "באובה: אודיע לך\n"
-	.string "ב-POKéGEAR בקרוב!$"
+	.string "בפוקיגיר בקרוב!$"
 
 Route39_Movement_BaobaLeave:
 	walk_left
