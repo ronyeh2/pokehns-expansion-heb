@@ -751,7 +751,7 @@ const u8 gText_PkmnFainted_FldPsn[] = _("{STR_VAR_1} התעלף…\p\n");
 const u8 gText_PkmnFainted_FldPsn[] = _("{STR_VAR_1} שרד את ההרעלה.\nהרעל התפוגג!\p");
 #endif
 const u8 gText_PkmnSurvived_FldPsn[] = _("{STR_VAR_1} שרד את ההרעלה.\nהרעל התפוגג!\p");
-const u8 gText_Marco[] = _("מארקו");
+const u8 gText_Marco[] = _("מרקו");
 const u8 gText_TrainerCardName[] = _("שם: ");
 const u8 gText_TrainerCardIDNo[] = _("מס' זיהוי ");
 const u8 gText_TrainerCardMoney[] = _("כסף");
