@@ -369,7 +369,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PALACE_MAVEN] = { _("אשף הארמון") },
     [TRAINER_CLASS_ARENA_TYCOON] = { _("גבירת הזירה") },
     [TRAINER_CLASS_FACTORY_HEAD] = { _("ראש המפעל") },
-    [TRAINER_CLASS_PIKE_QUEEN] = { _("מלכת הרומח") },
+    [TRAINER_CLASS_PIKE_QUEEN] = { _("מלכת השביל") },
     [TRAINER_CLASS_PYRAMID_KING] = { _("מלך הפירמידה") },
     [TRAINER_CLASS_RS_PROTAG] = { _("מאמן פוקימון") },
 
@@ -458,7 +458,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PALACE_MAVEN_HNS] =     { _("אשף הארמון") },
     [TRAINER_CLASS_PARASOL_LADY_HNS] =     { _("גברת שמשייה"), 10 },
     [TRAINER_CLASS_PICNICKER_HNS] =        { _("מטיילת"), 4 },
-    [TRAINER_CLASS_PIKE_QUEEN_HNS] =       { _("מלכת הרומח") },
+    [TRAINER_CLASS_PIKE_QUEEN_HNS] =       { _("מלכת השביל") },
     [TRAINER_CLASS_PKMN_TRAINER_1_HNS] =   { _("מאמן פוקימון") },
     [TRAINER_CLASS_POKEFAN_HNS] =          { _("פוקיפאן"), 20 },
     [TRAINER_CLASS_POKEMANIAC_HNS] =       { _("פוקימאניאק"), 15 },
