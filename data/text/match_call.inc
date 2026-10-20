@@ -2335,14 +2335,14 @@ MatchCall_Text_BrendanRayquazaCall:
 	.string "… … … … … Click!$"
 
 MatchCall_Text_May1::
-	.string "MAY: היי, {PLAYER}{KUN}!\n"
-	.string "מר BRINEY פרש מעבודתו כמלח.\p"
+	.string "מיי: היי, {PLAYER}{KUN}!\n"
+	.string "מר ברייני פרש מעבודתו כמלח.\p"
 	.string "אבל לפעמים אני עדיין רואה אותו\n"
 	.string "בים עם PEEKO, חיית המחמד שלו.\p"
 	.string "הוא בטח עדיין אוהב את הים.$"
 
 MatchCall_Text_May2::
-	.string "MAY: היי, {PLAYER}{KUN}!\p"
+	.string "מיי: היי, {PLAYER}{KUN}!\p"
 	.string "שמת לב שלעיירות קטנות כמו\n"
 	.string "PETALBURG ו-DEWFORD יש מכונים?\p"
 	.string "משום מה, בעיר הנמל הגדולה\n"
@@ -2351,7 +2351,7 @@ MatchCall_Text_May2::
 	.string "שאגיש מועמדות לתפקיד המנהיגה.$"
 
 MatchCall_Text_May3::
-	.string "MAY: היי, {PLAYER}{KUN}!\p"
+	.string "מיי: היי, {PLAYER}{KUN}!\p"
 	.string "אתה זוכר איש ב-RUSTBORO\n"
 	.string "שקראו לו ”החותך”?\p"
 	.string "היה לו שם בית, זוכר?\p"
@@ -2363,13 +2363,13 @@ MatchCall_Text_May3::
 	.string "”איש ניפוץ הסלע”!$"
 
 MatchCall_Text_May4::
-	.string "MAY: {PLAYER}{KUN}?\n"
+	.string "מיי: {PLAYER}{KUN}?\n"
 	.string "מנהרת RUSTURF…\p"
 	.string "קראו לה כך כי היא מחברת\n"
 	.string "בין RUSTBORO ל-VERDANTURF.$"
 
 MatchCall_Text_May5::
-	.string "MAY: {PLAYER}{KUN}, מה שלומך?\p"
+	.string "מיי: {PLAYER}{KUN}, מה שלומך?\p"
 	.string "אני בדרך 111 עכשיו.\p"
 	.string "אני הולכת לנוח בבית של\n"
 	.string "גברת זקנה.\p"
@@ -2377,7 +2377,7 @@ MatchCall_Text_May5::
 	.string "למדבר.$"
 
 MatchCall_Text_May6::
-	.string "MAY: היי, {PLAYER}{KUN}!\p"
+	.string "מיי: היי, {PLAYER}{KUN}!\p"
 	.string "שמעת על מגדל התעתועים\n"
 	.string "שבמדבר?\p"
 	.string "אומרים שכמו חזיון תעתועים,\n"
@@ -2385,21 +2385,21 @@ MatchCall_Text_May6::
 	.string "הלוואי שהייתי יכולה לראות אותו.$"
 
 MatchCall_Text_May7::
-	.string "MAY: {PLAYER}{KUN}, יאהו!\n"
+	.string "מיי: {PLAYER}{KUN}, יאהו!\n"
 	.string "אני בדרך 119 עכשיו.\p"
 	.string "יש כאן נהר גדול,\n"
 	.string "ויורד פה הרבה גשם.\p"
 	.string "נרטבתי לגמרי!$"
 
 MatchCall_Text_May8::
-	.string "MAY: {PLAYER}{KUN}, היי.\p"
+	.string "מיי: {PLAYER}{KUN}, היי.\p"
 	.string "הר PYRE הוא אתר הנצחה\n"
 	.string "לפוקימונים שחייהם הסתיימו.\p"
 	.string "אולי בגלל זה הוא שורץ\n"
 	.string "פוקימונים מסוג רוח!$"
 
 MatchCall_Text_May9::
-	.string "MAY: היי, {PLAYER}{KUN}!\p"
+	.string "מיי: היי, {PLAYER}{KUN}!\p"
 	.string "חשבתי ללכת למעיין החם\n"
 	.string "ב-LAVARIDGE.\p"
 	.string "אבל בדרך, ליד המעבר המשונן,\n"
@@ -2407,14 +2407,14 @@ MatchCall_Text_May9::
 	.string "האווירה הייתה מאיימת!$"
 
 MatchCall_Text_May10::
-	.string "MAY: היי, {PLAYER}{KUN}!\n"
+	.string "מיי: היי, {PLAYER}{KUN}!\n"
 	.string "ראית את החדשות?\p"
 	.string "אומרים שקפטן STERN יצא\n"
 	.string "למשלחת בצוללת שלו,\p"
 	.string "וגילה את מערת קרקעית הים.$"
 
 MatchCall_Text_May11::
-	.string "MAY: היי, {PLAYER}{KUN}!\n"
+	.string "מיי: היי, {PLAYER}{KUN}!\n"
 	.string "זה לא מגניב?\p"
 	.string "גם בלי סירה, אפשר לחצות\n"
 	.string "את הים בעזרת מהלך של פוקימון.\p"
@@ -2423,7 +2423,7 @@ MatchCall_Text_May11::
 	.string "לרדת לקרקעית הים.$"
 
 MatchCall_Text_May12::
-	.string "MAY: היי, {PLAYER}{KUN}!\n"
+	.string "מיי: היי, {PLAYER}{KUN}!\n"
 	.string "מקווה שהכול בסדר!\p"
 	.string "קרה לך שהיית בים והדרך\n"
 	.string "לצד השני הייתה חסומה?\p"
@@ -2433,7 +2433,7 @@ MatchCall_Text_May12::
 	.string "תעלה אל פני המים. קל!$"
 
 MatchCall_Text_May13::
-	.string "MAY: היי, {PLAYER}{KUN}!\p"
+	.string "מיי: היי, {PLAYER}{KUN}!\p"
 	.string "מה העניינים?\n"
 	.string "אתה ממלא את הפוקדקס שלך?\p"
 	.string "שמעתי שמועה שיש פוקימונים\n"
@@ -2442,7 +2442,7 @@ MatchCall_Text_May13::
 	.string "הייתי שמחה לראות אפילו אחד…$"
 
 MatchCall_Text_May14::
-	.string "MAY: {PLAYER}{KUN}!\n"
+	.string "מיי: {PLAYER}{KUN}!\n"
 	.string "שמעתי את השמועות!\p"
 	.string "ניצחת את מנהיג המכון\n"
 	.string "של SOOTOPOLIS?\p"
@@ -2450,21 +2450,21 @@ MatchCall_Text_May14::
 	.string "עוד הרבה, נכון?$"
 
 MatchCall_Text_May15::
-	.string "MAY: לא נשאר אף מאמן בהואן\n"
+	.string "מיי: לא נשאר אף מאמן בהואן\n"
 	.string "שלא יודע מי אתה, {PLAYER}{KUN}!\p"
 	.string "כשאני מספרת לאנשים שאנחנו\n"
 	.string "חברים, {PLAYER}{KUN}, כולם מופתעים!$"
 
 MatchCall_Text_Brendan1::
-	.string "BRENDAN: היי, {PLAYER}!\n"
-	.string "מר BRINEY פרש מעבודתו כמלח.\p"
+	.string "ברנדן: היי, {PLAYER}!\n"
+	.string "מר ברייני פרש מעבודתו כמלח.\p"
 	.string "אבל לפעמים אני עדיין רואה אותו\n"
 	.string "בים עם PEEKO, חיית המחמד שלו.\p"
 	.string "כנראה שהוא עדיין\n"
 	.string "אוהב את הים.$"
 
 MatchCall_Text_Brendan2::
-	.string "BRENDAN: היי, {PLAYER}!\p"
+	.string "ברנדן: היי, {PLAYER}!\p"
 	.string "אני לא מבין איך לעיירות קטנות כמו\n"
 	.string "PETALBURG ו-DEWFORD יש מכונים.\p"
 	.string "כלומר, לעיר הנמל הגדולה\n"
@@ -2473,7 +2473,7 @@ MatchCall_Text_Brendan2::
 	.string "שאגיש מועמדות לתפקיד המנהיג.$"
 
 MatchCall_Text_Brendan3::
-	.string "BRENDAN: יו, {PLAYER}!\p"
+	.string "ברנדן: יו, {PLAYER}!\p"
 	.string "אתה זוכר בחור ב-RUSTBORO\n"
 	.string "שקראו לו ”החותך”?\p"
 	.string "היה לו שם בית, נכון?\p"
@@ -2485,13 +2485,13 @@ MatchCall_Text_Brendan3::
 	.string "”איש ניפוץ הסלע”!$"
 
 MatchCall_Text_Brendan4::
-	.string "BRENDAN: הקול הזה… {PLAYER}?\p"
+	.string "ברנדן: הקול הזה… {PLAYER}?\p"
 	.string "מנהרת RUSTURF נקראת כך כי היא\n"
 	.string "מחברת בין RUSTBORO ל-VERDANTURF.\p"
 	.string "ידעת את זה?$"
 
 MatchCall_Text_Brendan5::
-	.string "BRENDAN: {PLAYER}, מה קורה?\p"
+	.string "ברנדן: {PLAYER}, מה קורה?\p"
 	.string "היי, אני בדרך 111 עכשיו.\p"
 	.string "אני הולך לנוח בבית של גברת\n"
 	.string "זקנה מצפון למדבר.\p"
@@ -2499,7 +2499,7 @@ MatchCall_Text_Brendan5::
 	.string "שגם אתה תבקר אצלה.$"
 
 MatchCall_Text_Brendan6::
-	.string "BRENDAN: היי, {PLAYER}!\p"
+	.string "ברנדן: היי, {PLAYER}!\p"
 	.string "שמעת על מגדל התעתועים\n"
 	.string "שבמדבר?\p"
 	.string "אומרים שכמו חזיון תעתועים,\n"
@@ -2507,21 +2507,21 @@ MatchCall_Text_Brendan6::
 	.string "הייתי רוצה לראות את זה!$"
 
 MatchCall_Text_Brendan7::
-	.string "BRENDAN: מי זה? אה, {PLAYER}?\n"
+	.string "ברנדן: מי זה? אה, {PLAYER}?\n"
 	.string "נחש מה? אני בדרך 119 עכשיו.\p"
 	.string "יש כאן נהר גדול,\n"
 	.string "ויורד פה גשם כל הזמן.\p"
 	.string "נרטבתי עד העצם!$"
 
 MatchCall_Text_Brendan8::
-	.string "BRENDAN: {PLAYER}!\p"
+	.string "ברנדן: {PLAYER}!\p"
 	.string "הר PYRE הוא אתר הנצחה\n"
 	.string "לפוקימונים שחייהם הסתיימו.\p"
 	.string "כנראה בגלל זה הוא שורץ\n"
 	.string "פוקימונים מסוג רוח!$"
 
 MatchCall_Text_Brendan9::
-	.string "BRENDAN: היי, {PLAYER}.\p"
+	.string "ברנדן: היי, {PLAYER}.\p"
 	.string "הייתי בדרך חזרה למעיין החם\n"
 	.string "ב-LAVARIDGE.\p"
 	.string "אבל ליד המעבר המשונן, נתקלתי\n"
@@ -2530,14 +2530,14 @@ MatchCall_Text_Brendan9::
 	.string "נראה לי שהם היו מצוות מגמה.$"
 
 MatchCall_Text_Brendan10::
-	.string "BRENDAN: היי, {PLAYER}!\n"
+	.string "ברנדן: היי, {PLAYER}!\n"
 	.string "שמעת את החדשות?\p"
 	.string "אומרים שקפטן STERN יצא\n"
 	.string "למשלחת בצוללת שלו,\p"
 	.string "וגילה את מערת קרקעית הים.$"
 
 MatchCall_Text_Brendan11::
-	.string "BRENDAN: היי, {PLAYER}!\n"
+	.string "ברנדן: היי, {PLAYER}!\n"
 	.string "זה לא מדהים?\p"
 	.string "גם בלי סירה, אפשר לחצות\n"
 	.string "את הים בעזרת מהלך של פוקימון.\p"
@@ -2546,7 +2546,7 @@ MatchCall_Text_Brendan11::
 	.string "וואו, פוקימונים יכולים לעשות הכול!$"
 
 MatchCall_Text_Brendan12::
-	.string "BRENDAN: אהלן, {PLAYER}!\n"
+	.string "ברנדן: אהלן, {PLAYER}!\n"
 	.string "איך אתה מחזיק מעמד?\p"
 	.string "קרה לך פעם שבים, הדרך\n"
 	.string "לצד השני הייתה חסומה?\p"
@@ -2556,7 +2556,7 @@ MatchCall_Text_Brendan12::
 	.string "תעלה אל פני המים. פשוט!$"
 
 MatchCall_Text_Brendan13::
-	.string "BRENDAN: היי, {PLAYER}!\p"
+	.string "ברנדן: היי, {PLAYER}!\p"
 	.string "מה העניינים? מצליח\n"
 	.string "למלא את הפוקדקס שלך?\p"
 	.string "שמעתי שמועה שיש פוקימונים\n"
@@ -2565,14 +2565,14 @@ MatchCall_Text_Brendan13::
 	.string "הייתי שמח לתפוס אפילו אחד…$"
 
 MatchCall_Text_Brendan14::
-	.string "BRENDAN: {PLAYER}!\n"
+	.string "ברנדן: {PLAYER}!\n"
 	.string "שמעתי את השמועות!\p"
 	.string "ניצחת את מנהיג המכון של\n"
 	.string "SOOTOPOLIS? מדהים!\p"
 	.string "אתה ממש קרוב עכשיו!$"
 
 MatchCall_Text_Brendan15::
-	.string "BRENDAN: אין מאמן בכל הואן\n"
+	.string "ברנדן: אין מאמן בכל הואן\n"
 	.string "שלא יודע מי אתה, {PLAYER}!\p"
 	.string "כשאני מספר לאנשים שאנחנו\n"
 	.string "חברים, {PLAYER}, הם די מקנאים!$"
