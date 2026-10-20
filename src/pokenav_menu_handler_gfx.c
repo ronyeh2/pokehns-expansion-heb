@@ -348,8 +348,8 @@ static const u8 *const sPageDescriptions[] =
     [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("צפייה בסרטים שהושגו."),
 #if IS_HNS
     [POKENAV_MENUITEM_RADIO]                   = COMPOUND_STRING("האזנה לרדיו."),
-    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("סגירת ה-POKéGEAR."),
-    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("חזרה לתפריט ה-POKéGEAR."),
+    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("סגירת הפוקיגיר."),
+    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("חזרה לתפריט הפוקיגיר."),
 #else
     [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéNAV."),
     [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéNAV menu."),
