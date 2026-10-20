@@ -82,16 +82,20 @@ jobs:
           exit $status
 
       - name: make check, in chunks
-        # One `make check` grows past the runner's 16 GB: its emulator processes keep the memory of
-        # every test they ran. check_chunked.py runs the same suite one test-name prefix at a time.
+        # The one test that crashes the emulator (tools/hebrew/data/crashing_tests.txt) is not
+        # reported as a crash on Linux: the emulator keeps running and fills the runner's 16 GB.
+        # check_chunked.py runs the suite one test-name prefix at a time and skips that test.
         # Upstream 2.0.6 does not pass its own suite; check_tests.py fails only on a test that is
         # not in tools/hebrew/data/known_test_failures.txt (the tests upstream fails).
         timeout-minutes: 90
         run: |
           ( while sleep 60; do echo "[mon] $(date -u +%H:%M) $(free -m | awk '/Mem/{print "mem used " $3 "/" $2 " MB"}'), disk $(df -h . | awk 'NR==2{print $4}') free"; done ) &
           set +e
-          python3 tools/hebrew/check_chunked.py --build hns --jobs $(nproc) --log check.log
+          python3 tools/hebrew/check_chunked.py --build hns --jobs $(nproc) --log check.log --skip-crashing --chunk-timeout 900
+          chunked=$?
           python3 tools/hebrew/check_tests.py check.log
+          tests=$?
+          [ $chunked -eq 0 ] && [ $tests -eq 0 ]
 
       - name: Keep the logs
         if: always()

@@ -10,9 +10,12 @@ its filter, so the processes start fresh and their memory is released between ch
 Chunks are the first characters of the test names, split further where a name in
 data/crashing_tests.txt falls in them: after a crash the runner rebuilds its share of the tests
 without the name filter, so the crashing runner's later tests in that chunk would not run. Each
-crashing test gets a chunk of its own.
+crashing test gets a chunk of its own. With --skip-crashing those chunks are not run: on Linux the
+emulator does not report such a crash but keeps running and fills the memory.
 
-The test ELF must already be built. The log can be read with check_tests.py.
+The test ELF must already be built. The log can be read with check_tests.py, which judges the
+results. Exit status 3 if a chunk ran past --chunk-timeout (a test that hangs or crashes the
+emulator), 2 for a setup error, else 0.
 """
 import argparse, os, re, subprocess, sys
 
@@ -66,6 +69,8 @@ def main():
     ap.add_argument('--jobs', type=int, default=2)
     ap.add_argument('--log', default='check.log')
     ap.add_argument('--crashing', default=os.path.join(HERE, 'data', 'crashing_tests.txt'))
+    ap.add_argument('--skip-crashing', action='store_true', help='do not run the tests in --crashing')
+    ap.add_argument('--chunk-timeout', type=int, default=0, help='seconds per chunk, 0 for none')
     a = ap.parse_args()
 
     romtest, objcopy, hydra, patchelf, testelf, headless, skipfail = make_vars(a.build)
@@ -77,13 +82,18 @@ def main():
     if b'*' in starts:
         print('a test name starts with *, which the runner reads as an infix filter')
         return 2
-    crashing = {l.strip().encode('utf-8') for l in open(a.crashing, encoding='utf-8') if l.strip()}
+    crashing = {l.strip().encode('utf-8') for l in open(a.crashing, encoding='utf-8')
+                if l.strip() and not l.startswith('#')}
     missing = sorted(c for c in crashing if c not in names)
     if missing:
         print('crashing tests not found in test/: %s' % ', '.join(m.decode() for m in missing))
         return 2
     plan = chunks(names, crashing)
     print('%d test names, %d chunks' % (len(names), len(plan)))
+    if a.skip_crashing:
+        plan = [p for p in plan if p not in crashing]
+        for c in sorted(crashing):
+            print('skipped, crashes the emulator: %s' % c.decode('utf-8'))
 
     status = 0
     env = dict(os.environ, MAKEFLAGS='-j%d' % a.jobs)
@@ -97,8 +107,15 @@ def main():
             subprocess.run(['cp', testelf, headless], check=True)
             subprocess.run([patchelf, headless, 'gTestRunnerArgv', patch_arg(p), 'gTestRunnerHeadless', '\\x01',
                             'gTestRunnerSkipIsFail', skipfail], check=True)
-            r = subprocess.run([hydra, romtest, objcopy, headless], stdout=log, stderr=subprocess.STDOUT, env=env)
-            status = max(status, r.returncode)
+            try:
+                subprocess.run([hydra, romtest, objcopy, headless], stdout=log, stderr=subprocess.STDOUT, env=env,
+                               timeout=a.chunk_timeout or None)
+            except subprocess.TimeoutExpired:
+                msg = "== TIMEOUT: the tests starting with '%s' ran past %d s\n" % (p.decode('utf-8', 'replace'),
+                                                                                  a.chunk_timeout)
+                sys.stdout.write(msg)
+                log.write(msg.encode('utf-8'))
+                status = 3
     return status
 
 
