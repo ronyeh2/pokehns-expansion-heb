@@ -187,7 +187,7 @@ static const u8 sText_Steven[] = _("סטיבן");
 static const u8 sText_Brawly[] = _("BRAWLY");
 static const u8 sText_Winona[] = _("וינונה");
 static const u8 sText_Phoebe[] = _("פיבי");
-static const u8 sText_Glacia[] = _("גלסיה");
+static const u8 sText_Glacia[] = _("גלייסיה");
 
 void Special_ShowDiploma(void)
 {
