@@ -360,8 +360,8 @@ Alola_Ulaula_TrainerBattleHiker_Text_1:
 	.string "הייתי צריך להתאמן קשה יותר…$"
 
 Alola_Ulaula_TrainerBattleHiker_Text_2:
-	.string "באי אולאולה יש את מסלולי הטיול\n"
-	.string "הכי טובים!\p"
+	.string "באי אולאולה הטיולים הכי טובים!\p"
+
 	.string "המקומיים קוראים להר הזה הר לניקאלה,\n"
 	.string "כי הוא הגבוה ביותר באיי אלולה!$"
 
