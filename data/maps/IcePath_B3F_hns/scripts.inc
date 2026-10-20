@@ -151,7 +151,7 @@ IcePath_B3F_Text_Swinub:
 IcePath_B3F_Text_SwinubBerry:
 	.string "לתת לסווינאב פרי?$"
 IcePath_B3F_Text_SwinubAteBerry:
-	.string "סווינאב נהנה מפירות אספר!$"
+	.string "סווינאב נהנה מפרי אספר!$"
 IcePath_B3F_Text_SwinubTurnedAway:
 	.string "סווינאב לא אוהב את זה!$"
 
@@ -160,6 +160,6 @@ IcePath_B3F_Text_Delibird:
 IcePath_B3F_Text_DelibirdBerry:
 	.string "לתת לדליברד פרי?$"
 IcePath_B3F_Text_DelibirdAteBerry:
-	.string "דליברד נהנה מפירות אספר!$"
+	.string "דליברד נהנה מפרי אספר!$"
 IcePath_B3F_Text_DelibirdTurnedAway:
 	.string "דליברד לא אוהב את זה!$"
