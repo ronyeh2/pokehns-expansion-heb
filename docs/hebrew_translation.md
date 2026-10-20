@@ -113,6 +113,7 @@ message under 424.
 | `gen_dex_alpha.py` | Regenerates the Pokédex A–Z order |
 | `emu/` | Headless mGBA harness, the save ladder, the screen tours (`hns.py tour`), the dialogue sweep (`sweep.py`), the map walk (`mapwalk.py`) and the libretro frontend for other cores (`crosscore.c`) |
 | `check_tests.py` | Compares a `make check` log with the tests upstream already fails (`data/known_test_failures.txt`) |
+| `check_chunked.py` | Runs the `make check` suite one test-name prefix at a time, so that it fits the memory of a CI runner; a test in `data/crashing_tests.txt` runs alone |
 | `testmsgs/` | Rebuilds the battle tests' Hebrew message table (below) |
 
 ## Tests

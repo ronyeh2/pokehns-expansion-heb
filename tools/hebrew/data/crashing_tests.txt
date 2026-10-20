@@ -1,0 +1,1 @@
+Capture: ball data is properly set in captured pokemon
