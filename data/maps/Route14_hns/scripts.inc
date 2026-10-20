@@ -398,7 +398,7 @@ Route14_Text_Pidgeotto:
 Route14_Text_PidgeottoBerry:
 	.string "לתת לפידג'יוטו פרי?$"
 Route14_Text_PidgeottoAteBerry:
-	.string "פידג'יוטו נהנה מתות קואלות!$"
+	.string "פידג'יוטו נהנה מפרי קואלות!$"
 Route14_Text_PidgeottoTurnedAway:
 	.string "פידג'יוטו לא אוהב את זה!$"
 
