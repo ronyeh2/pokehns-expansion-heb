@@ -141,7 +141,7 @@ def extract_script(path, rel, all_labels):
     units = []
     for key, start, end, indent, joined in blocks:
         base = key.split('#')[0]
-        if not re.search(r'[A-Za-z]', TOKEN_RE.sub('', joined)):
+        if not re.search(r'[A-Za-z\u05d0-\u05ea]', TOKEN_RE.sub('', joined)):
             continue
         is_live = live_set is None or base in live_set
         if not is_live and not all_labels:
@@ -224,7 +224,7 @@ def extract_c(path, rel, all_labels):
     for m, line_no, joined, desig, field, var in c_literals(text):
         idx = n
         n += 1
-        if not re.search(r'[A-Za-z]', TOKEN_RE.sub('', joined)):
+        if not re.search(r'[A-Za-z\u05d0-\u05ea]', TOKEN_RE.sub('', joined)):
             continue
         is_live = live_idx.get((rel, line_no), True)
         if not is_live and not all_labels:
