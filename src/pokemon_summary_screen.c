@@ -87,6 +87,12 @@
 #define PSS_LABEL_WINDOW_PORTRAIT_SPECIES 19 // The lower name
 #define PSS_LABEL_WINDOW_END 20
 
+// The nickname's y in its window. Right to left the line sits 2 px higher than the English one, so
+// the descenders of ק and the final letters end above the dark frame (y 109-110) that the
+// forget-a-move page draws under the name, with only their shadow on it, instead of crossing it
+// and notching the bar below.
+#define PORTRAIT_NICKNAME_Y (TEXT_RTL ? 7 : 1)
+
 // Dynamic fields for the Pokémon Info page
 #define PSS_DATA_WINDOW_INFO_ORIGINAL_TRAINER 0
 #define PSS_DATA_WINDOW_INFO_ID 1
@@ -603,11 +609,22 @@ static const struct WindowTemplate sSummaryTemplate[] =
     [PSS_LABEL_WINDOW_PORTRAIT_NICKNAME] = {
         .bg = 0,
         .tilemapLeft = 1,
+#if TEXT_RTL
+        // A tile row taller and a row higher, so the name can sit 2 px above the English line
+        // (PORTRAIT_NICKNAME_Y). Its 27 tiles (700-726) lie between the page windows' last tile
+        // (696) and the relearn prompt's first (800).
+        .tilemapTop = 11,
+        .width = 9,
+        .height = 3,
+        .paletteNum = 6,
+        .baseBlock = 700,
+#else
         .tilemapTop = 12,
         .width = 9,
         .height = 2,
         .paletteNum = 6,
         .baseBlock = 413,
+#endif
     },
     [PSS_LABEL_WINDOW_PORTRAIT_SPECIES] = {
         .bg = 0,
@@ -3540,7 +3557,7 @@ static void PrintNotEggInfo(void)
     StringAppend(gStringVar1, gStringVar2);
     PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, gStringVar1, 24, 17, 0, 1);
     GetMonNickname(mon, gStringVar1);
-    PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, 1, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME) - 9);
+    PrintTextOnWindowToFitPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, PORTRAIT_NICKNAME_Y, 0, 1, WindowWidthPx(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME) - 9);
     PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_SPECIES, gText_Slash, 0, 1, 0, 1);
 #if TEXT_RTL
     // Mirrored about the narrower axis, the name after the slash must end before the window's left edge.
@@ -3556,7 +3573,7 @@ static void PrintNotEggInfo(void)
 static void PrintEggInfo(void)
 {
     GetMonNickname(&sMonSummaryScreen->currentMon, gStringVar1);
-    PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, 1, 0, 1);
+    PrintTextOnWindow(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME, gStringVar1, 0, PORTRAIT_NICKNAME_Y, 0, 1);
     PutWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_NICKNAME);
     ClearWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER);
     ClearWindowTilemap(PSS_LABEL_WINDOW_PORTRAIT_SPECIES);
