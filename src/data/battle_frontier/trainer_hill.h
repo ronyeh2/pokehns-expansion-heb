@@ -4729,7 +4729,7 @@ static const struct TrainerHillFloor sFloors_Expert[] = {
                         },
                     [1] =
                         {
-                            .name = _("גאבייט"),
+                            .name = _("גאווייט"),
                             .facilityClass = FACILITY_CLASS_PKMN_RANGER_M,
                             .speechBefore = {EC_WORD_WAHAHAHA, EC_WORD_YOU, EC_WORD_CAN_T, EC_WORD_STOP, EC_WORD_ME, EC_WORD_EXCL},
                             .speechWin = {EC_WORD_WOWEE, EC_WORD_EXCL, EC_EMPTY_WORD, EC_WORD_I_AM, EC_WORD_AWESOME, EC_WORD_COOL},
