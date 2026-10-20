@@ -6472,3 +6472,8 @@ name,NAME_EMERALD_(VERSION_PLACEHOLDER),EMERALD (version placeholder),,ברקת,
 name,NAME_GREEN_(PLACEHOLDER),GREEN (placeholder),,גרין,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_SILVER_(RIVAL_DEFAULT_NAME),SILVER (rival default name),,סילבר,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
 name,NAME_GIGANTAMAX_(TERM),Gigantamax (term),,ג'ימקס,proposed,"transliterated for the last English strings (apprentices, contest lady, speakers, menu terms)"
+speaker,RADIO_DJ_BUENA,BUENA,,בואנה,proposed,host of Buena's Password (src/data/text/radio_strings.h station name and speaker prefix; GoldenrodCity_RadioTower_2F_hns speaker prefix); translit of the HeartGold/SoulSilver name; ue = וא as bueno = בואנו (data/text/apprentice.inc:935); not a source constant
+speaker,RADIO_DJ_FERN,FERN,,פרן,proposed,radio DJ on Pokémon Music (src/data/text/radio_strings.h); speaker prefix and name in the intro; translit; not a source constant
+speaker,RADIO_DJ_LILY,LILY,,לילי,proposed,radio DJ of Places and People (src/data/text/radio_strings.h name in the intro; SSAqua_RoomNE_hns Pokémaniac dialogue); translit; not a source constant
+speaker,RADIO_DJ_REED,REED,,ריד,proposed,radio host of the Lucky Channel (src/data/text/radio_strings.h); speaker prefix; translit (ee = י); not a source constant
+term,TERM_NURSE_JOY,NURSE JOY,,האחות ג'וי,proposed,"the POKéMON CENTER nurse (src/option_menu.c FASTER JOY description); NURSE = האחות; JOY = ג'וי as the FR spelling of the name (JOY & MEG = ג'וי ומג, FR trainers.h:5599)"
