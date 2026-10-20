@@ -1543,7 +1543,7 @@ gText_MomExplainHPGetPotions::
 
 #if IS_HNS
 gText_RegisteredTrainerinPokeNav::
-	.string "רשמת ב-POKéGEAR את\n"
+	.string "רשמת בפוקיגיר את\n"
 	.string "{STR_VAR_1} {STR_VAR_2}.$"
 #else
 gText_RegisteredTrainerinPokeNav::
