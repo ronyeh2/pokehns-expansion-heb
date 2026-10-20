@@ -753,7 +753,7 @@ BattleFrontier_BattlePikeRoomNormal_Text_EnjoyRestOfChallenge_hns2_hns:
 
 BattleFrontier_BattlePikeRoomNormal_Text_ImThePikeQueen_hns:
 	.string "אני לוסי… אני החוק כאן…\n"
-	.string "כי אני מלכת הרומח…\p"
+	.string "כי אני מלכת השביל…\p"
 	.string "זה כבר ידוע לך, אבל\n"
 	.string "כדי להתקדם, עליך להביס אותי…\p"
 	.string "…אני לא אוהבת פטפוטי סרק.\n"
