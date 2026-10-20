@@ -140,6 +140,7 @@ struct TextPrinter
     u8 rtlMode:2;        // The window's WINDOW_RTL_* mode when the printer started
     u8 rtlNeedAxis:1;    // A new segment starts; in-place mode measures it at its first glyph
     u8 rtlSegmentLtr:1;  // In-place mode: this segment has no Hebrew, so it keeps its English layout
+    u8 rtlAfterRtl:1;    // The glyph printed last on this segment was a Hebrew letter
 
     struct TextPrinter *nextPrinter;
 

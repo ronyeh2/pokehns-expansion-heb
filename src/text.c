@@ -1114,8 +1114,10 @@ static u32 RtlClassAt(const u8 *str, u32 *length)
     return sRtlCharClass[str[0]];
 }
 
-// Whether a run of left-to-right text starts at str.
-static bool32 RtlStartsRun(const u8 *str)
+// Whether a run of left-to-right text starts at str. afterRtl: the glyph before it is a Hebrew
+// letter. A hyphen there is the Hebrew prefix hyphen ("ב-20", "by 20"), which stays with the
+// letter before it, not a minus sign, so the number starts its own run after it.
+static bool32 RtlStartsRun(const u8 *str, bool32 afterRtl)
 {
     u32 length, nextLength;
     u32 class;
@@ -1125,6 +1127,8 @@ static bool32 RtlStartsRun(const u8 *str)
     class = RtlClassAt(str, &length);
     if (class == RTL_CLASS_LTR || class == RTL_CLASS_DIGIT)
         return TRUE;
+    if (afterRtl && str[0] == CHAR_HYPHEN)
+        return FALSE;
     return class == RTL_CLASS_NUM_PREFIX && RtlClassAt(str + length, &nextLength) == RTL_CLASS_DIGIT;
 }
 
@@ -1315,6 +1319,11 @@ static u32 RtlMeasureSegment(const struct TextPrinter *textPrinter, const u8 *st
 // its mirrored partner.
 static void RtlPrepareGlyph(struct TextPrinter *textPrinter, const u8 *glyphStart, u16 *currChar)
 {
+    u32 length;
+    bool32 afterRtl = textPrinter->rtlAfterRtl;
+
+    textPrinter->rtlAfterRtl = RtlClassAt(glyphStart, &length) == RTL_CLASS_RTL;
+
     if (textPrinter->rtlNeedAxis)
     {
         textPrinter->rtlNeedAxis = FALSE;
@@ -1336,7 +1345,7 @@ static void RtlPrepareGlyph(struct TextPrinter *textPrinter, const u8 *glyphStar
     if (textPrinter->rtlRunGlyphs != 0)
         return;
 
-    if (RtlStartsRun(glyphStart))
+    if (RtlStartsRun(glyphStart, afterRtl))
     {
         RtlBeginRun(textPrinter, glyphStart);
         if (textPrinter->rtlRunGlyphs != 0)
@@ -1358,6 +1367,7 @@ static void RtlNewSegment(struct TextPrinter *textPrinter)
 {
     textPrinter->rtlNeedAxis = TRUE;
     textPrinter->rtlRunGlyphs = 0;
+    textPrinter->rtlAfterRtl = FALSE;
 }
 
 // Physical x of a glyph (or of a cleared span) that starts at logical x and is width wide.
@@ -1557,7 +1567,7 @@ static bool32 RtlReorderToVisual(const u8 *str, u8 *dest, u32 destSize, union Te
             }
             units[numUnits].start = str;
             units[numUnits].color = color;
-            if (RtlStartsRun(str))
+            if (RtlStartsRun(str, numUnits > 0 && RtlClassAt(units[numUnits - 1].start, &length) == RTL_CLASS_RTL))
             {
                 // The run ends at its last strong character, as in RtlBeginRun. Colour codes end
                 // a unit here, so each unit has one colour.
