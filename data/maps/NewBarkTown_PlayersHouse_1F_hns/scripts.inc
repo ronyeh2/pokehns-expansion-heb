@@ -307,12 +307,12 @@ NewBarkTown_PlayersHouse_1F_Text_ElmsLookingForYou:
 	.string "פרופ' אלם, חיפש אותך.\p"
 	.string "הוא אמר שהוא רוצה שתעשה\n"
 	.string "משהו בשבילו.\p"
-	.string "אה! כמעט שכחתי! ה-POKéGEAR\n"
+	.string "אה! כמעט שכחתי! הפוקיגיר\n"
 	.string "שלך חזר מהתיקון.\p"
 	.string "הנה, קח!$"
 
 NewBarkTown_PlayersHouse_1F_Text_ObtainedPokeGear:
-	.string "{PLAYER} קיבל את ה-POKéGEAR.$"
+	.string "{PLAYER} קיבל את הפוקיגיר.$"
 
 NewBarkTown_PlayersHouse_1F_Text_ExplainPokeGear:
 	.string "אמא: מספרי הטלפון שמורים\n"
