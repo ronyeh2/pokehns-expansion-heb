@@ -316,7 +316,7 @@ CherrygroveCity_Text_GuideGentMap:
 	.string "זה הבית שלי! תודה\n"
 	.string "שליווית אותי.\p"
 	.string "אה, ואם תלך לאיבוד, תבדוק\n"
-	.string "את המפה ב-POKéGEAR שלך!\p"
+	.string "את המפה בפוקיגיר שלך!\p"
 	.string "אני מאחל לך הצלחה במסע!$"
 
 CherrygroveCity_Text_GuideGentDecline:
