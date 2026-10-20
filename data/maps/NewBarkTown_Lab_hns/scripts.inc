@@ -762,7 +762,7 @@ NewBarkTown_Lab_Text_ElmDirections1_Register:
 
 NewBarkTown_Lab_Text_RegisteredElm:
 	.string "רשמת את פרופ' אלם\n"
-	.string "ב-POKéGEAR.$"
+	.string "בפוקיגיר.$"
 
 
 NewBarkTown_Lab_Text_ElmLetYourMonBattle:
