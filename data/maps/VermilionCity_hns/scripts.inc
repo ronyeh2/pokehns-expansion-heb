@@ -349,7 +349,7 @@ VermilionCity_Text_SnorlaxSleeping:
 	.string "סנורלקס נוחר בשלווה…$"
 
 VermilionCity_Text_RadioNearSnorlax:
-	.string "ה-POKéGEAR הונח ליד\n"
+	.string "הפוקיגיר הונח ליד\n"
 	.string "סנורלקס הישן…\p"
 	.string "…\p"
 	.string "סנורלקס התעורר!$"
