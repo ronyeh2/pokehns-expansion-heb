@@ -6083,7 +6083,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 230,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "אחרי שהפוקימון הזה עובר גיגנטמקס,\n"
+            "אחרי שהפוקימון הזה עובר ג'ימקס,\n"
             "האף העצום שלו מסוגל להרוס כליל\n"
             "מבנים גדולים במכה מוחצת אחת."),
         .pokemonScale = 275,
@@ -6784,7 +6784,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_INTREPID_SWORD, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("זאסיאן"),
+        .speciesName = _("זאשיאן"),
         .cryId = CRY_ZACIAN_HERO,
         .natDexNum = NATIONAL_DEX_ZACIAN,
         .categoryName = _("לוחם"),
@@ -6850,7 +6850,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
         .abilities = { ABILITY_INTREPID_SWORD, ABILITY_NONE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BLUE,
-        .speciesName = _("זאסיאן"),
+        .speciesName = _("זאשיאן"),
         .cryId = CRY_ZACIAN_CROWNED,
         .natDexNum = NATIONAL_DEX_ZACIAN,
         .categoryName = _("לוחם"),
@@ -7459,7 +7459,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .weight = 0,
         .description = COMPOUND_STRING(
             "בזמן שהוא מחכה לרגע הנכון לשחרר את כוח\n"
-            "הגיגנטמקס שלו, הפוקימון הזה עומד באיזון\n"
+            "הג'ימקס שלו, הפוקימון הזה עומד באיזון\n"
             "מושלם על רגל אחת, בלי לזוע אפילו מעט."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
