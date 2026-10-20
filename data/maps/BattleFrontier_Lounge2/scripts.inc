@@ -216,11 +216,11 @@ BattleFrontier_Lounge2_Text_PikeQueenIsThere::
 	.string "בטוח שלא ידעת את זה!\p"
 	.string "אחת מהמאמנים המובילים שסקוט\n"
 	.string "מכנה ”מוחות החזית” נמצאת שם.\p"
-	.string "מאמנת מפחידה שנקראת מלכת הרומח\n"
+	.string "מאמנת מפחידה שנקראת מלכת השביל\n"
 	.string "היא זו שמנהלת את המקום.$"
 
 BattleFrontier_Lounge2_Text_PikeQueenSilverMons::
-	.string "כבר התמודדת מול מלכת הרומח?\p"
+	.string "כבר התמודדת מול מלכת השביל?\p"
 	.string "אומרים שכשמצב הרוח שלה טוב,\n"
 	.string "היא משתמשת בשלושת הפוקימונים האלה:\p"
 	.string "פוקימון נחש ניבים מסוג רעל,\n"
@@ -228,7 +228,7 @@ BattleFrontier_Lounge2_Text_PikeQueenSilverMons::
 	.string "ופוקימון עדין מסוג מים.$"
 
 BattleFrontier_Lounge2_Text_PikeQueenGoldMons::
-	.string "כבר התמודדת מול מלכת הרומח\n"
+	.string "כבר התמודדת מול מלכת השביל\n"
 	.string "כשהיא רצינית?\p"
 	.string "אומרים שכשהיא ממש מעוצבנת,\n"
 	.string "היא משתמשת בשלושת הפוקימונים האלה:\p"
