@@ -525,8 +525,8 @@ Alola_Akala_TotemBattle_Text_3:
 	.string "הוא נמלט לאנשהו…$"
 
 Alola_Akala_Totem_sign_Text_0:
-	.string "מהטוטם נובעת אנרגיה\n"
-	.string "חזקה…\p"
+	.string "מהטוטם נובעת\n"
+	.string "אנרגיה חזקה…\p"
 	.string "לגעת בטוטם כדי להשתגר\n"
 	.string "לאי אחר?$"
 
