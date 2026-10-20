@@ -42,7 +42,7 @@ static const u8 sText_BerryProgramWillBeUpdatedPressA[] = _("תוכנת הפיר
                                                             "Ruby/Sapphire שלך תעודכן.\n"
                                                             "{COLOR RED}{SHADOW LIGHT_RED}יש ללחוץ על כפתור A.");
 static const u8 sText_EnsureGBAConnectionMatches[] = _("נא לוודא שהחיבור של מכשיר\n"
-                                                       "ה-Game Boy Advance שלך תואם לתמונה.\n"
+                                                       "הגיים בוי אדוונס שלך תואם לתמונה.\n"
                                                        "{COLOR RED}{SHADOW LIGHT_RED}כן: יש ללחוץ על כפתור A.\n"
                                                        "לא: יש לכבות את המכשיר ולנסות שוב.");
 static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("יש להדליק את פוקימון Ruby/Sapphire\n"
@@ -52,7 +52,7 @@ static const u8 sText_TurnOffPowerHoldingStartSelect[] = _("יש להדליק א
 static const u8 sText_TransmittingPleaseWait[] = _("מתבצע שידור. נא להמתין.\n"
                                                    "{COLOR RED}{SHADOW LIGHT_RED}אין לכבות את המכשיר ואין לנתק\n"
                                                    "את כבל הקישור של\n"
-                                                   "ה-Game Boy Advance.");
+                                                   "הגיים בוי אדוונס.");
 static const u8 sText_PleaseFollowInstructionsOnScreen[] = _("יש לפעול לפי ההוראות שעל המסך\n"
                                                              "של פוקימון Ruby/Sapphire.");
 static const u8 sText_TransmissionFailureTryAgain[] = _("השידור נכשל.\n"
