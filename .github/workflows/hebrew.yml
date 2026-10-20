@@ -74,7 +74,17 @@ jobs:
       - name: make check
         # Upstream 2.0.6 does not pass its own suite; check_tests.py fails only on a test that is
         # not in tools/hebrew/data/known_test_failures.txt (the tests upstream fails).
+        # Two jobs: the full hns test build runs a hosted runner out of memory at -j4.
+        timeout-minutes: 150
         run: |
           set +e
-          make check BUILD=hns -j$(nproc) > check.log 2>&1
+          make check BUILD=hns -j2 > check.log 2>&1
           python3 tools/hebrew/check_tests.py check.log
+
+      - name: Keep the test log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: check-log
+          path: check.log
+          retention-days: 14
