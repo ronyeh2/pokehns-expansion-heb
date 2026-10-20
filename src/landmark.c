@@ -19,7 +19,7 @@ static const u8 LandmarkName_MagmaHideout[] = _("MAGMA HIDEOUT"); //Unused
 
 static const struct Landmark Landmark_FlowerShop = {COMPOUND_STRING("חנות הפרחים"), FLAG_LANDMARK_FLOWER_SHOP};
 static const struct Landmark Landmark_PetalburgWoods = {COMPOUND_STRING("יער PETALBURG"), -1};
-static const struct Landmark Landmark_MrBrineysCottage = {COMPOUND_STRING("הבקתה של מר BRINEY"), FLAG_LANDMARK_MR_BRINEY_HOUSE};
+static const struct Landmark Landmark_MrBrineysCottage = {COMPOUND_STRING("הבקתה של מר ברייני"), FLAG_LANDMARK_MR_BRINEY_HOUSE};
 static const struct Landmark Landmark_AbandonedShip = {COMPOUND_STRING("הספינה הנטושה"), FLAG_LANDMARK_ABANDONED_SHIP};
 static const struct Landmark Landmark_SeashoreHouse = {COMPOUND_STRING("בית החוף"), FLAG_LANDMARK_SEASHORE_HOUSE};
 static const struct Landmark Landmark_SlateportBeach = {COMPOUND_STRING("חוף SLATEPORT"), -1};
