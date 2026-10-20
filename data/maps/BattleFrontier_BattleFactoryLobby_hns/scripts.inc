@@ -381,7 +381,7 @@ BattleFrontier_BattleFactoryLobby_Text_ReturnMons_hns:
 	.string "for our rental POKéMON.$"
 
 BattleFrontier_BattleFactoryLobby_Text_CongratsSevenWins_hns:
-	.string "ברכות! ניצחת בשבעה קרבות\n"
+	.string "מזל טוב! ניצחת בשבעה קרבות\n"
 	.string "רצופים באתגר החלפת הקרב!$"
 
 @ Unused
@@ -444,7 +444,7 @@ BattleFrontier_BattleFactoryLobby_Text_ExplainDoublesChallenge_hns:
 	.string "תוביל לפסילה.$"
 
 BattleFrontier_BattleFactoryLobby_Text_CongratsForDefeatingHead_hns:
-	.string "ברכות על הניצחון על ראש המפעל\n"
+	.string "מזל טוב על הניצחון על ראש המפעל\n"
 	.string "ועל הזכייה בשבעה קרבות ברצף!$"
 
 BattleFrontier_BattleFactoryLobby_Text_AwardBattlePoints_hns:
