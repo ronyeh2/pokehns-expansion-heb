@@ -136,6 +136,16 @@ static const u16 sMapPopUp_PaletteTable[][16] =
 #endif
 };
 
+#if TEXT_RTL && IS_HNS
+// The first column right of the character drawn at the window's left end, in the rows the name
+// is printed in, for the themes whose Hebrew names are wide enough to run into it (0: centre
+// the name in the whole window). The name is centred in the part of the window right of it.
+static const u8 sMapPopUp_RtlNameLeft[ARRAY_COUNT(sMapPopUp_Table)] =
+{
+    [MAPPOPUP_THEME_TOWN_HNS] = 16,
+};
+#endif
+
 static const u16 sMapPopUp_Palette_Underwater[16] = INCBIN_U16("graphics/map_popup/underwater.gbapal");
 
 // -1 in the size excludes MAPSEC_NONE.
@@ -769,7 +779,14 @@ static void ShowMapNamePopUpWindow(void)
     }
     else
     {
+#if TEXT_RTL && IS_HNS
+        // The window is mirrored around its 80 px, so logical x draws the name at 80 - x - width:
+        // centring it in 80 - left px puts it in the columns left..79.
+        x = GetStringCenterAlignXOffset(FONT_NARROW, withoutPrefixPtr,
+                                        80 - sMapPopUp_RtlNameLeft[sMapSectionToThemeId[gMapHeader.regionMapSectionId]]);
+#else
         x = GetStringCenterAlignXOffset(FONT_NARROW, withoutPrefixPtr, 80);
+#endif
         AddTextPrinterParameterized(GetMapNamePopUpWindowId(), FONT_NARROW, mapDisplayHeader, x, 3, TEXT_SKIP_DRAW, NULL);
         CopyWindowToVram(GetMapNamePopUpWindowId(), COPYWIN_FULL);
     }
