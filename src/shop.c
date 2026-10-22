@@ -1311,9 +1311,10 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
 }
 
 #if TEXT_RTL
-// The mirrored prices end at the list window's left edge, and the frame's shading touches it there.
-// Keep the 1 px gap the English prices have before the right frame.
-#define BUY_MENU_PRICE_RIGHT 119
+// The mirrored prices end at the list window's left edge, where the frame's dark shading touches the
+// window. On the right, the English prices end 3 px before the shading (their shadow column and the
+// frame's two light inner columns), so start the mirrored prices 3 px into the window.
+#define BUY_MENU_PRICE_RIGHT 117
 #else
 #define BUY_MENU_PRICE_RIGHT 120
 #endif

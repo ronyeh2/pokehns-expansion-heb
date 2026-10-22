@@ -1274,6 +1274,13 @@ static void Task_DebugMenuProcessInput(u8 taskId)
             ClearStdWindowAndFrameToTransparent(data->modifyWindowId, TRUE);
             RemoveWindow(data->modifyWindowId);
             DestroyModifyArrows(data);
+#if TEXT_RTL
+            // The cleared frame around the mirrored modify window runs over the battler window's
+            // bottom row and the left end of the secondary list's first row: put both back.
+            PutWindowTilemap(data->battlerWindowId);
+            PutWindowTilemap(data->secondaryListWindowId);
+            CopyBgTilemapBufferToVram(0);
+#endif
             data->activeWindow = ACTIVE_WIN_SECONDARY;
         }
         else if (JOY_NEW(DPAD_RIGHT))
