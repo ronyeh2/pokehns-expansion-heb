@@ -702,7 +702,18 @@ static void DrawPokeblockMenuTitleText(void)
     u8 i;
 
     const u8 *itemName = GetItemName(ITEM_POKEBLOCK_CASE);
+#if TEXT_RTL
+    // The Hebrew name is a few pixels wider than the 72 px title in FONT_NORMAL: narrow it to fit.
+    u32 fontId = GetFontIdToFit(itemName, FONT_NORMAL, 0, 0x48);
+    AddTextPrinterParameterized4(WIN_TITLE, fontId, GetStringCenterAlignXOffset(fontId, itemName, 0x48), 1, 0, 0, sTextColor, 0, itemName);
+
+    // The flavour cubes are tiles left of these windows: keep each label at its English place,
+    // beside its own cube, and only read it right to left.
+    for (i = WIN_SPICY; i <= WIN_SOUR; i++)
+        SetWindowRtlMode(i, WINDOW_RTL_IN_PLACE);
+#else
     PrintOnPokeblockWindow(WIN_TITLE, itemName, GetStringCenterAlignXOffset(FONT_NORMAL, itemName, 0x48));
+#endif
 
     PrintOnPokeblockWindow(WIN_SPICY,  COMPOUND_STRING("חריף"),  0);
     PrintOnPokeblockWindow(WIN_DRY,    COMPOUND_STRING("יבש"),    0);
