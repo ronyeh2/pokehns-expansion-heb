@@ -147,7 +147,7 @@ Route43_Text_FisherMarvinBeaten:
     .string "אני מרגיש יותר טוב.$"
 
 Route43_Text_FisherMarvinAfter:
-    .string "כדור הפיתיון של KURT הוא הכי טוב\n"
+    .string "כדור הפיתיון של קורט הוא הכי טוב\n"
     .string "לתפיסת פוקימונים שעלו בחכה.\p"
     .string "הוא יעיל הרבה יותר\n"
     .string "מאולטרה בול.$"
