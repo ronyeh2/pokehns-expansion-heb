@@ -152,10 +152,10 @@ BugContest_Text_WhiteOut:
 	.string "{PLAYER} הודח מהתחרות.$"
 
 BugContest_Text_First1:
-	.string "במקום השלישי: מאמנת העל BELINDA,\n"
+	.string "במקום השלישי: מאמנת העל בלינדה,\n"
 	.string "שתפסה בטרפרי מפרפר!$"
 BugContest_Text_First2:
-	.string "במקום השני: לוכד החרקים SHAUN,\n"
+	.string "במקום השני: לוכד החרקים שון,\n"
 	.string "שתפס פינסיר מתפתל!$"
 BugContest_Text_First3:
 	.string "הזוכה בתחרות לכידת החרקים\n"
@@ -164,7 +164,7 @@ BugContest_Text_First3:
 	.string "{STR_VAR_1} ענק!$"
 
 BugContest_Text_Second1:
-	.string "במקום השלישי: מאמנת העל BELINDA,\n"
+	.string "במקום השלישי: מאמנת העל בלינדה,\n"
 	.string "שתפסה בטרפרי מפרפר!$"
 BugContest_Text_Second2:
 	.string "במקום השני: {PLAYER},\n"
@@ -172,19 +172,19 @@ BugContest_Text_Second2:
 BugContest_Text_Second3:
 	.string "הזוכה בתחרות לכידת החרקים\n"
 	.string "הוא…\p"
-	.string "לוכד החרקים SHAUN, שתפס\n"
+	.string "לוכד החרקים שון, שתפס\n"
 	.string "פינסיר ענק!$"
 
 BugContest_Text_Third1:
 	.string "במקום השלישי: {PLAYER},\n"
 	.string "שתפס {STR_VAR_1} מפרפר!$"
 BugContest_Text_Third2:
-	.string "במקום השני: מאמנת העל BELINDA,\n"
+	.string "במקום השני: מאמנת העל בלינדה,\n"
 	.string "שתפסה בטרפרי מתפתל!$"
 BugContest_Text_Third3:
 	.string "הזוכה בתחרות לכידת החרקים\n"
 	.string "הוא…\p"
-	.string "לוכד החרקים SHAUN, שתפס\n"
+	.string "לוכד החרקים שון, שתפס\n"
 	.string "פינסיר ענק!$"
 
 BugContest_Text_TakePartInFuture:
