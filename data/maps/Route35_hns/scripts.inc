@@ -160,9 +160,9 @@ Route35_Text_BirdKeeperBryanBeaten:
 Route35_Text_BirdKeeperBryanAfter:
 	.string "יש פוקימונים שבורחים מיד.\p"
 	.string "כדאי לנסות לתפוס אותם\n"
-	.string "בכדור זריז של KURT.\p"
+	.string "בכדור זריז של קורט.\p"
 	.string "בכל פעם שאני מוצא פירות אספר,\n"
-	.string "אני מביא אותם ל-KURT.\p"
+	.string "אני מביא אותם לקורט.\p"
 	.string "הוא הופך אותם לכדור מיוחד.$"
 
 Route35_Text_JugglerIrwinSeen:
