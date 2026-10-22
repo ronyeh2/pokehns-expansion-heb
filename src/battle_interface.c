@@ -2086,6 +2086,11 @@ static u8 GetStatusIconForBattlerId(u8 statusElementId, enum BattlerId battler)
     return ret;
 }
 
+#if TEXT_RTL
+// Right end of the Safari box's text, in healthbox sprite pixels: the box's white inside ends at 97.
+#define SAFARI_BOX_TEXT_RIGHT 94
+#endif
+
 static void UpdateSafariBallsTextOnHealthbox(u8 healthboxSpriteId)
 {
     if (UseGen4BattleUI())
@@ -2108,7 +2113,13 @@ static void UpdateSafariBallsTextOnHealthbox(u8 healthboxSpriteId)
         gSprites[healthboxSpriteId].data[1] = healthboxSpriteId2;
         gSprites[healthboxSpriteId2].data[1] = SPRITE_NONE;
 
+#if TEXT_RTL
+        // Mirror the box: the title right-aligned, 4 px inside the box's right edge as the English
+        // title is inside its left edge, and the count at the left (UpdateLeftNoOfBallsTextOnHealthbox).
+        AddSpriteTextPrinterParameterized6(healthboxSpriteId, FONT_SMALL, SAFARI_BOX_TEXT_RIGHT - GetStringWidth(FONT_SMALL, gText_SafariBalls, 0), 3, 0, 0, sHealthBoxTextColor, 0, gText_SafariBalls);
+#else
         AddSpriteTextPrinterParameterized6(healthboxSpriteId, FONT_SMALL, 16, 3, 0, 0, sHealthBoxTextColor, 0, gText_SafariBalls);
+#endif
 
         gSprites[healthboxSpriteId].data[1] = savedValue1;
         gSprites[healthboxSpriteId2].data[1] = savedValue2;
@@ -2143,8 +2154,15 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
         gSprites[healthboxSpriteId].data[1] = healthboxSpriteId2;
         gSprites[healthboxSpriteId2].data[1] = SPRITE_NONE;
 
+#if TEXT_RTL
+        // The count at the left, where the English title starts, and cleared up to where the
+        // English clear ends.
+        FillSpriteRectColor(healthboxSpriteId, 16, 19, 55 + 31 - 16, 12, HEALTHBOX_BG_INDEX);
+        AddSpriteTextPrinterParameterized6(healthboxSpriteId, FONT_SMALL, 16, 19, 0, 0, sHealthBoxTextColor, 0, text);
+#else
         FillSpriteRectColor(healthboxSpriteId, 55, 19, 31, 12, HEALTHBOX_BG_INDEX);
         AddSpriteTextPrinterParameterized6(healthboxSpriteId, FONT_SMALL, 55, 19, 0, 0, sHealthBoxTextColor, 0, text);
+#endif
 
         gSprites[healthboxSpriteId].data[1] = savedValue1;
         gSprites[healthboxSpriteId2].data[1] = savedValue2;
