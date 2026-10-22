@@ -281,7 +281,14 @@ static void AddBerryIcon(u16 berryItem)
     if (spriteId != MAX_SPRITES)
     {
         sBerryIconSpriteId = spriteId;
+#if TEXT_RTL
+        // The apricorn window (screen x 8-88) is mirrored, so the icon goes to the mirrored spot at its
+        // right end, before the count as a Hebrew reader reads it. The icon art fills the left 24 of
+        // the sprite's 32 pixels, so the art (English 9-26) is what is mirrored: 69-86.
+        gSprites[spriteId].x = 82;
+#else
         gSprites[spriteId].x = 22;
+#endif
         gSprites[spriteId].y = 24;
         gSprites[spriteId].oam.priority = 0;
     }
@@ -317,7 +324,14 @@ static void AddQuantityBerryIcon(u16 berryItem)
     if (spriteId != MAX_SPRITES)
     {
         sQuantityBerryIconSpriteId = spriteId;
+#if TEXT_RTL
+        // The quantity window moves to screen x 120-200 and is mirrored, so the icon sits at its left
+        // end, past the cost, as the English one sits at the right end of 144-224 (art 210-222 there,
+        // 121-133 here).
+        gSprites[spriteId].x = 130;
+#else
         gSprites[spriteId].x = 219;
+#endif
         gSprites[spriteId].y = 99;
         gSprites[spriteId].oam.priority = 0;
         SetOamMatrixRotationScaling(gSprites[spriteId].oam.matrixNum, 192, 192, 0);
