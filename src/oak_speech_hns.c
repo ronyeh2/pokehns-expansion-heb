@@ -580,7 +580,7 @@ static void Task_NewGameHnsSpeech_SlideInNewGenderSprite(u8 taskId)
 
 static void Task_NewGameHnsSpeech_ChallengeDisclaimer(u8 taskId)
 {
-    static const u8 sText_Disclaimer[] = _("איזה אתגר מתאים לך?\p{COLOR RED}את ההגדרות הבאות אפשר לשנות\nדרך המחשב אחרי שהמשחק מתחיל.\lאבל אחרי תחילת המשחק, בהגדרות\lNuzlocke, המצב האקראי, הקושי\lוהאתגרים אפשר רק להקל, לא להחמיר.");
+    static const u8 sText_Disclaimer[] = _("איזה אתגר מתאים לך?\p{COLOR RED}את ההגדרות הבאות אפשר לשנות\nדרך המחשב אחרי שהמשחק מתחיל.\lאבל אחרי תחילת המשחק, בהגדרות\lנאזלוק, המצב האקראי, הקושי\lוהאתגרים אפשר רק להקל, לא להחמיר.");
     NewGameHnsSpeech_ClearWindow(0);
     StringCopy(gStringVar4, sText_Disclaimer);
     AddTextPrinterWithCustomSpeedForMessage(FALSE, 2);
