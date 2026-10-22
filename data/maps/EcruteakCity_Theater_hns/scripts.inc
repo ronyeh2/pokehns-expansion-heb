@@ -965,7 +965,7 @@ EcruteakCity_Theater_Text_NaokoSeen:
 	.string "אני נאוקו, זאת שלא כל כך טובה\n"
 	.string "בהתמצאות.\p"
 	.string "ראיתי אותך מביס את צוות רוקט\n"
-	.string "כשהיה KURT בצרה בבאר סלופוק.\p"
+	.string "כשהיה קורט בצרה בבאר סלופוק.\p"
 	.string "אני מאתגרת אותך ואת הפוקימונים שלך!$"
 
 EcruteakCity_Theater_Text_MikiSeen:
