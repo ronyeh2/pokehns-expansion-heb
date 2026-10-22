@@ -1427,7 +1427,18 @@ static void InitVoltorbFlipSprites(void)
 
 static void InitVoltorbFlipWindow(void)
 {
+#if TEXT_RTL
+    u32 i;
+#endif
+
     InitWindows(sVoltorbFlipWinTemplates);
+#if TEXT_RTL
+    // The row and column totals sit beside the Voltorb icon in each coloured box, and the level
+    // label belongs inside the notes panel, which ends before its window does: keep the English
+    // places and only read the label right to left.
+    for (i = WIN_INFO_RED_X; i <= WIN_LEVEL_DISPLAY; i++)
+        SetWindowRtlMode(i, WINDOW_RTL_IN_PLACE);
+#endif
     DeactivateAllTextPrinters();
     LoadPalette(gStandardMenuPalette, 0xF0, 0x20);
 
