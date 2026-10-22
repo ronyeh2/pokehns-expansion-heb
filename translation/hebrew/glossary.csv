@@ -4315,7 +4315,7 @@ item,ITEM_COIN_CASE,COIN CASE,ארנק מטבעות,ארנק מטבעות,inheri
 item,ITEM_POWDER_JAR,POWDER JAR,צנצנת אבקה,צנצנת אבקה,inherited,FR match: constant
 item,ITEM_WAILMER_PAIL,WAILMER PAIL,דלי ווילמר,דלי ווילמר,inherited,FR match: constant
 item,ITEM_POKE_RADAR,POKé RADAR,,רדאר פוקימון,proposed,"POKé X = X פוקימון as FR POKé DOLL בובת פוקימון, POKé FLUTE חליל פוקימון; reviewed"
-item,ITEM_POKEBLOCK_CASE,{POKEBLOCK} CASE,{POKEBLOCK} קופסת,קופסת {POKEBLOCK},inherited,FR match: constant; FR wrote the placeholder first to suit its glyph-by-glyph RTL renderer; reordered for logical storage (UNVERIFIED on screen)
+item,ITEM_POKEBLOCK_CASE,{POKEBLOCK} CASE,{POKEBLOCK} קופסת,קופסת פוקיבלוק,proposed,"FR kept the {POKEBLOCK} glyph pair; the Hebrew word פוקיבלוק replaces it, as in the battle messages, the block names and the blender; 74 px in FONT_NORMAL, so the Pokéblock case title narrows the font (src/pokeblock.c)"
 item,ITEM_SOOT_SACK,SOOT SACK,שק פיח,שק פיח,inherited,FR match: constant
 item,ITEM_POKE_FLUTE,POKé FLUTE,חליל פוקימון,חליל פוקימון,inherited,FR match: constant
 item,ITEM_FAME_CHECKER,FAME CHECKER,בודק תהילה,בודק תהילה,inherited,FR match: constant
@@ -6482,6 +6482,8 @@ name,NAME_ZIGG,ZIGG,,זיג,proposed,"BattleFrontier_OutsideEast_hns/scripts.inc
 place,PLACE_HAUOLI_CITY,HAU'OLI CITY,,העיר האואולי,proposed,"MelemeleIsle_hns/scripts.inc:723; CITY = העיר X; the glottal ' = א as in אולאולה; au = או"
 name,NAME_ELIO,ELIO,,אליו,proposed,"Melemele_House_5_hns/scripts.inc:46; transliterated, initial e = א, -io = יו"
 name,NAME_BRINEY,BRINEY,,ברייני,proposed,"CAPT./MR. BRINEY; event_ticket_2.inc, match_call.inc, landmark.c; i = יי, final y = י"
+name,NAME_KURT,KURT,,קורט,proposed,"the Apricorn ball maker of Azalea Town; speaker prefix in AzaleaTown_KurtsHouse_hns and SlowpokeWell_B1F_hns, gText_KurtGettingStarted (src/strings.c), and dialogue in Azalea, Route 30/35/43, the Radio Tower quiz and the Ecruteak Theater; transliterated as the usual Hebrew spelling of the given name Kurt, u = ו; KURTIS קרטיס leaves ur unwritten, but קרט is not readable as a one-syllable name"
+name,NAME_BELINDA,BELINDA,,בלינדה,proposed,"the Cooltrainer contestant in the Bug-Catching Contest (data/scripts/bug_contest.inc placements, NationalPark_BugContest_hns speaker); transliterated, be = ב, then LINDA as TRNAME_LINDA לינדה"
 term,TERM_CONGRATULATIONS,Congratulations,,מזל טוב,proposed,see DECISIONS.md Q6
 term,TERM_TAG_TEAM,tag team,,צוות זוגי,proposed,see DECISIONS.md Q12
 term,TERM_TAG_PARTNER,tag partner,,שותף לצוות,proposed,see DECISIONS.md Q12
