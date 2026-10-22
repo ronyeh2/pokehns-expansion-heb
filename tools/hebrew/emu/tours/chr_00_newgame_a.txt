@@ -51,8 +51,8 @@ press R
 press R
 press R
 # ---- NUZLOCKE: OFF -> EASY -> NORMAL; the sub rows keep their defaults (0 = ON / cemetery)
-press RIGHT
-press RIGHT
+press ROWNEXT
+press ROWNEXT
 snap chr_nga_nuz_r00
 press DOWN
 snap chr_nga_nuz_r01
@@ -64,7 +64,7 @@ press DOWN
 snap chr_nga_nuz_r04
 press DOWN
 snap chr_nga_nuz_r05
-press RIGHT                               # Infinite Rare Candy defaults to OFF: ON
+press ROWNEXT                               # Infinite Rare Candy defaults to OFF: ON
 snap chr_nga_nuz_r05_on
 press UP
 press UP
@@ -74,11 +74,11 @@ press UP
 press R
 # ---- DIFFICULTY: level cap NORMAL (row 1), player items NO (row 3), Escape Rope/Dig NO (row 10)
 press DOWN
-press RIGHT
+press ROWNEXT
 snap chr_nga_diff_r01
 press DOWN
 press DOWN
-press RIGHT
+press ROWNEXT
 snap chr_nga_diff_r03
 press DOWN
 press DOWN
@@ -87,7 +87,7 @@ press DOWN
 press DOWN
 press DOWN
 press DOWN
-press RIGHT
+press ROWNEXT
 snap chr_nga_diff_r10
 press UP
 press UP
@@ -101,21 +101,21 @@ press UP
 press UP
 press R
 # ---- CHALLENGES: Pokemon Center NO (row 0), one type 19 (OFF) -> 9 (FIRE) (row 3)
-press RIGHT
+press ROWNEXT
 snap chr_nga_chal_r00
 press DOWN
 press DOWN
 press DOWN
-press LEFT
-press LEFT
-press LEFT
-press LEFT
-press LEFT
-press LEFT
-press LEFT
-press LEFT
-press LEFT
-press LEFT
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
+press ROWPREV
 snap chr_nga_chal_r03
 press UP
 press UP

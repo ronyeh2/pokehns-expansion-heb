@@ -49,21 +49,21 @@ waitquiet
 press R
 press R
 # ---- RANDOMIZER: master switch ON (row 0), starter/gift ON (row 1)
-press RIGHT
+press ROWNEXT
 snap chr_ngh_rand_r00
 press DOWN
-press RIGHT
+press ROWNEXT
 snap chr_ngh_rand_r01
 press UP
 press R
 # ---- NUZLOCKE: HARD
-press RIGHT
-press RIGHT
-press RIGHT
+press ROWNEXT
+press ROWNEXT
+press ROWNEXT
 snap chr_ngh_nuz_r00
 press R
 # ---- DIFFICULTY: party limit 5 (row 0)
-press RIGHT
+press ROWNEXT
 snap chr_ngh_diff_r00
 press R
 snap chr_ngh_chal_page

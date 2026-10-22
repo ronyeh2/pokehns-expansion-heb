@@ -141,7 +141,7 @@ MahoganyTown_Gym_Text_PryceImpressed:
     .string "התג הזה מגיע לך בצדק!$"
 
 MahoganyTown_Gym_Text_ReceivedBadge:
-    .string "{PLAYER} קיבל את GLACIERBADGE.$"
+    .string "{PLAYER} קיבל את תג קרחון.$"
 
 MahoganyTown_Gym_Text_GlacierBadgeSpeech:
     .string "התג הזה מעלה את ההתקפה\n"

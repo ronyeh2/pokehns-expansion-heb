@@ -681,10 +681,10 @@ AzaleaTown_Gym_Text_BugsyBeaten:
 	.string "טוב, ניצחת. התג הזה שלך.$"
 
 AzaleaTown_Gym_Text_ReceivedHiveBadge:
-	.string "{PLAYER} קיבל את HIVEBADGE.$"
+	.string "{PLAYER} קיבל את תג כוורת.$"
 
 AzaleaTown_Gym_Text_HiveBadgeSpeech:
-	.string "אתה יודע מה היתרונות של HIVEBADGE?\p"
+	.string "אתה יודע מה היתרונות של תג כוורת?\p"
 	.string "כשהוא אצלך, פוקימונים עד רמה 30\n"
 	.string "יצייתו לך, גם כאלה שהתקבלו בהחלפה.\p"
 	.string "פוקימונים שיודעים חיתוך יוכלו\n"
