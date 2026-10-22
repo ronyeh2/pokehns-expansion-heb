@@ -276,10 +276,10 @@ KurtsHouse_Text_KurtMakingBallsMustWait:
 	.string "בכל אופן, הם בבאר, וחותכים\n"
 	.string "זנבות סלופוק כדי למכור אותם!\p"
 	.string "אז אני הולך ללמד אותם לקח כואב!\p"
-	.string "החזיקו מעמד, סלופוק! KURT הזקן בדרך!$"
+	.string "החזיקו מעמד, סלופוק! קורט הזקן בדרך!$"
 
 KurtsHouse_Text_KurtHonoredToMakeBalls:
-	.string "KURT: היי, {PLAYER}!\p"
+	.string "קורט: היי, {PLAYER}!\p"
 	.string "התנהגת כמו גיבור אמיתי בבאר.\p"
 	.string "אני אוהב את הסגנון שלך!\p"
 	.string "זה יהיה לי לכבוד להכין\n"
@@ -288,20 +288,20 @@ KurtsHouse_Text_KurtHonoredToMakeBalls:
 	.string "אבל הנה, זה בשבילך.$"
 
 KurtsHouse_Text_KurtBallsFromApricorns:
-	.string "KURT: אני מכין כדורים מפירות.\p"
+	.string "קורט: אני מכין כדורים מפירות.\p"
 	.string "אפשר לאסוף אותם מעצים\n"
 	.string "ולהביא אותם אליי.\p"
 	.string "אני אכין מהם פוקיבולים.$"
 
 KurtsHouse_Text_KurtAskYouHaveAnApricorn:
-	.string "KURT: יש לך פירות בשבילי?\p"
+	.string "קורט: יש לך פירות בשבילי?\p"
 	.string "יופי! אהפוך אותם לפוקיבולים.$"
 
 KurtsHouse_Text_KurtThatsALetdown:
 	.string "KURT: I don't see any {STR_VAR_1}s!$"
 
 KurtsHouse_Text_KurtFinishedPlural:
-	.string "KURT: {PLAYER}!\n"
+	.string "קורט: {PLAYER}!\n"
 	.string "הכדורים מוכנים: {STR_VAR_1}. הנה!$"
 
 KurtsHouse_Text_KurtObtainedPlural:
@@ -309,7 +309,7 @@ KurtsHouse_Text_KurtObtainedPlural:
 	.string "יחידות של {STR_VAR_1}!$"
 
 KurtsHouse_Text_KurtFinishedSingular:
-	.string "KURT: {PLAYER}!\n"
+	.string "קורט: {PLAYER}!\n"
 	.string "הכדור מוכן: {STR_VAR_1}. הנה!$"
 
 KurtsHouse_Text_KurtObtainedSingular:
@@ -317,7 +317,7 @@ KurtsHouse_Text_KurtObtainedSingular:
 	.string "{STR_VAR_1}!$"
 
 KurtsHouse_Text_KurtTurnedOutGreat:
-	.string "KURT: זה יצא מצוין.\p"
+	.string "קורט: זה יצא מצוין.\p"
 	.string "כדאי לנסות לתפוס איתו פוקימונים.$"
 
 KurtsHouse_Text_KurtWhatIsThat:
