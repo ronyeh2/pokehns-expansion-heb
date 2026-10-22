@@ -25,7 +25,7 @@ Route30_BerryHouse_Text_MonEatBerries:
 	.string "כשהם אוכלים פירות.\p"
 	.string "הם יכולים אפילו לאכול בקרב\n"
 	.string "פירות שהם מחזיקים.\p"
-	.string "בנוסף, KURT בעיירה אזייליה\n"
+	.string "בנוסף, קורט בעיירה אזייליה\n"
 	.string "יכול להפוך פירות לכדורים.\p"
 	.string "הנה. אתן לך אחד!$"
 

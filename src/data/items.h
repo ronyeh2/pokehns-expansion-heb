@@ -14219,7 +14219,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_POKEBLOCK_CASE] =
     {
-        .name = ITEM_NAME("קופסת {POKEBLOCK}"),
+        .name = ITEM_NAME("קופסת פוקיבלוק"),
         .price = 0,
         .description = COMPOUND_STRING(
             "קופסה לאחסון\n"

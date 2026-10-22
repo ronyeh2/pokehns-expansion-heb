@@ -386,7 +386,7 @@ AzaleaTown_Text_GrampsAfter:
 	.string "אולי הם סתם התבטלו איפשהו.$"
 
 AzaleaTown_Text_Teacher:
-	.string "באת לבקש מ-KURT\n"
+	.string "באת לבקש מקורט\n"
 	.string "להכין לך כמה כדורים?\p"
 	.string "הרבה אנשים באים בדיוק בשביל זה.$"
 
@@ -419,7 +419,7 @@ AzaleaTown_Text_Sign:
 	.string "בהרמוניה שמחה.$"
 
 AzaleaTown_Text_KurtsHouseSign:
-	.string "הבית של KURT$"
+	.string "הבית של קורט$"
 
 AzaleaTown_Text_GymSign:
 	.string "העיירה אזייליה\n"

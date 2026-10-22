@@ -2137,6 +2137,9 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
     else
     {
         u32 healthboxSpriteId2 = gSprites[healthboxSpriteId].oam.affineParam;
+#if TEXT_RTL
+        u8 twoDigits[16];
+#endif
 
         s16 savedValue1 = gSprites[healthboxSpriteId].data[1];
         s16 savedValue2 = gSprites[healthboxSpriteId2].data[1];
@@ -2144,7 +2147,16 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
         gSprites[healthboxSpriteId2].data[1] = SPRITE_NONE;
 
         FillSpriteRectColor(healthboxSpriteId, 55, 19, 31, 12, HEALTHBOX_BG_INDEX);
+#if TEXT_RTL
+        // The line reads right to left, label first: end it where a two-digit count ends, so the
+        // label stays in place when the count drops below 10, as the English label does.
+        ConvertIntToDecimalStringN(StringCopy(twoDigits, gText_SafariBallLeft), gNumSafariBalls, STR_CONV_MODE_LEADING_ZEROS, 2);
+        AddSpriteTextPrinterParameterized6(healthboxSpriteId, FONT_SMALL,
+                                           55 + GetStringWidth(FONT_SMALL, twoDigits, 0) - GetStringWidth(FONT_SMALL, text, 0),
+                                           19, 0, 0, sHealthBoxTextColor, 0, text);
+#else
         AddSpriteTextPrinterParameterized6(healthboxSpriteId, FONT_SMALL, 55, 19, 0, 0, sHealthBoxTextColor, 0, text);
+#endif
 
         gSprites[healthboxSpriteId].data[1] = savedValue1;
         gSprites[healthboxSpriteId2].data[1] = savedValue2;

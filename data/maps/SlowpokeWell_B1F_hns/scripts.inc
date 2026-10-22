@@ -81,7 +81,7 @@ SlowpokeWell_B1F_Movement_Kurt:
 	step_end
 
 SlowpokeWell_B1F_Text_KurtIntro:
-	.string "KURT: היי, {PLAYER}!\p"
+	.string "קורט: היי, {PLAYER}!\p"
 	.string "השומר שעמד למעלה ברח\n"
 	.string "כשצעקתי עליו.\p"
 	.string "אבל אז נפלתי למטה\n"
@@ -95,7 +95,7 @@ SlowpokeWell_B1F_Text_KurtIntro:
 	.string "אתה אמיץ, במקומי!$"
 
 SlowpokeWell_B1F_Text_KurtAfter:
-	.string "KURT: כל הכבוד, {PLAYER}!\p"
+	.string "קורט: כל הכבוד, {PLAYER}!\p"
 	.string "צוות רוקט הסתלק.\p"
 	.string "גם הגב שלי כבר יותר טוב.\n"
 	.string "בוא נצא מכאן.$"

@@ -1083,7 +1083,7 @@ static const struct StorageMessage sMessages[] =
     [MSG_ITEM_IS_HELD]         = {COMPOUND_STRING("{DYNAMIC 0} מוחזק כעת."),   MSG_VAR_ITEM_NAME},
     [MSG_CHANGED_TO_ITEM]      = {COMPOUND_STRING("הוחלף ב{DYNAMIC 0}."),    MSG_VAR_ITEM_NAME},
     [MSG_CANT_STORE_MAIL]      = {COMPOUND_STRING("אי אפשר לאחסן דואר!"),      MSG_VAR_NONE},
-    [MSG_NUZLOCKE_FAINTED]     = {COMPOUND_STRING("הוא התעלף במצב Nuzlocke!"),       MSG_VAR_NONE},
+    [MSG_NUZLOCKE_FAINTED]     = {COMPOUND_STRING("הוא התעלף במצב נאזלוק!"),       MSG_VAR_NONE},
     [MSG_ONE_TYPE_BLOCKED]     = {COMPOUND_STRING("סוג שגוי!"), MSG_VAR_NONE},
 };
 

@@ -22,12 +22,12 @@ AzaleaMart_Text_CooltrainerM:
 	.string "אני יכול לקנות רק פוקיבולים.\p"
 	.string "שמעתי שאפשר לקנות יותר\n"
 	.string "פריטים כשמרוויחים תגי מכון!\p"
-	.string "הלוואי ש-KURT יכין לי כמה\n"
+	.string "הלוואי שקורט יכין לי כמה\n"
 	.string "מהכדורים המיוחדים שלו.$"
 
 AzaleaMart_Text_BugCatcher:
 	.string "כדור מעולה טוב יותר לתפיסת\n"
 	.string "פוקימונים מאשר פוקיבול.\p"
-	.string "אבל לפעמים הכדורים של KURT\n"
+	.string "אבל לפעמים הכדורים של קורט\n"
 	.string "יכולים להיות טובים יותר.$"
 
