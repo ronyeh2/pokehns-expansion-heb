@@ -1310,6 +1310,15 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
     BuyMenuPrint(WIN_ITEM_DESCRIPTION, description, 3, 1, 0, COLORID_NORMAL);
 }
 
+#if TEXT_RTL
+// The mirrored prices end at the list window's left edge, where the frame's dark shading touches the
+// window. On the right, the English prices end 3 px before the shading (their shadow column and the
+// frame's two light inner columns), so start the mirrored prices 3 px into the window.
+#define BUY_MENU_PRICE_RIGHT 117
+#else
+#define BUY_MENU_PRICE_RIGHT 120
+#endif
+
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
 {
     u8 x;
@@ -1322,7 +1331,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
         {
             u8 *ptr = ConvertIntToDecimalStringN(gStringVar4, GetBPCostForItem((u16)itemId), STR_CONV_MODE_LEFT_ALIGN, 4);
             StringCopy(ptr, gText_BP);
-            x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
+            x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, BUY_MENU_PRICE_RIGHT);
             AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
             return;
         }
@@ -1334,7 +1343,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
                 CopyKurtBerryName(berryId, gStringVar4);
                 StringAppend(gStringVar4, gText_Space);
                 StringAppend(gStringVar4, gText_xOne);
-                x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
+                x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, BUY_MENU_PRICE_RIGHT);
                 AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
             }
             return;
@@ -1361,7 +1370,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
             StringCopy(gStringVar4, gText_SoldOut);
         else
             StringExpandPlaceholders(gStringVar4, gText_PokedollarVar1);
-        x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
+        x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, BUY_MENU_PRICE_RIGHT);
         AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
     }
 }
