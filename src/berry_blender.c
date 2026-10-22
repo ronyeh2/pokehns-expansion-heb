@@ -3436,6 +3436,21 @@ static void TryUpdateBerryBlenderRecord(void)
         gSaveBlock1Ptr->berryBlenderRecords[sBerryBlender->numPlayers - 2] = sBerryBlender->maxRPM;
 }
 
+#if TEXT_RTL
+// "N. NAME" as two prints, the number at x and the name after it. The mirrored number then always
+// ends up at the right edge: a Latin name in one string would keep the whole line left to right.
+static void PrintRankAndName(u32 rank, const u8 *name, u32 x, u32 y)
+{
+    u32 nameX;
+
+    ConvertIntToDecimalStringN(sBerryBlender->stringVar, rank, STR_CONV_MODE_LEFT_ALIGN, 1);
+    StringAppend(sBerryBlender->stringVar, sText_Dot);
+    nameX = x + GetStringWidth(FONT_NORMAL, sBerryBlender->stringVar, 0) + GetStringWidth(FONT_NORMAL, gText_Space, 0);
+    Blender_AddTextPrinter(WIN_RESULTS, sBerryBlender->stringVar, x, y, TEXT_SKIP_DRAW, 3);
+    Blender_AddTextPrinter(WIN_RESULTS, name, nameX, y, TEXT_SKIP_DRAW, 3);
+}
+#endif
+
 static bool8 PrintBlendingResults(void)
 {
     u16 i;
@@ -3487,6 +3502,17 @@ static bool8 PrintBlendingResults(void)
             {
                 u8 place = sBerryBlender->playerPlaces[i];
 
+#if TEXT_RTL
+                PrintRankAndName(i + 1, gLinkPlayers[place].name, 8, yPos);
+
+                // Hebrew puts the noun first ("פרי אורן", as the bag has it): the word from
+                // sText_SpaceBerry without its leading space, a space, then the berry's name.
+                StringCopy(sBerryBlender->stringVar, &sText_SpaceBerry[1]);
+                StringAppend(sBerryBlender->stringVar, gText_Space);
+                StringCopy(text, sBerryBlender->blendedBerries[place].name);
+                ConvertInternationalString(text, gLinkPlayers[place].language);
+                StringAppend(sBerryBlender->stringVar, text);
+#else
                 ConvertIntToDecimalStringN(sBerryBlender->stringVar, i + 1, STR_CONV_MODE_LEFT_ALIGN, 1);
                 StringAppend(sBerryBlender->stringVar, sText_Dot);
                 StringAppend(sBerryBlender->stringVar, gText_Space);
@@ -3496,6 +3522,7 @@ static bool8 PrintBlendingResults(void)
                 StringCopy(sBerryBlender->stringVar, sBerryBlender->blendedBerries[place].name);
                 ConvertInternationalString(sBerryBlender->stringVar, gLinkPlayers[place].language);
                 StringAppend(sBerryBlender->stringVar, sText_SpaceBerry);
+#endif
                 Blender_AddTextPrinter(WIN_RESULTS, sBerryBlender->stringVar, 0x54, yPos, TEXT_SKIP_DRAW, 3);
             }
 
@@ -3677,15 +3704,29 @@ static bool8 PrintBlendingRanking(void)
         xPos = GetStringCenterAlignXOffset(FONT_NORMAL, sText_Ranking, 168);
         Blender_AddTextPrinter(WIN_RESULTS, sText_Ranking, xPos, 1, TEXT_SKIP_DRAW, 0);
 
+#if TEXT_RTL
+        // The score columns are mirrored with the window (screen x 40-207): put each symbol over
+        // its mirrored column, at 248 - x.
+        sBerryBlender->scoreIconIds[SCORE_BEST] = CreateSprite(&sSpriteTemplate_ScoreSymbols, 248 - 128, 52, 0);
+#else
         sBerryBlender->scoreIconIds[SCORE_BEST] = CreateSprite(&sSpriteTemplate_ScoreSymbols, 128, 52, 0);
+#endif
         StartSpriteAnim(&gSprites[sBerryBlender->scoreIconIds[SCORE_BEST]], SCOREANIM_BEST_STATIC);
         gSprites[sBerryBlender->scoreIconIds[SCORE_BEST]].callback = SpriteCallbackDummy;
 
+#if TEXT_RTL
+        sBerryBlender->scoreIconIds[SCORE_GOOD] = CreateSprite(&sSpriteTemplate_ScoreSymbols, 248 - 160, 52, 0);
+#else
         sBerryBlender->scoreIconIds[SCORE_GOOD] = CreateSprite(&sSpriteTemplate_ScoreSymbols, 160, 52, 0);
+#endif
         // implicitly uses SCOREANIM_GOOD, no need to assign
         gSprites[sBerryBlender->scoreIconIds[SCORE_GOOD]].callback = SpriteCallbackDummy;
 
+#if TEXT_RTL
+        sBerryBlender->scoreIconIds[SCORE_MISS] = CreateSprite(&sSpriteTemplate_ScoreSymbols, 248 - 192, 52, 0);
+#else
         sBerryBlender->scoreIconIds[SCORE_MISS] = CreateSprite(&sSpriteTemplate_ScoreSymbols, 192, 52, 0);
+#endif
         StartSpriteAnim(&gSprites[sBerryBlender->scoreIconIds[SCORE_MISS]], SCOREANIM_MISS);
         gSprites[sBerryBlender->scoreIconIds[SCORE_MISS]].callback = SpriteCallbackDummy;
 
@@ -3695,11 +3736,15 @@ static bool8 PrintBlendingRanking(void)
         {
             u8 place = sBerryBlender->playerPlaces[i];
 
+#if TEXT_RTL
+            PrintRankAndName(i + 1, gLinkPlayers[place].name, 0, yPos);
+#else
             ConvertIntToDecimalStringN(sBerryBlender->stringVar, i + 1, STR_CONV_MODE_LEFT_ALIGN, 1);
             StringAppend(sBerryBlender->stringVar, sText_Dot);
             StringAppend(sBerryBlender->stringVar, gText_Space);
             StringAppend(sBerryBlender->stringVar, gLinkPlayers[place].name);
             Blender_AddTextPrinter(WIN_RESULTS, sBerryBlender->stringVar, 0, yPos, TEXT_SKIP_DRAW, 3);
+#endif
 
             ConvertIntToDecimalStringN(sBerryBlender->stringVar, sBerryBlender->scores[place][SCORE_BEST], STR_CONV_MODE_RIGHT_ALIGN, 3);
             Blender_AddTextPrinter(WIN_RESULTS, sBerryBlender->stringVar, 78, yPos, TEXT_SKIP_DRAW, 3);
