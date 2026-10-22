@@ -64,7 +64,9 @@ void TrySpawnNamebox(u32 tileNum)
         .bg = 0,
 #if TEXT_RTL
         // Flush with the right end of the dialogue box (columns 2-28), where a Hebrew reader starts.
-        .tilemapLeft = 29 - winWidth,
+        // The call box's frame is one column further out (columns 0 and 29), and the English box
+        // sits one tile inside its left border, so the mirror ends one tile inside its right border.
+        .tilemapLeft = (matchCall ? 28 : 29) - winWidth,
 #else
         .tilemapLeft = 2,
 #endif
