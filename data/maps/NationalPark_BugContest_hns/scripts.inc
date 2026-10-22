@@ -168,7 +168,7 @@ NationalParkBugContest_Text_Attendant:
 	.string "את התחרות?$"
 
 NationalParkBugContest_Text_ContestantBelinda:
-	.string "BELINDA: אני הולכת לנצח!\n"
+	.string "בלינדה: אני הולכת לנצח!\n"
 	.string "לא להפריע לי.$"
 
 NationalParkBugContest_Text_Contestant2A:
@@ -176,7 +176,7 @@ NationalParkBugContest_Text_Contestant2A:
 	.string "פוקימונים בעזרת נבג.$"
 
 NationalParkBugContest_Text_ContestantShaun:
-	.string "SHAUN: לא אכפת לי\n"
+	.string "שון: לא אכפת לי\n"
 	.string "מהניצחון.\p"
 	.string "אני רק מחפש פוקימונים נדירים.$"
 
