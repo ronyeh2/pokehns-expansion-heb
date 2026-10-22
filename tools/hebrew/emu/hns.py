@@ -1771,10 +1771,13 @@ def battle_walk(emu, prefix, expect=(), maxpages=60, maxframes=3000, stop_tasks=
             continue
         battle = cb2 == bcb2
         if battle:
-            c = battle_ctrl(emu)
-            if c in BATTLE_INPUT_FUNCS:
-                emu.frames(2)
-                return done("input:" + c)
+            # battler 2 is the player's second Pokemon in a double battle (gBattlersCount 4);
+            # its stops are reported as input:FUNC#2
+            for b in ((0, 2) if emu.r8(emu.sym("gBattlersCount")) > 2 else (0,)):
+                c = battle_ctrl(emu, b)
+                if c in BATTLE_INPUT_FUNCS:
+                    emu.frames(2)
+                    return done("input:" + c + ("#%d" % b if b else ""))
         if cb2 in msg_cb2:
             box = message_box(emu)
             if box is not None and box != last:
@@ -1800,12 +1803,12 @@ def battle_walk(emu, prefix, expect=(), maxpages=60, maxframes=3000, stop_tasks=
         idle += 2
 
 
-def wait_battle_input(emu, func, maxframes=1200):
-    """Run until the player's controller is FUNC (e.g. HandleInputChooseAction) and the
-    screen is quiet."""
+def wait_battle_input(emu, func, maxframes=1200, battler=0):
+    """Run until the player's controller (BATTLER 0, or 2 for the second Pokemon in a double
+    battle) is FUNC (e.g. HandleInputChooseAction) and the screen is quiet."""
     battle_check(emu)
-    emu.wait_until(lambda: in_battle(emu) and battle_ctrl(emu) == func, maxframes,
-                   "battle controller %s" % func)
+    emu.wait_until(lambda: in_battle(emu) and battle_ctrl(emu, battler) == func, maxframes,
+                   "battle controller %s of battler %d" % (func, battler))
     emu.wait_quiet(maxframes)
     emu.frames(2)
 
@@ -1884,6 +1887,34 @@ def _op_waitbinput(emu, f, path):
     print("waitbinput %s ok @%d" % (f[1], emu.sync()))
 
 
+@script_op("waitbinputb")
+def _op_waitbinputb(emu, f, path):
+    """waitbinputb BATTLER FUNC [MAX]: waitbinput for another player battler (2: the second
+    Pokemon in a double battle)."""
+    wait_battle_input(emu, f[2], _arg(f, 3, 1200), int(f[1]))
+    print("waitbinputb %s %s ok @%d" % (f[1], f[2], emu.sync()))
+
+
+@script_op("bactionb")
+def _op_bactionb(emu, f, path):
+    """bactionb BATTLER FIGHT|BAG|POKEMON|RUN [nopress]: baction for another player battler."""
+    b = int(f[1])
+    wait_battle_input(emu, "HandleInputChooseAction", battler=b)
+    battle_cursor(emu, "gActionSelectionCursor", BATTLE_ACTIONS[f[2].upper()], battler=b)
+    if not (len(f) > 3 and f[3] == "nopress"):
+        emu.tap("A", 4)
+
+
+@script_op("bmoveb")
+def _op_bmoveb(emu, f, path):
+    """bmoveb BATTLER SLOT [nopress]: bmove for another player battler."""
+    b = int(f[1])
+    wait_battle_input(emu, "HandleInputChooseMove", battler=b)
+    battle_cursor(emu, "gMoveSelectionCursor", int(f[2]), battler=b)
+    if not (len(f) > 3 and f[3] == "nopress"):
+        emu.tap("A", 4)
+
+
 @script_op("expectbcmd")
 def _op_expectbcmd(emu, f, path):
     """expectbcmd CMD: stop unless the battle script is at command CMD."""
@@ -1901,10 +1932,10 @@ def _op_sethp(emu, f, path):
 BATTLE_ACTIONS = {"FIGHT": 0, "BAG": 1, "POKEMON": 2, "RUN": 3}
 
 
-def battle_cursor(emu, var, target, maxkeys=4):
+def battle_cursor(emu, var, target, maxkeys=4, battler=0):
     """Move a 2x2 battle menu cursor (bit 0 = column, bit 1 = row, as in
-    HandleInputChooseAction / HandleInputChooseMove) at VAR[0] to TARGET."""
-    addr = emu.sym(var)
+    HandleInputChooseAction / HandleInputChooseMove) at VAR[BATTLER] to TARGET."""
+    addr = emu.sym(var) + battler
     for _ in range(maxkeys):
         cur = emu.r8(addr)
         if cur == target:
