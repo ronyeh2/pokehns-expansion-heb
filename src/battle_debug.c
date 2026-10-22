@@ -544,7 +544,13 @@ static const struct WindowTemplate sSecondaryListWindowTemplate =
 static const struct WindowTemplate sModifyWindowTemplate =
 {
     .bg = 0,
+#if TEXT_RTL
+    // The mirror of the English spot inside the secondary list's visible 18 tiles, so it does not
+    // cover the right end of row 0, where the right-aligned rows start.
+    .tilemapLeft = 13,
+#else
     .tilemapLeft = 25,
+#endif
     .tilemapTop = 2,
     .width = 4,
     .height = 2,
@@ -1008,7 +1014,13 @@ static void Task_ShowAiKnowledge(u8 taskId)
             {
                 data->spriteIds.aiIconSpriteIds[i] = CreateMonIcon(gBattleMons[i].species,
                                                          SpriteCallbackDummy,
+#if TEXT_RTL
+                                                         // Mirrored with the 27-tile text window, above
+                                                         // the battler's mirrored column.
+                                                         27 * 8 - (95 + (count * 80)), 17, 0, 0);
+#else
                                                          95 + (count * 80), 17, 0, 0);
+#endif
                 gSprites[data->spriteIds.aiIconSpriteIds[i]].data[0] = i; // battler id
                 count++;
             }
@@ -1052,7 +1064,7 @@ static void Task_ShowAiKnowledge(u8 taskId)
 
 static void Task_ShowAiParty(u8 taskId)
 {
-    u32 i, ailment;
+    u32 i, ailment, x;
     struct WindowTemplate winTemplate;
     struct AiPartyMon *aiMons;
     struct BattleDebugMenu *data = GetStructPtr(taskId);
@@ -1072,10 +1084,16 @@ static void Task_ShowAiParty(u8 taskId)
             u16 species = SPECIES_NONE; // Question mark
             if (aiMons[i].wasSentInBattle && aiMons[i].species)
                 species = aiMons[i].species;
-            data->spriteIds.aiPartyIcons[i] = CreateMonIcon(species, SpriteCallbackDummy, (i * 41) + 15, 7, 1, 0);
+#if TEXT_RTL
+            // Mirrored with the 29-tile text window, so each icon stays above its own column.
+            x = 29 * 8 - ((i * 41) + 15);
+#else
+            x = (i * 41) + 15;
+#endif
+            data->spriteIds.aiPartyIcons[i] = CreateMonIcon(species, SpriteCallbackDummy, x, 7, 1, 0);
             gSprites[data->spriteIds.aiPartyIcons[i]].oam.priority = 0;
 
-            gSprites[data->spriteIds.aiPartyIcons[i]].sConditionSpriteId = CreateSprite(&gSpriteTemplate_StatusIcons, (i * 41) + 15, 7, 0);
+            gSprites[data->spriteIds.aiPartyIcons[i]].sConditionSpriteId = CreateSprite(&gSpriteTemplate_StatusIcons, x, 7, 0);
             gSprites[gSprites[data->spriteIds.aiPartyIcons[i]].sConditionSpriteId].oam.priority = 0;
             if (aiMons[i].isFainted)
                 ailment = AILMENT_FNT;
@@ -1237,6 +1255,10 @@ static void Task_DebugMenuProcessInput(u8 taskId)
         {
             data->currentSecondaryListItemId = listItemId;
             data->modifyWindowId = AddWindow(&sModifyWindowTemplate);
+#if TEXT_RTL
+            // Digits only, edited one by one under the arrows: keep them left to right.
+            SetWindowRtlMode(data->modifyWindowId, WINDOW_RTL_LTR);
+#endif
             PutWindowTilemap(data->modifyWindowId);
             CopyWindowToVram(data->modifyWindowId, COPYWIN_FULL);
             SetUpModifyArrows(data);
@@ -1252,6 +1274,13 @@ static void Task_DebugMenuProcessInput(u8 taskId)
             ClearStdWindowAndFrameToTransparent(data->modifyWindowId, TRUE);
             RemoveWindow(data->modifyWindowId);
             DestroyModifyArrows(data);
+#if TEXT_RTL
+            // The cleared frame around the mirrored modify window runs over the battler window's
+            // bottom row and the left end of the secondary list's first row: put both back.
+            PutWindowTilemap(data->battlerWindowId);
+            PutWindowTilemap(data->secondaryListWindowId);
+            CopyBgTilemapBufferToVram(0);
+#endif
             data->activeWindow = ACTIVE_WIN_SECONDARY;
         }
         else if (JOY_NEW(DPAD_RIGHT))
@@ -1413,6 +1442,11 @@ static void CreateSecondaryListMenu(struct BattleDebugMenu *data)
 
     data->secondaryListItemCount = itemsCount;
     data->secondaryListWindowId = AddWindow(&winTemplate);
+#if TEXT_RTL
+    // The window runs 2 tiles past the screen's right edge: mirror the rows and the cursor inside
+    // the 18 tiles that are on screen.
+    SetWindowRtlMirrorWidth(data->secondaryListWindowId, 18 * 8);
+#endif
 
     listTemplate.totalItems = itemsCount;
     listTemplate.maxShowed = itemsCount;
@@ -1875,8 +1909,14 @@ static u16 *GetSideStatusValue(struct BattleDebugMenu *data, bool32 changeStatus
 static void SetUpModifyArrows(struct BattleDebugMenu *data)
 {
     LoadSpritePalette(&gSpritePalette_Arrow);
+#if TEXT_RTL
+    // Over the first digit of the modify window, which is mirrored to tile 13.
+    data->modifyArrows.arrowSpriteId[0] = CreateSprite(&gSpriteTemplate_Arrow, 111, 12, 0);
+    data->modifyArrows.arrowSpriteId[1] = CreateSprite(&gSpriteTemplate_Arrow, 111, 36, 0);
+#else
     data->modifyArrows.arrowSpriteId[0] = CreateSprite(&gSpriteTemplate_Arrow, 207, 12, 0);
     data->modifyArrows.arrowSpriteId[1] = CreateSprite(&gSpriteTemplate_Arrow, 207, 36, 0);
+#endif
     gSprites[data->modifyArrows.arrowSpriteId[1]].animNum = 1;
     switch (data->currentMainListItemId)
     {
