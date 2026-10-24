@@ -289,10 +289,10 @@ OlivineCity_Gym_Text_JasmineBetterTrainer:
 	.string "אני מעניקה לך את התג הזה.$"
 
 OlivineCity_Gym_Text_ReceivedMineralBadge:
-	.string "{PLAYER} קיבל את MINERALBADGE.$"
+	.string "{PLAYER} קיבל את תג מינרל.$"
 
 OlivineCity_Gym_Text_JasmineBadgeSpeech:
-	.string "התג MINERALBADGE מעלה את\n"
+	.string "תג מינרל מעלה את\n"
 	.string "ההגנה המיוחדת של פוקימונים.\p"
 	.string "…אממ… בבקשה, קח גם את זה…$"
 
