@@ -1642,6 +1642,33 @@ static void DrawTopBar(void)
 
     AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 120 - width, 1, color, 0, tabName);
 
+#if TEXT_RTL
+    // The hints stand for physical buttons, so they keep their English places: each x is
+    // pre-mirrored, and the mirrored bar draws L at the left edge, R at the right edge and B
+    // between the tab name and R (src/option_menu.c DrawTopBar does the same for L and R).
+    // Both R hints end 5 px from the right edge, so the R icon stays put when NEXT becomes SAVE.
+    if (sMenu->currentTab > 0)
+    {
+        int w = GetStringWidth(FONT_SMALL, sText_TopBar_Left, 0);
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 5, w), 1, color, 0, sText_TopBar_Left);
+    }
+    if (sMenu->currentTab < TAB_COUNT - 1)
+    {
+        int w = GetStringWidth(FONT_SMALL, sText_TopBar_Right, 0);
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 240 - 5 - w, w), 1, color, 0, sText_TopBar_Right);
+    }
+    else if (sMenu->currentTab == TAB_COUNT - 1)
+    {
+        int w = GetStringWidth(FONT_SMALL, sText_TopBar_Save, 0);
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, 240 - 5 - w, w), 1, color, 0, sText_TopBar_Save);
+    }
+    if (!sIsInitialSetup)
+    {
+        int w = GetStringWidth(FONT_SMALL, sText_TopBar_Cancel, 0);
+        int cancelX = (120 + width + right) / 2 - w / 2;
+        AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, WindowRtlX(WIN_TOPBAR, cancelX, w), 1, color, 0, sText_TopBar_Cancel);
+    }
+#else
     if (sMenu->currentTab > 0)
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 5, 1, color, 0, sText_TopBar_Left);
     if (sMenu->currentTab < TAB_COUNT - 1)
@@ -1653,6 +1680,7 @@ static void DrawTopBar(void)
         int cancelX = (120 + width + right) / 2 - GetStringWidth(FONT_SMALL, sText_TopBar_Cancel, 0) / 2;
         AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, cancelX, 1, color, 0, sText_TopBar_Cancel);
     }
+#endif
 
     PutWindowTilemap(WIN_TOPBAR);
     CopyWindowToVram(WIN_TOPBAR, COPYWIN_FULL);
@@ -1783,17 +1811,27 @@ static void ProcessLeftRight(void)
     if (!CheckConditions(sMenu->currentTab, itemIndex))
         return;
 
+#if TEXT_RTL
+    // A mirrored row lists its values right to left (the first at the right), so LEFT moves to
+    // the next one, as in src/option_menu.c ProcessLeftRight and the multi-column menus.
+    u16 nextKey = GetWindowRtlMode(WIN_OPTIONS) == WINDOW_RTL_MIRROR ? DPAD_LEFT : DPAD_RIGHT;
+    u16 prevKey = nextKey == DPAD_LEFT ? DPAD_RIGHT : DPAD_LEFT;
+#else
+    u16 nextKey = DPAD_RIGHT;
+    u16 prevKey = DPAD_LEFT;
+#endif
+
     u8 *sel = GetSelectionPtr(sMenu->currentTab, itemIndex);
     u8 prev = *sel;
 
-    if (JOY_NEW(DPAD_RIGHT))
+    if (JOY_NEW(nextKey))
     {
         if (*sel < items[itemIndex].numChoices - 1)
             (*sel)++;
         else
             *sel = 0;
     }
-    else if (JOY_NEW(DPAD_LEFT))
+    else if (JOY_NEW(prevKey))
     {
         if (*sel > 0)
             (*sel)--;
