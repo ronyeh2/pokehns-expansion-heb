@@ -1,10 +1,10 @@
 {
- "release": "0.3",
+ "release": "0.2",
  "upstream_version": "2.0.6",
  "branch": "he/main",
  "toolchain": "devkitARM, arm-none-eabi-gcc 16",
  "static_checks": "0 drift failures, 0 audit errors, 0 glossary problems",
- "visual_review": "49 findings on the first release candidate: 41 fixed in 0.1, the 7 left as known issues in 0.1 fixed in this release, and 1 was a problem of the review sheets rather than the ROM. The screens this release changes (60 tour frames, 119 dialogue labels on 336 pages) were reviewed again, each finding checked by a second reviewer: 8 confirmed (5 fixed in this build, 1 stale tour script fixed in the harness, 2 listed under Known issues), 8 refuted. For 0.3, saves and tours were made for screens no earlier test reached (Hall of Fame and credits, the new-game challenge menus, Kurt and the move relearner, PokéGear calls, Rare Candy and TM use, ball and catch variants, the battle debug menu, the Safari Zone, the Berry Blender, Pokéblocks, Voltorb Flip, map-name pop-ups, marts); every misalignment found was checked by a second reviewer, and the confirmed ones are fixed and seen on screen before and after",
+ "visual_review": "49 findings on the first release candidate: 41 fixed in 0.1, the 7 left as known issues in 0.1 fixed in this release, and 1 was a problem of the review sheets rather than the ROM. The screens this release changes (60 tour frames, 119 dialogue labels on 336 pages) were reviewed again, each finding checked by a second reviewer: 8 confirmed (5 fixed in this build, 1 stale tour script fixed in the harness, 2 listed under Known issues), 8 refuted",
  "crosscore_notes": "VBA-M, gpSP and Mednafen-GBA draw every screen like mGBA; the few pixels left are the clock (the start menu shows the time, and each core's clock started at a different second) and an animation frame. VBA-Next has no real-time clock, so the game shows its standard \"internal battery has run dry\" notice and the rest of the script lands on other screens; that notice is drawn correctly in Hebrew. SkyEmu crashes the minimal libretro frontend on the English ROM too, so it was not compared. The title frame differs on every core because the intro animation runs at a different point when the save loads.",
  "map_walk": {
   "held_reason": "because the map starts a scripted Frontier or multi-battle sequence that the walker (which answers every prompt with B) cannot finish",
@@ -14,15 +14,13 @@
   ],
   "hebrew_only_reason": "hold because the first Battle Arena battle was won in this run and the walker stopped at the next-opponent menu, which is drawn correctly; in the English run that battle ended back in the lobby"
  },
- "known_issues_intro": "Release 0.3 fixes the Hebrew misalignments found on screens that 0.2 did not test; the decisions behind 0.2 are in `translation/hebrew/DECISIONS.md` of the source fork.",
+ "known_issues_intro": "The six known issues of release 0.1 (the battle suffix, the ID label, POKéGEAR, the naming cursor, the cosmetic set and the berry names) are fixed in this release; the options and the choice for each are in `translation/hebrew/DECISIONS.md` of the source fork.",
  "known_issues": [
   "Pokédex, imperial units only (a challenge option; metric is the default): a known height is drawn with its closing ” to the left of the digits. Moving it would break the size-record code, which strips everything before the first digit. Found in the code, not seen on screen.",
   "Pokédex list: the stat labels now sit at the right of the panel and their shadow touches the box border, with no 1-px gap.",
   "Summary screen: in a nickname with a geresh (ג'ימי), the geresh touches the bottom of the portrait box. Raising the nickname 2 px to keep its descenders off the frame below moved it up against the box.",
   "Message box: a page that ends in a colon draws the colon against the continue arrow, with no gap (seen in one Battle Frontier Lounge text).",
-  "EXEGGUTOR-A is אקזגיוטר-א, without the ק of the base form אקזגקיוטר, because the base form plus -א does not fit the 50 px Pokédex list column.",
-  "Safari Zone battle menu: Pokéblock stays the Latin glyph pair, because the Hebrew word פוקיבלוק is 1 px wider than the menu column.",
-  "Kurt's shop: on the cancel row the return-arrow icon sits at the right, but its art still points left. Found in the code, not confirmed on screen."
+  "EXEGGUTOR-A is אקזגיוטר-א, without the ק of the base form אקזגקיוטר, because the base form plus -א does not fit the 50 px Pokédex list column."
  ],
  "not_tested": [
   "Real hardware. No flashcart was available. The ROM is 32 MiB and needs a cart that supports 32 MiB images, with the save type set to FLASH 128 KB and a working RTC.",

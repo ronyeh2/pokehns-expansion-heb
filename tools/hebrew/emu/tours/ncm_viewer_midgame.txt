@@ -180,7 +180,7 @@ press UP
 press UP
 press UP
 snap ncm_60_t6_r00_before
-press RIGHT
+press ROWNEXT
 snap ncm_60_t6_r00_refused
 press L
 snap ncm_60_back_to_difficulty_L

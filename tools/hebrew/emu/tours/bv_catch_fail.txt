@@ -54,6 +54,9 @@ bwalk bv_fail_t5 input:HandleInputChooseAction
 pinrng 0F0F0F0FF0F0F0F07777777711000000
 include _bv_ball.txt
 bwalk bv_fail_t6 input:HandleInputChooseAction
+pinrng 309D6B79965EDA32DAE4455011000000   # one shake: STRINGID_ITAPPEAREDCAUGHT
+include _bv_ball.txt
+bwalk bv_fail_t7 input:HandleInputChooseAction
 pinrng
 
 # catching switched off

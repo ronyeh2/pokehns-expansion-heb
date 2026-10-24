@@ -36,6 +36,9 @@ Script language = hnsrun's (see hnsrun.c), plus:
     @LOC@ @POS@                     &gSaveBlock1Ptr->location / ->pos (live)
     FILE:NAME                       a static that several files define, e.g.
                                     @title_screen:MainCB2@ (file = object in the .map)
+    ROWNEXT ROWPREV                 key names: the key that moves an options / challenge
+                                    menu value row to its next / previous value (RIGHT /
+                                    LEFT, swapped on a TEXT_RTL build, see Emu.rowkeys)
     include FILE                    splice another script (path relative to this one)
     waitcb2 SYMBOL [MAX] [KEYS]     run until gMain.callback2 == SYMBOL (KEYS tapped
                                     every 30 frames meanwhile, like hnsrun's wait32)
@@ -929,6 +932,17 @@ class Emu:
             return "%08X" % (v & 0xFFFFFFFF)
         return self.MARK.sub(rep, line)
 
+    # ROWNEXT / ROWPREV: the key that moves a value row of the options or challenge menu to its
+    # next / previous value. A TEXT_RTL build lists the values right to left, so there LEFT is
+    # next (src/option_menu.c, src/challenge_menu.c ProcessLeftRight). One tour then picks the
+    # same values, with the same shot names, on the English and the Hebrew ROM.
+    ROWKEY = re.compile(r"\bROW(NEXT|PREV)\b")
+
+    def rowkeys(self, line):
+        rtl = "sRtlCharClass" in self.elf.byname
+        keys = {"NEXT": "LEFT" if rtl else "RIGHT", "PREV": "RIGHT" if rtl else "LEFT"}
+        return self.ROWKEY.sub(lambda m: keys[m.group(1)], line)
+
     def run_script(self, path, stop_on_timeout=True):
         base = os.path.dirname(os.path.abspath(path))
         for raw in open(path, encoding="utf-8"):
@@ -943,7 +957,7 @@ class Emu:
             if op == "echo":
                 sys.stdout.write(line[5:] + "\n")
                 continue
-            line = self.subst(line)
+            line = self.rowkeys(self.subst(line))
             f = line.split()
             if op in SCRIPT_OPS:                 # ops registered with @script_op below
                 SCRIPT_OPS[op](self, f, path)
