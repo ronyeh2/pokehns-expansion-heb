@@ -68,14 +68,14 @@ VioletGym_Text_Falkner_WinLoss:
 	.string "…לעזאזל! פוקימוני הציפורים\n"
 	.string "היקרים של אבא שלי…\p"
 	.string "נו, טוב. הנה, זה בשבילך.\p"
-	.string "זה ZEPHYRBADGE, התג הרשמי\n"
+	.string "זה תג משב, התג הרשמי\n"
 	.string "של ליגת הפוקימון.$"
 
 VioletGym_Text_ReceivedZephyrBadge:
-	.string "{PLAYER} קיבל את ZEPHYRBADGE.$"
+	.string "{PLAYER} קיבל את תג משב.$"
 
 VioletGym_Text_Falkner_BadgeExplain:
-	.string "התג ZEPHYRBADGE מעלה את\n"
+	.string "תג משב מעלה את\n"
 	.string "כוח ההתקפה של פוקימונים.\p"
 	.string "הוא גם מאפשר לפוקימונים שיכולים\n"
 	.string "ללמוד הבזק להשתמש בו בכל זמן.\p"
