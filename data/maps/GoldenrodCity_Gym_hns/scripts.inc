@@ -145,13 +145,13 @@ GoldenrodCity_Gym_Text_WhitneyWhatDoYouWant:
     .string "…סניף…\p"
     .string "מה? מה אתה רוצה? תג?\p"
     .string "אה, נכון. שכחתי. הנה\n"
-    .string "PLAINBADGE.$"
+    .string "תג מישור.$"
 
 GoldenrodCity_Gym_Text_PlayerReceivedPlainBadge:
-    .string "{PLAYER} קיבל את PLAINBADGE.$"
+    .string "{PLAYER} קיבל את תג מישור.$"
 
 GoldenrodCity_Gym_Text_WhitneyPlainBadge:
-    .string "התג PLAINBADGE מאפשר לפוקימונים שלך\n"
+    .string "תג מישור מאפשר לפוקימונים שלך\n"
     .string "להשתמש במהלך עוצמה מחוץ לקרב.\p"
     .string "הוא גם מגביר את ההגנה של\n"
     .string "הפוקימונים שלך.\p"
