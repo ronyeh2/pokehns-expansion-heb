@@ -351,21 +351,21 @@ DragonsDen_Shrine_Text_MustIInformLance:
     .string "הילד הזה ללא רבב,\n"
     .string "גם במיומנות וגם ברוח!\p"
     .string "הודי בתבוסה והעניקי לו\n"
-    .string "את RISINGBADGE!\p"
+    .string "את תג נסיקה!\p"
     .string "…או שעליי לדווח על כך ללאנס?$"
 
 DragonsDen_Shrine_Text_IUnderstand:
     .string "א-אני מבינה…$"
 
 DragonsDen_Shrine_Text_HereRisingBadge:
-    .string "הנה, זה RISINGBADGE…\p"
+    .string "הנה, זה תג נסיקה…\p"
     .string "נו, מהר! קח אותו!$"
 
 DragonsDen_Shrine_Text_PlayerReceivedRisingBadge:
-    .string "{PLAYER} קיבל את RISINGBADGE.$"
+    .string "{PLAYER} קיבל את תג נסיקה.$"
 
 DragonsDen_Shrine_Text_RisingBadgeExplanation:
-    .string "RISINGBADGE יאפשר לפוקימונים שלך\n"
+    .string "תג נסיקה יאפשר לפוקימונים שלך\n"
     .string "להשתמש במהלך לטיפוס על מפלים.\p"
     .string "בנוסף, כל הפוקימונים יכירו בך כמאמן\n"
     .string "ויצייתו לכל פקודה שלך בלי עוררין.$"
