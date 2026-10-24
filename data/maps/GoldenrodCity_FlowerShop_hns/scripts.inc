@@ -127,7 +127,7 @@ GoldenrodCity_FlowerShop_Text_Owner1:
 GoldenrodCity_FlowerShop_Text_Owner2:
 .string "מסתבר שיש עץ משונה בדרך 36.\p"
 .string "אומרים שהוא רוקד כשמשקים אותו…\p"
-.string "אה, זה PLAINBADGE של מכון גולדנרוד!\p"
+.string "אה, זה תג מישור של מכון גולדנרוד!\p"
 .string "ניצחת את ויטני?!\p"
 .string "טוב, אז אין מה לדאוג, נכון?\p"
 .string "אז אשאיל לך את בקבוק ההתזה\n"
