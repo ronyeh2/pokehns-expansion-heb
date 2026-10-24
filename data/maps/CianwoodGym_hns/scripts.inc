@@ -154,10 +154,10 @@ CianwoodGym_Text_ChuckLoss:
 	.string "You're worthy of STORMBADGE!$"
 
 CianwoodGym_Text_GetStormBadge:
-	.string "{PLAYER} קיבל את STORMBADGE.$"
+	.string "{PLAYER} קיבל את תג סערה.$"
 
 CianwoodGym_Text_ChuckBadgeSpeech:
-	.string "עם התג STORMBADGE, כל פוקימון עד\n"
+	.string "עם תג סערה, כל פוקימון עד\n"
 	.string "רמה 70 יציית לך, גם אם התקבל בהחלפה.\p"
 	.string "הוא גם מאפשר לפוקימונים שלך\n"
 	.string "להשתמש בתעופה מחוץ לקרב.\p"

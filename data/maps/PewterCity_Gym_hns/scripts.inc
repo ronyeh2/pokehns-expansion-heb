@@ -54,7 +54,7 @@ PewterCity_Gym_Text_Brock_WinLoss:
 	.string "קדימה - קח את התג הזה.$"
 
 PewterCity_Gym_Text_ReceivedBoulderBadge:
-	.string "{PLAYER} קיבל את תג הסלע.$"
+	.string "{PLAYER} קיבל את תג סלע.$"
 
 PewterCity_Gym_Text_Brock_GiveTM:
 	.string "הנה, קח איתך את המ”מ הזה.$"

@@ -5,8 +5,7 @@
 # Keys on the Hebrew page (visual columns, 0 = left):
 #   row 0: . ז ו ה ד ג ב א    row 1: , נ מ ל כ י ט ח
 #   row 2: - ש ר ק צ פ ע ס    row 3: ' _ ץ ף ן ם ך ת   (_ = space, ' = geresh)
-# The cursor starts on alef (column 7, row 0). A page swap between the Hebrew page and a Latin page
-# mirrors the cursor's column (Hebrew column c <-> Latin column 7-c); Latin <-> symbols keeps it.
+# The cursor starts on alef (column 7, row 0); a page swap keeps the cursor's column.
 # The naming screen reads input in sNamingScreen->state == 2 (u8 at +0x1E10).
 start save:menuA_base
 include ../scripts/continue.txt
@@ -113,10 +112,7 @@ waitnaming
 press UP                                  # row 0, column 1 ...
 press UP
 press UP
-press RIGHT                               # ... column 5, which is Latin column 2 and then
-press RIGHT                               # symbols column 2, the key '2'
-press RIGHT
-press RIGHT
+press RIGHT                               # ... column 2 for '2' on the symbols page
 press SELECT
 waitnaming
 press SELECT
@@ -148,8 +144,15 @@ tap A 0
 talk naming_nick_rater3_ask 10 -
 waitcb2x CB2_NamingScreen 900
 waitnaming
-press SELECT                              # the Latin page: alef's column 7 becomes column 0, A
+press SELECT                              # the Latin page
 waitnaming
+press LEFT                                # A: column 0
+press LEFT
+press LEFT
+press LEFT
+press LEFT
+press LEFT
+press LEFT
 press A
 waitnaming
 press RIGHT

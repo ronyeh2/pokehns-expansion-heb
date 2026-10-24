@@ -105,10 +105,10 @@ MortyWinLossText:
 	.string "בסדר. התג הזה שלך.$"
 
 Text_ReceivedFogBadge:
-	.string "{PLAYER} קיבל את FOGBADGE.$"
+	.string "{PLAYER} קיבל את תג ערפל.$"
 
 MortyText_FogBadgeSpeech:
-	.string "עם התג FOGBADGE, פוקימונים עד\n"
+	.string "עם תג ערפל, פוקימונים עד\n"
 	.string "רמה 50 יצייתו לך.\p"
 	.string "בנוסף, כל פוקימון שיודע גלישה\n"
 	.string "יוכל להשתמש בה בכל זמן.\p"
