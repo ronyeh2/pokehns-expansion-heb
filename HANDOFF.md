@@ -43,9 +43,9 @@ fresh clone.
 | Item | Value | Check |
 | --- | --- | --- |
 | `he/main` | `4a9c6858b1` | `git rev-parse --short he/main` |
-| Last release | 0.2, built from `he/main` `40279b7f5f` (2026-10-20) | `<builds>/README.md` |
-| 0.2 ROM | `pokehns-he-2.0.6-0.2.gba`: 33554432 bytes, SHA-1 `07753efc17e5c1a1c23e791b65cc79b14f1df955`, CRC32 `A974ED1F` | `<builds>/SHA1SUMS`; rebuilt byte for byte from a fresh clone (section 2.7) |
-| Since 0.2 | 4 commits that touch only CI, tools and docs: `hebrew.yml`, `check_chunked.py`, `crashing_tests.txt`, `units.py`, `DECISIONS.md`, `STATUS.md`. Nothing under `src/`, `data/`, `include/` or `graphics/` | `git diff --stat 40279b7f5f..he/main` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `e66c5f4136` | `<builds>/README.md` |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `2fb9e5d9f493e6a78119eb07e7f93e5e3ce0c3a4`, CRC32 `BBC6547A` | `<builds>/SHA1SUMS` |
+| Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"` | section 5 |
 | CI | the last two runs on `he/main` are green (39494370746, 39496758687) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml` |
 | Static checks on `he/main` | drift 0 FAIL; audit 0 errors and 42 FIT warnings; namecheck 0 problems; 40 tool tests OK | section 4.2 |
 | Translation status | every live file is translated: 510 seen on screen, 132 translated, 19 blocked | `translation/hebrew/STATUS.md:5` |

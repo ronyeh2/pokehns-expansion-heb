@@ -122,9 +122,4 @@ status 1 when:
 
 ## Known gap
 
-`../emu/tours/naming_nickname.txt` is older than the copy that release 0.2 was tested with. The
-0.2 engine mirrors the cursor's column when the naming screen swaps between the Hebrew page and a
-Latin page, and this copy still expects the column to stay. On the 0.2 ROM it types `CDE` where
-the tour means `ABC`, and `♀` where it means `2` in the mixed Pikachu name. The tour still
-reports OK. Fix it
-before the next release, using the comments in the tour as the key map.
+`../emu/tours/naming_nickname.txt` expects the mirrored naming-screen cursor (the Hebrew page and a Latin page swap columns c and 7-c); an older copy that kept the column typed `CDE` instead of `ABC`.

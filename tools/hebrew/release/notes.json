@@ -1,10 +1,10 @@
 {
- "release": "0.4",
+ "release": "1.0",
  "upstream_version": "2.0.6",
  "branch": "he/main",
  "toolchain": "devkitARM, arm-none-eabi-gcc 16",
  "static_checks": "0 drift failures, 0 audit errors, 0 glossary problems",
- "visual_review": "49 findings on the first release candidate: 41 fixed in 0.1, the 7 left as known issues in 0.1 fixed in this release, and 1 was a problem of the review sheets rather than the ROM. The screens this release changes (60 tour frames, 119 dialogue labels on 336 pages) were reviewed again, each finding checked by a second reviewer: 8 confirmed (5 fixed in this build, 1 stale tour script fixed in the harness, 2 listed under Known issues), 8 refuted. For 0.4, a third round reached the gym badge scenes, the Battle Frontier facilities, the Trainer Hill and Battle Tents, PC storage actions, the Pokédex forms, help windows and Easy Chat, PokéGear ribbons, contests and a wild double battle; every change was seen before and after and checked by a second reviewer. The final nun ן is 1 px wider, so most Hebrew lines that contain it moved by a pixel: 738 of 1307 tour screenshots differ from 0.3, with 0 glyphs drawn outside a window",
+ "visual_review": "every tour screenshot compared with the English build and with the previous build, by reviewers looking for clipping, overlap, mirroring, digit order, glyphs, English left and visible translation errors; every finding checked by a second reviewer who tried to refute it. Three further rounds made saves and tours for screens no earlier test reached (the Hall of Fame and credits, the challenge menus, Kurt and the move relearner, PokéGear calls, Rare Candy and TM use, the battle debug menu, the Safari Zone, the Berry Blender, Pokéblocks, Voltorb Flip, map-name pop-ups, marts, the gym badge scenes, the Battle Frontier facilities, the Trainer Hill and Battle Tents, PC storage, Pokédex forms, help windows, Easy Chat, contests and a double battle); the confirmed misalignments are fixed and seen on screen before and after",
  "crosscore_notes": "VBA-M, gpSP and Mednafen-GBA draw every screen like mGBA; the few pixels left are the clock (the start menu shows the time, and each core's clock started at a different second) and an animation frame. VBA-Next has no real-time clock, so the game shows its standard \"internal battery has run dry\" notice and the rest of the script lands on other screens; that notice is drawn correctly in Hebrew. SkyEmu crashes the minimal libretro frontend on the English ROM too, so it was not compared. The title frame differs on every core because the intro animation runs at a different point when the save loads.",
  "map_walk": {
   "held_reason": "because the map starts a scripted Frontier or multi-battle sequence that the walker (which answers every prompt with B) cannot finish",
@@ -14,14 +14,14 @@
   ],
   "hebrew_only_reason": "hold because the first Battle Arena battle was won in this run and the walker stopped at the next-opponent menu, which is drawn correctly; in the English run that battle ended back in the lobby"
  },
- "known_issues_intro": "Release 0.4 writes the gym badges in Hebrew and fixes the misalignments found on screens that 0.3 did not test; the decisions behind 0.2 are in `translation/hebrew/DECISIONS.md` of the source fork.",
+ "known_issues_intro": "The decisions behind the translation are in `translation/hebrew/DECISIONS.md` of the source fork.",
  "known_issues": [
   "Pokédex, imperial units only (a challenge option; metric is the default): a known height is drawn with its closing ” to the left of the digits. Moving it would break the size-record code, which strips everything before the first digit. Found in the code, not seen on screen.",
   "Pokédex list: the stat labels now sit at the right of the panel and their shadow touches the box border, with no 1-px gap.",
   "Summary screen: in a nickname with a geresh (ג'ימי), the geresh touches the bottom of the portrait box. Raising the nickname 2 px to keep its descenders off the frame below moved it up against the box.",
   "Message box: a page that ends in a colon draws the colon against the continue arrow, with no gap (seen in one Battle Frontier Lounge text).",
   "EXEGGUTOR-A is אקזגיוטר-א, without the ק of the base form אקזגקיוטר, because the base form plus -א does not fit the 50 px Pokédex list column.",
-  "Contests: a nickname long enough for the game to switch it to the narrow font (11-12 letters) can push the second line of one contest message past its window by a pixel or two, as in 0.3. Found by measurement, not seen on screen."
+  "Contests: a nickname long enough for the game to switch it to the narrow font (11-12 letters) can push the second line of one contest message past its window by a pixel or two. Found by measurement, not seen on screen."
  ],
  "not_tested": [
   "Real hardware. No flashcart was available. The ROM is 32 MiB and needs a cart that supports 32 MiB images, with the save type set to FLASH 128 KB and a working RTC.",
