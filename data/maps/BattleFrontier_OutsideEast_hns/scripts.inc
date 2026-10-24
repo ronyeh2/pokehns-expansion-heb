@@ -233,7 +233,8 @@ BattleFrontier_OutsideEast_EventScript_Camper_hns::
 
 BattleFrontier_OutsideEast_Text_BattleTowerSign_hns:
 	.string "זהו מגדל הקרב!\n"
-	.string "המשיכו ברצף הניצחונות כמאמן הקשוח ביותר!$"
+	.string "המשיכו ברצף הניצחונות כמאמן\l"
+	.string "הקשוח ביותר!$"
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign_hns:
 	.string "זהו ארמון הקרב!\n"
