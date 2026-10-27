@@ -2557,6 +2557,11 @@ static void DisplayPartyPokemonNickname(struct Pokemon *mon, struct PartyMenuBox
         if (c == 1)
             menuBox->infoRects->blitFunc(menuBox->windowId, menuBox->infoRects->dimensions[0] >> 3, menuBox->infoRects->dimensions[1] >> 3, menuBox->infoRects->dimensions[2] >> 3, menuBox->infoRects->dimensions[3] >> 3, FALSE);
         GetMonNickname(mon, nickname);
+#if TEXT_RTL
+        // A name too wide for the slot even in the narrowest font would run over the box frame
+        // or the HP label.
+        FitNameToWidth(nickname, nickname + StringLength(nickname), GetFontIdToFit(nickname, FONT_SMALL, 0, 50), 50);
+#endif
         DisplayPartyPokemonBarDetailToFit(menuBox->windowId, nickname, 0, menuBox->infoRects->dimensions, 50);
     }
 }
