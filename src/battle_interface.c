@@ -1846,6 +1846,11 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
 
         u32 fontId = GetFontIdToFit(gDisplayedStringBattle, FONT_SMALL, 0, 55);
 
+#if TEXT_RTL
+        // Only 55 px are cleared below: a name drawn wider would run into the level, and its end
+        // would stay there after a switch to a shorter name.
+        FitNameToWidth(gDisplayedStringBattle, ptr, fontId, 55);
+#endif
         if (IsOnPlayerSide(gSprites[healthboxSpriteId].data[6]))
         {
             FillSpriteRectColor(healthboxSpriteId, 16, 5, 55, 11, HEALTHBOX_BG_INDEX);

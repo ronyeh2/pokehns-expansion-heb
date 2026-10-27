@@ -3395,6 +3395,25 @@ u32 GetFontIdToFit(const u8 *string, u32 fontId, u32 letterSpacing, u32 widthPx)
     }
 }
 
+#if TEXT_RTL
+// Drops glyphs from the end of a name until the whole string fits in widthPx in fontId. The name
+// runs from str to nameEnd; what follows it (a gender symbol and its colour codes) is kept. Some
+// Hebrew letters are wider than the Latin letters an English name slot was sized for, so ten of
+// them do not fit even in the narrowest font GetFontIdToFit falls back to.
+void FitNameToWidth(u8 *str, u8 *nameEnd, u32 fontId, u32 widthPx)
+{
+    while (nameEnd > str && GetStringWidth(fontId, str, 0) > (s32)widthPx)
+    {
+        u8 *cut = nameEnd - 1;
+
+        if (cut > str && cut[-1] == CHAR_EXTRA_SYMBOL)
+            cut--;
+        StringCopy(cut, nameEnd);
+        nameEnd = cut;
+    }
+}
+
+#endif
 u8 *PrependFontIdToFit(u8 *start, u8 *end, u32 fontId, u32 width)
 {
     u32 fitFontId = GetFontIdToFit(start, fontId, 0, width);
