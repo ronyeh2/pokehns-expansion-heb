@@ -5221,6 +5221,12 @@ static void Task_ShowTourneyTree(u8 taskId)
         ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(0, sTourneyTreeBgTemplates, ARRAY_COUNT(sTourneyTreeBgTemplates));
         InitWindows(sTourneyTreeWindowTemplates);
+#if TEXT_RTL
+        // The bracket art is not mirrored, so each name keeps its English place against its
+        // bracket line and only its reading order flips.
+        SetWindowRtlMode(TOURNEYWIN_NAMES_LEFT, WINDOW_RTL_IN_PLACE);
+        SetWindowRtlMode(TOURNEYWIN_NAMES_RIGHT, WINDOW_RTL_IN_PLACE);
+#endif
         DeactivateAllTextPrinters();
         gBattle_BG0_X = 0;
         gBattle_BG0_Y = 0;
