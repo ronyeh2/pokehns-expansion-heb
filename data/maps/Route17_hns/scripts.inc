@@ -175,6 +175,6 @@ Route17_Text_CharlesRematchDefeat:
 	.string "שוב התרסקתי ונשרפתי!$"
 
 Route17_Text_CharlesPostRematch:
-	.string "פגשתי מאמן כמוך ב-UNOVA.\n"
+	.string "פגשתי מאמן כמוך ביונובה.\n"
 	.string "אל תתרסק!$"
 
