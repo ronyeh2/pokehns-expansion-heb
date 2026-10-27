@@ -257,7 +257,7 @@ static const struct MatchCallStructNPC sBaobaMatchCallHeader =
     .mapSec = MAPSEC_SAFARI_ZONE_GATE,
     .flag = FLAG_ENABLE_BAOBA_MATCH_CALL,
     .desc = COMPOUND_STRING("פקח הספארי"),
-    .name = COMPOUND_STRING("BAOBA"),
+    .name = COMPOUND_STRING("באובה"),
     .textData = sBaobaTextScripts
 };
 
