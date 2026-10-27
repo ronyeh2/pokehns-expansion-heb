@@ -298,6 +298,10 @@ static void BerryFix_GpuSet(void)
     ChangeBgX(1, 0, BG_COORD_SET);
     ChangeBgY(1, 0, BG_COORD_SET);
     InitWindows(sBerryFixWindowTemplates);
+#if TEXT_RTL
+    // The game names are Latin and sit under the two consoles of the unmirrored picture.
+    SetWindowRtlMode(WIN_GAME_NAMES, WINDOW_RTL_LTR);
+#endif
     DeactivateAllTextPrinters();
 
     DmaCopy32(3, sText_Pal, BG_PLTT + PLTT_OFFSET_4BPP(15), sizeof(sText_Pal));
