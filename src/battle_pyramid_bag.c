@@ -1468,6 +1468,11 @@ static void InitPyramidBagWindows(void)
     u8 i;
 
     InitWindows(sWindowTemplates);
+#if TEXT_RTL
+    // The info box is the Bag's description box: its white area is x=1..105 and the window runs on
+    // under the item list's frame. Mirror around the white area, as the Bag does.
+    SetWindowRtlMirrorWidth(WIN_INFO, 107);
+#endif
     DeactivateAllTextPrinters();
     LoadUserWindowBorderGfx(0, 0x1, BG_PLTT_ID(14));
     LoadMessageBoxGfx(0, 0xA, BG_PLTT_ID(13));
