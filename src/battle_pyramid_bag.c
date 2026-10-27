@@ -1040,7 +1040,13 @@ static void HandleMenuActionInput_2x2(u8 taskId)
                 ChangeMenuGridCursorPosition(MENU_CURSOR_DELTA_NONE, MENU_CURSOR_DELTA_DOWN);
             }
         }
+#if TEXT_RTL
+        // A mirrored grid draws its first column on the right, so RIGHT goes back to it and LEFT
+        // on to the second column. L and R keep the column order.
+        else if (JOY_NEW(IsMenuGridMirrored() ? DPAD_RIGHT : DPAD_LEFT) || GetLRKeysPressed() == MENU_L_PRESSED)
+#else
         else if (JOY_NEW(DPAD_LEFT) || GetLRKeysPressed() == MENU_L_PRESSED)
+#endif
         {
             if (id & 1 && IsValidMenuAction(id - 1))
             {
@@ -1048,7 +1054,11 @@ static void HandleMenuActionInput_2x2(u8 taskId)
                 ChangeMenuGridCursorPosition(MENU_CURSOR_DELTA_LEFT, MENU_CURSOR_DELTA_NONE);
             }
         }
+#if TEXT_RTL
+        else if (JOY_NEW(IsMenuGridMirrored() ? DPAD_LEFT : DPAD_RIGHT) || GetLRKeysPressed() == MENU_R_PRESSED)
+#else
         else if (JOY_NEW(DPAD_RIGHT) || GetLRKeysPressed() == MENU_R_PRESSED)
+#endif
         {
             if (!(id & 1) && IsValidMenuAction(id + 1))
             {
