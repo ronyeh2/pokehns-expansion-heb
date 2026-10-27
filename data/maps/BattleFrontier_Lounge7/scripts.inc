@@ -351,7 +351,7 @@ BattleFrontier_Lounge7_Text_IllTakeBattlePoints:
 BattleFrontier_Lounge7_Text_YouDontWantTo:
 	.string "מה?\n"
 	.string "אתה לא רוצה…\p"
-	.string "אם תרצה לראות כמה אני מוכשרת,\n"
+	.string "אם תרצה לראות את הכישרון שלי,\n"
 	.string "בוא אליי מתי שבא לך!$"
 
 BattleFrontier_Lounge7_Text_RightTutorIntro:
