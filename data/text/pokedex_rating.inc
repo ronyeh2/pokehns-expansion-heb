@@ -305,7 +305,7 @@ gJohtoDexRatingText_LessThan155::
 
 gJohtoDexRatingText_LessThan170::
 	.string "אם תלמד להשתמש היטב בפוקיבולים\n"
-	.string "המיוחדים שמכין Kurt,\p"
+	.string "המיוחדים שמכין קורט,\p"
 	.string "תוכל לתפוס פוקימונים\n"
 	.string "טוב יותר!$"
 
