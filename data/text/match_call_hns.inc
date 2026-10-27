@@ -1013,7 +1013,7 @@ MatchCall_HNS_Charles_General1::
 	.string "היי, {PLAYER}!\n"
 	.string "כאן צ'רלס.\p"
 	.string "הייתי די שובר לבבות\n"
-	.string "ב-UNOVA.\p"
+	.string "ביונובה.\p"
 	.string "עכשיו אני כוכב הכביש!$"
 
 MatchCall_HNS_Charles_General2::
