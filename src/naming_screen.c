@@ -2347,10 +2347,10 @@ static void DrawTextEntry(void)
         temp[1] = EOS;
         if (IsWideLetter(temp[0]) == TRUE)
             slotX += 2;
-        // A Hebrew letter sits against the right of its slot, where a Latin capital ends, so the
-        // letters keep an even gap however narrow they are
+        // A Hebrew letter is centred in its slot. Pushed to one side, a narrow letter (yod, vav,
+        // final nun) left its whole spare width as a gap on the other side, which read as a space.
         else if (IS_HEBREW_CHAR(temp[0]))
-            slotX += 6 - GetStringWidth(FONT_NORMAL, temp, 0);
+            slotX += (7 - GetStringWidth(FONT_NORMAL, temp, 0)) / 2;
         AddTextPrinterParameterized(sNamingScreen->windows[WIN_TEXT_ENTRY], FONT_NORMAL, temp, slotX, 1, TEXT_SKIP_DRAW, NULL);
     }
 
