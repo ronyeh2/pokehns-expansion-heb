@@ -426,13 +426,13 @@ BattleFrontier_Lounge7_Text_HaventGotEnoughPoints_hns:
 	.string "אין לך מספיק נקודות קרב!$"
 
 BattleFrontier_Lounge7_Text_IllTakeBattlePoints_hns:
-	.string "נו, ראית כמה אני מוכשרת?\n"
+	.string "נו, ראית איזה כישרון יש לי?\n"
 	.string "אקח את נקודות הקרב שלך, תודה!$"
 
 BattleFrontier_Lounge7_Text_YouDontWantTo_hns:
 	.string "מה?\n"
 	.string "אתה לא רוצה…\p"
-	.string "אם אתה רוצה לראות כמה אני מוכשרת,\n"
+	.string "אם אתה רוצה לראות את הכישרון שלי,\n"
 	.string "בוא אליי מתי שתרצה!$"
 
 BattleFrontier_Lounge7_Text_RightTutorIntro_hns:

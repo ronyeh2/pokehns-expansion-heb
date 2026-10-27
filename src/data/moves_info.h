@@ -4087,7 +4087,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("שכשוך"),
         .description = COMPOUND_STRING(
-            "זה סתם שכשוך…\n"
+            "זה סתם שכשוך...\n"
             "אין לזה שום השפעה."),
         .effect = EFFECT_DO_NOTHING,
         .power = 0,

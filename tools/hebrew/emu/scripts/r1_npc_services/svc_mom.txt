@@ -3,7 +3,7 @@
 # max, +100, B; then the max), CHECK again, WITHDRAW (1, the max), the saving toggle YES/NO
 # both ways, EXIT. The player has max money.
 start saves/r1svc_menuA_base.sav
-include /Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu/scripts/continue.txt
+include ../continue.txt
 warptoloose MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_1F_HNS 5 6
 evstart lockall; call NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu; releaseall; end
 talk svc_mom_menu 10 -

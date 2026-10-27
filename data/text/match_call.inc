@@ -2039,13 +2039,13 @@ MatchCall_Text_Mom3::
 	.string "שהן יתבלו לגמרי, מותק!$"
 
 MatchCall_Text_Baoba1::
-	.string "BAOBA: {PLAYER}!\n"
+	.string "באובה: {PLAYER}!\n"
 	.string "אזור הספארי כמעט מוכן!\p"
 	.string "אתקשר אליך מיד\n"
 	.string "כשהעבודות יסתיימו!$"
 
 MatchCall_Text_Baoba2::
-	.string "BAOBA: {PLAYER}!\n"
+	.string "באובה: {PLAYER}!\n"
 	.string "אזור הספארי פתוח!\p"
 	.string "בוא מתי שתרצה!$"
 

@@ -4,7 +4,7 @@
 # its apricorn (none); one Friend Ball made (singular), then three Love Balls (plural).
 # FLAG_CAUGHT_CELEBI skips the GS Ball check (the debug key-item fill holds a GS Ball).
 start saves/r1svc_menuA_base.sav
-include /Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu/scripts/continue.txt
+include ../continue.txt
 setflag FLAG_CAUGHT_CELEBI
 clearflag FLAG_HIDE_KURT_2
 ev removeitem ITEM_PERSIM_BERRY, 999; removeitem ITEM_LOVE_BALL, 10; end

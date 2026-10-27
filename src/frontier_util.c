@@ -1080,6 +1080,15 @@ static bool8 IsWinStreakActive(u32 challenge)
         return FALSE;
 }
 
+// x of the results windows' status column (current / previous / record / total), which shares a
+// row with the level label. The Hebrew open-level label is 54 px, so the column moves 6 px further
+// from it to keep a gap wider than the label's own word space.
+#if TEXT_RTL
+#define RESULTS_STATUS_X(x) ((x) + 6)
+#else
+#define RESULTS_STATUS_X(x) (x)
+#endif
+
 static void PrintAligned(const u8 *str, s32 y)
 {
     s32 x = GetStringCenterAlignXOffset(FONT_NORMAL, str, DISPLAY_WIDTH - 16);
@@ -1183,10 +1192,10 @@ static void ShowTowerResultsWindow(u8 battleMode)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 16, 49, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 16, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, 72, 132, 49);
-    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_50, 72, 132, 65);
-    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, 72, 132, 97);
-    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, 72, 132, 113);
+    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(72), 132, 49);
+    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(72), 132, 65);
+    TowerPrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 132, 97);
+    TowerPrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 132, 113);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1250,12 +1259,12 @@ static void ShowDomeResultsWindow(u8 battleMode)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 8, 33, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 8, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    DomePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, 64, 121, 33);
-    PrintTwoStrings(gText_Record, gText_ClearStreak, gSaveBlock2Ptr->frontier.domeRecordWinStreaks[battleMode][FRONTIER_LVL_50], 64, 121, 49);
-    PrintTwoStrings(gText_Total, gText_Championships, gSaveBlock2Ptr->frontier.domeTotalChampionships[battleMode][FRONTIER_LVL_50], 64, 112, 65);
-    DomePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, 64, 121, 97);
-    PrintTwoStrings(gText_Record, gText_ClearStreak, gSaveBlock2Ptr->frontier.domeRecordWinStreaks[battleMode][FRONTIER_LVL_OPEN], 64, 121, 113);
-    PrintTwoStrings(gText_Total, gText_Championships, gSaveBlock2Ptr->frontier.domeTotalChampionships[battleMode][FRONTIER_LVL_OPEN], 64, 112, 129);
+    DomePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(64), 121, 33);
+    PrintTwoStrings(gText_Record, gText_ClearStreak, gSaveBlock2Ptr->frontier.domeRecordWinStreaks[battleMode][FRONTIER_LVL_50], RESULTS_STATUS_X(64), 121, 49);
+    PrintTwoStrings(gText_Total, gText_Championships, gSaveBlock2Ptr->frontier.domeTotalChampionships[battleMode][FRONTIER_LVL_50], RESULTS_STATUS_X(64), 112, 65);
+    DomePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(64), 121, 97);
+    PrintTwoStrings(gText_Record, gText_ClearStreak, gSaveBlock2Ptr->frontier.domeRecordWinStreaks[battleMode][FRONTIER_LVL_OPEN], RESULTS_STATUS_X(64), 121, 113);
+    PrintTwoStrings(gText_Total, gText_Championships, gSaveBlock2Ptr->frontier.domeTotalChampionships[battleMode][FRONTIER_LVL_OPEN], RESULTS_STATUS_X(64), 112, 129);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1326,10 +1335,10 @@ static void ShowPalaceResultsWindow(u8 battleMode)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 16, 49, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 16, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    PalacePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, 72, 131, 49);
-    PalacePrintRecordStreak(battleMode, FRONTIER_LVL_50, 72, 131, 65);
-    PalacePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, 72, 131, 97);
-    PalacePrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, 72, 131, 113);
+    PalacePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(72), 131, 49);
+    PalacePrintRecordStreak(battleMode, FRONTIER_LVL_50, RESULTS_STATUS_X(72), 131, 65);
+    PalacePrintPrevOrCurrentStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 131, 97);
+    PalacePrintRecordStreak(battleMode, FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 131, 113);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1378,12 +1387,12 @@ static void ShowPikeResultsWindow(void)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 8, 33, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 8, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    PikePrintPrevOrCurrentStreak(FRONTIER_LVL_50, 64, 114, 33);
-    PikePrintCleared(gText_Record, gText_RoomsCleared, gSaveBlock2Ptr->frontier.pikeRecordStreaks[FRONTIER_LVL_50], 64, 114, 49);
-    PikePrintCleared(gText_Total, gText_TimesCleared, gSaveBlock2Ptr->frontier.pikeTotalStreaks[FRONTIER_LVL_50], 64, 114, 65);
-    PikePrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, 64, 114, 97);
-    PikePrintCleared(gText_Record, gText_RoomsCleared, gSaveBlock2Ptr->frontier.pikeRecordStreaks[FRONTIER_LVL_OPEN], 64, 114, 113);
-    PikePrintCleared(gText_Total, gText_TimesCleared, gSaveBlock2Ptr->frontier.pikeTotalStreaks[FRONTIER_LVL_OPEN], 64, 114, 129);
+    PikePrintPrevOrCurrentStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(64), 114, 33);
+    PikePrintCleared(gText_Record, gText_RoomsCleared, gSaveBlock2Ptr->frontier.pikeRecordStreaks[FRONTIER_LVL_50], RESULTS_STATUS_X(64), 114, 49);
+    PikePrintCleared(gText_Total, gText_TimesCleared, gSaveBlock2Ptr->frontier.pikeTotalStreaks[FRONTIER_LVL_50], RESULTS_STATUS_X(64), 114, 65);
+    PikePrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(64), 114, 97);
+    PikePrintCleared(gText_Record, gText_RoomsCleared, gSaveBlock2Ptr->frontier.pikeRecordStreaks[FRONTIER_LVL_OPEN], RESULTS_STATUS_X(64), 114, 113);
+    PikePrintCleared(gText_Total, gText_TimesCleared, gSaveBlock2Ptr->frontier.pikeTotalStreaks[FRONTIER_LVL_OPEN], RESULTS_STATUS_X(64), 114, 129);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1440,10 +1449,10 @@ static void ShowArenaResultsWindow(void)
     PrintAligned(gStringVar4, 2);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 16, 49, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 16, 97, TEXT_SKIP_DRAW, NULL);
-    ArenaPrintPrevOrCurrentStreak(FRONTIER_LVL_50, 72, 126, 49);
-    ArenaPrintRecordStreak(FRONTIER_LVL_50, 72, 126, 65);
-    ArenaPrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, 72, 126, 97);
-    ArenaPrintRecordStreak(FRONTIER_LVL_OPEN, 72, 126, 113);
+    ArenaPrintPrevOrCurrentStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(72), 126, 49);
+    ArenaPrintRecordStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(72), 126, 65);
+    ArenaPrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 126, 97);
+    ArenaPrintRecordStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(72), 126, 113);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }
@@ -1591,10 +1600,10 @@ static void ShowPyramidResultsWindow(void)
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_Lv502, 8, 49, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(gRecordsWindowId, FONT_NORMAL, gText_OpenLv, 8, 97, TEXT_SKIP_DRAW, NULL);
     PrintHyphens(10);
-    PyramidPrintPrevOrCurrentStreak(FRONTIER_LVL_50, 64, 111, 49);
-    PyramidPrintRecordStreak(FRONTIER_LVL_50, 64, 111, 65);
-    PyramidPrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, 64, 111, 97);
-    PyramidPrintRecordStreak(FRONTIER_LVL_OPEN, 64, 111, 113);
+    PyramidPrintPrevOrCurrentStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(64), 111, 49);
+    PyramidPrintRecordStreak(FRONTIER_LVL_50, RESULTS_STATUS_X(64), 111, 65);
+    PyramidPrintPrevOrCurrentStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(64), 111, 97);
+    PyramidPrintRecordStreak(FRONTIER_LVL_OPEN, RESULTS_STATUS_X(64), 111, 113);
     PutWindowTilemap(gRecordsWindowId);
     CopyWindowToVram(gRecordsWindowId, COPYWIN_FULL);
 }

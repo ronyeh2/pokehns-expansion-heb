@@ -17,7 +17,7 @@ snap mc_bag_mail
 tap A 4
 waitquiet
 snap mc_bag_mail_context
-tap RIGHT 4
+tap ROWNEXT 4
 waitquiet
 snap mc_bag_mail_context_give
 tap A 4

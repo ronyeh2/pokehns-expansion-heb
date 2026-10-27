@@ -4,7 +4,7 @@
 # woman's take-back: the level menu (names + gender + Lv, EXIT), B, the cost YES/NO (NO,
 # then YES), "take the other one back too?" YES with a full party.
 start saves/r1svc_menuA_base.sav
-include /Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu/scripts/continue.txt
+include ../continue.txt
 ev givemon SPECIES_DITTO, 20; end
 # party: Typhlosion, Pikachu, Ampharos, Gyarados, Togepi Egg, Ditto
 

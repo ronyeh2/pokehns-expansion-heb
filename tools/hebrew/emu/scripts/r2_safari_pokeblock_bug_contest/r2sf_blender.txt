@@ -34,7 +34,7 @@ snap r2sf_bl_bagtop
 tap A 4
 waitquiet
 snap r2sf_bl_context
-tap RIGHT 4
+tap ROWNEXT 4
 waitquiet
 snap r2sf_bl_context_tag
 tap A 4

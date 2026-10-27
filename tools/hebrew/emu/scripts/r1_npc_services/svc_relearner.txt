@@ -6,7 +6,7 @@
 # sMoveRelearnerStruct->state (u8 at +0): 4 idle battle, 6 idle contest, 9 teach YES/NO,
 # 13 give up YES/NO, 18 delete old move YES/NO, 26 stop teaching YES/NO, 33 wait for A.
 start saves/r1svc_menuA_base.sav
-include /Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu/scripts/continue.txt
+include ../continue.txt
 ev additem ITEM_HEART_SCALE, 5; end
 warpto MAP_BLACKTHORN_CITY_HOUSE3_HNS 6 4
 face RIGHT

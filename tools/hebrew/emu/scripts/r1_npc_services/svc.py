@@ -9,7 +9,7 @@
 Usage: svc.py <hns.py args>   (e.g. svc.py tour ROM OUT --tours DIR --only RE --clip)
 """
 import os, sys
-sys.path.insert(0, "/Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 import hns
 from hns import script_op, HnsError, _arg
 

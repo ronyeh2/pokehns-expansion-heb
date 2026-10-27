@@ -7,7 +7,7 @@ menu.c's sMenu.cursorPos), or every row of a list menu (dynmultichoice, ShowScro
 with svc.py's scrollshots, and closes it with B (A on the last row when B is ignored).
 
     gen.py [SRC]      SRC: the source tree whose data/maps gives each map's landing tile
-                      (default /Users/Ron/github/pokehns-release)
+                      (default ../pokehns-release)
 Run the tours with svc.py (hns.py + scrollshots), e.g.
     svc.py tour ROM OUT --tours <this dir> --only '^m01_'
 """
@@ -17,7 +17,7 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = sys.argv[1] if len(sys.argv) > 1 else "/Users/Ron/github/pokehns-release"
+SRC = sys.argv[1] if len(sys.argv) > 1 else "../pokehns-release"
 SAVE = "saves/r2menus_postgame.sav"
 
 MC, DYN, SCROLL = "mc", "dyn", "scroll"

@@ -2,7 +2,7 @@
 # password multichoice (Special_BuenaPasswordShowMultichoice) for each of the 11 categories
 # (B: come back), a wrong answer, already played, and a right answer with the prize.
 start saves/r1svc_menuA_base.sav
-include /Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu/scripts/continue.txt
+include ../continue.txt
 ev setvar VAR_GOLDENROD_CITY_STATE, 0; clearflag FLAG_DAILY_BUENAS_PASSWORD; clearflag FLAG_DAILY_BUENAS_PASSWORD_GUESSED; end
 warpto MAP_GOLDENROD_CITY_RADIO_TOWER_2F_HNS 29 14
 face LEFT

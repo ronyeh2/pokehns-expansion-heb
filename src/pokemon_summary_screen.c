@@ -3304,6 +3304,17 @@ static void TilemapFiveMovesDisplay(u16 *dst, u16 palette, bool8 remove)
 
 static void DrawPokerusCuredSymbol(struct Pokemon *mon) // This checks if the mon has been cured of pokerus
 {
+#if TEXT_RTL
+    // The level line and the ball are mirrored to the panel's right end (CreateCaughtBallSprite),
+    // which puts the level's digits over the English spot. The mark goes to the mirrored tile left
+    // of the ball, flipped, so it sits as close to the ball as it does in English.
+    u16 mark = ShouldPokemonShowCuredPokerus(mon) ? (0x2C | 0x400) : 0x81A;
+
+    sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x223] = 0x81A;
+    sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][1][0x223] = 0x81A;
+    sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x226] = mark;
+    sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][1][0x226] = mark;
+#else
     if (ShouldPokemonShowCuredPokerus(mon))
     {
         sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x223] = 0x2C;
@@ -3314,6 +3325,7 @@ static void DrawPokerusCuredSymbol(struct Pokemon *mon) // This checks if the mo
         sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][0][0x223] = 0x81A;
         sMonSummaryScreen->bgTilemapBuffers[PSS_PAGE_INFO][1][0x223] = 0x81A;
     }
+#endif
     ScheduleBgCopyTilemapToVram(3);
 }
 
