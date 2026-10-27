@@ -1315,8 +1315,13 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
 // window. On the right, the English prices end 3 px before the shading (their shadow column and the
 // frame's two light inner columns), so start the mirrored prices 3 px into the window.
 #define BUY_MENU_PRICE_RIGHT 117
+// EXPENSIVE x50 makes prices of 1,000,000 and more. Six digits print their seventh as '?', and the
+// renderer only starts a left-to-right run at the currency sign when a digit follows it, so the
+// price would be drawn reversed. Print every digit, as the quantity window does.
+#define BUY_MENU_PRICE_DIGITS MAX_MONEY_DIGITS
 #else
 #define BUY_MENU_PRICE_RIGHT 120
+#define BUY_MENU_PRICE_DIGITS 6
 #endif
 
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
@@ -1355,7 +1360,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
                 gStringVar1,
                 GetItemPrice(itemId) >> IsPokeNewsActive(POKENEWS_SLATEPORT),
                 STR_CONV_MODE_LEFT_ALIGN,
-                6);
+                BUY_MENU_PRICE_DIGITS);
         }
         else
         {
@@ -1363,7 +1368,7 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
                 gStringVar1,
                 gDecorations[itemId].price,
                 STR_CONV_MODE_LEFT_ALIGN,
-                6);
+                BUY_MENU_PRICE_DIGITS);
         }
 
         if (GetItemImportance(itemId) && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1)))
@@ -1844,7 +1849,7 @@ static void Task_BuyMenu(u8 taskId)
                     CopyItemName(itemId, gStringVar1);
                     if (GetItemImportance(itemId))
                     {
-                        ConvertIntToDecimalStringN(gStringVar2, sShopData->totalCost, STR_CONV_MODE_LEFT_ALIGN, 6);
+                        ConvertIntToDecimalStringN(gStringVar2, sShopData->totalCost, STR_CONV_MODE_LEFT_ALIGN, BUY_MENU_PRICE_DIGITS);
                         StringExpandPlaceholders(gStringVar4, gText_YouWantedVar1ThatllBeVar2);
                         tItemCount = 1;
                         sShopData->totalCost = (GetItemPrice(tItemId) >> IsPokeNewsActive(POKENEWS_SLATEPORT)) * tItemCount;
