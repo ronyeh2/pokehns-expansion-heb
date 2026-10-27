@@ -4,7 +4,7 @@
 # "raise one more?" NO, "take it back?" YES, the cost (100 + 100 per level, no level menu
 # with one Pokemon) with no money: "not enough money"; then with money: YES, taken back.
 start saves/r1svc_menuA_base.sav
-include /Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu/scripts/continue.txt
+include ../continue.txt
 ev givemon SPECIES_MAGIKARP, 1; end
 # party: Typhlosion, Pikachu, Ampharos, Gyarados, Togepi Egg, Magikarp
 

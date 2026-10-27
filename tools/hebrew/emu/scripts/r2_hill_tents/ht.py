@@ -4,9 +4,9 @@ from a battery save or from a savestate an earlier step left, with the clip repo
 
     ht.py run he|en SCRIPT [--from STATE | --save SAV] [--to STATE] [--save-out SAV] [--out NAME]
 
-  he   R/rom/pokehns-clip.gba (rc5 clip build), HNS_SRC=/Users/Ron/github/pokehns-release
-  en   /Users/Ron/github/pokehns-en/pokehns.gba, HNS_SRC=/Users/Ron/github/pokehns-en
-  R    HT_OUT (default /Users/Ron/github/hns-tools/scratch/screens/r2_trainer_hill_and_battle_tents)
+  he   R/rom/pokehns-clip.gba (rc5 clip build), HNS_SRC=../pokehns-release
+  en   ../pokehns-en/pokehns.gba, HNS_SRC=../pokehns-en
+  R    HT_OUT (default ../hns-tools/scratch/screens/r2_trainer_hill_and_battle_tents)
 
 Screenshots go to R/<he|en>/<NAME>/ (NAME = the script's basename unless --out). Savestates are
 per ROM (R/<he|en>/_states/STATE.ss): --from boots the battery in the state's folder, then loads
@@ -22,10 +22,10 @@ import os
 import shutil
 import sys
 
-R = os.environ.get("HT_OUT", "/Users/Ron/github/hns-tools/scratch/screens/r2_trainer_hill_and_battle_tents")
+R = os.environ.get("HT_OUT", "../hns-tools/scratch/screens/r2_trainer_hill_and_battle_tents")
 ROMS = {
-    "he": (os.path.join(R, "rom", "pokehns-clip.gba"), "/Users/Ron/github/pokehns-release"),
-    "en": ("/Users/Ron/github/pokehns-en/pokehns.gba", "/Users/Ron/github/pokehns-en"),
+    "he": (os.path.join(R, "rom", "pokehns-clip.gba"), "../pokehns-release"),
+    "en": ("../pokehns-en/pokehns.gba", "../pokehns-en"),
 }
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -45,7 +45,7 @@ def main():
     a = ap.parse_args()
     rom, src = ROMS[a.which]
     os.environ["HNS_SRC"] = src
-    os.environ.setdefault("HNS_RUNNER", "/Users/Ron/github/hns-tools/emu/hnsrun")
+    os.environ.setdefault("HNS_RUNNER", "../hns-tools/emu/hnsrun")
     os.environ.setdefault("HNS_WORK", os.path.join(R, "work" if a.which == "he" else "work_en"))
     sys.path.insert(0, os.path.join(HERE, "..", "r3_frontier"))
     import r3bf  # noqa: F401  (hns + r2sf + r3bf ops)

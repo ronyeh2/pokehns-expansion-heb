@@ -4,7 +4,7 @@
 # Pokemon, then the box Drowzee in box 4 and the trade scene.
 # Storage: sStorage->state 0 = MSTATE_HANDLE_INPUT, 2 = menu reads input (Task_OnSelectedMon).
 start saves/r1svc_menuA_base.sav
-include /Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu/scripts/continue.txt
+include ../continue.txt
 ev givemon SPECIES_DROWZEE, 20; end
 warpto MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS 14 10
 face LEFT

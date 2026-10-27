@@ -1,7 +1,7 @@
 # Kurt's shop with 999 Love Balls and no free Poke Ball pocket slot: buying one more gives
 # "no more room" (gText_NoMoreRoomForThis).
 start saves/r1svc_menuA_base.sav
-include /Users/Ron/github/pokehns-heb-screens/tools/hebrew/emu/scripts/continue.txt
+include ../continue.txt
 setflag FLAG_CAUGHT_CELEBI
 clearflag FLAG_HIDE_KURT_2
 ev removeitem ITEM_LOVE_BALL, 999; additem ITEM_LOVE_BALL, 999; end
