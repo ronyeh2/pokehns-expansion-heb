@@ -927,10 +927,42 @@ enum {
     POKEBALL_ICON_EMPTY,
 };
 
+#if TEXT_RTL
+// A mirrored row ends with the name at the list window's left edge, where the ball goes. The column
+// left of the window holds the panel's frame, so the ball takes the window's first column: the
+// Hebrew names of the trainers who can ask for a rematch end well short of it (the name field is
+// 51 px; theirs are at most 26). Other rows get the window's own tiles back there, so a longer name
+// such as PROF. ELM's is not cut.
+static bool32 TryDrawMirroredRematchPokeballIcon(u16 windowId, bool32 draw, u32 tileOffset)
+{
+    u16 *tilemap;
+
+    if (GetWindowRtlMode(windowId) != WINDOW_RTL_MIRROR)
+        return FALSE;
+
+    if (draw)
+    {
+        tilemap = GetBgTilemapBuffer(GetWindowAttribute(windowId, WINDOW_BG));
+        tilemap += tileOffset * 64 + GetWindowAttribute(windowId, WINDOW_TILEMAP_LEFT);
+        tilemap[0] = POKEBALL_ICON_TOP;
+        tilemap[0x20] = POKEBALL_ICON_BOTTOM;
+    }
+    else
+    {
+        PutWindowRectTilemap(windowId, 0, tileOffset * 2, 1, 2);
+    }
+    return TRUE;
+}
+
+#endif
 static void TryDrawRematchPokeballIcon(u16 windowId, u32 rematchId, u32 tileOffset)
 {
     u8 bg = GetWindowAttribute(windowId, WINDOW_BG);
     u16 *tilemap = GetBgTilemapBuffer(bg);
+#if TEXT_RTL
+    if (TryDrawMirroredRematchPokeballIcon(windowId, ShouldDrawRematchPokeballIcon(rematchId), tileOffset))
+        return;
+#endif
     tilemap += tileOffset * 64 + 0x1D;
     if (ShouldDrawRematchPokeballIcon(rematchId))
     {
@@ -948,6 +980,10 @@ void ClearRematchPokeballIcon(u16 windowId, u32 tileOffset)
 {
     u8 bg = GetWindowAttribute(windowId, WINDOW_BG);
     u16 *tilemap = GetBgTilemapBuffer(bg);
+#if TEXT_RTL
+    if (TryDrawMirroredRematchPokeballIcon(windowId, FALSE, tileOffset))
+        return;
+#endif
     tilemap += tileOffset * 64 + 0x1D;
     tilemap[0] = POKEBALL_ICON_EMPTY;
     tilemap[0x20] = POKEBALL_ICON_EMPTY;
