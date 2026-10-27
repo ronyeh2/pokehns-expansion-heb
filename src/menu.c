@@ -1154,6 +1154,14 @@ u8 ChangeMenuGridCursorPosition(s8 deltaX, s8 deltaY)
     }
 }
 
+#if TEXT_RTL
+// Whether the open grid menu's columns run right to left (see ChangeMenuGridCursorPosition).
+bool32 IsMenuGridMirrored(void)
+{
+    return GetWindowRtlMode(sMenu.windowId) == WINDOW_RTL_MIRROR;
+}
+
+#endif
 u8 ChangeGridMenuCursorPosition(s8 deltaX, s8 deltaY)
 {
     u8 oldPos = sMenu.cursorPos;
