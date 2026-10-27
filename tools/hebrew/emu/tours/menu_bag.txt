@@ -50,7 +50,7 @@ waitquiet
 # GIVE opens the party menu ("Give to which POKeMON?")
 tap A 4
 waittaskx Task_ItemContext_MultipleRows 60
-tap RIGHT 4
+tap ROWNEXT 4
 tap A 4
 waitcb2x CB2_UpdatePartyMenu 900
 waittaskx Task_HandleChooseMonInput 600
