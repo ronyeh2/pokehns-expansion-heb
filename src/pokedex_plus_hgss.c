@@ -3715,11 +3715,14 @@ static inline void WritePixel(u8 *dst, u32 x, u32 y, u32 value)
 }
 #if TEXT_RTL
 // stat_bars.png holds the stats page's Hebrew abbreviations, up to 19 px wide, right-aligned at
-// x 30-48 (48 is the box's edge). The bars get the other 30 px: scaled by 30/39, they end at x 29
-// next to the labels and grow leftwards, the mirror of English's labels-then-bars about the box.
+// x 30-48. The bars get the other 30 px: scaled by 30/39, they end at x 29 next to the labels and
+// grow leftwards, the mirror of English's labels-then-bars about the box. The two sprites sit one
+// pixel left of English (STAT_BARS_OFFSET_X), so x 48 is one pixel inside the box's border, as the
+// English labels' x 0 is one pixel inside its red stripe.
 #define STAT_BAR_X_OFFSET 19
 #define STAT_BAR_MAX_WIDTH 39
 #define STAT_BAR_DRAWN_WIDTH(width) max(3, ((width) * (48 - STAT_BAR_X_OFFSET + 1) + STAT_BAR_MAX_WIDTH / 2) / STAT_BAR_MAX_WIDTH)
+#define STAT_BARS_OFFSET_X 183
 #else
 #define STAT_BAR_X_OFFSET 10
 #endif
@@ -3812,7 +3815,11 @@ static void TryDestroyStatBarsBg(void)
 }
 static void CreateStatBars(struct PokedexListItem *dexMon)
 {
+#if TEXT_RTL
+    u8 offset_x = STAT_BARS_OFFSET_X;
+#else
     u8 offset_x = 184; //Moves the complete stat box left/right
+#endif
     u8 offset_y = 16; //Moves the complete stat box up/down
     TryDestroyStatBars();
 
@@ -3866,7 +3873,11 @@ static void CreateStatBars(struct PokedexListItem *dexMon)
 static void CreateStatBarsBg(void) //stat bars background text
 {
     static const struct SpriteSheet sheetStatBarsBg = {sStatBarsGfx, 64 * 64, TAG_STAT_BAR_BG};
+#if TEXT_RTL
+    u8 offset_x = STAT_BARS_OFFSET_X;
+#else
     u8 offset_x = 184; //Moves the complete stat box left/right
+#endif
     u8 offset_y = 16; //Moves the complete stat box up/down
 
     TryDestroyStatBarsBg();
