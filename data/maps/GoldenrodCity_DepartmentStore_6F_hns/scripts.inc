@@ -93,7 +93,7 @@ GoldenrodDeptStore6_EventScript_Sign::
 	end
 
 GoldenrodDeptStore_Text_6FLass:
-    .string "אתה מאזין ל-LUCKY CHANNEL?\p"
+    .string "אתה מאזין לערוץ המזל?\p"
     .string "אומרים שכדי לזכות, צריך להחליף\n"
     .string "פוקימונים עם כמה שיותר אנשים.\p"
     .string "ככה מקבלים מספרי זיהוי שונים.\p"
