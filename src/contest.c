@@ -378,7 +378,7 @@ const u8 gText_BadConditionResultedInWeakAppeal[] = COMPOUND_STRING("בגלל ה
 const u8 gText_MonWasUnaffected[] = COMPOUND_STRING("{STR_VAR_1}\nלא הושפע.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_RepeatedAppeal[] = COMPOUND_STRING("{STR_VAR_1} אכזב\nכשחזר על אותו מהלך.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_MonsXWentOverGreat[] = COMPOUND_STRING("{STR_VAR_1} הרשים מאוד\nב{STR_VAR_3} שלו.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonsXDidntGoOverWell[] = COMPOUND_STRING("{STR_VAR_1} הפגין {STR_VAR_3}\nאבל זה לא התקבל טוב כאן…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonsXDidntGoOverWell[] = COMPOUND_STRING("{STR_VAR_1} הפגין {STR_VAR_3}\nאך זה לא התקבל טוב כאן…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_MonsXGotTheCrowdGoing[] = COMPOUND_STRING("{STR_VAR_1} סחף את הקהל\nב{STR_VAR_3} שלו.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_MonCantAppealNextTurn[] = COMPOUND_STRING("{STR_VAR_1} לא יוכל\nלהופיע בתור הבא…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_AttractedCrowdsAttention[] = COMPOUND_STRING("הוא משך את\nתשומת לב הקהל.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
@@ -737,8 +737,8 @@ static const u8 *const sRoundResultTexts[] =
     COMPOUND_STRING("{STR_VAR_1} לא בלט\nבכלל…{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1} לא בלט\nבמיוחד…{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1} משך מעט\nתשומת לב.{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} משך הרבה\nתשומת לב.{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} משך את כל\nתשומת הלב.{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} משך\nהרבה תשומת לב.{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} משך\nאת כל תשומת הלב.{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1}\nעוד לא הופיע.{PAUSE_UNTIL_PRESS}"),
 };
 
