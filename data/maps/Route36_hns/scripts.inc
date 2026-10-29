@@ -298,8 +298,8 @@ Route36_Text_SchoolboyAlanAfter:
 	.string "לקרוא ספרים.$"
 
 Route36_Text_MeetArthur:
-	.string "ARTHUR: מי אתה?\n"
-	.string "שמי ARTHUR, ממשפחת ימי השבוע.\p"
+	.string "ארתור: מי אתה?\n"
+	.string "שמי ארתור, ממשפחת ימי השבוע.\p"
 	.string "אם תנחש מה היום האהוב עליי,\n"
 	.string "אתן לך פרס.$"
 
@@ -310,12 +310,12 @@ Route36_Text_ArthurGivesGift:
 	.string "הנה. זה בשבילך.$"
 
 Route36_Text_ArthurGaveGift:
-	.string "ARTHUR: כדאי שפוקימון שמשתמש\n"
+	.string "ארתור: כדאי שפוקימון שמשתמש\n"
 	.string "במהלכים מסוג סלע יחזיק בזה.\p"
 	.string "זה מחזק התקפות מסוג סלע.$"
 
 Route36_Text_ArthurThursday:
-	.string "ARTHUR: אני ARTHUR של יום חמישי.\n"
+	.string "ארתור: אני ארתור של יום חמישי.\n"
 	.string "אני הבן החמישי מתוך שבעה.$"
 
 Route36_Text_Sign:
