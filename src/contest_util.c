@@ -1150,6 +1150,11 @@ static s32 DrawResultsTextWindow(const u8 *text, u8 spriteId)
     windowTemplate.width = DISPLAY_TILE_WIDTH;
     windowTemplate.height = 2;
     windowId = AddWindow(&windowTemplate);
+#if TEXT_RTL
+    // Only the first tileWidth tiles of each row are copied to the sprites, so the text must stay
+    // at its English x: mirrored, it would be drawn at the far end of this 30-tile scratch window.
+    SetWindowRtlMode(windowId, WINDOW_RTL_IN_PLACE);
+#endif
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
 
     strWidth = GetStringWidth(FONT_NORMAL, text, 0);
