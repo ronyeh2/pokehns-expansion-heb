@@ -121,8 +121,8 @@ Route40_Text_StandingYoungster:
 	.string "לא אמור להיות לך קשה בכלל.$"
 
 Route40_Text_Monica:
-	.string "MONICA: שמחה להכיר.\n"
-	.string "אני MONICA ממשפחת ימי השבוע.\p"
+	.string "מוניקה: שמחה להכיר.\n"
+	.string "אני מוניקה ממשפחת ימי השבוע.\p"
 	.string "בטוח שלא תצליח לנחש מה\n"
 	.string "היום האהוב עליי בשבוע!$"
 
@@ -132,13 +132,13 @@ Route40_Text_MonicaGivesGift:
 	.string "יש לי מתנה בשבילך!$"
 
 Route40_Text_MonicaGaveGift:
-	.string "MONICA: זה פריט שמגביר את הכוח\n"
+	.string "מוניקה: זה פריט שמגביר את הכוח\n"
 	.string "של מהלכים מסוג תעופה.\p"
 	.string "כדאי לתת את הפריט הזה\n"
 	.string "לפוקימון ציפור.$"
 
 Route40_Text_MonicaMonday:
-	.string "MONICA: האחים והאחיות שלי\n"
+	.string "מוניקה: האחים והאחיות שלי\n"
 	.string "מפוזרים בכל מקום.\p"
 	.string "נסה למצוא את כולם!$"
 

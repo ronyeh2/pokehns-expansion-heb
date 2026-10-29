@@ -212,9 +212,9 @@ Route29_Text_Boy_WaitingForNight:
 	.string "שמופיעים רק בלילה.$"
 
 Route29_Text_MeetTuscany:
-	.string "TUSCANY: נדמה לי שזו\n"
+	.string "טוסקני: נדמה לי שזו\n"
 	.string "הפעם הראשונה שאנחנו נפגשים?\p"
-	.string "שמי TUSCANY, ממשפחת ימי השבוע.\p"
+	.string "שמי טוסקני, ממשפחת ימי השבוע.\p"
 	.string "אם תנחש מה היום האהוב עליי,\n"
 	.string "אתן לך פרס.$"
 
@@ -226,16 +226,16 @@ Route29_Text_TuscanyGivesGift:
 	.string "את המתנה הזאת: צעיף משי.$"
 
 Route29_Text_TuscanyGaveGift:
-	.string "TUSCANY: האם לא תסכים\n"
+	.string "טוסקני: האם לא תסכים\n"
 	.string "שהוא מקסים ביותר?\p"
 	.string "הוא מחזק מהלכים\n"
 	.string "מסוג רגיל.\p"
 	.string "אין לי ספק שהוא יועיל לך.$"
 
 Route29_Text_TuscanyTuesday:
-	.string "TUSCANY: פגשת את MONICA,\n"
+	.string "טוסקני: פגשת את מוניקה,\n"
 	.string "אחותי הגדולה?\p"
-	.string "או את אחי הקטן, WESLEY?\p"
+	.string "או את אחי הקטן, ווסלי?\p"
 	.string "במשפחה שלנו שבעה ילדים,\n"
 	.string "ואני מספר שלוש.$"
 

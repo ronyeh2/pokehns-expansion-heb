@@ -77,7 +77,7 @@ VioletCity_TrainerSchool_Text_Twin:
 	.string "הבחירה איך לשחק בידיים שלך!$"
 
 VioletCity_TrainerSchool_Text_EarlIntro:
-	.string "EARL אני!\p"
+	.string "ארל אני!\p"
 	.string "נפלאים הפוקימונים, כן!\p"
 	.string "אותך אלמד אני להיות מאמן טוב יותר!$"
 

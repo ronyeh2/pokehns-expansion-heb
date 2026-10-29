@@ -3778,7 +3778,13 @@ static void Swap_PrintYesNoOptions(void)
 
 static void Swap_PrintActionString(const u8 *str, u32 y, u32 windowId)
 {
+#if TEXT_RTL
+    // The button art behind these mirrored windows is not mirrored: x 2 puts the label's right
+    // edge at 70, where the English right alignment ends it.
+    s32 x = 2;
+#else
     s32 x = GetStringRightAlignXOffset(FONT_SMALL, str, 70);
+#endif
     AddTextPrinterParameterized3(windowId, FONT_SMALL, x, y, sSwapMenuOptionsTextColors, 0, str);
 }
 

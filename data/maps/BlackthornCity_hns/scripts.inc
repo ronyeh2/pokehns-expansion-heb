@@ -219,26 +219,26 @@ BlackthornYoungsterText:
 	.string "מהעיר בלקתורן.$"
 
 BlackthornCity_MeetSantosText:
-	.string "SANTOS: …\p"
-	.string "אני SANTOS ממשפחת ימי השבוע.\p"
+	.string "סנטוס: …\p"
+	.string "אני סנטוס ממשפחת ימי השבוע.\p"
 	.string "נסה לנחש.$"
 
 BlackthornCity_SantosGivesGiftText:
 	.string "זה בשבילך…$"
 
 BlackthornCity_SantosGaveGiftText:
-	.string "SANTOS: …\p"
+	.string "סנטוס: …\p"
 	.string "קמע רוח…\p"
 	.string "מהלכים מסוג רוח מתחזקים…\p"
 	.string "הוא יפחיד אותך…$"
 
 BlackthornCity_SantosSaturdayText:
-	.string "SANTOS: …\p"
+	.string "סנטוס: …\p"
 	.string "נתראה שוב בשבת אחרת…\p"
 	.string "לא יהיו לי עוד מתנות…$"
 
 BlackthornCity_SantosNopeText:
-	.string "SANTOS: לא.$"
+	.string "סנטוס: לא.$"
 
 BlackthornCooltrainerF2Text:
 	.string "וואו, עברת דרך שביל הקרח?\p"

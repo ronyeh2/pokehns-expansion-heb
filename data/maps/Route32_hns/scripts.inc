@@ -537,8 +537,8 @@ Route32_Text_RoarOutro:
 	.string "משאגה טובה!$"
 
 Route32_Text_MeetFrieda:
-	.string "FRIEDA: יאהו!\p"
-	.string "אני FRIEDA ממשפחת ימי השבוע!\n"
+	.string "פרידה: יאהו!\p"
+	.string "אני פרידה ממשפחת ימי השבוע!\n"
 	.string "נעים להכיר!\p"
 	.string "אם תנחש מה היום האהוב עליי,\n"
 	.string "אתן לך פרס.$"
@@ -547,7 +547,7 @@ Route32_Text_FriedaGivesGift:
 	.string "הנה, קוץ רעיל בשבילך!$"
 
 Route32_Text_FriedaGaveGift:
-	.string "FRIEDA: תן אותו לפוקימון\n"
+	.string "פרידה: תן אותו לפוקימון\n"
 	.string "שיש לו מהלכים מסוג רעל.\p"
 	.string "הו!\p"
 	.string "זה פשוט אדיר!\p"
@@ -555,13 +555,13 @@ Route32_Text_FriedaGaveGift:
 	.string "מהלכי רעל!$"
 
 Route32_Text_FriedaFriday:
-	.string "FRIEDA: היי! איזה יום אהוב עליך?\p"
+	.string "פרידה: היי! איזה יום אהוב עליך?\p"
 	.string "אני אוהבת את יום שישי.\n"
 	.string "אין ספק בכלל!\p"
 	.string "נכון שגם בעיניך הוא נהדר?$"
 
 Route32_Text_FriedaNope:
-	.string "FRIEDA: לא היום הזה!$"
+	.string "פרידה: לא היום הזה!$"
 
 Route32_Text_Sign1:
 	.string "דרך 32\p"

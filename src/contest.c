@@ -378,7 +378,7 @@ const u8 gText_BadConditionResultedInWeakAppeal[] = COMPOUND_STRING("בגלל ה
 const u8 gText_MonWasUnaffected[] = COMPOUND_STRING("{STR_VAR_1}\nלא הושפע.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_RepeatedAppeal[] = COMPOUND_STRING("{STR_VAR_1} אכזב\nכשחזר על אותו מהלך.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_MonsXWentOverGreat[] = COMPOUND_STRING("{STR_VAR_1} הרשים מאוד\nב{STR_VAR_3} שלו.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
-const u8 gText_MonsXDidntGoOverWell[] = COMPOUND_STRING("{STR_VAR_1} הפגין {STR_VAR_3}\nאבל זה לא התקבל טוב כאן…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
+const u8 gText_MonsXDidntGoOverWell[] = COMPOUND_STRING("{STR_VAR_1} הפגין {STR_VAR_3}\nאך זה לא התקבל טוב כאן…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_MonsXGotTheCrowdGoing[] = COMPOUND_STRING("{STR_VAR_1} סחף את הקהל\nב{STR_VAR_3} שלו.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_MonCantAppealNextTurn[] = COMPOUND_STRING("{STR_VAR_1} לא יוכל\nלהופיע בתור הבא…{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
 const u8 gText_AttractedCrowdsAttention[] = COMPOUND_STRING("הוא משך את\nתשומת לב הקהל.{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}");
@@ -737,8 +737,8 @@ static const u8 *const sRoundResultTexts[] =
     COMPOUND_STRING("{STR_VAR_1} לא בלט\nבכלל…{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1} לא בלט\nבמיוחד…{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1} משך מעט\nתשומת לב.{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} משך הרבה\nתשומת לב.{PAUSE_UNTIL_PRESS}"),
-    COMPOUND_STRING("{STR_VAR_1} משך את כל\nתשומת הלב.{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} משך\nהרבה תשומת לב.{PAUSE_UNTIL_PRESS}"),
+    COMPOUND_STRING("{STR_VAR_1} משך\nאת כל תשומת הלב.{PAUSE_UNTIL_PRESS}"),
     COMPOUND_STRING("{STR_VAR_1}\nעוד לא הופיע.{PAUSE_UNTIL_PRESS}"),
 };
 
@@ -1114,6 +1114,14 @@ static void InitContestInfoBgs(void)
 static void InitContestWindows(void)
 {
     InitWindows(sContestWindowTemplates);
+#if TEXT_RTL
+    // The move cursor is a BG tile at the English column, left of the names, so the names keep
+    // their English place and only read right to left, as in the battle FIGHT menu.
+    SetWindowRtlMode(WIN_MOVE0, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE1, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE2, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE3, WINDOW_RTL_IN_PLACE);
+#endif
     DeactivateAllTextPrinters();
     if (gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK)
     {
@@ -5505,6 +5513,13 @@ static void Contest_StartTextPrinter(const u8 *currChar, bool32 b)
     printerTemplate.color.background = TEXT_COLOR_TRANSPARENT;
     printerTemplate.color.shadow = 8;
 
+#if TEXT_RTL
+    // The box's white area starts 5 px left of this window and ends at its right edge. Mirrored
+    // around 131 px, the text keeps the English 5 px margin, on the right frame's side. A wider
+    // line (a long nickname) widens the axis, up to the whole window, instead of losing glyphs.
+    u32 rtlWidth = GetStringWidth(FONT_NORMAL, currChar, 0);
+    SetWindowRtlMirrorWidth(WIN_GENERAL_TEXT, min(WindowWidthPx(WIN_GENERAL_TEXT), max(131, rtlWidth)));
+#endif
     if (!b)
     {
         AddTextPrinter(&printerTemplate, 0, 0);

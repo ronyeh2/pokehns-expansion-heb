@@ -191,7 +191,7 @@ Route10_PowerPlantEntrance_Text_WantToTrade:
 
 Route10_PowerPlantEntrance_Text_TakeCare:
 	.string "תודה!\n"
-	.string "תשמור טוב על MAGGIE בשבילי!$"
+	.string "תשמור טוב על מגי בשבילי!$"
 
 Route10_PowerPlantEntrance_Text_DeclineTrade:
 	.string "לא? חבל.\n"
@@ -202,7 +202,7 @@ Route10_PowerPlantEntrance_Text_NotRequestedMon:
 	.string "לא לזה התכוונתי.$"
 
 Route10_PowerPlantEntrance_Text_TradeCompleted:
-	.string "מה שלום MAGGIE?\n"
+	.string "מה שלום מגי?\n"
 	.string "הוא מת על שדות מגנטיים!$"
 
 Route10_PowerPlantEntrance_Text_Engineer4WeCanGetMagnetTrainRunning:

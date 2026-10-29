@@ -4402,7 +4402,15 @@ static u8* ConvertMonHeightToImperialString(u32 height)
     heightString[index++] = CHAR_SGL_QUOTE_RIGHT;
     heightString[index++] = (inches / 10) + CHAR_0;
     heightString[index++] = (inches % 10) + CHAR_0;
+#if TEXT_RTL
+    // The inch mark goes in front of the digits (after the 3-byte {CLEAR_TO}), as in gText_UnkHeight:
+    // right to left, a neutral after a number is drawn at its left end, one before it at its right end.
+    memmove(&heightString[4], &heightString[3], index - 3);
+    heightString[3] = CHAR_DBL_QUOTE_RIGHT;
+    index++;
+#else
     heightString[index++] = CHAR_DBL_QUOTE_RIGHT;
+#endif
     heightString[index++] = EOS;
 
     return heightString;

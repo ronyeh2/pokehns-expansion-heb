@@ -324,7 +324,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_AROMA_LADY] = { _("גברת ניחוח"), 10 },
     [TRAINER_CLASS_RUIN_MANIAC] = { _("מטורף חורבות"), 15 },
     [TRAINER_CLASS_INTERVIEWER] = { _("מראיין"), 12 },
-    [TRAINER_CLASS_TUBER_F] = { _("שחיין"), 1 },
+    [TRAINER_CLASS_TUBER_F] = { _("שחיינית"), 1 },
     [TRAINER_CLASS_TUBER_M] = { _("שחיין"), 1 },
     [TRAINER_CLASS_LADY] = { _("גברת"), 50 },
     [TRAINER_CLASS_BEAUTY] = { _("יפהפייה"), 20, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_GREAT : BALL_POKE },

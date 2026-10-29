@@ -175,16 +175,16 @@ PewterCity_Gym_Text_BrockWantToTrade:
 
 PewterCity_Gym_Text_BrockTakeCare:
 	.string "ברוק: תודה! תשמור היטב על\n"
-	.string "WOODY בשבילי!$"
+	.string "וודי בשבילי!$"
 
 PewterCity_Gym_Text_BrockDeclineTrade:
 	.string "ברוק: לא? זה בסדר.\n"
-	.string "WOODY ואני נמשיך להתאמן.$"
+	.string "וודי ואני נמשיך להתאמן.$"
 
 PewterCity_Gym_Text_BrockNotRequestedMon:
 	.string "ברוק: זה לא {STR_VAR_1}.\n"
 	.string "זה לא מה שאני מחפש.$"
 
 PewterCity_Gym_Text_BrockTradeCompleted:
-	.string "ברוק: מה שלום WOODY?\n"
+	.string "ברוק: מה שלום וודי?\n"
 	.string "בונסליי קשוחים יותר ממה שהם נראים!$"

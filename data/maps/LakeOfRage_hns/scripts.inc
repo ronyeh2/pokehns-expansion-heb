@@ -400,7 +400,7 @@ LakeOfRage_EventScript_WesleyCompleted::
 	end
 
 LakeOfRage_Text_MeetWesley:
-    .string "WESLEY: ובכן, מה שלומך?\p"
+    .string "ווסלי: ובכן, מה שלומך?\p"
     .string "אני ממשפחת ימי השבוע!\n"
     .string "תוכל לנחש מה היום האהוב עליי?$"
 
@@ -409,16 +409,16 @@ LakeOfRage_Text_WesleyGivesGift:
     .string "מזכרת בשבילך.$"
 
 LakeOfRage_Text_WesleyGaveGift:
-    .string "WESLEY: החגורה השחורה מגבירה את\n"
+    .string "ווסלי: החגורה השחורה מגבירה את\n"
     .string "כוחם של מהלכים מסוג קרב.$"
 
 LakeOfRage_Text_WesleyWednesday:
-    .string "WESLEY: אם מצאת אותי, בטח כבר\n"
+    .string "ווסלי: אם מצאת אותי, בטח כבר\n"
     .string "פגשת את האחים והאחיות שלי.\p"
     .string "או שפשוט היה לך מזל?$"
 
 LakeOfRage_Text_WesleyNotWednesday:
-    .string "WESLEY: לא בדיוק…$"
+    .string "ווסלי: לא בדיוק…$"
 
 LakeOfRage_EventScript_Sign1::
 	msgbox LakeOfRage_Text_Sign, MSGBOX_SIGN

@@ -132,4 +132,4 @@ CianwoodCity_Text_ManiacLastMon:
 
 
 CianwoodCity_Text_ManiacReturnedMon:
-	.string "{PLAYER} החזיר את SHUCKIE.$"
+	.string "{PLAYER} החזיר את שאקי.$"

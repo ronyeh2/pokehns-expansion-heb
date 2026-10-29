@@ -432,11 +432,11 @@ SinjohRuins_Lab_Text_Archaeologist:
 	.string "רבים מהחפצים שמצאנו\n"
 	.string "בני יותר מאלף שנה.\p"
 	.string "תיארוך הפחמן תואם לממצאים\n"
-	.string "שנמצאו באזור SINNOH.\p"
+	.string "שנמצאו באזור סינו.\p"
 	.string "אבל החליל שמצאת…\n"
 	.string "הוא נראה עתיק הרבה יותר.$"
 SinjohRuins_Lab_Text_ArchaeologistDuring:
-	.string "הלוחות האלה… הקשר לאזור SINNOH…\n"
+	.string "הלוחות האלה… הקשר לאזור סינו…\n"
 	.string "החליל ההוא… הכול מתחיל להתחבר.$"
 SinjohRuins_Lab_Text_ArchaeologistAfter:
 	.string "אי אפשר להפריז בערך ההיסטורי של\n"
@@ -484,9 +484,9 @@ SinjohRuins_Lab_Text_Biologist:
     .string "משותף עם גראולית' מאזורים אחרים.\p"
     .string "ועם זאת, המזג והסוג שלו שונים מאוד.\p"
     .string "תיאורים של גראולית' ברשומות\n"
-    .string "עתיקות של SINNOH נראים תואמים.\p"
+    .string "עתיקות של סינו נראים תואמים.\p"
     .string "אולי הזן הזה שכן פעם בשטח גדול בהרבה,\n"
-    .string "שנמשך צפונה דרך SINNOH העתיקה.$"
+    .string "שנמשך צפונה דרך סינו העתיקה.$"
 SinjohRuins_Lab_Text_BiologistDuring:
 	.string "אם היצור שבראש המדרגות האלה\n"
 	.string "הוא באמת האל של כל הפוקימונים,\p"
@@ -553,7 +553,7 @@ SinjohRuins_Lab_EventScript_Notes8::
 	end
 
 SinjohRuins_Lab_Text_Note1:
-    .string "יומן מחקר 1: 3 במאי 1975\p"
+    .string "יומן מחקר 1, מיום 3 במאי 1975\p"
     .string "הגענו לאתר החורבות.\p"
     .string "אפשר להרגיש את הקור העז של\n"
     .string "הר הכסף כל הדרך עד לכאן למטה…\p"
@@ -562,7 +562,7 @@ SinjohRuins_Lab_Text_Note1:
     .string "אני מת לראות מה מחכה לנו מתחת לרגליים!$"
 
 SinjohRuins_Lab_Text_Note2:
-    .string "יומן מחקר 2: 10 במאי 1975\p"
+    .string "יומן מחקר 2, מיום 10 במאי 1975\p"
     .string "שבוע של חפירות לא הניב שום תוצאה.\p"
     .string "הקרח כאן עבה באופן בלתי אפשרי,\n"
     .string "והסלע פשוט שובר לנו את הציוד לגמרי.\p"
@@ -572,7 +572,7 @@ SinjohRuins_Lab_Text_Note2:
     .string "אנחנו חייבים לגלות.$"
 
 SinjohRuins_Lab_Text_Note3:
-    .string "יומן מחקר 3: 14 במאי 1975\p"
+    .string "יומן מחקר 3, מיום 14 במאי 1975\p"
     .string "לא מתקדמים בחיים אם\n"
     .string "עומדים בצד ולא עושים כלום.\p"
     .string "אני רק פועל.\p"
@@ -582,10 +582,10 @@ SinjohRuins_Lab_Text_Note3:
     .string "אנחנו צריכים פוקימונים מסוג אש,\n"
     .string "והרבה מהם.\p"
     .string "אבל איך נביא אותם לכאן\n"
-    .string "כל הדרך מ-SINNOH?$"
+    .string "כל הדרך מסינו?$"
 
 SinjohRuins_Lab_Text_Note4:
-    .string "יומן מחקר 4: 21 במאי 1975\p"
+    .string "יומן מחקר 4, מיום 21 במאי 1975\p"
     .string "היינו עסוקים.\p"
     .string "הרעיון שלי עבד והעביר אותנו דרך הקרח.\n"
     .string "רק שלא הבאנו את פוקימוני האש מהבית.\p"
@@ -604,7 +604,7 @@ SinjohRuins_Lab_Text_Note4:
     .string "ייפתח כמה שיותר מהר…$"
 
 SinjohRuins_Lab_Text_Note5:
-    .string "יומן מחקר 5: 2 ביוני 1975\p"
+    .string "יומן מחקר 5, מיום 2 ביוני 1975\p"
     .string "הצלחנו לפתוח אותו…\p"
     .string "חשבתי שאהיה מאושר…\p"
     .string "אבל איבדנו אנשים טובים\n"
@@ -621,7 +621,7 @@ SinjohRuins_Lab_Text_Note5:
     .string "ואין לנו שום תוצאות למרות כל המאמצים…$"
 
 SinjohRuins_Lab_Text_Note6:
-  	.string "יומן מחקר 6: 10 ביוני 1975\p"
+  	.string "יומן מחקר 6, מיום 10 ביוני 1975\p"
   	.string "המשלחת הסתיימה.\n"
   	.string "שאר האנשים אורזים.\p"
   	.string "אבל אני לא יכול.\p"
@@ -630,7 +630,7 @@ SinjohRuins_Lab_Text_Note6:
   	.string "אני נשאר כאן.$"
 
 SinjohRuins_Lab_Text_Note7:
-  	.string "יומן מחקר 7: 10 בספטמבר 1975\p"
+  	.string "יומן מחקר 7, מיום 10 בספטמבר 1975\p"
   	.string "עברו חודשים מאז שהגענו לכאן.\n"
   	.string "מאז שאני הגעתי לכאן.\p"
   	.string "שאר האנשים הלכו.\p"
@@ -641,7 +641,7 @@ SinjohRuins_Lab_Text_Note7:
   	.string "אנחנו חייבים לגלות מה יש מתחת למקדש.$"
 
 SinjohRuins_Lab_Text_Note8:
-  	.string "יומן מחקר 8: 15 בספטמבר 1975\p"
+  	.string "יומן מחקר 8, מיום 15 בספטמבר 1975\p"
   	.string "כישלון.\p"
   	.string "……………\p"
   	.string "הפוקימונים שלי…\p"
