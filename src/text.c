@@ -1460,6 +1460,21 @@ static u32 RtlPenObjectX(const struct TextPrinter *textPrinter, u32 width)
     return x < 0 ? 0 : x;
 }
 
+// x to pass to a window primitive for the down arrow. The arrow's tile is blank in its first column,
+// which English puts against the text; drawn unflipped on the left of right-to-left text, that column
+// faces away, and the arrow's ink would touch a last glyph inked in its own first column (a colon).
+// One pixel further from the pen keeps the English column of space.
+static u32 RtlDownArrowX(const struct TextPrinter *textPrinter)
+{
+    u32 x = RtlPenObjectX(textPrinter, 8);
+
+    if (!RtlIsActive(textPrinter))
+        return x;
+    if (textPrinter->rtlMode == WINDOW_RTL_MIRROR)
+        return x + 1; // logical: the primitive mirrors it, and clips only the blank column at the edge
+    return x > 0 ? x - 1 : 0;
+}
+
 // x to pass to DrawKeypadIcon for the button icon at glyphStart, which is width wide. The icon is
 // placed like a glyph: it sets the in-place axis when it starts a segment, it can start a run, and
 // inside a run it keeps its left-to-right place.
@@ -1860,7 +1875,7 @@ void TextPrinterInitDownArrowCounters(struct TextPrinter *textPrinter)
 }
 
 #if TEXT_RTL
-#define DOWN_ARROW_X(textPrinter) RtlPenObjectX(textPrinter, 8)
+#define DOWN_ARROW_X(textPrinter) RtlDownArrowX(textPrinter)
 #else
 #define DOWN_ARROW_X(textPrinter) ((textPrinter)->printerTemplate.currentX)
 #endif
