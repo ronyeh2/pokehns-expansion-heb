@@ -115,8 +115,8 @@ Route37_Text_PsychicGreg_After:
 	.string "אלה טכניקות קרב טובות.$"
 
 Route37_Text_Sunny_Meet:
-	.string "SUNNY: היי!\p"
-	.string "אני SUNNY, ממשפחת ימי השבוע!\p"
+	.string "סאני: היי!\p"
+	.string "אני סאני, ממשפחת ימי השבוע!\p"
 	.string "אם תנחש מה היום האהוב עליי,\n"
 	.string "אתן לך פרס.$"
 
@@ -129,20 +129,20 @@ Route37_Text_Sunny_GiveGift2:
 	.string "אם אראה אותך!$"
 
 Route37_Text_Sunny_GaveGift:
-	.string "SUNNY: הדבר הזה…\p"
+	.string "סאני: הדבר הזה…\p"
 	.string "אממ…\p"
 	.string "… מה זה היה בעצם…\p"
 	.string "…\p"
 	.string "אה! עכשיו אני נזכר!\p"
 	.string "כדאי שפוקימון שיודע מהלכים\n"
 	.string "חשמליים יחזיק בזה.\p"
-	.string "אחותי MONICA אמרה שזה מחזק\n"
+	.string "אחותי מוניקה אמרה שזה מחזק\n"
 	.string "מהלכים חשמליים!$"
 
 Route37_Text_Sunny_Sunday:
-	.string "SUNNY: לאחים ולאחיות שלי קוראים\n"
-	.string "MONICA, TUSCANY ו-WESLEY,\p"
-	.string "וגם ARTHUR, FRIEDA ו-SANTOS.\n"
+	.string "סאני: לאחים ולאחיות שלי קוראים\n"
+	.string "מוניקה, טוסקני, ווסלי,\p"
+	.string "וגם ארתור, פרידה וסנטוס.\n"
 	.string "כולם יותר גדולים ממני!$"
 
 Route37_Text_Sunny_NotSunday:
