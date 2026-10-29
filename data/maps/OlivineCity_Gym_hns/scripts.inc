@@ -369,19 +369,19 @@ OlivineCity_Gym_Text_JasmineWantToTrade:
 	.string "יש לי בקשה ממך.\p"
 	.string "גידלתי את הסטיליקס הזה\n"
 	.string "מאז שהיה אוניקס קטן.\p"
-	.string "אבל אני חושבת ש-RUSTY יהיה\n"
+	.string "אבל אני חושבת שראסטי יהיה\n"
 	.string "מאושר יותר עם מאמן כמוך.\p"
 	.string "תסכים להחליף אחד\n"
-	.string "מהפוקימונים שלך ב-RUSTY שלי?$"
+	.string "מהפוקימונים שלך בראסטי שלי?$"
 
 OlivineCity_Gym_Text_JasmineTakeCare:
 	.string "…תודה.\n"
-	.string "בבקשה, תהיה טוב ל-RUSTY…$"
+	.string "בבקשה, תהיה טוב לראסטי…$"
 
 OlivineCity_Gym_Text_JasmineDeclineTrade:
 	.string "…אה… זה בסדר.\n"
 	.string "אני מבינה…$"
 
 OlivineCity_Gym_Text_JasmineTradeCompleted:
-	.string "…מה שלום RUSTY?\n"
+	.string "…מה שלום ראסטי?\n"
 	.string "אני מקווה שאתה מטפל בו היטב…$"
