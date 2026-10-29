@@ -97,7 +97,7 @@ Route20_EventScript_Headlocker::
 	end
 
 Route20_Text_Dennis:
-	.string "DENNIS: שאאאאאאאא!$"
+	.string "דניס: שאאאאאאאא!$"
 
 Route20_Text_Headlocker:
 	.string "יש פוקימון נדיר בדרך הזאת.\p"
