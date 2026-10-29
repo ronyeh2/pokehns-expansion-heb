@@ -3615,7 +3615,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "פיקאצ'ו הזה חובש את הכובע של שותפו,\n"
             "הוכחה לקשר החזק שנרקם בין פיקאצ'ו לשותפו\n"
-            "בהרפתקאות משותפות ברחבי אזור Sinnoh."),
+            "בהרפתקאות משותפות ברחבי אזור סינו."),
         .pokemonScale = 479,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -3688,7 +3688,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "פיקאצ'ו הזה חובש את הכובע של שותפו,\n"
             "הוכחה לקשר החזק שנרקם בין פיקאצ'ו לשותפו\n"
-            "בהרפתקאות משותפות ברחבי אזור Unova."),
+            "בהרפתקאות משותפות ברחבי אזור יונובה."),
         .pokemonScale = 479,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -3761,7 +3761,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "פיקאצ'ו הזה חובש את הכובע של שותפו,\n"
             "הוכחה לקשר החזק שנרקם בין פיקאצ'ו לשותפו\n"
-            "בהרפתקאות משותפות ברחבי אזור Kalos."),
+            "בהרפתקאות משותפות ברחבי אזור קאלוס."),
         .pokemonScale = 479,
         .pokemonOffset = 19,
         .trainerScale = 256,
