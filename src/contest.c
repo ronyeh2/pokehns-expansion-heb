@@ -1114,6 +1114,14 @@ static void InitContestInfoBgs(void)
 static void InitContestWindows(void)
 {
     InitWindows(sContestWindowTemplates);
+#if TEXT_RTL
+    // The move cursor is a BG tile at the English column, left of the names, so the names keep
+    // their English place and only read right to left, as in the battle FIGHT menu.
+    SetWindowRtlMode(WIN_MOVE0, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE1, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE2, WINDOW_RTL_IN_PLACE);
+    SetWindowRtlMode(WIN_MOVE3, WINDOW_RTL_IN_PLACE);
+#endif
     DeactivateAllTextPrinters();
     if (gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK)
     {
@@ -5505,6 +5513,13 @@ static void Contest_StartTextPrinter(const u8 *currChar, bool32 b)
     printerTemplate.color.background = TEXT_COLOR_TRANSPARENT;
     printerTemplate.color.shadow = 8;
 
+#if TEXT_RTL
+    // The box's white area starts 5 px left of this window and ends at its right edge. Mirrored
+    // around 131 px, the text keeps the English 5 px margin, on the right frame's side. A wider
+    // line (a long nickname) widens the axis, up to the whole window, instead of losing glyphs.
+    u32 rtlWidth = GetStringWidth(FONT_NORMAL, currChar, 0);
+    SetWindowRtlMirrorWidth(WIN_GENERAL_TEXT, min(WindowWidthPx(WIN_GENERAL_TEXT), max(131, rtlWidth)));
+#endif
     if (!b)
     {
         AddTextPrinter(&printerTemplate, 0, 0);
