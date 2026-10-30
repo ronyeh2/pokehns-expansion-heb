@@ -125,7 +125,7 @@ static const u8 sRoseIncenseDesc[]    = _("פריט להחזקה\n"
                                           "שמגביר את עוצמת\n"
                                           "מהלכים מסוג עשב.");
 
-static const u8 sLuckIncenseDesc[]    = _("מכפיל את הכסף\n"
+static const u8 sLuckIncenseDesc[]    = _("הכסף מוכפל\n"
                                           "בקרב אם המחזיק\n"
                                           "נמצא בקבוצה.");
 
@@ -5655,9 +5655,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 0 : 1000,
         .holdEffect = HOLD_EFFECT_DRIVE,
         .description = COMPOUND_STRING(
-            "משנה את פיצוץ טכנו\n"
-            "של ג'ניסקט\n"
-            "לסוג מים."),
+            "משנה את\n"
+            "”פיצוץ טכנו” של\n"
+            "ג'ניסקט לסוג מים."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_DRIVE,
         .type = ITEM_USE_BAG_MENU,
@@ -5677,9 +5677,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 0 : 1000,
         .holdEffect = HOLD_EFFECT_DRIVE,
         .description = COMPOUND_STRING(
-            "משנה את פיצוץ טכנו\n"
-            "של ג'ניסקט\n"
-            "לסוג חשמל."),
+            "משנה את\n"
+            "”פיצוץ טכנו” של\n"
+            "ג'ניסקט לסוג חשמל."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_DRIVE,
         .type = ITEM_USE_BAG_MENU,
@@ -5699,9 +5699,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 0 : 1000,
         .holdEffect = HOLD_EFFECT_DRIVE,
         .description = COMPOUND_STRING(
-            "משנה את פיצוץ טכנו\n"
-            "של ג'ניסקט\n"
-            "לסוג אש."),
+            "משנה את\n"
+            "”פיצוץ טכנו” של\n"
+            "ג'ניסקט לסוג אש."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_DRIVE,
         .type = ITEM_USE_BAG_MENU,
@@ -5721,9 +5721,9 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 0 : 1000,
         .holdEffect = HOLD_EFFECT_DRIVE,
         .description = COMPOUND_STRING(
-            "משנה את פיצוץ טכנו\n"
-            "של ג'ניסקט\n"
-            "לסוג קרח."),
+            "משנה את\n"
+            "”פיצוץ טכנו” של\n"
+            "ג'ניסקט לסוג קרח."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_DRIVE,
         .type = ITEM_USE_BAG_MENU,
@@ -11142,7 +11142,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פריט להחזקה\n"
             "שמאריך מהלכי\n"
-            "עקידה כמו עיטוף."),
+            "עקידה כמו ”עיטוף”."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -11732,7 +11732,7 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_ROOM_SERVICE,
         .description = COMPOUND_STRING(
             "מוריד מהירות\n"
-            "כשחדר תעלולים\n"
+            "כש”חדר תעלולים”\n"
             "פעיל."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
@@ -13467,7 +13467,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 3000,
         .description = COMPOUND_STRING(
             "מנפץ מחסומים\n"
-            "כמו מסך אור\n"
+            "כמו ”מסך אור”\n"
             "וגורם נזק."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
