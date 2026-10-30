@@ -541,7 +541,7 @@ static const struct MenuAction MultichoiceList_LinkLeader[] =
 
 static const struct MenuAction MultichoiceList_ContestRank[] =
 {
-    {COMPOUND_STRING("דרגה רגילה")},
+    {COMPOUND_STRING("דרגת נורמל")},
     {COMPOUND_STRING("דרגת סופר")},
     {COMPOUND_STRING("דרגת היפר")},
     {COMPOUND_STRING("דרגת מאסטר")},
@@ -1069,7 +1069,12 @@ static const struct MenuAction sMultichoiceList_TrainerTowerMode[] = {
 };
 
 static const struct MenuAction sMultichoiceList_TrainerCardIconTint[] = {
+#if TEXT_RTL
+    // gText_Normal is the NORMAL contest rank's name; the print type is the ordinary word.
+    { COMPOUND_STRING("רגיל") },
+#else
     { gText_Normal },
+#endif
     { gText_DexSearchColorBlack },
     { gText_DexSearchColorPink },
     { COMPOUND_STRING("ספיה") }
