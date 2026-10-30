@@ -4666,6 +4666,20 @@ static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
     if (species == SPECIES_NONE)
         type1 = type2 = TYPE_MYSTERY;
 
+#if TEXT_RTL
+    // Read right to left: the first type takes the right slot of the two, as on the summary
+    // screen, and a second type goes to its left.
+    if (type1 == type2)
+    {
+        SetTypeIconPosAndPal(type1, 147 + 33, 48, 0);
+        SetSpriteInvisibility(1, TRUE);
+    }
+    else
+    {
+        SetTypeIconPosAndPal(type1, 147 + 33, 48, 0);
+        SetTypeIconPosAndPal(type2, 147, 48, 1);
+    }
+#else
     if (type1 == type2)
     {
         SetTypeIconPosAndPal(type1, 147, 48, 0);
@@ -4676,6 +4690,7 @@ static void PrintCurrentSpeciesTypeInfo(u8 newEntry, u16 species)
         SetTypeIconPosAndPal(type1, 147, 48, 0);
         SetTypeIconPosAndPal(type2, 147 + 33, 48, 1);
     }
+#endif
 
 }
 static void CreateTypeIconSprites(void)
