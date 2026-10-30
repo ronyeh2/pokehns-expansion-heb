@@ -3085,10 +3085,23 @@ static void PrintContestantTrainerNameWithColor(u8 contestant, u8 color)
     StringCopy(buffer, gText_Slash);
     StringAppend(buffer, gContestMons[contestant].trainerName);
     Contest_CopyStringWithColor(buffer, color);
+#if TEXT_RTL
+    // Mirrored, the name ends 41 px from the window's left edge and grows left, toward the box's
+    // frame (window x 3-4), where the English grows toward the screen edge: 36 px instead of 41.
+    // A wider name takes the narrower font, as the nickname does. One still too wide starts right
+    // of the frame and grows toward the nickname, as a long English name does.
+    u32 fontId = GetFontIdToFit(buffer, FONT_NARROW, 0, 36);
+
+    offset = GetStringRightAlignXOffset(fontId, gDisplayedStringBattle, 0x60 - 5);
+    if (offset > 55)
+        offset = 55;
+    Contest_PrintTextToBg0WindowAt(gContestantTurnOrder[contestant], gDisplayedStringBattle, offset, 1, fontId);
+#else
     offset = GetStringRightAlignXOffset(FONT_NARROW, gDisplayedStringBattle, 0x60);
     if (offset > 55)
         offset = 55;
     Contest_PrintTextToBg0WindowAt(gContestantTurnOrder[contestant], gDisplayedStringBattle, offset, 1, FONT_NARROW);
+#endif
 }
 
 static void PrintContestantMonName(u8 contestant)
