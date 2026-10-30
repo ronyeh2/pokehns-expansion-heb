@@ -574,7 +574,15 @@ static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
     {
         if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
         {
+#if TEXT_RTL
+            // The row has 48 px after the cursor column of the 56-px window. Seven 7-px Hebrew letters
+            // are 49 px, and the mirrored window would cut the last letter's first column, so a name
+            // wider than the row drops to the narrower font.
+            StringExpandPlaceholders(gStringVar4, sStartMenuItems[sCurrentStartMenuActions[index]].text);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), GetFontIdToFit(gStringVar4, FONT_NORMAL, 0, 48), gStringVar4, 8, (index << 4) + 9, TEXT_SKIP_DRAW, NULL);
+#else
             PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9);
+#endif
         }
         else
         {
