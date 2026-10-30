@@ -147,4 +147,4 @@ PalletTown_Lab_Text_OaksLabPC:
 	.string "שמעתי שמועות ש{PLAYER}\n"
 	.string "צובר מוניטין לא קטן.\p"
 	.string "אני שמח מאוד לשמוע את זה.\p"
-	.string "אלם מהעיירה ניו בארק 8-($"
+	.string "אלם מהעיירה ניו בארק 8-)$"
