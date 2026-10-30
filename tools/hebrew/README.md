@@ -44,6 +44,8 @@ runs from any working directory. The style guide and glossary are in `translatio
 7. **Audit.** `audit.py [PATH...] [--baseline "$HNS_UPSTREAM"]` runs a static layout audit of
    every string. For the glossary, `namecheck.py --all` checks bytes, the charset, final letters
    and duplicates, and `glossary_widths.py` reports names wider than their budget.
+   `plurals.py` checks that every item a player can hold more than one of has a Hebrew plural
+   (an `item_plural` row, and its `pluralName` in `src/data/items.h` when it differs).
 8. **Build.** `make hns`, or `make hns RTL_CLIP_REPORT=1` for the clip-report build
    (`pokehns-clip.gba`).
 9. **Harness.** `rom_sweep.py` lists English text left in the built ROM. The screen tours, the
@@ -67,6 +69,7 @@ runs from any working directory. The style guide and glossary are in `translatio
 | `namecheck.py` | validates glossary rows: bytes, charset, final letters, duplicates |
 | `pairsheets.py` | side-by-side review sheets of two screenshot runs |
 | `paths.py` | the locations above |
+| `plurals.py` | every stackable item has a Hebrew plural row that `src/data/items.h` prints (DECISIONS.md Q125) |
 | `rom_sweep.py` | finds English strings that are still in a built Hebrew ROM |
 | `strchars.py` | counts the non-ASCII characters and `{TOKENS}` used in string literals (`[TREE]`, default `HNS_TREE`) |
 | `textwidth.py` | pixel width model of the RTL renderer (CLI and library) |
