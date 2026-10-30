@@ -43,8 +43,8 @@ fresh clone.
 | Item | Value | Check |
 | --- | --- | --- |
 | `he/main` | `4a9c6858b1` | `git rev-parse --short he/main` |
-| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `a30fcfbbf2` | `<builds>/README.md` |
-| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `9b8a72bc90b6ee8ad848fc3fc61f3bcbcf3c5e65`, CRC32 `17F7AAB3` | `<builds>/SHA1SUMS` |
+| Release | One release, 1.0, replaced in place on each update (ROM, `SHA1SUMS`, `TESTING.md`); the builds repo's commit history keeps the older builds. Current 1.0: built from `he/main` `20e2541f9e` | `<builds>/README.md` |
+| 1.0 ROM | `pokehns-he-2.0.6-1.0.gba`: 33554432 bytes, SHA-1 `b1aabf3134e69e84bab1b86463aa7878b69a4253`, CRC32 `71A3F75D` | `<builds>/SHA1SUMS` |
 | Releasing | Build a candidate with `tools/hebrew/release/`, then replace the three files in the builds repo and say in the commit message which `he/main` commit it was built from; keep `tools/hebrew/release/notes.json` at `"release": "1.0"` | section 5 |
 | CI | the last two runs on `he/main` are green (39494370746, 39496758687) | `gh run list -R ronyeh2/pokehns-expansion-heb --workflow hebrew.yml` |
 | Static checks on `he/main` | drift 0 FAIL; audit 0 errors and 42 FIT warnings; namecheck 0 problems; 40 tool tests OK | section 4.2 |
