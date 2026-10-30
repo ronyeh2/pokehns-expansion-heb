@@ -20,7 +20,7 @@ GoldenrodDeptStore6_Text_Whitney:
 	.string "באתי לקנות משהו בשביל\n"
 	.string "המילטנק שלי.\p"
 	.string "אם אתה רוצה עוד קרב, בוא\n"
-	.string "לדוג'ו הקראטה!$"
+	.string "לדוג'ו הלחימה!$"
 
 GoldenrodCity_DepartmentStore_6F_EventScript_Jose::
 	lock
