@@ -1069,7 +1069,12 @@ static const struct MenuAction sMultichoiceList_TrainerTowerMode[] = {
 };
 
 static const struct MenuAction sMultichoiceList_TrainerCardIconTint[] = {
+#if TEXT_RTL
+    // gText_Normal is the NORMAL contest rank's name; the print type is the ordinary word.
+    { COMPOUND_STRING("NORMAL") },
+#else
     { gText_Normal },
+#endif
     { gText_DexSearchColorBlack },
     { gText_DexSearchColorPink },
     { COMPOUND_STRING("ספיה") }
