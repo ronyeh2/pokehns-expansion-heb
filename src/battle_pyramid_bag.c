@@ -1153,7 +1153,13 @@ static void BagAction_Toss(u8 taskId)
     }
     else
     {
+    #if TEXT_RTL
+        // Hebrew has no plural suffix, so the count lines take the item's plural name, as the main
+        // bag does (CopyItemNameHandlePlural).
+        CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, 2);
+    #else
         CopyItemName(gSpecialVar_ItemId, gStringVar1);
+    #endif
         StringExpandPlaceholders(gStringVar4, gText_TossHowManyVar1s);
         FillWindowPixelBuffer(WIN_INFO, PIXEL_FILL(0));
         PyramidBagPrint(WIN_INFO, gStringVar4, 3, 0, 0, 1, 0, COLORID_DARK_GRAY);
@@ -1166,7 +1172,11 @@ static void AskConfirmToss(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+#if TEXT_RTL
+    CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, tNumToToss);
+#else
     CopyItemName(gSpecialVar_ItemId, gStringVar1);
+#endif
     ConvertIntToDecimalStringN(gStringVar2, tNumToToss, STR_CONV_MODE_LEFT_ALIGN, MAX_PYRAMID_ITEM_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_ConfirmTossItems);
     FillWindowPixelBuffer(WIN_INFO, PIXEL_FILL(0));
@@ -1234,7 +1244,11 @@ static void TossItem(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+#if TEXT_RTL
+    CopyItemNameHandlePlural(gSpecialVar_ItemId, gStringVar1, tNumToToss);
+#else
     CopyItemName(gSpecialVar_ItemId, gStringVar1);
+#endif
     ConvertIntToDecimalStringN(gStringVar2, tNumToToss, STR_CONV_MODE_LEFT_ALIGN, MAX_PYRAMID_ITEM_DIGITS);
     StringExpandPlaceholders(gStringVar4, gText_ThrewAwayVar2Var1s);
     FillWindowPixelBuffer(WIN_INFO, PIXEL_FILL(0));
