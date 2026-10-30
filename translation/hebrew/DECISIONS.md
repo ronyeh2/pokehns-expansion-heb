@@ -64,6 +64,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q122](#q122) | The glossary has no row for TRICK MASTER. | A: Add term rows TRICK MASTER = 'אמן התעלולים' and TRICK HOUSE = 'בית … | changed |
 | [Q123](#q123) | The opponent send-out and about-to-send battle lines use the masculine 'שלח'/'עומד' for every trainer, so Karen and the female leaders read… | A. Reword so the verb agrees with the Pokémon: 'הפוקימון של X, Y, יוצא לקרב!' | changed |
 | [Q124](#q124) | The line for an opponent using an item, '{X} השתמש ב{ITEM}!', uses the masculine verb for every trainer, so Rocket Admin Ariana reads… | A. No verb: '{X}: שימוש ב{ITEM}!' | changed |
+| [Q125](#q125) | Lines that put a count before an item name print the singular for every item without a Hebrew plural name ('זרקת 3 שיקוי.', 'לזרוק כמה נוצת שרירים?')… | A. A Hebrew plural for every stackable item, with the Pyramid bag and the put-away lines following | changed |
 
 ## K1
 
@@ -1394,6 +1395,58 @@ Related rows already use 'תעלול': MOVE_TRICK 'תעלול' (glossary.csv:257
 **Chosen:** A. It removes the masculine verb for every trainer without trainer data or a table, in the same spirit as Q123. The masculine class noun before Ariana's name is unchanged (shared class, see above). The withdrew lines (sText_Trainer1WithdrewPkmn, sText_Trainer2WithdrewPkmn) are still masculine; they were not part of this review.
 
 *Changed:* `src/battle_message.c`
+
+## Q125
+
+**Question.** Lines that put a count before an item name print the singular for every item that has no Hebrew plural name: 'לזרוק כמה\nנוצת שרירים?', 'האם לזרוק 3\nשיקוי?', 'זרקת 999\nדינוזאור מאובן.', 'משכת 999\nאבן מפתח מוזרה.'. CopyItemNameHandlePlural (src/item.c:196) prints an item's plural name when it has one. Otherwise the English build adds 's' and, under TEXT_RTL, the Hebrew build keeps the singular. Before this change only the 183 items whose English has a pluralName, plus POKé BALL and SPORT BALL, had a Hebrew plural.
+
+*Source:* screen review, round 7 (listed as known in round 6).
+
+**Analysis.** These are the lines a player can see that print an item name after a count, or that ask for the plural on purpose (quantity 2, for 'how many'):
+- The bag (src/item_menu.c): TOSS asks how many (:1984, gText_TossHowManyVar1s), confirms with the count (:1998, gText_ConfirmTossItems) and reports it (:2042, gText_ThrewAwayVar2Var1s). In the PC's DEPOSIT mode the bag asks how many (:2467, sText_DepositHowManyVar1) and reports the deposit (:2515, sText_DepositedVar2Var1s).
+- PC item storage (src/player_pc.c): withdraw how many (:1335), toss how many (:1349), withdrew (:1399), the toss confirmation (:1422) and threw away (:1439).
+- The Battle Pyramid bag (src/battle_pyramid_bag.c BagAction_Toss, AskConfirmToss, TossItem) prints the same three toss strings. It took the name from CopyItemName, so the singular followed the count in both languages ('Threw away 99\nMAX ELIXIR.' in English).
+- Scripts. bufferitemnameplural (src/scrcmd.c:2909) is used only in data/scripts/obtain_item.inc (:15, :162, :182, :195, :296). It feeds 'obtained N' (gText_ObtainedTheItems), 'found N' (gText_PlayerFoundItems, gText_PlayerFoundTMHMs) and the put-away lines after them (gText_PutItemInPocket, gText_PlayerPutItemInBag). The put-away lines get the plural name without a count. Two reachable H&S scripts give an item in a count: the aide's 5 POKé BALLs (NewBarkTown_Lab_hns:500) and the 30 SPORT BALLs (Gate_NationalPark_hns:31, :50). No H&S item ball (movement_range_x) has a quantity above 1, and no hidden item does either (map.json quantity) apart from coins, which print gText_FoundXCoins.
+- Berry trees (src/berry.c:2231, data/scripts/berry_tree.inc:69, :73): 'GOLD קטף\n5 פירות אורן.' and the full-pocket line. Every berry already has a plural (K6).
+- Not reachable in H&S:
+  - the Pokédex evolution condition 'N <item> בתיק' (src/pokedex_plus_hgss.c:7297). It uses a count above 1 only for GHOLDENGO's 999 GIMMIGHOUL COINs, and GIMMIGHOUL is in no H&S encounter, party or map. SHEDINJA's 1 POKé BALL takes the singular.
+  - apricorn trees (src/apricorn_tree.c; APRICORN_TREE_COUNT is 0, include/constants/apricorn_tree.h:88).
+  - Pokémon Jump (src/pokemon_jump.c:3336), a link minigame.
+- Already worded so the count does not govern the name:
+  - Kurt's balls ('{PLAYER} קיבל {STR_VAR_2}\nיחידות של {STR_VAR_1}!', AzaleaTown_KurtsHouse_hns:308, with bufferitemname);
+  - hidden items in a count (gText_FoundXItems 'מצא N פריטים מסוג X');
+  - the mart: 'X? ורצית N?' (src/strings.c gText_Var1AndYouWantedVar2) and 'X?\nכמה ברצונך למכור?' (gText_HowManyToSell), both with CopyItemName;
+  - the Premier Ball bonus ('N כדורי פרמייר').
+- The items. 525 stackable items had no Hebrew plural: every item outside the key-item and TM/HM pockets that has no importance. TMs are stackable too (I_REUSABLE_TMS is FALSE), but a TM's name is the abbreviation מ”מ plus a number, which Hebrew does not inflect ('2 מ”מ 01').
+- Widths. The bag's description window is 14 tiles (112 px), the PC's message window 13 tiles (104 px) and the Pyramid's 14 tiles. In all three strings the name has a line to itself. The bag and the PC wrap a name wider than the window minus 16 px (WrapFontIdToFit); the Pyramid does not wrap. The widest plural is 'דינוזאורים מאובנים' (89 px, 18 bytes), so every plural fits on one line in every window. The widest counts are 999 in the bag and the PC (MAX_BAG_ITEM_CAPACITY, MAX_PC_ITEM_CAPACITY) and 99 in the Pyramid.
+
+| Option | How | Risk |
+|---|---|---|
+| A. A Hebrew plural for every stackable item | Add item_plural rows for the 525 items. Where the plural differs from the singular (338 items), add a pluralName under #if TEXT_RTL in src/data/items.h, as for the two balls. A row equal to the singular needs no pluralName, because the fallback prints the singular. The Pyramid bag's count lines ask for the plural under TEXT_RTL, as the main bag does. A check (tools/hebrew/plurals.py, run by the unit tests) fails when a stackable item has no row or items.h prints something else. | The change is mostly data: 525 rows and 338 three-line blocks. drift.py reports STRUCTURE for items.h and battle_pyramid_bag.c until the same blocks, with English placeholders, are on he/renderer. Without a row, an item added later would print the singular, but the check catches it. |
+| B. Reword the count lines so the number does not govern the name | For example '{STR_VAR_1}:\nכמה לזרוק?' and 'לזרוק {STR_VAR_2} יח'\n{STR_VAR_1}?'. The token order (count, then name) must stay. 'יחידות' fails at a count of 1 ('1 יחידות'), which the bag and PC print for a single item. | Small: about ten strings, with every item, caller and later item covered. But the lines read like a receipt in a game that otherwise says 'קיבלת 5 פוקיבולים!'. The 187 reviewed plurals still feed these strings, so each wording must read with both forms. |
+| C. A for what scripts hand out in counts, B for the bag, the PC and the Pyramid | The two script gifts already have plurals; reword the seven bag and PC strings. | Medium. The same kind of line comes in two styles ('קיבלת 5 פוקיבולים!' but 'זרקת 3 יח' פוקיבולים.'), and the B lines read like a receipt. |
+
+**Chosen:** A. It follows the English, where every stackable item has a plural (a pluralName or an added 's'), and the engine already supports it. The lines read as ordinary Hebrew: 'לזרוק כמה\nשיקויים?', 'האם לזרוק 999\nפוקיבולים?', 'משכת 999\nאבני מפתח מוזרות.'. No reviewed wording changes except the three lines below.
+
+The plurals follow the reviewed rows:
+- the head noun in the plural (שיקויים, נוגדנים, החייאות, לימונדות);
+- a construct plural for a compound name (כדורי ריפוי, אבני אש, שיקויי על, נוצות בריאות, לוחות להבה, אבני חן אש, שברי טרה מים);
+- the adjective in the plural where it agrees (כדורים מעולים, אבנים נוצצות, פנינים גדולות, גולות אדומות, אבני חן פסיכיות).
+
+The singular is kept for:
+- mass nouns, as honey, mulch and mail are (ברזל, סידן, אבץ, קטורת, צוף, נענע, חלב מומו, סודה פופ, פחם, אבק כוכבים, מלח מערות, נחושת/כסף/זהב עתיק);
+- names that are already plural (מים טריים, מים מיסטיים);
+- the X items (as X ACCURACY);
+- the 128 Mega Stone, Z-Crystal and Augurite names;
+- two unused placeholders.
+
+A counter is used where the plain plural changes the meaning, as REMEDIES מנות מרפא did: ETHER מנות אתר (אתרים reads as websites) and REPEL תרסיסי דוחה (דוחים reads as 'disgusting'). ULTRA BALL and MASTER BALL take בולים, like פוקיבולים.
+
+The put-away lines dropped 'את'. 'את' marks a definite object. A singular item name is read as a name ('שם את שיקוי'), but a plural name is an indefinite noun, and 'GOLD שם את פוקיבולים' is not Hebrew. Without 'את' the line reads correctly for both: 'GOLD שם פוקיבולים\nבכיס כדורי פוקי.' and 'GOLD שם שיקוי\nבכיס תרופות.'. The same applies to gText_PlayerPutItemInBag (Pyramid item balls) and to the berry tree's full-pocket line ('אי אפשר היה לקחת פירות סיטרוס.').
+
+*Changed:* `src/data/items.h`, `src/battle_pyramid_bag.c`, `data/text/obtain_item.inc`, `data/scripts/berry_tree.inc`, `tools/hebrew/plurals.py`, `tools/hebrew/tests/test_plurals.py`
+
+*Glossary:* 525 `item_plural` rows (notes end in Q125)
 
 ## Proposed names
 
