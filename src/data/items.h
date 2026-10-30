@@ -176,6 +176,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STRANGE_BALL] =
     {
         .name = ITEM_NAME("כדור מוזר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורים מוזרים"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "כדור יוצא דופן\n"
@@ -213,6 +216,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GREAT_BALL] =
     {
         .name = ITEM_NAME("כדור מעולה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורים מעולים"),
+    #endif
         .price = 400,
         .description = COMPOUND_STRING(
             "כדור טוב עם\n"
@@ -230,6 +236,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ULTRA_BALL] =
     {
         .name = ITEM_NAME("אולטרה בול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אולטרה בולים"),
+    #endif
         //.price = (I_PRICE >= GEN_7) ? 800 : 1200,
         .price = 800,
         .description = COMPOUND_STRING(
@@ -248,6 +257,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MASTER_BALL] =
     {
         .name = ITEM_NAME("מאסטר בול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאסטר בולים"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "הכדור הטוב ביותר.\n"
@@ -265,6 +277,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PREMIER_BALL] =
     {
         .name = ITEM_NAME("כדור פרמייר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי פרמייר"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 20 : 200,
         .description = COMPOUND_STRING(
             "כדור נדיר שנוצר\n"
@@ -282,6 +297,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEAL_BALL] =
     {
         .name = ITEM_NAME("כדור ריפוי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי ריפוי"),
+    #endif
         .price = 300,
         .description = COMPOUND_STRING(
             "כדור מרפא\n"
@@ -299,6 +317,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_NET_BALL] =
     {
         .name = ITEM_NAME("כדור רשת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי רשת"),
+    #endif
         .price = 1000,
         .description = COMPOUND_STRING(
             "כדור שיעיל על\n"
@@ -316,6 +337,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_NEST_BALL] =
     {
         .name = ITEM_NAME("כדור קן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי קן"),
+    #endif
         .price = 1000,
         .description = COMPOUND_STRING(
             "כדור שיעיל יותר\n"
@@ -333,6 +357,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DIVE_BALL] =
     {
         .name = ITEM_NAME("כדור צלילה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי צלילה"),
+    #endif
         .price = 1000,
         .description = COMPOUND_STRING(
             "כדור שיעיל יותר\n"
@@ -350,6 +377,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DUSK_BALL] =
     {
         .name = ITEM_NAME("כדור דמדומים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי דמדומים"),
+    #endif
         .price = 1000,
         .description = COMPOUND_STRING(
             "יעיל כשמשתמשים\n"
@@ -366,6 +396,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TIMER_BALL] =
     {
         .name = ITEM_NAME("כדור זמן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי זמן"),
+    #endif
         .price = 1000,
         .description = COMPOUND_STRING(
             "כדור שמתחזק\n"
@@ -383,6 +416,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_QUICK_BALL] =
     {
         .name = ITEM_NAME("כדור מהיר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורים מהירים"),
+    #endif
         .price = 1000,
         .description = COMPOUND_STRING(
             "יעיל כשמשתמשים\n"
@@ -399,6 +435,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_REPEAT_BALL] =
     {
         .name = ITEM_NAME("כדור חוזר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורים חוזרים"),
+    #endif
         .price = 1000,
         .description = COMPOUND_STRING(
             "כדור שיעיל יותר\n"
@@ -416,6 +455,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LUXURY_BALL] =
     {
         .name = ITEM_NAME("כדור יוקרתי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורים יוקרתיים"),
+    #endif
         .price = (I_PRICE >= GEN_8) ? 3000 : 1000,
         .description = COMPOUND_STRING(
             "כדור נוח שהופך\n"
@@ -433,6 +475,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LEVEL_BALL] =
     {
         .name = ITEM_NAME("כדור רמה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי רמה"),
+    #endif
         //.price = (I_PRICE >= GEN_7) ? 0 : 300,
         .price = 1000,
         .description = COMPOUND_STRING(
@@ -451,6 +496,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LURE_BALL] =
     {
         .name = ITEM_NAME("כדור פיתיון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי פיתיון"),
+    #endif
         //.price = (I_PRICE >= GEN_7) ? 0 : 300,
         .price = 1000,
         .description = COMPOUND_STRING(
@@ -469,6 +517,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MOON_BALL] =
     {
         .name = ITEM_NAME("כדור ירח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי ירח"),
+    #endif
         //.price = (I_PRICE >= GEN_7) ? 0 : 300,
         .price = 1000,
         .description = COMPOUND_STRING(
@@ -487,6 +538,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FRIEND_BALL] =
     {
         .name = ITEM_NAME("כדור ידידות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי ידידות"),
+    #endif
         //.price = (I_PRICE >= GEN_7) ? 0 : 300,
         .price = 1000,
         .description = COMPOUND_STRING(
@@ -505,6 +559,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LOVE_BALL] =
     {
         .name = ITEM_NAME("כדור אהבה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי אהבה"),
+    #endif
         //.price = (I_PRICE >= GEN_7) ? 0 : 300,
         .price = 1000,
         .description = COMPOUND_STRING(
@@ -523,6 +580,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FAST_BALL] =
     {
         .name = ITEM_NAME("כדור זריז"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורים זריזים"),
+    #endif
         //.price = (I_PRICE >= GEN_7) ? 0 : 300,
         .price = 1000,
         .description = COMPOUND_STRING(
@@ -541,6 +601,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEAVY_BALL] =
     {
         .name = ITEM_NAME("כדור כבד"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורים כבדים"),
+    #endif
         //.price = (I_PRICE >= GEN_7) ? 0 : 300,
         .price = 1000,
         .description = COMPOUND_STRING(
@@ -559,6 +622,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DREAM_BALL] =
     {
         .name = ITEM_NAME("כדור חלום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי חלום"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
         #if B_DREAM_BALL_MODIFIER >= GEN_8
@@ -581,6 +647,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SAFARI_BALL] =
     {
         .name = ITEM_NAME("כדור ספארי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי ספארי"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "כדור מיוחד\n"
@@ -618,6 +687,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PARK_BALL] =
     {
         .name = ITEM_NAME("כדור פארק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי פארק"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "כדור מיוחד\n"
@@ -634,6 +706,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BEAST_BALL] =
     {
         .name = ITEM_NAME("כדור חיה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי חיה"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "כדור שתוכנן\n"
@@ -651,6 +726,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CHERISH_BALL] =
     {
         .name = ITEM_NAME("כדור הוקרה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי הוקרה"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "כדור נדיר שנוצר\n"
@@ -670,6 +748,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POTION] =
     {
         .name = ITEM_NAME("שיקוי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שיקויים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 200 : 300,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
@@ -690,6 +771,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SUPER_POTION] =
     {
         .name = ITEM_NAME("שיקוי על"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שיקויי על"),
+    #endif
         .price = 700,
         .holdEffectParam = 60,
         .description = COMPOUND_STRING(
@@ -714,6 +798,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HYPER_POTION] =
     {
         .name = ITEM_NAME("שיקוי היפר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שיקויי היפר"),
+    #endif
         .price = (I_PRICE >= GEN_2 && I_PRICE <= GEN_6) ? 1200 : 1500,
         .holdEffectParam = 120,
         .description = COMPOUND_STRING(
@@ -738,6 +825,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MAX_POTION] =
     {
         .name = ITEM_NAME("שיקוי מקסימום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שיקויי מקסימום"),
+    #endif
         .price = 2500,
         .holdEffectParam = 255,
         .description = COMPOUND_STRING(
@@ -757,6 +847,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FULL_RESTORE] =
     {
         .name = ITEM_NAME("שיחזור מלא"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שיחזורים מלאים"),
+    #endif
         .price = 3000,
         .holdEffectParam = 255,
         .description = COMPOUND_STRING(
@@ -777,6 +870,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_REVIVE] =
     {
         .name = ITEM_NAME("החייאה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("החייאות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 2000 : 1500,
         .description = COMPOUND_STRING(
             "מחייה פוקימון\n"
@@ -796,6 +892,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MAX_REVIVE] =
     {
         .name = ITEM_NAME("החייאה מלאה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("החייאות מלאות"),
+    #endif
         .price = 4000,
         .description = sMaxReviveDesc,
         .pocket = POCKET_MEDICINE,
@@ -860,6 +959,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LEMONADE] =
     {
         .name = ITEM_NAME("לימונדה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לימונדות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 400 : 350,
         .holdEffectParam = 70,
         .description = COMPOUND_STRING(
@@ -904,6 +1006,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ENERGY_POWDER] =
     {
         .name = ITEM_NAME("אבקת אנרגיה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבקות אנרגיה"),
+    #endif
         .price = 500,
         .description = COMPOUND_STRING(
             "אבקה מרה\n"
@@ -927,6 +1032,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ENERGY_ROOT] =
     {
         .name = ITEM_NAME("שורש אנרגיה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שורשי אנרגיה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1200 : 800,
         .description = COMPOUND_STRING(
             "שורש מר\n"
@@ -950,6 +1058,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEAL_POWDER] =
     {
         .name = ITEM_NAME("אבקת ריפוי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבקות ריפוי"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 300 : 450,
         .description = COMPOUND_STRING(
             "אבקה מרה שמרפאת\n"
@@ -969,6 +1080,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_REVIVAL_HERB] =
     {
         .name = ITEM_NAME("עשב תחייה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עשבי תחייה"),
+    #endif
         .price = 2800,
         .description = COMPOUND_STRING(
             "עשב מר מאוד\n"
@@ -988,6 +1102,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ANTIDOTE] =
     {
         .name = ITEM_NAME("נוגדן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוגדנים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 200 : 100,
         .description = COMPOUND_STRING(
             "מרפא פוקימון\n"
@@ -1006,6 +1123,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PARALYZE_HEAL] =
     {
         .name = ITEM_NAME("תרופה לשיתוק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תרופות לשיתוק"),
+    #endif
         .price = (I_PRICE == GEN_7) ? 300 : 200,
         .description = COMPOUND_STRING(
             "מרפאת פוקימון\n"
@@ -1024,6 +1144,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BURN_HEAL] =
     {
         .name = ITEM_NAME("תרופה לכוויות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תרופות לכוויות"),
+    #endif
     #if I_PRICE >= GEN_8
         .price = 200,
     #elif I_PRICE == GEN_7
@@ -1048,6 +1171,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ICE_HEAL] =
     {
         .name = ITEM_NAME("תרופה לקיפאון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תרופות לקיפאון"),
+    #endif
     #if I_PRICE >= GEN_8
         .price = 200,
     #elif I_PRICE == GEN_7
@@ -1072,6 +1198,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_AWAKENING] =
     {
         .name = ITEM_NAME("מעורר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מעוררים"),
+    #endif
     #if (I_PRICE >= GEN_8 || I_PRICE == GEN_1)
         .price = 200,
     #elif I_PRICE == GEN_7
@@ -1096,6 +1225,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FULL_HEAL] =
     {
         .name = ITEM_NAME("ריפוי מלא"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ריפויים מלאים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 400 : 600,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
@@ -1112,6 +1244,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ETHER] =
     {
         .name = ITEM_NAME("אתר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מנות אתר"),
+    #endif
         .price = (I_PRICE >= GEN_2) ? 1200 : 1,
         .holdEffectParam = 10,
         .description = COMPOUND_STRING(
@@ -1132,6 +1267,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MAX_ETHER] =
     {
         .name = ITEM_NAME("אתר מקס"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מנות אתר מקס"),
+    #endif
         .price = (I_PRICE >= GEN_2) ? 2000 : 1,
         .holdEffectParam = 255,
         .description = COMPOUND_STRING(
@@ -1152,6 +1290,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ELIXIR] =
     {
         .name = ITEM_NAME("אליקסיר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אליקסירים"),
+    #endif
         .price = (I_PRICE >= GEN_2) ? 3000 : 1,
         .holdEffectParam = 10,
         .description = COMPOUND_STRING(
@@ -1171,6 +1312,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MAX_ELIXIR] =
     {
         .name = ITEM_NAME("אליקסיר מרבי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אליקסירים מרביים"),
+    #endif
         .price = (I_PRICE >= GEN_2) ? 4500 : 1,
         .holdEffectParam = 255,
         .description = COMPOUND_STRING(
@@ -1191,6 +1335,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BERRY_JUICE] =
     {
         .name = ITEM_NAME("מיץ ברי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מיצי ברי"),
+    #endif
         .price = 100,
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
         .holdEffectParam = 20,
@@ -1231,6 +1378,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SWEET_HEART] =
     {
         .name = ITEM_NAME("לב מתוק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לבבות מתוקים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 3000 : 100,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
@@ -1287,6 +1437,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RAGE_CANDY_BAR] =
     {
         .name = ITEM_NAME("חטיף זעם"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חטיפי זעם"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 350 : 300,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
@@ -1303,6 +1456,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LAVA_COOKIE] =
     {
         .name = ITEM_NAME("עוגיית לבה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עוגיות לבה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 350 : 200,
         .description = COMPOUND_STRING(
             "מעדן מקומי\n"
@@ -1339,6 +1495,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CASTELIACONE] =
     {
         .name = ITEM_NAME("גלידת קסטליה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גלידות קסטליה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 350 : 100,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
@@ -1355,6 +1514,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LUMIOSE_GALETTE] =
     {
         .name = ITEM_NAME("קרפ לומיוז"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קרפי לומיוז"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 350 : 200,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
@@ -1371,6 +1533,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SHALOUR_SABLE] =
     {
         .name = ITEM_NAME("עוגיית שלור"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עוגיות שלור"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 350 : 200,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
@@ -1387,6 +1552,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BIG_MALASADA] =
     {
         .name = ITEM_NAME("סופגנייה גדולה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סופגניות גדולות"),
+    #endif
         .price = 350,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
@@ -1405,6 +1573,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HP_UP] =
     {
         .name = ITEM_NAME("הגדלת נ”ח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("הגדלות נ”ח"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
         .description = COMPOUND_STRING(
             "מעלה את הנ”ח\n"
@@ -1423,6 +1594,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PROTEIN] =
     {
         .name = ITEM_NAME("חלבון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חלבונים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
         .description = COMPOUND_STRING(
             "מעלה את ההתקפה\n"
@@ -1514,6 +1688,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PP_UP] =
     {
         .name = ITEM_NAME("הגדלת נ”כ"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("הגדלות נ”כ"),
+    #endif
     #if I_PRICE >= GEN_7
         .price = 10000,
     #elif I_PRICE >= GEN_2
@@ -1558,6 +1735,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEALTH_FEATHER] =
     {
         .name = ITEM_NAME("נוצת בריאות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוצות בריאות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sHealthFeatherDesc,
         .pocket = POCKET_ITEMS,
@@ -1573,6 +1753,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MUSCLE_FEATHER] =
     {
         .name = ITEM_NAME("נוצת שרירים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוצות שרירים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sMuscleFeatherDesc,
         .pocket = POCKET_ITEMS,
@@ -1588,6 +1771,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RESIST_FEATHER] =
     {
         .name = ITEM_NAME("נוצת עמידות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוצות עמידות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sResistFeatherDesc,
         .pocket = POCKET_ITEMS,
@@ -1603,6 +1789,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GENIUS_FEATHER] =
     {
         .name = ITEM_NAME("נוצת גאונות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוצות גאונות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sGeniusFeatherDesc,
         .pocket = POCKET_ITEMS,
@@ -1618,6 +1807,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CLEVER_FEATHER] =
     {
         .name = ITEM_NAME("נוצת תבונה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוצות תבונה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sCleverFeatherDesc,
         .pocket = POCKET_ITEMS,
@@ -1633,6 +1825,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SWIFT_FEATHER] =
     {
         .name = ITEM_NAME("נוצת מהירות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוצות מהירות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = sSwiftFeatherDesc,
         .pocket = POCKET_ITEMS,
@@ -1650,6 +1845,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ABILITY_CAPSULE] =
     {
         .name = ITEM_NAME("קפסולת יכולת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קפסולות יכולת"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 100000,
     #elif I_PRICE >= GEN_7
@@ -2206,6 +2404,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BLUE_FLUTE] =
     {
         .name = ITEM_NAME("חליל כחול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חלילים כחולים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 20 : 100,
         .description = COMPOUND_STRING(
             "חליל זכוכית\n"
@@ -2226,6 +2427,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_YELLOW_FLUTE] =
     {
         .name = ITEM_NAME("חליל צהוב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חלילים צהובים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 20 : 300,
         .description = COMPOUND_STRING(
             "חליל זכוכית\n"
@@ -2246,6 +2450,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RED_FLUTE] =
     {
         .name = ITEM_NAME("חליל אדום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חלילים אדומים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 20 : 200,
         .description = COMPOUND_STRING(
             "חליל זכוכית\n"
@@ -2268,6 +2475,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BLACK_FLUTE] =
     {
         .name = ITEM_NAME("חליל שחור"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חלילים שחורים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 20 : 400,
         .holdEffectParam = 50,
         .description = COMPOUND_STRING(
@@ -2287,6 +2497,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WHITE_FLUTE] =
     {
         .name = ITEM_NAME("חליל לבן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חלילים לבנים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 20 : 500,
         .holdEffectParam = 150,
         .description = COMPOUND_STRING(
@@ -2308,6 +2521,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_REPEL] =
     {
         .name = ITEM_NAME("דוחה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תרסיסי דוחה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 400 : 350,
         .holdEffectParam = 100,
         .description = COMPOUND_STRING(
@@ -2326,6 +2542,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SUPER_REPEL] =
     {
         .name = ITEM_NAME("דוחה על"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תרסיסי דוחה על"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 700 : 500,
         .holdEffectParam = 200,
         .description = COMPOUND_STRING(
@@ -2344,6 +2563,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MAX_REPEL] =
     {
         .name = ITEM_NAME("דוחה עליון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תרסיסי דוחה עליון"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 900 : 700,
         .holdEffectParam = 250,
         .description = COMPOUND_STRING(
@@ -2362,6 +2584,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LURE] =
     {
         .name = ITEM_NAME("פיתיון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פיתיונות"),
+    #endif
         .price = 400,
         .holdEffectParam = 100,
         .description = COMPOUND_STRING(
@@ -2381,6 +2606,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SUPER_LURE] =
     {
         .name = ITEM_NAME("פיתיון על"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פיתיונות על"),
+    #endif
         .price = 700,
         .holdEffectParam = 200,
         .description = COMPOUND_STRING(
@@ -2400,6 +2628,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MAX_LURE] =
     {
         .name = ITEM_NAME("פיתיון עליון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פיתיונות עליונים"),
+    #endif
         .price = 900,
         .holdEffectParam = 250,
         .description = COMPOUND_STRING(
@@ -2602,6 +2833,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DIRE_HIT] =
     {
         .name = ITEM_NAME("פגיעה קריטית"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פגיעות קריטיות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 650,
         .description = COMPOUND_STRING(
             "מעלה את סיכויי\n"
@@ -2641,6 +2875,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POKE_DOLL] =
     {
         .name = ITEM_NAME("בובת פוקימון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בובות פוקימון"),
+    #endif
     #if I_PRICE >= GEN_8
         .price = 300,
     #elif I_PRICE == GEN_7
@@ -2662,6 +2899,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FLUFFY_TAIL] =
     {
         .name = ITEM_NAME("זנב פרוותי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זנבות פרוותיים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 100 : 1000,
         .description = sPokeDollDesc,
         .pocket = POCKET_BATTLE_ITEMS,
@@ -2677,6 +2917,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POKE_TOY] =
     {
         .name = ITEM_NAME("צעצוע פוקימון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("צעצועי פוקימון"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 100 : 1000,
         .description = sPokeDollDesc,
         .pocket = POCKET_BATTLE_ITEMS,
@@ -2713,6 +2956,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BOTTLE_CAP] =
     {
         .name = ITEM_NAME("פקק בקבוק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פקקי בקבוק"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 20000 : 5000,
         .description = COMPOUND_STRING(
             "פקק בקבוק יפה\n"
@@ -2729,6 +2975,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GOLD_BOTTLE_CAP] =
     {
         .name = ITEM_NAME("פקק זהב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פקקי זהב"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 60000 : 10000,
         .description = COMPOUND_STRING(
             "פקק בקבוק יפה\n"
@@ -2745,6 +2994,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_NUGGET] =
     {
         .name = ITEM_NAME("נאגט"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נאגטים"),
+    #endif
         .price = 10000 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "גוש זהב טהור.\n"
@@ -2762,6 +3014,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BIG_NUGGET] =
     {
         .name = ITEM_NAME("נאגט גדול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נאגטים גדולים"),
+    #endif
     #if I_PRICE >= GEN_7
         .price = 40000 * TREASURE_FACTOR,
     #elif I_PRICE == GEN_6
@@ -2785,6 +3040,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TINY_MUSHROOM] =
     {
         .name = ITEM_NAME("פטרייה קטנה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פטריות קטנות"),
+    #endif
         .price = 500 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "פטרייה פשוטה\n"
@@ -2802,6 +3060,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BIG_MUSHROOM] =
     {
         .name = ITEM_NAME("פטרייה גדולה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פטריות גדולות"),
+    #endif
         .price = 5000 * TREASURE_FACTOR,
         .description = sBigMushroomDesc,
         .pocket = POCKET_TREASURES,
@@ -2816,6 +3077,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BALM_MUSHROOM] =
     {
         .name = ITEM_NAME("פטרייה ריחנית"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פטריות ריחניות"),
+    #endif
     #if I_PRICE >= GEN_7
         .price = 15000 * TREASURE_FACTOR,
     #elif I_PRICE == GEN_6
@@ -2836,6 +3100,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PEARL] =
     {
         .name = ITEM_NAME("פנינה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פנינים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 2000 * TREASURE_FACTOR: 1400,
         .description = COMPOUND_STRING(
             "פנינה יפה\n"
@@ -2853,6 +3120,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BIG_PEARL] =
     {
         .name = ITEM_NAME("פנינה גדולה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פנינים גדולות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 8000 * TREASURE_FACTOR: 7500,
         .description = COMPOUND_STRING(
             "פנינה גדולה ויפה\n"
@@ -2870,6 +3140,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PEARL_STRING] =
     {
         .name = ITEM_NAME("מחרוזת פנינים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מחרוזות פנינים"),
+    #endif
     #if I_PRICE >= GEN_8
         .price = 20000 * TREASURE_FACTOR,
     #elif I_PRICE == GEN_7
@@ -2912,6 +3185,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STAR_PIECE] =
     {
         .name = ITEM_NAME("חתיכת כוכב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חתיכות כוכב"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 12000 * TREASURE_FACTOR: 9800,
         .description = COMPOUND_STRING(
             "שבר של אבן חן\n"
@@ -2929,6 +3205,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_COMET_SHARD] =
     {
         .name = ITEM_NAME("שבר שביט"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי שביט"),
+    #endif
     #if I_PRICE >= GEN_8
         .price = 25000 * TREASURE_FACTOR,
     #elif I_PRICE == GEN_7
@@ -2970,6 +3249,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SHOAL_SHELL] =
     {
         .name = ITEM_NAME("קליפת מערות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קליפות מערות"),
+    #endif
         .price = 20,
         .description = COMPOUND_STRING(
             "צדף שנמצא עמוק\n"
@@ -2986,6 +3268,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RED_SHARD] =
     {
         .name = ITEM_NAME("שבר אדום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברים אדומים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 200,
         .description = sShardsDesc,
         .pocket = POCKET_ITEMS,
@@ -3000,6 +3285,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BLUE_SHARD] =
     {
         .name = ITEM_NAME("שבר כחול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברים כחולים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 200,
         .description = sShardsDesc,
         .pocket = POCKET_ITEMS,
@@ -3014,6 +3302,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_YELLOW_SHARD] =
     {
         .name = ITEM_NAME("שבר צהוב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברים צהובים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 200,
         .description = sShardsDesc,
         .pocket = POCKET_ITEMS,
@@ -3028,6 +3319,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GREEN_SHARD] =
     {
         .name = ITEM_NAME("שבר ירוק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברים ירוקים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 200,
         .description = sShardsDesc,
         .pocket = POCKET_ITEMS,
@@ -3042,6 +3336,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEART_SCALE] =
     {
         .name = ITEM_NAME("קשקש לב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קשקשי לב"),
+    #endif
         .price = 100,
         .description = COMPOUND_STRING(
             "קשקש יפה.\n"
@@ -3083,6 +3380,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RARE_BONE] =
     {
         .name = ITEM_NAME("עצם נדירה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עצמות נדירות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 5000 * TREASURE_FACTOR: 10000,
         .description = COMPOUND_STRING(
             "עצם נדירה מאוד.\n"
@@ -3100,6 +3400,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ODD_KEYSTONE] =
     {
         .name = ITEM_NAME("אבן מפתח מוזרה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני מפתח מוזרות"),
+    #endif
         .price = 2100,
         .description = COMPOUND_STRING(
             "לפעמים נשמעים\n"
@@ -3117,6 +3420,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PRETTY_FEATHER] =
     {
         .name = ITEM_NAME("נוצה יפה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוצות יפות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 * TREASURE_FACTOR: 200,
         .description = COMPOUND_STRING(
             "נוצה יפה אך פשוטה\n"
@@ -3184,6 +3490,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RELIC_VASE] =
     {
         .name = ITEM_NAME("אגרטל עתיק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אגרטלים עתיקים"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "אגרטל שנעשה\n"
@@ -3201,6 +3510,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RELIC_BAND] =
     {
         .name = ITEM_NAME("צמיד עתיק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("צמידים עתיקים"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "צמיד עתיק. אפשר\n"
@@ -3217,6 +3529,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RELIC_STATUE] =
     {
         .name = ITEM_NAME("פסל עתיק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פסלים עתיקים"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "פסל עתיק. אפשר\n"
@@ -3233,6 +3548,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RELIC_CROWN] =
     {
         .name = ITEM_NAME("כתר עתיק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כתרים עתיקים"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "כתר עתיק. אפשר\n"
@@ -3249,6 +3567,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STRANGE_SOUVENIR] =
     {
         .name = ITEM_NAME("מזכרת מוזרה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מזכרות מוזרות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 3000 : 10,
         .description = COMPOUND_STRING(
             "קישוט בדמות\n"
@@ -3373,6 +3694,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ARMOR_FOSSIL] =
     {
         .name = ITEM_NAME("מאובן שריון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאובני שריון"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 7000: 1000,
         .description = COMPOUND_STRING(
             "חלק מהראש של\n"
@@ -3389,6 +3713,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SKULL_FOSSIL] =
     {
         .name = ITEM_NAME("מאובן גולגולת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאובני גולגולת"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 7000: 1000,
         .description = COMPOUND_STRING(
             "חלק מהצווארון של\n"
@@ -3405,6 +3732,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_COVER_FOSSIL] =
     {
         .name = ITEM_NAME("מאובן כיסוי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאובני כיסוי"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 7000: 1000,
         .description = COMPOUND_STRING(
             "חלק מהגב של\n"
@@ -3421,6 +3751,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PLUME_FOSSIL] =
     {
         .name = ITEM_NAME("מאובן נוצה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאובני נוצה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 7000: 1000,
         .description = COMPOUND_STRING(
             "חלק מהכנף של\n"
@@ -3437,6 +3770,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_JAW_FOSSIL] =
     {
         .name = ITEM_NAME("מאובן לסת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאובני לסת"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 7000: 1000,
         .description = COMPOUND_STRING(
             "חלק מהלסת הגדולה\n"
@@ -3454,6 +3790,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SAIL_FOSSIL] =
     {
         .name = ITEM_NAME("מאובן מפרש"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאובני מפרש"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 7000: 1000,
         .description = COMPOUND_STRING(
             "חלק ממפרש העור של\n"
@@ -3470,6 +3809,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FOSSILIZED_BIRD] =
     {
         .name = ITEM_NAME("ציפור מאובנת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ציפורים מאובנות"),
+    #endif
         .price = 5000,
         .description = COMPOUND_STRING(
             "מאובן של פוקימון\n"
@@ -3501,6 +3843,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FOSSILIZED_DRAKE] =
     {
         .name = ITEM_NAME("דרקון מאובן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("דרקונים מאובנים"),
+    #endif
         .price = 5000,
         .description = COMPOUND_STRING(
             "מאובן של פוקימון\n"
@@ -3517,6 +3862,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FOSSILIZED_DINO] =
     {
         .name = ITEM_NAME("דינוזאור מאובן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("דינוזאורים מאובנים"),
+    #endif
         .price = 5000,
         .description = sFossilizedFishDesc,
         .pocket = POCKET_ITEMS,
@@ -3723,6 +4071,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RED_APRICORN] =
     {
         .name = ITEM_NAME("בלוט אדום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בלוטים אדומים"),
+    #endif
         .price = APRICORN_PRICE,
         .description = COMPOUND_STRING(
             "בלוט אדום.\n"
@@ -3739,6 +4090,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BLUE_APRICORN] =
     {
         .name = ITEM_NAME("בלוט כחול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בלוטים כחולים"),
+    #endif
         .price = APRICORN_PRICE,
         .description = COMPOUND_STRING(
             "בלוט כחול.\n"
@@ -3754,6 +4108,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_YELLOW_APRICORN] =
     {
         .name = ITEM_NAME("בלוט צהוב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בלוטים צהובים"),
+    #endif
         .price = APRICORN_PRICE,
         .description = COMPOUND_STRING(
             "בלוט צהוב.\n"
@@ -3769,6 +4126,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GREEN_APRICORN] =
     {
         .name = ITEM_NAME("בלוט ירוק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בלוטים ירוקים"),
+    #endif
         .price = APRICORN_PRICE,
         .description = COMPOUND_STRING(
             "בלוט ירוק.\n"
@@ -3785,6 +4145,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PINK_APRICORN] =
     {
         .name = ITEM_NAME("בלוט ורוד"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בלוטים ורודים"),
+    #endif
         .price = APRICORN_PRICE,
         .description = COMPOUND_STRING(
             "בלוט ורוד.\n"
@@ -3801,6 +4164,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WHITE_APRICORN] =
     {
         .name = ITEM_NAME("בלוט לבן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בלוטים לבנים"),
+    #endif
         .price = APRICORN_PRICE,
         .description = COMPOUND_STRING(
             "בלוט לבן.\n"
@@ -3816,6 +4182,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BLACK_APRICORN] =
     {
         .name = ITEM_NAME("בלוט שחור"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בלוטים שחורים"),
+    #endif
         .price = APRICORN_PRICE,
         .description = COMPOUND_STRING(
             "בלוט שחור.\n"
@@ -3832,6 +4201,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WISHING_PIECE] =
     {
         .name = ITEM_NAME("חתיכת משאלה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חתיכות משאלה"),
+    #endif
         .price = 20,
         .description = COMPOUND_STRING(
             "זורקים אותה למאורת\n"
@@ -3849,6 +4221,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GALARICA_TWIG] =
     {
         .name = ITEM_NAME("זרד גלאריקה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זרדי גלאריקה"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "זרד מעץ בגלאר\n"
@@ -4114,6 +4489,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FIRE_STONE] =
     {
         .name = ITEM_NAME("אבן אש"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני אש"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4129,6 +4507,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WATER_STONE] =
     {
         .name = ITEM_NAME("אבן מים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני מים"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4144,6 +4525,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_THUNDER_STONE] =
     {
         .name = ITEM_NAME("אבן ברק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני ברק"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4159,6 +4543,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LEAF_STONE] =
     {
         .name = ITEM_NAME("אבן עלה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני עלה"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4174,6 +4561,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ICE_STONE] =
     {
         .name = ITEM_NAME("אבן קרח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני קרח"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4189,6 +4579,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SUN_STONE] =
     {
         .name = ITEM_NAME("אבן שמש"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני שמש"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4204,6 +4597,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MOON_STONE] =
     {
         .name = ITEM_NAME("אבן ירח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני ירח"),
+    #endif
     #if I_PRICE >= GEN_7
         .price = 3000,
     #elif I_PRICE >= GEN_4
@@ -4227,6 +4623,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SHINY_STONE] =
     {
         .name = ITEM_NAME("אבן נוצצת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבנים נוצצות"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4242,6 +4641,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DUSK_STONE] =
     {
         .name = ITEM_NAME("אבן דמדומים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני דמדומים"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4257,6 +4659,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DAWN_STONE] =
     {
         .name = ITEM_NAME("אבן שחר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני שחר"),
+    #endif
         .price = 10000,
         .description = sEvolutionStoneDesc,
         .pocket = POCKET_ITEMS,
@@ -4272,6 +4677,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SWEET_APPLE] =
     {
         .name = ITEM_NAME("תפוח מתוק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תפוחים מתוקים"),
+    #endif
         .price = 2200,
         .description = COMPOUND_STRING(
             "תפוח מתוק מאוד\n"
@@ -4290,6 +4698,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TART_APPLE] =
     {
         .name = ITEM_NAME("תפוח חמוץ"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תפוחים חמוצים"),
+    #endif
         .price = 2200,
         .description = COMPOUND_STRING(
             "תפוח חמוץ מאוד\n"
@@ -4308,6 +4719,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CRACKED_POT] =
     {
         .name = ITEM_NAME("קומקום סדוק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קומקומים סדוקים"),
+    #endif
         .price = 1600,
         .description = COMPOUND_STRING(
             "קומקום סדוק\n"
@@ -4326,6 +4740,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CHIPPED_POT] =
     {
         .name = ITEM_NAME("קומקום פגום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קומקומים פגומים"),
+    #endif
         .price = 38000,
         .description = COMPOUND_STRING(
             "קומקום פגום\n"
@@ -4344,6 +4761,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GALARICA_CUFF] =
     {
         .name = ITEM_NAME("צמיד גלאריקה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("צמידי גלאריקה"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "צמיד מגלאר\n"
@@ -4362,6 +4782,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GALARICA_WREATH] =
     {
         .name = ITEM_NAME("זר גלאריקה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זרי גלאריקה"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "זר שנעשה בגלאר.\n"
@@ -4380,6 +4803,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DRAGON_SCALE] =
     {
         .name = ITEM_NAME("קשקש דרקון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קשקשי דרקון"),
+    #endif
         .price = 20000,
         .holdEffectParam = 10,
         .description = COMPOUND_STRING(
@@ -4399,6 +4825,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_UPGRADE] =
     {
         .name = ITEM_NAME("שדרוג"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שדרוגים"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "קופסה משונה\n"
@@ -4416,6 +4845,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PROTECTOR] =
     {
         .name = ITEM_NAME("מגן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מגינים"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "פוקימון מסוים\n"
@@ -4434,6 +4866,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ELECTIRIZER] =
     {
         .name = ITEM_NAME("אלקטירייזר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אלקטירייזרים"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "פוקימון מסוים\n"
@@ -4452,6 +4887,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MAGMARIZER] =
     {
         .name = ITEM_NAME("מגמרייזר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מגמרייזרים"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "פוקימון מסוים\n"
@@ -4470,6 +4908,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DUBIOUS_DISC] =
     {
         .name = ITEM_NAME("דיסק מפוקפק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("דיסקים מפוקפקים"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "מכשיר שקוף שגדוש\n"
@@ -4487,6 +4928,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_REAPER_CLOTH] =
     {
         .name = ITEM_NAME("בד מלאך המוות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בדי מלאך המוות"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "פוקימון מסוים\n"
@@ -4505,6 +4949,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PRISM_SCALE] =
     {
         .name = ITEM_NAME("קשקש מנסרה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קשקשי מנסרה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 3000,
     #elif I_PRICE >= GEN_7
@@ -4529,6 +4976,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WHIPPED_DREAM] =
     {
         .name = ITEM_NAME("חלום מוקצף"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חלומות מוקצפים"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 2000 * TREASURE_FACTOR : 2100,
         .description = COMPOUND_STRING(
             "פינוק רך ומתוק\n"
@@ -4547,6 +4997,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SACHET] =
     {
         .name = ITEM_NAME("שקיק ריח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שקיקי ריח"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 2000 * TREASURE_FACTOR : 2100,
         .description = COMPOUND_STRING(
             "שקיק בשמים חזקים,\n"
@@ -4565,6 +5018,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_OVAL_STONE] =
     {
         .name = ITEM_NAME("אבן סגלגלה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבנים סגלגלות"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "אבן משונה\n"
@@ -4583,6 +5039,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STRAWBERRY_SWEET] =
     {
         .name = ITEM_NAME("סוכריית תות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סוכריות תות"),
+    #endif
         .price = 500 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "סוכרייה בצורת תות\n"
@@ -4599,6 +5058,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LOVE_SWEET] =
     {
         .name = ITEM_NAME("סוכריית אהבה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סוכריות אהבה"),
+    #endif
         .price = 500 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "סוכרייה בצורת לב\n"
@@ -4615,6 +5077,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BERRY_SWEET] =
     {
         .name = ITEM_NAME("סוכריית פרי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סוכריות פרי"),
+    #endif
         .price = 500 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "סוכרייה בצורת פרי\n"
@@ -4631,6 +5096,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CLOVER_SWEET] =
     {
         .name = ITEM_NAME("סוכריית תלתן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סוכריות תלתן"),
+    #endif
         .price = 500 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "סוכרייה בצורת תלתן\n"
@@ -4647,6 +5115,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FLOWER_SWEET] =
     {
         .name = ITEM_NAME("סוכריית פרח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סוכריות פרח"),
+    #endif
         .price = 500 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "סוכרייה בצורת פרח\n"
@@ -4663,6 +5134,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STAR_SWEET] =
     {
         .name = ITEM_NAME("סוכריית כוכב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סוכריות כוכב"),
+    #endif
         .price = 500 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "סוכרייה בצורת כוכב\n"
@@ -4679,6 +5153,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RIBBON_SWEET] =
     {
         .name = ITEM_NAME("סוכריית סרט"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סוכריות סרט"),
+    #endif
         .price = 500 * TREASURE_FACTOR,
         .description = COMPOUND_STRING(
             "סוכרייה בצורת סרט\n"
@@ -4695,6 +5172,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_EVERSTONE] =
     {
         .name = ITEM_NAME("אבן נצח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני נצח"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 3000 : 200,
         .holdEffect = HOLD_EFFECT_PREVENT_EVOLVE,
         .description = COMPOUND_STRING(
@@ -4776,6 +5256,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FLAME_PLATE] =
     {
         .name = ITEM_NAME("לוח להבה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות להבה"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4796,6 +5279,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SPLASH_PLATE] =
     {
         .name = ITEM_NAME("לוח שכשוך"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות שכשוך"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4816,6 +5302,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ZAP_PLATE] =
     {
         .name = ITEM_NAME("לוח זרם"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות זרם"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4836,6 +5325,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MEADOW_PLATE] =
     {
         .name = ITEM_NAME("לוח אחו"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות אחו"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4856,6 +5348,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ICICLE_PLATE] =
     {
         .name = ITEM_NAME("לוח קרח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות קרח"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4876,6 +5371,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FIST_PLATE] =
     {
         .name = ITEM_NAME("לוח אגרוף"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות אגרוף"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4896,6 +5394,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TOXIC_PLATE] =
     {
         .name = ITEM_NAME("לוח הרעלה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות הרעלה"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4916,6 +5417,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_EARTH_PLATE] =
     {
         .name = ITEM_NAME("לוח אדמה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות אדמה"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4936,6 +5440,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SKY_PLATE] =
     {
         .name = ITEM_NAME("לוח שמים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות שמים"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4956,6 +5463,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MIND_PLATE] =
     {
         .name = ITEM_NAME("לוח נפש"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות נפש"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4976,6 +5486,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_INSECT_PLATE] =
     {
         .name = ITEM_NAME("לוח חרק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות חרק"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -4996,6 +5509,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STONE_PLATE] =
     {
         .name = ITEM_NAME("לוח אבן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות אבן"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -5016,6 +5532,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SPOOKY_PLATE] =
     {
         .name = ITEM_NAME("לוח רפאים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות רפאים"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -5036,6 +5555,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DRACO_PLATE] =
     {
         .name = ITEM_NAME("לוח דרקון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות דרקון"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -5056,6 +5578,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DREAD_PLATE] =
     {
         .name = ITEM_NAME("לוח אימה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות אימה"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -5076,6 +5601,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_IRON_PLATE] =
     {
         .name = ITEM_NAME("לוח ברזל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות ברזל"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -5096,6 +5624,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PIXIE_PLATE] =
     {
         .name = ITEM_NAME("לוח פיות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("לוחות פיות"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_PLATE,
         .holdEffectParam = 20,
@@ -5118,6 +5649,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DOUSE_DRIVE] =
     {
         .name = ITEM_NAME("כונן הרטבה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כונני הרטבה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 0 : 1000,
         .holdEffect = HOLD_EFFECT_DRIVE,
         .description = COMPOUND_STRING(
@@ -5137,6 +5671,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SHOCK_DRIVE] =
     {
         .name = ITEM_NAME("כונן הלם"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כונני הלם"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 0 : 1000,
         .holdEffect = HOLD_EFFECT_DRIVE,
         .description = COMPOUND_STRING(
@@ -5156,6 +5693,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BURN_DRIVE] =
     {
         .name = ITEM_NAME("כונן צריבה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כונני צריבה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 0 : 1000,
         .holdEffect = HOLD_EFFECT_DRIVE,
         .description = COMPOUND_STRING(
@@ -5175,6 +5715,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CHILL_DRIVE] =
     {
         .name = ITEM_NAME("כונן צינה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כונני צינה"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 0 : 1000,
         .holdEffect = HOLD_EFFECT_DRIVE,
         .description = COMPOUND_STRING(
@@ -5553,6 +6096,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RUSTED_SWORD] =
     {
         .name = ITEM_NAME("חרב חלודה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חרבות חלודות"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "חרב חלודה. גיבור\n"
@@ -5569,6 +6115,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RUSTED_SHIELD] =
     {
         .name = ITEM_NAME("מגן חלוד"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מגינים חלודים"),
+    #endif
         .price = 0,
         .description = COMPOUND_STRING(
             "מגן חלוד. גיבור\n"
@@ -5587,6 +6136,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RED_ORB] =
     {
         .name = ITEM_NAME("גולה אדומה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות אדומות"),
+    #endif
         .price = 0,
         .holdEffect = HOLD_EFFECT_PRIMAL_ORB,
         .description = COMPOUND_STRING(
@@ -5604,6 +6156,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BLUE_ORB] =
     {
         .name = ITEM_NAME("גולה כחולה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות כחולות"),
+    #endif
         .price = 0,
         .holdEffect = HOLD_EFFECT_PRIMAL_ORB,
         .description = COMPOUND_STRING(
@@ -7269,6 +7824,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_NORMAL_GEM] =
     {
         .name = ITEM_NAME("אבן חן רגילה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן רגילות"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7288,6 +7846,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FIRE_GEM] =
     {
         .name = ITEM_NAME("אבן חן אש"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן אש"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7307,6 +7868,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WATER_GEM] =
     {
         .name = ITEM_NAME("אבן חן מים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן מים"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7326,6 +7890,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ELECTRIC_GEM] =
     {
         .name = ITEM_NAME("אבן חן חשמל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן חשמל"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7345,6 +7912,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GRASS_GEM] =
     {
         .name = ITEM_NAME("אבן חן עשב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן עשב"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7364,6 +7934,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ICE_GEM] =
     {
         .name = ITEM_NAME("אבן חן קרח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן קרח"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7383,6 +7956,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FIGHTING_GEM] =
     {
         .name = ITEM_NAME("אבן חן קרב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן קרב"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7402,6 +7978,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POISON_GEM] =
     {
         .name = ITEM_NAME("אבן חן רעל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן רעל"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7421,6 +8000,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GROUND_GEM] =
     {
         .name = ITEM_NAME("אבן חן אדמה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן אדמה"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7440,6 +8022,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FLYING_GEM] =
     {
         .name = ITEM_NAME("אבן חן תעופה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן תעופה"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7459,6 +8044,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PSYCHIC_GEM] =
     {
         .name = ITEM_NAME("אבן חן פסיכית"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן פסיכיות"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7478,6 +8066,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BUG_GEM] =
     {
         .name = ITEM_NAME("אבן חן חרק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן חרק"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7497,6 +8088,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ROCK_GEM] =
     {
         .name = ITEM_NAME("אבן חן סלע"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן סלע"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7516,6 +8110,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GHOST_GEM] =
     {
         .name = ITEM_NAME("אבן חן רוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן רוח"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7535,6 +8132,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DRAGON_GEM] =
     {
         .name = ITEM_NAME("אבן חן דרקון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן דרקון"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7554,6 +8154,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DARK_GEM] =
     {
         .name = ITEM_NAME("אבן חן אפלה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן אפלות"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7573,6 +8176,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STEEL_GEM] =
     {
         .name = ITEM_NAME("אבן חן פלדה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן פלדה"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -7592,6 +8198,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FAIRY_GEM] =
     {
         .name = ITEM_NAME("אבן חן פיה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני חן פיה"),
+    #endif
         .price = GEM_PRICE,
         .holdEffect = HOLD_EFFECT_GEMS,
         .holdEffectParam = GEM_BOOST_PARAM,
@@ -8244,6 +8853,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LIGHT_BALL] =
     {
         .name = ITEM_NAME("כדור אור"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי אור"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 100,
         .holdEffect = HOLD_EFFECT_LIGHT_BALL,
         .description = COMPOUND_STRING(
@@ -8262,6 +8874,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LEEK] =
     {
         .name = ITEM_NAME("מקל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מקלות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 200,
         .holdEffect = HOLD_EFFECT_LEEK,
         .description = COMPOUND_STRING(
@@ -8280,6 +8895,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_THICK_CLUB] =
     {
         .name = ITEM_NAME("עצם עבה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עצמות עבות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 500,
         .holdEffect = HOLD_EFFECT_THICK_CLUB,
         .description = COMPOUND_STRING(
@@ -8317,6 +8935,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_METAL_POWDER] =
     {
         .name = ITEM_NAME("אבקת מתכת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבקות מתכת"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 10,
         .holdEffect = HOLD_EFFECT_METAL_POWDER,
         .description = COMPOUND_STRING(
@@ -8334,6 +8955,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_QUICK_POWDER] =
     {
         .name = ITEM_NAME("אבקה מהירה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבקות מהירות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 1000 : 10,
         .holdEffect = HOLD_EFFECT_QUICK_POWDER,
         .description = COMPOUND_STRING(
@@ -8352,6 +8976,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DEEP_SEA_SCALE] =
     {
         .name = ITEM_NAME("קשקש מצולות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קשקשי מצולות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 2000 : 200,
         .holdEffect = HOLD_EFFECT_DEEP_SEA_SCALE,
         .description = COMPOUND_STRING(
@@ -8416,6 +9043,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ADAMANT_ORB] =
     {
         .name = ITEM_NAME("גולת יהלום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות יהלום"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 0 : 10000,
         .holdEffect = HOLD_EFFECT_ADAMANT_ORB,
         .holdEffectParam = 20,
@@ -8435,6 +9065,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LUSTROUS_ORB] =
     {
         .name = ITEM_NAME("גולה בוהקת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות בוהקות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 0 : 10000,
         .holdEffect = HOLD_EFFECT_LUSTROUS_ORB,
         .holdEffectParam = 20,
@@ -8454,6 +9087,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GRISEOUS_ORB] =
     {
         .name = ITEM_NAME("גולה אפורה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות אפורות"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 0 : 10000,
         .holdEffect = HOLD_EFFECT_GRISEOUS_ORB,
         .holdEffectParam = 20,
@@ -8726,6 +9362,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MACHO_BRACE] =
     {
         .name = ITEM_NAME("רצועת מאצ'ו"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("רצועות מאצ'ו"),
+    #endif
         .price = 3000,
         .holdEffect = HOLD_EFFECT_MACHO_BRACE,
         .description = COMPOUND_STRING(
@@ -8744,6 +9383,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POWER_WEIGHT] =
     {
         .name = ITEM_NAME("משקולת כוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("משקולות כוח"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
@@ -8764,6 +9406,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POWER_BRACER] =
     {
         .name = ITEM_NAME("צמיד כוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("צמידי כוח"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
@@ -8784,6 +9429,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POWER_BELT] =
     {
         .name = ITEM_NAME("חגורת כוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חגורות כוח"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
@@ -8825,6 +9473,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POWER_BAND] =
     {
         .name = ITEM_NAME("רצועת כוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("רצועות כוח"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
@@ -8845,6 +9496,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POWER_ANKLET] =
     {
         .name = ITEM_NAME("צמיד קרסול כוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("צמידי קרסול כוח"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
@@ -8941,6 +9595,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MAGNET] =
     {
         .name = ITEM_NAME("מגנט"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מגנטים"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -8961,6 +9618,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MIRACLE_SEED] =
     {
         .name = ITEM_NAME("זרע פלא"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זרעי פלא"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -8998,6 +9658,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BLACK_BELT] =
     {
         .name = ITEM_NAME("חגורה שחורה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חגורות שחורות"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -9018,6 +9681,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POISON_BARB] =
     {
         .name = ITEM_NAME("קוץ רעיל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קוצים רעילים"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -9059,6 +9725,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SHARP_BEAK] =
     {
         .name = ITEM_NAME("מקור חד"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מקורים חדים"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -9079,6 +9748,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TWISTED_SPOON] =
     {
         .name = ITEM_NAME("כף מעוקלת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כפות מעוקלות"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -9096,6 +9768,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SILVER_POWDER] =
     {
         .name = ITEM_NAME("אבקת כסף"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבקות כסף"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -9116,6 +9791,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HARD_STONE] =
     {
         .name = ITEM_NAME("אבן קשה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבנים קשות"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -9133,6 +9811,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SPELL_TAG] =
     {
         .name = ITEM_NAME("קמע רוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קמעות רוח"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -9153,6 +9834,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DRAGON_FANG] =
     {
         .name = ITEM_NAME("ניב דרקון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ניבי דרקון"),
+    #endif
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -9194,6 +9878,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_METAL_COAT] =
     {
         .name = ITEM_NAME("ציפוי מתכת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ציפויי מתכת"),
+    #endif
         //#if I_PRICE >= GEN_9
         //    .price = 3000,
         //#elif I_PRICE >= GEN_7
@@ -9224,6 +9911,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CHOICE_BAND] =
     {
         .name = ITEM_NAME("סרט בחירה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סרטי בחירה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 100000,
     #elif I_PRICE >= GEN_7
@@ -9300,6 +9990,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FLAME_ORB] =
     {
         .name = ITEM_NAME("גולת להבה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות להבה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 15000,
     #elif I_PRICE >= GEN_7
@@ -9324,6 +10017,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TOXIC_ORB] =
     {
         .name = ITEM_NAME("גולת הרעלה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות הרעלה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 15000,
     #elif I_PRICE >= GEN_7
@@ -9350,6 +10046,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DAMP_ROCK] =
     {
         .name = ITEM_NAME("סלע לח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סלעים לחים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 8000,
     #elif I_PRICE >= GEN_7
@@ -9374,6 +10073,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEAT_ROCK] =
     {
         .name = ITEM_NAME("סלע חם"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סלעים חמים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 8000,
     #elif I_PRICE >= GEN_7
@@ -9398,6 +10100,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SMOOTH_ROCK] =
     {
         .name = ITEM_NAME("סלע חלק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סלעים חלקים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 8000,
     #elif I_PRICE >= GEN_7
@@ -9422,6 +10127,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ICY_ROCK] =
     {
         .name = ITEM_NAME("סלע קר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סלעים קרים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 8000,
     #elif I_PRICE >= GEN_7
@@ -9460,6 +10168,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ELECTRIC_SEED] =
     {
         .name = ITEM_NAME("זרע חשמל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זרעי חשמל"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 20000 : 4000,
         .holdEffect = HOLD_EFFECT_TERRAIN_SEED,
         .holdEffectParam = HOLD_EFFECT_PARAM_ELECTRIC_TERRAIN,
@@ -9479,6 +10190,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PSYCHIC_SEED] =
     {
         .name = ITEM_NAME("זרע פסיכי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זרעים פסיכיים"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 20000 : 4000,
         .holdEffect = HOLD_EFFECT_TERRAIN_SEED,
         .holdEffectParam = HOLD_EFFECT_PARAM_PSYCHIC_TERRAIN,
@@ -9498,6 +10212,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MISTY_SEED] =
     {
         .name = ITEM_NAME("זרע ערפל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זרעי ערפל"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 20000 : 4000,
         .holdEffect = HOLD_EFFECT_TERRAIN_SEED,
         .holdEffectParam = HOLD_EFFECT_PARAM_MISTY_TERRAIN,
@@ -9517,6 +10234,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GRASSY_SEED] =
     {
         .name = ITEM_NAME("זרע עשב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זרעי עשב"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 20000 : 4000,
         .holdEffect = HOLD_EFFECT_TERRAIN_SEED,
         .holdEffectParam = HOLD_EFFECT_PARAM_GRASSY_TERRAIN,
@@ -9538,6 +10258,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ABSORB_BULB] =
     {
         .name = ITEM_NAME("פקעת ספיגה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פקעות ספיגה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 5000,
     #elif I_PRICE >= GEN_7
@@ -9615,6 +10338,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SNOWBALL] =
     {
         .name = ITEM_NAME("כדור שלג"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי שלג"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 5000,
     #elif I_PRICE >= GEN_7
@@ -9642,6 +10368,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BRIGHT_POWDER] =
     {
         .name = ITEM_NAME("אבקה מבריקה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבקות מבריקות"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 30000,
     #elif I_PRICE >= GEN_7
@@ -9667,6 +10396,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WHITE_HERB] =
     {
         .name = ITEM_NAME("עשב לבן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עשבים לבנים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 20000,
     #elif I_PRICE >= GEN_7
@@ -9719,6 +10451,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_QUICK_CLAW] =
     {
         .name = ITEM_NAME("טופר מהיר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("טפרים מהירים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 8000,
     #elif I_PRICE >= GEN_7
@@ -9744,6 +10479,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SOOTHE_BELL] =
     {
         .name = ITEM_NAME("פעמון מרגיע"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פעמונים מרגיעים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 5000,
     #elif I_PRICE >= GEN_7
@@ -9768,6 +10506,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MENTAL_HERB] =
     {
         .name = ITEM_NAME("עשב נפשי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עשבים נפשיים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 10000,
     #elif I_PRICE >= GEN_7
@@ -9798,6 +10539,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_KINGS_ROCK] =
     {
         .name = ITEM_NAME("סלע המלך"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סלעי המלך"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 10000,
     #elif I_PRICE >= GEN_7
@@ -9821,6 +10565,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_AMULET_COIN] =
     {
         .name = ITEM_NAME("מטבע קמע"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מטבעות קמע"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 30000,
     #elif I_PRICE >= GEN_7
@@ -9842,6 +10589,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CLEANSE_TAG] =
     {
         .name = ITEM_NAME("תג טיהור"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תגי טיהור"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 5000 : 200,
         .holdEffect = HOLD_EFFECT_REPEL,
         .description = sPureIncenseDesc,
@@ -9857,6 +10607,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SMOKE_BALL] =
     {
         .name = ITEM_NAME("כדור עשן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי עשן"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 15000,
     #elif I_PRICE >= GEN_7
@@ -9881,6 +10634,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FOCUS_BAND] =
     {
         .name = ITEM_NAME("רצועת ריכוז"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("רצועות ריכוז"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 10000,
     #elif I_PRICE >= GEN_7
@@ -9906,6 +10662,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LUCKY_EGG] =
     {
         .name = ITEM_NAME("ביצת מזל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ביצי מזל"),
+    #endif
         .price = (I_PRICE >= GEN_7) ? 10000 : 200,
         .holdEffect = HOLD_EFFECT_LUCKY_EGG,
         .description = COMPOUND_STRING(
@@ -9975,6 +10734,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SHELL_BELL] =
     {
         .name = ITEM_NAME("פעמון קונכיה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פעמוני קונכיה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 20000,
     #elif I_PRICE >= GEN_7
@@ -10026,6 +10788,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MUSCLE_BAND] =
     {
         .name = ITEM_NAME("רצועת שרירים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("רצועות שרירים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 8000,
     #elif I_PRICE >= GEN_7
@@ -10077,6 +10842,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_EXPERT_BELT] =
     {
         .name = ITEM_NAME("חגורת מומחה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חגורות מומחה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 30000,
     #elif I_PRICE >= GEN_7
@@ -10126,6 +10894,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LIFE_ORB] =
     {
         .name = ITEM_NAME("גולת חיים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות חיים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 50000,
     #elif I_PRICE >= GEN_7
@@ -10150,6 +10921,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POWER_HERB] =
     {
         .name = ITEM_NAME("עשב כוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עשבי כוח"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 30000,
     #elif I_PRICE >= GEN_7
@@ -10225,6 +10999,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_METRONOME] =
     {
         .name = ITEM_NAME("פעמן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פעמנים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 15000,
     #elif I_PRICE >= GEN_7
@@ -10250,6 +11027,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_IRON_BALL] =
     {
         .name = ITEM_NAME("כדור ברזל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי ברזל"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 20000,
     #elif I_PRICE >= GEN_7
@@ -10274,6 +11054,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LAGGING_TAIL] =
     {
         .name = ITEM_NAME("זנב איטי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("זנבות איטיים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 20000,
     #elif I_PRICE >= GEN_7
@@ -10295,6 +11078,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DESTINY_KNOT] =
     {
         .name = ITEM_NAME("קשר גורל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קשרי גורל"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 20000,
     #elif I_PRICE >= GEN_7
@@ -10342,6 +11128,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GRIP_CLAW] =
     {
         .name = ITEM_NAME("טופר אחיזה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("טפרי אחיזה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 10000,
     #elif I_PRICE >= GEN_7
@@ -10366,6 +11155,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STICKY_BARB] =
     {
         .name = ITEM_NAME("קוץ דביק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קוצים דביקים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 10000,
     #elif I_PRICE >= GEN_7
@@ -10390,6 +11182,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SHED_SHELL] =
     {
         .name = ITEM_NAME("קליפת השלה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קליפות השלה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 20000,
     #elif I_PRICE >= GEN_7
@@ -10413,6 +11208,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BIG_ROOT] =
     {
         .name = ITEM_NAME("שורש גדול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שורשים גדולים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 10000,
     #elif I_PRICE >= GEN_7
@@ -10438,6 +11236,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RAZOR_CLAW] =
     {
         .name = ITEM_NAME("טופר להב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("טפרי להב"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 15000,
     #elif I_PRICE >= GEN_7
@@ -10463,6 +11264,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RAZOR_FANG] =
     {
         .name = ITEM_NAME("ניב להב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ניבי להב"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 15000,
     #elif I_PRICE >= GEN_7
@@ -10486,6 +11290,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_EVIOLITE] =
     {
         .name = ITEM_NAME("גביש התפתחות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גבישי התפתחות"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 50000,
     #elif I_PRICE >= GEN_7
@@ -10511,6 +11318,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FLOAT_STONE] =
     {
         .name = ITEM_NAME("אבן ציפה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אבני ציפה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 10000,
     #elif I_PRICE >= GEN_7
@@ -10535,6 +11345,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ROCKY_HELMET] =
     {
         .name = ITEM_NAME("קסדה סלעית"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קסדות סלעיות"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 50000,
     #elif I_PRICE >= GEN_7
@@ -10560,6 +11373,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_AIR_BALLOON] =
     {
         .name = ITEM_NAME("בלון אוויר"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בלוני אוויר"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 15000,
     #elif I_PRICE >= GEN_7
@@ -10585,6 +11401,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RED_CARD] =
     {
         .name = ITEM_NAME("כרטיס אדום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כרטיסים אדומים"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 3000,
     #elif I_PRICE >= GEN_7
@@ -10610,6 +11429,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_RING_TARGET] =
     {
         .name = ITEM_NAME("טבעת מטרה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("טבעות מטרה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 10000,
     #elif I_PRICE >= GEN_7
@@ -10635,6 +11457,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BINDING_BAND] =
     {
         .name = ITEM_NAME("רצועת עקידה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("רצועות עקידה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 20000,
     #elif I_PRICE >= GEN_7
@@ -10659,6 +11484,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_EJECT_BUTTON] =
     {
         .name = ITEM_NAME("כפתור פליטה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כפתורי פליטה"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 30000,
     #elif I_PRICE >= GEN_7
@@ -10704,6 +11532,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ASSAULT_VEST] =
     {
         .name = ITEM_NAME("אפוד תקיפה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("אפודי תקיפה"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 50000 : 1000,
         .holdEffect = HOLD_EFFECT_ASSAULT_VEST,
         .holdEffectParam = 50,
@@ -10748,6 +11579,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ADRENALINE_ORB] =
     {
         .name = ITEM_NAME("גולת אדרנלין"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גולות אדרנלין"),
+    #endif
     #if I_PRICE >= GEN_9
         .price = 5000,
     #elif I_PRICE == GEN_8
@@ -10772,6 +11606,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TERRAIN_EXTENDER] =
     {
         .name = ITEM_NAME("מאריך שטח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאריכי שטח"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 15000 : 4000,
         .holdEffect = HOLD_EFFECT_TERRAIN_EXTENDER,
         .description = COMPOUND_STRING(
@@ -10808,6 +11645,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_THROAT_SPRAY] =
     {
         .name = ITEM_NAME("תרסיס גרון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תרסיסי גרון"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 20000 : 4000,
         .holdEffect = HOLD_EFFECT_THROAT_SPRAY,
         .description = COMPOUND_STRING(
@@ -10826,6 +11666,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_EJECT_PACK] =
     {
         .name = ITEM_NAME("תרמיל פליטה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תרמילי פליטה"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 30000 : 4000,
         .holdEffect = HOLD_EFFECT_EJECT_PACK,
         .description = COMPOUND_STRING(
@@ -10882,6 +11725,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ROOM_SERVICE] =
     {
         .name = ITEM_NAME("שירות חדרים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שירותי חדרים"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 20000 : 4000,
         .holdEffect = HOLD_EFFECT_ROOM_SERVICE,
         .description = COMPOUND_STRING(
@@ -10900,6 +11746,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_UTILITY_UMBRELLA] =
     {
         .name = ITEM_NAME("מטרייה שימושית"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מטריות שימושיות"),
+    #endif
         .price = (I_PRICE >= GEN_9) ? 15000 : 4000,
         .holdEffect = HOLD_EFFECT_UTILITY_UMBRELLA,
         .description = COMPOUND_STRING(
@@ -14814,6 +15663,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ABILITY_SHIELD] =
     {
         .name = ITEM_NAME("מגן יכולת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מגיני יכולת"),
+    #endif
         .price = 20000,
         .holdEffect = HOLD_EFFECT_ABILITY_SHIELD,
         .description = COMPOUND_STRING(
@@ -14832,6 +15684,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CLEAR_AMULET] =
     {
         .name = ITEM_NAME("קמע שקוף"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("קמעות שקופים"),
+    #endif
         .price = 30000,
         .holdEffect = HOLD_EFFECT_CLEAR_AMULET,
         .description = COMPOUND_STRING(
@@ -14850,6 +15705,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PUNCHING_GLOVE] =
     {
         .name = ITEM_NAME("כפפת אגרוף"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כפפות אגרוף"),
+    #endif
         .price = 15000,
         .holdEffect = HOLD_EFFECT_PUNCHING_GLOVE,
         .description = COMPOUND_STRING(
@@ -14868,6 +15726,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_COVERT_CLOAK] =
     {
         .name = ITEM_NAME("גלימת הסוואה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גלימות הסוואה"),
+    #endif
         .price = 20000,
         .holdEffect = HOLD_EFFECT_COVERT_CLOAK,
         .description = COMPOUND_STRING(
@@ -14905,6 +15766,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_AUSPICIOUS_ARMOR] =
     {
         .name = ITEM_NAME("שריון מבורך"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שריונים מבורכים"),
+    #endif
         .price = 3000,
         .description = COMPOUND_STRING(
             "שריון שבו שוכנות\n"
@@ -14942,6 +15806,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BIG_BAMBOO_SHOOT] =
     {
         .name = ITEM_NAME("נבט במבוק גדול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נבטי במבוק גדולים"),
+    #endif
         .price = 3000,
         .description = COMPOUND_STRING(
             "נבט במבוק גדול\n"
@@ -14959,6 +15826,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GIMMIGHOUL_COIN] =
     {
         .name = ITEM_NAME("מטבע גימיגול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מטבעות גימיגול"),
+    #endif
         .price = 400,
         .description = COMPOUND_STRING(
             "גימיגול אוגרים\n"
@@ -14975,6 +15845,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LEADERS_CREST] =
     {
         .name = ITEM_NAME("סמל המנהיג"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סמלי המנהיג"),
+    #endif
         .price = 3000,
         .description = COMPOUND_STRING(
             "שבר של להב עתיק\n"
@@ -14991,6 +15864,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MALICIOUS_ARMOR] =
     {
         .name = ITEM_NAME("שריון זדוני"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שריונים זדוניים"),
+    #endif
         .price = 3000,
         .description = COMPOUND_STRING(
             "שריון שבו שוכן רצון\n"
@@ -15009,6 +15885,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MIRROR_HERB] =
     {
         .name = ITEM_NAME("עשב מראה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עשבי מראה"),
+    #endif
         .price = 30000,
         .holdEffect = HOLD_EFFECT_MIRROR_HERB,
         .description = COMPOUND_STRING(
@@ -15079,6 +15958,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_TINY_BAMBOO_SHOOT] =
     {
         .name = ITEM_NAME("נבט במבוק קטן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נבטי במבוק קטנים"),
+    #endif
         .price = 750,
         .description = COMPOUND_STRING(
             "נבט במבוק קטן\n"
@@ -15096,6 +15978,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BUG_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה חרק"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה חרק"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15109,6 +15994,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DARK_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה אפל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה אפלים"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15122,6 +16010,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_DRAGON_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה דרקון"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה דרקון"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15135,6 +16026,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ELECTRIC_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה חשמל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה חשמל"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15148,6 +16042,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FAIRY_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה פיה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה פיה"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15161,6 +16058,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FIGHTING_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה קרב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה קרב"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15174,6 +16074,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FIRE_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה אש"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה אש"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15187,6 +16090,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FLYING_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה תעופה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה תעופה"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15200,6 +16106,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GHOST_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה רוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה רוח"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15213,6 +16122,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GRASS_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה עשב"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה עשב"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15226,6 +16138,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GROUND_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה אדמה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה אדמה"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15239,6 +16154,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ICE_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה קרח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה קרח"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15252,6 +16170,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_NORMAL_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה רגיל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה רגילים"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15265,6 +16186,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POISON_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה רעל"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה רעל"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15278,6 +16202,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PSYCHIC_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה פסיכי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה פסיכיים"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15291,6 +16218,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ROCK_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה סלע"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה סלע"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15304,6 +16234,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STEEL_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה פלדה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה פלדה"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15317,6 +16250,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WATER_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה מים"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה מים"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15330,6 +16266,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_ADAMANT_CRYSTAL] =
     {
         .name = ITEM_NAME("גביש יהלום"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גבישי יהלום"),
+    #endif
         .price = 0,
         .holdEffect = HOLD_EFFECT_ADAMANT_ORB,
         .holdEffectParam = 20,
@@ -15349,6 +16288,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GRISEOUS_CORE] =
     {
         .name = ITEM_NAME("ליבת פלטינה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ליבות פלטינה"),
+    #endif
         .price = 0,
         .holdEffect = HOLD_EFFECT_GRISEOUS_ORB,
         .holdEffectParam = 20,
@@ -15368,6 +16310,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LUSTROUS_GLOBE] =
     {
         .name = ITEM_NAME("כדור פנינה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי פנינה"),
+    #endif
         .price = 0,
         .holdEffect = HOLD_EFFECT_LUSTROUS_ORB,
         .holdEffectParam = 20,
@@ -15405,6 +16350,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_LINKING_CORD] =
     {
         .name = ITEM_NAME("כבל קישור"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כבלי קישור"),
+    #endif
         .price = 8000,
         .description = COMPOUND_STRING(
             "חוט מסתורי שגורם\n"
@@ -15423,6 +16371,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_PEAT_BLOCK] =
     {
         .name = ITEM_NAME("גוש כבול"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גושי כבול"),
+    #endif
         .price = 20000,
         .description = COMPOUND_STRING(
             "גוש חומר שגורם\n"
@@ -15441,6 +16392,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_BERSERK_GENE] =
     {
         .name = ITEM_NAME("גן טירוף"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("גני טירוף"),
+    #endif
         .price = 20,
         .holdEffect = HOLD_EFFECT_BERSERK_GENE,
         .description = COMPOUND_STRING(
@@ -15459,6 +16413,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_FAIRY_FEATHER] =
     {
         .name = ITEM_NAME("נוצת פיה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("נוצות פיה"),
+    #endif
         .price = 1000,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
         .holdEffectParam = TYPE_BOOST_PARAM,
@@ -15479,6 +16436,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SYRUPY_APPLE] =
     {
         .name = ITEM_NAME("תפוח סירופי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("תפוחים סירופיים"),
+    #endif
         .price = 2200,
         .description = COMPOUND_STRING(
             "תפוח סירופי מאוד\n"
@@ -15497,6 +16457,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_UNREMARKABLE_TEACUP] =
     {
         .name = ITEM_NAME("ספל תה פשוט"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ספלי תה פשוטים"),
+    #endif
         .price = 1600,
         .description = COMPOUND_STRING(
             "ספל תה סדוק\n"
@@ -15515,6 +16478,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_MASTERPIECE_TEACUP] =
     {
         .name = ITEM_NAME("ספל תה מופתי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("ספלי תה מופתיים"),
+    #endif
         .price = 38000,
         .description = COMPOUND_STRING(
             "ספל תה פגום\n"
@@ -15533,6 +16499,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CORNERSTONE_MASK] =
     {
         .name = ITEM_NAME("מסכת אבן הפינה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מסכות אבן הפינה"),
+    #endif
         .price = 0,
         .holdEffect = HOLD_EFFECT_OGERPON_MASK,
         .holdEffectParam = 20,
@@ -15551,6 +16520,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_WELLSPRING_MASK] =
     {
         .name = ITEM_NAME("מסכת המעיין"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מסכות המעיין"),
+    #endif
         .price = 0,
         .holdEffect = HOLD_EFFECT_OGERPON_MASK,
         .holdEffectParam = 20,
@@ -15569,6 +16541,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_HEARTHFLAME_MASK] =
     {
         .name = ITEM_NAME("מסכת אש האח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מסכות אש האח"),
+    #endif
         .price = 0,
         .holdEffect = HOLD_EFFECT_OGERPON_MASK,
         .holdEffectParam = 20,
@@ -15718,6 +16693,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_METAL_ALLOY] =
     {
         .name = ITEM_NAME("סגסוגת מתכת"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("סגסוגות מתכת"),
+    #endif
         .price = 6000,
         .description = COMPOUND_STRING(
             "מתכת משונה שגורמת\n"
@@ -15735,6 +16713,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_STELLAR_TERA_SHARD] =
     {
         .name = ITEM_NAME("שבר טרה כוכבי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("שברי טרה כוכביים"),
+    #endif
         .price = 0,
         .description = sTeraShardDesc,
         .pocket = POCKET_ITEMS,
@@ -15748,6 +16729,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_JUBILIFE_MUFFIN] =
     {
         .name = ITEM_NAME("מאפין ג'ובילייף"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("מאפיני ג'ובילייף"),
+    #endif
         .price = 250,
         .description = sFullHealDesc,
         .pocket = POCKET_MEDICINE,
@@ -15831,6 +16815,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_AUX_EVASION] =
     {
         .name = ITEM_NAME("עזר התחמקות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עזרי התחמקות"),
+    #endif
         .price = 800,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
@@ -15854,6 +16841,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_AUX_GUARD] =
     {
         .name = ITEM_NAME("עזר הגנה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עזרי הגנה"),
+    #endif
         .price = 400,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
@@ -15877,6 +16867,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_AUX_POWER] =
     {
         .name = ITEM_NAME("עזר כוח"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עזרי כוח"),
+    #endif
         .price = 400,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
@@ -15900,6 +16893,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_AUX_POWERGUARD] =
     {
         .name = ITEM_NAME("עזר כוח והגנה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("עזרי כוח והגנה"),
+    #endif
         .price = 1200,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
@@ -15924,6 +16920,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_CHOICE_DUMPLING] =
     {
         .name = ITEM_NAME("כופתת בחירה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כופתות בחירה"),
+    #endif
         .price = 1200,
         .description = sQuestionMarksDesc,
         .pocket = POCKET_ITEMS,
@@ -15937,6 +16936,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SWAP_SNACK] =
     {
         .name = ITEM_NAME("חטיף החלפה"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חטיפי החלפה"),
+    #endif
         .price = 1200,
         .description = sQuestionMarksDesc,
         .pocket = POCKET_ITEMS,
@@ -15964,6 +16966,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POKESHI_DOLL] =
     {
         .name = ITEM_NAME("בובת פוקישי"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("בובות פוקישי"),
+    #endif
         .price = 2000,
         .description = COMPOUND_STRING(
             "צעצוע עץ שדומה\n"
@@ -15982,6 +16987,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_GS_BALL] =
     {
         .name = ITEM_NAME("כדור GS"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי GS"),
+    #endif
         .price = 1000,
         .description = COMPOUND_STRING(
             "פוקיבול מוזר\n"
@@ -16012,6 +17020,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_EXP_SHARE_SMALL] =
     {
         .name = ITEM_NAME("חולק נסיון קטן"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("חולקי נסיון קטנים"),
+    #endif
         .price = 6000,
         .holdEffect = HOLD_EFFECT_EXP_SHARE,
         .description = COMPOUND_STRING(
@@ -16323,6 +17334,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_UNUSED_BERRY_1] =
     {
         .name = ITEM_NAME("פרי סיטרוס"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("פירות סיטרוס"),
+    #endif
         .price = 20,
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
         .holdEffectParam = 30,

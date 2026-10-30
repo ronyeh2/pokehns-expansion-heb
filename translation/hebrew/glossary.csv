@@ -4632,6 +4632,531 @@ item_plural,ITEM_SUPERB_REMEDY,Superb Remedies,,מנות מרפא עילאי,pro
 item_plural,ITEM_TWICE_SPICED_RADISH,Twice-Spiced Radishes,,צנונים בתיבול כפול,proposed,plural head noun; singular: צנון בתיבול כפול (item_04); reviewed
 item_plural,ITEM_POKE_BALL,POKé BALLs,,פוקיבולים,proposed,"plural head noun, the form the dialogue already uses (AzaleaTown_KurtsHouse_hns, AzaleaTown_Mart_hns); English adds s (no pluralName); shown after a count in the aide's 5 Poké Balls (NewBarkTown_Lab_hns) and in the bag and PC quantity lines; singular: פוקיבול (inherited)"
 item_plural,ITEM_SPORT_BALL,SPORT BALLs,,כדורי תחרות,proposed,"construct plural כדורי, as the bag pocket כדורי פוקי; the officer already says כדורי התחרות (Gate_NationalPark_hns); English adds s (no pluralName); shown after a count in the Bug-Catching Contest's 30 Sport Balls (Gate_NationalPark_hns); singular: כדור תחרות"
+item_plural,ITEM_STRANGE_BALL,STRANGE BALLs,,כדורים מוזרים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור מוזר; Q125
+item_plural,ITEM_GREAT_BALL,GREAT BALLs,,כדורים מעולים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור מעולה; Q125
+item_plural,ITEM_ULTRA_BALL,ULTRA BALLs,,אולטרה בולים,proposed,plural head noun; English adds s (no pluralName); singular: אולטרה בול; Q125
+item_plural,ITEM_MASTER_BALL,MASTER BALLs,,מאסטר בולים,proposed,plural head noun; English adds s (no pluralName); singular: מאסטר בול; Q125
+item_plural,ITEM_PREMIER_BALL,PREMIER BALLs,,כדורי פרמייר,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור פרמייר; Q125
+item_plural,ITEM_HEAL_BALL,HEAL BALLs,,כדורי ריפוי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור ריפוי; Q125
+item_plural,ITEM_NET_BALL,NET BALLs,,כדורי רשת,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור רשת; Q125
+item_plural,ITEM_NEST_BALL,NEST BALLs,,כדורי קן,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור קן; Q125
+item_plural,ITEM_DIVE_BALL,DIVE BALLs,,כדורי צלילה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור צלילה; Q125
+item_plural,ITEM_DUSK_BALL,DUSK BALLs,,כדורי דמדומים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור דמדומים; Q125
+item_plural,ITEM_TIMER_BALL,TIMER BALLs,,כדורי זמן,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור זמן; Q125
+item_plural,ITEM_QUICK_BALL,QUICK BALLs,,כדורים מהירים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור מהיר; Q125
+item_plural,ITEM_REPEAT_BALL,REPEAT BALLs,,כדורים חוזרים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור חוזר; Q125
+item_plural,ITEM_LUXURY_BALL,LUXURY BALLs,,כדורים יוקרתיים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור יוקרתי; Q125
+item_plural,ITEM_LEVEL_BALL,LEVEL BALLs,,כדורי רמה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור רמה; Q125
+item_plural,ITEM_LURE_BALL,LURE BALLs,,כדורי פיתיון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור פיתיון; Q125
+item_plural,ITEM_MOON_BALL,MOON BALLs,,כדורי ירח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור ירח; Q125
+item_plural,ITEM_FRIEND_BALL,FRIEND BALLs,,כדורי ידידות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור ידידות; Q125
+item_plural,ITEM_LOVE_BALL,LOVE BALLs,,כדורי אהבה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור אהבה; Q125
+item_plural,ITEM_FAST_BALL,FAST BALLs,,כדורים זריזים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור זריז; Q125
+item_plural,ITEM_HEAVY_BALL,HEAVY BALLs,,כדורים כבדים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כדור כבד; Q125
+item_plural,ITEM_DREAM_BALL,DREAM BALLs,,כדורי חלום,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור חלום; Q125
+item_plural,ITEM_SAFARI_BALL,SAFARI BALLs,,כדורי ספארי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור ספארי; Q125
+item_plural,ITEM_PARK_BALL,PARK BALLs,,כדורי פארק,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור פארק; Q125
+item_plural,ITEM_BEAST_BALL,BEAST BALLs,,כדורי חיה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור חיה; Q125
+item_plural,ITEM_CHERISH_BALL,CHERISH BALLs,,כדורי הוקרה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור הוקרה; Q125
+item_plural,ITEM_POTION,POTIONs,,שיקויים,proposed,plural head noun; English adds s (no pluralName); singular: שיקוי; Q125
+item_plural,ITEM_SUPER_POTION,SUPER POTIONs,,שיקויי על,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שיקוי על; Q125
+item_plural,ITEM_HYPER_POTION,HYPER POTIONs,,שיקויי היפר,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שיקוי היפר; Q125
+item_plural,ITEM_MAX_POTION,MAX POTIONs,,שיקויי מקסימום,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שיקוי מקסימום; Q125
+item_plural,ITEM_FULL_RESTORE,FULL RESTOREs,,שיחזורים מלאים,proposed,noun + adjective plural; English adds s (no pluralName); singular: שיחזור מלא; Q125
+item_plural,ITEM_REVIVE,REVIVEs,,החייאות,proposed,plural head noun; English adds s (no pluralName); singular: החייאה; Q125
+item_plural,ITEM_MAX_REVIVE,MAX REVIVEs,,החייאות מלאות,proposed,noun + adjective plural; English adds s (no pluralName); singular: החייאה מלאה; Q125
+item_plural,ITEM_FRESH_WATER,FRESH WATERs,,מים טריים,proposed,same as singular; singular is already plural; English adds s (no pluralName); singular: מים טריים; Q125
+item_plural,ITEM_SODA_POP,SODA POPs,,סודה פופ,proposed,same as singular; mass noun; English adds s (no pluralName); singular: סודה פופ; Q125
+item_plural,ITEM_LEMONADE,LEMONADEs,,לימונדות,proposed,plural head noun; English adds s (no pluralName); singular: לימונדה; Q125
+item_plural,ITEM_MOOMOO_MILK,MOOMOO MILKs,,חלב מומו,proposed,same as singular; mass noun; English adds s (no pluralName); singular: חלב מומו; Q125
+item_plural,ITEM_ENERGY_POWDER,ENERGY POWDERs,,אבקות אנרגיה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבקת אנרגיה; Q125
+item_plural,ITEM_ENERGY_ROOT,ENERGY ROOTs,,שורשי אנרגיה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שורש אנרגיה; Q125
+item_plural,ITEM_HEAL_POWDER,HEAL POWDERs,,אבקות ריפוי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבקת ריפוי; Q125
+item_plural,ITEM_REVIVAL_HERB,REVIVAL HERBs,,עשבי תחייה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עשב תחייה; Q125
+item_plural,ITEM_ANTIDOTE,ANTIDOTEs,,נוגדנים,proposed,plural head noun; English adds s (no pluralName); singular: נוגדן; Q125
+item_plural,ITEM_PARALYZE_HEAL,PARALYZE HEALs,,תרופות לשיתוק,proposed,plural head noun; English adds s (no pluralName); singular: תרופה לשיתוק; Q125
+item_plural,ITEM_BURN_HEAL,BURN HEALs,,תרופות לכוויות,proposed,plural head noun; English adds s (no pluralName); singular: תרופה לכוויות; Q125
+item_plural,ITEM_ICE_HEAL,ICE HEALs,,תרופות לקיפאון,proposed,plural head noun; English adds s (no pluralName); singular: תרופה לקיפאון; Q125
+item_plural,ITEM_AWAKENING,AWAKENINGs,,מעוררים,proposed,plural head noun; English adds s (no pluralName); singular: מעורר; Q125
+item_plural,ITEM_FULL_HEAL,FULL HEALs,,ריפויים מלאים,proposed,noun + adjective plural; English adds s (no pluralName); singular: ריפוי מלא; Q125
+item_plural,ITEM_ETHER,ETHERs,,מנות אתר,proposed,"counter מנות, as REMEDIES מנות מרפא (אתרים reads as websites); English adds s (no pluralName); singular: אתר; Q125"
+item_plural,ITEM_MAX_ETHER,MAX ETHERs,,מנות אתר מקס,proposed,as ETHERS מנות אתר; English adds s (no pluralName); singular: אתר מקס; Q125
+item_plural,ITEM_ELIXIR,ELIXIRs,,אליקסירים,proposed,plural head noun; English adds s (no pluralName); singular: אליקסיר; Q125
+item_plural,ITEM_MAX_ELIXIR,MAX ELIXIRs,,אליקסירים מרביים,proposed,noun + adjective plural; English adds s (no pluralName); singular: אליקסיר מרבי; Q125
+item_plural,ITEM_BERRY_JUICE,BERRY JUICEs,,מיצי ברי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מיץ ברי; Q125
+item_plural,ITEM_SWEET_HEART,SWEET HEARTs,,לבבות מתוקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: לב מתוק; Q125
+item_plural,ITEM_RAGE_CANDY_BAR,RAGE CANDY BARs,,חטיפי זעם,proposed,construct plural of the head noun; English adds s (no pluralName); singular: חטיף זעם; Q125
+item_plural,ITEM_LAVA_COOKIE,LAVA COOKIEs,,עוגיות לבה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עוגיית לבה; Q125
+item_plural,ITEM_CASTELIACONE,CASTELIACONEs,,גלידות קסטליה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גלידת קסטליה; Q125
+item_plural,ITEM_LUMIOSE_GALETTE,LUMIOSE GALETTEs,,קרפי לומיוז,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קרפ לומיוז; Q125
+item_plural,ITEM_SHALOUR_SABLE,SHALOUR SABLEs,,עוגיות שלור,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עוגיית שלור; Q125
+item_plural,ITEM_BIG_MALASADA,BIG MALASADAs,,סופגניות גדולות,proposed,noun + adjective plural; English adds s (no pluralName); singular: סופגנייה גדולה; Q125
+item_plural,ITEM_HP_UP,HP UPs,,הגדלות נ”ח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: הגדלת נ”ח; Q125
+item_plural,ITEM_PROTEIN,PROTEINs,,חלבונים,proposed,plural head noun; English adds s (no pluralName); singular: חלבון; Q125
+item_plural,ITEM_IRON,IRONs,,ברזל,proposed,same as singular; mass noun; English adds s (no pluralName); singular: ברזל; Q125
+item_plural,ITEM_CALCIUM,CALCIUMs,,סידן,proposed,same as singular; mass noun; English adds s (no pluralName); singular: סידן; Q125
+item_plural,ITEM_ZINC,ZINCs,,אבץ,proposed,same as singular; mass noun; English adds s (no pluralName); singular: אבץ; Q125
+item_plural,ITEM_PP_UP,PP UPs,,הגדלות נ”כ,proposed,construct plural of the head noun; English adds s (no pluralName); singular: הגדלת נ”כ; Q125
+item_plural,ITEM_HEALTH_FEATHER,HEALTH FEATHERs,,נוצות בריאות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: נוצת בריאות; Q125
+item_plural,ITEM_MUSCLE_FEATHER,MUSCLE FEATHERs,,נוצות שרירים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: נוצת שרירים; Q125
+item_plural,ITEM_RESIST_FEATHER,RESIST FEATHERs,,נוצות עמידות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: נוצת עמידות; Q125
+item_plural,ITEM_GENIUS_FEATHER,GENIUS FEATHERs,,נוצות גאונות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: נוצת גאונות; Q125
+item_plural,ITEM_CLEVER_FEATHER,CLEVER FEATHERs,,נוצות תבונה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: נוצת תבונה; Q125
+item_plural,ITEM_SWIFT_FEATHER,SWIFT FEATHERs,,נוצות מהירות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: נוצת מהירות; Q125
+item_plural,ITEM_ABILITY_CAPSULE,ABILITY CAPSULEs,,קפסולות יכולת,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קפסולת יכולת; Q125
+item_plural,ITEM_LONELY_MINT,LONELY MINTs,,נענע בודד,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע בודד; Q125
+item_plural,ITEM_ADAMANT_MINT,ADAMANT MINTs,,נענע נחוש,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע נחוש; Q125
+item_plural,ITEM_NAUGHTY_MINT,NAUGHTY MINTs,,נענע שובב,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע שובב; Q125
+item_plural,ITEM_BRAVE_MINT,BRAVE MINTs,,נענע אמיץ,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע אמיץ; Q125
+item_plural,ITEM_BOLD_MINT,BOLD MINTs,,נענע נועז,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע נועז; Q125
+item_plural,ITEM_IMPISH_MINT,IMPISH MINTs,,נענע שובה,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע שובה; Q125
+item_plural,ITEM_LAX_MINT,LAX MINTs,,נענע רפוי,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע רפוי; Q125
+item_plural,ITEM_RELAXED_MINT,RELAXED MINTs,,נענע רגוע,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע רגוע; Q125
+item_plural,ITEM_MODEST_MINT,MODEST MINTs,,נענע צנוע,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע צנוע; Q125
+item_plural,ITEM_MILD_MINT,MILD MINTs,,נענע עדין,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע עדין; Q125
+item_plural,ITEM_RASH_MINT,RASH MINTs,,נענע פזיז,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע פזיז; Q125
+item_plural,ITEM_QUIET_MINT,QUIET MINTs,,נענע שקט,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע שקט; Q125
+item_plural,ITEM_CALM_MINT,CALM MINTs,,נענע שלו,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע שלו; Q125
+item_plural,ITEM_GENTLE_MINT,GENTLE MINTs,,נענע נעים,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע נעים; Q125
+item_plural,ITEM_CAREFUL_MINT,CAREFUL MINTs,,נענע זהיר,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע זהיר; Q125
+item_plural,ITEM_SASSY_MINT,SASSY MINTs,,נענע חצוף,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע חצוף; Q125
+item_plural,ITEM_TIMID_MINT,TIMID MINTs,,נענע ביישן,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע ביישן; Q125
+item_plural,ITEM_HASTY_MINT,HASTY MINTs,,נענע חפוז,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע חפוז; Q125
+item_plural,ITEM_JOLLY_MINT,JOLLY MINTs,,נענע עליז,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע עליז; Q125
+item_plural,ITEM_NAIVE_MINT,NAIVE MINTs,,נענע תמים,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע תמים; Q125
+item_plural,ITEM_SERIOUS_MINT,SERIOUS MINTs,,נענע רציני,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נענע רציני; Q125
+item_plural,ITEM_BLUE_FLUTE,BLUE FLUTEs,,חלילים כחולים,proposed,noun + adjective plural; English adds s (no pluralName); singular: חליל כחול; Q125
+item_plural,ITEM_YELLOW_FLUTE,YELLOW FLUTEs,,חלילים צהובים,proposed,noun + adjective plural; English adds s (no pluralName); singular: חליל צהוב; Q125
+item_plural,ITEM_RED_FLUTE,RED FLUTEs,,חלילים אדומים,proposed,noun + adjective plural; English adds s (no pluralName); singular: חליל אדום; Q125
+item_plural,ITEM_BLACK_FLUTE,BLACK FLUTEs,,חלילים שחורים,proposed,noun + adjective plural; English adds s (no pluralName); singular: חליל שחור; Q125
+item_plural,ITEM_WHITE_FLUTE,WHITE FLUTEs,,חלילים לבנים,proposed,noun + adjective plural; English adds s (no pluralName); singular: חליל לבן; Q125
+item_plural,ITEM_REPEL,REPELs,,תרסיסי דוחה,proposed,"counter תרסיסי, the spray can (דוחים reads as disgusting); English adds s (no pluralName); singular: דוחה; Q125"
+item_plural,ITEM_SUPER_REPEL,SUPER REPELs,,תרסיסי דוחה על,proposed,as REPELS תרסיסי דוחה; English adds s (no pluralName); singular: דוחה על; Q125
+item_plural,ITEM_MAX_REPEL,MAX REPELs,,תרסיסי דוחה עליון,proposed,as REPELS תרסיסי דוחה; English adds s (no pluralName); singular: דוחה עליון; Q125
+item_plural,ITEM_LURE,LUREs,,פיתיונות,proposed,plural head noun; English adds s (no pluralName); singular: פיתיון; Q125
+item_plural,ITEM_SUPER_LURE,SUPER LUREs,,פיתיונות על,proposed,construct plural of the head noun; English adds s (no pluralName); singular: פיתיון על; Q125
+item_plural,ITEM_MAX_LURE,MAX LUREs,,פיתיונות עליונים,proposed,noun + adjective plural; English adds s (no pluralName); singular: פיתיון עליון; Q125
+item_plural,ITEM_X_ATTACK,X ATTACKs,,התקפת X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: התקפת X; Q125"
+item_plural,ITEM_X_DEFENSE,X DEFENSEs,,הגנת X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: הגנת X; Q125"
+item_plural,ITEM_X_SP_ATK,X SP. ATKs,,מיוחד X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: מיוחד X; Q125"
+item_plural,ITEM_X_SP_DEF,X SP. DEFs,,הגנ' מיוחדת X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: הגנ' מיוחדת X; Q125"
+item_plural,ITEM_X_SPEED,X SPEEDs,,מהירות X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: מהירות X; Q125"
+item_plural,ITEM_DIRE_HIT,DIRE HITs,,פגיעות קריטיות,proposed,noun + adjective plural; English adds s (no pluralName); singular: פגיעה קריטית; Q125
+item_plural,ITEM_POKE_DOLL,POKé DOLLs,,בובות פוקימון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: בובת פוקימון; Q125
+item_plural,ITEM_FLUFFY_TAIL,FLUFFY TAILs,,זנבות פרוותיים,proposed,noun + adjective plural; English adds s (no pluralName); singular: זנב פרוותי; Q125
+item_plural,ITEM_POKE_TOY,POKé TOYs,,צעצועי פוקימון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: צעצוע פוקימון; Q125
+item_plural,ITEM_BOTTLE_CAP,BOTTLE CAPs,,פקקי בקבוק,proposed,construct plural of the head noun; English adds s (no pluralName); singular: פקק בקבוק; Q125
+item_plural,ITEM_GOLD_BOTTLE_CAP,GOLD BOTTLE CAPs,,פקקי זהב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: פקק זהב; Q125
+item_plural,ITEM_NUGGET,NUGGETs,,נאגטים,proposed,plural head noun; English adds s (no pluralName); singular: נאגט; Q125
+item_plural,ITEM_BIG_NUGGET,BIG NUGGETs,,נאגטים גדולים,proposed,noun + adjective plural; English adds s (no pluralName); singular: נאגט גדול; Q125
+item_plural,ITEM_TINY_MUSHROOM,TINY MUSHROOMs,,פטריות קטנות,proposed,noun + adjective plural; English adds s (no pluralName); singular: פטרייה קטנה; Q125
+item_plural,ITEM_BIG_MUSHROOM,BIG MUSHROOMs,,פטריות גדולות,proposed,noun + adjective plural; English adds s (no pluralName); singular: פטרייה גדולה; Q125
+item_plural,ITEM_BALM_MUSHROOM,BALM MUSHROOMs,,פטריות ריחניות,proposed,noun + adjective plural; English adds s (no pluralName); singular: פטרייה ריחנית; Q125
+item_plural,ITEM_PEARL,PEARLs,,פנינים,proposed,plural head noun; English adds s (no pluralName); singular: פנינה; Q125
+item_plural,ITEM_BIG_PEARL,BIG PEARLs,,פנינים גדולות,proposed,noun + adjective plural; English adds s (no pluralName); singular: פנינה גדולה; Q125
+item_plural,ITEM_PEARL_STRING,PEARL STRINGs,,מחרוזות פנינים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מחרוזת פנינים; Q125
+item_plural,ITEM_STARDUST,STARDUSTs,,אבק כוכבים,proposed,same as singular; mass noun; English adds s (no pluralName); singular: אבק כוכבים; Q125
+item_plural,ITEM_STAR_PIECE,STAR PIECEs,,חתיכות כוכב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: חתיכת כוכב; Q125
+item_plural,ITEM_COMET_SHARD,COMET SHARDs,,שברי שביט,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר שביט; Q125
+item_plural,ITEM_SHOAL_SALT,SHOAL SALTs,,מלח מערות,proposed,same as singular; mass noun; English adds s (no pluralName); singular: מלח מערות; Q125
+item_plural,ITEM_SHOAL_SHELL,SHOAL SHELLs,,קליפות מערות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קליפת מערות; Q125
+item_plural,ITEM_RED_SHARD,RED SHARDs,,שברים אדומים,proposed,noun + adjective plural; English adds s (no pluralName); singular: שבר אדום; Q125
+item_plural,ITEM_BLUE_SHARD,BLUE SHARDs,,שברים כחולים,proposed,noun + adjective plural; English adds s (no pluralName); singular: שבר כחול; Q125
+item_plural,ITEM_YELLOW_SHARD,YELLOW SHARDs,,שברים צהובים,proposed,noun + adjective plural; English adds s (no pluralName); singular: שבר צהוב; Q125
+item_plural,ITEM_GREEN_SHARD,GREEN SHARDs,,שברים ירוקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: שבר ירוק; Q125
+item_plural,ITEM_HEART_SCALE,HEART SCALEs,,קשקשי לב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קשקש לב; Q125
+item_plural,ITEM_RARE_BONE,RARE BONEs,,עצמות נדירות,proposed,noun + adjective plural; English adds s (no pluralName); singular: עצם נדירה; Q125
+item_plural,ITEM_ODD_KEYSTONE,ODD KEYSTONEs,,אבני מפתח מוזרות,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: אבן מפתח מוזרה; Q125"
+item_plural,ITEM_PRETTY_FEATHER,PRETTY FEATHERs,,נוצות יפות,proposed,noun + adjective plural; English adds s (no pluralName); singular: נוצה יפה; Q125
+item_plural,ITEM_RELIC_COPPER,RELIC COPPERs,,נחושת עתיקה,proposed,same as singular; mass noun; English adds s (no pluralName); singular: נחושת עתיקה; Q125
+item_plural,ITEM_RELIC_SILVER,RELIC SILVERs,,כסף עתיק,proposed,same as singular; mass noun; English adds s (no pluralName); singular: כסף עתיק; Q125
+item_plural,ITEM_RELIC_GOLD,RELIC GOLDs,,זהב עתיק,proposed,same as singular; mass noun; English adds s (no pluralName); singular: זהב עתיק; Q125
+item_plural,ITEM_RELIC_VASE,RELIC VASEs,,אגרטלים עתיקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: אגרטל עתיק; Q125
+item_plural,ITEM_RELIC_BAND,RELIC BANDs,,צמידים עתיקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: צמיד עתיק; Q125
+item_plural,ITEM_RELIC_STATUE,RELIC STATUEs,,פסלים עתיקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: פסל עתיק; Q125
+item_plural,ITEM_RELIC_CROWN,RELIC CROWNs,,כתרים עתיקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כתר עתיק; Q125
+item_plural,ITEM_STRANGE_SOUVENIR,STRANGE SOUVENIRs,,מזכרות מוזרות,proposed,noun + adjective plural; English adds s (no pluralName); singular: מזכרת מוזרה; Q125
+item_plural,ITEM_ARMOR_FOSSIL,ARMOR FOSSILs,,מאובני שריון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מאובן שריון; Q125
+item_plural,ITEM_SKULL_FOSSIL,SKULL FOSSILs,,מאובני גולגולת,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מאובן גולגולת; Q125
+item_plural,ITEM_COVER_FOSSIL,COVER FOSSILs,,מאובני כיסוי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מאובן כיסוי; Q125
+item_plural,ITEM_PLUME_FOSSIL,PLUME FOSSILs,,מאובני נוצה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מאובן נוצה; Q125
+item_plural,ITEM_JAW_FOSSIL,JAW FOSSILs,,מאובני לסת,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מאובן לסת; Q125
+item_plural,ITEM_SAIL_FOSSIL,SAIL FOSSILs,,מאובני מפרש,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מאובן מפרש; Q125
+item_plural,ITEM_FOSSILIZED_BIRD,FOSSILIZED BIRDs,,ציפורים מאובנות,proposed,noun + adjective plural; English adds s (no pluralName); singular: ציפור מאובנת; Q125
+item_plural,ITEM_FOSSILIZED_DRAKE,FOSSILIZED DRAKEs,,דרקונים מאובנים,proposed,noun + adjective plural; English adds s (no pluralName); singular: דרקון מאובן; Q125
+item_plural,ITEM_FOSSILIZED_DINO,FOSSILIZED DINOs,,דינוזאורים מאובנים,proposed,noun + adjective plural; English adds s (no pluralName); singular: דינוזאור מאובן; Q125
+item_plural,ITEM_RED_APRICORN,RED APRICORNs,,בלוטים אדומים,proposed,noun + adjective plural; English adds s (no pluralName); singular: בלוט אדום; Q125
+item_plural,ITEM_BLUE_APRICORN,BLUE APRICORNs,,בלוטים כחולים,proposed,noun + adjective plural; English adds s (no pluralName); singular: בלוט כחול; Q125
+item_plural,ITEM_YELLOW_APRICORN,YELLOW APRICORNs,,בלוטים צהובים,proposed,noun + adjective plural; English adds s (no pluralName); singular: בלוט צהוב; Q125
+item_plural,ITEM_GREEN_APRICORN,GREEN APRICORNs,,בלוטים ירוקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: בלוט ירוק; Q125
+item_plural,ITEM_PINK_APRICORN,PINK APRICORNs,,בלוטים ורודים,proposed,noun + adjective plural; English adds s (no pluralName); singular: בלוט ורוד; Q125
+item_plural,ITEM_WHITE_APRICORN,WHITE APRICORNs,,בלוטים לבנים,proposed,noun + adjective plural; English adds s (no pluralName); singular: בלוט לבן; Q125
+item_plural,ITEM_BLACK_APRICORN,BLACK APRICORNs,,בלוטים שחורים,proposed,noun + adjective plural; English adds s (no pluralName); singular: בלוט שחור; Q125
+item_plural,ITEM_WISHING_PIECE,WISHING PIECEs,,חתיכות משאלה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: חתיכת משאלה; Q125
+item_plural,ITEM_GALARICA_TWIG,GALARICA TWIGs,,זרדי גלאריקה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זרד גלאריקה; Q125
+item_plural,ITEM_FIRE_STONE,FIRE STONEs,,אבני אש,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן אש; Q125
+item_plural,ITEM_WATER_STONE,WATER STONEs,,אבני מים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן מים; Q125
+item_plural,ITEM_THUNDER_STONE,THUNDER STONEs,,אבני ברק,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן ברק; Q125
+item_plural,ITEM_LEAF_STONE,LEAF STONEs,,אבני עלה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן עלה; Q125
+item_plural,ITEM_ICE_STONE,ICE STONEs,,אבני קרח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן קרח; Q125
+item_plural,ITEM_SUN_STONE,SUN STONEs,,אבני שמש,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן שמש; Q125
+item_plural,ITEM_MOON_STONE,MOON STONEs,,אבני ירח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן ירח; Q125
+item_plural,ITEM_SHINY_STONE,SHINY STONEs,,אבנים נוצצות,proposed,noun + adjective plural; English adds s (no pluralName); singular: אבן נוצצת; Q125
+item_plural,ITEM_DUSK_STONE,DUSK STONEs,,אבני דמדומים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן דמדומים; Q125
+item_plural,ITEM_DAWN_STONE,DAWN STONEs,,אבני שחר,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן שחר; Q125
+item_plural,ITEM_SWEET_APPLE,SWEET APPLEs,,תפוחים מתוקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: תפוח מתוק; Q125
+item_plural,ITEM_TART_APPLE,TART APPLEs,,תפוחים חמוצים,proposed,noun + adjective plural; English adds s (no pluralName); singular: תפוח חמוץ; Q125
+item_plural,ITEM_CRACKED_POT,CRACKED POTs,,קומקומים סדוקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: קומקום סדוק; Q125
+item_plural,ITEM_CHIPPED_POT,CHIPPED POTs,,קומקומים פגומים,proposed,noun + adjective plural; English adds s (no pluralName); singular: קומקום פגום; Q125
+item_plural,ITEM_GALARICA_CUFF,GALARICA CUFFs,,צמידי גלאריקה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: צמיד גלאריקה; Q125
+item_plural,ITEM_GALARICA_WREATH,GALARICA WREATHs,,זרי גלאריקה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זר גלאריקה; Q125
+item_plural,ITEM_DRAGON_SCALE,DRAGON SCALEs,,קשקשי דרקון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קשקש דרקון; Q125
+item_plural,ITEM_UPGRADE,UPGRADEs,,שדרוגים,proposed,plural head noun; English adds s (no pluralName); singular: שדרוג; Q125
+item_plural,ITEM_PROTECTOR,PROTECTORs,,מגינים,proposed,plural head noun; English adds s (no pluralName); singular: מגן; Q125
+item_plural,ITEM_ELECTIRIZER,ELECTIRIZERs,,אלקטירייזרים,proposed,plural head noun; English adds s (no pluralName); singular: אלקטירייזר; Q125
+item_plural,ITEM_MAGMARIZER,MAGMARIZERs,,מגמרייזרים,proposed,plural head noun; English adds s (no pluralName); singular: מגמרייזר; Q125
+item_plural,ITEM_DUBIOUS_DISC,DUBIOUS DISCs,,דיסקים מפוקפקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: דיסק מפוקפק; Q125
+item_plural,ITEM_REAPER_CLOTH,REAPER CLOTHs,,בדי מלאך המוות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: בד מלאך המוות; Q125
+item_plural,ITEM_PRISM_SCALE,PRISM SCALEs,,קשקשי מנסרה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קשקש מנסרה; Q125
+item_plural,ITEM_WHIPPED_DREAM,WHIPPED DREAMs,,חלומות מוקצפים,proposed,noun + adjective plural; English adds s (no pluralName); singular: חלום מוקצף; Q125
+item_plural,ITEM_SACHET,SACHETs,,שקיקי ריח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שקיק ריח; Q125
+item_plural,ITEM_OVAL_STONE,OVAL STONEs,,אבנים סגלגלות,proposed,noun + adjective plural; English adds s (no pluralName); singular: אבן סגלגלה; Q125
+item_plural,ITEM_STRAWBERRY_SWEET,STRAWBERRY SWEETs,,סוכריות תות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סוכריית תות; Q125
+item_plural,ITEM_LOVE_SWEET,LOVE SWEETs,,סוכריות אהבה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סוכריית אהבה; Q125
+item_plural,ITEM_BERRY_SWEET,BERRY SWEETs,,סוכריות פרי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סוכריית פרי; Q125
+item_plural,ITEM_CLOVER_SWEET,CLOVER SWEETs,,סוכריות תלתן,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סוכריית תלתן; Q125
+item_plural,ITEM_FLOWER_SWEET,FLOWER SWEETs,,סוכריות פרח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סוכריית פרח; Q125
+item_plural,ITEM_STAR_SWEET,STAR SWEETs,,סוכריות כוכב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סוכריית כוכב; Q125
+item_plural,ITEM_RIBBON_SWEET,RIBBON SWEETs,,סוכריות סרט,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סוכריית סרט; Q125
+item_plural,ITEM_EVERSTONE,EVERSTONEs,,אבני נצח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן נצח; Q125
+item_plural,ITEM_RED_NECTAR,RED NECTARs,,צוף אדום,proposed,same as singular; mass noun; English adds s (no pluralName); singular: צוף אדום; Q125
+item_plural,ITEM_YELLOW_NECTAR,YELLOW NECTARs,,צוף צהוב,proposed,same as singular; mass noun; English adds s (no pluralName); singular: צוף צהוב; Q125
+item_plural,ITEM_PINK_NECTAR,PINK NECTARs,,צוף ורוד,proposed,same as singular; mass noun; English adds s (no pluralName); singular: צוף ורוד; Q125
+item_plural,ITEM_PURPLE_NECTAR,PURPLE NECTARs,,צוף סגול,proposed,same as singular; mass noun; English adds s (no pluralName); singular: צוף סגול; Q125
+item_plural,ITEM_FLAME_PLATE,FLAME PLATEs,,לוחות להבה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח להבה; Q125
+item_plural,ITEM_SPLASH_PLATE,SPLASH PLATEs,,לוחות שכשוך,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח שכשוך; Q125
+item_plural,ITEM_ZAP_PLATE,ZAP PLATEs,,לוחות זרם,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח זרם; Q125
+item_plural,ITEM_MEADOW_PLATE,MEADOW PLATEs,,לוחות אחו,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח אחו; Q125
+item_plural,ITEM_ICICLE_PLATE,ICICLE PLATEs,,לוחות קרח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח קרח; Q125
+item_plural,ITEM_FIST_PLATE,FIST PLATEs,,לוחות אגרוף,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח אגרוף; Q125
+item_plural,ITEM_TOXIC_PLATE,TOXIC PLATEs,,לוחות הרעלה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח הרעלה; Q125
+item_plural,ITEM_EARTH_PLATE,EARTH PLATEs,,לוחות אדמה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח אדמה; Q125
+item_plural,ITEM_SKY_PLATE,SKY PLATEs,,לוחות שמים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח שמים; Q125
+item_plural,ITEM_MIND_PLATE,MIND PLATEs,,לוחות נפש,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח נפש; Q125
+item_plural,ITEM_INSECT_PLATE,INSECT PLATEs,,לוחות חרק,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח חרק; Q125
+item_plural,ITEM_STONE_PLATE,STONE PLATEs,,לוחות אבן,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח אבן; Q125
+item_plural,ITEM_SPOOKY_PLATE,SPOOKY PLATEs,,לוחות רפאים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח רפאים; Q125
+item_plural,ITEM_DRACO_PLATE,DRACO PLATEs,,לוחות דרקון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח דרקון; Q125
+item_plural,ITEM_DREAD_PLATE,DREAD PLATEs,,לוחות אימה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח אימה; Q125
+item_plural,ITEM_IRON_PLATE,IRON PLATEs,,לוחות ברזל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח ברזל; Q125
+item_plural,ITEM_PIXIE_PLATE,PIXIE PLATEs,,לוחות פיות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: לוח פיות; Q125
+item_plural,ITEM_DOUSE_DRIVE,DOUSE DRIVEs,,כונני הרטבה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כונן הרטבה; Q125
+item_plural,ITEM_SHOCK_DRIVE,SHOCK DRIVEs,,כונני הלם,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כונן הלם; Q125
+item_plural,ITEM_BURN_DRIVE,BURN DRIVEs,,כונני צריבה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כונן צריבה; Q125
+item_plural,ITEM_CHILL_DRIVE,CHILL DRIVEs,,כונני צינה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כונן צינה; Q125
+item_plural,ITEM_RUSTED_SWORD,RUSTED SWORDs,,חרבות חלודות,proposed,noun + adjective plural; English adds s (no pluralName); singular: חרב חלודה; Q125
+item_plural,ITEM_RUSTED_SHIELD,RUSTED SHIELDs,,מגינים חלודים,proposed,noun + adjective plural; English adds s (no pluralName); singular: מגן חלוד; Q125
+item_plural,ITEM_RED_ORB,RED ORBs,,גולות אדומות,proposed,noun + adjective plural; English adds s (no pluralName); singular: גולה אדומה; Q125
+item_plural,ITEM_BLUE_ORB,BLUE ORBs,,גולות כחולות,proposed,noun + adjective plural; English adds s (no pluralName); singular: גולה כחולה; Q125
+item_plural,ITEM_VENUSAURITE,VENUSAURITEs,,וינאזוריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: וינאזוריט; Q125"
+item_plural,ITEM_CHARIZARDITE_X,CHARIZARDITE Xs,,צ'ריזארדיט X,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: צ'ריזארדיט X; Q125"
+item_plural,ITEM_CHARIZARDITE_Y,CHARIZARDITE Ys,,צ'ריזארדיט Y,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: צ'ריזארדיט Y; Q125"
+item_plural,ITEM_BLASTOISINITE,BLASTOISINITEs,,בלסטויזיניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: בלסטויזיניט; Q125"
+item_plural,ITEM_BEEDRILLITE,BEEDRILLITEs,,בידריליט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: בידריליט; Q125"
+item_plural,ITEM_PIDGEOTITE,PIDGEOTITEs,,פידג'יוטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פידג'יוטיט; Q125"
+item_plural,ITEM_ALAKAZITE,ALAKAZITEs,,אלקזיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אלקזיט; Q125"
+item_plural,ITEM_SLOWBRONITE,SLOWBRONITEs,,סלוברוניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סלוברוניט; Q125"
+item_plural,ITEM_GENGARITE,GENGARITEs,,גנגריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גנגריט; Q125"
+item_plural,ITEM_KANGASKHANITE,KANGASKHANITEs,,קנגסקאניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: קנגסקאניט; Q125"
+item_plural,ITEM_PINSIRITE,PINSIRITEs,,פינסיריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פינסיריט; Q125"
+item_plural,ITEM_GYARADOSITE,GYARADOSITEs,,גרידוסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גרידוסיט; Q125"
+item_plural,ITEM_AERODACTYLITE,AERODACTYLITEs,,אירודקטייליט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אירודקטייליט; Q125"
+item_plural,ITEM_MEWTWONITE_X,MEWTWONITE Xs,,מיוטוניט X,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מיוטוניט X; Q125"
+item_plural,ITEM_MEWTWONITE_Y,MEWTWONITE Ys,,מיוטוניט Y,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מיוטוניט Y; Q125"
+item_plural,ITEM_AMPHAROSITE,AMPHAROSITEs,,אמפרוסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אמפרוסיט; Q125"
+item_plural,ITEM_STEELIXITE,STEELIXITEs,,סטיליקסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סטיליקסיט; Q125"
+item_plural,ITEM_SCIZORITE,SCIZORITEs,,סייזוריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סייזוריט; Q125"
+item_plural,ITEM_HERACRONITE,HERACRONITEs,,הרקרוניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: הרקרוניט; Q125"
+item_plural,ITEM_HOUNDOOMINITE,HOUNDOOMINITEs,,האונדומיניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: האונדומיניט; Q125"
+item_plural,ITEM_TYRANITARITE,TYRANITARITEs,,טירניטריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: טירניטריט; Q125"
+item_plural,ITEM_SCEPTILITE,SCEPTILITEs,,ספטייליט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: ספטייליט; Q125"
+item_plural,ITEM_BLAZIKENITE,BLAZIKENITEs,,בלייזיקניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: בלייזיקניט; Q125"
+item_plural,ITEM_SWAMPERTITE,SWAMPERTITEs,,סוומפרטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סוומפרטיט; Q125"
+item_plural,ITEM_GARDEVOIRITE,GARDEVOIRITEs,,גרדוואריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גרדוואריט; Q125"
+item_plural,ITEM_SABLENITE,SABLENITEs,,סייבלניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סייבלניט; Q125"
+item_plural,ITEM_MAWILITE,MAWILITEs,,מאוויליט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מאוויליט; Q125"
+item_plural,ITEM_AGGRONITE,AGGRONITEs,,אגרוניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אגרוניט; Q125"
+item_plural,ITEM_MEDICHAMITE,MEDICHAMITEs,,מדיצ'מיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מדיצ'מיט; Q125"
+item_plural,ITEM_MANECTITE,MANECTITEs,,מנקטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מנקטיט; Q125"
+item_plural,ITEM_SHARPEDONITE,SHARPEDONITEs,,שרפידוניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: שרפידוניט; Q125"
+item_plural,ITEM_CAMERUPTITE,CAMERUPTITEs,,קמרפטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: קמרפטיט; Q125"
+item_plural,ITEM_ALTARIANITE,ALTARIANITEs,,אלטריאניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אלטריאניט; Q125"
+item_plural,ITEM_BANETTITE,BANETTITEs,,באנטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: באנטיט; Q125"
+item_plural,ITEM_ABSOLITE,ABSOLITEs,,אבסוליט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אבסוליט; Q125"
+item_plural,ITEM_GLALITITE,GLALITITEs,,גלאליטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גלאליטיט; Q125"
+item_plural,ITEM_SALAMENCITE,SALAMENCITEs,,סלמנסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סלמנסיט; Q125"
+item_plural,ITEM_METAGROSSITE,METAGROSSITEs,,מטגרוסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מטגרוסיט; Q125"
+item_plural,ITEM_LATIASITE,LATIASITEs,,לטיאסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: לטיאסיט; Q125"
+item_plural,ITEM_LATIOSITE,LATIOSITEs,,לטיוסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: לטיוסיט; Q125"
+item_plural,ITEM_LOPUNNITE,LOPUNNITEs,,לופאניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: לופאניט; Q125"
+item_plural,ITEM_GARCHOMPITE,GARCHOMPITEs,,גארצ'ומפיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גארצ'ומפיט; Q125"
+item_plural,ITEM_LUCARIONITE,LUCARIONITEs,,לוקאריוניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: לוקאריוניט; Q125"
+item_plural,ITEM_ABOMASITE,ABOMASITEs,,אבומסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אבומסיט; Q125"
+item_plural,ITEM_GALLADITE,GALLADITEs,,גליידיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גליידיט; Q125"
+item_plural,ITEM_AUDINITE,AUDINITEs,,אודיניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אודיניט; Q125"
+item_plural,ITEM_DIANCITE,DIANCITEs,,דייאנסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דייאנסיט; Q125"
+item_plural,ITEM_CLEFABLITE,CLEFABLITEs,,קלפייבליט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: קלפייבליט; Q125"
+item_plural,ITEM_VICTREEBELITE,VICTREEBELITEs,,ויקטריבליט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: ויקטריבליט; Q125"
+item_plural,ITEM_STARMINITE,STARMINITEs,,סטארמיניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סטארמיניט; Q125"
+item_plural,ITEM_DRAGONINITE,DRAGONINITEs,,דרגוניניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דרגוניניט; Q125"
+item_plural,ITEM_MEGANIUMITE,MEGANIUMITEs,,מגניומיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מגניומיט; Q125"
+item_plural,ITEM_FERALIGITE,FERALIGITEs,,פרליגיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פרליגיט; Q125"
+item_plural,ITEM_SKARMORITE,SKARMORITEs,,סקארמוריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סקארמוריט; Q125"
+item_plural,ITEM_FROSLASSITE,FROSLASSITEs,,פרוסלאסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פרוסלאסיט; Q125"
+item_plural,ITEM_EMBOARITE,EMBOARITEs,,אמבוריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אמבוריט; Q125"
+item_plural,ITEM_EXCADRITE,EXCADRITEs,,אקסקדריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אקסקדריט; Q125"
+item_plural,ITEM_SCOLIPITE,SCOLIPITEs,,סקוליפיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סקוליפיט; Q125"
+item_plural,ITEM_SCRAFTINITE,SCRAFTINITEs,,סקראפטיניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סקראפטיניט; Q125"
+item_plural,ITEM_EELEKTROSSITE,EELEKTROSSITEs,,אילקטרוסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אילקטרוסיט; Q125"
+item_plural,ITEM_CHANDELURITE,CHANDELURITEs,,שנדלוריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: שנדלוריט; Q125"
+item_plural,ITEM_CHESNAUGHTITE,CHESNAUGHTITEs,,צ'סנוטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: צ'סנוטיט; Q125"
+item_plural,ITEM_DELPHOXITE,DELPHOXITEs,,דלפוקסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דלפוקסיט; Q125"
+item_plural,ITEM_GRENINJITE,GRENINJITEs,,גרנינג'יט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גרנינג'יט; Q125"
+item_plural,ITEM_PYROARITE,PYROARITEs,,פיירואריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פיירואריט; Q125"
+item_plural,ITEM_FLOETTITE,FLOETTITEs,,פלואטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פלואטיט; Q125"
+item_plural,ITEM_MALAMARITE,MALAMARITEs,,מלמריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מלמריט; Q125"
+item_plural,ITEM_BARBARACITE,BARBARACITEs,,ברבארקיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: ברבארקיט; Q125"
+item_plural,ITEM_DRAGALGITE,DRAGALGITEs,,דרגאלג'יט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דרגאלג'יט; Q125"
+item_plural,ITEM_HAWLUCHANITE,HAWLUCHANITEs,,הולוצ'אניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: הולוצ'אניט; Q125"
+item_plural,ITEM_ZYGARDITE,ZYGARDITEs,,זייגארדיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: זייגארדיט; Q125"
+item_plural,ITEM_DRAMPANITE,DRAMPANITEs,,דרמפאניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דרמפאניט; Q125"
+item_plural,ITEM_FALINKSITE,FALINKSITEs,,פלינקסיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פלינקסיט; Q125"
+item_plural,ITEM_HEATRANITE,HEATRANITEs,,היטרניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: היטרניט; Q125"
+item_plural,ITEM_DARKRANITE,DARKRANITEs,,דארקראניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דארקראניט; Q125"
+item_plural,ITEM_ZERAORITE,ZERAORITEs,,זראוריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: זראוריט; Q125"
+item_plural,ITEM_RAICHUNITE_X,RAICHUNITE Xs,,ראיצ'וניט X,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: ראיצ'וניט X; Q125"
+item_plural,ITEM_RAICHUNITE_Y,RAICHUNITE Ys,,ראיצ'וניט Y,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: ראיצ'וניט Y; Q125"
+item_plural,ITEM_CHIMECHITE,CHIMECHITEs,,צ'יימצ'יט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: צ'יימצ'יט; Q125"
+item_plural,ITEM_ABSOLITE_Z,ABSOLITE Zs,,אבסוליט Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אבסוליט Z; Q125"
+item_plural,ITEM_STARAPTITE,STARAPTITEs,,סטאראפטיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סטאראפטיט; Q125"
+item_plural,ITEM_GARCHOMPITE_Z,GARCHOMPITE Zs,,גארצ'ומפיט Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גארצ'ומפיט Z; Q125"
+item_plural,ITEM_LUCARIONITE_Z,LUCARIONITE Zs,,לוקאריוניט Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: לוקאריוניט Z; Q125"
+item_plural,ITEM_GOLURKITE,GOLURKITEs,,גולרקיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גולרקיט; Q125"
+item_plural,ITEM_MEOWSTICITE,MEOWSTICITEs,,מיאוסטיקיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מיאוסטיקיט; Q125"
+item_plural,ITEM_CRABOMINITE,CRABOMINITEs,,קראבומיניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: קראבומיניט; Q125"
+item_plural,ITEM_GOLISOPITE,GOLISOPITEs,,גולייספיט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גולייספיט; Q125"
+item_plural,ITEM_MAGEARNITE,MAGEARNITEs,,מגירניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מגירניט; Q125"
+item_plural,ITEM_SCOVILLAINITE,SCOVILLAINITEs,,סקובילייניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סקובילייניט; Q125"
+item_plural,ITEM_BAXCALIBRITE,BAXCALIBRITEs,,בקסקליבריט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: בקסקליבריט; Q125"
+item_plural,ITEM_TATSUGIRINITE,TATSUGIRINITEs,,טאצוגיריניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: טאצוגיריניט; Q125"
+item_plural,ITEM_GLIMMORANITE,GLIMMORANITEs,,גלימוראניט,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: גלימוראניט; Q125"
+item_plural,ITEM_NORMAL_GEM,NORMAL GEMs,,אבני חן רגילות,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: אבן חן רגילה; Q125"
+item_plural,ITEM_FIRE_GEM,FIRE GEMs,,אבני חן אש,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן אש; Q125
+item_plural,ITEM_WATER_GEM,WATER GEMs,,אבני חן מים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן מים; Q125
+item_plural,ITEM_ELECTRIC_GEM,ELECTRIC GEMs,,אבני חן חשמל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן חשמל; Q125
+item_plural,ITEM_GRASS_GEM,GRASS GEMs,,אבני חן עשב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן עשב; Q125
+item_plural,ITEM_ICE_GEM,ICE GEMs,,אבני חן קרח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן קרח; Q125
+item_plural,ITEM_FIGHTING_GEM,FIGHTING GEMs,,אבני חן קרב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן קרב; Q125
+item_plural,ITEM_POISON_GEM,POISON GEMs,,אבני חן רעל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן רעל; Q125
+item_plural,ITEM_GROUND_GEM,GROUND GEMs,,אבני חן אדמה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן אדמה; Q125
+item_plural,ITEM_FLYING_GEM,FLYING GEMs,,אבני חן תעופה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן תעופה; Q125
+item_plural,ITEM_PSYCHIC_GEM,PSYCHIC GEMs,,אבני חן פסיכיות,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: אבן חן פסיכית; Q125"
+item_plural,ITEM_BUG_GEM,BUG GEMs,,אבני חן חרק,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן חרק; Q125
+item_plural,ITEM_ROCK_GEM,ROCK GEMs,,אבני חן סלע,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן סלע; Q125
+item_plural,ITEM_GHOST_GEM,GHOST GEMs,,אבני חן רוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן רוח; Q125
+item_plural,ITEM_DRAGON_GEM,DRAGON GEMs,,אבני חן דרקון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן דרקון; Q125
+item_plural,ITEM_DARK_GEM,DARK GEMs,,אבני חן אפלות,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: אבן חן אפלה; Q125"
+item_plural,ITEM_STEEL_GEM,STEEL GEMs,,אבני חן פלדה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן פלדה; Q125
+item_plural,ITEM_FAIRY_GEM,FAIRY GEMs,,אבני חן פיה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן חן פיה; Q125
+item_plural,ITEM_NORMALIUM_Z,NORMALIUM Zs,,רגיליום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: רגיליום Z; Q125"
+item_plural,ITEM_FIRIUM_Z,FIRIUM Zs,,אשיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אשיום Z; Q125"
+item_plural,ITEM_WATERIUM_Z,WATERIUM Zs,,מימיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מימיום Z; Q125"
+item_plural,ITEM_ELECTRIUM_Z,ELECTRIUM Zs,,חשמליום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: חשמליום Z; Q125"
+item_plural,ITEM_GRASSIUM_Z,GRASSIUM Zs,,עשביום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: עשביום Z; Q125"
+item_plural,ITEM_ICIUM_Z,ICIUM Zs,,קרחיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: קרחיום Z; Q125"
+item_plural,ITEM_FIGHTINIUM_Z,FIGHTINIUM Zs,,קרביום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: קרביום Z; Q125"
+item_plural,ITEM_POISONIUM_Z,POISONIUM Zs,,רעליום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: רעליום Z; Q125"
+item_plural,ITEM_GROUNDIUM_Z,GROUNDIUM Zs,,אדמיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אדמיום Z; Q125"
+item_plural,ITEM_FLYINIUM_Z,FLYINIUM Zs,,תעופיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: תעופיום Z; Q125"
+item_plural,ITEM_PSYCHIUM_Z,PSYCHIUM Zs,,פסיכיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פסיכיום Z; Q125"
+item_plural,ITEM_BUGINIUM_Z,BUGINIUM Zs,,חרקיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: חרקיום Z; Q125"
+item_plural,ITEM_ROCKIUM_Z,ROCKIUM Zs,,סלעיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סלעיום Z; Q125"
+item_plural,ITEM_GHOSTIUM_Z,GHOSTIUM Zs,,רוחיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: רוחיום Z; Q125"
+item_plural,ITEM_DRAGONIUM_Z,DRAGONIUM Zs,,דרקוניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דרקוניום Z; Q125"
+item_plural,ITEM_DARKINIUM_Z,DARKINIUM Zs,,אפליום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אפליום Z; Q125"
+item_plural,ITEM_STEELIUM_Z,STEELIUM Zs,,פלדיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פלדיום Z; Q125"
+item_plural,ITEM_FAIRIUM_Z,FAIRIUM Zs,,פייום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פייום Z; Q125"
+item_plural,ITEM_PIKANIUM_Z,PIKANIUM Zs,,פיקאניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פיקאניום Z; Q125"
+item_plural,ITEM_EEVIUM_Z,EEVIUM Zs,,איוויום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: איוויום Z; Q125"
+item_plural,ITEM_SNORLIUM_Z,SNORLIUM Zs,,סנורליום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סנורליום Z; Q125"
+item_plural,ITEM_MEWNIUM_Z,MEWNIUM Zs,,מיוניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מיוניום Z; Q125"
+item_plural,ITEM_DECIDIUM_Z,DECIDIUM Zs,,דסידיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: דסידיום Z; Q125"
+item_plural,ITEM_INCINIUM_Z,INCINIUM Zs,,אינסיניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אינסיניום Z; Q125"
+item_plural,ITEM_PRIMARIUM_Z,PRIMARIUM Zs,,פרימריום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פרימריום Z; Q125"
+item_plural,ITEM_LYCANIUM_Z,LYCANIUM Zs,,לייקניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: לייקניום Z; Q125"
+item_plural,ITEM_MIMIKIUM_Z,MIMIKIUM Zs,,מימיקיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מימיקיום Z; Q125"
+item_plural,ITEM_KOMMONIUM_Z,KOMMONIUM Zs,,קומוניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: קומוניום Z; Q125"
+item_plural,ITEM_TAPUNIUM_Z,TAPUNIUM Zs,,טאפוניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: טאפוניום Z; Q125"
+item_plural,ITEM_SOLGANIUM_Z,SOLGANIUM Zs,,סולגאניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: סולגאניום Z; Q125"
+item_plural,ITEM_LUNALIUM_Z,LUNALIUM Zs,,לונאליום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: לונאליום Z; Q125"
+item_plural,ITEM_MARSHADIUM_Z,MARSHADIUM Zs,,מרשאדיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: מרשאדיום Z; Q125"
+item_plural,ITEM_ALORAICHIUM_Z,ALORAICHIUM Zs,,אלוראיצ'יום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אלוראיצ'יום Z; Q125"
+item_plural,ITEM_PIKASHUNIUM_Z,PIKASHUNIUM Zs,,פיקאשוניום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: פיקאשוניום Z; Q125"
+item_plural,ITEM_ULTRANECROZIUM_Z,ULTRANECROZIUM Zs,,אולטרנקרוזיום Z,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אולטרנקרוזיום Z; Q125"
+item_plural,ITEM_LIGHT_BALL,LIGHT BALLs,,כדורי אור,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור אור; Q125
+item_plural,ITEM_LEEK,LEEKs,,מקלות,proposed,plural head noun; English adds s (no pluralName); singular: מקל; Q125
+item_plural,ITEM_THICK_CLUB,THICK CLUBs,,עצמות עבות,proposed,noun + adjective plural; English adds s (no pluralName); singular: עצם עבה; Q125
+item_plural,ITEM_METAL_POWDER,METAL POWDERs,,אבקות מתכת,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבקת מתכת; Q125
+item_plural,ITEM_QUICK_POWDER,QUICK POWDERs,,אבקות מהירות,proposed,noun + adjective plural; English adds s (no pluralName); singular: אבקה מהירה; Q125
+item_plural,ITEM_DEEP_SEA_SCALE,DEEP SEA SCALEs,,קשקשי מצולות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קשקש מצולות; Q125
+item_plural,ITEM_SOUL_DEW,SOUL DEWs,,טל נשמה,proposed,same as singular; mass noun; English adds s (no pluralName); singular: טל נשמה; Q125
+item_plural,ITEM_ADAMANT_ORB,ADAMANT ORBs,,גולות יהלום,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גולת יהלום; Q125
+item_plural,ITEM_LUSTROUS_ORB,LUSTROUS ORBs,,גולות בוהקות,proposed,noun + adjective plural; English adds s (no pluralName); singular: גולה בוהקת; Q125
+item_plural,ITEM_GRISEOUS_ORB,GRISEOUS ORBs,,גולות אפורות,proposed,noun + adjective plural; English adds s (no pluralName); singular: גולה אפורה; Q125
+item_plural,ITEM_SEA_INCENSE,SEA INCENSEs,,קטורת ים,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת ים; Q125
+item_plural,ITEM_LAX_INCENSE,LAX INCENSEs,,קטורת רפיון,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת רפיון; Q125
+item_plural,ITEM_ODD_INCENSE,ODD INCENSEs,,קטורת משונה,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת משונה; Q125
+item_plural,ITEM_ROCK_INCENSE,ROCK INCENSEs,,קטורת סלע,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת סלע; Q125
+item_plural,ITEM_FULL_INCENSE,FULL INCENSEs,,קטורת שובע,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת שובע; Q125
+item_plural,ITEM_WAVE_INCENSE,WAVE INCENSEs,,קטורת גלים,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת גלים; Q125
+item_plural,ITEM_ROSE_INCENSE,ROSE INCENSEs,,קטורת ורדים,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת ורדים; Q125
+item_plural,ITEM_LUCK_INCENSE,LUCK INCENSEs,,קטורת מזל,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת מזל; Q125
+item_plural,ITEM_PURE_INCENSE,PURE INCENSEs,,קטורת טהורה,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קטורת טהורה; Q125
+item_plural,ITEM_MACHO_BRACE,MACHO BRACEs,,רצועות מאצ'ו,proposed,construct plural of the head noun; English adds s (no pluralName); singular: רצועת מאצ'ו; Q125
+item_plural,ITEM_POWER_WEIGHT,POWER WEIGHTs,,משקולות כוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: משקולת כוח; Q125
+item_plural,ITEM_POWER_BRACER,POWER BRACERs,,צמידי כוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: צמיד כוח; Q125
+item_plural,ITEM_POWER_BELT,POWER BELTs,,חגורות כוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: חגורת כוח; Q125
+item_plural,ITEM_POWER_BAND,POWER BANDs,,רצועות כוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: רצועת כוח; Q125
+item_plural,ITEM_POWER_ANKLET,POWER ANKLETs,,צמידי קרסול כוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: צמיד קרסול כוח; Q125
+item_plural,ITEM_CHARCOAL,CHARCOALs,,פחם,proposed,same as singular; mass noun; English adds s (no pluralName); singular: פחם; Q125
+item_plural,ITEM_MYSTIC_WATER,MYSTIC WATERs,,מים מיסטיים,proposed,same as singular; singular is already plural; English adds s (no pluralName); singular: מים מיסטיים; Q125
+item_plural,ITEM_MAGNET,MAGNETs,,מגנטים,proposed,plural head noun; English adds s (no pluralName); singular: מגנט; Q125
+item_plural,ITEM_MIRACLE_SEED,MIRACLE SEEDs,,זרעי פלא,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זרע פלא; Q125
+item_plural,ITEM_NEVER_MELT_ICE,NEVER-MELT ICEs,,קרח נצחי,proposed,same as singular; mass noun; English adds s (no pluralName); singular: קרח נצחי; Q125
+item_plural,ITEM_BLACK_BELT,BLACK BELTs,,חגורות שחורות,proposed,noun + adjective plural; English adds s (no pluralName); singular: חגורה שחורה; Q125
+item_plural,ITEM_POISON_BARB,POISON BARBs,,קוצים רעילים,proposed,noun + adjective plural; English adds s (no pluralName); singular: קוץ רעיל; Q125
+item_plural,ITEM_SHARP_BEAK,SHARP BEAKs,,מקורים חדים,proposed,noun + adjective plural; English adds s (no pluralName); singular: מקור חד; Q125
+item_plural,ITEM_TWISTED_SPOON,TWISTED SPOONs,,כפות מעוקלות,proposed,noun + adjective plural; English adds s (no pluralName); singular: כף מעוקלת; Q125
+item_plural,ITEM_SILVER_POWDER,SILVER POWDERs,,אבקות כסף,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבקת כסף; Q125
+item_plural,ITEM_HARD_STONE,HARD STONEs,,אבנים קשות,proposed,noun + adjective plural; English adds s (no pluralName); singular: אבן קשה; Q125
+item_plural,ITEM_SPELL_TAG,SPELL TAGs,,קמעות רוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קמע רוח; Q125
+item_plural,ITEM_DRAGON_FANG,DRAGON FANGs,,ניבי דרקון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: ניב דרקון; Q125
+item_plural,ITEM_METAL_COAT,METAL COATs,,ציפויי מתכת,proposed,construct plural of the head noun; English adds s (no pluralName); singular: ציפוי מתכת; Q125
+item_plural,ITEM_CHOICE_BAND,CHOICE BANDs,,סרטי בחירה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סרט בחירה; Q125
+item_plural,ITEM_FLAME_ORB,FLAME ORBs,,גולות להבה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גולת להבה; Q125
+item_plural,ITEM_TOXIC_ORB,TOXIC ORBs,,גולות הרעלה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גולת הרעלה; Q125
+item_plural,ITEM_DAMP_ROCK,DAMP ROCKs,,סלעים לחים,proposed,noun + adjective plural; English adds s (no pluralName); singular: סלע לח; Q125
+item_plural,ITEM_HEAT_ROCK,HEAT ROCKs,,סלעים חמים,proposed,noun + adjective plural; English adds s (no pluralName); singular: סלע חם; Q125
+item_plural,ITEM_SMOOTH_ROCK,SMOOTH ROCKs,,סלעים חלקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: סלע חלק; Q125
+item_plural,ITEM_ICY_ROCK,ICY ROCKs,,סלעים קרים,proposed,noun + adjective plural; English adds s (no pluralName); singular: סלע קר; Q125
+item_plural,ITEM_ELECTRIC_SEED,ELECTRIC SEEDs,,זרעי חשמל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זרע חשמל; Q125
+item_plural,ITEM_PSYCHIC_SEED,PSYCHIC SEEDs,,זרעים פסיכיים,proposed,noun + adjective plural; English adds s (no pluralName); singular: זרע פסיכי; Q125
+item_plural,ITEM_MISTY_SEED,MISTY SEEDs,,זרעי ערפל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זרע ערפל; Q125
+item_plural,ITEM_GRASSY_SEED,GRASSY SEEDs,,זרעי עשב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: זרע עשב; Q125
+item_plural,ITEM_ABSORB_BULB,ABSORB BULBs,,פקעות ספיגה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: פקעת ספיגה; Q125
+item_plural,ITEM_SNOWBALL,SNOWBALLs,,כדורי שלג,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור שלג; Q125
+item_plural,ITEM_BRIGHT_POWDER,BRIGHT POWDERs,,אבקות מבריקות,proposed,noun + adjective plural; English adds s (no pluralName); singular: אבקה מבריקה; Q125
+item_plural,ITEM_WHITE_HERB,WHITE HERBs,,עשבים לבנים,proposed,noun + adjective plural; English adds s (no pluralName); singular: עשב לבן; Q125
+item_plural,ITEM_QUICK_CLAW,QUICK CLAWs,,טפרים מהירים,proposed,noun + adjective plural; English adds s (no pluralName); singular: טופר מהיר; Q125
+item_plural,ITEM_SOOTHE_BELL,SOOTHE BELLs,,פעמונים מרגיעים,proposed,noun + adjective plural; English adds s (no pluralName); singular: פעמון מרגיע; Q125
+item_plural,ITEM_MENTAL_HERB,MENTAL HERBs,,עשבים נפשיים,proposed,noun + adjective plural; English adds s (no pluralName); singular: עשב נפשי; Q125
+item_plural,ITEM_KINGS_ROCK,KING'S ROCKs,,סלעי המלך,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סלע המלך; Q125
+item_plural,ITEM_AMULET_COIN,AMULET COINs,,מטבעות קמע,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מטבע קמע; Q125
+item_plural,ITEM_CLEANSE_TAG,CLEANSE TAGs,,תגי טיהור,proposed,construct plural of the head noun; English adds s (no pluralName); singular: תג טיהור; Q125
+item_plural,ITEM_SMOKE_BALL,SMOKE BALLs,,כדורי עשן,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור עשן; Q125
+item_plural,ITEM_FOCUS_BAND,FOCUS BANDs,,רצועות ריכוז,proposed,construct plural of the head noun; English adds s (no pluralName); singular: רצועת ריכוז; Q125
+item_plural,ITEM_LUCKY_EGG,LUCKY EGGs,,ביצי מזל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: ביצת מזל; Q125
+item_plural,ITEM_SHELL_BELL,SHELL BELLs,,פעמוני קונכיה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: פעמון קונכיה; Q125
+item_plural,ITEM_MUSCLE_BAND,MUSCLE BANDs,,רצועות שרירים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: רצועת שרירים; Q125
+item_plural,ITEM_EXPERT_BELT,EXPERT BELTs,,חגורות מומחה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: חגורת מומחה; Q125
+item_plural,ITEM_LIGHT_CLAY,LIGHT CLAYs,,חימר אור,proposed,same as singular; mass noun; English adds s (no pluralName); singular: חימר אור; Q125
+item_plural,ITEM_LIFE_ORB,LIFE ORBs,,גולות חיים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גולת חיים; Q125
+item_plural,ITEM_POWER_HERB,POWER HERBs,,עשבי כוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עשב כוח; Q125
+item_plural,ITEM_METRONOME,METRONOMEs,,פעמנים,proposed,plural head noun; English adds s (no pluralName); singular: פעמן; Q125
+item_plural,ITEM_IRON_BALL,IRON BALLs,,כדורי ברזל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור ברזל; Q125
+item_plural,ITEM_LAGGING_TAIL,LAGGING TAILs,,זנבות איטיים,proposed,noun + adjective plural; English adds s (no pluralName); singular: זנב איטי; Q125
+item_plural,ITEM_DESTINY_KNOT,DESTINY KNOTs,,קשרי גורל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קשר גורל; Q125
+item_plural,ITEM_BLACK_SLUDGE,BLACK SLUDGEs,,רפש שחור,proposed,same as singular; mass noun; English adds s (no pluralName); singular: רפש שחור; Q125
+item_plural,ITEM_GRIP_CLAW,GRIP CLAWs,,טפרי אחיזה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: טופר אחיזה; Q125
+item_plural,ITEM_STICKY_BARB,STICKY BARBs,,קוצים דביקים,proposed,noun + adjective plural; English adds s (no pluralName); singular: קוץ דביק; Q125
+item_plural,ITEM_SHED_SHELL,SHED SHELLs,,קליפות השלה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קליפת השלה; Q125
+item_plural,ITEM_BIG_ROOT,BIG ROOTs,,שורשים גדולים,proposed,noun + adjective plural; English adds s (no pluralName); singular: שורש גדול; Q125
+item_plural,ITEM_RAZOR_CLAW,RAZOR CLAWs,,טפרי להב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: טופר להב; Q125
+item_plural,ITEM_RAZOR_FANG,RAZOR FANGs,,ניבי להב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: ניב להב; Q125
+item_plural,ITEM_EVIOLITE,EVIOLITEs,,גבישי התפתחות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גביש התפתחות; Q125
+item_plural,ITEM_FLOAT_STONE,FLOAT STONEs,,אבני ציפה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אבן ציפה; Q125
+item_plural,ITEM_ROCKY_HELMET,ROCKY HELMETs,,קסדות סלעיות,proposed,noun + adjective plural; English adds s (no pluralName); singular: קסדה סלעית; Q125
+item_plural,ITEM_AIR_BALLOON,AIR BALLOONs,,בלוני אוויר,proposed,construct plural of the head noun; English adds s (no pluralName); singular: בלון אוויר; Q125
+item_plural,ITEM_RED_CARD,RED CARDs,,כרטיסים אדומים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כרטיס אדום; Q125
+item_plural,ITEM_RING_TARGET,RING TARGETs,,טבעות מטרה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: טבעת מטרה; Q125
+item_plural,ITEM_BINDING_BAND,BINDING BANDs,,רצועות עקידה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: רצועת עקידה; Q125
+item_plural,ITEM_EJECT_BUTTON,EJECT BUTTONs,,כפתורי פליטה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כפתור פליטה; Q125
+item_plural,ITEM_ASSAULT_VEST,ASSAULT VESTs,,אפודי תקיפה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אפוד תקיפה; Q125
+item_plural,ITEM_ADRENALINE_ORB,ADRENALINE ORBs,,גולות אדרנלין,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גולת אדרנלין; Q125
+item_plural,ITEM_TERRAIN_EXTENDER,TERRAIN EXTENDERs,,מאריכי שטח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מאריך שטח; Q125
+item_plural,ITEM_THROAT_SPRAY,THROAT SPRAYs,,תרסיסי גרון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: תרסיס גרון; Q125
+item_plural,ITEM_EJECT_PACK,EJECT PACKs,,תרמילי פליטה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: תרמיל פליטה; Q125
+item_plural,ITEM_ROOM_SERVICE,ROOM SERVICEs,,שירותי חדרים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שירות חדרים; Q125
+item_plural,ITEM_UTILITY_UMBRELLA,UTILITY UMBRELLAs,,מטריות שימושיות,proposed,noun + adjective plural; English adds s (no pluralName); singular: מטרייה שימושית; Q125
+item_plural,ITEM_ABILITY_SHIELD,ABILITY SHIELDs,,מגיני יכולת,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מגן יכולת; Q125
+item_plural,ITEM_CLEAR_AMULET,CLEAR AMULETs,,קמעות שקופים,proposed,noun + adjective plural; English adds s (no pluralName); singular: קמע שקוף; Q125
+item_plural,ITEM_PUNCHING_GLOVE,PUNCHING GLOVEs,,כפפות אגרוף,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כפפת אגרוף; Q125
+item_plural,ITEM_COVERT_CLOAK,COVERT CLOAKs,,גלימות הסוואה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גלימת הסוואה; Q125
+item_plural,ITEM_AUSPICIOUS_ARMOR,AUSPICIOUS ARMORs,,שריונים מבורכים,proposed,noun + adjective plural; English adds s (no pluralName); singular: שריון מבורך; Q125
+item_plural,ITEM_BIG_BAMBOO_SHOOT,BIG BAMBOO SHOOTs,,נבטי במבוק גדולים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: נבט במבוק גדול; Q125"
+item_plural,ITEM_GIMMIGHOUL_COIN,GIMMIGHOUL COINs,,מטבעות גימיגול,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מטבע גימיגול; Q125
+item_plural,ITEM_LEADERS_CREST,LEADER'S CRESTs,,סמלי המנהיג,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סמל המנהיג; Q125
+item_plural,ITEM_MALICIOUS_ARMOR,MALICIOUS ARMORs,,שריונים זדוניים,proposed,noun + adjective plural; English adds s (no pluralName); singular: שריון זדוני; Q125
+item_plural,ITEM_MIRROR_HERB,MIRROR HERBs,,עשבי מראה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עשב מראה; Q125
+item_plural,ITEM_TINY_BAMBOO_SHOOT,TINY BAMBOO SHOOTs,,נבטי במבוק קטנים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: נבט במבוק קטן; Q125"
+item_plural,ITEM_BUG_TERA_SHARD,BUG TERA SHARDs,,שברי טרה חרק,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה חרק; Q125
+item_plural,ITEM_DARK_TERA_SHARD,DARK TERA SHARDs,,שברי טרה אפלים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: שבר טרה אפל; Q125"
+item_plural,ITEM_DRAGON_TERA_SHARD,DRAGON TERA SHARDs,,שברי טרה דרקון,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה דרקון; Q125
+item_plural,ITEM_ELECTRIC_TERA_SHARD,ELECTRIC TERA SHARDs,,שברי טרה חשמל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה חשמל; Q125
+item_plural,ITEM_FAIRY_TERA_SHARD,FAIRY TERA SHARDs,,שברי טרה פיה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה פיה; Q125
+item_plural,ITEM_FIGHTING_TERA_SHARD,FIGHTING TERA SHARDs,,שברי טרה קרב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה קרב; Q125
+item_plural,ITEM_FIRE_TERA_SHARD,FIRE TERA SHARDs,,שברי טרה אש,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה אש; Q125
+item_plural,ITEM_FLYING_TERA_SHARD,FLYING TERA SHARDs,,שברי טרה תעופה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה תעופה; Q125
+item_plural,ITEM_GHOST_TERA_SHARD,GHOST TERA SHARDs,,שברי טרה רוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה רוח; Q125
+item_plural,ITEM_GRASS_TERA_SHARD,GRASS TERA SHARDs,,שברי טרה עשב,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה עשב; Q125
+item_plural,ITEM_GROUND_TERA_SHARD,GROUND TERA SHARDs,,שברי טרה אדמה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה אדמה; Q125
+item_plural,ITEM_ICE_TERA_SHARD,ICE TERA SHARDs,,שברי טרה קרח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה קרח; Q125
+item_plural,ITEM_NORMAL_TERA_SHARD,NORMAL TERA SHARDs,,שברי טרה רגילים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: שבר טרה רגיל; Q125"
+item_plural,ITEM_POISON_TERA_SHARD,POISON TERA SHARDs,,שברי טרה רעל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה רעל; Q125
+item_plural,ITEM_PSYCHIC_TERA_SHARD,PSYCHIC TERA SHARDs,,שברי טרה פסיכיים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: שבר טרה פסיכי; Q125"
+item_plural,ITEM_ROCK_TERA_SHARD,ROCK TERA SHARDs,,שברי טרה סלע,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה סלע; Q125
+item_plural,ITEM_STEEL_TERA_SHARD,STEEL TERA SHARDs,,שברי טרה פלדה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה פלדה; Q125
+item_plural,ITEM_WATER_TERA_SHARD,WATER TERA SHARDs,,שברי טרה מים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: שבר טרה מים; Q125
+item_plural,ITEM_ADAMANT_CRYSTAL,ADAMANT CRYSTALs,,גבישי יהלום,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גביש יהלום; Q125
+item_plural,ITEM_GRISEOUS_CORE,GRISEOUS COREs,,ליבות פלטינה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: ליבת פלטינה; Q125
+item_plural,ITEM_LUSTROUS_GLOBE,LUSTROUS GLOBEs,,כדורי פנינה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור פנינה; Q125
+item_plural,ITEM_BLACK_AUGURITE,BLACK AUGURITEs,,אוגוריט שחור,proposed,"same as singular; the name of a stone or crystal, not inflected; English adds s (no pluralName); singular: אוגוריט שחור; Q125"
+item_plural,ITEM_LINKING_CORD,LINKING CORDs,,כבלי קישור,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כבל קישור; Q125
+item_plural,ITEM_PEAT_BLOCK,PEAT BLOCKs,,גושי כבול,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גוש כבול; Q125
+item_plural,ITEM_BERSERK_GENE,BERSERK GENEs,,גני טירוף,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גן טירוף; Q125
+item_plural,ITEM_FAIRY_FEATHER,FAIRY FEATHERs,,נוצות פיה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: נוצת פיה; Q125
+item_plural,ITEM_SYRUPY_APPLE,SYRUPY APPLEs,,תפוחים סירופיים,proposed,noun + adjective plural; English adds s (no pluralName); singular: תפוח סירופי; Q125
+item_plural,ITEM_UNREMARKABLE_TEACUP,UNREMARKABLE TEACUPs,,ספלי תה פשוטים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: ספל תה פשוט; Q125"
+item_plural,ITEM_MASTERPIECE_TEACUP,MASTERPIECE TEACUPs,,ספלי תה מופתיים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: ספל תה מופתי; Q125"
+item_plural,ITEM_CORNERSTONE_MASK,CORNERSTONE MASKs,,מסכות אבן הפינה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מסכת אבן הפינה; Q125
+item_plural,ITEM_WELLSPRING_MASK,WELLSPRING MASKs,,מסכות המעיין,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מסכת המעיין; Q125
+item_plural,ITEM_HEARTHFLAME_MASK,HEARTHFLAME MASKs,,מסכות אש האח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מסכת אש האח; Q125
+item_plural,ITEM_METAL_ALLOY,METAL ALLOYs,,סגסוגות מתכת,proposed,construct plural of the head noun; English adds s (no pluralName); singular: סגסוגת מתכת; Q125
+item_plural,ITEM_STELLAR_TERA_SHARD,STELLAR TERA SHARDs,,שברי טרה כוכביים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: שבר טרה כוכבי; Q125"
+item_plural,ITEM_JUBILIFE_MUFFIN,JUBILIFE MUFFINs,,מאפיני ג'ובילייף,proposed,construct plural of the head noun; English adds s (no pluralName); singular: מאפין ג'ובילייף; Q125
+item_plural,ITEM_AUX_EVASION,AUX EVASIONs,,עזרי התחמקות,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עזר התחמקות; Q125
+item_plural,ITEM_AUX_GUARD,AUX GUARDs,,עזרי הגנה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עזר הגנה; Q125
+item_plural,ITEM_AUX_POWER,AUX POWERs,,עזרי כוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עזר כוח; Q125
+item_plural,ITEM_AUX_POWERGUARD,AUX POWERGUARDs,,עזרי כוח והגנה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עזר כוח והגנה; Q125
+item_plural,ITEM_CHOICE_DUMPLING,CHOICE DUMPLINGs,,כופתות בחירה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כופתת בחירה; Q125
+item_plural,ITEM_SWAP_SNACK,SWAP SNACKs,,חטיפי החלפה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: חטיף החלפה; Q125
+item_plural,ITEM_POKESHI_DOLL,POKéSHI DOLLs,,בובות פוקישי,proposed,construct plural of the head noun; English adds s (no pluralName); singular: בובת פוקישי; Q125
+item_plural,ITEM_GS_BALL,GS BALLs,,כדורי GS,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור GS; Q125
+item_plural,ITEM_FERTILIZER,GROWTH MULCHs,,דשן צמיחה,proposed,same as singular; mass noun; English adds s (no pluralName); singular: דשן צמיחה; Q125
+item_plural,ITEM_EXP_SHARE_SMALL,EXP. SHARE Ss,,חולקי נסיון קטנים,proposed,"construct plural, adjective in the plural; English adds s (no pluralName); singular: חולק נסיון קטן; Q125"
+item_plural,ITEM_UNUSED_BERRY_1,SITRUS BERRYs,,פירות סיטרוס,proposed,construct plural of the head noun; English adds s (no pluralName); singular: פרי סיטרוס; Q125
+item_plural,ITEM_UNUSED_BERRY_2,????????s,,????????,proposed,same as singular; placeholder name of an unused item; English adds s (no pluralName); singular: ????????; Q125
+item_plural,ITEM_UNUSED_BERRY_3,????????s,,????????,proposed,same as singular; placeholder name of an unused item; English adds s (no pluralName); singular: ????????; Q125
 nature,NATURE_HARDY,HARDY,קשוח,קשוח,inherited,FR match: constant
 nature,NATURE_LONELY,LONELY,בודד,בודד,inherited,FR match: constant
 nature,NATURE_BRAVE,BRAVE,אמיץ,אמיץ,inherited,FR match: constant

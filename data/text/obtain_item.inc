@@ -5,7 +5,7 @@ gText_TheBagIsFull::
 	.string "התיק מלא…$"
 
 gText_PutItemInPocket::
-	.string "{PLAYER} שם את {STR_VAR_2}\n"
+	.string "{PLAYER} שם {STR_VAR_2}\n"
 	.string "בכיס {STR_VAR_3}.$"
 
 gText_PlayerFoundOneItem::
@@ -16,7 +16,7 @@ gText_TooBadBagIsFull::
 	.string "התיק מלא…$"
 
 gText_PlayerPutItemInBag::
-	.string "{PLAYER} שם את {STR_VAR_2}\n"
+	.string "{PLAYER} שם {STR_VAR_2}\n"
 	.string "בתיק.$"
 
 gText_ObtainedTheDecor::
