@@ -4162,7 +4162,13 @@ static void PrintHeldItemName(void)
     }
 
     fontId = GetFontIdToFit(text, FONT_NORMAL, 0, WindowTemplateWidthPx(&sPageSkillsTemplate[PSS_DATA_WINDOW_SKILLS_HELD_ITEM]) - 8);
+#if TEXT_RTL
+    // The 80-px window is mirrored, so the English +6 would centre the name 4 px left of the box
+    // (at x 38 instead of 42) and push a 72-px name onto its left frame. +2 mirrors to the English span.
+    x = GetStringCenterAlignXOffset(fontId, text, 72) + 2;
+#else
     x = GetStringCenterAlignXOffset(fontId, text, 72) + 6;
+#endif
     PrintTextOnWindowWithFont(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_HELD_ITEM), text, x, 1, 0, 0, fontId);
 }
 
@@ -4182,7 +4188,12 @@ static void PrintRibbonCount(void)
         text = gStringVar4;
     }
 
+#if TEXT_RTL
+    // Mirrored in its 80-px window, the English +6 centres the text at x 39 instead of 41; +4 matches it.
+    x = GetStringCenterAlignXOffset(FONT_NORMAL, text, 70) + 4;
+#else
     x = GetStringCenterAlignXOffset(FONT_NORMAL, text, 70) + 6;
+#endif
     PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT), text, x, 1, 0, 0);
 }
 
