@@ -23,7 +23,7 @@ BellchimeTrail_Text_Morty:
 	.string "אמשיך להתאמן עד שאגלה\n"
 	.string "עתיד חדש בשבילי.\p"
 	.string "אם תרצה קרב נוסף, חפש\n"
-	.string "אותי בדוג'ו הקראטה.$"
+	.string "אותי בדוג'ו הלחימה.$"
 
 EcruteakBellchimeTrail_EventScript_Item_BigMushroom::
 	finditem ITEM_BIG_MUSHROOM
