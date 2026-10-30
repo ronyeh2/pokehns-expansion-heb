@@ -662,7 +662,13 @@ static void BufferMailText(void)
     }
     else
     {
+#if TEXT_RTL
+        // A name shorter than 6 letters would switch to the Japanese font, which has no Hebrew
+        // letters; it stays in the normal font.
+        StripExtCtrlCodes(sMailRead->playerName);
+#else
         ConvertInternationalPlayerName(sMailRead->playerName);
+#endif
         sMailRead->signatureWidth = sMailRead->layout->signatureWidth;
     }
 }
@@ -693,7 +699,15 @@ static void PrintMailText(void)
     StringCopy(bufptr, sMailRead->playerName);
     box_x = GetStringCenterAlignXOffset(FONT_NORMAL, signature, sMailRead->signatureWidth) + 104;
     box_y = sMailRead->layout->signatureYPos + 88;
+#if TEXT_RTL
+    // The signature box is fixed art on the right, so the signature reads right to left inside its
+    // English extent instead of being mirrored across the window with the message lines.
+    SetWindowRtlMode(0, WINDOW_RTL_IN_PLACE);
     AddTextPrinterParameterized3(0, FONT_NORMAL, box_x, box_y, sTextColors, 0, signature);
+    SetWindowRtlMode(0, WINDOW_RTL_MIRROR);
+#else
+    AddTextPrinterParameterized3(0, FONT_NORMAL, box_x, box_y, sTextColors, 0, signature);
+#endif
     CopyWindowToVram(0, COPYWIN_FULL);
     CopyWindowToVram(1, COPYWIN_FULL);
 }
