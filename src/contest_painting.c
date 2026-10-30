@@ -69,7 +69,7 @@ static const u8 *const sContestCategoryNames_Unused[] =
 
 static const u8 *const sContestRankNames[] =
 {
-    [CONTEST_RANK_NORMAL] = COMPOUND_STRING("בדרגה רגילה"),
+    [CONTEST_RANK_NORMAL] = COMPOUND_STRING("בדרגת נורמל"),
     [CONTEST_RANK_SUPER]  = COMPOUND_STRING("בדרגת סופר"),
     [CONTEST_RANK_HYPER]  = COMPOUND_STRING("בדרגת היפר"),
     [CONTEST_RANK_MASTER] = COMPOUND_STRING("בדרגת מאסטר"),
