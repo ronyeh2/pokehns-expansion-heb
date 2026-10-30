@@ -235,8 +235,8 @@ BattleFrontier_ScottsHouse_Text_HaveThisAsMementoOfOurPathsCrossing_hns:
 	.string "מכל הפעמים שדרכינו הצטלבו במסעותינו.$"
 
 BattleFrontier_ScottsHouse_Text_ObtainedXBattlePoints_hns:
-	.string "{PLAYER} השיג {STR_VAR_1}\n"
-	.string "נקודות קרב.$"
+	.string "{PLAYER} השיג\n"
+	.string "נקודות קרב: {STR_VAR_1}.$"
 
 BattleFrontier_ScottsHouse_Text_ExplainBattlePoints_hns:
 	.string "סקוט: אפשר לבדוק את נקודות\n"

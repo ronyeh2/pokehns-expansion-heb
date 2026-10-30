@@ -192,6 +192,10 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_POKE_BALL] =
     {
         .name = ITEM_NAME("פוקיבול"),
+    #if TEXT_RTL
+        // An item without a plural name keeps its singular after a count (CopyItemNameHandlePlural).
+        .pluralName = ITEM_PLURAL_NAME("פוקיבולים"),
+    #endif
         .price = 100,
         .description = COMPOUND_STRING(
             "כלי לתפיסת\n"
@@ -594,6 +598,9 @@ const struct ItemInfo gItemsInfo[] =
     [ITEM_SPORT_BALL] =
     {
         .name = ITEM_NAME("כדור תחרות"),
+    #if TEXT_RTL
+        .pluralName = ITEM_PLURAL_NAME("כדורי תחרות"),
+    #endif
         .price = (I_PRICE <= GEN_3 || I_PRICE >= GEN_9) ? 0 : 300,
         .description = COMPOUND_STRING(
             "כדור מיוחד\n"
