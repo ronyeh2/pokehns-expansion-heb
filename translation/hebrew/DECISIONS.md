@@ -62,6 +62,8 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q118](#q118) | STYLE.md section 5 says not to translate debug-menu strings, but it names only src/debug.c. | A. Keep the battle debug menu in Hebrew and finish it | changed |
 | [Q120](#q120) | STYLE.md excludes src/debug.c, but the overworld debug menu is on in this build (DEBUG_OVERWORLD_MENU TRUE, R+… | A. Keep both menus on and keep src/debug.c and debug.inc in English, b… | changed |
 | [Q122](#q122) | The glossary has no row for TRICK MASTER. | A: Add term rows TRICK MASTER = 'אמן התעלולים' and TRICK HOUSE = 'בית … | changed |
+| [Q123](#q123) | The opponent send-out and about-to-send battle lines use the masculine 'שלח'/'עומד' for every trainer, so Karen and the female leaders read… | A. Reword so the verb agrees with the Pokémon: 'הפוקימון של X, Y, יוצא לקרב!' | changed |
+| [Q124](#q124) | The line for an opponent using an item, '{X} השתמש ב{ITEM}!', uses the masculine verb for every trainer, so Rocket Admin Ariana reads… | A. No verb: '{X}: שימוש ב{ITEM}!' | changed |
 
 ## K1
 
@@ -1348,6 +1350,50 @@ Related rows already use 'תעלול': MOVE_TRICK 'תעלול' (glossary.csv:257
 **Chosen:** A. It locks the two forms the tree already uses (8 codes and the landmark), in the MOVE_TRICK 'תעלול' family. Priority is low because the remaining English cannot be reached in H&S.
 
 *Glossary:* `TERM_TRICK_MASTER`, `TERM_TRICK_HOUSE`
+
+## Q123
+
+**Question.** The shared battle lines that say a trainer sends out a Pokémon use the masculine verb for every trainer: 'רביעיית עלית קארן שלח את אמבריאון!', 'מנהיג קלייר עומד לשלוח את לפרס.'. Karen, Whitney, Jasmine, Clair, Misty, Erika, Sabrina and Janine speak of themselves in the feminine in their own text, so the battle box contradicts them. For Karen the verb also disagrees with the feminine head noun רביעייה.
+
+*Source:* screen review, round 6 (gym leaders and Elite Four); left open in round 5 because it needs a decision.
+
+**Analysis.** The strings are src/battle_message.c sText_Trainer1SentOutPkmn, sText_Trainer1SentOutTwoPkmn, sText_Trainer1SentOutPkmn2, sText_TwoTrainersSentPkmn, sText_Trainer2SentOutPkmn and STRINGID_ENEMYABOUTTOSWITCHPKMN. Every opponent trainer prints them, men, women and pairs (Twins, couples) alike. The English 'sent out' and 'is about to send out' carry no gender or number.
+- The trainer data cannot pick a form: src/data/trainers_hns.party marks 630 of its 651 trainers 'Gender: Male', all eight women above included, and changing it would change trainer data.
+- A class noun does not settle it either: TRAINER_CLASS_LEADER and TRAINER_CLASS_LEADER_HNS 'מנהיג' are shared by men and women (glossary.csv:4800, :4898), and TRAINER_CLASS_ELITE_FOUR_HNS 'רביעיית עלית' (:4910) is a feminine noun for Will, Koga and Bruno too.
+- STYLE §2 keeps NPCs in their own gender and prefers a rewording that avoids gender where one reads naturally. The Pokémon is masculine by the settled rule.
+- The English strings have no manual line break, so the battle text breaks them automatically (src/line_break.c BreakStringAutomatic); STYLE §5 says to keep them without breaks.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Reword so the Pokémon is the subject | 'הפוקימון של {X}, {Y}, יוצא לקרב!' for the send-out lines, 'הפוקימונים של {X}, {Y} ו{Z}, יוצאים לקרב!' for two Pokémon, and 'הפוקימון הבא של {X} יהיה {Y}.' for the about-to-send line. Token order unchanged; no manual breaks, as in English. | Low. Six strings; one form for every trainer, pairs included. The line is longer and wraps to two lines more often. |
+| B. Feminine variants chosen in code | Under TEXT_RTL, pick a feminine string from a table of female trainer pics or ids. | Medium. A hand-kept table of every female pic, plural forms for pairs, and the Frontier and link trainers on top; a masculine class noun before a feminine verb ('מנהיג קלייר שלחה') still clashes. |
+| C. Keep and list as a known issue | No change. | Every gym leader and Elite Four battle with a woman shows the clash. |
+
+**Chosen:** A. It removes the clash for every trainer without trainer data or a table to maintain, and the wording is ordinary Hebrew narration. The other lines with a trainer as the subject keep the masculine for now: withdrew (sText_Trainer1WithdrewPkmn, sText_Trainer2WithdrewPkmn) and used an item (STRINGID_TRAINER1USEDITEM). They need their own neutral wording and were not part of this review. The partner lines name only male partners in H&S (src/data/battle_partners.party), and the link lines name real players.
+
+*Changed:* `src/battle_message.c`
+
+## Q124
+
+**Question.** The battle line for an opponent trainer using an item, STRINGID_TRAINER1USEDITEM '{B_ATK_TRAINER_NAME_WITH_CLASS}\nהשתמש ב{B_LAST_ITEM}!', has the masculine verb for every trainer. On the Radio Tower 5F it reads 'מנהל רוקט אריאנה / השתמש בשיחזור מלא!' while Ariana speaks of herself in the feminine on the same screens ('עכשיו אני חזקה יותר'). Q123 left this line masculine 'for now'.
+
+*Source:* screen review, round 6 (Johto story battles), confirmed on screen by a second reviewer; follow-up to Q123.
+
+**Analysis.** The string is src/battle_message.c:509. The English, 'X used ITEM!', carries no gender and has no manual line break.
+- Every AI trainer that carries battle items prints it. 100 entries in src/data/trainers_hns.party have an 'Items:' line. At least 25 of them are women: Whitney, Jasmine, Clair, Misty, Erika, Sabrina, Janine, Karen and Ariana, with their rematch and post-game entries.
+- As in Q123, the trainer data cannot pick a form: both Ariana entries are 'Gender: Male' in the party file (:10892, :10927), like the female leaders.
+- The class noun 'מנהל רוקט' before her name is a separate question. TRAINER_CLASS_ROCKET_ADMIN_HNS (glossary.csv:4926, reviewed) is shared by Archer, Proton, Petrel and Ariana, so it cannot take one gender (the Q123 analysis). A female class would change trainer data, which is out of scope. It stays masculine, in this line and in her intro and defeat lines.
+- STYLE §2 keeps NPCs in their own gender and prefers a rewording that avoids gender where one reads naturally.
+
+| Option | How | Risk |
+|---|---|---|
+| A. No verb | '{B_ATK_TRAINER_NAME_WITH_CLASS}: שימוש ב{B_LAST_ITEM}!'. Token order unchanged; no manual break, as in English, so the battle text breaks it automatically. | Low. One string, one form for every trainer. It reads as a terse battle report rather than a sentence. |
+| B. Feminine variant chosen in code | Under TEXT_RTL, pick 'השתמשה' from a table of female trainer pics. | Medium. A hand-kept table, as rejected in Q123; 'מנהל רוקט אריאנה השתמשה' still clashes with the masculine class noun. |
+| C. Keep and list as a known issue | No change. | Every female leader, Karen and Ariana who uses an item shows the clash. |
+
+**Chosen:** A. It removes the masculine verb for every trainer without trainer data or a table, in the same spirit as Q123. The masculine class noun before Ariana's name is unchanged (shared class, see above). The withdrew lines (sText_Trainer1WithdrewPkmn, sText_Trainer2WithdrewPkmn) are still masculine; they were not part of this review.
+
+*Changed:* `src/battle_message.c`
 
 ## Proposed names
 
