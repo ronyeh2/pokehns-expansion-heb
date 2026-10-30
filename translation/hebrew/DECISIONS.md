@@ -65,6 +65,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q123](#q123) | The opponent send-out and about-to-send battle lines use the masculine 'שלח'/'עומד' for every trainer, so Karen and the female leaders read… | A. Reword so the verb agrees with the Pokémon: 'הפוקימון של X, Y, יוצא לקרב!' | changed |
 | [Q124](#q124) | The line for an opponent using an item, '{X} השתמש ב{ITEM}!', uses the masculine verb for every trainer, so Rocket Admin Ariana reads… | A. No verb: '{X}: שימוש ב{ITEM}!' | changed |
 | [Q125](#q125) | Lines that put a count before an item name print the singular for every item without a Hebrew plural name ('זרקת 3 שיקוי.', 'לזרוק כמה נוצת שרירים?')… | A. A Hebrew plural for every stackable item, with the Pyramid bag and the put-away lines following | changed |
+| [Q126](#q126) | The NORMAL contest rank has three names in one contest ('דרגה רגילה', 'בדרגת רגיל', 'דרגת בסיס'), and the MC's 'בדרגת רגיל' is not Hebrew. | A. 'נורמל', a rank name like סופר / היפר / מאסטר, wherever the rank is named | changed |
 
 ## K1
 
@@ -1447,6 +1448,36 @@ The put-away lines dropped 'את'. 'את' marks a definite object. A singular it
 *Changed:* `src/data/items.h`, `src/battle_pyramid_bag.c`, `data/text/obtain_item.inc`, `data/scripts/berry_tree.inc`, `tools/hebrew/plurals.py`, `tools/hebrew/tests/test_plurals.py`
 
 *Glossary:* 525 `item_plural` rows (notes end in Q125)
+
+## Q126
+
+**Question.** One NORMAL-rank contest calls its rank three different things. The lobby rank menu says 'דרגה רגילה', the MC says 'מנחה: שלום! בדרגת רגיל,' and the results title says 'דרגת בסיס'. The MC line joins the construct noun דרגת to the bare masculine adjective רגיל, which is not Hebrew. סופר, היפר and מאסטר read correctly in the same slot because they are names. Two rewordings of the MC line were rejected: 'הדרגה: {STR_VAR_3}.' puts the feminine noun next to the masculine רגיל, and 'בדרגת ”{STR_VAR_3}”,' quotes a name, which STYLE §3 does not do.
+
+*Source:* screen review, round 9 (contest opponents and COOL ranks), confirmed by two reviewers. Rounds 5 (R6) and 6 (C4) proposed rewordings of the MC line, and neither was merged.
+
+**Analysis.** These are the places that name the NORMAL rank (English 'NORMAL', 'NORMAL RANK', 'Normal Rank'):
+- gText_Normal (src/strings.c) reaches two lines through gStdStrings[STDSTRING_NORMAL]. One is the MC's line (data/scripts/contest_hall.inc ContestHall_Text_GettingStartedParticipantsAsFollows, 'בדרגת {STR_VAR_3},'). The other is the BRAVO TRAINER TV show (src/tv.c CopyContestRankToStringVar; data/text/tv.inc gTVBravoTrainerText00, 'מתהדר בדרגת {STR_VAR_3}'). No H&S map runs EventScript_TV, so the show is not seen in H&S. Both lines put the rank after the construct דרגת, so the rank has to be a name.
+- The lobby rank menu (MultichoiceList_ContestRank, src/data/script_menu.h) says 'דרגה רגילה'.
+- The lobby painting caption (sContestRankNames, src/contest_painting.c) says 'בדרגה רגילה'.
+- The ribbon description (gRibbonDescriptionPart2_NormalRank, src/data/text/ribbon_descriptions.h) says 'מנצח בדרגה רגילה!'.
+- The receptionist's rank explanation (LilycoveCity_ContestLobby_Text_ExplainContestRanks, contest_hall.inc) says 'רגילה, סופר, היפר ומאסטר' and 'בדרגה הרגילה' twice.
+- The results title graphic (graphics/contest/results_screen/tiles.png) says 'דרגת בסיס'. The game builds the title from tiles as [rank][RANK][category][CONTEST], so the rank word follows the construct דרגת there too. The graphics notes chose בסיס because that construct needs a noun.
+
+gText_Normal has one other user, and it is not the contest rank. The FRLG Game Corner photo printer's tint menu (sMultichoiceList_TrainerCardIconTint, MULTI_TRAINER_CARD_ICON_TINT) uses it for the plain print. The menu's only script, data/scripts/trainer_card_frlg.inc:14, is assembled only when IS_FRLG (data/event_scripts.s:605), but the list is in the ROM. VerdanturfTown_ContestHall_Text_NormalRankStage is unused and still in English.
+
+The English and the Japanese (ノーマル, スーパー, ハイパー, マスター) name all four ranks the same way. SUPER, HYPER and MASTER are transliterated everywhere in the tree (סופר, היפר, מאסטר). No glossary row covered any rank.
+
+| Option | How | Risk |
+|---|---|---|
+| A. 'נורמל', a rank name like the other three | Set gText_Normal to 'נורמל', so the MC and TV lines read 'בדרגת נורמל'. The menu, the painting caption, the ribbon description and the rank explanation say 'דרגת נורמל' / 'בדרגת נורמל'. The results title is redrawn as 'דרגת נורמל' in the title's own S11 letters. The tint menu keeps 'רגיל' with its own string under TEXT_RTL. Add glossary rows for the four ranks. | Low. Six strings, one graphic and a TEXT_RTL entry in a data table, with no script or layout change. Every new string is narrower than its MASTER sibling. drift.py reports STRUCTURE for src/data/script_menu.h until the same entry, with an English placeholder, is on he/renderer. |
+| B. 'בסיס' everywhere, the title graphic's word | Set gText_Normal to 'בסיס' and the strings to 'דרגת בסיס'. The graphic does not change. | Low effort. But it makes the first rank the only translated name of the four, and בסיס ('base', 'basic') says something the English NORMAL does not. |
+| C. Reword the lines so an adjective fits | For example 'הדרגה: {STR_VAR_3}.', or quotation marks. | Rejected twice already: the gender clash with רגיל, and quoting a name breaks STYLE §3. The TV line would need the same treatment. |
+
+**Chosen:** A. It treats the four ranks alike, as the English and the Japanese do. Every rank string then has one form, דרגת + name, that is grammatical for all four ranks: 'דרגת נורמל', 'בדרגת נורמל', 'מנצח בדרגת נורמל!', 'תחרות מגניבות בדרגת נורמל'. The word רגיל keeps its meaning wherever it is not the contest rank: TYPE_NORMAL, ordinary use and the photo printer's plain print.
+
+*Changed:* `src/strings.c`, `src/data/script_menu.h`, `src/contest_painting.c`, `src/data/text/ribbon_descriptions.h`, `data/scripts/contest_hall.inc`, `graphics/contest/results_screen/tiles.png`
+
+*Glossary:* `TERM_CONTEST_RANK_NORMAL`, `TERM_CONTEST_RANK_SUPER`, `TERM_CONTEST_RANK_HYPER`, `TERM_CONTEST_RANK_MASTER`
 
 ## Proposed names
 
