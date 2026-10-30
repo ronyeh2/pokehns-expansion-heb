@@ -7066,3 +7066,7 @@ term,TERM_WILD_ENCOUNTER,wild (indefinite: encounter intros 'You encountered a w
 term,TERM_ID_NO_SHORT,IDNo.,,מס',proposed,see DECISIONS.md K2
 term,TERM_STATUS_FAINTED_TAG,FNT (status tag),,מעולף,proposed,see DECISIONS.md K5
 term,TERM_LUCKY_CHANNEL,LUCKY CHANNEL,,ערוץ המזל,proposed,"the radio station: its Pokégear name (src/data/text/radio_strings.h:14) and Buena's password (:247); the Goldenrod Dept. Store 6F lass names it too"
+term,TERM_CONTEST_RANK_NORMAL,NORMAL (contest rank),,נורמל,proposed,"a rank name like the other three, so every rank string reads דרגת X: דרגת נורמל, בדרגת נורמל (lobby menu, MC, results title, ribbons, painting, TV); the word רגיל stays for TYPE_NORMAL and ordinary uses; see DECISIONS.md Q126"
+term,TERM_CONTEST_RANK_SUPER,SUPER (contest rank),,סופר,proposed,"as used since the first translation (דרגת סופר); see DECISIONS.md Q126"
+term,TERM_CONTEST_RANK_HYPER,HYPER (contest rank),,היפר,proposed,"as used since the first translation (דרגת היפר); see DECISIONS.md Q126"
+term,TERM_CONTEST_RANK_MASTER,MASTER (contest rank),,מאסטר,proposed,"as used since the first translation (דרגת מאסטר); see DECISIONS.md Q126"
