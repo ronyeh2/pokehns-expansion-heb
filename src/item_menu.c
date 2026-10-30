@@ -516,7 +516,13 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
 {
     [ITEMWIN_1x1] = {
         .bg = 1,
+#if TEXT_RTL
+        // Mirrored inside the item list, as the quantity and YES/NO windows, so it covers the
+        // quantity column of the bottom rows rather than their right-aligned names.
+        .tilemapLeft = 15,
+#else
         .tilemapLeft = 22,
+#endif
         .tilemapTop = 17,
         .width = 7,
         .height = 2,
@@ -525,7 +531,11 @@ static const struct WindowTemplate sContextMenuWindowTemplates[] =
     },
     [ITEMWIN_1x2] = {
         .bg = 1,
+#if TEXT_RTL
+        .tilemapLeft = 15, // Mirrored inside the item list, as ITEMWIN_1x1
+#else
         .tilemapLeft = 22,
+#endif
         .tilemapTop = 15,
         .width = 7,
         .height = 4,
