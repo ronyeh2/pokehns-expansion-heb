@@ -72,7 +72,7 @@ BerryTree_Text_Hns_Picked:
 
 BerryTree_Text_Hns_BagFull:
 	.string "כיס הפירות בתיק מלא.\p"
-	.string "אי אפשר היה לקחת את {STR_VAR_1}.$"
+	.string "אי אפשר היה לקחת {STR_VAR_1}.$"
 
 BerryTree_Text_Hns_Sprouted:
 	.string "The berry tree suddenly sprouted!$"
