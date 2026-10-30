@@ -4630,6 +4630,8 @@ item_plural,ITEM_REMEDY,Remedies,,מנות מרפא,proposed,"meaning: מרפא 
 item_plural,ITEM_FINE_REMEDY,Fine Remedies,,מנות מרפא משובח,proposed,as REMEDIES מנות מרפא; singular: מרפא משובח (item_04); reviewed
 item_plural,ITEM_SUPERB_REMEDY,Superb Remedies,,מנות מרפא עילאי,proposed,as REMEDIES מנות מרפא; singular: מרפא עילאי (item_04); reviewed
 item_plural,ITEM_TWICE_SPICED_RADISH,Twice-Spiced Radishes,,צנונים בתיבול כפול,proposed,plural head noun; singular: צנון בתיבול כפול (item_04); reviewed
+item_plural,ITEM_POKE_BALL,POKé BALLs,,פוקיבולים,proposed,"plural head noun, the form the dialogue already uses (AzaleaTown_KurtsHouse_hns, AzaleaTown_Mart_hns); English adds s (no pluralName); shown after a count in the aide's 5 Poké Balls (NewBarkTown_Lab_hns) and in the bag and PC quantity lines; singular: פוקיבול (inherited)"
+item_plural,ITEM_SPORT_BALL,SPORT BALLs,,כדורי תחרות,proposed,"construct plural כדורי, as the bag pocket כדורי פוקי; the officer already says כדורי התחרות (Gate_NationalPark_hns); English adds s (no pluralName); shown after a count in the Bug-Catching Contest's 30 Sport Balls (Gate_NationalPark_hns); singular: כדור תחרות"
 nature,NATURE_HARDY,HARDY,קשוח,קשוח,inherited,FR match: constant
 nature,NATURE_LONELY,LONELY,בודד,בודד,inherited,FR match: constant
 nature,NATURE_BRAVE,BRAVE,אמיץ,אמיץ,inherited,FR match: constant
@@ -4896,7 +4898,7 @@ trainer_class,TRAINER_CLASS_COOLTRAINER_HNS,COOLTRAINER,מאמן על,מאמן �
 trainer_class,TRAINER_CLASS_DOME_ACE_HNS,DOME ACE,,אס הכיפה,proposed,same as TRAINER_CLASS_DOME_ACE; meaning; male (Tucker); ACE = אס as MOVE_AERIAL_ACE אס אווירי; DOME = כיפה as ITEM_DOME_FOSSIL מאובן כיפה; reviewed
 trainer_class,TRAINER_CLASS_DRAGON_TAMER_HNS,DRAGON TAMER,מאלף דרקונים,מאלף דרקונים,inherited,FR match: English via TRAINER_CLASS_DRAGON_TAMER
 trainer_class,TRAINER_CLASS_ELITE_FOUR_HNS,ELITE FOUR,רביעיית עלית,רביעיית עלית,inherited,FR match: English via TRAINER_CLASS_RS_ELITE_FOUR
-trainer_class,TRAINER_CLASS_EXPERT_HNS,EXPERT,מומחה,מומחה,inherited,FR match: English via TRAINER_CLASS_EXPERT
+trainer_class,TRAINER_CLASS_EXPERT_HNS,EXPERT,מומחה,מומחית,proposed,"female only (Pic: Expert F; its only trainers are COLETTE and SHIRLEY, HGSS Teachers who speak of themselves in the feminine); the FR row is the mixed RS EXPERT class, so the class takes its own gender (STYLE §2), as TUBER_F שחיינית; TRAINER_CLASS_EXPERT keeps מומחה"
 trainer_class,TRAINER_CLASS_FACTORY_HEAD_HNS,FACTORY HEAD,,ראש המפעל,proposed,"same as TRAINER_CLASS_FACTORY_HEAD; meaning; male (Noland); FACTORY = מפעל as MAPSEC_POWER_PLANT מפעל החשמל; ראש, not מנהל, because ADMIN = מנהל; reviewed"
 trainer_class,TRAINER_CLASS_FIREBREATHER_HNS,FIREBREATHER,,יורק אש,proposed,meaning (circus fire-breather); male (10 trainers); FIRE = אש; distinct from KINDLER מציתן; reviewed
 trainer_class,TRAINER_CLASS_FISHERMAN_HNS,FISHERMAN,דייג,דייג,inherited,FR match: English via TRAINER_CLASS_RS_FISHERMAN
@@ -4918,7 +4920,7 @@ trainer_class,TRAINER_CLASS_PIKE_QUEEN_HNS,PIKE QUEEN,,מלכת השביל,propo
 trainer_class,TRAINER_CLASS_PKMN_TRAINER_1_HNS,{PKMN} TRAINER,מאמן פוקימון,מאמן פוקימון,inherited,FR match: English via TRAINER_CLASS_NONE
 trainer_class,TRAINER_CLASS_POKEFAN_HNS,POKéFAN,פוקיפאן,פוקיפאן,inherited,FR match: English via TRAINER_CLASS_POKEFAN
 trainer_class,TRAINER_CLASS_POKEMANIAC_HNS,POKéMANIAC,פוקימאניאק,פוקימאניאק,inherited,FR match: English via TRAINER_CLASS_RS_POKEMANIAC
-trainer_class,TRAINER_CLASS_PSYCHIC_HNS,PSYCHIC,טלפת,טלפת,inherited,FR match: English via TRAINER_CLASS_RS_PSYCHIC
+trainer_class,TRAINER_CLASS_PSYCHIC_HNS,PSYCHIC,טלפת,טלפתית,proposed,"female only (Pic: Psychic F; its only trainer is DORIS, the Saffron Gym Medium); the male psychics use TRAINER_CLASS_PSYCHIC_M_HNS טלפת; the FR row is the mixed RS PSYCHIC class, so the class takes its own gender (STYLE §2), as TUBER_F שחיינית"
 trainer_class,TRAINER_CLASS_PSYCHIC_M_HNS,PSYCHIC,טלפת,טלפת,inherited,FR match: English via TRAINER_CLASS_RS_PSYCHIC
 trainer_class,TRAINER_CLASS_RIVAL_HNS,{PKMN} TRAINER,מאמן פוקימון,מאמן פוקימון,inherited,FR match: English via TRAINER_CLASS_NONE
 trainer_class,TRAINER_CLASS_ROCKET_ADMIN_HNS,ROCKET ADMIN,,מנהל רוקט,proposed,"meaning; ADMIN = מנהל as AQUA/MAGMA ADMIN מנהל אקווה/מגמה; ROCKET = רוקט (צוות רוקט); mixed: Archer, Proton, Petrel, Giovanni male, Ariana female (מנהלת רוקט in her dialogue); reviewed"
