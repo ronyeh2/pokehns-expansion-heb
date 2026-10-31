@@ -742,7 +742,20 @@ static void Mailbox_ProcessInput(u8 taskId)
 static void Mailbox_PrintWhatToDoWithPlayerMailText(u8 taskId)
 {
     StringCopy(gStringVar1, gSaveBlock1Ptr->mail[gPlayerPCItemPageInfo.itemsAbove + PARTY_SIZE + gPlayerPCItemPageInfo.cursorPos].playerName);
+#if TEXT_RTL
+    // As in the mailbox list, a short sender name keeps the normal font instead of the Japanese
+    // one; the padding of a full-length name is trimmed as before.
+    {
+        u8 *end;
+
+        StripExtCtrlCodes(gStringVar1);
+        end = gStringVar1 + StringLength(gStringVar1);
+        while (end > gStringVar1 && end[-1] == CHAR_SPACE)
+            *--end = EOS;
+    }
+#else
     ConvertInternationalPlayerNameStripChar(gStringVar1, CHAR_SPACE);
+#endif
     StringExpandPlaceholders(gStringVar4, gText_WhatToDoWithVar1sMail);
     DisplayItemMessageOnField(taskId, gStringVar4, Mailbox_PrintMailOptions);
 }

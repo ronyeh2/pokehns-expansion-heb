@@ -248,16 +248,24 @@ static u8 UNUSED MailboxMenu_GetWindowId(u8 windowIdx)
 static void MailboxMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
 {
     u8 buffer[30];
+#if !TEXT_RTL
     u16 length;
+#endif
 
     if (itemId == LIST_CANCEL)
         return;
 
     StringCopy(buffer, gSaveBlock1Ptr->mail[PARTY_SIZE + itemId].playerName);
+#if TEXT_RTL
+    // A sender name shorter than 6 letters would switch to the Japanese font, which has no Hebrew
+    // letters; it stays in the normal font, as on the read-mail screen.
+    StripExtCtrlCodes(buffer);
+#else
     ConvertInternationalPlayerName(buffer);
     length = StringLength(buffer);
     if (length < PLAYER_NAME_LENGTH - 1)
         ConvertInternationalString(buffer, LANGUAGE_JAPANESE);
+#endif
     AddTextPrinterParameterized4(windowId, FONT_NORMAL, 8, y, 0, 0, sPlayerNameTextColors, TEXT_SKIP_DRAW, buffer);
 }
 
