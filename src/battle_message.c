@@ -1423,7 +1423,13 @@ const u8 gText_WhatWillPkmnDo2[] = _("What will\n{B_PLAYER_NAME} do?");
 const u8 gText_WhatWillWallyDo[] = _("What will\nWALLY do?");
 const u8 gText_LinkStandby[] = _("{PAUSE 16}Link standby…");
 const u8 gText_BattleMenu[] = _("BATTLE{CLEAR_TO 56}BAG\nPOKéMON{CLEAR_TO 56}RUN");
+#if TEXT_RTL
+// The second item's Hebrew word is 41 px in FONT_NORMAL, 1 px more than the 40 px from CLEAR_TO 56
+// to the edge of the 96-px window: that item is drawn in FONT_NARROW (39 px).
+const u8 gText_SafariZoneMenu[] = _("BALL{CLEAR_TO 56}{FONT_NARROW}{POKEBLOCK}{FONT_NORMAL}\nGO NEAR{CLEAR_TO 56}RUN");
+#else
 const u8 gText_SafariZoneMenu[] = _("BALL{CLEAR_TO 56}{POKEBLOCK}\nGO NEAR{CLEAR_TO 56}RUN");
+#endif
 const u8 gText_SafariZoneMenuFrlg[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}BALL{CLEAR_TO 56}BAIT\nROCK{CLEAR_TO 56}RUN");
 const u8 gText_MoveInterfacePP[] = _("PP ");
 const u8 gText_MoveInterfaceType[] = _("TYPE/");
