@@ -54,15 +54,16 @@ Where they disagree, the glossary wins for names and this file wins for everythi
   (`לבחור ב”מנוחה”`) or a name being explained (`התקצר ל”מנוחה”`). Descriptions and menus
   (move, item and Pokédex descriptions, the challenge menu) quote a move cited inside a
   sentence: `מהלכי טעינה כמו ”קרן על”`.
-- An ability's name is a noun or a noun phrase, never a bare adjective, participle or adverb. Battle
-  lines name it after היכולת (§7) and the Ability Capsule says `השתנתה ל…`, where `היכולת סטטי`,
-  `היכולת גמיש` or `בזכות היכולת פשוט` read as ordinary words, not as a name (the owner's report,
-  `DECISIONS.md` Q164; Q165). So STATIC is `חשמל סטטי`, STURDY `איתנות`, LIMBER `גמישות`, RATTLED `בהלה`,
-  AS ONE `אחדות`. An agent noun is a noun, as the English one is (`צלף`, `מרפא`, `שובר תבניות`). The
-  adjective phrases still in the glossary (`אטום לרעש`, `חסין חום`, `חסין קליעים`, `מורט עצבים`, `שווה זהב`)
-  and `דווקאי` wait for the owner (Q165, "Not renamed here"). A rename starts in the glossary and goes on to
-  the Easy Chat word, the hints that quote the word and the descriptions that cite the name (HANDOFF
-  section 3.5).
+- An ability's name is a noun or a noun phrase, not a bare adjective, participle or adverb, unless the
+  owner decided otherwise (FLUFFY, below). Battle lines name it after היכולת (§7) and the Ability Capsule
+  says `השתנתה ל…`, where `היכולת סטטי`, `היכולת גמיש` or `בזכות היכולת פשוט` read as ordinary words, not
+  as a name (the owner's report, `DECISIONS.md` Q164; Q165). So STATIC is `חשמל סטטי`, STURDY `איתנות`,
+  LIMBER `גמישות`, RATTLED `בהלה`, AS ONE `אחדות`. An agent noun is a noun, as the English one is (`צלף`,
+  `מרפא`, `שובר תבניות`). FLUFFY keeps the adjective `פרוותי`: Q165 renamed it, and the owner kept the old
+  name (Q173). The adjective phrases still in the glossary (`אטום לרעש`, `חסין חום`, `חסין קליעים`,
+  `מורט עצבים`, `שווה זהב`) and `דווקאי` wait for the owner (Q165, "Not renamed here"). A rename starts in
+  the glossary and goes on to the Easy Chat word, the hints that quote the word and the descriptions that
+  cite the name (HANDOFF section 3.5).
 
 ## 4. Characters you may use
 
@@ -161,7 +162,7 @@ Only characters in `charmap.txt`. In particular:
   after it.
 - An ability named inside a battle line follows the noun היכולת: `{B_SCR_NAME_WITH_PREFIX} הרדים בעזרת היכולת
   {B_BUFF1} את {B_EFF_NAME_WITH_PREFIX2}!`, `מוגן בזכות היכולת {B_DEF_ABILITY}`, `להפעיל את היכולת {B_SCR_ABILITY}`
-  (`DECISIONS.md` Q162, the owner's report on Static). Ability names are nouns (§3), many of them ordinary
+  (`DECISIONS.md` Q162, the owner's report on Static). Ability names are nouns (§3, with its exceptions), many of them ordinary
   words (חשמל סטטי, איתנות, הפחדה), and a bare one reads as the word. The Pokémon keeps its English place
   before the ability, so never `ה{ability} של {X}`. Where `בעזרת היכולת` or `בזכות היכולת` would cost a screen
   more than English with the longest names or with real names, write `ביכולת` (the Poison Point, Damp,
@@ -240,7 +241,8 @@ and check it against this list before it ships (`DECISIONS.md` Q159-Q172).
    became חשמל סטטי, על-קולי גל על-קולי, רכז אנרגיה ריכוז אנרגיה, שנה צורה שינוי צורה (Q167). Read
    a move, item or ability name inside its battle line: 'השתמש ב{move}!' must not turn into another
    word (בעל-קולי, בשנה צורה), and a name must not be an everyday word with another meaning
-   (הפלה, Q167; singular משקף, Q168).
+   (הפלה, Q167; singular משקף, Q168). The ability FLUFFY keeps the adjective פרוותי by the owner's
+   decision (Q173), and the adjective names §3 lists wait for the owner.
 4. **No article or possessive glued to a name.** Not 'הסטטי של פיקאצ'ו': the Pokémon keeps its
    English place and the name follows its noun ('שיתק ביכולת חשמל סטטי את…', Q162, Q164). A definite
    adjective in construct reads as a person: 'מהלך העל-קולי של זובאט' became 'הגל העל-קולי של זובאט' (Q167).

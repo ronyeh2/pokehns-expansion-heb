@@ -2805,7 +2805,7 @@ Nothing else differs (`<private>/scratch/screens/r32/static-rename/tours_out/`).
 
 **Chosen:** the owner's decision: BIND לפיתה, METRONOME מטרונום, FLUFFY פרוותי.
 
-*Changed:* `src/data/moves_info.h`, `src/data/items.h`, `src/data/abilities.h`, `src/battle_debug.c`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `data/text/move_tutors.inc`, `data/maps/VermilionCity_FanClub_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`
+*Changed:* `src/data/moves_info.h`, `src/data/items.h`, `src/data/abilities.h`, `src/battle_debug.c`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `data/text/move_tutors.inc`, `data/maps/VermilionCity_FanClub_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md` (§3, §7 and §11 name FLUFFY as the owner's exception to the noun rule)
 
 *Glossary:* `MOVE_BIND`, `MOVE_METRONOME`, `ITEM_METRONOME`, `ITEM_BINDING_BAND` (and their plural rows), `ABILITY_FLUFFY`
 
