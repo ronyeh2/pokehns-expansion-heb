@@ -2320,7 +2320,7 @@ move,MOVE_GUST,GUST,רוח פרצים,רוח פרצים,inherited,FR match: cons
 move,MOVE_WING_ATTACK,WING ATTACK,מכת כנף,מכת כנף,inherited,FR match: constant
 move,MOVE_WHIRLWIND,WHIRLWIND,סופה,סופה,inherited,FR match: constant
 move,MOVE_FLY,FLY,תעופה,תעופה,inherited,FR match: constant
-move,MOVE_BIND,BIND,עקידה,עקידה,inherited,FR match: constant
+move,MOVE_BIND,BIND,עקידה,לפיתה,proposed,"a tight squeezing grip, as the Pokédex's כוח לפיתה (DECISIONS.md Q173): עקידה is the Binding of Isaac, not a squeeze; apart from WRAP עיטוף, CLAMP הידוק, CONSTRICT כיווץ and WRING OUT סחיטה; FireRed has עקידה"
 move,MOVE_SLAM,SLAM,מהלומה,מהלומה,inherited,FR match: constant
 move,MOVE_VINE_WHIP,VINE WHIP,שוט גפן,שוט גפן,inherited,FR match: constant
 move,MOVE_STOMP,STOMP,רקיעה,רקיעה,inherited,FR match: constant
@@ -2418,7 +2418,7 @@ move,MOVE_HAZE,HAZE,אובך,אובך,inherited,FR match: constant
 move,MOVE_REFLECT,REFLECT,שיקוף,שיקוף,inherited,FR match: constant
 move,MOVE_FOCUS_ENERGY,FOCUS ENERGY,רכזאנרגיה,ריכוז אנרגיה,proposed,"the noun ריכוז as in FOCUS PUNCH מכת ריכוז and FOCUS BLAST פיצוץ ריכוז (DECISIONS.md Q167): after ב the imperative רכז read as רַכָּז, 'השתמש ברכז אנרגיה' = used the energy coordinator; FireRed has רכזאנרגיה (joined for its 64 px cell, FR 091d397f4); 12 bytes, 53 px narrow in the 64 px battle cell"
 move,MOVE_BIDE,BIDE,סבלנות,סבלנות,inherited,FR match: constant
-move,MOVE_METRONOME,METRONOME,פעמן,פעמן,inherited,FR match: constant
+move,MOVE_METRONOME,METRONOME,פעמן,מטרונום,proposed,"the music device the move is named after; the finger swings like its arm (DECISIONS.md Q173): פעמן is not a Hebrew word (a bell is פעמון); FireRed has פעמן"
 move,MOVE_MIRROR_MOVE,MIRROR MOVE,העתקתמהלך,העתקת מהלך,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 56 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
 move,MOVE_SELF_DESTRUCT,SELF-DESTRUCT,השמדעצמית,פיצוץ עצמי,proposed,FireRed now פיצוץ עצמי (DECISIONS Q140 (FireRed naming conventions))
 move,MOVE_EGG_BOMB,EGG BOMB,פצצת ביצה,פצצת ביצה,inherited,FR match: constant
@@ -3453,7 +3453,7 @@ ability,ABILITY_QUEENLY_MAJESTY,QUEENLY MAJESTY,,הוד מלכותה,proposed,"m
 ability,ABILITY_INNARDS_OUT,INNARDS OUT,,פליטת קרביים,proposed,meaning: expelling innards (Pyukumuku); literal קרביים בחוץ reads oddly; reviewed
 ability,ABILITY_DANCER,DANCER,,רקדן,proposed,meaning; reviewed
 ability,ABILITY_BATTERY,BATTERY,,סוללה,proposed,meaning; reviewed
-ability,ABILITY_FLUFFY,FLUFFY,,פרווה רכה,proposed,meaning: soft fur (Stufful line); renamed from פרוותי (DECISIONS Q165): a bare adjective; keeps פלומה free for COTTON DOWN
+ability,ABILITY_FLUFFY,FLUFFY,,פרוותי,proposed,meaning: furry/fluffy (Stufful line); the owner keeps it (DECISIONS.md Q173); keeps פלומה free for COTTON DOWN; reviewed
 ability,ABILITY_DAZZLING,DAZZLING,,סנוור,proposed,meaning; renamed from מסנוור (DECISIONS Q165): a bare participle
 ability,ABILITY_SOUL_HEART,SOUL-HEART,,לב-נשמה,proposed,meaning; hyphen kept as in English; reviewed
 ability,ABILITY_TANGLING_HAIR,TANGLING HAIR,,שיער סבוך,proposed,"meaning: tangled hair; TANGLED FEET (ability_01) may also use סבוך, different English so no clash; reviewed"
@@ -4075,7 +4075,7 @@ item,ITEM_LIFE_ORB,LIFE ORB,,גולת חיים,proposed,meaning; ORB גולה; r
 item,ITEM_POWER_HERB,POWER HERB,,עשב כוח,proposed,"meaning; HERB chunk עשב (ITEM_WHITE_HERB, ITEM_MENTAL_HERB); POWER כוח; reviewed"
 item,ITEM_FOCUS_SASH,FOCUS SASH,,אבנט ריכוז,proposed,meaning; FOCUS chunk ריכוז from ITEM_FOCUS_BAND רצועת ריכוז; sash = אבנט; reviewed
 item,ITEM_ZOOM_LENS,ZOOM LENS,,עדשת זום,proposed,meaning: zoom lens = עדשת זום (standard Hebrew); LENS עדשה; reviewed
-item,ITEM_METRONOME,METRONOME,,פעמן,proposed,"chunk shared with MOVE_METRONOME פעמן (inherited, same English word); the literal word would be מטרונום; reviewed"
+item,ITEM_METRONOME,METRONOME,,מטרונום,proposed,"the same word as MOVE_METRONOME מטרונום (DECISIONS.md Q173); reviewed"
 item,ITEM_IRON_BALL,IRON BALL,,כדור ברזל,proposed,"meaning; IRON chunk ברזל (ITEM_IRON, MOVE_IRON_TAIL); BALL כדור (ITEM_LIGHT_BALL); reviewed"
 item,ITEM_LAGGING_TAIL,LAGGING TAIL,,זנב איטי,proposed,meaning: makes the holder move last; TAIL chunk זנב (ITEM_FLUFFY_TAIL); reviewed
 item,ITEM_DESTINY_KNOT,DESTINY KNOT,,קשר גורל,proposed,meaning; DESTINY chunk גורל from MOVE_DESTINY_BOND ברית גורל; reviewed
@@ -4092,7 +4092,7 @@ item,ITEM_ROCKY_HELMET,ROCKY HELMET,,קסדה סלעית,proposed,meaning; revie
 item,ITEM_AIR_BALLOON,AIR BALLOON,,בלון אוויר,proposed,meaning; reviewed
 item,ITEM_RED_CARD,RED CARD,,כרטיס אדום,proposed,meaning (the football term); reviewed
 item,ITEM_RING_TARGET,RING TARGET,,טבעת מטרה,proposed,meaning; reviewed
-item,ITEM_BINDING_BAND,BINDING BAND,,רצועת עקידה,proposed,meaning: boosts binding moves; BIND chunk from MOVE_BIND עקידה; BAND רצועה; reviewed
+item,ITEM_BINDING_BAND,BINDING BAND,,רצועת לפיתה,proposed,meaning: boosts binding moves; BIND chunk from MOVE_BIND לפיתה (DECISIONS.md Q173); BAND רצועה; reviewed
 item,ITEM_EJECT_BUTTON,EJECT BUTTON,,כפתור פליטה,proposed,meaning; EJECT chunk פליטה shared with ITEM_EJECT_PACK; reviewed
 item,ITEM_WEAKNESS_POLICY,WEAKNESS POLICY,,פוליסת חולשה,proposed,"meaning: policy = insurance policy, פוליסה; reviewed"
 item,ITEM_ASSAULT_VEST,ASSAULT VEST,,אפוד תקיפה,proposed,meaning; reviewed
@@ -5072,7 +5072,7 @@ item_plural,ITEM_EXPERT_BELT,EXPERT BELTs,,חגורות מומחה,proposed,cons
 item_plural,ITEM_LIGHT_CLAY,LIGHT CLAYs,,חימר אור,proposed,same as singular; mass noun; English adds s (no pluralName); singular: חימר אור; Q125
 item_plural,ITEM_LIFE_ORB,LIFE ORBs,,גולות חיים,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גולת חיים; Q125
 item_plural,ITEM_POWER_HERB,POWER HERBs,,עשבי כוח,proposed,construct plural of the head noun; English adds s (no pluralName); singular: עשב כוח; Q125
-item_plural,ITEM_METRONOME,METRONOMEs,,פעמנים,proposed,plural head noun; English adds s (no pluralName); singular: פעמן; Q125
+item_plural,ITEM_METRONOME,METRONOMEs,,מטרונומים,proposed,plural head noun; English adds s (no pluralName); singular: מטרונום; Q125, Q173
 item_plural,ITEM_IRON_BALL,IRON BALLs,,כדורי ברזל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כדור ברזל; Q125
 item_plural,ITEM_LAGGING_TAIL,LAGGING TAILs,,זנבות איטיים,proposed,noun + adjective plural; English adds s (no pluralName); singular: זנב איטי; Q125
 item_plural,ITEM_DESTINY_KNOT,DESTINY KNOTs,,קשרי גורל,proposed,construct plural of the head noun; English adds s (no pluralName); singular: קשר גורל; Q125
@@ -5089,7 +5089,7 @@ item_plural,ITEM_ROCKY_HELMET,ROCKY HELMETs,,קסדות סלעיות,proposed,no
 item_plural,ITEM_AIR_BALLOON,AIR BALLOONs,,בלוני אוויר,proposed,construct plural of the head noun; English adds s (no pluralName); singular: בלון אוויר; Q125
 item_plural,ITEM_RED_CARD,RED CARDs,,כרטיסים אדומים,proposed,noun + adjective plural; English adds s (no pluralName); singular: כרטיס אדום; Q125
 item_plural,ITEM_RING_TARGET,RING TARGETs,,טבעות מטרה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: טבעת מטרה; Q125
-item_plural,ITEM_BINDING_BAND,BINDING BANDs,,רצועות עקידה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: רצועת עקידה; Q125
+item_plural,ITEM_BINDING_BAND,BINDING BANDs,,רצועות לפיתה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: רצועת לפיתה; Q125, Q173
 item_plural,ITEM_EJECT_BUTTON,EJECT BUTTONs,,כפתורי פליטה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: כפתור פליטה; Q125
 item_plural,ITEM_ASSAULT_VEST,ASSAULT VESTs,,אפודי תקיפה,proposed,construct plural of the head noun; English adds s (no pluralName); singular: אפוד תקיפה; Q125
 item_plural,ITEM_ADRENALINE_ORB,ADRENALINE ORBs,,גולות אדרנלין,proposed,construct plural of the head noun; English adds s (no pluralName); singular: גולת אדרנלין; Q125
