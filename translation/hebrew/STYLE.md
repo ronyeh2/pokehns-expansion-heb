@@ -223,8 +223,9 @@ and check it against this list before it ships (`DECISIONS.md` Q159-Q172).
    פוקיבול (Q159); the pocket is פוכדורים, not כדורי פוקי (Q161). Proper names of species, people
    and places still follow the glossary and the transliteration rules.
 2. **No technical or meta words a player would not say:** נתון, ערך, פרמטר, סטטוס, מצב-X, יחס,
-   'בעיית מצב'. The stat line says 'הדיוק ירד', not 'הנתון דיוק ירד' (Q160); a vitamin gives
-   'חיזוק ל{stat}', not 'נתון הבסיס' (Q170); the Pokédex sorts 'מהכבד לקל', not 'מצב הכבד ביותר'.
+   'נרפא מבעיית המצב שלו' where the line can say נרפא. The stat line says 'הדיוק ירד', not
+   'הנתון דיוק ירד' (Q160); a vitamin gives 'חיזוק ל{stat}', not 'נתון הבסיס' (Q170); the Pokédex
+   sorts 'מהכבד לקל', not 'מצב הכבד ביותר'.
 3. **A name must read as a name.** A bare adjective, an imperative or a calque does not: סטטי
    became חשמל סטטי, על-קולי גל על-קולי, רכז אנרגיה ריכוז אנרגיה, שנה צורה שינוי צורה (Q167). Read
    a move, item or ability name inside its battle line: 'השתמש ב{move}!' must not turn into another
@@ -241,7 +242,7 @@ and check it against this list before it ships (`DECISIONS.md` Q159-Q172).
    letter (Q163). Lay a battle line out with the longest names and a 12-letter nickname.
 7. **What the player sees most matters most:** battles, the bag, menus, the Pokémon Center, Mart and
    PC, and the early story. One verb for one action everywhere: HP and PP that go up say עלו in the
-   field and in battle (Q166), and a cure says נרפא.
+   field and in battle (Q166), and an item or an ability cures a status with נרפא מה{status}.
 8. **A child understands it on first read.** No English proverb or idiom translated word for word
    ('a watched pot', 'a good Samaritan': Q172), no form label in speech ('עלה במספר רמות: 3',
    Q171), no literary word where a spoken one exists (לקדמותו). A direct object that is a name
