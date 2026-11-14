@@ -104,7 +104,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q162](#q162) | Static's line read 'פיקאצ'ו שיתק בעזרת סטטי את…': an ability's name bare inside a battle line reads as an ordinary word (סטטי, איתן, תמים). | A. היכולת before the name in every battle line that names an ability inside the sentence ('בעזרת היכולת סטטי'); ביכולת where the longer form costs a screen | changed |
 | [Q163](#q163) | The same line's last view was wiped 8 frames after it completed: two manual scrolls where English shows one auto-wrapped view. | A. No manual break in a battle line where English has none (22 lines) | changed |
 | [Q164](#q164) | The owner: the ability 'סטטי' does not sound natural in Hebrew; a bare adjective after היכולת reads as a description, not a name. | A. חשמל סטטי in the name, the Easy Chat word and the Day Care hints; the paralysis line says ביכולת | changed |
-| [Q165](#q165) | 21 more ability names are bare adjectives, participles or adverbs that both audits found do not read as a name after היכולת. | A. Rename the 21 (22 rows) to nouns; the names one reader questioned are left to the owner | changed |
+| [Q165](#q165) | 21 more ability names are bare adjectives, participles or adverbs that both audits found do not read as a name after היכולת. | A. Rename the 21 (22 rows) to nouns; the names one reader questioned are left to the owner | changed; its FLUFFY superseded by [Q173](#q173) |
 | [Q166](#q166) | Heal and cure lines said 'שוקמו', 'נרפא מבעיית המצב שלו', 'מבעיית שיתוק', and the Ether prompt 'איזה מהלך לשקם?': words a player would not say. | A. The plain verbs: עלו, נרפא, החלים, 'מה{status}', 'למלא נ”כ' | changed |
 | [Q167](#q167) | FireRed's FOCUS ENERGY, SUPERSONIC, TRANSFORM and KNOCK OFF read as other words in 'השתמש ב{move}!' (רכז, בעל-קולי, בשנה, הפלה). | A. ריכוז אנרגיה, גל על-קולי, שינוי צורה, חבטת העפה, each kept apart from FireRed with its reason | changed |
 | [Q168](#q168) | X SP. ATK מיוחד X names no stat; singular משקף (BLACK, WISE GLASSES) is not glasses. | A. התקפה מיוחדת X, משקפיים שחורים, משקפי חוכמה | changed |
@@ -2803,9 +2803,13 @@ Nothing else differs (`<private>/scratch/screens/r32/static-rename/tours_out/`).
 - Widths (`textwidth.py`): מטרונום 37 px in FONT_NORMAL and 33 in FONT_NARROW, לפיתה 30 and 27 (the same as עקידה), רצועת לפיתה 62 (the same as before); the audit finds no line over its window.
 - Q140 keeps a name apart from FireRed with its reason in `namecheck_allow.json`; both entries are there. The Easy Chat move words are the names, so `gen_ec_letters.py` regenerated the ABC lists.
 
-**Chosen:** the owner's decision: BIND לפיתה, METRONOME מטרונום, FLUFFY פרוותי.
+**Chosen:** the owner's decision: BIND לפיתה, METRONOME מטרונום, FLUFFY פרוותי. Seen on screen on the clip ROM beside rc30 and English, with 0 clip records (`<private>/scratch/screens/r34/review/`):
+- the used-move line of both moves for the player's and the foe's Pokémon, Bind's squeeze, hurt and freed lines, Rapid Spin's got-free line and Metronome's called-move line, forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` (14 entries) in a trainer battle and a wild battle, each with species names and with 12-letter nicknames: every entry as many views as rc30, and as English except Rapid Spin's line with two 12-letter nicknames (two views, as in rc30);
+- a real wild battle: Clefairy binds Snorlax ('סנורלקס הפראי נמחץ / על ידי קלפרי!'), Snorlax is hurt each turn and freed ('סנורלקס הפראי השתחרר / מלפיתה!'), then Metronome calls Feint Attack;
+- the FIGHT menu cells and START window, the summary's move list and move details, METRONOME and BINDING BAND as held items, FLUFFY on the INFO page and in its pop-up on both sides;
+- METRONOME, GRIP CLAW and BINDING BAND in the bag, METRONOME in the Battle Frontier's BP shop, the move tutor's Metronome lines, the Vermilion Fan Club line, and the Easy Chat ABC lists (BIND under ל, METRONOME under מ).
 
-*Changed:* `src/data/moves_info.h`, `src/data/items.h`, `src/data/abilities.h`, `src/battle_debug.c`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `data/text/move_tutors.inc`, `data/maps/VermilionCity_FanClub_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`
+*Changed:* `src/data/moves_info.h`, `src/data/items.h`, `src/data/abilities.h`, `src/battle_debug.c`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `data/text/move_tutors.inc`, `data/maps/VermilionCity_FanClub_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md` (§3, §7 and §11 name FLUFFY as the owner's exception to the noun rule)
 
 *Glossary:* `MOVE_BIND`, `MOVE_METRONOME`, `ITEM_METRONOME`, `ITEM_BINDING_BAND` (and their plural rows), `ABILITY_FLUFFY`
 
