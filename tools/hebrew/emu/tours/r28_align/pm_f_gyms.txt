@@ -79,6 +79,11 @@ bmove 3
 bwalk pmf_chuck_t5 prompt:Cmd_yesnoboxlearnmove
 snap pmf_chuck_learn_q                    # Togepi (Exp. Share) grew a level: forget a move?
 tap B 4                                   # NO: it does not learn the move
+ifsym Task_HandleStopLearningMoveYesNoInput   # a build that asks "give up learning?" (P_ASK_MOVE_CONFIRMATION)
+bwalk pmf_chuck_t5s prompt:Cmd_yesnoboxstoplearningmove
+snap pmf_chuck_stop_q
+tap A 4                                   # YES: give up
+endif
 bwalk pmf_chuck_t5b prompt:Cmd_yesnobox
 tap B 4                                   # NO: no switch
 bwalk pmf_chuck_t5c input:HandleInputChooseAction

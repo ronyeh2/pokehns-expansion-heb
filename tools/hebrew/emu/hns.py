@@ -42,6 +42,9 @@ Script language = hnsrun's (see hnsrun.c), plus:
                                     (RIGHT / LEFT, swapped on a TEXT_RTL build, see
                                     Emu.rowkeys)
     include FILE                    splice another script (path relative to this one)
+    ifsym SYMBOL ... endif          run the lines between only when the ELF defines SYMBOL
+                                    (a step that only one build has, e.g. a yes/no that
+                                    a config option compiles in)
     waitcb2 SYMBOL [MAX] [KEYS]     run until gMain.callback2 == SYMBOL (KEYS tapped
                                     every 30 frames meanwhile, like hnsrun's wait32)
     waittask SYMBOL [MAX] [KEYS]    run until a task with func SYMBOL is active (gTasks)
@@ -1043,12 +1046,25 @@ class Emu:
 
     def run_script(self, path, stop_on_timeout=True):
         base = os.path.dirname(os.path.abspath(path))
+        skip = []                                # one entry per open ifsym block: True = skip it
         for raw in open(path, encoding="utf-8"):
             line = raw.split("#", 1)[0].strip()
             if not line:
                 continue
             f = line.split()
             op = f[0]
+            if op == "ifsym":
+                if len(f) != 2:
+                    raise HnsError("%s: ifsym takes one symbol: %s" % (path, line))
+                skip.append(f[1] not in self.elf.byname)
+                continue
+            if op == "endif":
+                if not skip:
+                    raise HnsError("%s: endif without ifsym" % path)
+                skip.pop()
+                continue
+            if any(skip):
+                continue
             if op == "include":
                 self.run_script(os.path.join(base, f[1]), stop_on_timeout)
                 continue
@@ -1123,6 +1139,8 @@ class Emu:
                 self.w(int(op[1:]), int(f[1], 16), int(f[2], 16))
             else:
                 self.send(line)      # frames, tap, ss, sl
+        if skip:
+            raise HnsError("%s: ifsym without endif" % path)
         self.sync()
 
 
@@ -2419,7 +2437,7 @@ def tour_diff(a, b):
 LIVE = ("SB1", "SB2", "SB3", "LOC", "POS")
 EXTENSIONS = ("include", "echo", "waitcb2", "waittask", "waitctl", "expect8", "expect16",
               "expect32", "expectflag", "expectloc", "warp", "savegame", "debugmenu",
-              "setflag", "clearflag", "setvar")
+              "setflag", "clearflag", "setvar", "ifsym", "endif")
 
 
 def render(path, elf, out):

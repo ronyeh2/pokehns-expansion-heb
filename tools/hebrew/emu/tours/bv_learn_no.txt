@@ -1,8 +1,11 @@
 # Refusing in the level-up flows (same setup as battle_levelup: Cyndaquil Lv 12 with four
 # moves beats a Lv 12 Chansey at 1 HP and reaches Lv 14):
 # - "delete a move to make room?" NO (Cmd_yesnoboxlearnmove): "X did not learn Y"
-#   (STRINGID_DIDNOTLEARNMOVE). P_ASK_MOVE_CONFIRMATION is off in this build, so there is no
-#   "stop trying to teach?" question (BattleScript_AskToLearnMove, data/battle_scripts_1.s:4397-4412);
+#   (STRINGID_DIDNOTLEARNMOVE; BattleScript_AskToLearnMove, data/battle_scripts_1.s:4397-4412).
+#   A build with P_ASK_MOVE_CONFIRMATION (the Hebrew one: it follows TEXT_RTL,
+#   include/config/pokemon.h) first asks "give up learning Y?" (STRINGID_STOPLEARNINGMOVE,
+#   Cmd_yesnoboxstoplearningmove), answered YES; the option compiles in the field's
+#   Task_HandleStopLearningMoveYesNoInput, which the ifsym block tests;
 # - the evolution scene after the battle, cancelled by holding B while the sprites cycle
 #   (EVOSTATE_WAIT_CYCLE_MON_SPRITE, src/evolution_scene.c:660-665): "Huh? X stopped evolving!"
 start saves/ladder1_newgame.sav
@@ -22,7 +25,12 @@ snap bv_learn_forget_prompt
 tap DOWN 4
 waitquiet
 snap bv_learn_forget_prompt_no
-tap A 4                               # NO: "did not learn"
+tap A 4                               # NO
+ifsym Task_HandleStopLearningMoveYesNoInput   # a build that asks "give up learning?" (P_ASK_MOVE_CONFIRMATION)
+bwalk bv_learn_stop prompt:Cmd_yesnoboxstoplearningmove
+snap bv_learn_stop_prompt
+tap A 4                               # YES: give up
+endif
 pages bv_learn_gaveup 10              # "did not learn" (bwalk would walk on into the evolution)
 waitcb2x CB2_EvolutionSceneUpdate 3000
 waittaskdata Task_EvolutionScene 0 2 600          # EVOSTATE_INTRO_MON_ANIM: the intro text is up

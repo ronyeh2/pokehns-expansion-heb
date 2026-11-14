@@ -72,8 +72,9 @@ waitcb2x CB2_BagMenuRun 900
 waittaskx Task_BagMenu_HandleInput 600
 waitquiet
 
-# Ampharos (four moves): NO -> "did not learn" (P_ASK_MOVE_CONFIRMATION is FALSE, so there
-# is no "Stop trying to teach?" question; src/party_menu.c StopLearningMovePrompt)
+# Ampharos (four moves): NO -> "did not learn" (src/party_menu.c StopLearningMovePrompt); a build
+# with P_ASK_MOVE_CONFIRMATION (the Hebrew one: it follows TEXT_RTL, include/config/pokemon.h)
+# first asks "give up learning X?", answered YES
 tap A 4
 waitquiet
 tap A 4
@@ -94,6 +95,12 @@ tap DOWN 4
 waitquiet
 snap pbi_tm_11_replace_no
 tap A 4                                   # NO
+ifsym Task_HandleStopLearningMoveYesNoInput   # a build that asks "give up learning?" (P_ASK_MOVE_CONFIRMATION)
+waittaskx Task_HandleStopLearningMoveYesNoInput 600
+waitquiet
+snap pbi_tm_11b_give_up
+tap A 4                                   # YES: give up
+endif
 waitkey 600
 snap pbi_tm_12_not_learned
 tap A 4
