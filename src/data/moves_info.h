@@ -641,7 +641,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_BIND] =
     {
-        .name = COMPOUND_STRING("עקידה"),
+        .name = COMPOUND_STRING("לפיתה"),
         .description = COMPOUND_STRING(
             "לופת ומועך את היריב\n"
             "למשך "BINDING_TURNS" תורים."),
@@ -3220,7 +3220,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
 
     [MOVE_METRONOME] =
     {
-        .name = COMPOUND_STRING("פעמן"),
+        .name = COMPOUND_STRING("מטרונום"),
         .description = COMPOUND_STRING(
             "מנענע אצבע ומשתמש\n"
             "במהלך אקראי כלשהו."),

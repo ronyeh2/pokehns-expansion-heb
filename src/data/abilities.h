@@ -1668,7 +1668,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_FLUFFY] =
     {
-        .name = _("פרווה רכה"),
+        .name = _("פרוותי"),
         .description = COMPOUND_STRING("עמיד יותר אך דליק."),
         .aiRating = 5,
         .breakable = TRUE,
