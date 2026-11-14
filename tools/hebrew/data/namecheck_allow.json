@@ -40,6 +40,31 @@
    "hs": "דחף על-חושי",
    "firered": "דחף פסיכי",
    "why": "Psychic is על-חושי in every name (DECISIONS Q139), the PSYCHO moves too; FireRed renamed its type and its PSYCHIC move but left this name on the old word"
+  },
+  "move:MOVE_FOCUS_ENERGY": {
+   "hs": "ריכוז אנרגיה",
+   "firered": "רכז אנרגיה",
+   "why": "a FireRed slip for H&S: after ב the imperative רכז reads as רַכָּז, 'השתמש ברכז אנרגיה' = used the energy coordinator; FOCUS is the noun ריכוז as in FOCUS PUNCH מכת ריכוז and FOCUS BLAST פיצוץ ריכוז (DECISIONS Q167)"
+  },
+  "move:MOVE_SUPERSONIC": {
+   "hs": "גל על-קולי",
+   "firered": "על-קולי",
+   "why": "a bare adjective does not read as a name (the owner's סטטי -> חשמל סטטי), and 'השתמש בעל-קולי' starts with the word בעל; the Japanese 超音波 is 'ultrasonic wave', and the game already says 'יוצר גל על-קולי' (DECISIONS Q167)"
+  },
+  "move:MOVE_TRANSFORM": {
+   "hs": "שינוי צורה",
+   "firered": "שנה צורה",
+   "why": "an imperative used as a name: 'השתמש בשנה צורה' reads 'in a year, form'; the noun matches the party menu's שינוי צורה (DECISIONS Q167)"
+  },
+  "move:MOVE_KNOCK_OFF": {
+   "hs": "חבטת העפה",
+   "firered": "הפלה",
+   "why": "bare הפלה reads as abortion or miscarriage, not a line for a child ('מאצ'וק השתמש בהפלה!'); the move swats the held item away, as the חבטת X names (DECISIONS Q167)"
+  },
+  "item:ITEM_BLACK_GLASSES": {
+   "hs": "משקפיים שחורים",
+   "firered": "משקף שחור",
+   "why": "singular משקף is not the word for glasses and reads as the verb 'reflects'; the name takes the item's own plural row, משקפיים, as the משקפי family (משקפי בחירה, משקפי מגן) (DECISIONS Q168)"
   }
  },
  "translit": {
