@@ -2803,7 +2803,11 @@ Nothing else differs (`<private>/scratch/screens/r32/static-rename/tours_out/`).
 - Widths (`textwidth.py`): מטרונום 37 px in FONT_NORMAL and 33 in FONT_NARROW, לפיתה 30 and 27 (the same as עקידה), רצועת לפיתה 62 (the same as before); the audit finds no line over its window.
 - Q140 keeps a name apart from FireRed with its reason in `namecheck_allow.json`; both entries are there. The Easy Chat move words are the names, so `gen_ec_letters.py` regenerated the ABC lists.
 
-**Chosen:** the owner's decision: BIND לפיתה, METRONOME מטרונום, FLUFFY פרוותי.
+**Chosen:** the owner's decision: BIND לפיתה, METRONOME מטרונום, FLUFFY פרוותי. Seen on screen on the clip ROM beside rc30 and English, with 0 clip records (`<private>/scratch/screens/r34/review/`):
+- the used-move line of both moves for the player's and the foe's Pokémon, Bind's squeeze, hurt and freed lines, Rapid Spin's got-free line and Metronome's called-move line, forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` (14 entries) in a trainer battle and a wild battle, each with species names and with 12-letter nicknames: every entry as many views as rc30, and as English except Rapid Spin's line with two 12-letter nicknames (two views, as in rc30);
+- a real wild battle: Clefairy binds Snorlax ('סנורלקס הפראי נמחץ / על ידי קלפרי!'), Snorlax is hurt each turn and freed ('סנורלקס הפראי השתחרר / מלפיתה!'), then Metronome calls Feint Attack;
+- the FIGHT menu cells and START window, the summary's move list and move details, METRONOME and BINDING BAND as held items, FLUFFY on the INFO page and in its pop-up on both sides;
+- METRONOME, GRIP CLAW and BINDING BAND in the bag, METRONOME in the Battle Frontier's BP shop, the move tutor's Metronome lines, the Vermilion Fan Club line, and the Easy Chat ABC lists (BIND under ל, METRONOME under מ).
 
 *Changed:* `src/data/moves_info.h`, `src/data/items.h`, `src/data/abilities.h`, `src/battle_debug.c`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `data/text/move_tutors.inc`, `data/maps/VermilionCity_FanClub_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md` (§3, §7 and §11 name FLUFFY as the owner's exception to the noun rule)
 
