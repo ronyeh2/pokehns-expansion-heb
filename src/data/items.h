@@ -2727,7 +2727,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_X_SP_ATK] =
     {
-        .name = ITEM_NAME("מיוחד X"),
+        .name = ITEM_NAME("התקפה מיוחדת X"),
         .price = (I_PRICE >= GEN_7) ? 1000 : 350,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
@@ -9857,7 +9857,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BLACK_GLASSES] =
     {
-        .name = ITEM_NAME("משקף שחור"),
+        .name = ITEM_NAME("משקפיים שחורים"),
         .pluralName = ITEM_PLURAL_NAME("משקפיים שחורים"),
         .price = TYPE_BOOSTING_PRICE,
         .holdEffect = HOLD_EFFECT_TYPE_POWER,
@@ -10816,8 +10816,8 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_WISE_GLASSES] =
     {
-        .name = ITEM_NAME("משקף חכם"),
-        .pluralName = ITEM_PLURAL_NAME("משקפיים חכמים"),
+        .name = ITEM_NAME("משקפי חוכמה"),
+        .pluralName = ITEM_PLURAL_NAME("משקפי חוכמה"),
     #if I_PRICE >= GEN_9
         .price = 8000,
     #elif I_PRICE >= GEN_7
