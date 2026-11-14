@@ -1035,6 +1035,7 @@ static const u16 sEasyChatWordsByLetterRtl_Lamed[] = {
     EC_WORD_DO,
     EC_WORD_HIT,
     EC_WORD_MEET,
+    EC_MOVE(BIND),
     EC_WORD_BEFORE,
     EC_WORD_LAVISH,
     EC_POKEMON_NATIONAL(LAPRAS),
@@ -1171,6 +1172,7 @@ static const u16 sEasyChatWordsByLetterRtl_Mem[] = {
     EC_WORD_CHORES,
     EC_POKEMON_NATIONAL(METAPOD),
     EC_WORD_AIM,
+    EC_MOVE2(METRONOME),
     EC_MOVE(SWIFT),
     EC_WORD_WHO,
     EC_POKEMON_NATIONAL(MEOWTH),
@@ -1550,7 +1552,6 @@ static const u16 sEasyChatWordsByLetterRtl_Ayin[] = {
     EC_WORD_TRUANT,
     EC_WORD_MYSELF,
     EC_MOVE(FOLLOW_ME),
-    EC_MOVE(BIND),
     EC_MOVE2(POISON_STING),
     EC_WORD_CHANNEL,
     EC_MOVE(SMOG),
@@ -1627,7 +1628,6 @@ static const u16 sEasyChatWordsByLetterRtl_Pe[] = {
     EC_WORD_ONCE,
     EC_MOVE(HEAL_BELL),
     EC_WORD_TIMES,
-    EC_MOVE2(METRONOME),
     EC_MOVE2(EGG_BOMB),
     EC_MOVE2(SLUDGE_BOMB),
     EC_WORD_WILD,
@@ -2069,7 +2069,7 @@ const struct EasyChatWordsByLetter gEasyChatWordsByLetterPointers[EC_NUM_ALPHABE
     },
 };
 
-// The longest list offers 240 words; the screen copies a list into a buffer of
+// The longest list offers 241 words; the screen copies a list into a buffer of
 // EC_MAX_WORDS_IN_GROUP words.
-STATIC_ASSERT(240 <= EC_MAX_WORDS_IN_GROUP, EasyChatWordsByLetterRtlFit);
+STATIC_ASSERT(241 <= EC_MAX_WORDS_IN_GROUP, EasyChatWordsByLetterRtlFit);
 STATIC_ASSERT(23 <= EC_NUM_ALPHABET_GROUPS, EasyChatWordsByLetterRtlCount);
