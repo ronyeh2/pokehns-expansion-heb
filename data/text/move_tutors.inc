@@ -90,7 +90,7 @@ MoveTutor_Text_MetronomeTeach:
 	.string "לא היה נחמד אם היה כישוף\n"
 	.string "שמביא כסף כשמנופפים באצבע?\p"
 	.string "אם תרצה, אני יכולה ללמד את\n"
-	.string "הפוקימון שלך את המהלך פעמן.\p"
+	.string "הפוקימון שלך את המהלך מטרונום.\p"
 	.string "כסף לא יופיע, אבל הפוקימון שלך\n"
 	.string "ינופף באצבע. כן?$"
 
@@ -103,7 +103,7 @@ MoveTutor_Text_MetronomeWhichMon:
 	.string "איזה פוקימון ללמד?$"
 
 MoveTutor_Text_MetronomeTaught:
-	.string "כשפוקימון מנופף באצבע כמו פעמן,\n"
+	.string "כשפוקימון מנופף באצבע כמו מטרונום,\n"
 	.string "קורים כל מיני דברים טובים.\p"
 	.string "לא היה נחמד אם גם אנחנו\n"
 	.string "היינו יכולים להשתמש בזה?$"

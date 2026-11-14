@@ -128,7 +128,7 @@ PokemonFanClub_Text_Receptionist:
 @=Clefairy=Guy=========================================================================================================
 PokemonFanClub_Text_ClefairyGuy_Adorable:
 	.string "אני אוהב איך שקלפרי מנענע את האצבע\n"
-	.string "שלו כשהוא מנסה להשתמש בפעמן.\p"
+	.string "שלו כשהוא מנסה להשתמש במטרונום.\p"
 	.string "זה כל כך מקסים!$"
 
 PokemonFanClub_Text_ClefairyGuy_MakingDo:

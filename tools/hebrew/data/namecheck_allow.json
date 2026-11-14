@@ -100,6 +100,16 @@
    "hs": "משקפיים שחורים",
    "firered": "משקף שחור",
    "why": "singular משקף is not the word for glasses and reads as the verb 'reflects'; the name takes the item's own plural row, משקפיים, as the משקפי family (משקפי בחירה, משקפי מגן) (DECISIONS Q168)"
+  },
+  "move:MOVE_BIND": {
+   "hs": "לפיתה",
+   "firered": "עקידה",
+   "why": "עקידה is the Binding of Isaac, not a squeeze; the owner asked for a better name, and לפיתה is the tight grip the move is (DECISIONS Q173)"
+  },
+  "move:MOVE_METRONOME": {
+   "hs": "מטרונום",
+   "firered": "פעמן",
+   "why": "פעמן is not a Hebrew word (a bell is פעמון); the owner asked for a better name, and מטרונום is the device the move is named after (DECISIONS Q173)"
   }
  },
  "translit": {

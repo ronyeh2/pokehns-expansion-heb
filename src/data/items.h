@@ -10999,9 +10999,9 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_METRONOME] =
     {
-        .name = ITEM_NAME("פעמן"),
+        .name = ITEM_NAME("מטרונום"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("פעמנים"),
+        .pluralName = ITEM_PLURAL_NAME("מטרונומים"),
     #endif
     #if I_PRICE >= GEN_9
         .price = 15000,
@@ -11143,7 +11143,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "פריט להחזקה\n"
             "שמאריך מהלכי\n"
-            "עקידה כמו ”עיטוף”."),
+            "לפיתה כמו ”עיטוף”."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -11457,9 +11457,9 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BINDING_BAND] =
     {
-        .name = ITEM_NAME("רצועת עקידה"),
+        .name = ITEM_NAME("רצועת לפיתה"),
     #if TEXT_RTL
-        .pluralName = ITEM_PLURAL_NAME("רצועות עקידה"),
+        .pluralName = ITEM_PLURAL_NAME("רצועות לפיתה"),
     #endif
     #if I_PRICE >= GEN_9
         .price = 20000,
@@ -11471,7 +11471,7 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffect = HOLD_EFFECT_BINDING_BAND,
         .description = COMPOUND_STRING(
             "מגבירה את עוצמת\n"
-            "מהלכי העקידה\n"
+            "מהלכי הלפיתה\n"
             "כשהיא מוחזקת."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
