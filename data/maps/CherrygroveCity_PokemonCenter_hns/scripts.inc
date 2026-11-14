@@ -49,9 +49,9 @@ CherryGrove_Pokecenter_Text_Gentleman:
 	.string "במחשב הזה בחינם.$"
 
 CherryGrove_Pokecenter_Text_Lass:
-	.string "אומרים שסיר שמביטים בו\n"
-	.string "לעולם לא רותח.\p"
-	.string "אבל כשמביטים בשעון\n"
+	.string "אומרים שכשמסתכלים על השעון,\n"
+	.string "הזמן לא זז.\p"
+	.string "אבל כשמסתכלים עליו\n"
 	.string "במרכז הפוקימון, הזמן טס!$"
 
 CherryGrove_Pokecenter_Text_Chansey:

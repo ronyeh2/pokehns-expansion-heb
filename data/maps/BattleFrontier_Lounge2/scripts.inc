@@ -249,7 +249,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons::
 	.string "שמעתי שהיא משתמשת בפוקימונים האלה:\p"
 	.string "פוקימון קרן יחידה מסוג חרק וקרב,\n"
 	.string "פוקימון אור ירח מסוג אפל,\p"
-	.string "ופוקימון שלכת מסוג חרק ורפאים.$"
+	.string "ופוקימון נשל מסוג חרק ורפאים.$"
 
 BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
 	.string "כבר התמודדת מול גבירת הזירה\n"

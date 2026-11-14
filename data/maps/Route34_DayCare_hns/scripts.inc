@@ -562,8 +562,8 @@ Route34_DayCare_Text_GoodToSeeYou:
 	.string "אצלנו לפוקימונים תמיד טוב!$"
 
 Route34_DayCare_Text_YourMonHasGrownXLevels:
-	.string "{STR_VAR_1} שלך עלה\n"
-	.string "במספר רמות: {STR_VAR_2}.$"
+	.string "הרמה של {STR_VAR_1} שלך\n"
+	.string "עלתה ב-{STR_VAR_2}.$"
 
 Route34_DayCare_Text_YourTeamIsFull:
 	.string "קבוצת הפוקימונים שלך מלאה.\n"

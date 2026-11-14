@@ -105,6 +105,13 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q163](#q163) | The same line's last view was wiped 8 frames after it completed: two manual scrolls where English shows one auto-wrapped view. | A. No manual break in a battle line where English has none (22 lines) | changed |
 | [Q164](#q164) | The owner: the ability 'סטטי' does not sound natural in Hebrew; a bare adjective after היכולת reads as a description, not a name. | A. חשמל סטטי in the name, the Easy Chat word and the Day Care hints; the paralysis line says ביכולת | changed |
 | [Q165](#q165) | 21 more ability names are bare adjectives, participles or adverbs that both audits found do not read as a name after היכולת. | A. Rename the 21 (22 rows) to nouns; the names one reader questioned are left to the owner | changed |
+| [Q166](#q166) | Heal and cure lines said 'שוקמו', 'נרפא מבעיית המצב שלו', 'מבעיית שיתוק', and the Ether prompt 'איזה מהלך לשקם?': words a player would not say. | A. The plain verbs: עלו, נרפא, החלים, 'מה{status}', 'למלא נ”כ' | changed |
+| [Q167](#q167) | FireRed's FOCUS ENERGY, SUPERSONIC, TRANSFORM and KNOCK OFF read as other words in 'השתמש ב{move}!' (רכז, בעל-קולי, בשנה, הפלה). | A. ריכוז אנרגיה, גל על-קולי, שינוי צורה, חבטת העפה, each kept apart from FireRed with its reason | changed |
+| [Q168](#q168) | X SP. ATK מיוחד X names no stat; singular משקף (BLACK, WISE GLASSES) is not glasses. | A. התקפה מיוחדת X, משקפיים שחורים, משקפי חוכמה | changed |
+| [Q169](#q169) | Five Pokédex categories do not agree or are the wrong word (חמש כוכבים, יען משולשת, מיהר, שלכת, פנדה מנוקד). | A. חמישה כוכבים, יען משולש, דוהר, נשל, פנדה מנוקדת | changed |
+| [Q170](#q170) | Stat and system jargon outside battle: 'נתון הבסיס' (vitamins), 'מצב הכבד ביותר' and 'פרמטרים' (Pokédex), 'יחס פגיעה קריטית' (descriptions). | A. 'קיבל חיזוק ל{stat}', the sorting idiom, 'סיכוי גבוה לפגיעה קריטית' | changed |
+| [Q171](#q171) | Lines that read like a form: 'פגיעות בפוקימון: N!', the day-care's 'עלה במספר רמות: N', and 'X למד Y!' without את. | A. 'מספר הפגיעות: N!', 'הרמה של X עלתה ב-N', 'למד את Y' | changed |
+| [Q172](#q172) | Two early lines translate an English idiom word for word: a watched pot, a good Samaritan. | A. Plain Hebrew: 'כשמסתכלים על השעון, הזמן לא זז', 'צדיק' | changed |
 
 ## K1
 
@@ -2625,6 +2632,162 @@ Nothing else differs (`<private>/scratch/screens/r32/static-rename/tours_out/`).
 *Changed:* `src/data/abilities.h`, `src/data/easy_chat/easy_chat_group_status.h`, `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `src/data/help_window.h`, `src/challenge_menu.c`, `src/data/moves_info.h`, `translation/hebrew/glossary.csv`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`
 
 *Glossary:* `ABILITY_STURDY`, `ABILITY_LIMBER`, `ABILITY_OBLIVIOUS`, `ABILITY_SHADOW_TAG`, `ABILITY_EFFECT_SPORE`, `ABILITY_HYPER_CUTTER`, `ABILITY_SIMPLE`, `ABILITY_UNAWARE`, `ABILITY_SCRAPPY`, `ABILITY_MOODY`, `ABILITY_ANALYTIC`, `ABILITY_RATTLED`, `ABILITY_PROTEAN`, `ABILITY_COMPETITIVE`, `ABILITY_GALVANIZE`, `ABILITY_GOOEY`, `ABILITY_FLUFFY`, `ABILITY_DAZZLING`, `ABILITY_STALWART`, `ABILITY_MERCILESS`, `ABILITY_AS_ONE_ICE_RIDER`, `ABILITY_AS_ONE_SHADOW_RIDER`
+
+## Q166
+
+**Question.** The battle lines for HP and PP that an item or a move restores said 'שוקמו' ('הנ”ח של X שוקמו.'), a status item's line 'X נרפא מבעיית המצב שלו!', Refresh's 'המצב של X חזר לקדמותו!', the Lum Berry, Shed Skin and immunity lines 'נרפא … מבעיית {status}', and the Ether prompt 'איזה מהלך לשקם?'. Would a player say any of them?
+
+*Source:* round 33's read of the battle, the bag and the menus by the owner's lessons from rounds 30-32 (STYLE §11: 1, 2, 7, 8), each finding checked by a second reader.
+
+**Analysis.**
+- 'שוקמו' is the passive of שיקם, rehabilitate or rebuild, the word of a news report about a building. The field line for the same Potion already says 'הנ”ח של X עלו ב-N' (`gText_PkmnHPRestoredByVar2`, `src/strings.c:310`, Q144) and PP Up 'הנ”כ של X עלו' (`:320`), so the battle and the field described one heal with two verbs. The lines: `STRINGID_ITEMRESTOREDSPECIESHEALTH` (`src/battle_message.c:785`), printed after every HP item used in battle by the player or by a trainer (`BattleScript_ItemRestoreHP`, `data/battle_scripts_2.s:61-77`; 99 trainers carry items, every Johto leader from Bugsy on); `STRINGID_PKMNREGAINEDHEALTH` (`:253`, Recover, Milk Drink, Roost: Whitney's Miltank); `ITEMRESTOREDSPECIESPP` (`:787`), `ZMOVEHPTRAP` (`:760`) and the field's `gText_PPWasRestored` (`src/strings.c:317`). נ”ח and נ”כ are plural, so עלו agrees. The active 'שיקם' and 'משקם' of the item and move descriptions read fine and stay.
+- 'נרפא מבעיית המצב שלו' copies 'had its status healed' with the system word מצב. The field cures say 'נרפא מההרעלה', 'הבריא' (`src/strings.c:311-319`). The battle line is generic for every condition and follows the item line that names the item, so 'X נרפא!' (`:786`) says all of it. Refresh, Take Heart, Psycho Shift and Jungle Healing print `STRINGID_PKMNSTATUSNORMAL` (`:343`; `data/battle_scripts_1.s:386`, `:779`): 'X החלים!', without the literary לקדמותו.
+- 'מבעיית שיתוק' ('a paralysis problem') is the English 'its X problem'. {B_BUFF1} on these paths is one of seven bare status nouns (`gStatusConditionStringsTable`, `src/battle_main.c:528-537`, to `src/battle_message.c:1447-1453`), none with an article, so 'מה{B_BUFF1}' prints מההרעלה, מהשינה, מהשיתוק, מהכוויה, מהקיפאון, מהבלבול, מההתאהבות (`:467`, `:480`, `:519`). The ability token and היכולת (Q162) are untouched; Oblivious leaves a stale buffer, as in English.
+- The same 'problem' was left in Healer's line, 'X ריפא ביכולת Y את הבעיה של Z!' (`STRINGID_HEALERCURE`, `:683`; English 'cured Z's problem'), whose sibling for a move already says 'X ריפא את Z!' (`STRINGID_ATTACKERCUREDTARGETSTATUS`, `:681`, the same English). It becomes 'X ריפא ביכולת Y את Z!'; only 'הבעיה של' goes, ביכולת and the ability token stay (Q162).
+- The Ether prompt asked to restore the move: 'לאיזה מהלך למלא נ”כ?' (`src/strings.c:344`), as PP Up's 'לאיזה מהלך להוסיף נ”כ?' and the Leppa Berry's 'מילא נ”כ למהלך'; 111 px in the 128 px which-move window.
+- Breaks: the Recover, Z-Power and Refresh lines had a `\n` where English has none; STYLE §5 keeps such lines without breaks, so they lose it.
+- Layout, with every side assignment and typical names, the longest names, and 12 copies of the widest letter (`<private>/scratch/screens/r33/battle-reader/w/try.py`): every line is one view, as in English and as before; the widest rows are 187 px (the ability lines) and 178 px (Recover's).
+
+| Option | How | Risk |
+|---|---|---|
+| A. The plain verbs: עלו, נרפא, החלים, 'מה{status}', 'למלא נ”כ' | 10 battle strings, 2 field strings, text only | Low: every line one view, as English, except Healer's in one made-up worst case, as before. |
+| B. Keep | No change | The battle and the field say one heal two ways; 'שוקמו' and 'בעיית המצב' are what a player would not say. |
+
+**Chosen:** A. Seen on screen on the clip ROM beside rc30 and English, with no clip record: every changed battle line forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` (21 entries: the heal lines on the foe's and the player's side, Lum Berry with each of the seven statuses, Limber and Shed Skin, the hit count of Q171) in a trainer battle with species names, a trainer battle with the longest names and 12-letter nicknames, and a wild battle with the longest names: one view each time, as in English and rc30 (`<private>/scratch/screens/r33/apply/bs/`). In the release tours, 'הנ”ח של פינקו עלו.' in Bugsy's battle (`bv_gym`), the Ether prompt and 'הנ”כ עלו.' (`pbi_pp`). Healer's line, forced the same way in the same three setups with each pairing of the healer's and the cured Pokémon's sides (`<private>/scratch/screens/r33/review/bs/`): one view with species names, as English and rc30; with the longest names, never more views than rc30 and one fewer in three of the six pairings; two views where English needs one only in the trainer battle where the player's 12-letter nickname cures a 12-letter foe with the longest ability name, as in rc30, because the ability and the foe's name each stay on one row (362 px of text that no break splits into two 208 px rows).
+
+*Changed:* `src/battle_message.c`, `src/strings.c`
+
+## Q167
+
+**Question.** FireRed's names for FOCUS ENERGY (רכז אנרגיה), SUPERSONIC (על-קולי), TRANSFORM (שנה צורה) and KNOCK OFF (הפלה) are H&S's by Q140. In the battle line '{X}\nהשתמש ב{move}!' each reads as another word. Should H&S keep these four apart from FireRed?
+
+*Source:* round 33's read; the owner's rule that a bare adjective or a calque does not work as a name (his round-32 rename of the ability סטטי to חשמל סטטי, a FireRed name too; STYLE §11, 3).
+
+**Analysis.**
+- FOCUS ENERGY: after ב the imperative רכז reads as רַכָּז, 'השתמש ברכז אנרגיה' = used the energy coordinator. FOCUS is the noun ריכוז in FOCUS PUNCH מכת ריכוז and FOCUS BLAST פיצוץ ריכוז (`src/data/moves_info.h:7146`, `:10875`); the glossary note had proposed ריכוז אנרגיה for review. Wild Rattata, Machop and Mankey use it from the first routes (`src/data/pokemon/level_up_learnsets/gen_7.h`, the set H&S uses, `include/config/pokemon.h:14`).
+- SUPERSONIC: על-קולי is an adjective; with ב the line reads 'בעל-קולי', which starts with the word בעל. The Japanese 超音波 is 'ultrasonic wave', and the game already says 'יוצר גל על-קולי' (`src/data/items.h:13064`). Zubat and Tentacool use it in every cave and on the sea routes. גל על-קולי does not clash with SONIC BOOM בום על-קולי or SUPERSONIC SKYSTRIKE צלילה על-קולית. Union Cave's Firebreather named it 'מהלך העל-קולי של זובאט', a definite adjective in construct ('the move of the supersonic one'): now 'הגל העל-קולי של זובאט מבלבל'.
+- TRANSFORM: the imperative after ב reads 'בשנה צורה', in a year, form. The noun matches the party menu's 'שינוי צורה' (`src/data/party_menu.h:732`) and the line 'X שינה צורה!' (`src/strings.c:330`). Ditto uses nothing else.
+- KNOCK OFF: on its own הפלה reads as abortion or miscarriage: 'מאצ'וק השתמש בהפלה!' is not a line for a child. חבטת העפה, a swat that sends the held item flying, follows חבטת גוף and חבטת על-חוש (`src/data/moves_info.h:1005`, `:19377`).
+- Widths (`textwidth.py`, FONT_NARROW): 53, 49, 43 and 51 px in the 64 px battle move cell; 58, 51, 45 and 59 px in the 70 px summary list; at most 12 bytes (16 allowed). The used-move line stays one view with a 12-letter nickname.
+- Q140 keeps a name apart from FireRed when a FireRed slip stands in the way, with the reason in `namecheck_allow.json`; the four entries are there. The Easy Chat move words are the names, so `gen_ec_letters.py` regenerated the ABC lists: SUPERSONIC moves from ayin to gimel, KNOCK OFF from he to het (`src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, engine data compiled only under `TEXT_RTL`, `src/easy_chat.c:1250-1256`; its commit is to be picked onto `he/renderer`; the English build of the pick is byte-identical, `<private>/scratch/screens/r33/apply/engproof/PROOF.md`). The battle debug menu's Focus Energy label follows.
+- Left for the owner: RETURN חזרה and DOUBLE TEAM רואה כפול, which read as real words and whose fix replaces the concept.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Rename the four, each kept apart from FireRed with its reason | Glossary, the move table, the Union Cave line, the Easy Chat lists, the debug label | A pick for `he/renderer` (the Easy Chat lists). |
+| B. Keep FireRed's names (Q140) | No change | Four everyday battle lines read as other words. |
+
+**Chosen:** A. Seen on screen on the clip ROM beside rc30 and English, with no clip record: the used-move line of each move, the foe's and the player's, with species names, with 12-letter nicknames and in a wild battle, one view each as in English; the FIGHT menu cells and the move-info window (`fight_moves.py`); the summary's move list; the Easy Chat move groups and the gimel, het, resh and shin lists; the Union Cave line in the sweep; the debug menu's Focus Energy label in the release tour `btw_debug_menu` (`<private>/scratch/screens/r33/apply/bs/`, `fm/`, `st/`, `sw/`).
+
+*Changed:* `src/data/moves_info.h`, `src/battle_debug.c`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `data/maps/UnionCave_1F_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`
+
+*Glossary:* `MOVE_FOCUS_ENERGY`, `MOVE_SUPERSONIC`, `MOVE_TRANSFORM`, `MOVE_KNOCK_OFF`; notes of `MOVE_SMACK_DOWN`, `MOVE_SUPERSONIC_SKYSTRIKE`
+
+## Q168
+
+**Question.** X SP. ATK is מיוחד X, BLACK GLASSES משקף שחור and WISE GLASSES משקף חכם. Do they say what the item is?
+
+*Source:* round 33's read (STYLE §11, 3).
+
+**Analysis.**
+- מיוחד X is FireRed's name for Gen 3's X SPECIAL (glossary note); it says no stat, and English is now X SP. ATK beside X SP. DEF הגנ' מיוחדת X. התקפה מיוחדת X follows the family, stat + X (התקפת X, הגנת X, מהירות X, דיוק X). The X items have no plural name (Q125), so the plural row follows. Goldenrod's 3F customer asks 'אתה משתמש ב”התקפה מיוחדת X”?'.
+- Singular משקף is not the word for glasses; alone it reads as the verb 'reflects'. The item's own plural row already says משקפיים שחורים, as the משקפי family (משקפי בחירה, משקפי מגן), so the name takes it; WISE GLASSES becomes משקפי חוכמה, as משקפיים חכמים would fill the 66 px PC storage field (66 px, against 57). The Dark Cave gift says 'אני אתן לך משקפיים שחורים' and 'משקפיים שחורים מגבירים את הכוח'; the battle debug menu's Wise Glasses label follows.
+- Widths (`audit.py`): התקפה מיוחדת X 71 px in the 88 px bag, 84 px shop and 73 px item PC; משקפיים שחורים 70 px in the item PC. On the summary's held item (72 px) and in PC storage (66 px) both fit only after the game narrows the font (80 and 76 px in FONT_NORMAL, 61 and 62 px in FONT_NARROWER; 71 and 70 px in FONT_SMALL, 61 and 62 px in FONT_SMALL_NARROWER), as 16 item names already do; the audit's FIT warnings go from 54 to 58.
+- GUARD SPEC. הגנה מיוחדת stays: it translates 'Guard Spec(ial)', and the Celadon sign treats it as a guard against special attacks.
+
+| Option | How | Risk |
+|---|---|---|
+| A. התקפה מיוחדת X, משקפיים שחורים, משקפי חוכמה | Glossary, the item table, three dialogue labels, the debug label; FireRed's BLACK GLASSES kept apart in `namecheck_allow.json` | Two more names drawn in the fallback font on two screens. |
+| B. Keep | No change | 'Special X' names no stat; משקף is not glasses. |
+
+**Chosen:** A. Seen on screen on the clip ROM beside rc30 and English, with no clip record: the three bag rows and descriptions, the summary's held item (both FIT names drawn in FONT_NARROWER inside the box), the Dark Cave and Goldenrod lines in the sweep (`<private>/scratch/screens/r33/apply/st/`, `sw/`). Not seen: the PC storage held item, the item PC, the Goldenrod shop list and the debug menu's Wise Glasses label (audit only).
+
+*Changed:* `src/data/items.h`, `src/battle_debug.c`, `data/maps/GoldenrodCity_DepartmentStore_3F_hns/scripts.inc`, `data/maps/DarkCave_NorthSide_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`
+
+*Glossary:* `ITEM_X_SP_ATK`, `ITEM_BLACK_GLASSES`, `ITEM_WISE_GLASSES` (item and item_plural)
+
+## Q169
+
+**Question.** Five Pokédex categories, inherited from FireRed, do not agree or are the wrong word: Five Star חמש כוכבים (Ledyba, Ledian), Triple Bird יען משולשת (Dodrio), Rushing מיהר (Linoone), Shed שלכת (Shedinja), Spot Panda פנדה מנוקד (Spinda). The Pokédex prints 'פוקימון X'.
+
+*Source:* round 33's read (STYLE §11, 5).
+
+**Analysis.**
+- כוכב is masculine: חמישה כוכבים (12 bytes, the `categoryName[13]` limit, `include/pokemon.h:425`; 'פוקימון חמישה כוכבים' 102 px of 117). יען is masculine: יען משולש. פנדה is feminine: פנדה מנוקדת.
+- מיהר is a past-tense verb, 'פוקימון מיהר' = a Pokémon hurried: דוהר, rushing. שלכת is the autumn fall of leaves; Shedinja is a shed skin, נשל (DEXCAT_SHEDDING is משיל עור, no clash). The Battle Frontier lounge line that names Shedinja's category follows ('ופוקימון נשל מסוג חרק ורפאים', `data/maps/BattleFrontier_Lounge2/scripts.inc`, live through the Frontier tables).
+- Categories are not among namecheck's FireRed tables (`FR_TABLES`), so no allowlist entry; FireRed's forms stay in the rows' `firered_hebrew` column.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The agreeing word | Glossary, five `categoryName` fields in three species files, one lounge line | Low: each name as wide or narrower. |
+| B. Keep FireRed's | No change | Agreement errors a native reader sees on the Pokédex page. |
+
+**Chosen:** A. Seen on screen on the clip ROM beside rc30 and English, with no clip record: the Pokédex INFO page of Ledyba, Ledian, Dodrio, Linoone and its Galarian form, Shedinja and Spinda, 'פוקימון חמישה כוכבים' inside the box (`tools/hebrew/emu/scripts/r16_items/dexcat.py` with these species, `<private>/scratch/screens/r33/apply/dex/`); the lounge line in the sweep.
+
+*Changed:* `src/data/pokemon/species_info/gen_1_families.h`, `gen_2_families.h`, `gen_3_families.h`, `data/maps/BattleFrontier_Lounge2/scripts.inc`
+
+*Glossary:* `DEXCAT_FIVESTAR`, `DEXCAT_TRIPLEBIRD`, `DEXCAT_RUSHING`, `DEXCAT_SHED`, `DEXCAT_SPOTPANDA`; note of `DEXCAT_RUSH`
+
+## Q170
+
+**Question.** Q160 took the stat jargon הנתון out of the battle lines. Outside battle the same kind of word is left: the vitamin and EV-berry lines ('נתון הבסיס של X\nב{stat} עלה.'), the Pokédex sort titles ('מצב מספרי', 'מצב הכבד ביותר') and search line ('לפי הפרמטרים שנבחרו'), and ten move descriptions ('יחס פגיעה קריטית גבוה.'). How should they read?
+
+*Source:* round 33's read (STYLE §11, 2).
+
+**Analysis.**
+- Vitamins and EV berries (`src/strings.c:324-327`, `src/party_menu.c:4853-4876`, `:5388-5398`): {STR_VAR_2} is נ”ח (plural) or one of five feminine stat names, so a verb whose subject is the stat cannot agree with all six, and putting the stat first breaks the token order. 'X קיבל חיזוק ל{stat}.' takes its verb from the Pokémon, and 'החיזוק ל{stat} ירד!' from חיזוק, both masculine, for every stat; ל absorbs the article. The old line also read 'עלה במהירות' (rose quickly) for Carbos. 'base' becomes חיזוק; the item descriptions still say 'ההתקפה הבסיסית'. Widths with a 12-glyph name: 136/93, 151/147, 146/147 and 151/194 px, each no wider than before.
+- Pokédex (`src/strings.c:67`, `:82-87`): מצב-X and פרמטרים are system words, and 'מצב הכבד ביותר' reads as the state of the heaviest one. The titles become the sorting idiom: לפי מספר, מא' עד ת', מהכבד לקל, מהקל לכבד, מהגבוה לנמוך, מהנמוך לגבוה (46-65 px in the 88 px field), as their descriptions already say ('מהכבד ביותר לקל ביותר'); the search line 'חיפוש פוקימונים לפי\nמה שבחרת.'.
+- Descriptions: יחס is the maths word ratio; the same English sentence is already 'סיכוי גבוה לפגיעה קריטית.' in five other moves (`src/data/moves_info.h:2091`, `:4833`). Air Cutter, Poison Tail, Leaf Blade, Night Slash, Shadow Claw, Psycho Cut, Stone Edge, Attack Order and Spacial Rend take it (123 px of 152 in the summary, 113 of 128 in the relearner's narrow font, 115 of 139 in the Pokédex); Sky Attack's 'התקפת 2 תורים. סיכוי גבוה לפגיעה' would be 129 px in the relearner, so it reads '2 תורים. סיכוי גבוה לפגיעה / קריטית. עלול להרתיע.' (115 and 94 px).
+- Kept for the owner: Intimidate against Inner Focus and Clear Body, 'X שומר על נתוניו בזכות היכולת Y', and White Herb's 'השיב את נתוניו לקדמותם': Q160 keeps the plural נתונים where a line speaks of stats in general.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The player's words: חיזוק, the sorting idiom, סיכוי | 4 + 7 strings in `src/strings.c`, 10 move descriptions | Low: text only, every line as wide or narrower. |
+| B. Keep | No change | The jargon the owner removed from the battle lines stays in the bag, the Pokédex and the move info. |
+
+**Chosen:** A. Seen on screen: the six vitamins (`pbi_vitamins`), Pomeg's 'fell' and 'can't fall' (`pbi_stats`) and the search screen with all six titles (`menu_pokedex`) in the release tours; the ten descriptions in the FIGHT menu's move-info window, the summary and the relearner on the clip ROM beside rc30 and English, with no clip record (`<private>/scratch/screens/r33/apply/fm/`, `st/`).
+
+*Changed:* `src/strings.c`, `src/data/moves_info.h`
+
+## Q171
+
+**Question.** Three lines read like a form or a word-for-word copy: the multi-hit count 'פגיעות בפוקימון: N!', the day-care lady's 'X שלך עלה\nבמספר רמות: N.', and the TM and Rare Candy line 'X למד\nY!', where every other learn line says 'את'.
+
+*Source:* round 33's read (STYLE §11, 8).
+
+**Analysis.**
+- `STRINGID_HITXTIMES` (`src/battle_message.c:218`) prints after every multi-hit move (Fury Attack, Double Kick, Fury Swipes from the first routes). A label is still needed because the count can be 1 (STYLE §1, Q144), and 'פגיעות בפוקימון' ('hits in the Pokémon') is an odd one: 'מספר הפגיעות: N!', 103 px, one view. The battle-test table follows (`test/hebrew_battle_messages.h`, `tools/hebrew/testmsgs/data/table.json`, six entries; `gen_header.py` regenerates the header byte for byte from the table).
+- The day-care line (`data/maps/Route34_DayCare_hns/scripts.inc:564-566`) is speech: 'הרמה של X שלך\nעלתה ב-N.', the form of Q144's healing line. The script prints it only for a count of 1 or more (`call_if_ne VAR_RESULT, 0`, `:361`), and the count is always a number, so the written hyphen stays (STYLE §4, Q149). 152 and 130 px.
+- A move name is a definite object and takes את, as the battle line ('למד\nאת {B_BUFF2}'), the relearner and the other lines of the family do (`src/strings.c:303`, `:305`, `:308`, `:1217`). `gText_PkmnLearnedMove3` and `4` (`:301-302`), filled with a move at every call site (`src/party_menu.c:5683`, `:6146`; `src/chooseboxmon.c:406`, `:427`), become 'X למד\nאת Y!' (107 px).
+
+| Option | How | Risk |
+|---|---|---|
+| A. A natural label, a sentence, and את | 3 C strings, 1 map label, the test table | Low: text only. |
+| B. Keep | No change | Form language in speech and a missing את. |
+
+**Chosen:** A. Seen on screen: the hit count at 1, 3 and 10 with bsweep (one view, as English) and 'מספר הפגיעות: 2!' in the release tours `btw_natural` and `bv_double`; the day-care line in the sweep with a 12-letter nickname and 10 levels and in the release tour `chr_17_daycare_cap` with 1 ('הרמה של סינדקוויל שלך / עלתה ב-1.'); the learn line in `pbi_tm`, `pbi_candy` and `pbi_xcandy_evo`. The shorter hit-count line moves every later frame of `bv_double`'s first turn, and under the harness's per-frame random pin the foe's choice in turn 2 changes (12 pages become 13); the same ROM with only that table entry pointed back at rc30's string gives all 34 shots of rc30 (`<private>/scratch/screens/r33/apply/exp/`).
+
+*Changed:* `src/battle_message.c`, `src/strings.c`, `data/maps/Route34_DayCare_hns/scripts.inc`, `test/hebrew_battle_messages.h`, `tools/hebrew/testmsgs/data/table.json`
+
+## Q172
+
+**Question.** Two early-story lines translate an English idiom word for word: the Cherrygrove Pokémon Center girl's 'a watched pot never boils' ('אומרים שסיר שמביטים בו / לעולם לא רותח') and the Azalea Rocket guard's 'Aren't I a good Samaritan?' ('נכון שאני שומרוני טוב?').
+
+*Source:* round 33's read (STYLE §11, 8).
+
+**Analysis.**
+- The pot is not a Hebrew saying, so a child reads a sentence about a pot and loses the joke: waiting feels slow, but at the Pokémon Center time flies. 'אומרים שכשמסתכלים על השעון, / הזמן לא זז. ▼ אבל כשמסתכלים עליו / במרכז הפוקימון, הזמן טס!' keeps the clock and the contrast (149, 55, 101 and 124 px; the same two views as English's `\l`).
+- The good Samaritan is a parable few Hebrew-speaking children know. 'נכון שאני צדיק?' is the everyday ironic boast (the speaker is `OBJ_EVENT_GFX_ROCKET_M_HNS`, masculine).
+- Kept: the nurse's 'שיקמנו את הפוקימונים שלך לבריאות מלאה', the owner's own FireRed wording on the line he reads most; the box screen's 'להמשיך בפעולות התיבה?', the English UI's own wording.
+
+| Option | How | Risk |
+|---|---|---|
+| A. Plain Hebrew for the idiom | Two map labels | None found. |
+| B. Keep | No change | Two early lines a child does not understand. |
+
+**Chosen:** A. Seen on screen in the sweep on the clip ROM beside rc30 and English, with no clip record: the same pages and presses as before (`<private>/scratch/screens/r33/apply/sw/`).
+
+*Changed:* `data/maps/CherrygroveCity_PokemonCenter_hns/scripts.inc`, `data/maps/AzaleaTown_hns/scripts.inc`, `translation/hebrew/STYLE.md` (§11, the native-ear checklist)
 
 ## Proposed names
 

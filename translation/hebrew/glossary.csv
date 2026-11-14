@@ -1628,7 +1628,7 @@ category,DEXCAT_MAGNET,Magnet,מגנט,מגנט,inherited,FR match: same species
 category,DEXCAT_MAGNETAREA,Magnet Area,,שדה מגנטי,proposed,"1 species; meaning: magnetic field (Japanese is ""magnetic field""); Magnet = מגנט root; reviewed"
 category,DEXCAT_WILDDUCK,Wild Duck,ברווז פרא,ברווז פרא,inherited,FR match: same species; 3 species
 category,DEXCAT_TWINBIRD,Twin Bird,ציפור תאומה,ציפור תאומה,inherited,FR match: same species; 1 species
-category,DEXCAT_TRIPLEBIRD,Triple Bird,יען משולשת,יען משולשת,inherited,FR match: same species; 1 species
+category,DEXCAT_TRIPLEBIRD,Triple Bird,יען משולשת,יען משולש,proposed,"יען is masculine, so the adjective is משולש (DECISIONS.md Q169); FireRed has יען משולשת; 1 species"
 category,DEXCAT_SEALION,Sea Lion,אריה ים,אריה ים,inherited,FR match: same species; 3 species
 category,DEXCAT_SLUDGE,Sludge,בוץ,בוץ,inherited,FR match: same species; 4 species
 category,DEXCAT_BIVALVE,Bivalve,דו-צדפתי,דו-צדפתי,inherited,FR match: same species; 3 species
@@ -1705,7 +1705,7 @@ category,DEXCAT_GHOSTFLAME,Ghost Flame,,להבת רפאים,proposed,1 species; 
 category,DEXCAT_BIGJAW,Big Jaw,לסת גדולה,לסת גדולה,inherited,FR match: same species; 3 species
 category,DEXCAT_LONGBODY,Long Body,גוף ארוך,גוף ארוך,inherited,FR match: same species; 1 species
 category,DEXCAT_OWL,Owl,ינשוף,ינשוף,inherited,FR match: same species; 2 species
-category,DEXCAT_FIVESTAR,Five Star,חמש כוכבים,חמש כוכבים,inherited,FR match: same species; 2 species
+category,DEXCAT_FIVESTAR,Five Star,חמש כוכבים,חמישה כוכבים,proposed,"כוכב is masculine, so the numeral is חמישה (DECISIONS.md Q169); FireRed has חמש כוכבים; 12 bytes, the categoryName limit; 2 species"
 category,DEXCAT_STRINGSPIT,String Spit,יורק חוט,יורק חוט,inherited,FR match: same species; 1 species
 category,DEXCAT_LONGLEG,Long Leg,רגל ארוכה,רגל ארוכה,inherited,FR match: same species; 1 species
 category,DEXCAT_ANGLER,Angler,דייג,דייג,inherited,FR match: same species; 1 species
@@ -1776,7 +1776,7 @@ category,DEXCAT_BLAZE,Blaze,להבה,להבה,inherited,FR match: same species; 
 category,DEXCAT_MUDFISH,Mud Fish,דג בוץ,דג בוץ,inherited,FR match: same species; 3 species
 category,DEXCAT_BITE,Bite,נשיכה,נשיכה,inherited,FR match: same species; 3 species
 category,DEXCAT_TINYRACCOON,Tiny Raccoon,דביבון קטן,דביבון קטן,inherited,FR match: same species; 2 species
-category,DEXCAT_RUSHING,Rushing,מיהר,מיהר,inherited,FR match: same species; 2 species
+category,DEXCAT_RUSHING,Rushing,מיהר,דוהר,proposed,"an adjective-like present participle, as the other categories (DECISIONS.md Q169): מיהר is a past-tense verb, 'פוקימון מיהר' = a Pokémon hurried; FireRed has מיהר; 2 species"
 category,DEXCAT_BLOCKING,Blocking,,חוסם,proposed,1 species; participle like FR Kicking בועט; root shared with move BLOCK חסימה; reviewed
 category,DEXCAT_WATERWEED,Water Weed,עשב מים,עשב מים,inherited,FR match: same species; 1 species
 category,DEXCAT_JOLLY,Jolly,עליז,עליז,inherited,FR match: same species; 1 species
@@ -1799,7 +1799,7 @@ category,DEXCAT_WILDMONKEY,Wild Monkey,קוף פרא,קוף פרא,inherited,FR 
 category,DEXCAT_LAZY,Lazy,עצלן,עצלן,inherited,FR match: same species; 1 species
 category,DEXCAT_TRAINEE,Trainee,מתלמד,מתלמד,inherited,FR match: same species; 1 species
 category,DEXCAT_NINJA,Ninja,נינג'ה,נינג'ה,inherited,FR match: same species; 4 species
-category,DEXCAT_SHED,Shed,שלכת,שלכת,inherited,FR match: same species; 1 species
+category,DEXCAT_SHED,Shed,שלכת,נשל,proposed,"a shed skin, what Shedinja is (DECISIONS.md Q169): שלכת is the autumn fall of leaves; distinct from DEXCAT_SHEDDING משיל עור; FireRed has שלכת; the Battle Frontier lounge line that names it follows; 1 species"
 category,DEXCAT_WHISPER,Whisper,לחישה,לחישה,inherited,FR match: same species; 1 species
 category,DEXCAT_BIGVOICE,Big Voice,קול גדול,קול גדול,inherited,FR match: same species; 1 species
 category,DEXCAT_LOUDNOISE,Loud Noise,רעש חזק,רעש חזק,inherited,FR match: same species; 1 species
@@ -1828,7 +1828,7 @@ category,DEXCAT_ERUPTION,Eruption,התפרצות,התפרצות,inherited,FR mat
 category,DEXCAT_COAL,Coal,פחם,פחם,inherited,FR match: same species; 4 species
 category,DEXCAT_BOUNCE,Bounce,קפיצה,קפיצה,inherited,FR match: same species; 1 species
 category,DEXCAT_MANIPULATE,Manipulate,מניפולציה,מניפולציה,inherited,FR match: same species; 2 species
-category,DEXCAT_SPOTPANDA,Spot Panda,פנדה מנוקד,פנדה מנוקד,inherited,FR match: same species; 1 species
+category,DEXCAT_SPOTPANDA,Spot Panda,פנדה מנוקד,פנדה מנוקדת,proposed,"פנדה is feminine, so the adjective is מנוקדת (DECISIONS.md Q169); FireRed has פנדה מנוקד; 1 species"
 category,DEXCAT_ANTPIT,Ant Pit,בור נמלים,בור נמלים,inherited,FR match: same species; 1 species
 category,DEXCAT_VIBRATION,Vibration,רטט,רטט,inherited,FR match: same species; 3 species
 category,DEXCAT_CACTUS,Cactus,קקטוס,קקטוס,inherited,FR match: same species; 2 species
@@ -2206,7 +2206,7 @@ category,DEXCAT_CANDYAPPLE,Candy Apple,,תפוח אהבה,proposed,1 species; th
 category,DEXCAT_APPLEHYDRA,Apple Hydra,,הידרת תפוח,proposed,1 species; reviewed
 category,DEXCAT_SANDSNAKE,Sand Snake,,נחש חול,proposed,2 species; chunk shared with SNAKE נחש; reviewed
 category,DEXCAT_GULP,Gulp,,בליעה,proposed,"3 species; reviewed; FR move SWALLOW is also בליעה (other kind, no clash)"
-category,DEXCAT_RUSH,Rush,,הסתערות,proposed,1 species; meaning: charge; RUSHING is מיהר; reviewed
+category,DEXCAT_RUSH,Rush,,הסתערות,proposed,1 species; meaning: charge; RUSHING is דוהר; reviewed
 category,DEXCAT_SKEWER,Skewer,,שיפוד,proposed,1 species; reviewed
 category,DEXCAT_BABY,Baby,,תינוק,proposed,1 species; reviewed
 category,DEXCAT_PUNK,Punk,,פאנקיסט,proposed,2 species; punk rocker; reviewed
@@ -2348,7 +2348,7 @@ move,MOVE_BITE,BITE,נשיכה,נשיכה,inherited,FR match: constant
 move,MOVE_GROWL,GROWL,נהמה,נהמה,inherited,FR match: constant
 move,MOVE_ROAR,ROAR,שאגה,שאגה,inherited,FR match: constant
 move,MOVE_SING,SING,שירה,שירה,inherited,FR match: constant
-move,MOVE_SUPERSONIC,SUPERSONIC,על-קולי,על-קולי,inherited,FR match: constant
+move,MOVE_SUPERSONIC,SUPERSONIC,על-קולי,גל על-קולי,proposed,"a noun, as the Japanese 超音波 'ultrasonic wave' and the game's own 'יוצר גל על-קולי' (DECISIONS.md Q167): the bare adjective על-קולי did not read as a name, and after ב it read 'בעל-קולי'; FireRed has על-קולי; 49 px narrow"
 move,MOVE_SONIC_BOOM,SONIC BOOM,בום עלקול,בום על-קולי,proposed,"FR match: constant; the inherited עלקול lost the final י of על-קולי (supersonic), as FireRed now writes it (בוםעל-קולי)"
 move,MOVE_DISABLE,DISABLE,השבתה,השבתה,inherited,FR match: constant
 move,MOVE_ACID,ACID,חומצה,חומצה,inherited,FR match: constant
@@ -2416,7 +2416,7 @@ move,MOVE_BARRIER,BARRIER,מחסום,מחסום,inherited,FR match: constant
 move,MOVE_LIGHT_SCREEN,LIGHT SCREEN,מסך אור,מסך אור,inherited,FR match: constant
 move,MOVE_HAZE,HAZE,אובך,אובך,inherited,FR match: constant
 move,MOVE_REFLECT,REFLECT,שיקוף,שיקוף,inherited,FR match: constant
-move,MOVE_FOCUS_ENERGY,FOCUS ENERGY,רכזאנרגיה,רכז אנרגיה,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 48 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen); FR wording kept although רכז reads as an imperative; alternative ריכוז אנרגיה (12 bytes, 56 px narrow) for review"
+move,MOVE_FOCUS_ENERGY,FOCUS ENERGY,רכזאנרגיה,ריכוז אנרגיה,proposed,"the noun ריכוז as in FOCUS PUNCH מכת ריכוז and FOCUS BLAST פיצוץ ריכוז (DECISIONS.md Q167): after ב the imperative רכז read as רַכָּז, 'השתמש ברכז אנרגיה' = used the energy coordinator; FireRed has רכזאנרגיה (joined for its 64 px cell, FR 091d397f4); 12 bytes, 53 px narrow in the 64 px battle cell"
 move,MOVE_BIDE,BIDE,סבלנות,סבלנות,inherited,FR match: constant
 move,MOVE_METRONOME,METRONOME,פעמן,פעמן,inherited,FR match: constant
 move,MOVE_MIRROR_MOVE,MIRROR MOVE,העתקתמהלך,העתקת מהלך,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 56 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
@@ -2444,7 +2444,7 @@ move,MOVE_BARRAGE,BARRAGE,ידוי אבן,ידוי אבן,inherited,FR match: co
 move,MOVE_LEECH_LIFE,LEECH LIFE,התעלקות,התעלקות,inherited,FR match: constant
 move,MOVE_LOVELY_KISS,LOVELY KISS,נשיקת שטן,נשיקת שטן,inherited,FR match: constant
 move,MOVE_SKY_ATTACK,SKY ATTACK,מתקפתשמים,מתקפת שמים,proposed,"spacing restored; reviewed: row added in review, namecheck does not see this join because the first word ends in a non-final letter; the join dates from FR 091d397f4 and 9908ae109 kept it for its 64 px cell; 56 px narrow, fits battle 64 (textwidth.py draft widths, not seen on screen)"
-move,MOVE_TRANSFORM,TRANSFORM,שנה צורה,שנה צורה,inherited,FR match: constant
+move,MOVE_TRANSFORM,TRANSFORM,שנה צורה,שינוי צורה,proposed,"the noun, as the party menu's שינוי צורה and gText_PkmnTransformed 'שינה צורה' (DECISIONS.md Q167): after ב the imperative read 'בשנה צורה', in a year, form; FireRed has שנה צורה; 43 px narrow"
 move,MOVE_BUBBLE,BUBBLE,בעבוע,בעבוע,inherited,FR match: constant
 move,MOVE_DIZZY_PUNCH,DIZZY PUNCH,מכת סחרחר,מכת סחרחר,inherited,FR match: constant
 move,MOVE_SPORE,SPORE,נבג,נבג,inherited,FR match: constant
@@ -2582,7 +2582,7 @@ move,MOVE_RECYCLE,RECYCLE,מחזור,מחזור,inherited,FR match: constant
 move,MOVE_REVENGE,REVENGE,נקמה,נקמה,inherited,FR match: constant
 move,MOVE_BRICK_BREAK,BRICK BREAK,שבר לבנים,שבר לבנים,inherited,FR match: constant
 move,MOVE_YAWN,YAWN,פיהוק,פיהוק,inherited,FR match: constant
-move,MOVE_KNOCK_OFF,KNOCK OFF,הפלה,הפלה,inherited,FR match: constant
+move,MOVE_KNOCK_OFF,KNOCK OFF,הפלה,חבטת העפה,proposed,"a swat that sends the held item flying, as the חבטת X names (DECISIONS.md Q167): bare הפלה reads as abortion or miscarriage; FireRed has הפלה; 51 px narrow"
 move,MOVE_ENDEAVOR,ENDEAVOR,מאמץ,מאמץ,inherited,FR match: constant
 move,MOVE_ERUPTION,ERUPTION,התפרצות,התפרצות,inherited,FR match: constant
 move,MOVE_SKILL_SWAP,SKILL SWAP,חילוףסגולה,חילוף יכולת,proposed,FireRed חילוףיכולת with its space restored; יכולת is the ability term (STYLE §3); DECISIONS Q140 (FireRed naming conventions)
@@ -2779,7 +2779,7 @@ move,MOVE_AUTOTOMIZE,AUTOTOMIZE,,השלה עצמית,proposed,meaning: shedding 
 move,MOVE_RAGE_POWDER,RAGE POWDER,,אבקת זעם,proposed,"chunk POWDER=אבקת (POISON/SLEEP POWDER), RAGE=זעם; reviewed"
 move,MOVE_TELEKINESIS,TELEKINESIS,,טלקינזיס,proposed,the Hebrew word is the loanword; reviewed
 move,MOVE_MAGIC_ROOM,MAGIC ROOM,,חדר קסמים,proposed,MAGIC=קסם (MAGIC COAT); reviewed
-move,MOVE_SMACK_DOWN,SMACK DOWN,,מכה לקרקע,proposed,meaning: knocks the target to the ground; הפלה is taken by KNOCK OFF; reviewed
+move,MOVE_SMACK_DOWN,SMACK DOWN,,מכה לקרקע,proposed,meaning: knocks the target to the ground; KNOCK OFF is חבטת העפה (Q167; it was הפלה); reviewed
 move,MOVE_STORM_THROW,STORM THROW,,זריקת סופה,proposed,"chunk THROW=זריקה (VITAL THROW), STORM=סופה; reviewed"
 move,MOVE_FLAME_BURST,FLAME BURST,,פרץ להבה,proposed,"FLAME=להבה (ABILITY_FLAME_BODY), BURST=פרץ; reviewed"
 move,MOVE_SLUDGE_WAVE,SLUDGE WAVE,,גל רפש,proposed,"chunk SLUDGE=רפש, WAVE=גל; reviewed"
@@ -3150,7 +3150,7 @@ move,MOVE_UPPER_HAND,UPPER HAND,,יד עליונה,proposed,meaning: the Hebrew 
 move,MOVE_MALIGNANT_CHAIN,MALIGNANT CHAIN,,שרשרת ממאירה,proposed,"meaning; reviewed; 59 px, exactly at the contest budget"
 move,MOVE_BREAKNECK_BLITZ,BREAKNECK BLITZ,,הסתערות בזק,proposed,"Z-move, meaning: blitz at breakneck (dizzying) speed; reviewed; width: shortened from הסתערות מסחררת (BLITZ = הסתערות; breakneck speed = בזק, as in מלחמת בזק (blitzkrieg))"
 move,MOVE_ALL_OUT_PUMMELING,ALL-OUT PUMMELING,,מכות בכל הכוח,proposed,"English is 17 bytes, over MOVE_NAME_LENGTH: a Z-move name, held by pointer (MoveInfo.name, include/move.h:77), not in a 16-byte buffer; Z-move, meaning: all-out beating; מכות as MOVE_BEAT_UP; reviewed"
-move,MOVE_SUPERSONIC_SKYSTRIKE,SUPERSONIC SKYSTRIKE,,צלילה על-קולית,proposed,"English is 20 bytes, over MOVE_NAME_LENGTH: a Z-move name, held by pointer (MoveInfo.name, include/move.h:77), not in a 16-byte buffer; Z-move, meaning: supersonic dive (the user soars and plummets); SUPERSONIC = על-קולי as MOVE_SUPERSONIC; reviewed"
+move,MOVE_SUPERSONIC_SKYSTRIKE,SUPERSONIC SKYSTRIKE,,צלילה על-קולית,proposed,"English is 20 bytes, over MOVE_NAME_LENGTH: a Z-move name, held by pointer (MoveInfo.name, include/move.h:77), not in a 16-byte buffer; Z-move, meaning: supersonic dive (the user soars and plummets); SUPERSONIC = על-קולי, the adjective of MOVE_SUPERSONIC גל על-קולי; reviewed"
 move,MOVE_ACID_DOWNPOUR,ACID DOWNPOUR,,מבול חומצי,proposed,"Z-move, meaning; ACID = חומצה as MOVE_ACID; reviewed"
 move,MOVE_TECTONIC_RAGE,TECTONIC RAGE,,זעם טקטוני,proposed,"Z-move, meaning; RAGE = זעם; reviewed"
 move,MOVE_CONTINENTAL_CRUSH,CONTINENTAL CRUSH,,ריסוק יבשתי,proposed,"English is 17 bytes, over MOVE_NAME_LENGTH: a Z-move name, held by pointer (MoveInfo.name, include/move.h:77), not in a 16-byte buffer; Z-move, meaning; reviewed"
@@ -3669,7 +3669,7 @@ item,ITEM_MAX_LURE,MAX LURE,,פיתיון עליון,proposed,MAX = עליון a
 item,ITEM_ESCAPE_ROPE,ESCAPE ROPE,חבל מילוט,חבל מילוט,inherited,FR match: constant
 item,ITEM_X_ATTACK,X ATTACK,התקפת X,התקפת X,inherited,FR match: constant
 item,ITEM_X_DEFENSE,X DEFENSE,הגנת X,הגנת X,inherited,FR match: constant ITEM_X_DEFEND; English renamed since Gen 3 (FR 'X DEFEND')
-item,ITEM_X_SP_ATK,X SP. ATK,מיוחד X,מיוחד X,inherited,"FR match: constant ITEM_X_SPECIAL; English renamed since Gen 3 (FR 'X SPECIAL'); FR name is for Gen 3 X SPECIAL; H&S also has X SP. DEF, so מיוחד X is now ambiguous — consider התקפה מיוחדת X"
+item,ITEM_X_SP_ATK,X SP. ATK,מיוחד X,התקפה מיוחדת X,proposed,"stat + X as the X-item family (התקפת X, הגנת X, מהירות X) (DECISIONS.md Q168): FireRed's מיוחד X names Gen 3's X SPECIAL and says no stat; English is now X SP. ATK beside X SP. DEF הגנ' מיוחדת X; 71 px narrow in the 73 px item PC"
 item,ITEM_X_SP_DEF,X SP. DEF,,הגנ' מיוחדת X,proposed,FR stat name sText_SpDef2 הגנ' מיוחדת + X (X DEFENSE הגנת X); distinct from GUARD SPEC. הגנה מיוחדת; reviewed
 item,ITEM_X_SPEED,X SPEED,מהירות X,מהירות X,inherited,FR match: constant
 item,ITEM_X_ACCURACY,X ACCURACY,דיוק X,דיוק X,inherited,FR match: constant
@@ -4032,7 +4032,7 @@ item,ITEM_SILVER_POWDER,SILVER POWDER,אבקת כסף,אבקת כסף,inherited,
 item,ITEM_HARD_STONE,HARD STONE,אבן קשה,אבן קשה,inherited,FR match: constant
 item,ITEM_SPELL_TAG,SPELL TAG,קמע רוח,קמע רוח,inherited,FR match: constant
 item,ITEM_DRAGON_FANG,DRAGON FANG,ניב דרקון,ניב דרקון,inherited,FR match: constant
-item,ITEM_BLACK_GLASSES,BLACK GLASSES,משקף שחור,משקף שחור,inherited,FR match: constant
+item,ITEM_BLACK_GLASSES,BLACK GLASSES,משקף שחור,משקפיים שחורים,proposed,"the plural row's form (DECISIONS.md Q168): singular משקף is not the word for glasses and reads as the verb 'reflects'; GLASSES = משקפיים as the item_plural row and the משקפי family (משקפי בחירה, משקפי מגן); FireRed has משקף שחור; 70 px narrow in the 73 px item PC"
 item,ITEM_METAL_COAT,METAL COAT,ציפוי מתכת,ציפוי מתכת,inherited,FR match: constant
 item,ITEM_CHOICE_BAND,CHOICE BAND,סרט בחירה,סרט בחירה,inherited,FR match: constant
 item,ITEM_CHOICE_SPECS,CHOICE SPECS,,משקפי בחירה,proposed,meaning; CHOICE chunk בחירה from ITEM_CHOICE_BAND סרט בחירה; specs = משקפיים (GO-GOGGLES משקפי חול); reviewed
@@ -4068,7 +4068,7 @@ item,ITEM_LEFTOVERS,LEFTOVERS,שאריות,שאריות,inherited,FR match: cons
 item,ITEM_SHELL_BELL,SHELL BELL,פעמון קונכיה,פעמון קונכיה,inherited,FR match: constant
 item,ITEM_WIDE_LENS,WIDE LENS,,עדשה רחבה,proposed,meaning; LENS chunk עדשה (ITEM_SCOPE_LENS); reviewed
 item,ITEM_MUSCLE_BAND,MUSCLE BAND,,רצועת שרירים,proposed,meaning; BAND chunk רצועה (ITEM_FOCUS_BAND); reviewed
-item,ITEM_WISE_GLASSES,WISE GLASSES,,משקף חכם,proposed,meaning; GLASSES chunk משקף from ITEM_BLACK_GLASSES משקף שחור (FR's singular form kept for the family); reviewed
+item,ITEM_WISE_GLASSES,WISE GLASSES,,משקפי חוכמה,proposed,"construct state as משקפי בחירה, משקפי מגן (DECISIONS.md Q168): was משקף חכם after FR's singular משקף שחור; משקפיים חכמים would fill the 66 px PC storage field (66 px), משקפי חוכמה is 57"
 item,ITEM_EXPERT_BELT,EXPERT BELT,,חגורת מומחה,proposed,meaning; BELT chunk חגורה (ITEM_BLACK_BELT); reviewed
 item,ITEM_LIGHT_CLAY,LIGHT CLAY,,חימר אור,proposed,meaning (JP ひかりのねんど 'clay of light'); LIGHT chunk אור from MOVE_LIGHT_SCREEN מסך אור / ITEM_LIGHT_BALL; reviewed
 item,ITEM_LIFE_ORB,LIFE ORB,,גולת חיים,proposed,meaning; ORB גולה; reviewed
@@ -4515,7 +4515,7 @@ item_plural,ITEM_YELLOW_SCARF,Yellow Scarves,,צעיפים צהובים,proposed
 item_plural,ITEM_POWER_LENS,Power Lenses,,עדשות כוח,proposed,construct plural; LENS chunk עדשות shared by the lens family; singular: עדשת כוח (item_03); reviewed
 item_plural,ITEM_SILK_SCARF,Silk Scarves,,צעיפי משי,proposed,construct plural; singular: צעיף משי (inherited); reviewed
 item_plural,ITEM_SOFT_SAND,Soft Sand,,חול רך,proposed,"same as singular; mass noun, English plural unchanged; singular: חול רך (inherited); reviewed"
-item_plural,ITEM_BLACK_GLASSES,Black Glasses,,משקפיים שחורים,proposed,"plural of FR singular משקף שחור (English GLASSES is invariant, Hebrew is not); singular: משקף שחור (inherited); reviewed: was משקפים שחורים; משקפים (plural of משקף, a viewer) reads as a misspelling of משקפיים, the standard word for eyeglasses, which the משקפי family already uses (CHOICE SPECS משקפי בחירה, SAFETY GOGGLES משקפי מגן, GO-GOGGLES משקפי חול); FR singular משקף שחור stays canon"
+item_plural,ITEM_BLACK_GLASSES,Black Glasses,,משקפיים שחורים,proposed,"same as singular משקפיים שחורים (Q168; English GLASSES is invariant, and so is משקפיים); was the plural of FR's singular משקף שחור; משקפים (plural of משקף, a viewer) reads as a misspelling of משקפיים, the standard word for eyeglasses, which the משקפי family uses (CHOICE SPECS משקפי בחירה, SAFETY GOGGLES משקפי מגן, GO-GOGGLES משקפי חול)"
 item_plural,ITEM_CHOICE_SPECS,Choice Specs,,משקפי בחירה,proposed,same as singular; singular is already plural; singular: משקפי בחירה (item_03); reviewed
 item_plural,ITEM_CHOICE_SCARF,Choice Scarves,,צעיפי בחירה,proposed,"construct plural, SCARF chunk as SILK SCARVES; singular: צעיף בחירה (item_03); reviewed"
 item_plural,ITEM_CELL_BATTERY,Cell Batteries,,סוללות,proposed,plural; singular: סוללה (item_03); reviewed
@@ -4523,7 +4523,7 @@ item_plural,ITEM_LUMINOUS_MOSS,Luminous Moss,,טחב זוהר,proposed,"same as 
 item_plural,ITEM_SCOPE_LENS,Scope Lenses,,עדשות דיוק,proposed,construct plural; singular: עדשת דיוק (inherited); reviewed
 item_plural,ITEM_LEFTOVERS,Leftovers,,שאריות,proposed,same as singular; singular is already plural; singular: שאריות (inherited); reviewed
 item_plural,ITEM_WIDE_LENS,Wide Lenses,,עדשות רחבות,proposed,noun + adjective plural; singular: עדשה רחבה (item_03); reviewed
-item_plural,ITEM_WISE_GLASSES,Wise Glasses,,משקפיים חכמים,proposed,GLASSES chunk as BLACK GLASSES משקפים שחורים; singular: משקף חכם (item_03); reviewed: was משקפים חכמים; GLASSES = משקפיים as BLACK GLASSES משקפיים שחורים (משקפים reads as a misspelling); reviewer: the item_03 singular משקף חכם copies FR משקף שחור and could become משקפיים חכמים (13 bytes) if FR is not binding for new items
+item_plural,ITEM_WISE_GLASSES,Wise Glasses,,משקפי חוכמה,proposed,same as singular משקפי חוכמה (Q168); was משקפיים חכמים beside the singular משקף חכם
 item_plural,ITEM_FOCUS_SASH,Focus Sashes,,אבנטי ריכוז,proposed,construct plural; singular: אבנט ריכוז (item_03); reviewed
 item_plural,ITEM_ZOOM_LENS,Zoom Lenses,,עדשות זום,proposed,construct plural; singular: עדשת זום (item_03); reviewed
 item_plural,ITEM_WEAKNESS_POLICY,Weakness Policies,,פוליסות חולשה,proposed,construct plural; singular: פוליסת חולשה (item_03); reviewed
@@ -4738,7 +4738,7 @@ item_plural,ITEM_SUPER_LURE,SUPER LUREs,,פיתיונות על,proposed,construc
 item_plural,ITEM_MAX_LURE,MAX LUREs,,פיתיונות עליונים,proposed,noun + adjective plural; English adds s (no pluralName); singular: פיתיון עליון; Q125
 item_plural,ITEM_X_ATTACK,X ATTACKs,,התקפת X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: התקפת X; Q125"
 item_plural,ITEM_X_DEFENSE,X DEFENSEs,,הגנת X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: הגנת X; Q125"
-item_plural,ITEM_X_SP_ATK,X SP. ATKs,,מיוחד X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: מיוחד X; Q125"
+item_plural,ITEM_X_SP_ATK,X SP. ATKs,,התקפה מיוחדת X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: התקפה מיוחדת X (Q168); Q125"
 item_plural,ITEM_X_SP_DEF,X SP. DEFs,,הגנ' מיוחדת X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: הגנ' מיוחדת X; Q125"
 item_plural,ITEM_X_SPEED,X SPEEDs,,מהירות X,proposed,"same as singular; abstract noun, not inflected (X-item family, as X ACCURACIES); English adds s (no pluralName); singular: מהירות X; Q125"
 item_plural,ITEM_DIRE_HIT,DIRE HITs,,פגיעות קריטיות,proposed,noun + adjective plural; English adds s (no pluralName); singular: פגיעה קריטית; Q125

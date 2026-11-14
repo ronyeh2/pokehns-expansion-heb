@@ -33,7 +33,7 @@ GoldenrodDeptStore_Text_3FSuperNerd:
 
 GoldenrodDeptStore_Text_3FRocker:
     .string "היי! כשאתה נלחם, אתה משתמש\n"
-    .string "ב”מיוחד X”?\p"
+    .string "ב”התקפה מיוחדת X”?\p"
     .string "זה מעולה. זה ממש מקפיץ את\n"
     .string "ההתקפה המיוחדת!$"
 

@@ -222,3 +222,38 @@ keeps upstream's pen and mirrors what it draws (`docs/hebrew_translation.md`, wi
   as close as its width allows, and stays off the tag's outline rows: ק stops on the last letter
   row. Only the lamed's ascender and the final pe's stem use an outline row, because those letters
   need them to be read (Q154).
+
+## 11. Native-ear checklist
+
+Every line below passed drift, the audit and the sweep, and was still wrong: a native speaker
+playing on a TV caught it by reading. Read each changed line aloud as a native speaker would say it,
+and check it against this list before it ships (`DECISIONS.md` Q159-Q172).
+
+1. **A Hebrew word, not a transliteration, for a common noun or term.** POKé BALL is פוכדור, not
+   פוקיבול (Q159); the pocket is פוכדורים, not כדורי פוקי (Q161). Proper names of species, people
+   and places still follow the glossary and the transliteration rules.
+2. **No technical or meta words a player would not say:** נתון, ערך, פרמטר, סטטוס, מצב-X, יחס,
+   'נרפא מבעיית המצב שלו' where the line can say נרפא. The stat line says 'הדיוק ירד', not
+   'הנתון דיוק ירד' (Q160); a vitamin gives 'חיזוק ל{stat}', not 'נתון הבסיס' (Q170); the Pokédex
+   sorts 'מהכבד לקל', not 'מצב הכבד ביותר'.
+3. **A name must read as a name.** A bare adjective, an imperative or a calque does not: סטטי
+   became חשמל סטטי, על-קולי גל על-קולי, רכז אנרגיה ריכוז אנרגיה, שנה צורה שינוי צורה (Q167). Read
+   a move, item or ability name inside its battle line: 'השתמש ב{move}!' must not turn into another
+   word (בעל-קולי, בשנה צורה), and a name must not be an everyday word with another meaning
+   (הפלה, Q167; singular משקף, Q168).
+4. **No article or possessive glued to a name.** Not 'הסטטי של פיקאצ'ו': the Pokémon keeps its
+   English place and the name follows its noun ('בעזרת היכולת סטטי', Q162). A definite adjective
+   in construct reads as a person: 'מהלך העל-קולי של זובאט' became 'הגל העל-קולי של זובאט' (Q167).
+5. **Gender and number agree with every value a placeholder can hold.** List the values and read
+   the line with each (Q160: דיוק is masculine, the other stats feminine; a vitamin's verb follows
+   the Pokémon, Q170). Fixed names agree too: חמישה כוכבים, יען משולש, פנדה מנוקדת (Q169).
+6. **No more boxes or presses of A than English.** A battle line without a manual break in English
+   gets none (STYLE §5): with FAST BATTLES on, the last view is wiped 8 frames after its last
+   letter (Q163). Lay a battle line out with the longest names and a 12-letter nickname.
+7. **What the player sees most matters most:** battles, the bag, menus, the Pokémon Center, Mart and
+   PC, and the early story. One verb for one action everywhere: HP and PP that go up say עלו in the
+   field and in battle (Q166), and an item or an ability cures a status with נרפא מה{status}.
+8. **A child understands it on first read.** No English proverb or idiom translated word for word
+   ('a watched pot', 'a good Samaritan': Q172), no form label in speech ('עלה במספר רמות: 3',
+   Q171), no literary word where a spoken one exists (לקדמותו). A direct object that is a name
+   takes את ('למד את {move}', Q171).
