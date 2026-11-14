@@ -112,6 +112,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q170](#q170) | Stat and system jargon outside battle: 'נתון הבסיס' (vitamins), 'מצב הכבד ביותר' and 'פרמטרים' (Pokédex), 'יחס פגיעה קריטית' (descriptions). | A. 'קיבל חיזוק ל{stat}', the sorting idiom, 'סיכוי גבוה לפגיעה קריטית' | changed |
 | [Q171](#q171) | Lines that read like a form: 'פגיעות בפוקימון: N!', the day-care's 'עלה במספר רמות: N', and 'X למד Y!' without את. | A. 'מספר הפגיעות: N!', 'הרמה של X עלתה ב-N', 'למד את Y' | changed |
 | [Q172](#q172) | Two early lines translate an English idiom word for word: a watched pot, a good Samaritan. | A. Plain Hebrew: 'כשמסתכלים על השעון, הזמן לא זז', 'צדיק' | changed |
+| [Q173](#q173) | The owner: what are עקידה and פעמן, is there a better name? And FLUFFY's פרוותי is fine too. | BIND לפיתה, METRONOME מטרונום (move and item), FLUFFY back to פרוותי | changed |
 
 ## K1
 
@@ -2597,7 +2598,7 @@ The owner's case, replayed in a real battle (the player's Pikachu, a wild Rattat
 | COMPETITIVE | תחרותי | תחרותיות | 43 / 38 | | owned |
 | GALVANIZE | מחשמל | מטען חשמלי | 58 / 52 | | hidden ability, one trainer |
 | GOOEY | רירי | גוף רירי | 36 / 33 | | randomizer |
-| FLUFFY | פרוותי | פרווה רכה | 48 / 42 | | randomizer |
+| FLUFFY | פרוותי | פרווה רכה (the owner kept פרוותי: Q173) | 48 / 42 | | randomizer |
 | DAZZLING | מסנוור | סנוור | 23 / 21 | | randomizer |
 | STALWART | עיקש | עקשנות | 34 / 32 | | randomizer |
 | MERCILESS | חסר רחמים | חוסר רחמים | 56 / 49 | | randomizer |
@@ -2788,6 +2789,25 @@ Nothing else differs (`<private>/scratch/screens/r32/static-rename/tours_out/`).
 **Chosen:** A. Seen on screen in the sweep on the clip ROM beside rc30 and English, with no clip record: the same pages and presses as before (`<private>/scratch/screens/r33/apply/sw/`).
 
 *Changed:* `data/maps/CherrygroveCity_PokemonCenter_hns/scripts.inc`, `data/maps/AzaleaTown_hns/scripts.inc`, `translation/hebrew/STYLE.md` (§11, the native-ear checklist)
+
+## Q173
+
+**Question.** The owner asked what the move names עקידה and פעמן mean and whether there is a better name, and said that FLUFFY's old name פרוותי is fine too.
+
+*Source:* the owner, after round 33. Both move names come from the FireRed translation; the owner's FireRed fix (its pull request 2) keeps them.
+
+**Analysis.**
+- BIND squeezes the foe for several turns. עקידה is the Binding of Isaac; it names no squeeze. לפיתה is a tight grip, the word the Pokédex already uses (כוח לפיתה), and it stays apart from WRAP עיטוף, CLAMP הידוק, CONSTRICT כיווץ and WRING OUT סחיטה. BINDING BAND follows (רצועת לפיתה), and so do the two descriptions that say binding moves (GRIP CLAW, BINDING BAND).
+- METRONOME calls a random move while the user swings a finger like a metronome's arm. פעמן is not a Hebrew word (a bell is פעמון). מטרונום is the everyday word; the move tutor's own line says the finger swings like one. The held item METRONOME takes the same word, plural מטרונומים.
+- FLUFFY: Q165 renamed פרוותי to פרווה רכה as a bare adjective; the owner keeps פרוותי.
+- Widths (`textwidth.py`): מטרונום 37 px in FONT_NORMAL and 33 in FONT_NARROW, לפיתה 30 and 27 (the same as עקידה), רצועת לפיתה 62 (the same as before); the audit finds no line over its window.
+- Q140 keeps a name apart from FireRed with its reason in `namecheck_allow.json`; both entries are there. The Easy Chat move words are the names, so `gen_ec_letters.py` regenerated the ABC lists.
+
+**Chosen:** the owner's decision: BIND לפיתה, METRONOME מטרונום, FLUFFY פרוותי.
+
+*Changed:* `src/data/moves_info.h`, `src/data/items.h`, `src/data/abilities.h`, `src/battle_debug.c`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `data/text/move_tutors.inc`, `data/maps/VermilionCity_FanClub_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`
+
+*Glossary:* `MOVE_BIND`, `MOVE_METRONOME`, `ITEM_METRONOME`, `ITEM_BINDING_BAND` (and their plural rows), `ABILITY_FLUFFY`
 
 ## Proposed names
 
