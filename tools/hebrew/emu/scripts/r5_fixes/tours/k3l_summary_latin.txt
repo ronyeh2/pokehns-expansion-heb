@@ -75,6 +75,11 @@ waitquiet
 snap k3l_forget_page_peggys
 tap B 4
 waitcb2x CB2_UpdatePartyMenu 900
+ifsym Task_HandleStopLearningMoveYesNoInput   # a build that asks "give up learning?" (P_ASK_MOVE_CONFIRMATION)
+waittaskx Task_HandleStopLearningMoveYesNoInput 900
+waitquiet
+tap A 4                                   # YES: give up
+endif
 waitkey 900
 tap A 4
 waitcb2x CB2_BagMenuRun 900

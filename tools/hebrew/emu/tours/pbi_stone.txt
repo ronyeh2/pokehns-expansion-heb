@@ -56,7 +56,9 @@ waittaskdata Task_EvolutionScene 0 15 3000
 waitkey 900
 snap pbi_stone_10_evolved
 # Raichu learns a move on evolving and already knows four (src/evolution_scene.c:910-1060):
-# "wants to learn", "already knows four moves", "Delete a move...?" YES/NO; NO -> "did not learn"
+# "wants to learn", "already knows four moves", "Delete a move...?" YES/NO; NO -> "did not learn".
+# A build with P_ASK_MOVE_CONFIRMATION (the Hebrew one: it follows TEXT_RTL) first asks "give up
+# learning X?" (MVSTATE_ASK_CANCEL), answered YES.
 tap A 4
 waittaskdata Task_EvolutionScene 6 1 600
 waitquiet
@@ -72,7 +74,13 @@ snap pbi_stone_13_delete_yesno
 tap DOWN 4
 waitquiet
 snap pbi_stone_14_delete_no
-tap A 4
+tap A 4                                   # NO
+ifsym Task_HandleStopLearningMoveYesNoInput   # a build that asks "give up learning?" (P_ASK_MOVE_CONFIRMATION)
+waittaskdata Task_EvolutionScene 6 4 600
+waitquiet
+snap pbi_stone_14b_give_up
+tap A 4                                   # YES: give up
+endif
 waittaskdata Task_EvolutionScene 0 15 600
 waitquiet
 snap pbi_stone_15_not_learned

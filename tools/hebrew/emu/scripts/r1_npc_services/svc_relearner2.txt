@@ -1,9 +1,9 @@
 # Move relearner and deleter branches svc_relearner does not reach (Blackthorn House3):
 # 1. relearner, Typhlosion with 4 moves: the box with an Egg and a greyed Magikarp (nothing to
 #    relearn) chosen first ("can't teach an Egg", "no move to teach"), then Typhlosion;
-#    "delete an older move?" NO -> the list (P_ASK_MOVE_CONFIRMATION is FALSE, so no
-#    "stop teaching?" here); again YES -> the summary, B there -> "stop trying to teach X?"
-#    YES -> the list, B -> give up YES -> back in the box, B, NO.
+#    "delete an older move?" NO -> the list (a build with P_ASK_MOVE_CONFIRMATION, the Hebrew
+#    one, first asks "give up learning X?", answered YES); again YES -> the summary, B there ->
+#    "give up learning X?" YES -> the list, B -> give up YES -> back in the box, B, NO.
 # 2. deleter: Magikarp ("only knows one move"), Gyarados's summary and B (back to choose),
 #    Typhlosion: forget its 4th move, confirm NO ("come again"), then YES.
 # 3. relearner, Typhlosion with 3 moves: teach a move straight away ("learned X!").
@@ -82,7 +82,12 @@ press A                                  # YES
 pages svc2_rel_trying 5
 waitpmem 8 move_relearner:sMoveRelearnerStruct 0 18 600
 snap svc2_rel_delete_yesno
-press B                                  # NO: back to the list (P_ASK_MOVE_CONFIRMATION is FALSE)
+press B                                  # NO: back to the list
+ifsym Task_HandleStopLearningMoveYesNoInput   # a build that asks "give up learning?" (P_ASK_MOVE_CONFIRMATION)
+waitpmem 8 move_relearner:sMoveRelearnerStruct 0 26 600
+snap svc2_rel_delete_no_give_up
+press A                                  # YES: give up
+endif
 waitpmem 8 move_relearner:sMoveRelearnerStruct 0 4 600
 snap svc2_rel_list_after_no
 press A

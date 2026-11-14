@@ -104,6 +104,12 @@ needs `HNS_SAVES` set to the folder that holds it: `saves/r8` for round 8, a fol
 `n20_dexsearch` (both start from `menuA_base_copy.sav`), and `saves/r7/saves_aug` for rounds 3-7
 and `verify_ctxdpad` (the builds repository's README).
 
+A step that only one build has goes between `ifsym SYMBOL` and `endif`: those lines run only when
+the ELF defines SYMBOL. The Hebrew build asks "give up learning the move?" before a Pokémon gives up
+a new move (`P_ASK_MOVE_CONFIRMATION` follows `TEXT_RTL`; the English game does not ask), and that
+option compiles in `Task_HandleStopLearningMoveYesNoInput`, so the tours that turn a move down answer
+the box inside `ifsym Task_HandleStopLearningMoveYesNoInput` and run the same on the English ROM.
+
 `startmenu NAME`, `savegame` and `ladder.py`'s `startmenu` press START only when the start menu is
 not drawn and reading input, which `Emu.start_menu_ready` reads as a `Task_ShowStartMenu` task in
 its input state (`data[0]` = 1) with `gMenuCallback` = `HandleStartMenuInput`. `gMenuCallback`

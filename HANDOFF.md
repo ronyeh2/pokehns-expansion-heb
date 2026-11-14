@@ -217,6 +217,14 @@ in 14 bytes, all line numbers: 11 digits of assert strings, the `battle_message.
 sizes, and none is an `Rtl*` symbol (`<private>/scratch/screens/r25/engproof/PROOF.md`; run again
 in `<private>/scratch/screens/r26/docs/`: `engproof_cmp.txt`, `nm_before.txt`, `nm_after.txt`).
 
+**Picked (round 35).** `0abc2e99f0` (on `he/wip-r35`), on `he/renderer` as `fe0cfa4be9`: `include/config/pokemon.h` includes
+`config/text.h` and `P_ASK_MOVE_CONFIRMATION` follows `TEXT_RTL`, so the Hebrew build asks
+"give up learning the move?" before a Pokémon gives up a new move (`DECISIONS.md` Q174). Its pick
+`fe0cfa4be9` on `he/renderer` has the same tree as the proven one. Picked onto `1e75e9eabe` in a scratch clone (the
+same patch-id as its source) and built with `TEXT_RTL` FALSE, the English ROM is byte for byte the
+same before and after (SHA-1 `1c6d1d7c…`), and every one of the 391 units that defines the option
+sees `TEXT_RTL` (`<private>/scratch/screens/r35/engproof/PROOF.md`).
+
 **Checking a pick with an English build.** Build `he/renderer` before and after the picks with
 `TEXT_RTL` set to FALSE (`include/config/text.h:20`, in a scratch worktree) and `make hns`, and
 compare the two English ROMs. When a picked graphic is compressed and its size changes, every
@@ -284,7 +292,7 @@ Reference machine: Apple Silicon, macOS.
 | libpng, pkg-config | Homebrew libpng 1.6.58 | `brew install libpng pkg-config`; Linux: `libpng-dev` |
 | GNU make | macOS ships 3.81 | 3.81 builds fine but has no `-O` (section 6.1) |
 | git | any | the build refuses to run without git history (section 6.1) |
-| Python 3 | 3.9 or newer: the 227 tool tests pass on 3.9.6 and 3.11.9 (199 also on 3.14.7 at `1124d9661d`), and all 248 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (`he/main` `1124d9661d`; CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
+| Python 3 | 3.9 or newer: the 232 tool tests pass on 3.9.6 and 3.11.9 (199 also on 3.14.7 at `1124d9661d`), and all 248 scripts under `tools/hebrew` compile with every warning turned into an error on 3.9.6, 3.11.9 and 3.14.7 (`he/main` `1124d9661d`; CI: Ubuntu 26.04's python3) | standard library only, except the picture tools |
 | Pillow | 12.2.0 | `python3 -m pip install Pillow`. Needed by `fontcells.py`, `tools/hebrew/graphics/`, the font previews and the review-sheet scripts; the harness writes PNGs itself |
 | numpy | any recent | only `tools/hebrew/inventory/` |
 | cmake | 4.4.3 | only for building mGBA for the harness |
@@ -908,7 +916,7 @@ Apply a decision in this order:
 | whole tree | `audit.py --baseline ../pokehns-en` | WIDTH, LINES, BUFFER, BYTES, TERMINATOR, CHARSET | 28 s |
 | glossary | `namecheck.py --all --warnings` | byte limits, final letters, duplicates; warnings for FireRed differences, transliteration slips, two-way names | instant |
 | generated data | `gen_dex_alpha.py`, `gen_ec_order.py`, `gen_ec_letters.py`, `flag_gates.py`, each `--check` | a stale A–Z order, Easy Chat list or live-label list | instant |
-| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (227 tests) | 16 s |
+| tool tests | `python3 -m unittest discover -s tools/hebrew/tests` | the tools themselves (232 tests) | 16 s |
 | game logic | `make check BUILD=hns` + `check_tests.py` | a test that passes upstream but fails in Hebrew | about 4 min at `-j12` in the release worktree (rc5, rc20: `make_check.log` created to last written; 15 hydra runners), 13 to 20 min in CI |
 | screens | `hns.py tour` (71 tours) | crashes, timeouts, wrong typed bytes; screenshots for review | about 3 min |
 | glyphs outside windows | `hns.py tour --clip`, `sweep.py` on the clip ROM | every glyph drawn outside its window | about 2.5 min: 6,611 labels in 150 s on rc21's clip ROM (191 s with a cold cache) |
@@ -954,7 +962,7 @@ python3 tools/hebrew/gen_ec_letters.py --check    # gen_ec_letters: 23 lists, th
 python3 tools/hebrew/flag_gates.py --check        # total: live 6585, flag_off 451, not_built 147 / no change
 # 5. tool tests (hebrew.yml:73-74)
 python3 -m unittest discover -s tools/hebrew/tests
-#    Ran 227 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
+#    Ran 232 tests ... OK   (no skip with tools/preproc built, ../pokehns-en/pokehns.gba present,
 #                            devkitARM's arm-none-eabi-gcc and a host cc; tools/hebrew/README.md)
 # not in CI: item plurals
 python3 tools/hebrew/plurals.py                   # items 902, stackable 693, problems 0
@@ -1987,7 +1995,7 @@ Earlier passes: round 20 corrected the audit's example finding (section 4.2:
 section 7. Round 19 corrected six line references: `RELEASE ?= 0` is at `Makefile:69`, `KEPT_LATIN`
 at `status_report.py:22-48`, the Hebrew count at `status_report.py:82`, the sweep's path guard at
 `sweep.py:391-396`, `walk_tree` (now at `audit.py:461-481`) and `LoadSaveblockObjEventScripts` at
-`src/overworld.c:592-600`. Every text tool has tests: 227 tests in 27 files under
+`src/overworld.c:592-600`. Every text tool has tests: 232 tests in 28 files under
 `tools/hebrew/tests`, with small committed fixtures in `tools/hebrew/tests/data/`. Add a row here
 when a document and the tree disagree, and fix it in a docs-only commit.
 

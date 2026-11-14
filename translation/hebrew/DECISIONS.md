@@ -113,6 +113,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q171](#q171) | Lines that read like a form: 'פגיעות בפוקימון: N!', the day-care's 'עלה במספר רמות: N', and 'X למד Y!' without את. | A. 'מספר הפגיעות: N!', 'הרמה של X עלתה ב-N', 'למד את Y' | changed |
 | [Q172](#q172) | Two early lines translate an English idiom word for word: a watched pot, a good Samaritan. | A. Plain Hebrew: 'כשמסתכלים על השעון, הזמן לא זז', 'צדיק' | changed |
 | [Q173](#q173) | The owner: what are עקידה and פעמן, is there a better name? And FLUFFY's פרוותי is fine too. | BIND לפיתה, METRONOME מטרונום (move and item), FLUFFY back to פרוותי | changed |
+| [Q174](#q174) | The owner: when B turns down a new move, the game does not ask 'לוותר על הלמידה?' with yes and no. English Heart & Soul does not ask either (P_ASK_MOVE_CONFIRMATION is FALSE). | A. The box in the Hebrew build only (the option follows TEXT_RTL), and every prompt says 'לוותר על לימוד {move}' | changed |
 
 ## K1
 
@@ -2822,7 +2823,7 @@ Seen on screen on the clip ROM beside rc30 and English, with no clip record: the
 - Widths (`textwidth.py`): מטרונום 37 px in FONT_NORMAL and 33 in FONT_NARROW, לפיתה 30 and 27 (the same as עקידה), רצועת לפיתה 62 (the same as before); the audit finds no line over its window.
 - Q140 keeps a name apart from FireRed with its reason in `namecheck_allow.json`; both entries are there. The Easy Chat move words are the names, so `gen_ec_letters.py` regenerated the ABC lists.
 
-**Chosen:** the owner's decision: BIND לפיתה, METRONOME מטרונום, FLUFFY פרוותי. Seen on screen on the clip ROM beside rc30 and English, with 0 clip records (`<private>/scratch/screens/r34/review/`):
+**Chosen:** the owner's decision: BIND לפיתה, METRONOME מטרונום, FLUFFY פרוותי. After seeing the options, the owner also kept two of Q165's names, SHADOW TAG לכידת צל and ANALYTIC חשיבה אנליטית. Seen on screen on the clip ROM beside rc30 and English, with 0 clip records (`<private>/scratch/screens/r34/review/`):
 - the used-move line of both moves for the player's and the foe's Pokémon, Bind's squeeze, hurt and freed lines, Rapid Spin's got-free line and Metronome's called-move line, forced with `tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py` (14 entries) in a trainer battle and a wild battle, each with species names and with 12-letter nicknames: every entry as many views as rc30, and as English except Rapid Spin's line with two 12-letter nicknames (two views, as in rc30);
 - a real wild battle: Clefairy binds Snorlax ('סנורלקס הפראי נמחץ / על ידי קלפרי!'), Snorlax is hurt each turn and freed ('סנורלקס הפראי השתחרר / מלפיתה!'), then Metronome calls Feint Attack;
 - the FIGHT menu cells and START window, the summary's move list and move details, METRONOME and BINDING BAND as held items, FLUFFY on the INFO page and in its pop-up on both sides;
@@ -2831,6 +2832,31 @@ Seen on screen on the clip ROM beside rc30 and English, with no clip record: the
 *Changed:* `src/data/moves_info.h`, `src/data/items.h`, `src/data/abilities.h`, `src/battle_debug.c`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `data/text/move_tutors.inc`, `data/maps/VermilionCity_FanClub_hns/scripts.inc`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md` (§3, §7 and §11 name FLUFFY as the owner's exception to the noun rule)
 
 *Glossary:* `MOVE_BIND`, `MOVE_METRONOME`, `ITEM_METRONOME`, `ITEM_BINDING_BAND` (and their plural rows), `ABILITY_FLUFFY`
+
+## Q174
+
+**Question.** The owner: when a Pokémon wants to learn a new move and B turns it down, the game does not ask whether to give up the learning ('לוותר על הלמידה') with yes and no. Can the box be added?
+
+*Source:* the owner, after round 34.
+
+**Analysis.**
+- The box is upstream's option `P_ASK_MOVE_CONFIRMATION` (`include/config/pokemon.h`). Heart & Soul 2.0.6 sets it FALSE, so the English game does not ask either: NO or B at 'delete a move?', or B on the forget-a-move page, goes straight to 'X did not learn Y'. With the option on, the game asks first; YES gives the did-not-learn line, NO goes back to the question.
+- The option drives the battle level-up (`BattleScript_AskToLearnMove`, `data/battle_scripts_1.s`, an assembler `.if`), the evolution and trade-evolution scenes (`src/evolution_scene.c`), the field (`StopLearningMovePrompt`, `src/party_menu.c`: TMs, Rare Candy and the other level-up items) and the move relearner's NO at 'delete an older move?' (`src/move_relearner.c`; B on its forget-a-move page already asked). The move tutors' teach flow (`src/chooseboxmon.c`) always asks.
+- On in the Hebrew build only: the option follows `TEXT_RTL`, and `include/config/pokemon.h` includes `config/text.h`, so every unit that sees the option also sees `TEXT_RTL`. That is 391 units, 383 C files and 8 assembler files: all TRUE in the Hebrew tree and all FALSE with `TEXT_RTL` FALSE. Built with `TEXT_RTL` FALSE, the English ROM is byte for byte the same before and after the change (SHA-1 `1c6d1d7c…`; `<private>/scratch/screens/r35/engproof/PROOF.md`).
+- Wording (STYLE §11): the battle line said 'לוותר על כך ש{B_BUFF1}\nילמד את {B_BUFF2}?', a written-register clause, and the field and relearner line 'להפסיק לנסות ללמד\nאת {STR_VAR_2}?', a calque of 'stop trying to teach'. Both now say 'לוותר על לימוד {move}', the owner's verb and the phrase of the relearner's own give-up question ('לוותר על לימוד\nמהלך חדש ל{STR_VAR_1}?'):
+  - battle and evolution: 'לוותר על לימוד {B_BUFF2}\nל{B_BUFF1}?' ('לוותר על לימוד מכה זריזה / לסינדקוויל?'). It keeps the Pokémon, as English does, and breaks after the move: with the break after לימוד, the second line 'מכה זריזה לסינדקוויל?' reads on its own as a blow aimed at the Pokémon;
+  - field and relearner: 'לוותר על לימוד\n{STR_VAR_2}?'. It names only the move, as English does; `{STR_VAR_1}` is not set there when the option is on (`StopLearningMovePrompt`).
+- Widths (`textwidth.py`): the battle line is 169 and 96 px of 208 with the widest move (להבת נשמה מצלצלת, 96 px) and a 12-letter nickname of the widest letter; the field line is 70 and 102 px, narrower than the old one in both rows. The audit report is the same as before the change. The did-not-learn lines stay: 'X לא למד\nאת Y.' in battle, 'X לא למד את\nהמהלך Y.' in the field; the relearner prints none and goes back to its list, as in English.
+
+| Option | How | Risk |
+|---|---|---|
+| A. The box in the Hebrew build: the option follows `TEXT_RTL` | `include/config/pokemon.h` (an engine commit, picked onto `he/renderer`), the three prompts reworded | A tour that turned a move down now meets the box: four release tours and five round tours updated |
+| B. The box in both builds | the option TRUE | The English build would no longer be upstream's |
+| C. No change | | The owner asked for the box |
+
+**Chosen:** A, the owner's request. Seen on the clip ROM with 0 clip records, beside rc30 (no box) and an English build with the option forced on (layout only), in each path: the battle level-up (B at the question, NO in the box back to the question, B on the forget-a-move page, YES), the evolution scene (Raichu), TM24 on Ampharos, a Rare Candy on Cyndaquil, and the Blackthorn move relearner (`tools/hebrew/emu/tours/r35_learn_no/`, `<private>/scratch/screens/r35/shots/`). The trade-evolution scene uses the same states as the evolution scene and needs a link trade; it was not shown. The tours that turned a move down now answer the box: `bv_learn_no`, `pbi_learn_no`, `pbi_tm`, `pbi_stone`, and the round tours `r28_align/pm_f_gyms`, `r1_npc_services/svc_relearner2`, `r14b_summary_quotes`, `k3l_summary_latin` and `k3_summary_geresh`. They answer it inside a new tour block, `ifsym Task_HandleStopLearningMoveYesNoInput` ... `endif` (a function the option compiles in), so on the English ROM they skip it and give the same shots as before. The 71 release tours run 71 OK on the release and clip ROMs with 0 clip records; against the build of `he/main` `0c43cf5505`, 2,053 shots are identical, 6 are new (the box) and 2 differ only in an animation step (the down arrow, the party icons) (`<private>/scratch/screens/r35/tours/`).
+
+*Changed:* `include/config/pokemon.h` (engine), `src/battle_message.c`, `src/strings.c`, `tools/hebrew/emu/hns.py` (`ifsym`), `tools/hebrew/emu/README.md`, the tours named above
 
 ## Proposed names
 
