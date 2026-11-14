@@ -91,7 +91,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_HYPER_CUTTER)] =
     {
-        .text = COMPOUND_STRING("על חותך"),
+        .text = COMPOUND_STRING("חותך-על"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_COOLNESS),
         .enabled = TRUE,
     },
@@ -103,7 +103,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_SHADOW_TAG)] =
     {
-        .text = COMPOUND_STRING("תג צל"),
+        .text = COMPOUND_STRING("לכידת צל"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_CUTE_CHARM),
         .enabled = TRUE,
     },
@@ -157,7 +157,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_STURDY)] =
     {
-        .text = COMPOUND_STRING("איתן"),
+        .text = COMPOUND_STRING("איתנות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_ELECTRIC),
         .enabled = TRUE,
     },
@@ -235,7 +235,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_LIMBER)] =
     {
-        .text = COMPOUND_STRING("גמיש"),
+        .text = COMPOUND_STRING("גמישות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_HYPER_CUTTER),
         .enabled = TRUE,
     },
@@ -295,7 +295,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_STATIC)] =
     {
-        .text = COMPOUND_STRING("סטטי"),
+        .text = COMPOUND_STRING("חשמל סטטי"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_LIMBER),
         .enabled = TRUE,
     },
@@ -385,7 +385,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_OBLIVIOUS)] =
     {
-        .text = COMPOUND_STRING("תמים"),
+        .text = COMPOUND_STRING("אדישות"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_POISON),
         .enabled = TRUE,
     },
@@ -529,7 +529,7 @@ const struct EasyChatWordInfo gEasyChatGroup_Status[] = {
     },
     [EC_INDEX(EC_WORD_EFFECT_SPORE)] =
     {
-        .text = COMPOUND_STRING("נבג אפקט"),
+        .text = COMPOUND_STRING("ענן נבגים"),
         .alphabeticalOrder = EC_INDEX(EC_WORD_STENCH),
         .enabled = TRUE,
     },
