@@ -254,7 +254,8 @@ and check it against this list before it ships (`DECISIONS.md` Q159-Q172).
    letter (Q163). Lay a battle line out with the longest names and a 12-letter nickname.
 7. **What the player sees most matters most:** battles, the bag, menus, the Pokémon Center, Mart and
    PC, and the early story. One verb for one action everywhere: HP and PP that go up say עלו in the
-   field and in battle (Q166), and an item or an ability cures a status with נרפא מה{status}.
+   field and in every battle line, whatever raised them ('הנ”ח של X עלו מעט בזכות שאריות!'; the
+   descriptions keep משקם, Q166), and an item or an ability cures a status with נרפא מה{status}.
 8. **A child understands it on first read.** No English proverb or idiom translated word for word
    ('a watched pot', 'a good Samaritan': Q172), no form label in speech ('עלה במספר רמות: 3',
    Q171), no literary word where a spoken one exists (לקדמותו). A direct object that is a name
