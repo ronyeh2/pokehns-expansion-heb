@@ -104,7 +104,7 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q162](#q162) | Static's line read 'פיקאצ'ו שיתק בעזרת סטטי את…': an ability's name bare inside a battle line reads as an ordinary word (סטטי, איתן, תמים). | A. היכולת before the name in every battle line that names an ability inside the sentence ('בעזרת היכולת סטטי'); ביכולת where the longer form costs a screen | changed |
 | [Q163](#q163) | The same line's last view was wiped 8 frames after it completed: two manual scrolls where English shows one auto-wrapped view. | A. No manual break in a battle line where English has none (22 lines) | changed |
 | [Q164](#q164) | The owner: the ability 'סטטי' does not sound natural in Hebrew; a bare adjective after היכולת reads as a description, not a name. | A. חשמל סטטי in the name, the Easy Chat word and the Day Care hints; the paralysis line says ביכולת | changed |
-| [Q165](#q165) | 21 more ability names are bare adjectives, participles or adverbs that both audits found do not read as a name after היכולת. | A. Rename the 21 (23 rows) to nouns; the names one reader questioned are left to the owner | changed |
+| [Q165](#q165) | 21 more ability names are bare adjectives, participles or adverbs that both audits found do not read as a name after היכולת. | A. Rename the 21 (22 rows) to nouns; the names one reader questioned are left to the owner | changed |
 
 ## K1
 
@@ -2601,11 +2601,11 @@ The owner's case, replayed in a real battle (the player's Pikachu, a wild Rattat
 - FireRed: Sturdy, Limber, Oblivious, Shadow Tag, Effect Spore and Hyper Cutter, like Static, leave FireRed's names. The reason is the owner's rule for Static, not an H&S limit (Q140), so each has an entry in `tools/hebrew/data/namecheck_allow.json`.
 - Not renamed here; listed for the owner:
   - Three names that one reader put in this class: Cloud Nine (ביטול מזג, where מזג alone reads as 'temper'; FireRed's name, adopted in Q140); Aerilate (אוורור, a noun, but ventilation); Contrary (דווקאי, read by one reader as a person noun).
-  - The names either reader found unnatural for other reasons: calques, a wrong sense of a word, and fixed adjective phrases (the GUARD and VEIL families, Hustle, Lightning Rod, Soundproof and others).
+  - The names either reader found unnatural for other reasons: calques and a wrong sense of a word (the GUARD and VEIL families, Hustle, Lightning Rod and others), and fixed adjective phrases, which have the fault of this question in a milder form (Soundproof אטום לרעש, Heatproof חסין חום, Bulletproof חסין קליעים, Unnerve מורט עצבים, Good as Gold שווה זהב).
 
 | Option | How | Risk |
 |---|---|---|
-| A. Rename the 21 names both readers found to be bare adjectives, participles or adverbs | 23 glossary rows and their text, as for Static | Low: text only. Six more names leave FireRed's (allowlisted). |
+| A. Rename the 21 names both readers found to be bare adjectives, participles or adverbs | 22 glossary rows and their text, as for Static | Low: text only. Six more names leave FireRed's (allowlisted). |
 | B. Static only | Q164 | The same fault stays in 21 names, in the same lines. |
 | C. Also the names one reader questioned | A, plus about thirty more | Many are FireRed names the owner adopted (Q140) or matters of taste: the owner's call. |
 
