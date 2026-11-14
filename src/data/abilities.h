@@ -40,7 +40,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_STURDY] =
     {
-        .name = _("איתן"),
+        .name = _("איתנות"),
         .description = COMPOUND_STRING("חסין לחיסול במכה אחת."),
         .aiRating = 6,
         .breakable = TRUE,
@@ -56,7 +56,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_LIMBER] =
     {
-        .name = _("גמיש"),
+        .name = _("גמישות"),
         .description = COMPOUND_STRING("מונע שיתוק."),
         .aiRating = 3,
         .breakable = TRUE,
@@ -72,7 +72,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_STATIC] =
     {
-        .name = _("סטטי"),
+        .name = _("חשמל סטטי"),
         .description = COMPOUND_STRING("משתק במגע."),
         .aiRating = 4,
     },
@@ -95,7 +95,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_OBLIVIOUS] =
     {
-        .name = _("תמים"),
+        .name = _("אדישות"),
         .description = COMPOUND_STRING("מונע התאהבות."),
         .aiRating = 2,
         .breakable = TRUE,
@@ -179,7 +179,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_SHADOW_TAG] =
     {
-        .name = _("תג צל"),
+        .name = _("לכידת צל"),
         .description = COMPOUND_STRING("מונע מהיריב לברוח."),
         .aiRating = 10,
     },
@@ -211,7 +211,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_EFFECT_SPORE] =
     {
-        .name = _("נבג אפקט"),
+        .name = _("ענן נבגים"),
         .description = COMPOUND_STRING("משאיר נבגים במגע."),
         .aiRating = 4,
     },
@@ -397,7 +397,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_HYPER_CUTTER] =
     {
-        .name = _("על חותך"),
+        .name = _("חותך-על"),
         .description = COMPOUND_STRING("מונע הורדת התקפה."),
         .aiRating = 3,
         .breakable = TRUE,
@@ -649,7 +649,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_SIMPLE] =
     {
-        .name = _("פשוט"),
+        .name = _("פשטות"),
         .description = COMPOUND_STRING("נוטה לשינויי נתונים קיצוניים."),
         .aiRating = 8,
         .breakable = TRUE,
@@ -813,7 +813,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_UNAWARE] =
     {
-        .name = _("לא מודע"),
+        .name = _("חוסר מודעות"),
         .description = COMPOUND_STRING("מתעלם משינויי נתונים."),
         .aiRating = 6,
         .breakable = TRUE,
@@ -843,7 +843,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_SCRAPPY] =
     {
-        .name = _("לוחמני"),
+        .name = _("לוחמנות"),
         .description = COMPOUND_STRING("פוגע בפוקימונים מסוג רפאים."),
         .aiRating = 6,
     },
@@ -1060,7 +1060,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_MOODY] =
     {
-        .name = _("הפכפך"),
+        .name = _("מצבי רוח"),
         .description = COMPOUND_STRING("נתוניו משתנים בהדרגה."),
         .aiRating = 10,
     },
@@ -1112,7 +1112,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_ANALYTIC] =
     {
-        .name = _("אנליטי"),
+        .name = _("חשיבה אנליטית"),
         .description = COMPOUND_STRING("מתחזק כשהוא פועל אחרון."),
         .aiRating = 5,
     },
@@ -1166,7 +1166,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_RATTLED] =
     {
-        .name = _("מבוהל"),
+        .name = _("בהלה"),
         .description = COMPOUND_STRING("מעלה מהירות כשהוא נבהל."),
         .aiRating = 3,
     },
@@ -1267,7 +1267,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_PROTEAN] =
     {
-        .name = _("רב-גוני"),
+        .name = _("רב-גוניות"),
         .description = COMPOUND_STRING("משנה סוג לסוג המהלך."),
         .aiRating = 8,
     },
@@ -1297,7 +1297,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_COMPETITIVE] =
     {
-        .name = _("תחרותי"),
+        .name = _("תחרותיות"),
         .description = COMPOUND_STRING("נתון שירד מעלה התק' מיוחדת."),
         .aiRating = 5,
     },
@@ -1382,7 +1382,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_GOOEY] =
     {
-        .name = _("רירי"),
+        .name = _("גוף רירי"),
         .description = COMPOUND_STRING("מוריד מהירות במגע."),
         .aiRating = 5,
     },
@@ -1476,7 +1476,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_MERCILESS] =
     {
-        .name = _("חסר רחמים"),
+        .name = _("חוסר רחמים"),
         .description = COMPOUND_STRING("פגיעה קריטית ביריב מורעל."),
         .aiRating = 4,
     },
@@ -1553,7 +1553,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_GALVANIZE] =
     {
-        .name = _("מחשמל"),
+        .name = _("מטען חשמלי"),
         .description = COMPOUND_STRING("מהלכי רגיל הופכים לחשמל."),
         .aiRating = 8,
     },
@@ -1668,7 +1668,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_FLUFFY] =
     {
-        .name = _("פרוותי"),
+        .name = _("פרווה רכה"),
         .description = COMPOUND_STRING("עמיד יותר אך דליק."),
         .aiRating = 5,
         .breakable = TRUE,
@@ -1676,7 +1676,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_DAZZLING] =
     {
-        .name = _("מסנוור"),
+        .name = _("סנוור"),
         .description = COMPOUND_STRING("מגן ממהלכי עדיפות."),
         .aiRating = 5,
         .breakable = TRUE,
@@ -1854,7 +1854,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_STALWART] =
     {
-        .name = _("עיקש"),
+        .name = _("עקשנות"),
         .description = COMPOUND_STRING("מתעלם מהסטת מטרה."),
         .aiRating = 2,
     },
@@ -2040,7 +2040,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_AS_ONE_ICE_RIDER] =
     {
-        .name = _("כאחד"),
+        .name = _("אחדות"),
         .description = COMPOUND_STRING("מורט עצבים וצהלה מקפיאה."),
         .aiRating = 10,
         .cantBeCopied = TRUE,
@@ -2052,7 +2052,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_AS_ONE_SHADOW_RIDER] =
     {
-        .name = _("כאחד"),
+        .name = _("אחדות"),
         .description = COMPOUND_STRING("מורט עצבים וצהלה קודרת."),
         .aiRating = 10,
         .cantBeCopied = TRUE,
@@ -2326,7 +2326,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_MINDS_EYE] =
     {
         .name = _("עין הרוח"),
-        .description = COMPOUND_STRING("משלב ”עין חדה” ו”לוחמני”."),
+        .description = COMPOUND_STRING("משלב ”עין חדה” ו”לוחמנות”."),
         .aiRating = 8,
         .breakable = TRUE,
     },
