@@ -3315,7 +3315,7 @@ ability,ABILITY_AIR_LOCK,AIR LOCK,נעילת אוויר,נעילת אוויר,in
 ability,ABILITY_TANGLED_FEET,TANGLED FEET,,רגליים מסתבכות,proposed,"meaning; FEET = רגליים (also QUICK FEET); reviewed: was רגליים סבוכות; feet get tangled (מסתבכות, as in stumbling), סבוך describes hair or a thicket; the ס-ב-ך root still links it to TANGLING HAIR שיער סבוך"
 ability,ABILITY_MOTOR_DRIVE,MOTOR DRIVE,,הנעת מנוע,proposed,meaning; reviewed
 ability,ABILITY_RIVALRY,RIVALRY,,יריבות,proposed,meaning; root shared with TERM_RIVAL יריב; reviewed
-ability,ABILITY_STEADFAST,STEADFAST,,נחישות,proposed,"meaning (resolve, does not waver on flinch); STURDY already = איתן; reviewed"
+ability,ABILITY_STEADFAST,STEADFAST,,נחישות,proposed,"meaning (resolve, does not waver on flinch); STURDY is איתנות (DECISIONS Q165); reviewed"
 ability,ABILITY_SNOW_CLOAK,SNOW CLOAK,,גלימת שלג,proposed,meaning; CLOAK = גלימה (ITEM_COVERT_CLOAK גלימת הסוואה); reviewed
 ability,ABILITY_GLUTTONY,GLUTTONY,,גרגרנות,proposed,meaning; reviewed
 ability,ABILITY_ANGER_POINT,ANGER POINT,,נקודת זעם,proposed,meaning; POINT = נקודת (ABILITY_POISON_POINT נקודת רעל); ANGER/RAGE = זעם (MOVE_RAGE); reviewed
@@ -6032,7 +6032,7 @@ term,TERM_PP,PP,נ”כ,נ”כ,inherited,FR ITEM_PP_UP = הגדלת נ”כ; נ
 term,TERM_LV,Lv.,רמה,רמה,inherited,FR text uses רמה in 48 strings; FireRed writes ברמה N in prose; H&S draws Lv. as a glyph ({LV} in charmap) — decide whether the glyph needs a Hebrew tile
 term,TERM_EXP_POINTS,EXP. POINTS,נקודות נסיון,נקודות ניסיון,proposed,"FR gText_PokeSum_ExpPoints; FireRed now spells ניסיון (battle_message.c, EXP. SHARE חולק ניסיון); the full spelling everywhere (DECISIONS Q140 (FireRed naming conventions))"
 term,TERM_MOVE,MOVE (a Pokémon's move),מהלך,מהלך,inherited,FR text uses מהלך in 193 strings; FireRed calls a Pokémon move מהלך (KNOWN MOVES = מהלכים ידועים); the PC verb MOVE is הזז
-term,TERM_ABILITY,ABILITY,יכולת,יכולת,inherited,"FR Help_Text_Ability = יכולת$; a battle line that names an ability inside the sentence writes היכולת before it (בעזרת היכולת סטטי; DECISIONS.md Q162, STYLE §7)"
+term,TERM_ABILITY,ABILITY,יכולת,יכולת,inherited,"FR Help_Text_Ability = יכולת$; a battle line that names an ability inside the sentence writes היכולת before it (בזכות היכולת איתנות; ביכולת where that costs a view, as in שיתק ביכולת חשמל סטטי; DECISIONS.md Q162, Q164, STYLE §7)"
 term,TERM_NATURE,NATURE,אופי,אופי,inherited,FR Help_Text_Nature = אופי$; FireRed help/summary use אופי; the move NATURE POWER uses טבע
 term,TERM_TYPE,TYPE,סוג,סוג,inherited,FR Help_Text_Type = סוג$
 term,TERM_PC,PC,מחשב,מחשב,inherited,FR text uses מחשב in 69 strings
