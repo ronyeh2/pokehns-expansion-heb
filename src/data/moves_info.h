@@ -12887,7 +12887,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("קרן פשטות"),
         .description = COMPOUND_STRING(
             "קרן שהופכת את\n"
-            "יכולת היריב ל”פשוט”."),
+            "יכולת היריב ל”פשטות”."),
         .effect = EFFECT_OVERWRITE_ABILITY,
         .power = 0,
         .type = TYPE_NORMAL,

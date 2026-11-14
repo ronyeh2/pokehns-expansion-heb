@@ -375,8 +375,8 @@ static const u8 *const sDesc_Synchronize[] = {
     COMPOUND_STRING("היכולת סנכרון פועלת כמו בדור 8 ומעלה.\nסיכוי של 100% להעתיק את האופי."),
 };
 static const u8 *const sDesc_Sturdy[] = {
-    COMPOUND_STRING("היכולת איתן פועלת כמו בדור 3. מבטלת\nרק מהלכי חיסול מיידי (”גיליוטינה” וכו')."),
-    COMPOUND_STRING("היכולת איתן פועלת כמו בדור 5 ומעלה.\nפוקימונים שורדים מכה קטלנית עם 1 נ”ח."),
+    COMPOUND_STRING("היכולת איתנות פועלת כמו בדור 3. מבטלת\nרק מהלכי חיסול מיידי (”גיליוטינה” וכו')."),
+    COMPOUND_STRING("היכולת איתנות פועלת כמו בדור 5 ומעלה.\nפוקימונים שורדים מכה קטלנית עם 1 נ”ח."),
 };
 static const u8 *const sDesc_NewCitrus[] = {
     COMPOUND_STRING("פירות סיטרוס משקמים 30 נ”ח.\nכמו בדור 3."),
@@ -442,7 +442,7 @@ static const struct ChallengeMenuItem sTabItems_Mode[] = {
         .choiceNames  = sChoices_OriginalModern,
     },
     [ITEM_MODE_STURDY] = {
-        .name         = COMPOUND_STRING("איתן"),
+        .name         = COMPOUND_STRING("איתנות"),
         .descriptions = sDesc_Sturdy,
         .numChoices   = 2,
         .choiceNames  = sChoices_OriginalModern,

@@ -103,6 +103,8 @@ Each entry is one open question from the review of the first release candidate: 
 | [Q161](#q161) | The bag pocket POKé BALLS kept FireRed's כדורי פוקי (Q159); the owner asked for פוכדורים. | A. פוכדורים, the plural of the ball, in the pocket title and the put-away line; ULTRA BALL and MASTER BALL kept (owner's decision) | changed |
 | [Q162](#q162) | Static's line read 'פיקאצ'ו שיתק בעזרת סטטי את…': an ability's name bare inside a battle line reads as an ordinary word (סטטי, איתן, תמים). | A. היכולת before the name in every battle line that names an ability inside the sentence ('בעזרת היכולת סטטי'); ביכולת where the longer form costs a screen | changed |
 | [Q163](#q163) | The same line's last view was wiped 8 frames after it completed: two manual scrolls where English shows one auto-wrapped view. | A. No manual break in a battle line where English has none (22 lines) | changed |
+| [Q164](#q164) | The owner: the ability 'סטטי' does not sound natural in Hebrew; a bare adjective after היכולת reads as a description, not a name. | A. חשמל סטטי in the name, the Easy Chat word and the Day Care hints; the paralysis line says ביכולת | changed |
+| [Q165](#q165) | 21 more ability names are bare adjectives, participles or adverbs that both audits found do not read as a name after היכולת. | A. Rename the 21 (22 rows) to nouns; the names one reader questioned are left to the owner | changed |
 
 ## K1
 
@@ -2508,6 +2510,121 @@ Not copied, because they belong to FireRed's renderer, not to its naming: digits
 **Chosen:** A. The owner's case on the new ROM: one view, 'פיקאצ'ו שיתק בעזרת היכולת סטטי את / רטטה הפראי, וייתכן שלא יוכל לזוז!', no press of A, on screen 74 frames and complete for 8, against English's 80 and 8 and rc29's last view of 28 and 8; with FAST BATTLES off 137 frames (71 complete) against English's 143 (71); at text speed MID 275 against 299; at INSTANT 10 against English's 11 (the investigation's run, `<private>/scratch/screens/r31/static_par/logs/timelines.txt`); with the wild Pikachu's Static (the player's Rattata attacking) 74 and 8. The pop-up is the same in all of them: fully shown 49 frames on its own timer. The pin, the paralysis and every frame up to the line are the same as rc29's; the clip ROM logs 0 records. No Hebrew battle line now has a `\l` where English has no break (`audit.extract_c` over `src/battle_message.c` against `../pokehns-en`).
 
 *Changed:* `src/battle_message.c`, `translation/hebrew/STYLE.md`
+
+## Q164
+
+**Question.** The owner read the battle line of Q162 and Q163, 'פיקאצ'ו שיתק בעזרת היכולת סטטי את…', and asked: "What is the ability 'סטטי'? It does not sound natural in Hebrew." What should Static be called, and where is the name shown?
+
+*Source:* the owner, round 32: "מה זה היכולת ״סטטי״? זה לא נשמע טבעי בעברית".
+
+**Analysis.**
+- סטטי is FireRed's name (glossary `ABILITY_STATIC`, status inherited). It is the bare adjective static, 'motionless'. After the feminine noun היכולת it does not agree, and it does not read as a name: 'היכולת סטטי' sounds like a description of the ability. The ability is named after static electricity, which Hebrew calls חשמל סטטי. The Pokédex texts already say so (`src/data/pokemon/species_info/gen_2_families.h:2096`, `gen_8_families.h:6535`). Its description is 'משתק במגע.' (`src/data/abilities.h`).
+- Where the name is printed:
+  - the ability table (`src/data/abilities.h`), used by the summary INFO page, the battle pop-up, the HGSS Pokédex stats page, the Ability Capsule and Ability Patch lines ('לשנות את היכולת של X\nל…?', `src/party_menu.c`) and every battle line that prints an ability;
+  - the Easy Chat word STATIC (`src/data/easy_chat/easy_chat_group_status.h`), one of the Odd Egg password words;
+  - the Day Care hints for Pichu and Elekid (`src/data/help_window.h`, `HELP_DAYCARE1_WINDOW`), which quote the word (`tools/hebrew/tests/test_easy_chat.py` checks that each hint quotes its password word).
+- No map script or other dialogue names the ability: `git grep` finds no other סטטי as a name in `data/` or `src/`, and the English tree has no other STATIC in its text. `challenge_menu.c`'s 'מפגשים סטטיים' and 'פוקימונים סטטיים' (static encounters) are not the ability and stay.
+- Widths: חשמל סטטי is 9 bytes (limit 16). It is 54 px in FONT_NORMAL (summary, 144) and 49 px in FONT_SMALL (pop-up, 76; Pokédex, 139). As an Easy Chat word it is 54 px; the widest word is 71 px (Q135). The two hints are 156 and 160 px in FONT_SMALL, in a 208 px window whose widest line, Igglybuff's, is 167 px.
+- The paralysis line `STRINGID_PKMNWASPARALYZEDBY`, which Static shares with Effect Spore, said 'X שיתק בעזרת היכולת {B_BUFF1} את Y'. The line was laid out with the battle auto-wrap for every Static holder a player meets (17 species), on each side, against every ownable species: 29,988 pairs (`<private>/scratch/screens/r32/abilities-meaning/rn_static.txt`).
+  - With חשמל סטטי after בעזרת היכולת, 4,828 pairs need one view more than English. Nearly all have a wild holder: 'פיקאצ'ו הפראי שיתק בעזרת / היכולת חשמל סטטי את רטטה, / וייתכן…' takes two views where English takes one.
+  - With 'ביכולת', no pair needs more than English (`rn_static_bikholet.txt`; again in `<private>/scratch/screens/r32/static-rename/rn_own_lines.txt`).
+  - STYLE §7 already writes ביכולת where the longer form costs a screen (Poison Point, Damp, Dazzling, Healer).
+
+| Option | How | Risk |
+|---|---|---|
+| A. חשמל סטטי, and ביכולת in the paralysis line | the glossary, `abilities.h`, the Easy Chat word and its two generated headers, the two hints, the line | Low: text only. FireRed keeps סטטי (an allowlist entry). The name is 30 px wider, well inside every budget. |
+| B. מטען סטטי | the same | Not the everyday phrase. With בעזרת היכולת, 4,090 pairs still need a view more than English. |
+| C. Keep סטטי | no change | The owner's report stands. |
+
+**Chosen:** A, the owner's decision: a natural noun phrase. On screen, beside rc30 and the English build, on the clip ROM:
+- the summary INFO page: 'חשמל סטטי' over 'משתק במגע.';
+- the pop-up 'פיקאצ'ו' over 'חשמל סטטי', on either side;
+- the paralysis line, the Trace, acquired-ability and Receiver lines with Static, and the Easy Chat status list and the ABC list ח;
+- the Day Care hint 'היכולת של פיצ'ו היא ”חשמל סטטי”.'.
+All of them show 0 clip records. Pichu's and Elekid's Odd Egg passwords still give their eggs; so do all 11 (`tours/r18_easychat/ec_oddegg_all.txt`, eggcheck).
+
+The owner's case, replayed in a real battle (the player's Pikachu, a wild Rattata's Tackle, the new-game options), shows one view: 'פיקאצ'ו שיתק ביכולת חשמל סטטי את / רטטה הפראי, וייתכן שלא יוכל לזוז!'. A is never pressed. It is on screen for 73 frames and complete for 8, against English's 80 and 8 and rc30's 74 and 8. With FAST BATTLES off it is on screen for 136 frames (71 complete), against English's 143 (71). At text speed MID it is 271 frames against 299, and at INSTANT 10 against 11. The pop-up shows for 49 frames, as before. A wild Pikachu's Static against the player's Rattata also takes one view: 'פיקאצ'ו הפראי שיתק ביכולת חשמל סטטי / את רטטה, וייתכן שלא יוכל לזוז!'. It is on screen for 73 frames (8 complete), against English's 80 (8) and rc30's 74 (8), and with FAST BATTLES off for 136 (71) against 143 (71). The clip ROM logs 0 records in both battles. (`<private>/scratch/screens/r32/static-rename/trace/logs/timelines.txt`)
+
+*Changed:* `src/data/abilities.h`, `src/data/easy_chat/easy_chat_group_status.h`, `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `src/data/help_window.h`, `src/battle_message.c`, `translation/hebrew/glossary.csv`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `ABILITY_STATIC`
+
+## Q165
+
+**Question.** Static's fault is not Static's alone. Which other ability names are bare adjectives, participles or adverbs that do not read as a name after היכולת?
+
+*Source:* the owner's report on Static (Q164). Two independent readers audited all 310 ability names: A read the Hebrew first (`<private>/scratch/screens/r32/ability-cold-read/`), B the English first (`<private>/scratch/screens/r32/abilities-meaning/`).
+
+**Analysis.**
+- A battle line names an ability as 'היכולת X' (Q162), and the Ability Capsule says 'השתנתה לX'. A noun or a noun phrase reads right in both: 'היכולת צחנה', 'היכולת גוף להבה'.
+- A bare adjective does not. It fails in one of three ways:
+  - it does not agree with the feminine היכולת: היכולת גמיש, היכולת תחרותי;
+  - it reads as an adverb or a sentence: 'בזכות היכולת פשוט' reads 'thanks to the ability, simply', and 'היכולת כאחד' does not parse;
+  - it reads as another word: איתן is also a first name; תמים is also the nature NAIVE (`src/pokemon.c`), shown on the same summary page; תג is this game's Gym badge (TERM_BADGE), so תג צל reads as a badge.
+- Both readers put the same 21 abilities besides Static in this class. They are renamed below. Where the readers proposed different names, the choice is:
+  - Sturdy: איתנות (B) over עמידות. It is the noun of the same word. עמידות is the RESIST items' word (נוצת עמידות, מוצ'י עמידות), and it would echo עמד in the Sturdy line 'עמד במכה בזכות היכולת…'.
+  - Shadow Tag: לכידת צל (A, and B's alternative) over תופסת צללים: 44 px against 62, and it names what the ability does.
+  - Effect Spore: ענן נבגים (B) over פיזור נבגים: 44 px against 53, and narrower than the old name.
+  - Unaware: חוסר מודעות (B) over התעלמות. It keeps the meaning of UNAWARE and of the old name; התעלמות is ignoring, a different act.
+  - Scrappy: לוחמנות (B) over רוח לחימה. It is the noun of the old name, and רוח לחימה is already the Easy Chat word SPIRIT.
+  - Gooey: גוף רירי (A) over ריר דביק, because דביק is the STICKY chunk (STICKY HOLD, STICKY BARB; glossary note).
+  - Merciless: חוסר רחמים (B) over אכזריות: the noun of the old name.
+  - As One: אחדות (B) over כגוף אחד. כגוף אחד ('as one body') is still adverbial, the fault being fixed; אחדות matches REINS OF UNITY מושכות האחדות.
+- Who meets each ability, in normal play (owned or met in battle; the Ability Patch, 64 BP at the Exchange Service Corner, gives an owned Pokémon its hidden ability) or only with the challenge randomizer (`src/randomizer.c`, which can give any ability but Wonder Guard): `<private>/scratch/screens/r32/abilities-meaning/all_reach.tsv`.
+
+| Ability | Was | Now | px FONT_NORMAL / FONT_SMALL | Also | Met |
+|---|---|---|---|---|---|
+| STURDY | איתן | איתנות | 31 / 28 | Easy Chat; the challenge menu's Sturdy option and its two descriptions | owned |
+| LIMBER | גמיש | גמישות | 32 / 30 | Easy Chat | owned |
+| OBLIVIOUS | תמים | אדישות | 34 / 31 | Easy Chat (an Odd Egg password word); Smoochum's hint | owned |
+| SHADOW TAG | תג צל | לכידת צל | 44 / 41 | Easy Chat | owned |
+| EFFECT SPORE | נבג אפקט | ענן נבגים | 44 / 40 | Easy Chat | owned |
+| HYPER CUTTER | על חותך | חותך-על | 42 / 37 | Easy Chat | owned |
+| SIMPLE | פשוט | פשטות | 31 / 28 | SIMPLE BEAM's description: 'יכולת היריב ל”פשטות”.' | owned |
+| UNAWARE | לא מודע | חוסר מודעות | 60 / 53 | | hidden ability |
+| SCRAPPY | לוחמני | לוחמנות | 37 / 34 | MIND'S EYE's description: 'משלב ”עין חדה” ו”לוחמנות”.' (138 px of 146) | owned |
+| MOODY | הפכפך | מצבי רוח | 42 / 38 | | hidden ability |
+| ANALYTIC | אנליטי | חשיבה אנליטית | 71 / 65 | | hidden ability |
+| RATTLED | מבוהל | בהלה | 27 / 24 | | hidden ability |
+| PROTEAN | רב-גוני | רב-גוניות | 44 / 40 | | hidden ability |
+| COMPETITIVE | תחרותי | תחרותיות | 43 / 38 | | owned |
+| GALVANIZE | מחשמל | מטען חשמלי | 58 / 52 | | hidden ability, one trainer |
+| GOOEY | רירי | גוף רירי | 36 / 33 | | randomizer |
+| FLUFFY | פרוותי | פרווה רכה | 48 / 42 | | randomizer |
+| DAZZLING | מסנוור | סנוור | 23 / 21 | | randomizer |
+| STALWART | עיקש | עקשנות | 34 / 32 | | randomizer |
+| MERCILESS | חסר רחמים | חוסר רחמים | 56 / 49 | | randomizer |
+| AS ONE (two rows) | כאחד | אחדות | 31 / 27 | | randomizer |
+
+- Widths: every new name fits every place it is drawn. The widest, חשיבה אנליטית, is 13 bytes, 71 px of the summary's 144 and 65 px of the pop-up's 76. Every new name is narrower than the widest name before, רגליים מסתבכות (77 px), with which Q162 laid out every ability line. The challenge menu's first Sturdy description is 193 px of its 200. The six Easy Chat words are 31 to 44 px, and the test's fixed-phrase widths still pass.
+- Battle lines: each renamed ability's own lines were laid out with real holders and real foes, like Static's (`rn_own_lines.txt`). None needs more views than English: Sturdy, Limber, Oblivious, Scrappy, Shadow Tag, Hyper Cutter and Effect Spore. The other fourteen print their name only in the pop-up, or in lines that any ability can fill (Trace, acquired, Receiver), which the widest name already bounds.
+- FireRed: Sturdy, Limber, Oblivious, Shadow Tag, Effect Spore and Hyper Cutter, like Static, leave FireRed's names. The reason is the owner's rule for Static, not an H&S limit (Q140), so each has an entry in `tools/hebrew/data/namecheck_allow.json`.
+- Not renamed here; listed for the owner:
+  - Three names that one reader put in this class: Cloud Nine (ביטול מזג, where מזג alone reads as 'temper'; FireRed's name, adopted in Q140); Aerilate (אוורור, a noun, but ventilation); Contrary (דווקאי, read by one reader as a person noun).
+  - The names either reader found unnatural for other reasons: calques and a wrong sense of a word (the GUARD and VEIL families, Hustle, Lightning Rod and others), and fixed adjective phrases, which have the fault of this question in a milder form (Soundproof אטום לרעש, Heatproof חסין חום, Bulletproof חסין קליעים, Unnerve מורט עצבים, Good as Gold שווה זהב).
+
+| Option | How | Risk |
+|---|---|---|
+| A. Rename the 21 names both readers found to be bare adjectives, participles or adverbs | 22 glossary rows and their text, as for Static | Low: text only. Six more names leave FireRed's (allowlisted). |
+| B. Static only | Q164 | The same fault stays in 21 names, in the same lines. |
+| C. Also the names one reader questioned | A, plus about thirty more | Many are FireRed names the owner adopted (Q140) or matters of taste: the owner's call. |
+
+**Chosen:** A. On screen, beside rc30 and the English build, on the clip ROM with 0 clip records:
+- the summary INFO page of a Pokémon with each renamed ability except As One (21 Pokémon), with each name above its description;
+- the pop-up of every renamed ability on each side (46 pop-ups);
+- every renamed ability's own battle line, plus the Trace, acquired-ability and Receiver lines with the widest new name (חשיבה אנליטית). Each was shown in a trainer battle with species names, a trainer battle with 12-letter nicknames on both sides, and a wild battle with long species names, with and without the nicknames: 23 entries in four setups (`tools/hebrew/emu/scripts/r16_battle_sweep/bsweep.py`). No entry needs more pages than English or than rc30. The two runs that now take fewer pages are Effect Spore's paralysis line, one page where rc30 took two (`<private>/scratch/screens/r32/static-rename/bs/compare.txt`).
+- the Easy Chat status list, the interview and every ABC list, and the Day Care hints.
+
+The 71 release tours run 71 OK on the release ROM and on the clip ROM, with 0 clip records. Against rc30, 21 of the 2,054 release shots differ and 20 of the clip shots:
+- the Shadow Tag line in `bv_catch_fail`: 'וובאפט הפראי מונע בריחה בעזרת / היכולת לכידת צל!';
+- Pikachu's summary INFO page in `naming_nickname`, two shots of חשמל סטטי;
+- the challenge menu's Sturdy row, איתנות, in `ncm_newgame_challenge` (11 shots) and `ncm_viewer_midgame` (6), with both of its descriptions;
+- one more release shot, `ncm_10_t1_r00_recommended_again`, where the menu's down arrow is one animation step lower. In the clip run, the arrows of one Sturdy shot are a step apart in the same way.
+Nothing else differs (`<private>/scratch/screens/r32/static-rename/tours_out/`).
+
+*Changed:* `src/data/abilities.h`, `src/data/easy_chat/easy_chat_group_status.h`, `src/data/easy_chat/easy_chat_order_rtl.h`, `src/data/easy_chat/easy_chat_words_by_letter_rtl.h`, `src/data/help_window.h`, `src/challenge_menu.c`, `src/data/moves_info.h`, `translation/hebrew/glossary.csv`, `tools/hebrew/data/namecheck_allow.json`, `translation/hebrew/STYLE.md`
+
+*Glossary:* `ABILITY_STURDY`, `ABILITY_LIMBER`, `ABILITY_OBLIVIOUS`, `ABILITY_SHADOW_TAG`, `ABILITY_EFFECT_SPORE`, `ABILITY_HYPER_CUTTER`, `ABILITY_SIMPLE`, `ABILITY_UNAWARE`, `ABILITY_SCRAPPY`, `ABILITY_MOODY`, `ABILITY_ANALYTIC`, `ABILITY_RATTLED`, `ABILITY_PROTEAN`, `ABILITY_COMPETITIVE`, `ABILITY_GALVANIZE`, `ABILITY_GOOEY`, `ABILITY_FLUFFY`, `ABILITY_DAZZLING`, `ABILITY_STALWART`, `ABILITY_MERCILESS`, `ABILITY_AS_ONE_ICE_RIDER`, `ABILITY_AS_ONE_SHADOW_RIDER`
 
 ## Proposed names
 

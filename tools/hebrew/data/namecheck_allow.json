@@ -40,6 +40,41 @@
    "hs": "דחף על-חושי",
    "firered": "דחף פסיכי",
    "why": "Psychic is על-חושי in every name (DECISIONS Q139), the PSYCHO moves too; FireRed renamed its type and its PSYCHIC move but left this name on the old word"
+  },
+  "ability:ABILITY_STATIC": {
+   "hs": "חשמל סטטי",
+   "firered": "סטטי",
+   "why": "the owner's decision for H&S: an ability is named after היכולת in battle lines (Q162), and the bare adjective סטטי read as the word static there; חשמל סטטי is the phenomenon, as the Pokédex texts say (DECISIONS Q164)"
+  },
+  "ability:ABILITY_STURDY": {
+   "hs": "איתנות",
+   "firered": "איתן",
+   "why": "a bare adjective, and the first name Eitan, after היכולת (Q162); איתנות is its noun (DECISIONS Q165)"
+  },
+  "ability:ABILITY_LIMBER": {
+   "hs": "גמישות",
+   "firered": "גמיש",
+   "why": "a bare masculine adjective after the feminine היכולת (Q162); גמישות is its noun (DECISIONS Q165)"
+  },
+  "ability:ABILITY_OBLIVIOUS": {
+   "hs": "אדישות",
+   "firered": "תמים",
+   "why": "תמים is a bare adjective meaning naive, and in H&S also the nature NAIVE, which the summary shows beside the ability; אדישות (indifference) names the immunity (DECISIONS Q165)"
+  },
+  "ability:ABILITY_SHADOW_TAG": {
+   "hs": "לכידת צל",
+   "firered": "תג צל",
+   "why": "תג is the Gym badge in H&S (TERM_BADGE, the Johto badges תג משב and the rest), so תג צל read as a badge name; לכידת צל names the trap (DECISIONS Q165)"
+  },
+  "ability:ABILITY_EFFECT_SPORE": {
+   "hs": "ענן נבגים",
+   "firered": "נבג אפקט",
+   "why": "נבג אפקט is word for word and not Hebrew; ענן נבגים names the spores the ability releases on contact (DECISIONS Q165)"
+  },
+  "ability:ABILITY_HYPER_CUTTER": {
+   "hs": "חותך-על",
+   "firered": "על חותך",
+   "why": "with על before the noun it read as the preposition, on a cutter; Hebrew writes super-X as X-על (DECISIONS Q165)"
   }
  },
  "translit": {
