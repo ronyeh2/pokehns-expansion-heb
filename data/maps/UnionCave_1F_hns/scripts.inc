@@ -109,7 +109,7 @@ UnionCave_1F_Text_HikerDanielAfter:
 	.string "אני מרחם על הפוקימון המסכן.$"
 
 UnionCave_1F_Text_FirebreatherBillSeen:
-	.string "מהלך העל-קולי של זובאט מבלבל\n"
+	.string "הגל העל-קולי של זובאט מבלבל\n"
 	.string "שוב ושוב את הפוקימונים שלי.\p"
 	.string "זה ממש מרגיז אותי!$"
 

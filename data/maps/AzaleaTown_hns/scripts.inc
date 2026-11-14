@@ -369,7 +369,7 @@ AzaleaTown_Text_RivalLoss:
 AzaleaTown_Text_Rocket1:
 	.string "מסוכן להיכנס לשם,\n"
 	.string "אז אני עומד על המשמר.\p"
-	.string "נכון שאני שומרוני טוב?$"
+	.string "נכון שאני צדיק?$"
 
 AzaleaTown_Text_Rocket2:
 	.string "שמעת על זנב סלופוק?\n"

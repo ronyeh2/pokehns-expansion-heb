@@ -34,13 +34,13 @@ DarkCave2_EventScript_BlackGlassesGot::
 
 DarkCave2_Text_Nerd:
     .string "וואו! הבהלת אותי!\p"
-    .string "הרכבתי את המשקף השחור שלי,\n"
+    .string "הרכבתי את המשקפיים השחורים שלי,\n"
     .string "אז בכלל לא שמתי לב אליך.\p"
     .string "מה אני עושה כאן?\p"
     .string "היי, אל תדאג בקשר לזה.\p"
-    .string "אני אתן לך משקף שחור,\n"
+    .string "אני אתן לך משקפיים שחורים,\n"
     .string "ואתה תשכח שראית אותי, טוב?$"
 
 DarkCave2_Text_Nerd2:
-    .string "משקף שחור מגביר את הכוח\n"
+    .string "משקפיים שחורים מגבירים את הכוח\n"
     .string "של מהלכים מסוג אפל.$"
