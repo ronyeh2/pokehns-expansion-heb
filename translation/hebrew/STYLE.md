@@ -242,8 +242,8 @@ and check it against this list before it ships (`DECISIONS.md` Q159-Q172).
    word (בעל-קולי, בשנה צורה), and a name must not be an everyday word with another meaning
    (הפלה, Q167; singular משקף, Q168).
 4. **No article or possessive glued to a name.** Not 'הסטטי של פיקאצ'ו': the Pokémon keeps its
-   English place and the name follows its noun ('בעזרת היכולת סטטי', Q162). A definite adjective
-   in construct reads as a person: 'מהלך העל-קולי של זובאט' became 'הגל העל-קולי של זובאט' (Q167).
+   English place and the name follows its noun ('שיתק ביכולת חשמל סטטי את…', Q162, Q164). A definite
+   adjective in construct reads as a person: 'מהלך העל-קולי של זובאט' became 'הגל העל-קולי של זובאט' (Q167).
 5. **Gender and number agree with every value a placeholder can hold.** List the values and read
    the line with each (Q160: דיוק is masculine, the other stats feminine; a vitamin's verb follows
    the Pokémon, Q170). Fixed names agree too: חמישה כוכבים, יען משולש, פנדה מנוקדת (Q169).
