@@ -58,8 +58,11 @@ Where they disagree, the glossary wins for names and this file wins for everythi
   lines name it after היכולת (§7) and the Ability Capsule says `השתנתה ל…`, where `היכולת סטטי`,
   `היכולת גמיש` or `בזכות היכולת פשוט` read as ordinary words, not as a name (the owner's report,
   `DECISIONS.md` Q164; Q165). So STATIC is `חשמל סטטי`, STURDY `איתנות`, LIMBER `גמישות`, RATTLED `בהלה`,
-  AS ONE `אחדות`. A rename starts in the glossary and goes on to the Easy Chat word, the hints that quote
-  the word and the descriptions that cite the name (HANDOFF section 3.5).
+  AS ONE `אחדות`. An agent noun is a noun, as the English one is (`צלף`, `מרפא`, `שובר תבניות`). The
+  adjective phrases still in the glossary (`אטום לרעש`, `חסין חום`, `חסין קליעים`, `מורט עצבים`, `שווה זהב`)
+  and `דווקאי` wait for the owner (Q165, "Not renamed here"). A rename starts in the glossary and goes on to
+  the Easy Chat word, the hints that quote the word and the descriptions that cite the name (HANDOFF
+  section 3.5).
 
 ## 4. Characters you may use
 
