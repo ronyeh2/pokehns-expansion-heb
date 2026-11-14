@@ -3240,14 +3240,14 @@ ability,ABILITY_STENCH,STENCH,צחנה,צחנה,inherited,FR match: constant
 ability,ABILITY_DRIZZLE,DRIZZLE,טפטוף,טפטוף,inherited,FR match: constant
 ability,ABILITY_SPEED_BOOST,SPEED BOOST,מאיץ מהירות,מאיץ מהירות,inherited,FR match: constant
 ability,ABILITY_BATTLE_ARMOR,BATTLE ARMOR,שריון קרב,שריון קרב,inherited,FR match: constant
-ability,ABILITY_STURDY,STURDY,איתן,איתן,inherited,FR match: constant
+ability,ABILITY_STURDY,STURDY,איתן,איתנות,proposed,FR match: constant; renamed from איתן (DECISIONS Q165): a bare adjective and the first name Eitan; איתנות is its noun; עמידות is the RESIST items' word; FireRed keeps איתן (namecheck_allow.json)
 ability,ABILITY_DAMP,DAMP,לחות,לחות,inherited,FR match: constant
-ability,ABILITY_LIMBER,LIMBER,גמיש,גמיש,inherited,FR match: constant
+ability,ABILITY_LIMBER,LIMBER,גמיש,גמישות,proposed,FR match: constant; renamed from גמיש (DECISIONS Q165): a bare adjective; גמישות is its noun; FireRed keeps גמיש (namecheck_allow.json)
 ability,ABILITY_SAND_VEIL,SAND VEIL,מסווה חול,מסווה חול,inherited,FR match: constant
-ability,ABILITY_STATIC,STATIC,סטטי,סטטי,inherited,FR match: constant
+ability,ABILITY_STATIC,STATIC,סטטי,חשמל סטטי,proposed,"FR match: constant; renamed from סטטי, the bare adjective static, which the owner found unnatural after היכולת (DECISIONS Q164); חשמל סטטי is the phenomenon, as in the Pokédex texts; FireRed keeps סטטי (namecheck_allow.json)"
 ability,ABILITY_VOLT_ABSORB,VOLT ABSORB,ספיגת וולט,ספיגת וולט,inherited,FR match: constant
 ability,ABILITY_WATER_ABSORB,WATER ABSORB,ספיגת מים,ספיגת מים,inherited,FR match: constant
-ability,ABILITY_OBLIVIOUS,OBLIVIOUS,תמים,תמים,inherited,FR match: constant
+ability,ABILITY_OBLIVIOUS,OBLIVIOUS,תמים,אדישות,proposed,"FR match: constant; renamed from תמים (DECISIONS Q165): a bare adjective meaning naive, and the nature NAIVE; אדישות (indifference) is immune to charm, Taunt and Intimidate; FireRed keeps תמים (namecheck_allow.json)"
 ability,ABILITY_CLOUD_NINE,CLOUD NINE,ענן תשע,ביטול מזג,proposed,FR match: constant; FireRed now ביטול מזג (DECISIONS Q140 (FireRed naming conventions))
 ability,ABILITY_COMPOUND_EYES,COMPOUND EYES,עין מורכבת,עין מורכבת,inherited,FR match: constant
 ability,ABILITY_INSOMNIA,INSOMNIA,נדודי שינה,נדודי שינה,inherited,FR match: constant
@@ -3258,11 +3258,11 @@ ability,ABILITY_SHIELD_DUST,SHIELD DUST,אבק מגן,אבק מגן,inherited,FR
 ability,ABILITY_OWN_TEMPO,OWN TEMPO,קצב עצמי,קצב עצמי,inherited,FR match: constant
 ability,ABILITY_SUCTION_CUPS,SUCTION CUPS,כוסות יניקה,כוסות יניקה,inherited,FR match: constant
 ability,ABILITY_INTIMIDATE,INTIMIDATE,הפחדה,הפחדה,inherited,FR match: constant
-ability,ABILITY_SHADOW_TAG,SHADOW TAG,תג צל,תג צל,inherited,FR match: constant
+ability,ABILITY_SHADOW_TAG,SHADOW TAG,תג צל,לכידת צל,proposed,"FR match: constant; renamed from תג צל (DECISIONS Q165): תג is a Gym badge here (TERM_BADGE), so תג צל read as a badge; the ability keeps the foe from fleeing or switching; FireRed keeps תג צל (namecheck_allow.json)"
 ability,ABILITY_ROUGH_SKIN,ROUGH SKIN,עור מחוספס,עור מחוספס,inherited,FR match: constant
 ability,ABILITY_WONDER_GUARD,WONDER GUARD,משמר פלא,משמר פלא,inherited,FR match: constant
 ability,ABILITY_LEVITATE,LEVITATE,ריחוף,ריחוף,inherited,FR match: constant
-ability,ABILITY_EFFECT_SPORE,EFFECT SPORE,נבג אפקט,נבג אפקט,inherited,FR match: constant
+ability,ABILITY_EFFECT_SPORE,EFFECT SPORE,נבג אפקט,ענן נבגים,proposed,"FR match: constant; renamed from נבג אפקט (DECISIONS Q165): word for word, not Hebrew; the spores it releases on contact; SPORE alone is MOVE_SPORE נבג; FireRed keeps נבג אפקט (namecheck_allow.json)"
 ability,ABILITY_SYNCHRONIZE,SYNCHRONIZE,סנכרון,סנכרון,inherited,FR match: constant
 ability,ABILITY_CLEAR_BODY,CLEAR BODY,גוף נקי,גוף נקי,inherited,FR match: constant
 ability,ABILITY_NATURAL_CURE,NATURAL CURE,ריפוי טבעי,ריפוי טבעי,inherited,FR match: constant
@@ -3287,7 +3287,7 @@ ability,ABILITY_EARLY_BIRD,EARLY BIRD,ציפור מקדים,משכימת קום,
 ability,ABILITY_FLAME_BODY,FLAME BODY,גוף להבה,גוף להבה,inherited,FR match: constant
 ability,ABILITY_RUN_AWAY,RUN AWAY,בריחה,בריחה,inherited,FR match: constant
 ability,ABILITY_KEEN_EYE,KEEN EYE,עין חדה,עין חדה,inherited,FR match: constant
-ability,ABILITY_HYPER_CUTTER,HYPER CUTTER,על חותך,על חותך,inherited,FR match: constant
+ability,ABILITY_HYPER_CUTTER,HYPER CUTTER,על חותך,חותך-על,proposed,FR match: constant; renamed from על חותך (DECISIONS Q165): with על first it read as the preposition (on a cutter); X-על as in כוח-על; FireRed keeps על חותך (namecheck_allow.json)
 ability,ABILITY_PICKUP,PICKUP,איסוף,איסוף,inherited,FR match: constant
 ability,ABILITY_TRUANT,TRUANT,עצלן,עצלן,inherited,FR match: constant
 ability,ABILITY_HUSTLE,HUSTLE,המולה,חריצות,proposed,FR match: constant; FireRed now חריצות (DECISIONS Q140 (FireRed naming conventions))
@@ -3321,7 +3321,7 @@ ability,ABILITY_GLUTTONY,GLUTTONY,,גרגרנות,proposed,meaning; reviewed
 ability,ABILITY_ANGER_POINT,ANGER POINT,,נקודת זעם,proposed,meaning; POINT = נקודת (ABILITY_POISON_POINT נקודת רעל); ANGER/RAGE = זעם (MOVE_RAGE); reviewed
 ability,ABILITY_UNBURDEN,UNBURDEN,,פריקת משא,proposed,meaning (sheds its load: the held item); reviewed
 ability,ABILITY_HEATPROOF,HEATPROOF,,חסין חום,proposed,"meaning; -PROOF = חסין (also BULLETPROOF); inherited SOUNDPROOF is אטום לרעש, חסין is the natural word for heat; reviewed"
-ability,ABILITY_SIMPLE,SIMPLE,,פשוט,proposed,"meaning; adjective like the inherited גמיש, איתן; reviewed"
+ability,ABILITY_SIMPLE,SIMPLE,,פשטות,proposed,"meaning; renamed from פשוט (DECISIONS Q165): a bare adjective, mostly read as the adverb simply; the noun, as in MOVE_SIMPLE_BEAM קרן פשטות"
 ability,ABILITY_DRY_SKIN,DRY SKIN,,עור יבש,proposed,"meaning; SKIN = עור (ROUGH SKIN, SHED SKIN); reviewed"
 ability,ABILITY_DOWNLOAD,DOWNLOAD,,הורדה,proposed,meaning; reviewed
 ability,ABILITY_IRON_FIST,IRON FIST,,אגרוף ברזל,proposed,"meaning; FIST/PUNCH = אגרוף (punch moves, FIST PLATE), IRON = ברזל (IRON TAIL); reviewed"
@@ -3344,11 +3344,11 @@ ability,ABILITY_SUPER_LUCK,SUPER LUCK,,מזל על,proposed,"meaning; SUPER = ע
 ability,ABILITY_AFTERMATH,AFTERMATH,,השלכות,proposed,meaning (aftermath = repercussions: hurts the attacker that KOs it); reviewed
 ability,ABILITY_ANTICIPATION,ANTICIPATION,,ציפייה,proposed,"meaning; MOVE_FORESIGHT already = חיזוי, FORECAST = תחזית; reviewed"
 ability,ABILITY_FOREWARN,FOREWARN,,התרעה,proposed,meaning (advance warning); kept apart from SNOW WARNING אזהרת שלג; reviewed
-ability,ABILITY_UNAWARE,UNAWARE,,לא מודע,proposed,meaning; OBLIVIOUS already = תמים; reviewed
+ability,ABILITY_UNAWARE,UNAWARE,,חוסר מודעות,proposed,meaning; renamed from לא מודע (DECISIONS Q165): a bare adjective phrase; its noun; OBLIVIOUS is אדישות
 ability,ABILITY_TINTED_LENS,TINTED LENS,,עדשה כהה,proposed,meaning; LENS = עדשה (SCOPE LENS עדשת דיוק); reviewed
 ability,ABILITY_FILTER,FILTER,,מסנן,proposed,meaning; reviewed
 ability,ABILITY_SLOW_START,SLOW START,,התחלה איטית,proposed,meaning; reviewed
-ability,ABILITY_SCRAPPY,SCRAPPY,,לוחמני,proposed,"meaning (combative, picks fights); reviewed"
+ability,ABILITY_SCRAPPY,SCRAPPY,,לוחמנות,proposed,"meaning (combative, picks fights); renamed from לוחמני (DECISIONS Q165): a bare adjective; its noun; רוח לחימה is the Easy Chat word SPIRIT"
 ability,ABILITY_STORM_DRAIN,STORM DRAIN,,תעלת ניקוז,proposed,"meaning: the real-world object (a storm drain), parallel to LIGHTNING ROD מוט ברקים; DRAIN in moves (MEGA DRAIN יניקה) is a different sense; reviewed"
 ability,ABILITY_ICE_BODY,ICE BODY,,גוף קרח,proposed,"meaning; BODY = גוף (FLAME BODY גוף להבה), ICE = קרח; reviewed"
 ability,ABILITY_SOLID_ROCK,SOLID ROCK,,סלע מוצק,proposed,meaning; ROCK = סלע (ROCK HEAD ראש סלע); reviewed
@@ -3376,21 +3376,21 @@ ability,ABILITY_TOXIC_BOOST,TOXIC BOOST,,דחף הרעלה,proposed,"meaning; TO
 ability,ABILITY_FLARE_BOOST,FLARE BOOST,,דחף להבה,proposed,"meaning; BOOST = דחף (PSYCHO BOOST, TOXIC BOOST); flare = להבה (BLAZE/EMBER); reviewed"
 ability,ABILITY_HARVEST,HARVEST,,קציר,proposed,meaning; reviewed
 ability,ABILITY_TELEPATHY,TELEPATHY,,טלפתיה,proposed,meaning (Hebrew word); reviewed
-ability,ABILITY_MOODY,MOODY,,הפכפך,proposed,"meaning (fickle, capricious); reviewed"
+ability,ABILITY_MOODY,MOODY,,מצבי רוח,proposed,meaning (moodiness); renamed from הפכפך (DECISIONS Q165): a bare adjective
 ability,ABILITY_OVERCOAT,OVERCOAT,,מעיל עליון,proposed,"meaning; COAT = מעיל (MAGIC COAT מעיל קסם, MIRROR COAT); reviewed"
 ability,ABILITY_POISON_TOUCH,POISON TOUCH,,מגע רעיל,proposed,meaning; POISON adjective = רעיל as in POISON GAS גז רעיל; reviewed
 ability,ABILITY_REGENERATOR,REGENERATOR,,התחדשות,proposed,meaning; reviewed
 ability,ABILITY_BIG_PECKS,BIG PECKS,,חזה מנופח,proposed,meaning (the pecs pun: a puffed-up chest that will not drop its Defense); the peck/pecs pun does not survive; reviewed
 ability,ABILITY_SAND_RUSH,SAND RUSH,,דהירת חול,proposed,"meaning; SAND = חול (SAND VEIL, SAND STREAM); RUSH = דהירה, matched by SLUSH RUSH דהירת שלג (ability_02); reviewed: note updated"
 ability,ABILITY_WONDER_SKIN,WONDER SKIN,,עור פלא,proposed,"meaning; WONDER = פלא (WONDER GUARD משמר פלא), SKIN = עור; reviewed"
-ability,ABILITY_ANALYTIC,ANALYTIC,,אנליטי,proposed,"meaning (Hebrew loan adjective, like the inherited סטטי); reviewed"
+ability,ABILITY_ANALYTIC,ANALYTIC,,חשיבה אנליטית,proposed,meaning (analytic thinking); renamed from אנליטי (DECISIONS Q165): a bare loan adjective
 ability,ABILITY_ILLUSION,ILLUSION,,אחיזת עיניים,proposed,meaning; reviewed (אשליה was MOVE_PSYCHIC until DECISIONS Q139 (Psychic is על-חושי))
 ability,ABILITY_IMPOSTER,IMPOSTER,,מתחזה,proposed,meaning; reviewed
 ability,ABILITY_INFILTRATOR,INFILTRATOR,,מסתנן,proposed,meaning; reviewed
 ability,ABILITY_MUMMY,MUMMY,,מומיה,proposed,meaning; reviewed
 ability,ABILITY_MOXIE,MOXIE,,ביטחון עצמי,proposed,"meaning (nerve, confidence after a KO); avoids חוצפה/תעוזה, which share roots with the natures SASSY חצוף and BOLD נועז; reviewed"
 ability,ABILITY_JUSTIFIED,JUSTIFIED,,צדק,proposed,meaning (righteousness; rises when hit by a Dark move); reviewed
-ability,ABILITY_RATTLED,RATTLED,,מבוהל,proposed,meaning; reviewed
+ability,ABILITY_RATTLED,RATTLED,,בהלה,proposed,meaning (panic); renamed from מבוהל (DECISIONS Q165): a bare participle
 ability,ABILITY_MAGIC_BOUNCE,MAGIC BOUNCE,,החזר קסם,proposed,"meaning; MAGIC = קסם (MAGIC COAT, which has the same reflecting effect); reviewed"
 ability,ABILITY_SAP_SIPPER,SAP SIPPER,,לוגם מוהל,proposed,"meaning (sap = מוהל, sipper = לוגם); reviewed"
 ability,ABILITY_PRANKSTER,PRANKSTER,,קונדס,proposed,meaning; תעלול is MOVE_TRICK; reviewed
@@ -3403,11 +3403,11 @@ ability,ABILITY_TERAVOLT,TERAVOLT,,טרה-וולט,proposed,"meaning (a unit-lik
 ability,ABILITY_AROMA_VEIL,AROMA VEIL,,צעיף ניחוח,proposed,"meaning; VEIL = צעיף (WATER VEIL צעיף מים), AROMA = ניחוח (AROMA LADY גברת ניחוח); reviewed"
 ability,ABILITY_FLOWER_VEIL,FLOWER VEIL,,צעיף פרחים,proposed,"meaning; VEIL = צעיף (WATER VEIL), FLOWER = פרח; reviewed"
 ability,ABILITY_CHEEK_POUCH,CHEEK POUCH,,כיסי לחיים,proposed,"meaning: the zoological term for a hamster's cheek pouches; BERRY POUCH פאוץ' פירות is a bag name, not reused; reviewed"
-ability,ABILITY_PROTEAN,PROTEAN,,רב-גוני,proposed,"meaning (versatile, changes its type to each move); שנה צורה is MOVE_TRANSFORM; reviewed"
+ability,ABILITY_PROTEAN,PROTEAN,,רב-גוניות,proposed,meaning (versatility: changes its type to each move); renamed from רב-גוני (DECISIONS Q165): a bare adjective; שנה צורה is MOVE_TRANSFORM
 ability,ABILITY_FUR_COAT,FUR COAT,,מעיל פרווה,proposed,meaning; COAT = מעיל (MAGIC COAT); reviewed
 ability,ABILITY_MAGICIAN,MAGICIAN,,קוסם,proposed,meaning; reviewed
 ability,ABILITY_BULLETPROOF,BULLETPROOF,,חסין קליעים,proposed,"meaning; -PROOF = חסין (HEATPROOF), BULLET = קליע (BULLET SEED זרע קליע); reviewed"
-ability,ABILITY_COMPETITIVE,COMPETITIVE,,תחרותי,proposed,meaning; reviewed
+ability,ABILITY_COMPETITIVE,COMPETITIVE,,תחרותיות,proposed,meaning; renamed from תחרותי (DECISIONS Q165): a bare adjective
 ability,ABILITY_STRONG_JAW,STRONG JAW,,לסת חזקה,proposed,meaning; JAW = לסת (JAW FOSSIL מאובן לסת); reviewed
 ability,ABILITY_REFRIGERATE,REFRIGERATE,,קירור,proposed,meaning (Normal moves become Ice); verbal noun like AERILATE אוורור; reviewed
 ability,ABILITY_SWEET_VEIL,SWEET VEIL,,צעיף מתוק,proposed,"meaning; VEIL = צעיף (WATER VEIL), SWEET = מתוק (SWEET KISS, SWEET SCENT); reviewed"
@@ -3418,7 +3418,7 @@ ability,ABILITY_GRASS_PELT,GRASS PELT,,פרוות עשב,proposed,meaning; GRASS
 ability,ABILITY_SYMBIOSIS,SYMBIOSIS,,סימביוזה,proposed,"meaning (Hebrew word, like MOVE_SYNTHESIS סינתזה); reviewed"
 ability,ABILITY_TOUGH_CLAWS,TOUGH CLAWS,,טפרים קשוחים,proposed,"meaning; CLAW = טופר, plural טפרים (METAL CLAW, DRAGON CLAW טפר); reviewed"
 ability,ABILITY_PIXILATE,PIXILATE,,אבק פיות,proposed,meaning (pixie dust: Normal moves become Fairy); PIXIE = פיות (PIXIE PLATE לוח פיות); reviewed
-ability,ABILITY_GOOEY,GOOEY,,רירי,proposed,"meaning (slimy); דביק is the STICKY chunk (STICKY HOLD, STICKY BARB); reviewed"
+ability,ABILITY_GOOEY,GOOEY,,גוף רירי,proposed,"meaning (slimy body), like גוף להבה, גוף קרח; renamed from רירי (DECISIONS Q165): a bare adjective; דביק is the STICKY chunk (STICKY HOLD, STICKY BARB)"
 ability,ABILITY_AERILATE,AERILATE,,אוורור,proposed,meaning (aerate: Normal moves become Flying); verbal noun like REFRIGERATE קירור; reviewed
 ability,ABILITY_PARENTAL_BOND,PARENTAL BOND,,קשר הורי,proposed,"meaning; DESTINY BOND uses ברית (covenant), קשר is the natural word for a parent-child bond; reviewed"
 ability,ABILITY_DARK_AURA,DARK AURA,,הילה אפלה,proposed,"meaning; DARK = אפל (TYPE_DARK, DARK GEM אבן חן אפלה), AURA = הילה (also FAIRY AURA, AURA BREAK); reviewed"
@@ -3431,7 +3431,7 @@ ability,ABILITY_STAMINA,STAMINA,,סיבולת,proposed,meaning; reviewed
 ability,ABILITY_WIMP_OUT,WIMP OUT,,השתפנות,proposed,meaning (to chicken out); long-established colloquial word; reviewed
 ability,ABILITY_EMERGENCY_EXIT,EMERGENCY EXIT,,יציאת חירום,proposed,meaning; reviewed
 ability,ABILITY_WATER_COMPACTION,WATER COMPACTION,,דחיסת מים,proposed,"meaning; WATER = מים (WATER ABSORB, WATER VEIL); reviewed"
-ability,ABILITY_MERCILESS,MERCILESS,,חסר רחמים,proposed,meaning; reviewed
+ability,ABILITY_MERCILESS,MERCILESS,,חוסר רחמים,proposed,"meaning; renamed from חסר רחמים (DECISIONS Q165): an adjective phrase, also the Pokédex category CRUEL"
 ability,ABILITY_SHIELDS_DOWN,SHIELDS DOWN,,הורדת מגינים,proposed,"meaning (Minior drops its shell); SHIELD = מגן as ABILITY_SHIELD_DUST אבק מגן; reviewed: plural spelled מגינים (ktiv male of מָגִנִּים); מגנים also reads as מְגַנִּים, condemning"
 ability,ABILITY_STAKEOUT,STAKEOUT,,מארב,proposed,meaning: ambush (hits a target that just switched in); reviewed
 ability,ABILITY_WATER_BUBBLE,WATER BUBBLE,,בועת מים,proposed,meaning; WATER = TYPE_WATER מים; reviewed
@@ -3441,7 +3441,7 @@ ability,ABILITY_SLUSH_RUSH,SLUSH RUSH,,דהירת שלג,proposed,"meaning: slus
 ability,ABILITY_LONG_REACH,LONG REACH,,טווח ארוך,proposed,meaning: long range (attacks without contact); reviewed
 ability,ABILITY_LIQUID_VOICE,LIQUID VOICE,,קול נוזלי,proposed,meaning; LIQUID = נוזלי as ABILITY_LIQUID_OOZE; VOICE = קול as MOVE_HYPER_VOICE; reviewed
 ability,ABILITY_TRIAGE,TRIAGE,,מיון רפואי,proposed,meaning: medical triage (healing moves go first); plain מיון reads as sorting; alt loanword טריאז'; reviewed
-ability,ABILITY_GALVANIZE,GALVANIZE,,מחשמל,proposed,"meaning: electrification (Normal moves become Electric); -ATE family with REFRIGERATE/PIXILATE/AERILATE in ability_01; reviewed: was חישמול, the exact Hebrew of MOVE_ELECTRIFY (move_02), a move with a similar Electric-conversion effect; מחשמל = electrifying, also figurative like English galvanize"
+ability,ABILITY_GALVANIZE,GALVANIZE,,מטען חשמלי,proposed,meaning: electric charge (Normal moves become Electric); renamed from מחשמל (DECISIONS Q165): a bare participle; חישמול is MOVE_ELECTRIFY
 ability,ABILITY_SURGE_SURFER,SURGE SURFER,,גולש נחשולים,proposed,meaning; SURGE = נחשול chunk shared with the four *_SURGE abilities; reviewed
 ability,ABILITY_SCHOOLING,SCHOOLING,,התלהקות,proposed,meaning: forming a school of fish; reviewed
 ability,ABILITY_DISGUISE,DISGUISE,,תחפושת,proposed,meaning; reviewed
@@ -3453,8 +3453,8 @@ ability,ABILITY_QUEENLY_MAJESTY,QUEENLY MAJESTY,,הוד מלכותה,proposed,"m
 ability,ABILITY_INNARDS_OUT,INNARDS OUT,,פליטת קרביים,proposed,meaning: expelling innards (Pyukumuku); literal קרביים בחוץ reads oddly; reviewed
 ability,ABILITY_DANCER,DANCER,,רקדן,proposed,meaning; reviewed
 ability,ABILITY_BATTERY,BATTERY,,סוללה,proposed,meaning; reviewed
-ability,ABILITY_FLUFFY,FLUFFY,,פרוותי,proposed,meaning: furry/fluffy (Stufful line); keeps פלומה free for COTTON DOWN; reviewed
-ability,ABILITY_DAZZLING,DAZZLING,,מסנוור,proposed,meaning; reviewed
+ability,ABILITY_FLUFFY,FLUFFY,,פרווה רכה,proposed,meaning: soft fur (Stufful line); renamed from פרוותי (DECISIONS Q165): a bare adjective; keeps פלומה free for COTTON DOWN
+ability,ABILITY_DAZZLING,DAZZLING,,סנוור,proposed,meaning; renamed from מסנוור (DECISIONS Q165): a bare participle
 ability,ABILITY_SOUL_HEART,SOUL-HEART,,לב-נשמה,proposed,meaning; hyphen kept as in English; reviewed
 ability,ABILITY_TANGLING_HAIR,TANGLING HAIR,,שיער סבוך,proposed,"meaning: tangled hair; TANGLED FEET (ability_01) may also use סבוך, different English so no clash; reviewed"
 ability,ABILITY_RECEIVER,RECEIVER,,קולט,proposed,"meaning: receiver (takes over a fainted ally's ability); not מקבל, which reads as a person receiving a gift; reviewed"
@@ -3477,7 +3477,7 @@ ability,ABILITY_COTTON_DOWN,COTTON DOWN,,פלומת כותנה,proposed,meaning:
 ability,ABILITY_PROPELLER_TAIL,PROPELLER TAIL,,זנב מדחף,proposed,meaning; TAIL = זנב as MOVE_TAIL_WHIP; reviewed
 ability,ABILITY_MIRROR_ARMOR,MIRROR ARMOR,,שריון מראה,proposed,meaning; MIRROR = מראה as MOVE_MIRROR_COAT; ARMOR = שריון; reviewed
 ability,ABILITY_GULP_MISSILE,GULP MISSILE,,טיל בליעה,proposed,meaning; MISSILE = טיל as MOVE_PIN_MISSILE; GULP = בליעה as MOVE_SWALLOW; reviewed
-ability,ABILITY_STALWART,STALWART,,עיקש,proposed,meaning: unyielding (ignores redirection); STURDY is איתן; may clash with STEADFAST (ability_01) if that picks עיקש; reviewed; no clash: STEADFAST (ability_01) is נחישות
+ability,ABILITY_STALWART,STALWART,,עקשנות,proposed,meaning: unyielding (ignores redirection); renamed from עיקש (DECISIONS Q165): a bare adjective; STEADFAST is נחישות
 ability,ABILITY_STEAM_ENGINE,STEAM ENGINE,,מנוע קיטור,proposed,meaning; ENGINE = מנוע shared with HADRON ENGINE; reviewed
 ability,ABILITY_PUNK_ROCK,PUNK ROCK,,פאנק רוק,proposed,"the music genre, which Hebrew calls פאנק רוק; reviewed"
 ability,ABILITY_SAND_SPIT,SAND SPIT,,יריקת חול,proposed,meaning; SPIT = יריקה as MOVE_SPIT_UP; SAND = חול; reviewed
@@ -3501,8 +3501,8 @@ ability,ABILITY_TRANSISTOR,TRANSISTOR,,טרנזיסטור,proposed,the Hebrew wo
 ability,ABILITY_DRAGONS_MAW,DRAGON'S MAW,,לוע הדרקון,proposed,meaning; DRAGON = TYPE_DRAGON דרקון; English apostrophe dropped; reviewed
 ability,ABILITY_CHILLING_NEIGH,CHILLING NEIGH,,צהלה מקפיאה,proposed,meaning: neigh = צהלה; paired with GRIM NEIGH; reviewed
 ability,ABILITY_GRIM_NEIGH,GRIM NEIGH,,צהלה קודרת,proposed,meaning: neigh = צהלה; paired with CHILLING NEIGH; reviewed
-ability,ABILITY_AS_ONE_ICE_RIDER,AS ONE,,כאחד,proposed,meaning; same English and Hebrew as ABILITY_AS_ONE_SHADOW_RIDER; reviewed
-ability,ABILITY_AS_ONE_SHADOW_RIDER,AS ONE,,כאחד,proposed,meaning; same English and Hebrew as ABILITY_AS_ONE_ICE_RIDER; reviewed
+ability,ABILITY_AS_ONE_ICE_RIDER,AS ONE,,אחדות,proposed,"meaning (unity), as in ITEM_REINS_OF_UNITY מושכות האחדות; renamed from כאחד (DECISIONS Q165): a bare adverb; same English and Hebrew as ABILITY_AS_ONE_SHADOW_RIDER"
+ability,ABILITY_AS_ONE_SHADOW_RIDER,AS ONE,,אחדות,proposed,"meaning (unity), as in ITEM_REINS_OF_UNITY מושכות האחדות; renamed from כאחד (DECISIONS Q165): a bare adverb; same English and Hebrew as ABILITY_AS_ONE_ICE_RIDER"
 ability,ABILITY_LINGERING_AROMA,LINGERING AROMA,,ניחוח מתמשך,proposed,meaning; AROMA = ריח as MOVE_AROMATHERAPY ריח מרפא; reviewed: AROMA = ניחוח as inherited TRAINER_CLASS_AROMA_LADY גברת ניחוח and ABILITY_AROMA_VEIL צעיף ניחוח (ability_01); was ריח מתמשך
 ability,ABILITY_SEED_SOWER,SEED SOWER,,זורע זרעים,proposed,meaning; SEED = זרע as ITEM_MIRACLE_SEED; reviewed
 ability,ABILITY_THERMAL_EXCHANGE,THERMAL EXCHANGE,,חילוף חום,proposed,meaning; alt the engineering term מחליף חום; reviewed
